@@ -1,0 +1,512 @@
+{
+  "TASI": {
+    "symbol": "^TASI.SR",
+    "name": "Tadawul All Share Index",
+    "sector": "Index",
+    "rows": 1358,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2222": {
+    "symbol": "2222.SR",
+    "name": "Saudi Aramco",
+    "sector": "Energy",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1120": {
+    "symbol": "1120.SR",
+    "name": "Al Rajhi Bank",
+    "sector": "Banks",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1180": {
+    "symbol": "1180.SR",
+    "name": "Saudi National Bank",
+    "sector": "Banks",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2010": {
+    "symbol": "2010.SR",
+    "name": "SABIC",
+    "sector": "Materials",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7010": {
+    "symbol": "7010.SR",
+    "name": "stc",
+    "sector": "Telecom",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1150": {
+    "symbol": "1150.SR",
+    "name": "Alinma Bank",
+    "sector": "Banks",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "5110": {
+    "symbol": "5110.SR",
+    "name": "Saudi Electricity",
+    "sector": "Utilities",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2082": {
+    "symbol": "2082.SR",
+    "name": "ACWA Power",
+    "sector": "Utilities",
+    "rows": 1155,
+    "first": "2021-12-19",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1211": {
+    "symbol": "1211.SR",
+    "name": "Ma'aden",
+    "sector": "Materials",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1010": {
+    "symbol": "1010.SR",
+    "name": "Riyad Bank",
+    "sector": "Banks",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1060": {
+    "symbol": "1060.SR",
+    "name": "Saudi Awwal Bank",
+    "sector": "Banks",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2020": {
+    "symbol": "2020.SR",
+    "name": "SABIC Agri-Nutrients",
+    "sector": "Materials",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1080": {
+    "symbol": "1080.SR",
+    "name": "Arab National Bank",
+    "sector": "Banks",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1140": {
+    "symbol": "1140.SR",
+    "name": "Bank Albilad",
+    "sector": "Banks",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1050": {
+    "symbol": "1050.SR",
+    "name": "Banque Saudi Fransi",
+    "sector": "Banks",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1020": {
+    "symbol": "1020.SR",
+    "name": "Bank AlJazira",
+    "sector": "Banks",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4013": {
+    "symbol": "4013.SR",
+    "name": "Dr. Sulaiman Al Habib",
+    "sector": "Healthcare",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2280": {
+    "symbol": "2280.SR",
+    "name": "Almarai",
+    "sector": "Food & Staples",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8210": {
+    "symbol": "8210.SR",
+    "name": "Bupa Arabia",
+    "sector": "Insurance",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8010": {
+    "symbol": "8010.SR",
+    "name": "Tawuniya",
+    "sector": "Insurance",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1111": {
+    "symbol": "1111.SR",
+    "name": "Saudi Tadawul Group",
+    "sector": "Financial Services",
+    "rows": 1159,
+    "first": "2021-12-12",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7020": {
+    "symbol": "7020.SR",
+    "name": "Etihad Etisalat (Mobily)",
+    "sector": "Telecom",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7030": {
+    "symbol": "7030.SR",
+    "name": "Zain KSA",
+    "sector": "Telecom",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4280": {
+    "symbol": "4280.SR",
+    "name": "Kingdom Holding",
+    "sector": "Financial Services",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2050": {
+    "symbol": "2050.SR",
+    "name": "Savola Group",
+    "sector": "Food & Staples",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2290": {
+    "symbol": "2290.SR",
+    "name": "Yansab",
+    "sector": "Materials",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2310": {
+    "symbol": "2310.SR",
+    "name": "Sipchem",
+    "sector": "Materials",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2350": {
+    "symbol": "2350.SR",
+    "name": "Saudi Kayan",
+    "sector": "Materials",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2380": {
+    "symbol": "2380.SR",
+    "name": "Petro Rabigh",
+    "sector": "Energy",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2060": {
+    "symbol": "2060.SR",
+    "name": "Tasnee",
+    "sector": "Materials",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2330": {
+    "symbol": "2330.SR",
+    "name": "Advanced Petrochemical",
+    "sector": "Materials",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2170": {
+    "symbol": "2170.SR",
+    "name": "Alujain",
+    "sector": "Materials",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4030": {
+    "symbol": "4030.SR",
+    "name": "Bahri",
+    "sector": "Transportation",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4031": {
+    "symbol": "4031.SR",
+    "name": "Saudi Ground Services",
+    "sector": "Transportation",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4200": {
+    "symbol": "4200.SR",
+    "name": "Aldrees Petroleum",
+    "sector": "Energy",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4190": {
+    "symbol": "4190.SR",
+    "name": "Jarir Marketing",
+    "sector": "Consumer Retail",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4001": {
+    "symbol": "4001.SR",
+    "name": "Al Othaim Markets",
+    "sector": "Consumer Retail",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4003": {
+    "symbol": "4003.SR",
+    "name": "eXtra (United Electronics)",
+    "sector": "Consumer Retail",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4161": {
+    "symbol": "4161.SR",
+    "name": "Bindawood Holding",
+    "sector": "Consumer Retail",
+    "rows": 1318,
+    "first": "2021-04-19",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2270": {
+    "symbol": "2270.SR",
+    "name": "SADAFCO",
+    "sector": "Food & Staples",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6010": {
+    "symbol": "6010.SR",
+    "name": "NADEC",
+    "sector": "Food & Staples",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6004": {
+    "symbol": "6004.SR",
+    "name": "Saudi Airlines Catering",
+    "sector": "Consumer Services",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1810": {
+    "symbol": "1810.SR",
+    "name": "Seera Group",
+    "sector": "Consumer Services",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1830": {
+    "symbol": "1830.SR",
+    "name": "Leejam Sports",
+    "sector": "Consumer Services",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4002": {
+    "symbol": "4002.SR",
+    "name": "Mouwasat Medical",
+    "sector": "Healthcare",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4004": {
+    "symbol": "4004.SR",
+    "name": "Dallah Healthcare",
+    "sector": "Healthcare",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4300": {
+    "symbol": "4300.SR",
+    "name": "Dar Al Arkan",
+    "sector": "Real Estate",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4250": {
+    "symbol": "4250.SR",
+    "name": "Jabal Omar",
+    "sector": "Real Estate",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4220": {
+    "symbol": "4220.SR",
+    "name": "Emaar The Economic City",
+    "sector": "Real Estate",
+    "rows": 1395,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4321": {
+    "symbol": "4321.SR",
+    "name": "Cenomi Centers",
+    "sector": "Real Estate",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-03",
+    "source": "yfinance",
+    "status": "ok"
+  }
+}
