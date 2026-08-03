@@ -1,6 +1,13 @@
 name: Fetch TASI market data
 
 on:
+  push:
+    branches:
+      - claude/tasi-agent-simulation-fcili2
+    paths:
+      - ".github/workflows/fetch-data.yml"
+      - "pipeline/fetch_data.py"
+      - "data/tickers.json"
   workflow_dispatch:
     inputs:
       fetch_end:
