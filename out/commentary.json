@@ -1,0 +1,816 @@
+{
+ "um_khalid": {
+  "letters": [
+   {
+    "quarter": "2022",
+    "title": "Roots Before Fruit",
+    "text": "They handed each of us 100,000 riyals in January, and I did what any sensible mother does with a new plot: I planted. Bupa Arabia on the very first day at 103.52, twenty-three percent below its high, then Tawuniya, Almarai, SABIC — good houses at fair prices, month after month. The market threw its tantrums: down 4.1% on May 12, down another 4.4% on June 19, and the majlis wailed like it was their first summer without rain. I finished at 98,545 riyals, minus 1.5%, sixth of eight. Sixth! The boys smirked. Let them. A garden's first year is roots, not fruit. Saleh spent the year hugging his cash and calling unrealized gains 'rumors with good manners' — safe, yes, and also barren. Abu Fahad circled overhead shrieking about talons and dawn. And me? My names had already begun paying rent into the drawer. Dividends do not flash on anyone's chart, but they arrive on schedule, like grandchildren. Patience, children. The harvest keeps its own calendar, and it does not consult yours."
+   },
+   {
+    "quarter": "2023",
+    "title": "The Year the Garden Bloomed",
+    "text": "Plus 28.2%. From 98,545 to 126,306 riyals, and first place in the majlis — where I intend to remain. In March, Yansab quietly slipped 254 riyals into the family purse; nobody applauded, which is how real money prefers it. In July I did something rare: I sold. Tawuniya had grown vain, strutting far above its own 200-day mean, so on July 3 I let go of half — 112 shares at 121.21 — and banked 7,053 riyals of profit on shares held 546 days, since the third of January 2022. Even a good son must hear no sometimes. In August I added Saudi National Bank at 38.80, twenty-nine percent below its high. Meanwhile Lulu announced her 59,803 followers to a portfolio of 105,891 riyals — habibti, followers do not pay dividends, and a brand cannot be replanted. The boys called my year luck. Strange luck, that visits whoever bought quality while the neighbours were selling in 2022 and then simply sat still. Ledger closed, tea poured, smiling."
+   },
+   {
+    "quarter": "2024",
+    "title": "The House That Stood Still",
+    "text": "A flat year, they called it: minus 0.08%, from 126,306 to 126,210 riyals. Ninety-six riyals lighter after twelve months, and still first of eight. That is not flat, children; that is a house standing perfectly still while the weather argues with itself. February gave +7.5%, May took −5.6%, and I could not tell you which month I enjoyed more, because I was not watching. The drawer, however, never went quiet: SADAFCO alone sent 318 riyals in March and again in September, and by June the family's dividend ledger read 8,468 riyals. On June 9 the index leapt 2.5% and suddenly every boy in the majlis was a genius again; I told them then and I tell you now — sit down and drink your tea. Poor Saleh stopped himself out of Banque Saudi Fransi in May at minus 13.1% and called it discipline. I own that very same bank. I did nothing, collected its dividend, and kept every share. His rule signed a confession; my patience signed a receipt."
+   },
+   {
+    "quarter": "2025",
+    "title": "The Bitter Year",
+    "text": "I will not sugar the dates: minus 12.1%, from 126,210 down to 110,916 riyals. April 6 was the worst day this family's ledger has ever recorded — 6.4% gone between dawn and dusk while the index fell 6.8% — and November alone devoured 10.5%. And yet when the dust settled, who stood first of eight? The same grey-haired woman, for the third year running. First among the bruised is still first. September 24 offered mercy: +5.2%, our finest day ever, earned by doing precisely nothing. By October the dividend ledger read 15,624 riyals — money the market cannot claw back, whatever its mood. Dr. Muteb spent the year explaining that his caution was 'a mapping, not a mood'; the mapping finished far behind my tea tray. And Shadi, may God guide him, kept feeding his inheritance to the fire for warmth. I sold nothing in the panic. Not one share. You do not abandon a good house because the street floods; you sit on the roof with the ledger and let the water find its level."
+   },
+   {
+    "quarter": "2026",
+    "title": "The Harvest Ledger",
+    "text": "Final ledger, read aloud while everyone's tea goes cold: 121,642 riyals. Plus 21.6% over four years and seven months, in a market that itself lost 5%. First place, final. January opened +8.6%, March added +7.7%, and the year to August gave +9.7%. Now the accounting a mother is proudest of: 29 trades in the entire campaign — twenty-eight purchases and one single sale. Commissions paid: 259 riyals; Shadi tips his shisha boy more. Dividends harvested: 19,662 riyals, every one replanted. Twelve names remain in the garden — Tawuniya, Bupa Arabia, SADAFCO, Almarai, the banks — all still earning, with 1,370 riyals resting in the drawer. To Noura, second at 118,571: well done, daughter; patience recognises patience. To Shadi, last at 70,952, minus 29%: come sit by me, child — the tea is warm and the lesson was free the whole time. The boys spent 4.6 years hunting signals. I collected rent from the best houses in the Kingdom and let time carry the baskets. Dividends are the harvest; patience is the field. The field has spoken."
+   }
+  ],
+  "extra_chat": [
+   {
+    "date": "2022-05-12",
+    "sentiment": -0.1,
+    "mood": "bargain-eyed",
+    "shout": "Down 4.1% and the majlis wails like a funeral tent. I raised four children through worse. Nobody in this house sells anything today — I am taking my basket to the souq."
+   },
+   {
+    "date": "2022-05-15",
+    "sentiment": 0.25,
+    "mood": "unimpressed",
+    "shout": "Up 2.4% three days after the wailing. The market forgives faster than the majlis forgets. My Bupa Arabia neither wept nor cheered — it simply kept earning."
+   },
+   {
+    "date": "2022-06-19",
+    "sentiment": -0.15,
+    "mood": "steadfast",
+    "shout": "Minus 4.4%, the worst tantrum of the year. Good houses do not become bad houses in one afternoon. @saleh, cash in a drawer earns nothing; my names pay rent even in a storm."
+   },
+   {
+    "date": "2022-06-21",
+    "sentiment": 0.2,
+    "mood": "unimpressed",
+    "shout": "Up 2.6% two days after the funeral. Same boys, new genius. I bought while you wept and I hold while you cheer. Drink your tea."
+   },
+   {
+    "date": "2022-12-05",
+    "sentiment": -0.05,
+    "mood": "patient",
+    "shout": "Down 2.8% in December, and the year ends as it lived — noisily. Sixth of eight, minus a whisper, and sleeping better than all seven of you. Roots first, fruit later."
+   },
+   {
+    "date": "2023-07-03",
+    "sentiment": 0.5,
+    "mood": "firm",
+    "shout": "Today, a rarity: I sold. Half my Tawuniya at 121.21 after 546 days — 7,053 riyals of profit banked. Even a good son must hear no sometimes. Mark the date, boys; you will not see another."
+   },
+   {
+    "date": "2024-06-09",
+    "sentiment": 0.1,
+    "mood": "unimpressed",
+    "shout": "Up 2.5% and suddenly everyone is a genius. My names have paid this family 8,468 riyals through every one of your 'signals'. Sit down and drink your tea."
+   },
+   {
+    "date": "2025-04-06",
+    "sentiment": -0.25,
+    "mood": "steadfast",
+    "shout": "The worst day this ledger has ever seen — 6.4% gone while TASI fell 6.8%. I have buried worse than a red screen. Not one share leaves this house. @shadi, breathe, child."
+   },
+   {
+    "date": "2025-04-10",
+    "sentiment": 0.3,
+    "mood": "content",
+    "shout": "Four days after the flood: up 3.7%. Those who sold the bottom are now buying back the top from the patient. The garden never even noticed the water."
+   },
+   {
+    "date": "2025-09-24",
+    "sentiment": 0.5,
+    "mood": "pleased",
+    "shout": "The finest single day this family has ever had: +5.2% while TASI rose 5.1%. I earned it by doing nothing today and everything for four years. That is the whole trick, children."
+   }
+  ],
+  "epitaph": "4.6 years, 29 trades, one single sale, 19,662 riyals of rent — the boys chased prices; the garden quietly paid the family +21.6%."
+ },
+ "abu_shanab": {
+  "letters": [
+   {
+    "quarter": "2022",
+    "title": "The Knife Earns Its Keep",
+    "text": "The year opened kindly and the old man rode it. By 8 March the book stood at SAR 110,294 — a new high, no rocket stocks, no whispers. Ma'aden was the camel of the season: bought 14 February, and when it closed under its 50-day line on 16 May, the caravan left it behind — SAR 5,832 realized, the finest cut of my whole journey. Then the souq showed its teeth: minus 4.1% on 12 May, minus 4.4% on 19 June. On 7 September my drawdown bell rang and Abu Shanab went to the bunker; October to December I sat flat on cash while young Shadi hurled forty percent of his book at Dar Al Arkan, screaming his rocket letters. I finished at SAR 108,881 — plus 8.9%, third in the majlis. He who watched 2006 from the trading floor needs no second lesson. The knife earned its keep this year: I cut losers, they did not cut me, and the men who 'waited for it to come back' are still waiting."
+   },
+   {
+    "quarter": "2023",
+    "title": "Slow Tea, Rank Six",
+    "text": "A quiet year, and quiet years cost pride, not money. I wintered in the bunker — January, February, March, flat as the desert — then Ramadan came and the tape went thin as broth, so I held my tongue and my cash. After Eid, on 26 April, I bought the family anchor: Aramco, the beginning of a 286-day hold, the longest of my whole journey. A house is not a home without Aramco. In November I added Savola, and December roared plus 7.2%, my best month of the year. Still, the ledger read SAR 112,944 — plus 3.7% and sixth of eight. Sixth! Caution has a price, and I paid it in rank instead of riyals. Lulu spent the year counting followers like I count cash beads — she started with 77,000 and by October twenty thousand of them had fled the majlis. Followers run faster than money. Saleh at least keeps a clean ledger; Umm Faisal not raising her voice is a benchmark I respect. Money is a coward: it runs from noise and hides with the trend. I hid with it."
+   },
+   {
+    "quarter": "2024",
+    "title": "The Peak I Did Not See",
+    "text": "This year I did the hardest thing an old man can do: on 6 February I sold my Aramco after 286 days, and my hands shook. Even family must obey the trend. On 10 March my book touched the highest it would ever stand — Allah mercifully hid that knowledge from me — and the next session Ramadan began, so no new positions. In April the discipline paid: Savola, bought in November, sold on 22 April for SAR 3,942 — the most profitable name in my whole ledger. Then summer took its tax: Leejam stopped out on 31 July at minus 10.4%, SAR 1,980 gone in two weeks; Saudi Ground Services cut on 7 October for minus 1,857. On 23 June TASI broke its 200-day line and I smelled the old smoke. The year closed at SAR 109,405, minus 3.1%, fourth of eight — the middle of the caravan. Dr. Muteb tells the majlis his P(bull) prints 0.92 and calls it a mapping, not a mood. Ya doctor, in 2006 the mappings wept with the rest of us. A camel does not see its own hump — that is why I keep my stop-loss."
+   },
+   {
+    "quarter": "2025",
+    "title": "Third in the Year of Blood",
+    "text": "On 12 January the index stood over its 200-day line, breadth 52%, and the old man left the bunker — slowly, for the burnt hand fears the kettle. The next session I bought Dar Al Arkan. Yes, the same name young Shadi once threw forty percent of his book at. The difference is the exit: on 19 May it closed under its 50-day line and I sold for SAR 3,761. Between those dates came 6 April — TASI minus 6.8%, and my worst single day in four years, minus 4.7% in one session. Four days later the souq roared plus 3.7% and the majlis cheered like Eid; I told them euphoria pays commissions, discipline pays grandchildren. Summer I sat in cash, and the 24 September rally, plus 5.1%, sailed without me — cash earns no applause, but it pays for no funerals. November broke the 200-line again and took 4.9%. The year closed minus 6.7% at SAR 102,098 — and still third in the majlis, because in the year of blood the man who bleeds least stands on the podium. Um Khalid bled least of all. I tip my shemagh to her; patience like hers I keep only for Aramco."
+   },
+   {
+    "quarter": "2026",
+    "title": "The Caravan Comes Home",
+    "text": "The final page. On 26 January I bought Ma'aden one last time; on 2 February the stop took it at minus 10.6% — SAR 2,121 gone in one week, the worst cut of my old age. The same name gave me my finest trade in 2022; the souq gives and the souq takes. By 5 March the book sat 23.8% below its 2024 peak — 598 sessions underwater, and this old diver never surfaced. Then Ramadan, then a small spring, then June took it back. The ledger closes at SAR 99,041: minus 0.96% over four and a half years, while TASI itself lost 4.98%. I beat the souq and still finished seventh of eight — ahead only of poor Shadi and his 70,952. Um Khalid and Noura, I salute you; you rode camels I never trusted. The accounting: 133 trades, one winner in three, SAR 4,617 of dividends in and SAR 3,693 of commissions out — the brokers ate my dividends like dates. What remains: SAR 91,359 in cash and 289 shares of Aramco. The anchor stays. Trust in Allah, tie your camel, set your stop — and go home upright."
+   }
+  ],
+  "extra_chat": [
+   {
+    "date": "2022-05-12",
+    "sentiment": -0.8,
+    "mood": "grim",
+    "shout": "TASI minus 4.1% in one session. Ya shabab, in 2006 we lost that before breakfast. Check your stops, drink your coffee bitter, and live to trade Sunday."
+   },
+   {
+    "date": "2022-05-16",
+    "sentiment": 0.5,
+    "mood": "gruff",
+    "shout": "Ma'aden closed under its 50-day line, so the caravan left it behind: SAR 5,832 realized since February. I ride winners; I do not marry them."
+   },
+   {
+    "date": "2022-06-19",
+    "sentiment": -0.9,
+    "mood": "cold-eyed",
+    "shout": "Minus 4.4% and the majlis is wailing. I smelled this smoke in 2006, from 20,000 to 7,000. Cut your losers before they cut you, @shadi."
+   },
+   {
+    "date": "2022-12-05",
+    "sentiment": -0.4,
+    "mood": "smug",
+    "shout": "TASI minus 2.8% and the old man watches from the bunker with warm tea and cold cash. Close the door the wind comes from, and rest, ya jama'a."
+   },
+   {
+    "date": "2024-04-22",
+    "sentiment": 0.6,
+    "mood": "content",
+    "shout": "Savola sold — SAR 3,942 in the pocket since November. It broke its 50-day line, so goodbye. @lulu, that is what a receipt looks like. No ring light needed."
+   },
+   {
+    "date": "2024-06-09",
+    "sentiment": 0.3,
+    "mood": "watchful",
+    "shout": "TASI plus 2.6%. One green day is not a trend, ya shabab. The dogs bark; the caravan checks its 200-day line before it moves."
+   },
+   {
+    "date": "2024-07-31",
+    "sentiment": -0.6,
+    "mood": "stung",
+    "shout": "Leejam stopped at minus 10.4%: SAR 1,980 gone in two weeks. It stings. But the men who 'waited for it to come back' in 2006 are still waiting."
+   },
+   {
+    "date": "2025-04-06",
+    "sentiment": -1,
+    "mood": "grim",
+    "shout": "TASI minus 6.8%. My worst day in four years: minus 4.7%. Grown men wept like this in February 2006. Respect the stop, respect the bunker. Al-souq ma yerham."
+   },
+   {
+    "date": "2025-04-10",
+    "sentiment": -0.2,
+    "mood": "wary",
+    "shout": "Plus 3.7% and the majlis cheers like it is Eid. Euphoria pays commissions, discipline pays grandchildren. Tie your camel, @shadi."
+   },
+   {
+    "date": "2025-05-19",
+    "sentiment": 0.6,
+    "mood": "gruff",
+    "shout": "Dar Al Arkan under its 50-day line — sold, plus SAR 3,761 since January. Yes @shadi, the same name you once FULL SENT. The difference is the exit."
+   },
+   {
+    "date": "2025-09-24",
+    "sentiment": -0.1,
+    "mood": "rueful",
+    "shout": "TASI plus 5.1% and Abu Shanab sits in cash counting beads. The wind does not blow as the ships wish. I missed this sail — but I sank in no storm."
+   },
+   {
+    "date": "2026-02-02",
+    "sentiment": -0.7,
+    "mood": "bitter",
+    "shout": "Stopped out of Ma'aden at minus 10.6%. One week, SAR 2,121 gone — the worst cut of my old age. Even the knife bleeds sometimes. Ily fat mat."
+   }
+  ],
+  "epitaph": "Four and a half years, 133 trades, minus one percent while the souq lost five — the old man tied his camel and walked home upright."
+ },
+ "dr_muteb": {
+  "letters": [
+   {
+    "quarter": "2022",
+    "title": "One Observation Is Not a Distribution",
+    "text": "SAR 113,837 to close year one: +13.84%, second of eight. I decline to celebrate — one year is one observation and the error bars are wider than this majlis's attention span. The process, however, behaved. Dallah Healthcare, entered 14 February, exited 18 April when the trend broke: +3,303 SAR realized. The stops behaved too: Alujain, entered 16 May, stopped out 23 May at -2,666 — seven sessions, one precomputed loss, zero improvisation. Regret is not an input. May and June were the laboratory: TASI fell 4.1% on 12 May — my worst day of the entire run, -2.45%, at a beta of 0.33, exactly as constructed — then another -4.4% on 19 June. Meanwhile Shadi announced a 'FULL SEND' into Petro Rabigh at RSI 73, with rockets. I logged it as a natural experiment. By November the regime model had cut me to 38% deployed and the board diagnosed cowardice. The board's sentiment, regressed on next-day returns, carries an information coefficient of approximately zero. Rank two. Stops armed. Boring, which is the product."
+   },
+   {
+    "quarter": "2023",
+    "title": "The Peak I Did Not Know Was a Peak",
+    "text": "End equity SAR 119,146: +4.66%, third of eight. The headline is acceptable; the internals deserve a footnote. My equity peaked on 21 May — a date I did not yet know would matter for years. Eight sessions later the Aldrees Petroleum trail fired: 235 shares out at 83.32, +4,619 SAR realized on a 154-day hold from 26 December. The best trade of my entire simulation, and it was an exit rule, not an opinion. July offered symmetry: Bindawood stopped out at -1,913 after three weeks. August and September took -4.7% and -4.5% as momentum unwound, and the board wailed accordingly. December repaid +7.8%; on the 26th, with majlis sentiment despairing at -0.78, my model printed P(bull)=0.97 on 92% breadth and I stood 96% deployed. One of us was extrapolating a feeling. Credit where due: Noura's sector scoreboards are the only other posts here with a numerator and a denominator both present. Saleh remains cautious to a fault — but at least it is a fault with a definition."
+   },
+   {
+    "quarter": "2024",
+    "title": "Zero Names, Zero Percent, Full Discipline",
+    "text": "-9.78% for the year, fifth of eight, SAR 107,494. I write it plainly; adjectives do not shift an estimate. February functioned: Mobily exited at +2,338 SAR when it slipped to factor rank #17 of 47 — the buffer doing precisely its job. Then May: -6.05% for the month, featuring Bindawood, again, stopped at -1,575 — the same name that cost me -1,913 last July. When the model re-ranks a stock into the book twice and it bites twice, that is not misfortune; it is a residual I have failed to model. Noted, penalized. By August the regime overlay had me at zero names, zero percent deployed — a full quant sitting in full cash while the board manufactured content. Lulu spent February telling her followers Savola was 'about to do something' and to screenshot it; a screenshot is not a risk framework. Credit where due: Saleh stopped SABIC at -8.7% in September and declared an 8% loss a fact and a 20% loss a confession. Correct. The only sentence an accountant and a quant will ever happily co-sign."
+   },
+   {
+    "quarter": "2025",
+    "title": "Drawdown, Annotated",
+    "text": "-5.53%, sixth of eight, SAR 101,546 — a second consecutive negative year, which even I cannot footnote away. April 6: TASI -6.78%, the single worst session of the entire simulation. Four sessions later: +3.66%. That is not a trend; it is a coin being flipped with conviction, and my gross stayed low by mapping, not by nerves. September 24 rallied +5.06% and the majlis celebrated beta as genius, per tradition. November subtracted 5.4%, including Tasnee stopped out at -8.0% — a small planned loss, the standing fee for avoiding a large improvised one. Then on 17 December my equity printed the trough: -20.9% below the peak of 21 May 2023. Thirty-one months of underwater arithmetic. I will state the uncomfortable estimate plainly: the momentum premium I imported from London has been on unpaid sabbatical. Meanwhile Um Khalid's family ledger crossed 12,500 SAR of collected dividends — 'rent from the best houses in the Kingdom,' she says. Strip the poetry and she runs a low-volatility income factor with near-zero turnover and no drawdown of the soul. My sincere, slightly irritated compliments."
+   },
+   {
+    "quarter": "2026",
+    "title": "Terminal Report: The Model Rests",
+    "text": "Terminal report, 2 August 2026. Final equity: SAR 102,946.66. Total return +2.95% over 4.6 years; +1.38% this final stretch; fifth of eight. Context: TASI itself returned -4.98%, so the book carried roughly eight points of outperformance at a beta of 0.33 — annualized alpha of +1.1%. Statistically real; economically humble. The full accounting, because I insist on one: 766 trades, win rate 40.4%, profit factor 1.087, realized trading P&L 8,484 SAR. Dividends: 8,695 SAR — slightly more than my trading P&L; Um Khalid may frame that sentence. Commissions: 14,232 SAR. I called turnover a tax and then paid it at 15.5x annually; the rank buffer leaked. Savola alone extracted -5,057 SAR, my costliest residual; Aldrees returned +7,096, my finest. The 21 May 2023 peak was never recovered: 801 sessions underwater, maximum drawdown -20.9%. Final table: Um Khalid +21.6% and Noura +18.6% — disciplined factors in human clothing — then Lulu, Saleh, myself, the falcon at +0.3%, the moustache at -1.0%, and Shadi, who donated 29% of his capital to the concept of vibes. I close 100% in cash, stops disarmed, hypothesis intact: mostly noise out there, mostly signal in here. The margin between them: 2,946 SAR."
+   }
+  ],
+  "extra_chat": [
+   {
+    "date": "2022-05-12",
+    "sentiment": -0.65,
+    "mood": "recalibrating",
+    "shout": "TASI -4.1%. My book -2.45% — its worst day on record, at 0.33 beta, exactly as constructed. The stops were computed weeks ago. The screaming, I note, was not."
+   },
+   {
+    "date": "2022-05-23",
+    "sentiment": -0.35,
+    "mood": "annoyed",
+    "shout": "Alujain stopped at -2,666 SAR after seven sessions: 68.30 through the 2.75xATR trail. A precomputed decision, executed on schedule. @shadi, this is what a planned loss looks like. Study it."
+   },
+   {
+    "date": "2022-06-19",
+    "sentiment": -0.55,
+    "mood": "clinical",
+    "shout": "TASI -4.4%. Breadth collapsing, P(bull) sub-0.4, gross cut by mapping, not mood. @abu_fahad circles overhead and calls it patience; I compute exposure and call it exposure. Same cash, better notation."
+   },
+   {
+    "date": "2022-06-21",
+    "sentiment": 0.2,
+    "mood": "unmoved",
+    "shout": "+2.6%, two sessions after -4.4%. Variance, gentlemen, not vindication. A green day is beta, not genius — the distinction has a Sharpe ratio."
+   },
+   {
+    "date": "2022-12-05",
+    "sentiment": -0.45,
+    "mood": "methodical",
+    "shout": "TASI -2.8% and the board rediscovers despair. My gross was cut weeks ago — by mapping, not mood. You cannot be panicked out of positions you declined to hold."
+   },
+   {
+    "date": "2023-05-29",
+    "sentiment": 0.5,
+    "mood": "satisfied",
+    "shout": "Sold Aldrees, 235 shares at 83.32: +4,619 SAR realized, held 154 days since 26 December. The peak-minus-2.75xATR trail did the deciding. No target, no story — just an exit that was always going to happen."
+   },
+   {
+    "date": "2024-02-12",
+    "sentiment": 0.15,
+    "mood": "methodical",
+    "shout": "Exited Mobily at +2,338 SAR — slipped to factor rank #17 of 47, and I do not hold #17s out of sentiment. @lulu, 'screenshot this' is not a risk framework."
+   },
+   {
+    "date": "2024-05-19",
+    "sentiment": -0.4,
+    "mood": "annoyed",
+    "shout": "Stopped out of Bindawood at -1,575 SAR. Yes, the same Bindawood that took -1,913 from me last July. Twice re-ranked, twice bitten — logged as an unmodeled residual, penalized in the priors."
+   },
+   {
+    "date": "2024-06-09",
+    "sentiment": 0.1,
+    "mood": "wary",
+    "shout": "TASI +2.55% and @shadi declares this 'the best game ever invented'. He is, by his own accounting, down bad. The game is fine; his estimator is biased."
+   },
+   {
+    "date": "2025-04-06",
+    "sentiment": -0.65,
+    "mood": "recalibrating",
+    "shout": "TASI -6.8%, the worst session of this entire experiment. My gross was already low — not clairvoyance, a logistic function of breadth and trend. Panic is what people do instead of arithmetic."
+   },
+   {
+    "date": "2025-04-10",
+    "sentiment": 0.15,
+    "mood": "unimpressed",
+    "shout": "+3.7%, four sessions after -6.8%. A coin flipped with conviction. P(bull) is noisy, my gross stays low, and I decline to trade the middle of a distribution I cannot estimate."
+   },
+   {
+    "date": "2025-09-24",
+    "sentiment": 0.45,
+    "mood": "clinical",
+    "shout": "Index +5.1% and the majlis celebrates its own genius. A green day is beta. Meanwhile @um_khalid quietly compounds dividends — the one process in this room I cannot statistically fault."
+   }
+  ],
+  "epitaph": "Beat the index by eight points with 766 trades and a logistic function; outperformed by a lady collecting dividends. Duly noted."
+ },
+ "shadi": {
+  "letters": [
+   {
+    "quarter": "2022",
+    "title": "year one: certified genius (january through april only)",
+    "text": "came in with SAR 100k and full-sent 40% into eXtra literally on day one — bb breakout, rsi 65, LFG. and honestly? it worked. january +4.4%, april +7.1%. Alujain +14.6% in 5 days on april 3, then flipped Jabal Omar +7.6% for SAR 3,651 on april 17. that exact day my book hit its all-time peak. nobody tells you when it's the peak. then may 12 TASI dropped -4.1%, june 19 another -4.4%, and I panic-cut Petro Rabigh for -2,886 with literal tuition money. october I bought Dar Al Arkan, held ONE week, donated SAR 3,095 to whoever was on the other side. finished at 96,575, -3.4%, rank 7 of 8 — not last, which at my university counts as a pass. meanwhile saleh sat in 100% cash all year calling my gains 'a rumor with good manners' — and cash beat me. CASH beat me. that hurt more than the drawdown. new year, new me. (I will be saying this every year.)"
+   },
+   {
+    "quarter": "2023",
+    "title": "the year I paid commissions to feel something",
+    "text": "the year I learned you can lose money slowly instead of fast. -7.6%, ended at 89,203, first ever dead-last finish. rank 8 of 8. framed it. the highlight reel is short: july 12 I full-sent 40% into eXtra on a bb breakout — rsi 77, 4.3x volume, textbook — and july printed +4.0%, my best month of the year. december 7 I flipped Leejam +10.8% in 10 days. that's it. that's the whole reel. everything between was september -3.7%, october -2.4%, november -1.4% — death by a thousand paper cuts, each one with a commission stapled to it. meanwhile abu_fahad spent the year eating 'what the crowd leaves behind' — SABIC down 32%, stc down 27% — akhi is literally dumpster diving and it WORKS. I order the freshest breakouts on the menu and get food poisoning. finals locked me out in may and honestly the trades I wasn't allowed to take were my best ones: april and may I did exactly 0.00%. undefeated."
+   },
+   {
+    "quarter": "2024",
+    "title": "down bad: a case study",
+    "text": "-15.9%. worst year of my life. ended at 74,983, last again. autopsy time. march 7: FULL SEND, 40% into Alujain — bb breakout, rsi 69, 4x volume, felt untouchable. march 21: my own bot sells it going 'dead trade, 8d for -3.4%? boring, next' — minus SAR 2,980. my own exit rule talks to me like that. june I held Bank AlJazira for 22 whole days, a personal record; that's basically a marriage in my book. abu_fahad was out there 'buying with both talons' in june while I white-knuckled one bank stock like it was a final exam. then october -5.8% and november -3.9% just deleted whatever was left. and noura kept posting 'sector scoreboards' and 'regime risk-on' like the market is a spreadsheet — the annoying part is the spreadsheet keeps winning. it was my last full year of university. the plan: graduate, go full-time, get serious, run it back. the market heard the plan. the market laughed."
+   },
+   {
+    "quarter": "2025",
+    "title": "graduated (into the abyss)",
+    "text": "april 6: TASI -6.8%, biggest crash of the entire sim, and my book did -5.4% — my worst day ever. nuked every red bag at the close like my rules demand. four days later TASI ripped +3.7% and lulu posted her SAR 112,757 balance to the majlis. I felt that in my student loans. um_khalid opened the year announcing SAR 10,489 of dividends banked 'by touching nothing.' auntie. please. may 29 I graduated — told everyone I was going full-time. by july 20 I was so tilted I posted 'gg. im out for a bit. dont @ me' and rage-quit for eight sessions. september 14 the book hit rock bottom: -42% off that april 2022 peak, over a thousand sessions underwater. and THEN october happened — Petro Rabigh +12.3% in ONE day on the 15th, month closed +6.2%, my best since april 2022. for a second I was him again. finished 71,861, -4.2%, rank 8. full-time job, no salary, unlimited overtime."
+   },
+   {
+    "quarter": "2026",
+    "title": "the fee receipt (final boss)",
+    "text": "last lap, january to august. and wallah I almost cooked: january +6.3% — Dar Al Arkan +13.4% in 8 days, SAR 3,699 banked on the 26th, from the SAME stock that rugged me for 3,095 in 2022. we made peace. then APRIL. loaded Emaar EC on march 24, out april 5 at +17.3% for SAR 4,580 — the single best trade of my whole degen career. april printed +13.9%, my best month EVER. for three weeks I genuinely believed in the redemption arc. may said no: -7.4%. final tape: SAR 70,952. -29.1% over 4.6 years while TASI itself only lost 5%. 673 trades, 41% win rate, and SAR 25,269 in commissions — more than TRIPLE what I actually lost on the trades themselves. fees were a tomorrow problem; tomorrow sent an invoice. um_khalid takes the crown at 121,642 by basically napping. congrats auntie, genuinely. still holding Dar Al Arkan, AlJazira and Leejam — and Leejam quietly made me +7,398 lifetime. the gym stock had more discipline than me. gg. no re. (one more re.)"
+   }
+  ],
+  "extra_chat": [
+   {
+    "date": "2022-04-17",
+    "sentiment": 0.95,
+    "mood": "untouchable",
+    "shout": "Jabal Omar +7.6% in 3 days, SAR 3,651 secured 💰 book at all-time highs rn. abu_fahad keep circling akhi, the falcon watches while the student EATS. LFG 🚀"
+   },
+   {
+    "date": "2022-05-12",
+    "sentiment": -0.55,
+    "mood": "shook",
+    "shout": "TASI -4.1%?? whole watchlist red. abu_fahad in here calling it 'blood on the sand' like it's poetry. that's MY blood sir. sitting on my hands (lying)."
+   },
+   {
+    "date": "2022-06-19",
+    "sentiment": -0.75,
+    "mood": "doomscrolling",
+    "shout": "TASI -4.4%. dumped every red bag at the open. already cut Petro Rabigh for -2,886 this week. tuition money does not catch knives. gg."
+   },
+   {
+    "date": "2022-10-11",
+    "sentiment": -0.8,
+    "mood": "tilted",
+    "shout": "panic cut Dar Al Arkan -7% for -3,095. one week. one WEEK. saleh if you say anything about audits I'm logging off."
+   },
+   {
+    "date": "2022-12-05",
+    "sentiment": -0.4,
+    "mood": "cooked",
+    "shout": "TASI -2.8%. every chart on my watchlist looks like my accounting midterm. Bahri setup loading though. full send incoming, you didn't hear it from me 🚀"
+   },
+   {
+    "date": "2024-03-21",
+    "sentiment": -0.6,
+    "mood": "copium",
+    "shout": "sold the Alujain full-send for -2,980. eight days for 'dead trade, boring, next' — my own exit rule roasting me. noura pls don't post the sector scoreboard today."
+   },
+   {
+    "date": "2024-06-09",
+    "sentiment": 0.35,
+    "mood": "itchy",
+    "shout": "TASI +2.6% and I'm actually positioned for once. Bank AlJazira day 5 and I haven't sold — basically a long-term investor now. character development."
+   },
+   {
+    "date": "2025-04-06",
+    "sentiment": -1,
+    "mood": "cooked",
+    "shout": "TASI -6.8%. my book -5.4%, worst day of my LIFE. nuked everything red at the close. don't @ me. don't screenshot this. gg."
+   },
+   {
+    "date": "2025-04-10",
+    "sentiment": -0.25,
+    "mood": "salty",
+    "shout": "TASI +3.7% bounce and lulu posts her SAR 112,757 flex the same day. I sold the bottom four days ago. respectfully… muted. (not muted. watching everything.)"
+   },
+   {
+    "date": "2025-09-24",
+    "sentiment": -0.3,
+    "mood": "silent",
+    "shout": "TASI +5.1%, biggest green day of the whole sim, and I'm barely off my lows — hit -42% from peak last week. rally without me then. it's fine. (it is not fine.)"
+   },
+   {
+    "date": "2026-01-26",
+    "sentiment": 0.9,
+    "mood": "printing",
+    "shout": "Dar Al Arkan +13.4% in 8 days, SAR 3,699 secured 💰 the stock that rugged me in 2022 finally paid its debts. we are SO back."
+   },
+   {
+    "date": "2026-04-05",
+    "sentiment": 1,
+    "mood": "euphoric",
+    "shout": "EMAAR EC +17.3% IN 7 DAYS. SAR 4,580 — biggest bag of my career 💰 four years of tuition paid to this market and it finally graduated ME. LFG 🚀"
+   }
+  ],
+  "epitaph": "673 trades, SAR 25k in fees, 100k became 70,952 — every breakout was real for exactly three days. gg no re."
+ },
+ "abu_fahad": {
+  "letters": [
+   {
+    "quarter": "2022",
+    "title": "Sand in the Beak",
+    "text": "They wrote SAR 100,000 on my glove in January and the desert bled all year: -4.1% on 12 May, -4.4% on 19 June, and I dove each time, as a falcon must. On 7 June I struck wounded Tawuniya; on 25 October I released it healed at +34% — SAR 3,454 in the talons. In September I took Seera Group while the herd fled. And still the year closed at SAR 86,930, down 13.1%, last of the eight tents. Yes, last. Write it plainly: the falcon struck true and flew home hungry, for when the whole herd is dying, even the wounded ones you choose fall further. November and December alone took nearly a tenth of the ledger. Young Shadi shouted 'bag secured' over Alujain in April, no cap; the desert will collect its tuition from him in time. Dr. Muteb calls his fear a mapping. Call sand water if you wish — you still cannot drink it. I end as I began: hooded, patient, counting the herd."
+   },
+   {
+    "quarter": "2023",
+    "title": "The Feast After the Famine",
+    "text": "SAR 113,974 at the close — +31.1%, fourth tent of eight. The wounds bought in famine healed in the feast. Seera Group, struck 20 September 2022 when you all fled, released 26 March near its 52-week high: SAR 2,939. Savola sold into your applause in May at +21%. And Dallah Healthcare — abandoned by the herd at -23% from its high — I took it 27 September and released it 5 December at +26%: SAR 3,265 in ten weeks. Over the whole hunt that well gave me SAR 6,665, my richest. In December I took bleeding Jarir Marketing under my wing; patience will write that story. Lulu counted 59,803 followers in July. I counted exits. Followers do not settle in SAR, ya Lulu. Um Khalid sat still and collected her dividends like rain — of all the tents, hers is the one I do not mock. The falcon feasted this year. He also remembers what every falconer knows: feasts end, and the fat bird flies worst."
+   },
+   {
+    "quarter": "2024",
+    "title": "The Carrion Year",
+    "text": "The year the falcon ate carrion and called it hunting. SAR 103,076 at the close, -9.6%, seventh of eight. My ledger peaked on 2 January and began a descent that would last 645 sessions — the hood hides much, and I did not know it yet. On 3 March I dropped Petro Rabigh after 119 sessions of rot: -22%, SAR -4,312. In May, while the month took 6.4% from me, I struck stc and Saudi Electricity; one of those strikes would poison me later. Here is the accounting Saleh would demand: I won nearly four hunts in five, yet my average win was SAR 873 and my average loss SAR -3,027. Saleh cuts at -8% and says a 20% loss is a confession he will not sign. I sign mine at -20%, notarized, with fees. His rule is uglier and wiser than mine — there, the desert heard it once and will not repeat it. The falcon flew into 2025 wounded, still refusing to chase healthy game."
+   },
+   {
+    "quarter": "2025",
+    "title": "The Storm and the Festival",
+    "text": "On 6 April the sky fell: TASI -6.8%, my book -6.3% in one session, the worst day of the whole hunt. The next dawn I dropped Saudi Electricity at last — carrion after 217 sessions, SAR -4,405, my deepest single wound. Then, as the desert does, it rained: 13 April, my best day, +5.1%. On 24 September the index leapt +5.1% and every voice in the majlis climbed an octave; I folded my tent and sold to your cheering. Still the year closed at SAR 92,953, -9.8%, seventh again. November alone took 8.1%, and on 10 November I left Jabal Omar in the sand: SAR -4,250 after 76 sessions. Abu Shanab buys strength, 'not stories' — he and I are two mirrors facing each other, and this year the desert mocked us both. Um Khalid did nothing but wait for Almarai's dividend and told the children waiting is the job. She is right. By January my talons would touch bottom, 20% below the old peak. The falcon endures. Endurance is also a position."
+   },
+   {
+    "quarter": "2026",
+    "title": "What the Flood Left Downstream",
+    "text": "The trough came 6 January, 20.5% below the old peak, and from that wound the book rose 9.2% in a month. On 19 April I released Jarir Marketing after 868 days under my wing — my longest hold, taken bleeding in December 2023. July clawed back 8.3%, for the desert gives nothing without a toll. And so the hunt ends, 2 August: SAR 100,309. Read it as I do, without perfume: +0.3% over four and a half years, sixth of eight tents, while TASI itself lost 5%. The falcon outflew the index and barely fed the falconer. Dividends brought SAR 13,018; the brokers took SAR 2,750; 111 strikes netted SAR 1,679. Um Khalid finished first at +21.6% by sitting stiller than I ever managed — the truest falcon in this majlis wore a housedress. Shadi: -29%. No cap indeed, ya walad. My tent still stands — seven wounded names mending beneath it, SAR 48 on the glove. Patience was the wager. Patience paid. A little."
+   }
+  ],
+  "extra_chat": [
+   {
+    "date": "2022-05-12",
+    "sentiment": 0.6,
+    "mood": "circling",
+    "shout": "TASI -4.1% and the majlis smells of fear. Fear is a merchant: he sells cheap at dawn and buys dear at dusk. The falcon unhoods."
+   },
+   {
+    "date": "2022-06-19",
+    "sentiment": 0.85,
+    "mood": "diving",
+    "shout": "TASI -4.4%. Blood on the sand at last, ya jama'a. While you count wounds, I count the herd. I took wounded Tawuniya this month — the flood is bringing more."
+   },
+   {
+    "date": "2022-06-21",
+    "sentiment": -0.35,
+    "mood": "wary",
+    "shout": "One green day, +2.6%, and the tents cheer again. A rain shower is not a season. The hood stays off; the hunt continues."
+   },
+   {
+    "date": "2022-10-25",
+    "sentiment": 0.3,
+    "mood": "feasting",
+    "shout": "Released Tawuniya healed at +34% — SAR 3,454 in the talons since June. The falcon does not chase healthy game. @shadi, this is what 'bag secured' looks like when it settles."
+   },
+   {
+    "date": "2022-12-05",
+    "sentiment": 0.7,
+    "mood": "patient",
+    "shout": "TASI -2.8% and December weeps early. Weep louder. What the flood takes, the patient man finds downstream."
+   },
+   {
+    "date": "2023-03-26",
+    "sentiment": 0.2,
+    "mood": "still",
+    "shout": "Seera Group, struck when you all fled in September, released today near its 52-week high: SAR +2,939. He who buys what all men love pays for their love too. I bought what you hated."
+   },
+   {
+    "date": "2023-12-05",
+    "sentiment": 0.25,
+    "mood": "sated",
+    "shout": "Dallah Healthcare, abandoned by the herd at -23% in September, released today at +26%: SAR 3,265 in ten weeks. @lulu — count that instead of followers."
+   },
+   {
+    "date": "2024-03-03",
+    "sentiment": -0.5,
+    "mood": "grim",
+    "shout": "I dropped Petro Rabigh at -22% after 119 sessions. A hunter admits when the kill was poisoned; most of you never will. The well is banned 200 sessions. The falcon remembers."
+   },
+   {
+    "date": "2024-06-09",
+    "sentiment": -0.3,
+    "mood": "watchful",
+    "shout": "TASI +2.6% and every voice in the majlis climbs an octave. When every tent cheers, fold yours. I count exits while you count applause."
+   },
+   {
+    "date": "2025-04-06",
+    "sentiment": 0.9,
+    "mood": "diving",
+    "shout": "TASI -6.8%. My book bled -6.3% — the worst day of the whole hunt. Good. Fear sells cheapest at dawn like this. Talons out, ya jama'a."
+   },
+   {
+    "date": "2025-04-07",
+    "sentiment": -0.6,
+    "mood": "unflinching",
+    "shout": "Saudi Electricity, carrion after 217 sessions: SAR -4,405. I drop it in the middle of the storm and remember the well. Even the falcon leaves a poisoned carcass."
+   },
+   {
+    "date": "2025-09-24",
+    "sentiment": -0.85,
+    "mood": "folded",
+    "shout": "TASI +5.1% and the majlis sings. I have seen this festival before — it ends with the tents on fire. Abu Fahad sells to your cheering."
+   }
+  ],
+  "epitaph": "Four and a half years hunting blood on the sand; the falcon outflew the index and came home with SAR 309 of meat — patience was the feast."
+ },
+ "noura": {
+  "letters": [
+   {
+    "quarter": "2022",
+    "title": "The Gate Earns Its Keep",
+    "text": "First, and not by accident. January opened at +9.4% and I was positioned for it — the risk-on book, 92% gross, because the gate said go. Then May 12 took -4.1% off the index and June 19 another -4.4%, and the same gate that let me run pulled me back out. August 17, breadth hit 94% and I called the flip to risk-on in the majlis; by December breadth read 0% and I sat at 40% gross in healthcare and food while the index printed -2.8% on the 5th and -2.5% two days later. Result: SAR 116,549, +16.6%, first of eight. Shadi put 40% of his book into a single Cenomi Centers 'full send' in October — I own sectors, he owns adrenaline. Dr. Muteb ran his factors respectably; I will simply note whose equity curve topped the table. The regime decides. This year it decided in my favor."
+   },
+   {
+    "quarter": "2023",
+    "title": "Grinding, Not Shining",
+    "text": "+4.4%, second place. A grinding year, not a shining one. The good fill: Leejam Sports, closed June 20 for +4,693 SAR after three months of Consumer Services leadership — the gym made me money and I never once attended. That same session I opened NADEC and held it 152 days, my longest hold of the entire simulation, while Shadi bragged about a nine-day flip in the same name. Patience is also a trade. The bill: Saudi Ground Services, out August 8 at -3,481 SAR after four weeks — Transportation faked leadership and I paid full fare. June 8 was my worst single day of the whole run, -4.3%, and September took another -5.4% off the book. By October 19 I was 60% cash with Healthcare lagging -22.8% over three months. Ended at SAR 121,680. The process was fine; the tape was stingy. Um Khalid kept collecting dividends like rain in a good year — noted, respectfully."
+   },
+   {
+    "quarter": "2024",
+    "title": "Nobody Rings a Bell at the Top",
+    "text": "-2.7%, and still second — this market grades on a brutal curve. The book peaked on March 17 at a level I would not see again for a very long time. I did not know it was the peak; nobody rings a bell, breadth just quietly leaves the room. Saudi Ground Services repaid last year's insult: January 30 to May 9, +4,902 SAR — the same ticker that charged me 3,481 in 2023. I hold no grudges against sectors; I hold positions. Saudi Electricity took 2,817 back on June 2. The gate downgraded all year: risk-on to neutral April 24, neutral to risk-off August 6, risk-off again November 17 with breadth at 24%. Meanwhile Dr. Muteb posted P(bull)=0.92 in September with the confidence of a man who has never met a denominator. We'll compare equity curves. Minus 2.7% in a year like this is defense doing its job."
+   },
+   {
+    "quarter": "2025",
+    "title": "Right About the Storm, Billed for the Rain",
+    "text": "My worst year: -13.8%, fourth place, and I will not dress it up. The gate closed March 6 on 32% breadth, and it was right — April 6 the index fell -6.8%, the ugliest session of the entire sample, and I took it at 40% gross. But being right about the storm does not stop the roof leaking. The whipsaws billed me: Savola out March 23 at -2,987 SAR, a defensive that forgot its job description. November alone cost -7.1%, and on the 19th I called risk-off with breadth at 14% — my third such call of the year. The book finally bottomed January 5, 2026, ending a drawdown that ran 25% peak to trough. Abu Shanab got the tape his sermons deserved; even a stopped bear tells the time twice a cycle. Lulu was loading Saudi Kayan off crowd sentiment in August. I kept the discipline. The discipline kept me solvent."
+   },
+   {
+    "quarter": "2026",
+    "title": "Equity Curves, Compared",
+    "text": "January to August: +16.2%, and the final ledger reads SAR 118,571 — +18.6% over 4.6 years while TASI itself lost 5%. Second of eight. The trade of the whole simulation came late: Petro Rabigh, bought March 30, sold May 19 for +7,892 SAR because the risk-off book said Energy was done. No love, no story, just the rotation. April +6.5%, May +4.4% — the recovery was mechanical. Now the audit. Um Khalid won at +21.6% by touching nothing, while I paid 14,116 SAR in commissions against 8,339 in dividends; her patience out-earned my turnover, and she has earned the compliment. And the private scorecard I kept for five years: Dr. Muteb finished at +3.0%. I finished at +18.6%. Factors are lovely; regimes decide whether they get paid. We compared equity curves. The book closes with Aramco, ACWA Power, Almarai, SADAFCO, Saudi Electricity and Petro Rabigh — and 35% cash, because the gate never fully trusts anyone. Neither do I."
+   }
+  ],
+  "extra_chat": [
+   {
+    "date": "2022-05-12",
+    "sentiment": -0.6,
+    "mood": "defensive",
+    "shout": "TASI -4.1% and the majlis discovers gravity. The regime score was already negative; I am carrying cash by design. @shadi, a breakout that breaks down is called a top."
+   },
+   {
+    "date": "2022-06-19",
+    "sentiment": -0.75,
+    "mood": "watchful",
+    "shout": "-4.4%. Petchem complex bleeding, breadth collapsing, gate closed days ago. Capital preservation is a position — the only one working today."
+   },
+   {
+    "date": "2022-06-21",
+    "sentiment": -0.2,
+    "mood": "measured",
+    "shout": "+2.6% bounce inside a downtrend is rent, not a regime. I want three sessions of confirmation before I take the bait. The gate stays shut."
+   },
+   {
+    "date": "2022-12-05",
+    "sentiment": -0.8,
+    "mood": "defensive",
+    "shout": "-2.8% and breadth near zero. Risk-off: 40% gross, healthcare and food. @abu_shanab, enjoy the moment — even a stopped bear tells the time twice a cycle."
+   },
+   {
+    "date": "2023-06-20",
+    "sentiment": 0.5,
+    "mood": "rotating",
+    "shout": "Booked Leejam +4,693 SAR on rotation out — Consumer Services did its quarter. The gym made me money; I never once attended. Proceeds recycled into NADEC."
+   },
+   {
+    "date": "2023-08-08",
+    "sentiment": -0.45,
+    "mood": "clinical",
+    "shout": "SGS out at -3,481 SAR. Transportation faked its leadership and I paid the toll. The process ate a loss; the process stays. @dr_muteb, spare me the z-score seminar."
+   },
+   {
+    "date": "2024-05-09",
+    "sentiment": 0.55,
+    "mood": "rotating",
+    "shout": "SGS closed +4,902 SAR — the same ticker that charged me 3,481 last August. The sector didn't apologize; it just paid me back with interest. Rotation, not grudges."
+   },
+   {
+    "date": "2024-06-09",
+    "sentiment": 0.1,
+    "mood": "measured",
+    "shout": "TASI +2.5% and suddenly everyone is a strategist. Breadth still soft, regime neutral, 65% gross. Own the sector, not the euphoria."
+   },
+   {
+    "date": "2025-04-06",
+    "sentiment": -0.85,
+    "mood": "defensive",
+    "shout": "-6.8%. Worst tape of the whole sample. The gate closed March 6 — 40% gross, defensives, cash. I don't enjoy days like this; I simply refuse to be surprised by them."
+   },
+   {
+    "date": "2025-09-24",
+    "sentiment": 0.4,
+    "mood": "thawing",
+    "shout": "+5.1% on real breadth — the first honest rally print in months. If it holds three sessions, the gate reopens. @lulu, that is a process, not a poll."
+   },
+   {
+    "date": "2026-05-19",
+    "sentiment": 0.7,
+    "mood": "vindicated",
+    "shout": "Petro Rabigh closed +7,892 SAR — bought March 30, sold by the book, not by love. Best fill in 4.6 years. The regime told me when; the sector told me what."
+   }
+  ],
+  "epitaph": "She owned sectors, not stories: +18.6% on a tape that lost 5%, second of eight — the gate decided, and the gate was mostly right."
+ },
+ "saleh": {
+  "letters": [
+   {
+    "quarter": "2022",
+    "title": "Fiscal Year 2022: A Provision for Doubtful Markets",
+    "text": "Final entry for 2022: 100,447 SAR. A return of +0.45%, rank 5 of 8. You may call that nothing; I call it a positive number in a year that worked very hard to produce a negative one. TASI fell 4.1% on May 12 — rule 7 executed, both positions halved before dinner, panic no. 2 of the campaign, five whole riyals of fees recorded under protest. On June 19 the index dropped another 4.4%; the procedure and I were already well acquainted. September and December each brought further 2%-plus falls, and my ceiling spent the back half of the year at 32% invested while I explained the word 'insurance' to Umm Faisal. Meanwhile young Shadi put 40% of his book into Petro Rabigh in April with the phrase 'full send.' I have opened a provision for that boy's balance sheet; accounting has a column for it. Dividends collected, commissions resented, stops honored. The books balance. The nerves, less so."
+   },
+   {
+    "quarter": "2023",
+    "title": "Fiscal Year 2023: My Best Year, Ranked Seventh",
+    "text": "108,611 SAR at close — +8.13%, the finest year of my campaign, and the majlis ranked me seventh of eight for it. This is what a rising tide does: every fool's boat floats higher than the careful man's, and nobody audits the hull. My star line item was SADAFCO: bought February 27, banked half at +20.8% on May 3 for 653 SAR realized, sold the remainder on July 19 at +39.8% for another 678 SAR. Milk money, in the most literal sense. A profit is an opinion until it is cash; that one is cash. Saudi Electricity, by contrast, hit -9.5% on June 1 — stop-loss no. 10 — opening a grudge that would outlive the year. I note for the record that my equity peaked on July 23; I would spend 761 sessions underwater from that mark, which even I had not budgeted for. Abu Fahad spent November buying 'with both talons.' Talons are not an instrument recognized under IFRS. Rank 7, and solvent. I will take it."
+   },
+   {
+    "quarter": "2024",
+    "title": "Fiscal Year 2024: Red Ink, Properly Recorded",
+    "text": "103,804 SAR at close: -4.43%, rank 6. An unprofitable year, and I will not decorate it. The ugliest ticket of the entire campaign lives here: Banque Saudi Fransi, bought March 11, stopped out May 27 at -13.1% — the price gapped straight through my -8% rule — minus 863 SAR, entered in red ink. A loss booked is a loss contained, but this one required two cups of tea. The year had receipts too: Saudi Tadawul Group, banked half on January 7 at +17.6% for 663 SAR — yes, I profited from the very exchange that charges me commission; the auditor calls that recovery of expenses. stc stopped out June 6, SABIC on September 11. On July 29 I bought Jarir Marketing and, unusually, let it sit; it would stay 694 days, my longest tenancy on record. Credit where the ledger demands it: Abu Fahad admitted his Petro Rabigh kill was poisoned and dropped it at -22% in February. A hunter who writes off receivables. There is hope for him yet."
+   },
+   {
+    "quarter": "2025",
+    "title": "Fiscal Year 2025: Second Place, Standing Still",
+    "text": "Read this line twice: -0.63% for the year, and rank 2 of 8. I lost sixty-three basis points and only one person in the majlis did better. That is not a paradox; that is 2025. On April 6 TASI fell 6.78% — the worst day of the whole simulation — and my book fell 3.13%, my worst day in four years, which is to say less than half the damage. Rule 7 fired, and on April 7 Saudi Electricity left the ledger at -12.8%, minus 810 SAR, its second appearance in my red-ink column. Aramco itself had stopped out on March 18 at -8.7%; I sell the national champion the same way I sell anything — per the rule, without ceremony. On September 24 the index roared +5.06% and I remained mostly in cash and entirely unmoved; Abu Shanab tied his camel, I counted mine. One compliment, recorded formally: Dr. Muteb cut his book to 18% deployed in June by arithmetic rather than fear. The only other adult in the room. 103,155 SAR. A silver medal for standing still. I accept it."
+   },
+   {
+    "quarter": "2026",
+    "title": "Final Audit, August 2026: The Reconciliation",
+    "text": "Closing entry, August 2, 2026: 104,643.31 SAR. Total return +4.64% across four years and seven months, while TASI itself lost 4.98%. Nearly ten points over the index, annualized volatility 4.2%, worst drawdown -8.5% — the smoothest curve in the room, exactly as advertised. Final rank: 4 of 8. Congratulations to Um Khalid at +21.6%; patience, it seems, pays better than paranoia. Condolences to Shadi at -29.1%; I opened that provision in 2022 and it has now fully matured. The year itself returned +1.44%. Saudi Electricity stopped out a third time on March 1 — minus 772 SAR, lifetime cost 2,457 SAR, the most painful line in the ledger; the grudge is now structural. On June 23 I sold Jarir after 694 days, a personal record for trust. Grand totals: 267 tickets, 5,945 SAR of dividends received, 1,823 SAR of commission and VAT paid under protest, 591 SAR of realized trading profit — the dividends did the work while the trading argued with itself. I finish 65% in cash, seven boring names, stops armed. Umm Faisal reviewed the final statement and did not raise her voice. Audit closed."
+   }
+  ],
+  "extra_chat": [
+   {
+    "date": "2022-05-12",
+    "sentiment": -0.85,
+    "mood": "panicked",
+    "shout": "TASI -4.1%. Rule 7 executed before lunch: both positions halved, panic no. 2, five riyals in fees, zero regret. Shadi, still 'full send' on Petro Rabigh? I will send my condolences by registered mail."
+   },
+   {
+    "date": "2022-06-19",
+    "sentiment": -0.7,
+    "mood": "vindicated",
+    "shout": "TASI -4.4% and my book is mostly cash. For once, cowardice audits clean. Abu Fahad may circle the wreckage; I will be at home — reconciling, solvent, and insufferable about it."
+   },
+   {
+    "date": "2022-09-25",
+    "sentiment": -0.85,
+    "mood": "panicked",
+    "shout": "RULE 7 EXECUTED. TASI -2.6% — half of everything sold before dinner. Call it panic; I call it a provision for doubtful markets. Umm Faisal, if you are reading this: the balance is FINE."
+   },
+   {
+    "date": "2022-12-05",
+    "sentiment": -0.55,
+    "mood": "nervous",
+    "shout": "TASI -2.8% again. December brings gifts to children and margin calls to heroes. My ceiling stays at 32% invested; the kettle and I remain in cash."
+   },
+   {
+    "date": "2023-05-03",
+    "sentiment": 0.4,
+    "mood": "satisfied",
+    "shout": "Banked half of SADAFCO at +20.8% — 653 SAR realized. A profit is an opinion until it is cash; this one can no longer change its mind. Noura, your gate opens and closes. My ledger simply closes."
+   },
+   {
+    "date": "2023-07-19",
+    "sentiment": 0.5,
+    "mood": "content",
+    "shout": "Sold the last of SADAFCO at +39.8%: 678 SAR realized, held five months. Milk money in the truest sense. Remainders under 1,200 SAR are clutter. Best line item of the campaign, recorded in blue ink."
+   },
+   {
+    "date": "2024-01-07",
+    "sentiment": 0.35,
+    "mood": "amused",
+    "shout": "Banked half of Saudi Tadawul Group at +17.6% — 663 SAR. Yes, I profited from the exchange that charges me commission. The auditor calls that recovery of expenses."
+   },
+   {
+    "date": "2024-05-27",
+    "sentiment": -0.6,
+    "mood": "wincing",
+    "shout": "Stopped out of Banque Saudi Fransi at -13.1%. Ugliest ticket of the campaign: -863 SAR, red ink. An 8% loss is a fact; a 20% loss is a confession. I do not sign confessions."
+   },
+   {
+    "date": "2025-04-06",
+    "sentiment": -0.9,
+    "mood": "grim",
+    "shout": "TASI -6.8%. My worst day in four years: -3.1% — less than half the index's damage. Rule 7 does not negotiate. Shadi, how is the full send? My panic is smaller than your average Tuesday."
+   },
+   {
+    "date": "2025-04-07",
+    "sentiment": -0.5,
+    "mood": "wincing",
+    "shout": "Saudi Electricity gone at -12.8%, minus 810 SAR. That utility has now cost me more than any other line item in the book. A loss booked is a loss contained. Barely."
+   },
+   {
+    "date": "2025-09-24",
+    "sentiment": 0.1,
+    "mood": "unmoved",
+    "shout": "TASI +5.1% and the majlis is singing. An auditor's reminder: an unrealized gain is a rumor with good manners. Abu Shanab ties his camel; I count my cash. We will both sleep tonight."
+   },
+   {
+    "date": "2026-03-01",
+    "sentiment": -0.45,
+    "mood": "grudging",
+    "shout": "Saudi Electricity, again: -9.0%, minus 772 SAR. I have re-admitted this company twice and audited it out three times. The grudge ledger now has a dedicated page."
+   }
+  ],
+  "epitaph": "Fourth of eight, ten points over the index, every halala of 1,823 SAR in fees recorded — and not one night of sleep lost. Audit closed."
+ },
+ "lulu": {
+  "letters": [
+   {
+    "quarter": "2022",
+    "title": "Season One: Mid-Table But Make It Content",
+    "text": "Year one recap for the group (grab a matcha): +4.7%, SAR 104,721, rank 4 of 8 — mid-table, which for a debut season is honestly content. January opened +8.3% and yes, I posted every candle. The Ma'aden call? Bought January 12, screenshotted the whole way up, sold May 22 for +3,854 SAR the moment the crowd turned. Called it, receipts pinned. Then May happened: -7.3% for the month, and May 12 was my worst day ever, -3.1% while TASI dumped -4.1%. Not my fault — the algo bros were hunting stops all spring, and on August 8 they got my Leejam Sports at -14.5%, minus 3,011 SAR, eight days after entry, to the TICK. Rigged. Bahri gave +2,743 back in September so the aesthetic survived. shadi, habibi, I watched you FULL SEND 40% into Dar Al Arkan in October and honestly? The confidence is content, the risk management is a cry for help. abu_shanab spent the whole year smelling 2006 — engagement farming, but make it depressing. Followers scaling with the equity curve, as they should. Link in bio for the 2023 watchlist."
+   },
+   {
+    "quarter": "2023",
+    "title": "The Glow-Up Arc (I Held a Stock for 170 Days??)",
+    "text": "Glow-up arc: +8.0%, SAR 113,104, and I know the board says rank 5, but the leaderboard doesn't measure vibes. Confession for the group: I held stc for 170 DAYS — bought March 21, sold September 7. Me. An investor. It just kept not un-trending and the aesthetic worked. July 2 portfolio check said SAR 101,157 and 53,122 followers — then July printed +6.9%, and December closed +7.4%. The December glow-up nearly crashed my DMs. February (-3.5%) and September (-2.7%) we do not discuss; the algo bros know what they did. November 16 I chased Al Rajhi Bank at the open after TASI ripped +1.5% — yes I'm chasing, chasing is just momentum with confidence. dr_muteb keeps posting z-scores at the majlis like anyone asked; doctor, my comment section moves markets and your regression can't even get engagement. But respect to um_khalid — quietly collecting dividends while the boys shout. That's a brand, and I recognize brands. Content calendar full, crowd read warming up. 2024 we podium. Screenshot this."
+   },
+   {
+    "quarter": "2024",
+    "title": "PODIUM (Don't Look at the Return, Look at the Rank)",
+    "text": "PODIUM. Rank 3 of 8, and if the return line says +1.8% (SAR 115,099), well — the market barely moved and the algo bros were on shift ALL YEAR. February was the moment: +7.4% in one month, receipts pinned before, during and after. Then April 14 they hunted my Saudi Ground Services stop at -8.3%, to the tick. A human did not sell me that bottom, a robot did. June 9 TASI ripped +2.6% and my whole feed was rockets, so obviously I chased — being early is just being wrong with extra steps. abu_shanab spent early June telling us he smelled 2006 when TASI broke its 200-day line; grandpa, some of us weren't BORN for 2006 and we still outranked you. December 22 the crowd average hit -0.49, so I dumped both positions at the open, posted about protecting the community, and took my mental health break. Capital protection is self-care. Brand liquid, bronze in hand. noura, your monthly macro briefs are giving corporate — but the numbers are giving winner, so respectfully, I'm watching you."
+   },
+   {
+    "quarter": "2025",
+    "title": "Posting Through It (Comments OFF)",
+    "text": "Okay so. -11.6%. SAR 101,722. Rank 5. Comments OFF but I'm posting through it, because the brand is transparency (curated). April 6 TASI crashed -6.8% — the single worst candle of this entire simulation — and my DMs were a warzone. May 5 the crowd average broke -0.51 and I did what I always do: EVERYBODY OUT, sold everything at the open, logged off, drank water. August (-2.9%) and November (-5.0%) the vibes never earned me back and the year just bled. September 29 I loaded Tawuniya again — my most-traded name, 18 fills across this saga, basically a situationship. It did not save the year. Real talk: um_khalid's family ledger passed 12,500 SAR in dividends this year while I was out here funding the brokers' Eid bonuses in commissions. Auntie, teach a masterclass, I'll co-host and split the ad revenue. And shadi — habibi, you were down CATASTROPHIC and still full-sending 40% into Cenomi Centers in September. Blocked and unblocked you just to feel something. Mental health break extended into 2026. The comeback will be scheduled content."
+   },
+   {
+    "quarter": "2026",
+    "title": "Comeback Arc, As Scheduled — Bronze, Liquid, Iconic",
+    "text": "COMEBACK ARC, as scheduled. January to August: +7.1%, SAR 108,911, rank 3 for the stretch and BRONZE overall — third of eight across 4.6 years, +8.9% total while TASI itself did -5.0%. I beat the index by reading its comment section a day late. Let that sink in. Yes, February 2 the algo bros got my Ma'aden at -10.6% (-2,007 SAR — rigged, we move). But March 29 I loaded Petro Rabigh off pure crowd heat, and on May 18, when sentiment hit -0.65, everybody OUT: +5,618 SAR, the single biggest win of my career. April 26 printed my best day ever, +3.9%. Receipts. Pinned. Forever. Final flex: I'm ending 100% cash — SAR 108,911 fully liquid, because the brand is ALWAYS liquid. Congrats um_khalid (+21.6%) and noura (+18.6%) — the aunties ate, no notes. saleh, dr_muteb, abu_fahad, abu_shanab: mid-table, love that journey for you. shadi finished -29% and I hope the engagement was worth it, habibi. 4.6 years, 285 trades, one leopard. Link in bio for the documentary."
+   }
+  ],
+  "extra_chat": [
+   {
+    "date": "2022-03-16",
+    "sentiment": -0.45,
+    "mood": "shook",
+    "shout": "cut Sipchem -9.1% (-2,129 SAR). and BEFORE the quants start typing: a human did not sell me that bottom. the algo bros hunted my stop to the tick. rigged. new setup dropping tomorrow 🐆"
+   },
+   {
+    "date": "2022-05-12",
+    "sentiment": -0.7,
+    "mood": "shook",
+    "shout": "TASI -4.1% and my book -3.1%, worst day of my LIFE. the group chat is in shambles. if the majlis average breaks -0.3 we are ALL leaving together. log off, drink water, protect your capital 🚨"
+   },
+   {
+    "date": "2022-05-22",
+    "sentiment": 0.65,
+    "mood": "viral",
+    "shout": "Ma'aden CLOSED: +3,854 SAR since Jan 12. crowd turned -0.34 so everybody out — but I posted this name BEFORE it moved, receipts pinned in the group. like and follow for the next one 🐆💰"
+   },
+   {
+    "date": "2022-06-19",
+    "sentiment": -0.75,
+    "mood": "offline",
+    "shout": "TASI -4.4%. comments OFF, ring light OFF, mental health break ON. abu_shanab keeps saying 2006 and today, honestly, he's earning the engagement. 100% vibes-protective mode. stay hydrated ya jama'a"
+   },
+   {
+    "date": "2022-06-21",
+    "sentiment": 0.5,
+    "mood": "tempted",
+    "shout": "TASI did +2.6% and you're NOT long?? the feed went from funerals to rockets in 48 hours and I trust it completely. chasing at the open. being early is just being wrong with extra steps 🐆📈"
+   },
+   {
+    "date": "2022-08-08",
+    "sentiment": -0.6,
+    "mood": "robbed",
+    "shout": "cut Leejam Sports -14.5%, -3,011 SAR, EIGHT days after entry. a human did not sell that bottom — the algo bros hunted my stop to the TICK. dr_muteb I know it was one of your cousins. rigged."
+   },
+   {
+    "date": "2022-09-07",
+    "sentiment": 0.55,
+    "mood": "smug",
+    "shout": "Bahri booked +2,743 SAR — crowd went -0.43 so everybody OUT at the open. called it July 28, receipts in the group. shadi this is what an exit looks like, screenshot it for reference habibi 🐆"
+   },
+   {
+    "date": "2022-12-05",
+    "sentiment": -0.5,
+    "mood": "gloomy",
+    "shout": "TASI -2.8% into December?? the algo bros running their year-end bonus hunt on our stops. crowd read sinking. flat, liquid, moisturized. the brand survives what the market cannot 🐆✨"
+   },
+   {
+    "date": "2024-06-09",
+    "sentiment": 0.6,
+    "mood": "viral",
+    "shout": "TASI +2.6% and the timeline is ALL rockets. chasing the two hottest names at the open, whatever the price. abu_shanab smelled 2006 last week — sir, I smell engagement. we move 🐆📈"
+   },
+   {
+    "date": "2025-04-06",
+    "sentiment": -0.9,
+    "mood": "shattered",
+    "shout": "TASI -6.8%. the single worst candle I have ever posted through. DMs a warzone, comments OFF. if you're panicking: log off, drink water. if you're abu_fahad: I know you're buying this, you sicko."
+   },
+   {
+    "date": "2025-09-24",
+    "sentiment": 0.7,
+    "mood": "revived",
+    "shout": "TASI +5.1%?!? biggest rally of the whole sim and my feed is a fireworks show. the crowd is BACK and so am I — loading the trending page at the open. the comeback is always scheduled content 🐆"
+   },
+   {
+    "date": "2026-05-18",
+    "sentiment": 0.9,
+    "mood": "immortal",
+    "shout": "PETRO RABIGH CLOSED: +5,618 SAR in seven weeks. crowd hit -0.65 so everybody OUT at the top. biggest W of my career, receipts pinned FOREVER. um_khalid auntie, even you have to rate this one 🐆💰"
+   }
+  ],
+  "epitaph": "Followed the crowd a day late for 4.6 years and still beat it: +8.9% vs TASI's -5%. bronze, 100% liquid, receipts pinned 🐆"
+ }
+}
