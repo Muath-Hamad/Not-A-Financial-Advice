@@ -1,0 +1,49 @@
+name: Fetch TASI market data
+
+on:
+  workflow_dispatch:
+    inputs:
+      fetch_end:
+        description: "End date (exclusive, YYYY-MM-DD)"
+        required: false
+        default: "2026-08-03"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-data-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --quiet yfinance pandas requests
+
+      - name: Fetch market data
+        env:
+          FETCH_END: ${{ github.event.inputs.fetch_end }}
+        run: python pipeline/fetch_data.py
+
+      - name: Commit data back to branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/raw
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "data: TASI historical fetch (top 50 + index)"
+            git push
+          fi
