@@ -1,0 +1,3915 @@
+{
+ "briefs": {
+  "abu_fahad": {
+   "meta": {
+    "handle": "abu_fahad",
+    "name": "Abu Fahad",
+    "emoji": "🦅",
+    "tagline": "The falcon eats what the crowd leaves behind.",
+    "character": "A calm, cryptic contrarian who hunts the Tadawul like a falconer works the dunes: he buys names bleeding near their 52-week lows and sells the ones the crowd has kissed 25% above their 200-day line. He reads the majlis only to lean against it, and he can sit on cash for months, hooded, quoting the desert.",
+    "risk_style": "patient contrarian / mean-reversion",
+    "color": "#E45756"
+   },
+   "metrics": {
+    "final_equity": 100309.14,
+    "total_return": 0.0031,
+    "cagr": 0.0007,
+    "ann_vol": 0.1185,
+    "sharpe": -0.273,
+    "sortino": -0.37,
+    "max_drawdown": -0.2049,
+    "mdd_peak": "2024-01-02",
+    "mdd_trough": "2026-01-06",
+    "mdd_recovery": null,
+    "longest_underwater_sessions": 645,
+    "calmar": 0.003,
+    "beta_tasi": 0.583,
+    "alpha_annual": 0.009,
+    "corr_tasi": 0.662,
+    "var95_daily": -0.0119,
+    "skew": -0.142,
+    "best_day": {
+     "date": "2025-04-13",
+     "ret": 0.0507
+    },
+    "worst_day": {
+     "date": "2025-04-06",
+     "ret": -0.0632
+    },
+    "monthly_returns": {
+     "2022-01": 0.0,
+     "2022-02": 0.0,
+     "2022-03": 0.0,
+     "2022-04": 0.0183,
+     "2022-05": -0.0032,
+     "2022-06": -0.0561,
+     "2022-07": 0.0191,
+     "2022-08": 0.0326,
+     "2022-09": -0.036,
+     "2022-10": -0.0128,
+     "2022-11": -0.0562,
+     "2022-12": -0.0399,
+     "2023-01": 0.0408,
+     "2023-02": -0.0321,
+     "2023-03": 0.0847,
+     "2023-04": 0.0481,
+     "2023-05": 0.0027,
+     "2023-06": 0.0234,
+     "2023-07": 0.0271,
+     "2023-08": 0.0004,
+     "2023-09": -0.0161,
+     "2023-10": -0.0118,
+     "2023-11": 0.0641,
+     "2023-12": 0.0493,
+     "2024-01": -0.0249,
+     "2024-02": -0.0092,
+     "2024-03": -0.0049,
+     "2024-04": 0.0048,
+     "2024-05": -0.0636,
+     "2024-06": 0.0123,
+     "2024-07": 0.0322,
+     "2024-08": -0.0072,
+     "2024-09": -0.0174,
+     "2024-10": -0.0247,
+     "2024-11": -0.0263,
+     "2024-12": 0.0329,
+     "2025-01": 0.0064,
+     "2025-02": -0.014,
+     "2025-03": 0.0274,
+     "2025-04": -0.0147,
+     "2025-05": -0.0058,
+     "2025-06": 0.0309,
+     "2025-07": 0.005,
+     "2025-08": -0.0382,
+     "2025-09": 0.0377,
+     "2025-10": -0.0229,
+     "2025-11": -0.081,
+     "2025-12": -0.0275,
+     "2026-01": 0.0921,
+     "2026-02": -0.0102,
+     "2026-03": 0.0567,
+     "2026-04": -0.0078,
+     "2026-05": 0.0479,
+     "2026-06": -0.0232,
+     "2026-07": -0.083,
+     "2026-08": 0.0145
+    },
+    "positive_months_pct": 0.446,
+    "n_trades": 111,
+    "n_buys": 51,
+    "n_sells": 60,
+    "win_rate": 0.783,
+    "profit_factor": 1.043,
+    "realized_pnl": 1678.47,
+    "avg_win": 873.0,
+    "avg_loss": -3027.13,
+    "turnover_annual": 3.3,
+    "favorite_stock": {
+     "code": "2290",
+     "name": "Yansab",
+     "trades": 8
+    },
+    "most_profitable_stock": {
+     "code": "4004",
+     "name": "Dallah Healthcare",
+     "realized": 6665.21
+    },
+    "most_painful_stock": {
+     "code": "4161",
+     "name": "Bindawood Holding",
+     "realized": -8296.31
+    },
+    "best_trade": {
+     "date": "2022-10-25",
+     "code": "8010",
+     "side": "sell",
+     "shares": 195,
+     "price": 70.096,
+     "value": 13668.82,
+     "fee": 24.36,
+     "realized_pnl": 3453.61,
+     "held_since": "2022-06-07",
+     "reason": "healed: -3% off 52w-high, +34% on cost"
+    },
+    "worst_trade": {
+     "date": "2025-04-07",
+     "code": "5110",
+     "side": "sell",
+     "shares": 1180,
+     "price": 14.585,
+     "value": 17210.77,
+     "fee": 30.68,
+     "realized_pnl": -4404.82,
+     "held_since": "2024-05-22",
+     "reason": "carrion after 217 sessions: -20%"
+    },
+    "longest_hold": {
+     "code": "4190",
+     "name": "Jarir Marketing",
+     "days": 868,
+     "sold": "2026-04-19",
+     "bought": "2023-12-03"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 86930,
+     "year_return": -0.1307,
+     "rank": 8
+    },
+    "2023": {
+     "end_equity": 113974,
+     "year_return": 0.3111,
+     "rank": 4
+    },
+    "2024": {
+     "end_equity": 103076,
+     "year_return": -0.0956,
+     "rank": 7
+    },
+    "2025": {
+     "end_equity": 92953,
+     "year_return": -0.0982,
+     "rank": 7
+    },
+    "2026": {
+     "end_equity": 100309,
+     "year_return": 0.0791,
+     "rank": 6
+    }
+   },
+   "dividends_received": 13018.05,
+   "commissions_paid": 2750.23,
+   "best_trades": [
+    {
+     "date": "2022-10-25",
+     "code": "8010",
+     "side": "sell",
+     "shares": 195,
+     "price": 70.096,
+     "value": 13668.82,
+     "fee": 24.36,
+     "realized_pnl": 3453.61,
+     "held_since": "2022-06-07",
+     "reason": "healed: -3% off 52w-high, +34% on cost",
+     "name": "Tawuniya"
+    },
+    {
+     "date": "2023-12-05",
+     "code": "4004",
+     "side": "sell",
+     "shares": 92,
+     "price": 174.026,
+     "value": 16010.37,
+     "fee": 28.54,
+     "realized_pnl": 3264.84,
+     "held_since": "2023-09-27",
+     "reason": "healed: -4% off 52w-high, +26% on cost",
+     "name": "Dallah Healthcare"
+    },
+    {
+     "date": "2023-03-26",
+     "code": "1810",
+     "side": "sell",
+     "shares": 926,
+     "price": 23.884,
+     "value": 22116.71,
+     "fee": 39.42,
+     "realized_pnl": 2938.93,
+     "held_since": "2022-09-20",
+     "reason": "healed: -2% off 52w-high, +15% on cost",
+     "name": "Seera Group"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2025-04-07",
+     "code": "5110",
+     "side": "sell",
+     "shares": 1180,
+     "price": 14.585,
+     "value": 17210.77,
+     "fee": 30.68,
+     "realized_pnl": -4404.82,
+     "held_since": "2024-05-22",
+     "reason": "carrion after 217 sessions: -20%",
+     "name": "Saudi Electricity"
+    },
+    {
+     "date": "2024-03-03",
+     "code": "2380",
+     "side": "sell",
+     "shares": 1970,
+     "price": 8.362,
+     "value": 16472.41,
+     "fee": 29.36,
+     "realized_pnl": -4312.15,
+     "held_since": "2023-09-14",
+     "reason": "carrion after 119 sessions: -22%",
+     "name": "Petro Rabigh"
+    },
+    {
+     "date": "2025-11-10",
+     "code": "4250",
+     "side": "sell",
+     "shares": 1053,
+     "price": 16.244,
+     "value": 17104.66,
+     "fee": 30.49,
+     "realized_pnl": -4250.46,
+     "held_since": "2025-07-24",
+     "reason": "carrion after 76 sessions: -20%",
+     "name": "Jabal Omar"
+    }
+   ],
+   "n_trades": 111,
+   "sample_own_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "abu_fahad",
+     "sentiment": 0.06,
+     "mood": "hooded and patient",
+     "shout": "Quiet, from the high air: cash SAR 100,000, breadth 38%. A falcon is not idle when it circles — it is choosing."
+    },
+    {
+     "date": "2022-06-16",
+     "handle": "abu_fahad",
+     "sentiment": 0.95,
+     "mood": "feasting",
+     "shout": "You weep at -0.90, ya jama'a? Weep louder. Fear sells cheap at dawn — the falcon is buying with both talons."
+    },
+    {
+     "date": "2022-09-25",
+     "handle": "abu_fahad",
+     "sentiment": 0.95,
+     "mood": "eyes on the wounded",
+     "shout": "TASI -2.6%. Blood on the sand at last. While you count wounds, I count the herd. Patience, then the dive."
+    },
+    {
+     "date": "2022-12-22",
+     "handle": "abu_fahad",
+     "sentiment": 0.77,
+     "mood": "blood-scent on the wind",
+     "shout": "You weep at -0.45, ya jama'a? Weep louder. Fear sells cheap at dawn — the falcon is buying with both talons."
+    },
+    {
+     "date": "2023-05-17",
+     "handle": "abu_fahad",
+     "sentiment": 0.35,
+     "mood": "talons out",
+     "shout": "Sold Savola Group into your applause at +21%. The dune that rose highest feeds the wind first."
+    },
+    {
+     "date": "2023-09-26",
+     "handle": "abu_fahad",
+     "sentiment": 0.77,
+     "mood": "feasting",
+     "shout": "The herd abandoned Dallah Healthcare at -23% from its high. I did not. The falcon eats what the crowd leaves behind."
+    },
+    {
+     "date": "2023-11-30",
+     "handle": "abu_fahad",
+     "sentiment": 0.35,
+     "mood": "talons out",
+     "shout": "The herd abandoned Jarir Marketing at -27% from its high. I did not. The falcon eats what the crowd leaves behind."
+    },
+    {
+     "date": "2024-05-13",
+     "handle": "abu_fahad",
+     "sentiment": 0.72,
+     "mood": "diving",
+     "shout": "The herd abandoned stc at -22% from its high. I did not. The falcon eats what the crowd leaves behind."
+    },
+    {
+     "date": "2024-09-10",
+     "handle": "abu_fahad",
+     "sentiment": 0.01,
+     "mood": "still as stone",
+     "shout": "Quiet, from the high air: 5 wounded names mending in my book, breadth 44%. The falcon feeds while the crowd looks away."
+    },
+    {
+     "date": "2025-01-27",
+     "handle": "abu_fahad",
+     "sentiment": -0.09,
+     "mood": "hooded and patient",
+     "shout": "Quiet, from the high air: 7 wounded names mending in my book, breadth 70%. The falcon feeds while the crowd looks away."
+    },
+    {
+     "date": "2025-06-11",
+     "handle": "abu_fahad",
+     "sentiment": 0.8,
+     "mood": "feasting",
+     "shout": "You weep at -0.62, ya jama'a? Weep louder. Fear sells cheap at dawn — the falcon is buying with both talons."
+    },
+    {
+     "date": "2025-09-24",
+     "handle": "abu_fahad",
+     "sentiment": -0.84,
+     "mood": "watching the festival",
+     "shout": "TASI +5.1% and every voice in the majlis climbs an octave. When every tent cheers, fold yours."
+    }
+   ],
+   "sample_others_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "dr_muteb",
+     "sentiment": -0.24144406381944114,
+     "mood": "clinical",
+     "shout": "Housekeeping for the majlis: my gross target is 56% because P(bull) prints 0.37, not because I am 'nervous' or 'greedy'. Those are moods. This is a mapping."
+    },
+    {
+     "date": "2022-04-14",
+     "handle": "shadi",
+     "sentiment": 1.0,
+     "mood": "printing",
+     "shout": "LETS GOOOO Alujain +14.0% in 6 days, bag secured 💰 who said you can't trade between lectures. no cap."
+    },
+    {
+     "date": "2022-07-03",
+     "handle": "dr_muteb",
+     "sentiment": -0.85,
+     "mood": "clinically annoyed",
+     "shout": "Housekeeping for the majlis: my gross target is 31% because P(bull) prints 0.02, not because I am 'nervous' or 'greedy'. Those are moods. This is a mapping."
+    },
+    {
+     "date": "2022-10-10",
+     "handle": "shadi",
+     "sentiment": 0.08,
+     "mood": "bored in lecture",
+     "shout": "Zain KSA +9.2% flip in 1d. ez. the trend is my side hustle."
+    },
+    {
+     "date": "2023-02-05",
+     "handle": "shadi",
+     "sentiment": -0.63,
+     "mood": "silent",
+     "shout": "gg. im out for a bit. dont @ me."
+    },
+    {
+     "date": "2023-07-10",
+     "handle": "lulu",
+     "sentiment": 0.36,
+     "mood": "we move",
+     "shout": "portfolio check: SAR 105,891. followers: 59,803. crowd sentiment +0.38. the brand is ALWAYS liquid 🐆✨ link in bio for the watchlist."
+    },
+    {
+     "date": "2023-10-24",
+     "handle": "lulu",
+     "sentiment": -0.49,
+     "mood": "mental health break",
+     "shout": "portfolio check: SAR 103,486. followers: 57,112. crowd sentiment -0.79. the brand is ALWAYS liquid 🐆✨ link in bio for the watchlist."
+    },
+    {
+     "date": "2024-02-11",
+     "handle": "lulu",
+     "sentiment": 0.55,
+     "mood": "viral",
+     "shout": "portfolio check: SAR 113,979. followers: 72,504. crowd sentiment +0.42. the brand is ALWAYS liquid 🐆✨ link in bio for the watchlist."
+    },
+    {
+     "date": "2024-05-26",
+     "handle": "saleh",
+     "sentiment": -0.16999999999999998,
+     "mood": "wincing",
+     "shout": "Stopped out of Banque Saudi Fransi at -13.1%. Yes, again the -8% rule. An 8% loss is a fact; a 20% loss is a confession. I do not sign confessions."
+    },
+    {
+     "date": "2024-09-01",
+     "handle": "dr_muteb",
+     "sentiment": 0.7631210348550838,
+     "mood": "methodical",
+     "shout": "Monthly factor read: P(bull)=0.92, breadth 70%, momentum spread 41pts. Book: 7 names, 68% deployed, stops armed. Say what you like about London — nobody there sized a position by feelings."
+    },
+    {
+     "date": "2025-01-05",
+     "handle": "abu_shanab",
+     "sentiment": -0.5,
+     "mood": "bitter coffee",
+     "shout": "TASI reclaimed its 200-day line. The caravan moves — I buy strength, not stories."
+    },
+    {
+     "date": "2025-04-14",
+     "handle": "um_khalid",
+     "sentiment": -0.16999999999999998,
+     "mood": "quietly pleased",
+     "shout": "Almarai remembered the family today — 302 SAR. I did nothing but wait. Waiting is the job, children."
+    },
+    {
+     "date": "2025-08-21",
+     "handle": "saleh",
+     "sentiment": -0.14999999999999997,
+     "mood": "wincing",
+     "shout": "Stopped out of Saudi Awwal Bank at -8.8%. Yes, again the -8% rule. An 8% loss is a fact; a 20% loss is a confession. I do not sign confessions."
+    },
+    {
+     "date": "2025-12-14",
+     "handle": "lulu",
+     "sentiment": -0.33,
+     "mood": "the DMs are a warzone",
+     "shout": "trending page EMPTY, TASI -1.19%, crowd -0.70. doing a Q&A instead: yes the 🐆 is real, no I won't share my exact entries, yes SAR 101,722 is real. next."
+    },
+    {
+     "date": "2026-04-02",
+     "handle": "shadi",
+     "sentiment": 1.0,
+     "mood": "doomscrolling",
+     "shout": "LETS GOOOO Emaar The Economic City +17.3% in 7 days, bag secured 💰 who said you can't trade between lectures. no cap."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 47.82,
+    "positions": {
+     "4002": {
+      "shares": 272,
+      "value": 17040.8
+     },
+     "2270": {
+      "shares": 22,
+      "value": 4532.0
+     },
+     "1111": {
+      "shares": 147,
+      "value": 17625.3
+     },
+     "6004": {
+      "shares": 82,
+      "value": 5502.2
+     },
+     "6010": {
+      "shares": 1308,
+      "value": 18639.0
+     },
+     "4001": {
+      "shares": 3732,
+      "value": 19257.12
+     },
+     "4004": {
+      "shares": 159,
+      "value": 17664.9
+     }
+    }
+   }
+  },
+  "abu_shanab": {
+   "meta": {
+    "handle": "abu_shanab",
+    "name": "Abu Shanab",
+    "emoji": "🥸",
+    "tagline": "The trend is my caravan; everything else is noise in the souq.",
+    "character": "A 58-year-old Souq veteran who has traded Tadawul since before the 2006 crash wiped out half his majlis. Trusts nothing but moving averages and 12-month momentum, cuts losers without mercy, refuses to buy in Ramadan, and is secretly soft-hearted about Aramco.",
+    "risk_style": "disciplined trend-follower",
+    "color": "#9D755D"
+   },
+   "metrics": {
+    "final_equity": 99041.05,
+    "total_return": -0.0096,
+    "cagr": -0.0021,
+    "ann_vol": 0.101,
+    "sharpe": -0.367,
+    "sortino": -0.479,
+    "max_drawdown": -0.2382,
+    "mdd_peak": "2024-03-10",
+    "mdd_trough": "2026-03-05",
+    "mdd_recovery": null,
+    "longest_underwater_sessions": 598,
+    "calmar": -0.009,
+    "beta_tasi": 0.31,
+    "alpha_annual": 0.0036,
+    "corr_tasi": 0.414,
+    "var95_daily": -0.0096,
+    "skew": -0.286,
+    "best_day": {
+     "date": "2022-03-16",
+     "ret": 0.0389
+    },
+    "worst_day": {
+     "date": "2025-04-06",
+     "ret": -0.0469
+    },
+    "monthly_returns": {
+     "2022-01": 0.0196,
+     "2022-02": 0.044,
+     "2022-03": 0.09,
+     "2022-04": 0.0649,
+     "2022-05": -0.063,
+     "2022-06": -0.0159,
+     "2022-07": 0.0026,
+     "2022-08": -0.0229,
+     "2022-09": -0.0246,
+     "2022-10": 0.0,
+     "2022-11": 0.0,
+     "2022-12": 0.0,
+     "2023-01": 0.0,
+     "2023-02": 0.0,
+     "2023-03": 0.0,
+     "2023-04": 0.0006,
+     "2023-05": -0.0073,
+     "2023-06": 0.0038,
+     "2023-07": 0.0064,
+     "2023-08": -0.0322,
+     "2023-09": 0.0027,
+     "2023-10": -0.013,
+     "2023-11": 0.0069,
+     "2023-12": 0.0719,
+     "2024-01": -0.0271,
+     "2024-02": 0.076,
+     "2024-03": 0.01,
+     "2024-04": -0.0204,
+     "2024-05": 0.0033,
+     "2024-06": -0.0239,
+     "2024-07": -0.0019,
+     "2024-08": 0.0091,
+     "2024-09": 0.0085,
+     "2024-10": -0.0412,
+     "2024-11": -0.0194,
+     "2024-12": 0.0,
+     "2025-01": 0.0219,
+     "2025-02": 0.0114,
+     "2025-03": 0.0382,
+     "2025-04": -0.0576,
+     "2025-05": -0.0158,
+     "2025-06": 0.0,
+     "2025-07": 0.0,
+     "2025-08": 0.0,
+     "2025-09": 0.0,
+     "2025-10": -0.0124,
+     "2025-11": -0.0494,
+     "2025-12": -0.0012,
+     "2026-01": 0.0067,
+     "2026-02": -0.0486,
+     "2026-03": -0.0111,
+     "2026-04": 0.0426,
+     "2026-05": 0.0303,
+     "2026-06": -0.0409,
+     "2026-07": -0.006,
+     "2026-08": 0.0003
+    },
+    "positive_months_pct": 0.411,
+    "n_trades": 133,
+    "n_buys": 67,
+    "n_sells": 66,
+    "win_rate": 0.333,
+    "profit_factor": 0.946,
+    "realized_pnl": -2239.17,
+    "avg_win": 1783.7,
+    "avg_loss": -942.74,
+    "turnover_annual": 4.14,
+    "favorite_stock": {
+     "code": "2222",
+     "name": "Saudi Aramco",
+     "trades": 9
+    },
+    "most_profitable_stock": {
+     "code": "2050",
+     "name": "Savola Group",
+     "realized": 3942.32
+    },
+    "most_painful_stock": {
+     "code": "7020",
+     "name": "Etihad Etisalat (Mobily)",
+     "realized": -3156.16
+    },
+    "best_trade": {
+     "date": "2022-05-16",
+     "code": "1211",
+     "side": "sell",
+     "shares": 537,
+     "price": 41.625,
+     "value": 22352.62,
+     "fee": 39.84,
+     "realized_pnl": 5832.32,
+     "held_since": "2022-02-14",
+     "reason": "closed under sma50 — the caravan leaves it behind"
+    },
+    "worst_trade": {
+     "date": "2026-02-02",
+     "code": "1211",
+     "side": "sell",
+     "shares": 205,
+     "price": 67.932,
+     "value": 13926.06,
+     "fee": 24.82,
+     "realized_pnl": -2120.97,
+     "held_since": "2026-01-26",
+     "reason": "stop -10.6%: I cut losers, they don't cut me"
+    },
+    "longest_hold": {
+     "code": "2222",
+     "name": "Saudi Aramco",
+     "days": 286,
+     "sold": "2024-02-06",
+     "bought": "2023-04-26"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 108881,
+     "year_return": 0.0888,
+     "rank": 3
+    },
+    "2023": {
+     "end_equity": 112944,
+     "year_return": 0.0373,
+     "rank": 6
+    },
+    "2024": {
+     "end_equity": 109405,
+     "year_return": -0.0313,
+     "rank": 4
+    },
+    "2025": {
+     "end_equity": 102098,
+     "year_return": -0.0668,
+     "rank": 3
+    },
+    "2026": {
+     "end_equity": 99041,
+     "year_return": -0.0299,
+     "rank": 7
+    }
+   },
+   "dividends_received": 4616.83,
+   "commissions_paid": 3693.45,
+   "best_trades": [
+    {
+     "date": "2022-05-16",
+     "code": "1211",
+     "side": "sell",
+     "shares": 537,
+     "price": 41.625,
+     "value": 22352.62,
+     "fee": 39.84,
+     "realized_pnl": 5832.32,
+     "held_since": "2022-02-14",
+     "reason": "closed under sma50 — the caravan leaves it behind",
+     "name": "Ma'aden"
+    },
+    {
+     "date": "2024-04-22",
+     "code": "2050",
+     "side": "sell",
+     "shares": 433,
+     "price": 32.405,
+     "value": 14031.5,
+     "fee": 25.01,
+     "realized_pnl": 3942.32,
+     "held_since": "2023-11-20",
+     "reason": "closed under sma50 — the caravan leaves it behind",
+     "name": "Savola Group"
+    },
+    {
+     "date": "2025-05-19",
+     "code": "4300",
+     "side": "sell",
+     "shares": 912,
+     "price": 20.02,
+     "value": 18258.2,
+     "fee": 32.55,
+     "realized_pnl": 3761.16,
+     "held_since": "2025-01-13",
+     "reason": "closed under sma50 — the caravan leaves it behind",
+     "name": "Dar Al Arkan"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2026-02-02",
+     "code": "1211",
+     "side": "sell",
+     "shares": 205,
+     "price": 67.932,
+     "value": 13926.06,
+     "fee": 24.82,
+     "realized_pnl": -2120.97,
+     "held_since": "2026-01-26",
+     "reason": "stop -10.6%: I cut losers, they don't cut me",
+     "name": "Ma'aden"
+    },
+    {
+     "date": "2024-07-31",
+     "code": "1830",
+     "side": "sell",
+     "shares": 81,
+     "price": 207.792,
+     "value": 16831.15,
+     "fee": 30.0,
+     "realized_pnl": -1979.64,
+     "held_since": "2024-07-16",
+     "reason": "stop -10.4%: I cut losers, they don't cut me",
+     "name": "Leejam Sports"
+    },
+    {
+     "date": "2024-10-07",
+     "code": "4031",
+     "side": "sell",
+     "shares": 347,
+     "price": 47.602,
+     "value": 16518.02,
+     "fee": 29.44,
+     "realized_pnl": -1856.64,
+     "held_since": "2024-08-19",
+     "reason": "closed under sma50 — the caravan leaves it behind",
+     "name": "Saudi Ground Services"
+    }
+   ],
+   "n_trades": 133,
+   "sample_own_shouts": [
+    {
+     "date": "2022-03-08",
+     "handle": "abu_shanab",
+     "sentiment": 0.64,
+     "mood": "riding the caravan",
+     "shout": "New high for the old man: SAR 110,294. No rocket stocks, no whispers — just the 200-day line and a sharp knife for losers."
+    },
+    {
+     "date": "2022-06-19",
+     "handle": "abu_shanab",
+     "sentiment": -0.98,
+     "mood": "bitter coffee",
+     "shout": "TASI -4.4% in one session. Calm down, ya shabab — in 2006 we lost that before the dallah was empty. Respect your stops and live to trade Sunday."
+    },
+    {
+     "date": "2022-09-07",
+     "handle": "abu_shanab",
+     "sentiment": -0.67,
+     "mood": "cold-eyed",
+     "shout": "Ya jama'a, I lived February 2006 — from 20,000 to 7,000 while grown men wept in the hall. My drawdown bell rang. Abu Shanab goes to cash. Close the door the wind comes from, and rest."
+    },
+    {
+     "date": "2023-03-23",
+     "handle": "abu_shanab",
+     "sentiment": -0.5,
+     "mood": "fasting from the tape",
+     "shout": "Ramadan Kareem, ya jama'a. The tape goes thin as broth — no new positions from me until Eid. He who trades the Ramadan chop donates to the brokers."
+    },
+    {
+     "date": "2023-08-09",
+     "handle": "abu_shanab",
+     "sentiment": 0.38,
+     "mood": "gruff but content",
+     "shout": "All this wailing while the trend points up? The dogs bark and the caravan moves on. Abu Shanab stays long."
+    },
+    {
+     "date": "2023-11-13",
+     "handle": "abu_shanab",
+     "sentiment": -0.53,
+     "mood": "counting cash beads",
+     "shout": "The majlis is drunk on green candles while the index sits under its 200-day line. We were this cheerful in January 2006 too. Yalla, keep laughing."
+    },
+    {
+     "date": "2024-03-11",
+     "handle": "abu_shanab",
+     "sentiment": 0.54,
+     "mood": "fasting from the tape",
+     "shout": "Ramadan Kareem, ya jama'a. The tape goes thin as broth — no new positions from me until Eid. He who trades the Ramadan chop donates to the brokers."
+    },
+    {
+     "date": "2024-06-23",
+     "handle": "abu_shanab",
+     "sentiment": -0.48,
+     "mood": "smelling 2006",
+     "shout": "TASI broke its 200-day line. I have smelled this smoke before, in 2006. Cut your losers, ya shabab, before they cut you."
+    },
+    {
+     "date": "2024-09-22",
+     "handle": "abu_shanab",
+     "sentiment": 0.45,
+     "mood": "gruff but content",
+     "shout": "TASI reclaimed its 200-day line. The caravan moves — I buy strength, not stories."
+    },
+    {
+     "date": "2025-01-12",
+     "handle": "abu_shanab",
+     "sentiment": 0.48,
+     "mood": "stubborn as ever",
+     "shout": "The index stands over its 200-day line again, breadth 52%. The old man leaves the bunker. Slowly, slowly — the burnt hand fears the kettle."
+    },
+    {
+     "date": "2025-04-10",
+     "handle": "abu_shanab",
+     "sentiment": -0.43,
+     "mood": "cold-eyed",
+     "shout": "TASI +3.7%! The souq roars. Ride winners, but tie your camel — euphoria pays commissions, discipline pays grandchildren."
+    },
+    {
+     "date": "2025-11-09",
+     "handle": "abu_shanab",
+     "sentiment": -0.54,
+     "mood": "bitter coffee",
+     "shout": "TASI broke its 200-day line. I have smelled this smoke before, in 2006. Cut your losers, ya shabab, before they cut you."
+    }
+   ],
+   "sample_others_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "abu_fahad",
+     "sentiment": 0.06,
+     "mood": "hooded and patient",
+     "shout": "Quiet, from the high air: cash SAR 100,000, breadth 38%. A falcon is not idle when it circles — it is choosing."
+    },
+    {
+     "date": "2022-04-14",
+     "handle": "lulu",
+     "sentiment": 0.21,
+     "mood": "reading the comments",
+     "shout": "portfolio check: SAR 120,380. followers: 77,389. crowd sentiment +0.44. the brand is ALWAYS liquid 🐆✨ link in bio for the watchlist."
+    },
+    {
+     "date": "2022-07-03",
+     "handle": "saleh",
+     "sentiment": -0.46,
+     "mood": "nervous",
+     "shout": "Audit note to the majlis: 105,697 SAR, dividends 288 in, commissions 181 out. Umm Faisal reviewed the statement and did not raise her voice. That is the benchmark that matters."
+    },
+    {
+     "date": "2022-10-12",
+     "handle": "shadi",
+     "sentiment": 0.48,
+     "mood": "caffeinated",
+     "shout": "FULL SEND. 40% of the book into Dar Al Arkan — rsi surge, rsi 66, 1.4x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2023-02-02",
+     "handle": "lulu",
+     "sentiment": 0.22,
+     "mood": "aesthetic",
+     "shout": "the algo bros are quiet today which means Bupa Arabia (+14.5%/1m) is about to do something. screenshot this. if I'm right it was analysis, if I'm wrong it was satire."
+    },
+    {
+     "date": "2023-07-02",
+     "handle": "saleh",
+     "sentiment": 0.26,
+     "mood": "relieved",
+     "shout": "Audit note to the majlis: 110,709 SAR, dividends 1,496 in, commissions 680 out. Umm Faisal reviewed the statement and did not raise her voice. That is the benchmark that matters."
+    },
+    {
+     "date": "2023-10-16",
+     "handle": "lulu",
+     "sentiment": -0.3,
+     "mood": "comments OFF",
+     "shout": "portfolio check: SAR 103,486. followers: 57,058. crowd sentiment -0.62. the brand is ALWAYS liquid 🐆✨ link in bio for the watchlist."
+    },
+    {
+     "date": "2024-02-05",
+     "handle": "lulu",
+     "sentiment": 0.46,
+     "mood": "ring light on",
+     "shout": "Dr. Sulaiman Al Habib +15.1% 💰 I posted this name BEFORE it moved — receipts are pinned in the group. took the screenshot, half still riding. like and follow for the next one 🐆"
+    },
+    {
+     "date": "2024-05-20",
+     "handle": "lulu",
+     "sentiment": -0.3,
+     "mood": "shook",
+     "shout": "POLL for the majlis: ACWA Power to 526?? it's +7.1% this month and my comments are 90% rockets. drop a 🐆 if you're long, drop excuses if you're not."
+    },
+    {
+     "date": "2024-09-01",
+     "handle": "dr_muteb",
+     "sentiment": 0.7631210348550838,
+     "mood": "methodical",
+     "shout": "Monthly factor read: P(bull)=0.92, breadth 70%, momentum spread 41pts. Book: 7 names, 68% deployed, stops armed. Say what you like about London — nobody there sized a position by feelings."
+    },
+    {
+     "date": "2025-01-05",
+     "handle": "dr_muteb",
+     "sentiment": -0.37227999796842176,
+     "mood": "methodical",
+     "shout": "Housekeeping for the majlis: my gross target is 51% because P(bull) prints 0.29, not because I am 'nervous' or 'greedy'. Those are moods. This is a mapping."
+    },
+    {
+     "date": "2025-04-27",
+     "handle": "saleh",
+     "sentiment": -0.22000000000000003,
+     "mood": "relieved",
+     "shout": "15 sessions after rule 7, I am tiptoeing back: SABIC Agri-Nutrients, 3,640 SAR, 3.5% of the book and not one halala more."
+    },
+    {
+     "date": "2025-08-21",
+     "handle": "saleh",
+     "sentiment": -0.14999999999999997,
+     "mood": "wincing",
+     "shout": "Stopped out of Saudi Awwal Bank at -8.8%. Yes, again the -8% rule. An 8% loss is a fact; a 20% loss is a confession. I do not sign confessions."
+    },
+    {
+     "date": "2025-12-14",
+     "handle": "lulu",
+     "sentiment": -0.33,
+     "mood": "the DMs are a warzone",
+     "shout": "trending page EMPTY, TASI -1.19%, crowd -0.70. doing a Q&A instead: yes the 🐆 is real, no I won't share my exact entries, yes SAR 101,722 is real. next."
+    },
+    {
+     "date": "2026-04-05",
+     "handle": "dr_muteb",
+     "sentiment": 0.7678673216691839,
+     "mood": "quietly confident",
+     "shout": "Housekeeping for the majlis: my gross target is 95% because P(bull) prints 0.93, not because I am 'nervous' or 'greedy'. Those are moods. This is a mapping."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 91359.43,
+    "positions": {
+     "2222": {
+      "shares": 289,
+      "value": 7681.62
+     }
+    }
+   }
+  },
+  "dr_muteb": {
+   "meta": {
+    "handle": "dr_muteb",
+    "name": "Dr. Muteb",
+    "emoji": "🤓",
+    "tagline": "Vibes are not a factor. Momentum, low-vol and stops are.",
+    "risk_style": "systematic",
+    "color": "#4C78A8",
+    "character": "A PhD quant back from London running a disciplined multi-factor book: 6-1 momentum and relative strength, a low-volatility tilt, RSI pullback entries, inverse-vol sizing under a regime-driven gross target, and 2.75x ATR trailing stops he treats as scripture. Speaks in probabilities and z-scores; mildly exasperated that the rest of the majlis trades on feelings and calls it alpha."
+   },
+   "metrics": {
+    "final_equity": 102946.66,
+    "total_return": 0.0295,
+    "cagr": 0.0064,
+    "ann_vol": 0.0837,
+    "sharpe": -0.36,
+    "sortino": -0.482,
+    "max_drawdown": -0.2088,
+    "mdd_peak": "2023-05-21",
+    "mdd_trough": "2025-12-17",
+    "mdd_recovery": null,
+    "longest_underwater_sessions": 801,
+    "calmar": 0.03,
+    "beta_tasi": 0.331,
+    "alpha_annual": 0.0106,
+    "corr_tasi": 0.533,
+    "var95_daily": -0.0086,
+    "skew": -0.016,
+    "best_day": {
+     "date": "2022-04-06",
+     "ret": 0.0269
+    },
+    "worst_day": {
+     "date": "2022-05-12",
+     "ret": -0.0245
+    },
+    "monthly_returns": {
+     "2022-01": 0.0606,
+     "2022-02": 0.0668,
+     "2022-03": 0.0152,
+     "2022-04": 0.1021,
+     "2022-05": -0.0541,
+     "2022-06": -0.0533,
+     "2022-07": 0.0298,
+     "2022-08": -0.0256,
+     "2022-09": 0.0179,
+     "2022-10": -0.016,
+     "2022-11": -0.0089,
+     "2022-12": 0.0081,
+     "2023-01": 0.001,
+     "2023-02": -0.0,
+     "2023-03": 0.0485,
+     "2023-04": 0.0042,
+     "2023-05": 0.0368,
+     "2023-06": 0.0,
+     "2023-07": 0.0001,
+     "2023-08": -0.0469,
+     "2023-09": -0.0445,
+     "2023-10": -0.0089,
+     "2023-11": -0.0157,
+     "2023-12": 0.078,
+     "2024-01": 0.0021,
+     "2024-02": 0.0374,
+     "2024-03": -0.0166,
+     "2024-04": 0.0096,
+     "2024-05": -0.0605,
+     "2024-06": -0.0009,
+     "2024-07": -0.0002,
+     "2024-08": 0.0126,
+     "2024-09": -0.0242,
+     "2024-10": -0.0466,
+     "2024-11": -0.0118,
+     "2024-12": 0.0005,
+     "2025-01": 0.0189,
+     "2025-02": -0.005,
+     "2025-03": -0.0119,
+     "2025-04": -0.0232,
+     "2025-05": -0.0064,
+     "2025-06": 0.0096,
+     "2025-07": -0.0008,
+     "2025-08": -0.0086,
+     "2025-09": 0.0174,
+     "2025-10": 0.0108,
+     "2025-11": -0.0538,
+     "2025-12": -0.0015,
+     "2026-01": 0.029,
+     "2026-02": -0.0006,
+     "2026-03": 0.006,
+     "2026-04": 0.0312,
+     "2026-05": -0.0095,
+     "2026-06": -0.0405,
+     "2026-07": 0.0,
+     "2026-08": 0.0
+    },
+    "positive_months_pct": 0.464,
+    "n_trades": 766,
+    "n_buys": 377,
+    "n_sells": 389,
+    "win_rate": 0.404,
+    "profit_factor": 1.087,
+    "realized_pnl": 8483.5,
+    "avg_win": 674.73,
+    "avg_loss": -420.04,
+    "turnover_annual": 15.53,
+    "favorite_stock": {
+     "code": "2222",
+     "name": "Saudi Aramco",
+     "trades": 34
+    },
+    "most_profitable_stock": {
+     "code": "4200",
+     "name": "Aldrees Petroleum",
+     "realized": 7095.7
+    },
+    "most_painful_stock": {
+     "code": "2050",
+     "name": "Savola Group",
+     "realized": -5056.77
+    },
+    "best_trade": {
+     "date": "2023-05-29",
+     "code": "4200",
+     "side": "sell",
+     "shares": 235,
+     "price": 83.317,
+     "value": 19579.4,
+     "fee": 34.9,
+     "realized_pnl": 4618.91,
+     "held_since": "2022-12-26",
+     "reason": "trailing stop: 83.85 < peak 91.80 - 2.75xATR(2.54)"
+    },
+    "worst_trade": {
+     "date": "2022-05-23",
+     "code": "2170",
+     "side": "sell",
+     "shares": 225,
+     "price": 68.032,
+     "value": 15307.18,
+     "fee": 27.29,
+     "realized_pnl": -2665.78,
+     "held_since": "2022-05-16",
+     "reason": "trailing stop: 68.30 < peak 79.10 - 2.75xATR(2.46)"
+    },
+    "longest_hold": {
+     "code": "4200",
+     "name": "Aldrees Petroleum",
+     "days": 154,
+     "sold": "2023-05-29",
+     "bought": "2022-12-26"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 113837,
+     "year_return": 0.1384,
+     "rank": 2
+    },
+    "2023": {
+     "end_equity": 119146,
+     "year_return": 0.0466,
+     "rank": 3
+    },
+    "2024": {
+     "end_equity": 107494,
+     "year_return": -0.0978,
+     "rank": 5
+    },
+    "2025": {
+     "end_equity": 101546,
+     "year_return": -0.0553,
+     "rank": 6
+    },
+    "2026": {
+     "end_equity": 102947,
+     "year_return": 0.0138,
+     "rank": 5
+    }
+   },
+   "dividends_received": 8695.03,
+   "commissions_paid": 14231.92,
+   "best_trades": [
+    {
+     "date": "2023-05-29",
+     "code": "4200",
+     "side": "sell",
+     "shares": 235,
+     "price": 83.317,
+     "value": 19579.4,
+     "fee": 34.9,
+     "realized_pnl": 4618.91,
+     "held_since": "2022-12-26",
+     "reason": "trailing stop: 83.85 < peak 91.80 - 2.75xATR(2.54)",
+     "name": "Aldrees Petroleum"
+    },
+    {
+     "date": "2022-04-18",
+     "code": "4004",
+     "side": "sell",
+     "shares": 120,
+     "price": 108.491,
+     "value": 13018.97,
+     "fee": 23.21,
+     "realized_pnl": 3303.35,
+     "held_since": "2022-02-14",
+     "reason": "left the eligible set (trend broken)",
+     "name": "Dallah Healthcare"
+    },
+    {
+     "date": "2024-02-12",
+     "code": "7020",
+     "side": "sell",
+     "shares": 363,
+     "price": 52.747,
+     "value": 19147.23,
+     "fee": 34.13,
+     "realized_pnl": 2338.24,
+     "held_since": "2023-11-27",
+     "reason": "slipped to factor rank #17/47",
+     "name": "Etihad Etisalat (Mobily)"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2022-05-23",
+     "code": "2170",
+     "side": "sell",
+     "shares": 225,
+     "price": 68.032,
+     "value": 15307.18,
+     "fee": 27.29,
+     "realized_pnl": -2665.78,
+     "held_since": "2022-05-16",
+     "reason": "trailing stop: 68.30 < peak 79.10 - 2.75xATR(2.46)",
+     "name": "Alujain"
+    },
+    {
+     "date": "2023-07-24",
+     "code": "4161",
+     "side": "sell",
+     "shares": 2470,
+     "price": 6.763,
+     "value": 16705.18,
+     "fee": 29.78,
+     "realized_pnl": -1912.52,
+     "held_since": "2023-07-03",
+     "reason": "trailing stop: 6.77 < peak 7.35 - 2.75xATR(0.20)",
+     "name": "Bindawood Holding"
+    },
+    {
+     "date": "2024-05-19",
+     "code": "4161",
+     "side": "sell",
+     "shares": 1273,
+     "price": 8.022,
+     "value": 10211.97,
+     "fee": 18.2,
+     "realized_pnl": -1575.06,
+     "held_since": "2024-04-22",
+     "reason": "trailing stop: 8.03 < peak 9.47 - 2.75xATR(0.27)",
+     "name": "Bindawood Holding"
+    }
+   ],
+   "n_trades": 766,
+   "sample_own_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "dr_muteb",
+     "sentiment": -0.24144406381944114,
+     "mood": "clinical",
+     "shout": "Housekeeping for the majlis: my gross target is 56% because P(bull) prints 0.37, not because I am 'nervous' or 'greedy'. Those are moods. This is a mapping."
+    },
+    {
+     "date": "2022-05-19",
+     "handle": "dr_muteb",
+     "sentiment": -0.6815965623962709,
+     "mood": "recalibrating",
+     "shout": "TASI -2.2%. Yesterday this board averaged +0.00 sentiment — as a forecast, an information coefficient of roughly zero. My stops were computed weeks ago. Do carry on shouting."
+    },
+    {
+     "date": "2022-08-07",
+     "handle": "dr_muteb",
+     "sentiment": 0.21334063398136693,
+     "mood": "methodical",
+     "shout": "Monthly numbers: breadth 78%, TASI below its 100d, 6m momentum spread 57pts. I run 8 names, 56% deployed. Questions about the z-scores are welcome. Questions about my 'gut' are not."
+    },
+    {
+     "date": "2022-11-06",
+     "handle": "dr_muteb",
+     "sentiment": -0.6256315824419938,
+     "mood": "methodical",
+     "shout": "Monthly numbers: breadth 48%, TASI below its 100d, 6m momentum spread 57pts. I run 5 names, 38% deployed. Questions about the z-scores are welcome. Questions about my 'gut' are not."
+    },
+    {
+     "date": "2023-04-02",
+     "handle": "dr_muteb",
+     "sentiment": 0.5263201839907288,
+     "mood": "methodical",
+     "shout": "Housekeeping for the majlis: my gross target is 85% because P(bull) prints 0.79, not because I am 'nervous' or 'greedy'. Those are moods. This is a mapping."
+    },
+    {
+     "date": "2023-09-03",
+     "handle": "dr_muteb",
+     "sentiment": 0.3878451883838503,
+     "mood": "methodical",
+     "shout": "Monthly factor read: P(bull)=0.72, breadth 36%, momentum spread 61pts. Book: 7 names, 77% deployed, stops armed. Say what you like about London — nobody there sized a position by feelings."
+    },
+    {
+     "date": "2023-12-26",
+     "handle": "dr_muteb",
+     "sentiment": 0.85,
+     "mood": "quietly confident",
+     "shout": "The board despairs at -0.78 while my regime model prints P(bull)=0.97 on 92% breadth. One of us is extrapolating a feeling. I remain 96% deployed."
+    },
+    {
+     "date": "2024-05-05",
+     "handle": "dr_muteb",
+     "sentiment": 0.369383459300549,
+     "mood": "methodical",
+     "shout": "Monthly numbers: breadth 36%, TASI above its 100d, 6m momentum spread 68pts. I run 7 names, 76% deployed. Questions about the z-scores are welcome. Questions about my 'gut' are not."
+    },
+    {
+     "date": "2024-08-04",
+     "handle": "dr_muteb",
+     "sentiment": -0.7775146439566694,
+     "mood": "recalibrating",
+     "shout": "Monthly numbers: breadth 36%, TASI below its 100d, 6m momentum spread 39pts. I run 0 names, 0% deployed. Questions about the z-scores are welcome. Questions about my 'gut' are not."
+    },
+    {
+     "date": "2025-02-02",
+     "handle": "dr_muteb",
+     "sentiment": 0.7672864936177051,
+     "mood": "methodical",
+     "shout": "Monthly numbers: breadth 72%, TASI above its 100d, 6m momentum spread 41pts. I run 7 names, 84% deployed. Questions about the z-scores are welcome. Questions about my 'gut' are not."
+    },
+    {
+     "date": "2025-07-06",
+     "handle": "dr_muteb",
+     "sentiment": -0.36107311215003146,
+     "mood": "methodical",
+     "shout": "Housekeeping for the majlis: my gross target is 50% because P(bull) prints 0.29, not because I am 'nervous' or 'greedy'. Those are moods. This is a mapping."
+    },
+    {
+     "date": "2025-11-09",
+     "handle": "dr_muteb",
+     "sentiment": 0.03232532089999558,
+     "mood": "clinically annoyed",
+     "shout": "Stopped out of Tasnee at -8.0%. A small planned loss is the fee for avoiding a large improvised one. File under risk management, not fortune-telling."
+    }
+   ],
+   "sample_others_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "abu_fahad",
+     "sentiment": 0.06,
+     "mood": "hooded and patient",
+     "shout": "Quiet, from the high air: cash SAR 100,000, breadth 38%. A falcon is not idle when it circles — it is choosing."
+    },
+    {
+     "date": "2022-04-17",
+     "handle": "shadi",
+     "sentiment": 0.93,
+     "mood": "vibes immaculate",
+     "shout": "FULL SEND. 40% of the book into Petro Rabigh — bb breakout, rsi 73, 1.6x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2022-07-19",
+     "handle": "abu_fahad",
+     "sentiment": 0.66,
+     "mood": "blood-scent on the wind",
+     "shout": "You weep at -0.65, ya jama'a? Weep louder. Fear sells cheap at dawn — the falcon is buying with both talons."
+    },
+    {
+     "date": "2022-10-25",
+     "handle": "lulu",
+     "sentiment": 0.05,
+     "mood": "soft-launching a position",
+     "shout": "POLL for the majlis: Ma'aden to 60?? it's +31.2% this month and my comments are 90% rockets. drop a 🐆 if you're long, drop excuses if you're not."
+    },
+    {
+     "date": "2023-02-21",
+     "handle": "noura",
+     "sentiment": -0.5656188685401609,
+     "mood": "rotating",
+     "shout": "Sector scoreboard: Insurance first, Banks last, spread 28%. Regime risk-off; the complex reads +2.7%. Rotation is positioning, the rest is noise."
+    },
+    {
+     "date": "2023-07-17",
+     "handle": "saleh",
+     "sentiment": 0.22000000000000003,
+     "mood": "guarded",
+     "shout": "The majlis averages +0.85 — when every voice agrees, the auditor re-counts the petty cash. Ceiling stays at 50% invested."
+    },
+    {
+     "date": "2023-11-02",
+     "handle": "noura",
+     "sentiment": -0.8343084831742706,
+     "mood": "defensive",
+     "shout": "Sector scoreboard: Insurance first, Real Estate last, spread 33%. Regime risk-off; the complex reads -10.6%. Rotation is positioning, the rest is noise."
+    },
+    {
+     "date": "2024-02-20",
+     "handle": "lulu",
+     "sentiment": 0.49,
+     "mood": "we move",
+     "shout": "the algo bros are quiet today which means Savola Group (+26.6%/1m) is about to do something. screenshot this. if I'm right it was analysis, if I'm wrong it was satire."
+    },
+    {
+     "date": "2024-06-09",
+     "handle": "shadi",
+     "sentiment": -0.06,
+     "mood": "down bad",
+     "shout": "TASI +2.5%?? whole souq pumping, sheesh. my entire watchlist is green rn. this is the best game ever invented."
+    },
+    {
+     "date": "2024-09-11",
+     "handle": "saleh",
+     "sentiment": -0.47,
+     "mood": "wincing",
+     "shout": "Stopped out of SABIC at -8.7%. Yes, again the -8% rule. An 8% loss is a fact; a 20% loss is a confession. I do not sign confessions."
+    },
+    {
+     "date": "2025-01-23",
+     "handle": "um_khalid",
+     "sentiment": 0.26,
+     "mood": "unimpressed",
+     "shout": "Everyone in the majlis is shouting buy at once. When all the boys agree, I count my cash twice and hold my dividends closer."
+    },
+    {
+     "date": "2025-05-14",
+     "handle": "um_khalid",
+     "sentiment": -0.09000000000000001,
+     "mood": "quietly pleased",
+     "shout": "The family ledger passed 12,500 SAR in dividends today — Saudi Electricity brought the latest 789. You boys chase prices; I collect rent from the best houses in the Kingdom."
+    },
+    {
+     "date": "2025-09-08",
+     "handle": "lulu",
+     "sentiment": -0.3,
+     "mood": "shook",
+     "shout": "portfolio check: SAR 105,017. followers: 63,467. crowd sentiment -0.49. the brand is ALWAYS liquid 🐆✨ link in bio for the watchlist."
+    },
+    {
+     "date": "2026-01-14",
+     "handle": "noura",
+     "sentiment": -0.31243293432167724,
+     "mood": "defensive",
+     "shout": "Brief for the majlis: risk-off tape, Telecom leads at -0.6% 3m, Consumer Services lags at -23.2%. I own sectors, not stories. Cash 60%."
+    },
+    {
+     "date": "2026-04-19",
+     "handle": "lulu",
+     "sentiment": 0.27,
+     "mood": "reading the comments",
+     "shout": "POLL for the majlis: Petro Rabigh to 12?? it's +28.1% this month and my comments are 90% rockets. drop a 🐆 if you're long, drop excuses if you're not."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 102946.66,
+    "positions": {}
+   }
+  },
+  "lulu": {
+   "meta": {
+    "handle": "lulu",
+    "name": "Lulu",
+    "emoji": "🐆",
+    "tagline": "Trading the crowd, one story at a time. Link in bio.",
+    "risk_style": "crowd-following FOMO momentum",
+    "character": "A social-trading influencer who treats the majlis like her comment section: she averages everyone's sentiment and follows it a day late, piling into whatever is trending when the crowd is hyped and dumping the whole portfolio the moment the vibes turn. Wins were 'called, receipts in the group'; losses are always the algo bros.",
+    "color": "#EECA3B"
+   },
+   "metrics": {
+    "final_equity": 108910.65,
+    "total_return": 0.0891,
+    "cagr": 0.0188,
+    "ann_vol": 0.0972,
+    "sharpe": -0.171,
+    "sortino": -0.242,
+    "max_drawdown": -0.1895,
+    "mdd_peak": "2022-04-12",
+    "mdd_trough": "2026-03-10",
+    "mdd_recovery": null,
+    "longest_underwater_sessions": 1072,
+    "calmar": 0.099,
+    "beta_tasi": 0.216,
+    "alpha_annual": 0.0241,
+    "corr_tasi": 0.3,
+    "var95_daily": -0.01,
+    "skew": 0.415,
+    "best_day": {
+     "date": "2026-04-26",
+     "ret": 0.0394
+    },
+    "worst_day": {
+     "date": "2022-05-12",
+     "ret": -0.0306
+    },
+    "monthly_returns": {
+     "2022-01": 0.0832,
+     "2022-02": 0.0441,
+     "2022-03": 0.0092,
+     "2022-04": 0.0353,
+     "2022-05": -0.073,
+     "2022-06": -0.0149,
+     "2022-07": 0.0119,
+     "2022-08": 0.0154,
+     "2022-09": -0.0222,
+     "2022-10": -0.0286,
+     "2022-11": -0.0056,
+     "2022-12": 0.0,
+     "2023-01": -0.0037,
+     "2023-02": -0.0346,
+     "2023-03": 0.0102,
+     "2023-04": 0.0152,
+     "2023-05": -0.0015,
+     "2023-06": -0.0171,
+     "2023-07": 0.0686,
+     "2023-08": -0.0181,
+     "2023-09": -0.027,
+     "2023-10": 0.0,
+     "2023-11": 0.0179,
+     "2023-12": 0.0737,
+     "2024-01": -0.0373,
+     "2024-02": 0.0745,
+     "2024-03": -0.0319,
+     "2024-04": 0.0162,
+     "2024-05": -0.0137,
+     "2024-06": 0.0,
+     "2024-07": 0.0253,
+     "2024-08": -0.0146,
+     "2024-09": 0.0131,
+     "2024-10": -0.0099,
+     "2024-11": -0.0013,
+     "2024-12": 0.0017,
+     "2025-01": 0.0152,
+     "2025-02": -0.019,
+     "2025-03": -0.0163,
+     "2025-04": -0.0057,
+     "2025-05": -0.0194,
+     "2025-06": -0.0028,
+     "2025-07": -0.0049,
+     "2025-08": -0.029,
+     "2025-09": 0.0064,
+     "2025-10": 0.0042,
+     "2025-11": -0.0499,
+     "2025-12": 0.0,
+     "2026-01": 0.0036,
+     "2026-02": -0.0073,
+     "2026-03": 0.0307,
+     "2026-04": 0.0671,
+     "2026-05": -0.0005,
+     "2026-06": -0.0223,
+     "2026-07": 0.0,
+     "2026-08": 0.0
+    },
+    "positive_months_pct": 0.393,
+    "n_trades": 285,
+    "n_buys": 133,
+    "n_sells": 152,
+    "win_rate": 0.454,
+    "profit_factor": 1.212,
+    "realized_pnl": 13861.47,
+    "avg_win": 1146.31,
+    "avg_loss": -785.95,
+    "turnover_annual": 9.77,
+    "favorite_stock": {
+     "code": "8010",
+     "name": "Tawuniya",
+     "trades": 18
+    },
+    "most_profitable_stock": {
+     "code": "2380",
+     "name": "Petro Rabigh",
+     "realized": 6612.82
+    },
+    "most_painful_stock": {
+     "code": "4200",
+     "name": "Aldrees Petroleum",
+     "realized": -3678.72
+    },
+    "best_trade": {
+     "date": "2026-05-18",
+     "code": "2380",
+     "side": "sell",
+     "shares": 928,
+     "price": 15.864,
+     "value": 14721.9,
+     "fee": 26.24,
+     "realized_pnl": 5618.41,
+     "held_since": "2026-03-29",
+     "reason": "crowd sentiment -0.65 — everybody OUT"
+    },
+    "worst_trade": {
+     "date": "2022-08-08",
+     "code": "1830",
+     "side": "sell",
+     "shares": 172,
+     "price": 95.404,
+     "value": 16409.57,
+     "fee": 29.25,
+     "realized_pnl": -3011.43,
+     "held_since": "2022-07-31",
+     "reason": "-14.5% — algo bros hunted my stop"
+    },
+    "longest_hold": {
+     "code": "7010",
+     "name": "stc",
+     "days": 170,
+     "sold": "2023-09-07",
+     "bought": "2023-03-21"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 104721,
+     "year_return": 0.0472,
+     "rank": 4
+    },
+    "2023": {
+     "end_equity": 113104,
+     "year_return": 0.0801,
+     "rank": 5
+    },
+    "2024": {
+     "end_equity": 115099,
+     "year_return": 0.0176,
+     "rank": 3
+    },
+    "2025": {
+     "end_equity": 101722,
+     "year_return": -0.1162,
+     "rank": 5
+    },
+    "2026": {
+     "end_equity": 108911,
+     "year_return": 0.0707,
+     "rank": 3
+    }
+   },
+   "dividends_received": 3725.8,
+   "commissions_paid": 8676.58,
+   "best_trades": [
+    {
+     "date": "2026-05-18",
+     "code": "2380",
+     "side": "sell",
+     "shares": 928,
+     "price": 15.864,
+     "value": 14721.9,
+     "fee": 26.24,
+     "realized_pnl": 5618.41,
+     "held_since": "2026-03-29",
+     "reason": "crowd sentiment -0.65 — everybody OUT",
+     "name": "Petro Rabigh"
+    },
+    {
+     "date": "2022-05-22",
+     "code": "1211",
+     "side": "sell",
+     "shares": 422,
+     "price": 37.829,
+     "value": 15963.75,
+     "fee": 28.46,
+     "realized_pnl": 3854.32,
+     "held_since": "2022-01-12",
+     "reason": "crowd sentiment -0.34 — everybody OUT",
+     "name": "Ma'aden"
+    },
+    {
+     "date": "2022-09-07",
+     "code": "4030",
+     "side": "sell",
+     "shares": 810,
+     "price": 15.398,
+     "value": 12472.31,
+     "fee": 22.23,
+     "realized_pnl": 2742.59,
+     "held_since": "2022-07-28",
+     "reason": "crowd sentiment -0.43 — everybody OUT",
+     "name": "Bahri"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2022-08-08",
+     "code": "1830",
+     "side": "sell",
+     "shares": 172,
+     "price": 95.404,
+     "value": 16409.57,
+     "fee": 29.25,
+     "realized_pnl": -3011.43,
+     "held_since": "2022-07-31",
+     "reason": "-14.5% — algo bros hunted my stop",
+     "name": "Leejam Sports"
+    },
+    {
+     "date": "2022-03-16",
+     "code": "2310",
+     "side": "sell",
+     "shares": 519,
+     "price": 48.951,
+     "value": 25405.57,
+     "fee": 45.29,
+     "realized_pnl": -2128.94,
+     "held_since": "2022-03-07",
+     "reason": "-9.1% — algo bros hunted my stop",
+     "name": "Sipchem"
+    },
+    {
+     "date": "2026-02-02",
+     "code": "1211",
+     "side": "sell",
+     "shares": 194,
+     "price": 67.932,
+     "value": 13178.81,
+     "fee": 23.49,
+     "realized_pnl": -2007.16,
+     "held_since": "2026-01-26",
+     "reason": "-10.6% — algo bros hunted my stop",
+     "name": "Ma'aden"
+    }
+   ],
+   "n_trades": 285,
+   "sample_own_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "lulu",
+     "sentiment": -0.05,
+     "mood": "curating the feed",
+     "shout": "POLL for the majlis: Cenomi Centers to 26?? it's +18.3% this month and my comments are 90% rockets. drop a 🐆 if you're long, drop excuses if you're not."
+    },
+    {
+     "date": "2022-05-16",
+     "handle": "lulu",
+     "sentiment": 0.11,
+     "mood": "curating the feed",
+     "shout": "TASI did +2.4% yesterday and you're NOT long?? adding Dr. Sulaiman Al Habib (1m +14.0%) at the open. yes I'm chasing. chasing is just momentum with confidence 🐆📈"
+    },
+    {
+     "date": "2022-09-12",
+     "handle": "lulu",
+     "sentiment": -0.3,
+     "mood": "shook",
+     "shout": "POLL for the majlis: Bupa Arabia to 154?? it's +9.1% this month and my comments are 90% rockets. drop a 🐆 if you're long, drop excuses if you're not."
+    },
+    {
+     "date": "2023-01-25",
+     "handle": "lulu",
+     "sentiment": 0.12,
+     "mood": "soft-launching a position",
+     "shout": "the algo bros are quiet today which means Advanced Petrochemical (+19.2%/1m) is about to do something. screenshot this. if I'm right it was analysis, if I'm wrong it was satire."
+    },
+    {
+     "date": "2023-07-02",
+     "handle": "lulu",
+     "sentiment": 0.14,
+     "mood": "aesthetic",
+     "shout": "portfolio check: SAR 101,157. followers: 53,122. crowd sentiment +0.21. the brand is ALWAYS liquid 🐆✨ link in bio for the watchlist."
+    },
+    {
+     "date": "2023-11-16",
+     "handle": "lulu",
+     "sentiment": 0.28,
+     "mood": "curating the feed",
+     "shout": "TASI did +1.5% yesterday and you're NOT long?? adding Al Rajhi Bank (1m +12.7%) at the open. yes I'm chasing. chasing is just momentum with confidence 🐆📈"
+    },
+    {
+     "date": "2024-04-14",
+     "handle": "lulu",
+     "sentiment": -0.02,
+     "mood": "curating the feed",
+     "shout": "cut Saudi Ground Services -8.3%. and BEFORE the quants start typing: a human did not sell me that bottom. the algo bros hunted my stop to the tick. rigged. anyway new setup dropping tomorrow"
+    },
+    {
+     "date": "2024-08-13",
+     "handle": "lulu",
+     "sentiment": -0.3,
+     "mood": "comments OFF",
+     "shout": "the algo bros are quiet today which means Emaar The Economic City (+21.0%/1m) is about to do something. screenshot this. if I'm right it was analysis, if I'm wrong it was satire."
+    },
+    {
+     "date": "2024-12-22",
+     "handle": "lulu",
+     "sentiment": -0.34,
+     "mood": "the DMs are a warzone",
+     "shout": "EVERYBODY OUT 🚨 crowd sentiment -0.49, the comments have TURNED. selling all 2 positions at the open. protect your capital, log off, drink water. this is the free advice."
+    },
+    {
+     "date": "2025-05-05",
+     "handle": "lulu",
+     "sentiment": -0.46,
+     "mood": "posting through it",
+     "shout": "EVERYBODY OUT 🚨 crowd sentiment -0.51, the comments have TURNED. selling all 2 positions at the open. protect your capital, log off, drink water. this is the free advice."
+    },
+    {
+     "date": "2025-09-29",
+     "handle": "lulu",
+     "sentiment": 0.52,
+     "mood": "main character energy",
+     "shout": "crowd is at +0.36 and the timeline never lies — loading Tawuniya, 1m +14.2%. not financial advice but it is emotional support 💛"
+    },
+    {
+     "date": "2026-02-24",
+     "handle": "lulu",
+     "sentiment": 0.13,
+     "mood": "curating the feed",
+     "shout": "shadi habibi you've been bearish since forever — blocked and unblocked you just to see the -1.0 sentiment again 😭 the crowd is at -0.24, lighten up."
+    }
+   ],
+   "sample_others_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "abu_fahad",
+     "sentiment": 0.06,
+     "mood": "hooded and patient",
+     "shout": "Quiet, from the high air: cash SAR 100,000, breadth 38%. A falcon is not idle when it circles — it is choosing."
+    },
+    {
+     "date": "2022-05-08",
+     "handle": "dr_muteb",
+     "sentiment": 0.745566292929649,
+     "mood": "quietly confident",
+     "shout": "Monthly numbers: breadth 60%, TASI above its 100d, 6m momentum spread 72pts. I run 8 names, 87% deployed. Questions about the z-scores are welcome. Questions about my 'gut' are not."
+    },
+    {
+     "date": "2022-07-03",
+     "handle": "saleh",
+     "sentiment": -0.46,
+     "mood": "nervous",
+     "shout": "Audit note to the majlis: 105,697 SAR, dividends 288 in, commissions 181 out. Umm Faisal reviewed the statement and did not raise her voice. That is the benchmark that matters."
+    },
+    {
+     "date": "2022-10-12",
+     "handle": "shadi",
+     "sentiment": 0.48,
+     "mood": "caffeinated",
+     "shout": "FULL SEND. 40% of the book into Dar Al Arkan — rsi surge, rsi 66, 1.4x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2023-02-06",
+     "handle": "abu_fahad",
+     "sentiment": 0.66,
+     "mood": "eyes on the wounded",
+     "shout": "You weep at -0.64, ya jama'a? Weep louder. Fear sells cheap at dawn — the falcon is buying with both talons."
+    },
+    {
+     "date": "2023-07-12",
+     "handle": "shadi",
+     "sentiment": 0.82,
+     "mood": "down bad",
+     "shout": "FULL SEND. 40% of the book into eXtra (United Electronics) — bb breakout, rsi 77, 4.3x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2023-10-30",
+     "handle": "abu_shanab",
+     "sentiment": -0.58,
+     "mood": "counting cash beads",
+     "shout": "The majlis is drunk on green candles while the index sits under its 200-day line. We were this cheerful in January 2006 too. Yalla, keep laughing."
+    },
+    {
+     "date": "2024-02-14",
+     "handle": "dr_muteb",
+     "sentiment": 0.8322525164930035,
+     "mood": "quietly confident",
+     "shout": "The board despairs at -0.73 while my regime model prints P(bull)=0.96 on 80% breadth. One of us is extrapolating a feeling. I remain 95% deployed."
+    },
+    {
+     "date": "2024-06-02",
+     "handle": "abu_shanab",
+     "sentiment": -0.65,
+     "mood": "smelling 2006",
+     "shout": "TASI broke its 200-day line. I have smelled this smoke before, in 2006. Cut your losers, ya shabab, before they cut you."
+    },
+    {
+     "date": "2024-09-05",
+     "handle": "noura",
+     "sentiment": 0.5362204374512164,
+     "mood": "rotating",
+     "shout": "Monthly macro brief: regime risk-on (score +2), breadth 54%. Leadership: Financial Services +19.0% 3m. Petchem complex +0.5% — flat. Positioned 92% gross."
+    },
+    {
+     "date": "2025-01-23",
+     "handle": "um_khalid",
+     "sentiment": 0.26,
+     "mood": "unimpressed",
+     "shout": "Everyone in the majlis is shouting buy at once. When all the boys agree, I count my cash twice and hold my dividends closer."
+    },
+    {
+     "date": "2025-05-14",
+     "handle": "um_khalid",
+     "sentiment": -0.09000000000000001,
+     "mood": "quietly pleased",
+     "shout": "The family ledger passed 12,500 SAR in dividends today — Saudi Electricity brought the latest 789. You boys chase prices; I collect rent from the best houses in the Kingdom."
+    },
+    {
+     "date": "2025-09-09",
+     "handle": "shadi",
+     "sentiment": -0.21,
+     "mood": "doomscrolling",
+     "shout": "FULL SEND. 40% of the book into Cenomi Centers — bb breakout, rsi 70, 3.3x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2026-01-25",
+     "handle": "abu_shanab",
+     "sentiment": 0.65,
+     "mood": "stubborn as ever",
+     "shout": "The index stands over its 200-day line again, breadth 68%. The old man leaves the bunker. Slowly, slowly — the burnt hand fears the kettle."
+    },
+    {
+     "date": "2026-04-22",
+     "handle": "um_khalid",
+     "sentiment": 0.23,
+     "mood": "quietly pleased",
+     "shout": "The family ledger passed 17,500 SAR in dividends today — Almarai brought the latest 238. You boys chase prices; I collect rent from the best houses in the Kingdom."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 108910.65,
+    "positions": {}
+   }
+  },
+  "noura": {
+   "meta": {
+    "handle": "noura",
+    "name": "Noura",
+    "emoji": "📊",
+    "tagline": "Sectors are the trade. The regime decides which ones.",
+    "risk_style": "macro rotation",
+    "color": "#B279A2",
+    "character": "A sharp macro strategist who trades the market top-down: a breadth-and-trend regime gate on the index, sector leadership ranked by 3-month tape, and a hard rotation into healthcare, telecom and food — 60% cash — when the gate closes. Reads the oil cycle through the petchem complex and will not touch Materials while it bleeds. Professional, concise, and quietly keeping score against Dr. Muteb."
+   },
+   "metrics": {
+    "final_equity": 118571.19,
+    "total_return": 0.1857,
+    "cagr": 0.0379,
+    "ann_vol": 0.1192,
+    "sharpe": 0.037,
+    "sortino": 0.05,
+    "max_drawdown": -0.2501,
+    "mdd_peak": "2024-03-17",
+    "mdd_trough": "2026-01-05",
+    "mdd_recovery": null,
+    "longest_underwater_sessions": 593,
+    "calmar": 0.152,
+    "beta_tasi": 0.461,
+    "alpha_annual": 0.0464,
+    "corr_tasi": 0.521,
+    "var95_daily": -0.0124,
+    "skew": 0.059,
+    "best_day": {
+     "date": "2022-04-05",
+     "ret": 0.0483
+    },
+    "worst_day": {
+     "date": "2023-06-08",
+     "ret": -0.0429
+    },
+    "monthly_returns": {
+     "2022-01": 0.094,
+     "2022-02": -0.0059,
+     "2022-03": 0.0833,
+     "2022-04": 0.0898,
+     "2022-05": -0.0617,
+     "2022-06": -0.0478,
+     "2022-07": 0.0323,
+     "2022-08": -0.0139,
+     "2022-09": -0.0027,
+     "2022-10": 0.0263,
+     "2022-11": -0.0112,
+     "2022-12": -0.014,
+     "2023-01": 0.002,
+     "2023-02": -0.0178,
+     "2023-03": 0.0428,
+     "2023-04": 0.0593,
+     "2023-05": -0.0318,
+     "2023-06": 0.0513,
+     "2023-07": -0.0214,
+     "2023-08": -0.0322,
+     "2023-09": -0.0539,
+     "2023-10": -0.0137,
+     "2023-11": 0.0107,
+     "2023-12": 0.0564,
+     "2024-01": -0.0484,
+     "2024-02": 0.0715,
+     "2024-03": 0.029,
+     "2024-04": -0.0289,
+     "2024-05": -0.0614,
+     "2024-06": 0.0114,
+     "2024-07": 0.0265,
+     "2024-08": -0.0159,
+     "2024-09": -0.0054,
+     "2024-10": 0.0086,
+     "2024-11": -0.0108,
+     "2024-12": 0.0038,
+     "2025-01": -0.0247,
+     "2025-02": -0.0329,
+     "2025-03": -0.0335,
+     "2025-04": 0.0066,
+     "2025-05": -0.0285,
+     "2025-06": 0.0082,
+     "2025-07": -0.002,
+     "2025-08": -0.0087,
+     "2025-09": 0.0342,
+     "2025-10": 0.0026,
+     "2025-11": -0.0705,
+     "2025-12": 0.0056,
+     "2026-01": 0.0329,
+     "2026-02": -0.0011,
+     "2026-03": 0.024,
+     "2026-04": 0.0651,
+     "2026-05": 0.0436,
+     "2026-06": -0.0084,
+     "2026-07": -0.0132,
+     "2026-08": 0.011
+    },
+    "positive_months_pct": 0.482,
+    "n_trades": 569,
+    "n_buys": 287,
+    "n_sells": 282,
+    "win_rate": 0.479,
+    "profit_factor": 1.237,
+    "realized_pnl": 22682.28,
+    "avg_win": 876.61,
+    "avg_loss": -650.75,
+    "turnover_annual": 14.98,
+    "favorite_stock": {
+     "code": "8210",
+     "name": "Bupa Arabia",
+     "trades": 31
+    },
+    "most_profitable_stock": {
+     "code": "4004",
+     "name": "Dallah Healthcare",
+     "realized": 8872.06
+    },
+    "most_painful_stock": {
+     "code": "8010",
+     "name": "Tawuniya",
+     "realized": -6446.25
+    },
+    "best_trade": {
+     "date": "2026-05-19",
+     "code": "2380",
+     "side": "sell",
+     "shares": 1246,
+     "price": 16.144,
+     "value": 20115.22,
+     "fee": 35.86,
+     "realized_pnl": 7892.21,
+     "held_since": "2026-03-30",
+     "reason": "rotation out: Energy not in the risk-off book"
+    },
+    "worst_trade": {
+     "date": "2023-08-08",
+     "code": "4031",
+     "side": "sell",
+     "shares": 518,
+     "price": 31.518,
+     "value": 16326.56,
+     "fee": 29.1,
+     "realized_pnl": -3480.83,
+     "held_since": "2023-07-11",
+     "reason": "rotation out: Transportation not in the risk-on book"
+    },
+    "longest_hold": {
+     "code": "6010",
+     "name": "NADEC",
+     "days": 152,
+     "sold": "2023-11-19",
+     "bought": "2023-06-20"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 116549,
+     "year_return": 0.1655,
+     "rank": 1
+    },
+    "2023": {
+     "end_equity": 121680,
+     "year_return": 0.044,
+     "rank": 2
+    },
+    "2024": {
+     "end_equity": 118437,
+     "year_return": -0.0266,
+     "rank": 2
+    },
+    "2025": {
+     "end_equity": 102058,
+     "year_return": -0.1383,
+     "rank": 4
+    },
+    "2026": {
+     "end_equity": 118571,
+     "year_return": 0.1618,
+     "rank": 2
+    }
+   },
+   "dividends_received": 8338.83,
+   "commissions_paid": 14115.69,
+   "best_trades": [
+    {
+     "date": "2026-05-19",
+     "code": "2380",
+     "side": "sell",
+     "shares": 1246,
+     "price": 16.144,
+     "value": 20115.22,
+     "fee": 35.86,
+     "realized_pnl": 7892.21,
+     "held_since": "2026-03-30",
+     "reason": "rotation out: Energy not in the risk-off book",
+     "name": "Petro Rabigh"
+    },
+    {
+     "date": "2024-05-09",
+     "code": "4031",
+     "side": "sell",
+     "shares": 371,
+     "price": 55.345,
+     "value": 20532.85,
+     "fee": 36.6,
+     "realized_pnl": 4902.06,
+     "held_since": "2024-01-30",
+     "reason": "rotation out: Transportation not in the neutral book",
+     "name": "Saudi Ground Services"
+    },
+    {
+     "date": "2023-06-20",
+     "code": "1830",
+     "side": "sell",
+     "shares": 220,
+     "price": 123.676,
+     "value": 27208.76,
+     "fee": 48.5,
+     "realized_pnl": 4693.07,
+     "held_since": "2023-03-28",
+     "reason": "rotation out: Consumer Services not in the risk-on book",
+     "name": "Leejam Sports"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2023-08-08",
+     "code": "4031",
+     "side": "sell",
+     "shares": 518,
+     "price": 31.518,
+     "value": 16326.56,
+     "fee": 29.1,
+     "realized_pnl": -3480.83,
+     "held_since": "2023-07-11",
+     "reason": "rotation out: Transportation not in the risk-on book",
+     "name": "Saudi Ground Services"
+    },
+    {
+     "date": "2025-03-23",
+     "code": "2050",
+     "side": "sell",
+     "shares": 333,
+     "price": 30.07,
+     "value": 10013.28,
+     "fee": 17.85,
+     "realized_pnl": -2986.71,
+     "held_since": "2025-02-06",
+     "reason": "rotation out: Food & Staples not in the risk-off book",
+     "name": "Savola Group"
+    },
+    {
+     "date": "2024-06-02",
+     "code": "5110",
+     "side": "sell",
+     "shares": 844,
+     "price": 16.883,
+     "value": 14249.34,
+     "fee": 25.4,
+     "realized_pnl": -2816.51,
+     "held_since": "2024-04-17",
+     "reason": "rotation out: Utilities not in the risk-off book",
+     "name": "Saudi Electricity"
+    }
+   ],
+   "n_trades": 569,
+   "sample_own_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "noura",
+     "sentiment": -0.3225,
+     "mood": "rotating",
+     "shout": "Brief for the majlis: neutral tape, Banks leads at +4.8% 3m, Transportation lags at -16.3%. I own sectors, not stories. Cash 35%."
+    },
+    {
+     "date": "2022-05-25",
+     "handle": "noura",
+     "sentiment": -0.35253539505266623,
+     "mood": "measured",
+     "shout": "TASI +2.3% — beta is generous today. The question is leadership: Healthcare +22.3% over 3m. Own the sector, not the euphoria."
+    },
+    {
+     "date": "2022-08-17",
+     "handle": "noura",
+     "sentiment": 0.9,
+     "mood": "regime shift",
+     "shout": "Regime call: neutral -> risk-on. Breadth 94%, index above its 100d. The gate is opening — gross to 92%. You heard it here first."
+    },
+    {
+     "date": "2022-12-12",
+     "handle": "noura",
+     "sentiment": -0.9,
+     "mood": "defensive",
+     "shout": "Monthly macro brief: regime risk-off (score -3), breadth 0%. Leadership: Healthcare +6.8% 3m. Petchem complex -23.8% — contracting. Positioned 40% gross."
+    },
+    {
+     "date": "2023-05-10",
+     "handle": "noura",
+     "sentiment": 0.9,
+     "mood": "constructive",
+     "shout": "Sector scoreboard: Consumer Services first, Banks last, spread 30%. Regime risk-on; the complex reads +3.4%. Rotation is positioning, the rest is noise."
+    },
+    {
+     "date": "2023-10-19",
+     "handle": "noura",
+     "sentiment": -0.9,
+     "mood": "rotating",
+     "shout": "Brief for the majlis: risk-off tape, Insurance leads at +6.0% 3m, Healthcare lags at -22.8%. I own sectors, not stories. Cash 60%."
+    },
+    {
+     "date": "2024-04-24",
+     "handle": "noura",
+     "sentiment": 0.15350330059438014,
+     "mood": "regime shift",
+     "shout": "Regime call: risk-on -> neutral. Breadth 32%, index above its 100d. The gate is half-open — gross to 65%. You heard it here first."
+    },
+    {
+     "date": "2024-08-06",
+     "handle": "noura",
+     "sentiment": -0.8357033087213507,
+     "mood": "regime shift",
+     "shout": "Regime call: neutral -> risk-off. Breadth 34%, index below its 100d. The gate is closing — gross to 40%. You heard it here first."
+    },
+    {
+     "date": "2024-11-17",
+     "handle": "noura",
+     "sentiment": -0.9,
+     "mood": "regime shift",
+     "shout": "Regime call: neutral -> risk-off. Breadth 24%, index below its 100d. The gate is closing — gross to 40%. You heard it here first."
+    },
+    {
+     "date": "2025-03-06",
+     "handle": "noura",
+     "sentiment": -0.8817994493461216,
+     "mood": "regime shift",
+     "shout": "Regime call: neutral -> risk-off. Breadth 32%, index below its 100d. The gate is closing — gross to 40%. You heard it here first."
+    },
+    {
+     "date": "2025-07-17",
+     "handle": "noura",
+     "sentiment": -0.5146033897820592,
+     "mood": "regime shift",
+     "shout": "Regime call: neutral -> risk-off. Breadth 52%, index below its 100d. The gate is closing — gross to 40%. You heard it here first."
+    },
+    {
+     "date": "2025-11-19",
+     "handle": "noura",
+     "sentiment": -0.9,
+     "mood": "regime shift",
+     "shout": "Regime call: neutral -> risk-off. Breadth 14%, index below its 100d. The gate is closing — gross to 40%. You heard it here first."
+    }
+   ],
+   "sample_others_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "abu_fahad",
+     "sentiment": 0.06,
+     "mood": "hooded and patient",
+     "shout": "Quiet, from the high air: cash SAR 100,000, breadth 38%. A falcon is not idle when it circles — it is choosing."
+    },
+    {
+     "date": "2022-04-14",
+     "handle": "lulu",
+     "sentiment": 0.21,
+     "mood": "reading the comments",
+     "shout": "portfolio check: SAR 120,380. followers: 77,389. crowd sentiment +0.44. the brand is ALWAYS liquid 🐆✨ link in bio for the watchlist."
+    },
+    {
+     "date": "2022-07-06",
+     "handle": "lulu",
+     "sentiment": -0.4,
+     "mood": "comments OFF",
+     "shout": "portfolio check: SAR 107,906. followers: 60,411. crowd sentiment -0.64. the brand is ALWAYS liquid 🐆✨ link in bio for the watchlist."
+    },
+    {
+     "date": "2022-10-16",
+     "handle": "shadi",
+     "sentiment": -0.39,
+     "mood": "sideways brain",
+     "shout": "FULL SEND. 40% of the book into Cenomi Centers — bb breakout, rsi 67, 2.7x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2023-02-07",
+     "handle": "abu_shanab",
+     "sentiment": -0.53,
+     "mood": "smelling 2006",
+     "shout": "The majlis is drunk on green candles while the index sits under its 200-day line. We were this cheerful in January 2006 too. Yalla, keep laughing."
+    },
+    {
+     "date": "2023-07-10",
+     "handle": "shadi",
+     "sentiment": 1.0,
+     "mood": "silent",
+     "shout": "NADEC +8.7% flip in 9d. ez. the trend is my side hustle."
+    },
+    {
+     "date": "2023-10-26",
+     "handle": "shadi",
+     "sentiment": -0.61,
+     "mood": "down bad",
+     "shout": "gg. im out for a bit. dont @ me."
+    },
+    {
+     "date": "2024-02-05",
+     "handle": "lulu",
+     "sentiment": 0.46,
+     "mood": "ring light on",
+     "shout": "Dr. Sulaiman Al Habib +15.1% 💰 I posted this name BEFORE it moved — receipts are pinned in the group. took the screenshot, half still riding. like and follow for the next one 🐆"
+    },
+    {
+     "date": "2024-05-20",
+     "handle": "lulu",
+     "sentiment": -0.3,
+     "mood": "shook",
+     "shout": "POLL for the majlis: ACWA Power to 526?? it's +7.1% this month and my comments are 90% rockets. drop a 🐆 if you're long, drop excuses if you're not."
+    },
+    {
+     "date": "2024-09-01",
+     "handle": "dr_muteb",
+     "sentiment": 0.7631210348550838,
+     "mood": "methodical",
+     "shout": "Monthly factor read: P(bull)=0.92, breadth 70%, momentum spread 41pts. Book: 7 names, 68% deployed, stops armed. Say what you like about London — nobody there sized a position by feelings."
+    },
+    {
+     "date": "2025-01-06",
+     "handle": "shadi",
+     "sentiment": 0.54,
+     "mood": "down bad",
+     "shout": "abu_shanab akhi respectfully... charts go up when you stop crying about them. we buy breakouts here, not newspapers."
+    },
+    {
+     "date": "2025-05-04",
+     "handle": "dr_muteb",
+     "sentiment": -0.7933739503484977,
+     "mood": "clinically annoyed",
+     "shout": "Monthly numbers: breadth 32%, TASI below its 100d, 6m momentum spread 45pts. I run 4 names, 28% deployed. Questions about the z-scores are welcome. Questions about my 'gut' are not."
+    },
+    {
+     "date": "2025-08-27",
+     "handle": "lulu",
+     "sentiment": 0.32,
+     "mood": "we move",
+     "shout": "crowd is at +0.26 and the timeline never lies — loading Saudi Kayan, 1m +17.3%. not financial advice but it is emotional support 💛"
+    },
+    {
+     "date": "2026-01-01",
+     "handle": "um_khalid",
+     "sentiment": -0.23,
+     "mood": "watchful",
+     "shout": "Quarterly ledger for the majlis: 12 names, 15,725 SAR of dividends banked, and I have touched nothing. Compounding is raising children — the less you meddle, the taller they grow."
+    },
+    {
+     "date": "2026-04-08",
+     "handle": "saleh",
+     "sentiment": 0.2,
+     "mood": "meticulous",
+     "shout": "Everyone celebrating +2.3%. An auditor's reminder: an unrealized gain is a rumor with good manners. I remain 79% in cash and unmoved."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 41753.38,
+    "positions": {
+     "2280": {
+      "shares": 275,
+      "value": 12908.5
+     },
+     "2082": {
+      "shares": 67,
+      "value": 12937.7
+     },
+     "5110": {
+      "shares": 728,
+      "value": 12405.12
+     },
+     "2380": {
+      "shares": 875,
+      "value": 13501.25
+     },
+     "2222": {
+      "shares": 478,
+      "value": 12705.24
+     },
+     "2270": {
+      "shares": 60,
+      "value": 12360.0
+     }
+    }
+   }
+  },
+  "saleh": {
+   "meta": {
+    "handle": "saleh",
+    "name": "Saleh the Accountant",
+    "emoji": "🧮",
+    "tagline": "Half in cash, -8% stops, and every halala of VAT recorded.",
+    "character": "A career accountant who treats the market like an audit that can turn hostile at any moment. He keeps half the money in cash, owns only low-volatility dividend payers in 5-8% slices, stops out at -8% without argument, and sells half the book any day TASI drops 2% — then spends weeks tiptoeing back while grumbling about commissions, VAT, and what Umm Faisal will say.",
+    "risk_style": "ultra-conservative",
+    "color": "#72B7B2"
+   },
+   "metrics": {
+    "final_equity": 104643.31,
+    "total_return": 0.0464,
+    "cagr": 0.01,
+    "ann_vol": 0.0417,
+    "sharpe": -0.7,
+    "sortino": -0.883,
+    "max_drawdown": -0.0848,
+    "mdd_peak": "2023-07-23",
+    "mdd_trough": "2025-06-02",
+    "mdd_recovery": null,
+    "longest_underwater_sessions": 761,
+    "calmar": 0.117,
+    "beta_tasi": 0.186,
+    "alpha_annual": 0.0112,
+    "corr_tasi": 0.6,
+    "var95_daily": -0.0038,
+    "skew": -1.223,
+    "best_day": {
+     "date": "2023-06-11",
+     "ret": 0.0133
+    },
+    "worst_day": {
+     "date": "2025-04-06",
+     "ret": -0.0313
+    },
+    "monthly_returns": {
+     "2022-01": 0.0178,
+     "2022-02": 0.0273,
+     "2022-03": 0.0141,
+     "2022-04": 0.005,
+     "2022-05": -0.008,
+     "2022-06": 0.0,
+     "2022-07": 0.0016,
+     "2022-08": -0.0187,
+     "2022-09": -0.0154,
+     "2022-10": -0.0011,
+     "2022-11": -0.0062,
+     "2022-12": -0.0107,
+     "2023-01": 0.0096,
+     "2023-02": 0.0128,
+     "2023-03": 0.0318,
+     "2023-04": 0.0205,
+     "2023-05": 0.0007,
+     "2023-06": 0.019,
+     "2023-07": -0.0016,
+     "2023-08": -0.0149,
+     "2023-09": -0.0145,
+     "2023-10": -0.0115,
+     "2023-11": 0.0059,
+     "2023-12": 0.0219,
+     "2024-01": 0.0073,
+     "2024-02": 0.0039,
+     "2024-03": -0.0102,
+     "2024-04": -0.0061,
+     "2024-05": -0.0313,
+     "2024-06": 0.0054,
+     "2024-07": 0.0104,
+     "2024-08": -0.0157,
+     "2024-09": 0.0032,
+     "2024-10": -0.0072,
+     "2024-11": -0.0051,
+     "2024-12": 0.001,
+     "2025-01": 0.0063,
+     "2025-02": 0.0049,
+     "2025-03": 0.0164,
+     "2025-04": -0.029,
+     "2025-05": -0.0072,
+     "2025-06": 0.0011,
+     "2025-07": 0.0035,
+     "2025-08": 0.0009,
+     "2025-09": 0.0185,
+     "2025-10": 0.0105,
+     "2025-11": -0.0287,
+     "2025-12": -0.0022,
+     "2026-01": 0.0216,
+     "2026-02": -0.0073,
+     "2026-03": -0.0004,
+     "2026-04": 0.0011,
+     "2026-05": -0.0003,
+     "2026-06": -0.0057,
+     "2026-07": 0.003,
+     "2026-08": 0.0026
+    },
+    "positive_months_pct": 0.554,
+    "n_trades": 267,
+    "n_buys": 99,
+    "n_sells": 168,
+    "win_rate": 0.446,
+    "profit_factor": 1.023,
+    "realized_pnl": 590.58,
+    "avg_win": 343.57,
+    "avg_loss": -270.72,
+    "turnover_annual": 2.12,
+    "favorite_stock": {
+     "code": "2222",
+     "name": "Saudi Aramco",
+     "trades": 17
+    },
+    "most_profitable_stock": {
+     "code": "4200",
+     "name": "Aldrees Petroleum",
+     "realized": 2767.72
+    },
+    "most_painful_stock": {
+     "code": "5110",
+     "name": "Saudi Electricity",
+     "realized": -2456.93
+    },
+    "best_trade": {
+     "date": "2023-07-19",
+     "code": "2270",
+     "side": "sell",
+     "shares": 7,
+     "price": 340.259,
+     "value": 2381.82,
+     "fee": 4.25,
+     "realized_pnl": 677.71,
+     "held_since": "2023-02-27",
+     "reason": "realizing +39.8% in full — remainders under 1,200 SAR are clutter"
+    },
+    "worst_trade": {
+     "date": "2024-05-27",
+     "code": "1050",
+     "side": "sell",
+     "shares": 353,
+     "price": 16.112,
+     "value": 5687.38,
+     "fee": 10.14,
+     "realized_pnl": -863.22,
+     "held_since": "2024-03-11",
+     "reason": "-8% rule: -13.1%. A loss booked is a loss contained."
+    },
+    "longest_hold": {
+     "code": "4190",
+     "name": "Jarir Marketing",
+     "days": 694,
+     "sold": "2026-06-23",
+     "bought": "2024-07-29"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 100447,
+     "year_return": 0.0045,
+     "rank": 5
+    },
+    "2023": {
+     "end_equity": 108611,
+     "year_return": 0.0813,
+     "rank": 7
+    },
+    "2024": {
+     "end_equity": 103804,
+     "year_return": -0.0443,
+     "rank": 6
+    },
+    "2025": {
+     "end_equity": 103155,
+     "year_return": -0.0063,
+     "rank": 2
+    },
+    "2026": {
+     "end_equity": 104643,
+     "year_return": 0.0144,
+     "rank": 4
+    }
+   },
+   "dividends_received": 5944.54,
+   "commissions_paid": 1822.79,
+   "best_trades": [
+    {
+     "date": "2023-07-19",
+     "code": "2270",
+     "side": "sell",
+     "shares": 7,
+     "price": 340.259,
+     "value": 2381.82,
+     "fee": 4.25,
+     "realized_pnl": 677.71,
+     "held_since": "2023-02-27",
+     "reason": "realizing +39.8% in full — remainders under 1,200 SAR are clutter",
+     "name": "SADAFCO"
+    },
+    {
+     "date": "2024-01-07",
+     "code": "1111",
+     "side": "sell",
+     "shares": 17,
+     "price": 219.78,
+     "value": 3736.26,
+     "fee": 6.66,
+     "realized_pnl": 662.99,
+     "held_since": "2023-11-27",
+     "reason": "banking half at +17.6% — unrealized is not a number, it is a mood",
+     "name": "Saudi Tadawul Group"
+    },
+    {
+     "date": "2023-05-03",
+     "code": "2270",
+     "side": "sell",
+     "shares": 13,
+     "price": 293.706,
+     "value": 3818.18,
+     "fee": 6.81,
+     "realized_pnl": 653.42,
+     "held_since": "2023-02-27",
+     "reason": "banking half at +20.8% — unrealized is not a number, it is a mood",
+     "name": "SADAFCO"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2024-05-27",
+     "code": "1050",
+     "side": "sell",
+     "shares": 353,
+     "price": 16.112,
+     "value": 5687.38,
+     "fee": 10.14,
+     "realized_pnl": -863.22,
+     "held_since": "2024-03-11",
+     "reason": "-8% rule: -13.1%. A loss booked is a loss contained.",
+     "name": "Banque Saudi Fransi"
+    },
+    {
+     "date": "2025-04-07",
+     "code": "5110",
+     "side": "sell",
+     "shares": 373,
+     "price": 14.585,
+     "value": 5440.35,
+     "fee": 9.7,
+     "realized_pnl": -809.91,
+     "held_since": "2024-09-16",
+     "reason": "-8% rule: -12.8%. A loss booked is a loss contained.",
+     "name": "Saudi Electricity"
+    },
+    {
+     "date": "2026-03-01",
+     "code": "5110",
+     "side": "sell",
+     "shares": 421,
+     "price": 13.037,
+     "value": 5488.56,
+     "fee": 9.78,
+     "realized_pnl": -772.42,
+     "held_since": "2025-06-30",
+     "reason": "-8% rule: -9.0%. A loss booked is a loss contained.",
+     "name": "Saudi Electricity"
+    }
+   ],
+   "n_trades": 267,
+   "sample_own_shouts": [
+    {
+     "date": "2022-01-13",
+     "handle": "saleh",
+     "sentiment": 0.2366666666666667,
+     "mood": "meticulous",
+     "shout": "The majlis averages +0.68 — when every voice agrees, the auditor re-counts the petty cash. Ceiling stays at 50% invested."
+    },
+    {
+     "date": "2022-05-12",
+     "handle": "saleh",
+     "sentiment": -0.85,
+     "mood": "panicked",
+     "shout": "TASI -4.1%. I have halved all 2 positions — panic no. 2, 5 SAR in fees, zero regret. You may laugh; I will be the one still solvent."
+    },
+    {
+     "date": "2022-07-03",
+     "handle": "saleh",
+     "sentiment": -0.46,
+     "mood": "nervous",
+     "shout": "Audit note to the majlis: 105,697 SAR, dividends 288 in, commissions 181 out. Umm Faisal reviewed the statement and did not raise her voice. That is the benchmark that matters."
+    },
+    {
+     "date": "2022-09-26",
+     "handle": "saleh",
+     "sentiment": -0.85,
+     "mood": "panicked",
+     "shout": "RULE 7 EXECUTED. TASI -2.3% — half of everything is sold. Call it panic; I call it a provision for doubtful markets. Umm Faisal, if you are reading this: the balance is FINE."
+    },
+    {
+     "date": "2022-12-25",
+     "handle": "saleh",
+     "sentiment": -0.43,
+     "mood": "nervous",
+     "shout": "The majlis averages +0.77 — when every voice agrees, the auditor re-counts the petty cash. Ceiling stays at 32% invested."
+    },
+    {
+     "date": "2023-06-01",
+     "handle": "saleh",
+     "sentiment": -0.21999999999999997,
+     "mood": "wincing",
+     "shout": "Saudi Electricity hit -9.5% and is gone — stop-loss no. 10. Laugh if you like; my worst day this whole campaign is smaller than your average Tuesday."
+    },
+    {
+     "date": "2023-09-21",
+     "handle": "saleh",
+     "sentiment": -0.39999999999999997,
+     "mood": "wincing",
+     "shout": "Sold Alinma Bank at -8.5%, per the rule. I have written off receivables with more sentimentality. The book stands at 106,529 SAR and I intend to keep it standing."
+    },
+    {
+     "date": "2024-02-25",
+     "handle": "saleh",
+     "sentiment": 0.24,
+     "mood": "cautiously busy",
+     "shout": "17 sessions after rule 7, I am tiptoeing back: SABIC, 3,845 SAR, 3.5% of the book and not one halala more."
+    },
+    {
+     "date": "2024-06-06",
+     "handle": "saleh",
+     "sentiment": -0.48,
+     "mood": "wincing",
+     "shout": "stc hit -8.0% and is gone — stop-loss no. 31. Laugh if you like; my worst day this whole campaign is smaller than your average Tuesday."
+    },
+    {
+     "date": "2024-09-11",
+     "handle": "saleh",
+     "sentiment": -0.47,
+     "mood": "wincing",
+     "shout": "Stopped out of SABIC at -8.7%. Yes, again the -8% rule. An 8% loss is a fact; a 20% loss is a confession. I do not sign confessions."
+    },
+    {
+     "date": "2025-03-18",
+     "handle": "saleh",
+     "sentiment": -0.3,
+     "mood": "wincing",
+     "shout": "Sold Saudi Aramco at -8.7%, per the rule. I have written off receivables with more sentimentality. The book stands at 105,015 SAR and I intend to keep it standing."
+    },
+    {
+     "date": "2025-07-01",
+     "handle": "saleh",
+     "sentiment": -0.21999999999999997,
+     "mood": "composed",
+     "shout": "Audit note to the majlis: 102,927 SAR, dividends 4,356 in, commissions 1,628 out. Umm Faisal reviewed the statement and did not raise her voice. That is the benchmark that matters."
+    }
+   ],
+   "sample_others_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "abu_fahad",
+     "sentiment": 0.06,
+     "mood": "hooded and patient",
+     "shout": "Quiet, from the high air: cash SAR 100,000, breadth 38%. A falcon is not idle when it circles — it is choosing."
+    },
+    {
+     "date": "2022-04-17",
+     "handle": "shadi",
+     "sentiment": 0.93,
+     "mood": "vibes immaculate",
+     "shout": "FULL SEND. 40% of the book into Petro Rabigh — bb breakout, rsi 73, 1.6x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2022-07-24",
+     "handle": "lulu",
+     "sentiment": 0.12,
+     "mood": "curating the feed",
+     "shout": "crowd is at +0.13 and the timeline never lies — loading ACWA Power, 1m +29.7%. not financial advice but it is emotional support 💛"
+    },
+    {
+     "date": "2022-10-30",
+     "handle": "noura",
+     "sentiment": -0.5505445898800119,
+     "mood": "regime shift",
+     "shout": "Regime call: neutral -> risk-off. Breadth 46%, index below its 100d. The gate is closing — gross to 40%. You heard it here first."
+    },
+    {
+     "date": "2023-03-02",
+     "handle": "lulu",
+     "sentiment": -0.3,
+     "mood": "shook",
+     "shout": "trending page EMPTY, TASI +0.84%, crowd -0.24. doing a Q&A instead: yes the 🐆 is real, no I won't share my exact entries, yes SAR 100,722 is real. next."
+    },
+    {
+     "date": "2023-07-25",
+     "handle": "shadi",
+     "sentiment": 0.5,
+     "mood": "tilted",
+     "shout": "FULL SEND. 40% of the book into Seera Group — bb breakout, rsi 68, 2.6x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2023-11-12",
+     "handle": "abu_fahad",
+     "sentiment": 0.77,
+     "mood": "diving",
+     "shout": "You weep at -0.72, ya jama'a? Weep louder. Fear sells cheap at dawn — the falcon is buying with both talons."
+    },
+    {
+     "date": "2024-02-29",
+     "handle": "abu_fahad",
+     "sentiment": -0.16,
+     "mood": "sharpening talons",
+     "shout": "I dropped Petro Rabigh at -22%. A hunter admits when the kill was poisoned. Most of you never will."
+    },
+    {
+     "date": "2024-06-11",
+     "handle": "noura",
+     "sentiment": -0.4405755724905913,
+     "mood": "regime shift",
+     "shout": "Regime call: risk-off -> neutral. Breadth 16%, index below its 100d. The gate is half-open — gross to 65%. You heard it here first."
+    },
+    {
+     "date": "2024-09-26",
+     "handle": "noura",
+     "sentiment": 0.9,
+     "mood": "regime shift",
+     "shout": "Regime call: risk-off -> risk-on. Breadth 76%, index above its 100d. The gate is opening — gross to 92%. You heard it here first."
+    },
+    {
+     "date": "2025-02-02",
+     "handle": "dr_muteb",
+     "sentiment": 0.7672864936177051,
+     "mood": "methodical",
+     "shout": "Monthly numbers: breadth 72%, TASI above its 100d, 6m momentum spread 41pts. I run 7 names, 84% deployed. Questions about the z-scores are welcome. Questions about my 'gut' are not."
+    },
+    {
+     "date": "2025-06-01",
+     "handle": "dr_muteb",
+     "sentiment": -0.85,
+     "mood": "risk-off by construction",
+     "shout": "Monthly factor read: P(bull)=0.02, breadth 6%, momentum spread 38pts. Book: 3 names, 18% deployed, stops armed. Say what you like about London — nobody there sized a position by feelings."
+    },
+    {
+     "date": "2025-09-24",
+     "handle": "abu_shanab",
+     "sentiment": -0.01,
+     "mood": "counting cash beads",
+     "shout": "TASI +5.1%! The souq roars. Ride winners, but tie your camel — euphoria pays commissions, discipline pays grandchildren."
+    },
+    {
+     "date": "2026-01-25",
+     "handle": "lulu",
+     "sentiment": 0.38,
+     "mood": "engagement UP",
+     "shout": "TASI did +1.7% yesterday and you're NOT long?? adding Ma'aden (1m +24.3%) at the open. yes I'm chasing. chasing is just momentum with confidence 🐆📈"
+    },
+    {
+     "date": "2026-04-23",
+     "handle": "shadi",
+     "sentiment": 0.48,
+     "mood": "doomscrolling",
+     "shout": "FULL SEND. 40% of the book into Petro Rabigh — bb breakout, rsi 70, 1.9x volume. if this hits we eating good wallah. LFG 🚀"
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 68335.73,
+    "positions": {
+     "7010": {
+      "shares": 143,
+      "value": 6263.4
+     },
+     "1120": {
+      "shares": 28,
+      "value": 1806.0
+     },
+     "2222": {
+      "shares": 235,
+      "value": 6246.3
+     },
+     "1010": {
+      "shares": 299,
+      "value": 6018.87
+     },
+     "1080": {
+      "shares": 167,
+      "value": 3652.29
+     },
+     "1150": {
+      "shares": 251,
+      "value": 5996.39
+     },
+     "1060": {
+      "shares": 187,
+      "value": 6324.34
+     }
+    }
+   }
+  },
+  "shadi": {
+   "meta": {
+    "handle": "shadi",
+    "name": "Shadi",
+    "emoji": "😎",
+    "tagline": "Breakouts between lectures. Fees are a tomorrow problem.",
+    "character": "A 24-year-old university student who day-trades the spicy end of Tadawul from the back row of lectures. Chases breakouts and RSI surges in Kayan, Dar Al Arkan, Zain and friends, buys fast, sells faster, and occasionally full-sends 40% of the book into one name. Loud when winning, radio silence when losing.",
+    "risk_style": "degen momentum chaser",
+    "color": "#F58518"
+   },
+   "metrics": {
+    "final_equity": 70952.25,
+    "total_return": -0.2905,
+    "cagr": -0.0722,
+    "ann_vol": 0.1275,
+    "sharpe": -0.839,
+    "sortino": -1.113,
+    "max_drawdown": -0.4235,
+    "mdd_peak": "2022-04-17",
+    "mdd_trough": "2025-09-14",
+    "mdd_recovery": null,
+    "longest_underwater_sessions": 1069,
+    "calmar": -0.17,
+    "beta_tasi": 0.305,
+    "alpha_annual": -0.0641,
+    "corr_tasi": 0.322,
+    "var95_daily": -0.0127,
+    "skew": -0.115,
+    "best_day": {
+     "date": "2026-04-27",
+     "ret": 0.0465
+    },
+    "worst_day": {
+     "date": "2025-04-06",
+     "ret": -0.0544
+    },
+    "monthly_returns": {
+     "2022-01": 0.0442,
+     "2022-02": 0.012,
+     "2022-03": -0.0245,
+     "2022-04": 0.0711,
+     "2022-05": -0.0023,
+     "2022-06": -0.0693,
+     "2022-07": 0.0493,
+     "2022-08": 0.0013,
+     "2022-09": 0.0003,
+     "2022-10": -0.0363,
+     "2022-11": -0.0588,
+     "2022-12": -0.0118,
+     "2023-01": -0.0139,
+     "2023-02": -0.0196,
+     "2023-03": 0.0054,
+     "2023-04": 0.0,
+     "2023-05": 0.0,
+     "2023-06": -0.0091,
+     "2023-07": 0.0397,
+     "2023-08": -0.02,
+     "2023-09": -0.0367,
+     "2023-10": -0.0239,
+     "2023-11": -0.0135,
+     "2023-12": 0.0147,
+     "2024-01": 0.0165,
+     "2024-02": 0.0191,
+     "2024-03": 0.0103,
+     "2024-04": -0.0356,
+     "2024-05": -0.0228,
+     "2024-06": -0.0135,
+     "2024-07": 0.0091,
+     "2024-08": -0.0257,
+     "2024-09": -0.0278,
+     "2024-10": -0.0583,
+     "2024-11": -0.0393,
+     "2024-12": -0.0011,
+     "2025-01": 0.0109,
+     "2025-02": -0.016,
+     "2025-03": 0.0288,
+     "2025-04": -0.0484,
+     "2025-05": -0.0287,
+     "2025-06": -0.0026,
+     "2025-07": -0.008,
+     "2025-08": -0.0054,
+     "2025-09": -0.0075,
+     "2025-10": 0.062,
+     "2025-11": -0.0137,
+     "2025-12": -0.0095,
+     "2026-01": 0.0633,
+     "2026-02": -0.0372,
+     "2026-03": -0.0453,
+     "2026-04": 0.1393,
+     "2026-05": -0.0736,
+     "2026-06": -0.0311,
+     "2026-07": -0.0192,
+     "2026-08": 0.0072
+    },
+    "positive_months_pct": 0.339,
+    "n_trades": 673,
+    "n_buys": 338,
+    "n_sells": 335,
+    "win_rate": 0.412,
+    "profit_factor": 0.947,
+    "realized_pnl": -7834.94,
+    "avg_win": 1014.36,
+    "avg_loss": -750.34,
+    "turnover_annual": 35.54,
+    "favorite_stock": {
+     "code": "4003",
+     "name": "eXtra (United Electronics)",
+     "trades": 78
+    },
+    "most_profitable_stock": {
+     "code": "1830",
+     "name": "Leejam Sports",
+     "realized": 7397.79
+    },
+    "most_painful_stock": {
+     "code": "2170",
+     "name": "Alujain",
+     "realized": -5597.38
+    },
+    "best_trade": {
+     "date": "2026-04-05",
+     "code": "4220",
+     "side": "sell",
+     "shares": 2779,
+     "price": 11.688,
+     "value": 32481.79,
+     "fee": 57.9,
+     "realized_pnl": 4580.54,
+     "held_since": "2026-03-24",
+     "reason": "secure the bag +17.3% in 7d"
+    },
+    "worst_trade": {
+     "date": "2022-10-11",
+     "code": "4300",
+     "side": "sell",
+     "shares": 2595,
+     "price": 15.804,
+     "value": 41011.85,
+     "fee": 73.1,
+     "realized_pnl": -3095.32,
+     "held_since": "2022-10-04",
+     "reason": "panic cut -7.0%, im not marrying this"
+    },
+    "longest_hold": {
+     "code": "1020",
+     "name": "Bank AlJazira",
+     "days": 22,
+     "sold": "2024-06-26",
+     "bought": "2024-06-04"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 96575,
+     "year_return": -0.0342,
+     "rank": 7
+    },
+    "2023": {
+     "end_equity": 89203,
+     "year_return": -0.0763,
+     "rank": 8
+    },
+    "2024": {
+     "end_equity": 74983,
+     "year_return": -0.1594,
+     "rank": 8
+    },
+    "2025": {
+     "end_equity": 71861,
+     "year_return": -0.0416,
+     "rank": 8
+    },
+    "2026": {
+     "end_equity": 70952,
+     "year_return": -0.0126,
+     "rank": 8
+    }
+   },
+   "dividends_received": 4231.78,
+   "commissions_paid": 25269.41,
+   "best_trades": [
+    {
+     "date": "2026-04-05",
+     "code": "4220",
+     "side": "sell",
+     "shares": 2779,
+     "price": 11.688,
+     "value": 32481.79,
+     "fee": 57.9,
+     "realized_pnl": 4580.54,
+     "held_since": "2026-03-24",
+     "reason": "secure the bag +17.3% in 7d",
+     "name": "Emaar The Economic City"
+    },
+    {
+     "date": "2026-01-26",
+     "code": "4300",
+     "side": "sell",
+     "shares": 1663,
+     "price": 18.981,
+     "value": 31565.4,
+     "fee": 56.27,
+     "realized_pnl": 3698.94,
+     "held_since": "2026-01-13",
+     "reason": "secure the bag +13.4% in 8d",
+     "name": "Dar Al Arkan"
+    },
+    {
+     "date": "2022-04-17",
+     "code": "4250",
+     "side": "sell",
+     "shares": 1496,
+     "price": 30.919,
+     "value": 46254.9,
+     "fee": 82.45,
+     "realized_pnl": 3651.14,
+     "held_since": "2022-04-11",
+     "reason": "secure the bag +7.6% in 3d",
+     "name": "Jabal Omar"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2022-10-11",
+     "code": "4300",
+     "side": "sell",
+     "shares": 2595,
+     "price": 15.804,
+     "value": 41011.85,
+     "fee": 73.1,
+     "realized_pnl": -3095.32,
+     "held_since": "2022-10-04",
+     "reason": "panic cut -7.0%, im not marrying this",
+     "name": "Dar Al Arkan"
+    },
+    {
+     "date": "2024-03-21",
+     "code": "2170",
+     "side": "sell",
+     "shares": 776,
+     "price": 43.007,
+     "value": 33373.39,
+     "fee": 59.49,
+     "realized_pnl": -2979.72,
+     "held_since": "2024-03-10",
+     "reason": "dead trade, 8d for -3.4%? boring, next",
+     "name": "Alujain"
+    },
+    {
+     "date": "2022-06-15",
+     "code": "2380",
+     "side": "sell",
+     "shares": 2061,
+     "price": 19.441,
+     "value": 40066.95,
+     "fee": 71.42,
+     "realized_pnl": -2885.98,
+     "held_since": "2022-06-12",
+     "reason": "panic cut -6.0%, im not marrying this",
+     "name": "Petro Rabigh"
+    }
+   ],
+   "n_trades": 673,
+   "sample_own_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "shadi",
+     "sentiment": 0.26,
+     "mood": "bored in lecture",
+     "shout": "FULL SEND. 40% of the book into eXtra (United Electronics) — bb breakout, rsi 65, 1.6x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2022-04-03",
+     "handle": "shadi",
+     "sentiment": 1.0,
+     "mood": "vibes immaculate",
+     "shout": "LETS GOOOO Alujain +14.6% in 5 days, bag secured 💰 who said you can't trade between lectures. no cap."
+    },
+    {
+     "date": "2022-08-21",
+     "handle": "shadi",
+     "sentiment": 0.79,
+     "mood": "untouchable",
+     "shout": "Seera Group +7.9% flip in 10d. ez. the trend is my side hustle."
+    },
+    {
+     "date": "2022-12-13",
+     "handle": "shadi",
+     "sentiment": 0.11,
+     "mood": "down bad",
+     "shout": "FULL SEND. 40% of the book into Bahri — bb breakout, rsi 58, 2.4x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2023-07-12",
+     "handle": "shadi",
+     "sentiment": 0.82,
+     "mood": "down bad",
+     "shout": "FULL SEND. 40% of the book into eXtra (United Electronics) — bb breakout, rsi 77, 4.3x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2023-12-07",
+     "handle": "shadi",
+     "sentiment": 1.0,
+     "mood": "down bad",
+     "shout": "LETS GOOOO Leejam Sports +10.8% in 10 days, bag secured 💰 who said you can't trade between lectures. no cap."
+    },
+    {
+     "date": "2024-03-07",
+     "handle": "shadi",
+     "sentiment": 0.37,
+     "mood": "tilted",
+     "shout": "FULL SEND. 40% of the book into Alujain — bb breakout, rsi 69, 4.0x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2024-08-07",
+     "handle": "shadi",
+     "sentiment": 0.91,
+     "mood": "silent",
+     "shout": "FULL SEND. 40% of the book into Petro Rabigh — bb breakout, rsi 70, 5.0x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2025-03-16",
+     "handle": "shadi",
+     "sentiment": -0.11,
+     "mood": "silent",
+     "shout": "FULL SEND. 40% of the book into Bahri — bb breakout, rsi 53, 5.2x volume. if this hits we eating good wallah. LFG 🚀"
+    },
+    {
+     "date": "2025-07-20",
+     "handle": "shadi",
+     "sentiment": -1.0,
+     "mood": "down bad",
+     "shout": "gg. im out for a bit. dont @ me."
+    },
+    {
+     "date": "2025-10-15",
+     "handle": "shadi",
+     "sentiment": 1.0,
+     "mood": "doomscrolling",
+     "shout": "LETS GOOOO Petro Rabigh +12.3% in 1 days, bag secured 💰 who said you can't trade between lectures. no cap."
+    },
+    {
+     "date": "2026-03-26",
+     "handle": "shadi",
+     "sentiment": -0.29,
+     "mood": "doomscrolling",
+     "shout": "FULL SEND. 40% of the book into Petro Rabigh — rsi surge, rsi 73, 1.4x volume. if this hits we eating good wallah. LFG 🚀"
+    }
+   ],
+   "sample_others_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "abu_fahad",
+     "sentiment": 0.06,
+     "mood": "hooded and patient",
+     "shout": "Quiet, from the high air: cash SAR 100,000, breadth 38%. A falcon is not idle when it circles — it is choosing."
+    },
+    {
+     "date": "2022-05-12",
+     "handle": "abu_fahad",
+     "sentiment": 0.38,
+     "mood": "reading the wind",
+     "shout": "TASI -4.1%. Blood on the sand at last. While you count wounds, I count the herd. Patience, then the dive."
+    },
+    {
+     "date": "2022-07-18",
+     "handle": "saleh",
+     "sentiment": -0.39999999999999997,
+     "mood": "nervous",
+     "shout": "Everyone celebrating +2.3%. An auditor's reminder: an unrealized gain is a rumor with good manners. I remain 100% in cash and unmoved."
+    },
+    {
+     "date": "2022-10-19",
+     "handle": "lulu",
+     "sentiment": -0.04,
+     "mood": "aesthetic",
+     "shout": "TASI did +2.1% yesterday and you're NOT long?? adding Dallah Healthcare (1m +26.7%) at the open. yes I'm chasing. chasing is just momentum with confidence 🐆📈"
+    },
+    {
+     "date": "2023-02-12",
+     "handle": "lulu",
+     "sentiment": 0.1,
+     "mood": "reading the comments",
+     "shout": "trending page EMPTY, TASI +0.07%, crowd -0.20. doing a Q&A instead: yes the 🐆 is real, no I won't share my exact entries, yes SAR 102,418 is real. next."
+    },
+    {
+     "date": "2023-07-10",
+     "handle": "abu_fahad",
+     "sentiment": 0.01,
+     "mood": "feasting",
+     "shout": "The herd abandoned SABIC at -32% from its high. I did not. The falcon eats what the crowd leaves behind."
+    },
+    {
+     "date": "2023-10-17",
+     "handle": "abu_fahad",
+     "sentiment": 0.51,
+     "mood": "feasting",
+     "shout": "The herd abandoned stc at -27% from its high. I did not. The falcon eats what the crowd leaves behind."
+    },
+    {
+     "date": "2024-02-12",
+     "handle": "noura",
+     "sentiment": 0.9,
+     "mood": "rotating",
+     "shout": "Sector scoreboard: Food & Staples first, Materials last, spread 28%. Regime risk-on; the complex reads -2.7%. Rotation is positioning, the rest is noise."
+    },
+    {
+     "date": "2024-06-02",
+     "handle": "abu_fahad",
+     "sentiment": 0.79,
+     "mood": "talons out",
+     "shout": "You weep at -0.90, ya jama'a? Weep louder. Fear sells cheap at dawn — the falcon is buying with both talons."
+    },
+    {
+     "date": "2024-09-05",
+     "handle": "noura",
+     "sentiment": 0.5362204374512164,
+     "mood": "rotating",
+     "shout": "Monthly macro brief: regime risk-on (score +2), breadth 54%. Leadership: Financial Services +19.0% 3m. Petchem complex +0.5% — flat. Positioned 92% gross."
+    },
+    {
+     "date": "2025-01-01",
+     "handle": "um_khalid",
+     "sentiment": 0.020000000000000004,
+     "mood": "watchful",
+     "shout": "Quarterly ledger for the majlis: 12 names, 10,489 SAR of dividends banked, and I have touched nothing. Compounding is raising children — the less you meddle, the taller they grow."
+    },
+    {
+     "date": "2025-04-10",
+     "handle": "lulu",
+     "sentiment": -0.21,
+     "mood": "reading the comments",
+     "shout": "trending page EMPTY, TASI +3.66%, crowd -0.70. doing a Q&A instead: yes the 🐆 is real, no I won't share my exact entries, yes SAR 112,757 is real. next."
+    },
+    {
+     "date": "2025-08-21",
+     "handle": "lulu",
+     "sentiment": 0.05,
+     "mood": "storyboarding",
+     "shout": "portfolio check: SAR 109,276. followers: 69,321. crowd sentiment +0.03. the brand is ALWAYS liquid 🐆✨ link in bio for the watchlist."
+    },
+    {
+     "date": "2025-12-08",
+     "handle": "lulu",
+     "sentiment": -0.33,
+     "mood": "posting through it",
+     "shout": "dr_muteb habibi you've been bearish since forever — blocked and unblocked you just to see the -0.8 sentiment again 😭 the crowd is at -0.25, lighten up."
+    },
+    {
+     "date": "2026-04-08",
+     "handle": "noura",
+     "sentiment": 0.9,
+     "mood": "constructive",
+     "shout": "TASI +2.3% — beta is generous today. The question is leadership: Energy +20.3% over 3m. Own the sector, not the euphoria."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 28522.91,
+    "positions": {
+     "4300": {
+      "shares": 741,
+      "value": 14079.0
+     },
+     "1020": {
+      "shares": 1177,
+      "value": 14324.09
+     },
+     "1830": {
+      "shares": 175,
+      "value": 14026.25
+     }
+    }
+   }
+  },
+  "um_khalid": {
+   "meta": {
+    "handle": "um_khalid",
+    "name": "Um Khalid",
+    "emoji": "🧕",
+    "tagline": "Dividends are the harvest; patience is the field.",
+    "character": "A matriarch investing her family's money in blue-chip Tadawul names the way she raised her children: patiently and without drama. She buys quality on real dips, sweeps every dividend riyal back into the garden, and is entirely unimpressed by the boys and their charts.",
+    "risk_style": "conservative",
+    "color": "#54A24B"
+   },
+   "metrics": {
+    "final_equity": 121641.66,
+    "total_return": 0.2164,
+    "cagr": 0.0437,
+    "ann_vol": 0.1406,
+    "sharpe": 0.091,
+    "sortino": 0.126,
+    "max_drawdown": -0.2104,
+    "mdd_peak": "2024-03-13",
+    "mdd_trough": "2026-01-06",
+    "mdd_recovery": null,
+    "longest_underwater_sessions": 595,
+    "calmar": 0.208,
+    "beta_tasi": 0.778,
+    "alpha_annual": 0.0559,
+    "corr_tasi": 0.744,
+    "var95_daily": -0.0132,
+    "skew": -0.136,
+    "best_day": {
+     "date": "2025-09-24",
+     "ret": 0.0522
+    },
+    "worst_day": {
+     "date": "2025-04-06",
+     "ret": -0.0645
+    },
+    "monthly_returns": {
+     "2022-01": 0.02,
+     "2022-02": 0.0126,
+     "2022-03": 0.0131,
+     "2022-04": -0.0024,
+     "2022-05": -0.054,
+     "2022-06": -0.0413,
+     "2022-07": 0.0367,
+     "2022-08": 0.0692,
+     "2022-09": -0.0355,
+     "2022-10": 0.0434,
+     "2022-11": -0.0637,
+     "2022-12": -0.0033,
+     "2023-01": 0.0375,
+     "2023-02": -0.0098,
+     "2023-03": 0.0629,
+     "2023-04": 0.0504,
+     "2023-05": -0.0019,
+     "2023-06": 0.0888,
+     "2023-07": 0.0341,
+     "2023-08": -0.0238,
+     "2023-09": -0.015,
+     "2023-10": -0.0373,
+     "2023-11": 0.0189,
+     "2023-12": 0.0544,
+     "2024-01": -0.0044,
+     "2024-02": 0.0754,
+     "2024-03": -0.0052,
+     "2024-04": -0.0268,
+     "2024-05": -0.0555,
+     "2024-06": 0.041,
+     "2024-07": 0.0148,
+     "2024-08": 0.0105,
+     "2024-09": -0.011,
+     "2024-10": -0.034,
+     "2024-11": -0.038,
+     "2024-12": 0.0403,
+     "2025-01": 0.0019,
+     "2025-02": -0.0273,
+     "2025-03": 0.0069,
+     "2025-04": -0.0256,
+     "2025-05": -0.0376,
+     "2025-06": 0.0371,
+     "2025-07": -0.0259,
+     "2025-08": -0.0235,
+     "2025-09": 0.0853,
+     "2025-10": 0.0115,
+     "2025-11": -0.1053,
+     "2025-12": -0.0144,
+     "2026-01": 0.0864,
+     "2026-02": -0.0341,
+     "2026-03": 0.0767,
+     "2026-04": 0.0058,
+     "2026-05": 0.0032,
+     "2026-06": -0.0184,
+     "2026-07": -0.0378,
+     "2026-08": 0.0187
+    },
+    "positive_months_pct": 0.5,
+    "n_trades": 29,
+    "n_buys": 28,
+    "n_sells": 1,
+    "win_rate": 1.0,
+    "profit_factor": null,
+    "realized_pnl": 7052.69,
+    "avg_win": 7052.69,
+    "avg_loss": null,
+    "turnover_annual": 0.27,
+    "favorite_stock": {
+     "code": "8010",
+     "name": "Tawuniya",
+     "trades": 4
+    },
+    "most_profitable_stock": {
+     "code": "8010",
+     "name": "Tawuniya",
+     "realized": 7052.69
+    },
+    "most_painful_stock": {
+     "code": "8210",
+     "name": "Bupa Arabia",
+     "realized": 0.0
+    },
+    "best_trade": {
+     "date": "2023-07-03",
+     "code": "8010",
+     "side": "sell",
+     "shares": 112,
+     "price": 121.212,
+     "value": 13575.74,
+     "fee": 24.2,
+     "realized_pnl": 7052.69,
+     "held_since": "2022-01-03",
+     "reason": "absurdly expensive — even a good son must hear no sometimes"
+    },
+    "worst_trade": {
+     "date": "2023-07-03",
+     "code": "8010",
+     "side": "sell",
+     "shares": 112,
+     "price": 121.212,
+     "value": 13575.74,
+     "fee": 24.2,
+     "realized_pnl": 7052.69,
+     "held_since": "2022-01-03",
+     "reason": "absurdly expensive — even a good son must hear no sometimes"
+    },
+    "longest_hold": {
+     "code": "8010",
+     "name": "Tawuniya",
+     "days": 546,
+     "sold": "2023-07-03",
+     "bought": "2022-01-03"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 98545,
+     "year_return": -0.0146,
+     "rank": 6
+    },
+    "2023": {
+     "end_equity": 126306,
+     "year_return": 0.2817,
+     "rank": 1
+    },
+    "2024": {
+     "end_equity": 126210,
+     "year_return": -0.0008,
+     "rank": 1
+    },
+    "2025": {
+     "end_equity": 110916,
+     "year_return": -0.1212,
+     "rank": 1
+    },
+    "2026": {
+     "end_equity": 121642,
+     "year_return": 0.0967,
+     "rank": 1
+    }
+   },
+   "dividends_received": 19661.71,
+   "commissions_paid": 258.79,
+   "best_trades": [
+    {
+     "date": "2023-07-03",
+     "code": "8010",
+     "side": "sell",
+     "shares": 112,
+     "price": 121.212,
+     "value": 13575.74,
+     "fee": 24.2,
+     "realized_pnl": 7052.69,
+     "held_since": "2022-01-03",
+     "reason": "absurdly expensive — even a good son must hear no sometimes",
+     "name": "Tawuniya"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2023-07-03",
+     "code": "8010",
+     "side": "sell",
+     "shares": 112,
+     "price": 121.212,
+     "value": 13575.74,
+     "fee": 24.2,
+     "realized_pnl": 7052.69,
+     "held_since": "2022-01-03",
+     "reason": "absurdly expensive — even a good son must hear no sometimes",
+     "name": "Tawuniya"
+    }
+   ],
+   "n_trades": 29,
+   "sample_own_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "um_khalid",
+     "sentiment": -0.012499999999999997,
+     "mood": "content",
+     "shout": "Added Bupa Arabia at 103.52, 23% below its high. Good families buy good houses when the neighbours are selling."
+    },
+    {
+     "date": "2022-04-11",
+     "handle": "um_khalid",
+     "sentiment": 0.31999999999999995,
+     "mood": "unimpressed",
+     "shout": "Everyone in the majlis is shouting buy at once. When all the boys agree, I count my cash twice and hold my dividends closer."
+    },
+    {
+     "date": "2022-08-18",
+     "handle": "um_khalid",
+     "sentiment": 0.36,
+     "mood": "unimpressed",
+     "shout": "Everyone in the majlis is shouting buy at once. When all the boys agree, I count my cash twice and hold my dividends closer."
+    },
+    {
+     "date": "2023-03-08",
+     "handle": "um_khalid",
+     "sentiment": -0.06000000000000001,
+     "mood": "quietly pleased",
+     "shout": "Another 254 riyals from Yansab into the family purse. Dividends are like grandchildren: they arrive quietly and change everything."
+    },
+    {
+     "date": "2023-08-01",
+     "handle": "um_khalid",
+     "sentiment": 0.23,
+     "mood": "quietly pleased",
+     "shout": "Added Saudi National Bank at 38.80, 29% below its high. Good families buy good houses when the neighbours are selling."
+    },
+    {
+     "date": "2024-03-03",
+     "handle": "um_khalid",
+     "sentiment": 0.29000000000000004,
+     "mood": "quietly pleased",
+     "shout": "SADAFCO paid us 318 riyals today. 6,800 SAR of dividends and counting. Your charts flicker, boys — my harvest arrives on schedule."
+    },
+    {
+     "date": "2024-06-09",
+     "handle": "um_khalid",
+     "sentiment": -0.019999999999999976,
+     "mood": "unimpressed",
+     "shout": "Up 2.5% and suddenly everyone is a genius. My names have paid me 8,468 SAR through every one of your 'signals'. Sit down and drink your tea."
+    },
+    {
+     "date": "2024-09-18",
+     "handle": "um_khalid",
+     "sentiment": -0.06999999999999999,
+     "mood": "quietly pleased",
+     "shout": "Another 318 riyals from SADAFCO into the family purse. Dividends are like grandchildren: they arrive quietly and change everything."
+    },
+    {
+     "date": "2025-03-20",
+     "handle": "um_khalid",
+     "sentiment": -0.15999999999999998,
+     "mood": "quietly pleased",
+     "shout": "Another 477 riyals from SADAFCO into the family purse. Dividends are like grandchildren: they arrive quietly and change everything."
+    },
+    {
+     "date": "2025-06-24",
+     "handle": "um_khalid",
+     "sentiment": -0.15000000000000002,
+     "mood": "unimpressed",
+     "shout": "Up 2.4% and suddenly everyone is a genius. My names have paid me 13,520 SAR through every one of your 'signals'. Sit down and drink your tea."
+    },
+    {
+     "date": "2025-10-01",
+     "handle": "um_khalid",
+     "sentiment": 0.36,
+     "mood": "unimpressed",
+     "shout": "Quarterly ledger for the majlis: 12 names, 15,624 SAR of dividends banked, and I have touched nothing. Compounding is raising children — the less you meddle, the taller they grow."
+    },
+    {
+     "date": "2026-03-09",
+     "handle": "um_khalid",
+     "sentiment": -0.06999999999999999,
+     "mood": "quietly pleased",
+     "shout": "SABIC paid us 440 riyals today. 16,941 SAR of dividends and counting. Your charts flicker, boys — my harvest arrives on schedule."
+    }
+   ],
+   "sample_others_shouts": [
+    {
+     "date": "2022-01-02",
+     "handle": "abu_fahad",
+     "sentiment": 0.06,
+     "mood": "hooded and patient",
+     "shout": "Quiet, from the high air: cash SAR 100,000, breadth 38%. A falcon is not idle when it circles — it is choosing."
+    },
+    {
+     "date": "2022-05-08",
+     "handle": "dr_muteb",
+     "sentiment": 0.745566292929649,
+     "mood": "quietly confident",
+     "shout": "Monthly numbers: breadth 60%, TASI above its 100d, 6m momentum spread 72pts. I run 8 names, 87% deployed. Questions about the z-scores are welcome. Questions about my 'gut' are not."
+    },
+    {
+     "date": "2022-07-19",
+     "handle": "abu_fahad",
+     "sentiment": 0.66,
+     "mood": "blood-scent on the wind",
+     "shout": "You weep at -0.65, ya jama'a? Weep louder. Fear sells cheap at dawn — the falcon is buying with both talons."
+    },
+    {
+     "date": "2022-10-18",
+     "handle": "saleh",
+     "sentiment": -0.25,
+     "mood": "penny-wise",
+     "shout": "Everyone celebrating +2.1%. An auditor's reminder: an unrealized gain is a rumor with good manners. I remain 100% in cash and unmoved."
+    },
+    {
+     "date": "2023-02-07",
+     "handle": "abu_shanab",
+     "sentiment": -0.53,
+     "mood": "smelling 2006",
+     "shout": "The majlis is drunk on green candles while the index sits under its 200-day line. We were this cheerful in January 2006 too. Yalla, keep laughing."
+    },
+    {
+     "date": "2023-07-10",
+     "handle": "lulu",
+     "sentiment": 0.36,
+     "mood": "we move",
+     "shout": "portfolio check: SAR 105,891. followers: 59,803. crowd sentiment +0.38. the brand is ALWAYS liquid 🐆✨ link in bio for the watchlist."
+    },
+    {
+     "date": "2023-10-24",
+     "handle": "lulu",
+     "sentiment": -0.49,
+     "mood": "mental health break",
+     "shout": "portfolio check: SAR 103,486. followers: 57,112. crowd sentiment -0.79. the brand is ALWAYS liquid 🐆✨ link in bio for the watchlist."
+    },
+    {
+     "date": "2024-02-05",
+     "handle": "lulu",
+     "sentiment": 0.46,
+     "mood": "ring light on",
+     "shout": "Dr. Sulaiman Al Habib +15.1% 💰 I posted this name BEFORE it moved — receipts are pinned in the group. took the screenshot, half still riding. like and follow for the next one 🐆"
+    },
+    {
+     "date": "2024-05-26",
+     "handle": "saleh",
+     "sentiment": -0.16999999999999998,
+     "mood": "wincing",
+     "shout": "Stopped out of Banque Saudi Fransi at -13.1%. Yes, again the -8% rule. An 8% loss is a fact; a 20% loss is a confession. I do not sign confessions."
+    },
+    {
+     "date": "2024-09-02",
+     "handle": "lulu",
+     "sentiment": 0.15,
+     "mood": "soft-launching a position",
+     "shout": "dr_muteb finally someone on this board GETS it (sentiment +0.8 💛). the rest of you posting fear while we post P&L. crowd +0.35, we move."
+    },
+    {
+     "date": "2025-01-05",
+     "handle": "dr_muteb",
+     "sentiment": -0.37227999796842176,
+     "mood": "methodical",
+     "shout": "Housekeeping for the majlis: my gross target is 51% because P(bull) prints 0.29, not because I am 'nervous' or 'greedy'. Those are moods. This is a mapping."
+    },
+    {
+     "date": "2025-04-27",
+     "handle": "saleh",
+     "sentiment": -0.22000000000000003,
+     "mood": "relieved",
+     "shout": "15 sessions after rule 7, I am tiptoeing back: SABIC Agri-Nutrients, 3,640 SAR, 3.5% of the book and not one halala more."
+    },
+    {
+     "date": "2025-09-01",
+     "handle": "saleh",
+     "sentiment": -0.33999999999999997,
+     "mood": "composed",
+     "shout": "Month closed: 103,196 SAR, 8 positions, none above 8%, stops armed at -8%. While you gentlemen chase glory, I reconcile. The reconciliation always wins."
+    },
+    {
+     "date": "2025-12-30",
+     "handle": "saleh",
+     "sentiment": -0.44,
+     "mood": "wincing",
+     "shout": "SABIC Agri-Nutrients hit -8.3% and is gone — stop-loss no. 43. Laugh if you like; my worst day this whole campaign is smaller than your average Tuesday."
+    },
+    {
+     "date": "2026-04-09",
+     "handle": "lulu",
+     "sentiment": 0.38,
+     "mood": "ring light on",
+     "shout": "TASI did +2.3% yesterday and you're NOT long?? adding Dallah Healthcare (1m +28.2%) at the open. yes I'm chasing. chasing is just momentum with confidence 🐆📈"
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 1370.09,
+    "positions": {
+     "8210": {
+      "shares": 81,
+      "value": 13518.9
+     },
+     "2280": {
+      "shares": 207,
+      "value": 9716.58
+     },
+     "8010": {
+      "shares": 113,
+      "value": 14690.0
+     },
+     "5110": {
+      "shares": 601,
+      "value": 10241.04
+     },
+     "2290": {
+      "shares": 312,
+      "value": 9484.8
+     },
+     "7010": {
+      "shares": 184,
+      "value": 8059.2
+     },
+     "2270": {
+      "shares": 53,
+      "value": 10918.0
+     },
+     "2020": {
+      "shares": 64,
+      "value": 7622.4
+     },
+     "1180": {
+      "shares": 275,
+      "value": 10780.0
+     },
+     "2010": {
+      "shares": 177,
+      "value": 8858.85
+     },
+     "1120": {
+      "shares": 130,
+      "value": 8385.0
+     },
+     "1050": {
+      "shares": 408,
+      "value": 7996.8
+     }
+    }
+   }
+  }
+ },
+ "events_big": [
+  {
+   "date": "2025-04-06",
+   "type": "crash",
+   "tasi_ret": -0.0678
+  },
+  {
+   "date": "2025-09-24",
+   "type": "rally",
+   "tasi_ret": 0.0506
+  },
+  {
+   "date": "2022-06-19",
+   "type": "crash",
+   "tasi_ret": -0.0444
+  },
+  {
+   "date": "2022-05-12",
+   "type": "crash",
+   "tasi_ret": -0.0406
+  },
+  {
+   "date": "2025-04-10",
+   "type": "rally",
+   "tasi_ret": 0.0366
+  },
+  {
+   "date": "2022-06-22",
+   "type": "crash",
+   "tasi_ret": -0.0291
+  },
+  {
+   "date": "2022-12-05",
+   "type": "crash",
+   "tasi_ret": -0.0284
+  },
+  {
+   "date": "2022-06-21",
+   "type": "rally",
+   "tasi_ret": 0.0262
+  },
+  {
+   "date": "2022-09-25",
+   "type": "crash",
+   "tasi_ret": -0.0262
+  },
+  {
+   "date": "2024-06-09",
+   "type": "rally",
+   "tasi_ret": 0.0255
+  },
+  {
+   "date": "2022-12-07",
+   "type": "crash",
+   "tasi_ret": -0.0248
+  },
+  {
+   "date": "2022-05-15",
+   "type": "rally",
+   "tasi_ret": 0.0245
+  }
+ ],
+ "leaderboard_final": [
+  {
+   "handle": "um_khalid",
+   "name": "Um Khalid",
+   "final": 121641.66,
+   "ret": 0.2164
+  },
+  {
+   "handle": "noura",
+   "name": "Noura",
+   "final": 118571.19,
+   "ret": 0.1857
+  },
+  {
+   "handle": "lulu",
+   "name": "Lulu",
+   "final": 108910.65,
+   "ret": 0.0891
+  },
+  {
+   "handle": "saleh",
+   "name": "Saleh the Accountant",
+   "final": 104643.31,
+   "ret": 0.0464
+  },
+  {
+   "handle": "dr_muteb",
+   "name": "Dr. Muteb",
+   "final": 102946.66,
+   "ret": 0.0295
+  },
+  {
+   "handle": "abu_fahad",
+   "name": "Abu Fahad",
+   "final": 100309.14,
+   "ret": 0.0031
+  },
+  {
+   "handle": "abu_shanab",
+   "name": "Abu Shanab",
+   "final": 99041.05,
+   "ret": -0.0096
+  },
+  {
+   "handle": "shadi",
+   "name": "Shadi",
+   "final": 70952.25,
+   "ret": -0.2905
+  }
+ ],
+ "tasi_return": -0.0498,
+ "sim_span": [
+  "2022-01-02",
+  "2026-08-02"
+ ]
+}

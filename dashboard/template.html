@@ -413,6 +413,7 @@ const dates = D.dates, N = dates.length;
 const dateIdx = new Map(dates.map((d,i)=>[d,i]));
 const agents = D.agents;
 const byHandle = new Map(agents.map(a=>[a.handle,a]));
+const shortName = a => a.name.replace(/ the .*$/,'').split(' ').slice(0, a.name.match(/^(Abu|Um|Dr\.?)\b/)?2:1).join(' ');
 const AR_MONTH = {'01':'Jan','02':'Feb','03':'Mar','04':'Apr','05':'May','06':'Jun','07':'Jul','08':'Aug','09':'Sep','10':'Oct','11':'Nov','12':'Dec'};
 const fmtDate = iso => `${AR_MONTH[iso.slice(5,7)]} ${+iso.slice(8,10)}, ${iso.slice(0,4)}`;
 const fmtMonth = k => `${AR_MONTH[k.slice(5,7)]} ${k.slice(2,4)}`;
@@ -458,7 +459,7 @@ function rerenderAll(){ rerenders.forEach(f=>f()); }
       el('div',{style:'margin-top:4px'},
         el('span',{class:'delta '+(w.metrics.total_return>=0?'up':'down'), text:spct(w.metrics.total_return)}),
         ` over the period, vs ${spct(tasiTR)} for TASI. `,
-        `Runner-up: ${ranked[1].emoji} ${ranked[1].name} (${spct(ranked[1].metrics.total_return)}).`)
+        ranked[1]?`Runner-up: ${ranked[1].emoji} ${ranked[1].name} (${spct(ranked[1].metrics.total_return)}).`:'')
     ));
 }
 
@@ -551,7 +552,7 @@ function sparkline(vals, color){
   ];
   const t = el('table');
   const thead = el('thead'); const hr = el('tr'); hr.append(el('th',{text:'Metric'}));
-  for(const a of agents) hr.append(el('th',{text:`${a.emoji} ${a.name.split(' ')[0]}`}));
+  for(const a of agents) hr.append(el('th',{text:`${a.emoji} ${shortName(a)}`}));
   hr.append(el('th',{text:'⚪ TASI'}));
   thead.append(hr); t.append(thead);
   const tb = el('tbody');
@@ -608,7 +609,7 @@ function renderScatter(){
     const gr=svgel('g',{style:'cursor:default'});
     gr.append(svgel('circle',{cx,cy,r:16,fill:'transparent'}));
     gr.append(svgel('circle',{cx,cy,r:6.5,fill:seriesColor(a),stroke:'var(--surface-1)','stroke-width':2}));
-    const lbl=svgel('text',{x:cx+11,y:cy+4}); lbl.textContent=`${a.emoji} ${a.name.split(' ')[0]}`;
+    const lbl=svgel('text',{x:cx+11,y:cy+4}); lbl.textContent=`${a.emoji} ${shortName(a)}`;
     lbl.setAttribute('fill','var(--ink)'); lbl.setAttribute('font-size','11.5'); lbl.setAttribute('font-weight','650');
     if (cx > W-130) { lbl.setAttribute('x', cx-11); lbl.setAttribute('text-anchor','end'); }
     gr.append(lbl);
@@ -708,7 +709,7 @@ function renderRace(){
   }
   // end labels (selective: top 2 + selected + TASI)
   const fin=[...sers].sort((a,b)=>b.vals[b.vals.length-1]-a.vals[a.vals.length-1]);
-  const lab=new Set([fin[0].a.handle, fin[1].a.handle]); if(selHandle) lab.add(selHandle);
+  const lab=new Set(fin.slice(0,2).map(q=>q.a.handle)); if(selHandle) lab.add(selHandle);
   let usedY=[];
   for(const q of fin){
     if(!lab.has(q.a.handle)||hiddenSeries.has(q.a.handle)) continue;
@@ -732,7 +733,7 @@ function renderRace(){
     cross.setAttribute('x1',X(k)); cross.setAttribute('x2',X(k)); cross.setAttribute('opacity',1);
     const i=idx[k];
     const rows=[...agents.filter(a=>!hiddenSeries.has(a.handle))].sort((a,b)=>b.equity[i]-a.equity[i])
-      .map(a=>ttRow(seriesColor(a), `${a.emoji} ${a.name.split(' ')[0]}`, fmt(a.equity[i])));
+      .map(a=>ttRow(seriesColor(a), `${a.emoji} ${shortName(a)}`, fmt(a.equity[i])));
     rows.push(ttRow('var(--ink-3)','TASI', fmt(D.tasi[i])));
     showTT(host,ev,`<div class="d">${fmtDate(dates[i])}</div>`+rows.join(''));
   });
@@ -771,7 +772,7 @@ function renderRaceTable(){
   const host=$('#raceTbl'); host.innerHTML='';
   const [s,e]=range; const t=el('table');
   const hr=el('tr'); hr.append(el('th',{text:'Month end'}));
-  for(const a of agents) hr.append(el('th',{text:`${a.emoji} ${a.name.split(' ')[0]}`}));
+  for(const a of agents) hr.append(el('th',{text:`${a.emoji} ${shortName(a)}`}));
   hr.append(el('th',{text:'TASI'}));
   t.append(el('thead',{},hr));
   const tb=el('tbody');
@@ -814,7 +815,7 @@ function renderDD(){
     let d2=''; for(let i=0;i<dd.length;i+=step) d2+=`${d2?'L':'M'}${X(i).toFixed(1)},${Y(dd[i]).toFixed(1)}`;
     svg.append(svgel('path',{d:d2,fill:'none',stroke:seriesColor(a),'stroke-width':1.8}));
     const card=el('div',{class:'sm'},
-      el('div',{class:'h'}, el('span',{text:a.emoji}), el('span',{text:a.name.split(' ')[0]+(a.name.includes(' ')?' '+a.name.split(' ').slice(1).join(' '):'')}),
+      el('div',{class:'h'}, el('span',{text:a.emoji}), el('span',{text:a.name}),
         el('span',{class:'mdd',text:pct(mdd)})),
       svg);
     g.append(card);
@@ -855,7 +856,7 @@ function renderHM(){
   const amax=0.12;
   series.forEach((q,i)=>{
     const t=svgel('text',{x:L-8,y:T+i*(ch+gap)+ch/2+4,'text-anchor':'end'});
-    t.textContent=`${q.a.emoji} ${q.a.name.split(' ')[0]}`; t.setAttribute('fill','var(--ink)'); t.setAttribute('font-size','12'); svg.append(t);
+    t.textContent=`${q.a.emoji} ${shortName(q.a)}`; t.setAttribute('fill','var(--ink)'); t.setAttribute('font-size','12'); svg.append(t);
     q.months.forEach((mm,j)=>{
       const v=Math.max(-amax,Math.min(amax,mm.r))/amax;
       const rect=svgel('rect',{x:L+j*(cw+gap),y:T+i*(ch+gap),width:cw,height:ch,rx:3,fill:divColor(v)});
@@ -870,7 +871,7 @@ function renderHM(){
   // table twin
   const tb=$('#hmTbl'); tb.innerHTML='';
   const t2=el('table'); const hr=el('tr'); hr.append(el('th',{text:'Month'}));
-  for(const q of series) hr.append(el('th',{text:`${q.a.emoji} ${q.a.name.split(' ')[0]}`}));
+  for(const q of series) hr.append(el('th',{text:`${q.a.emoji} ${shortName(q.a)}`}));
   t2.append(el('thead',{},hr));
   const bd=el('tbody');
   months.forEach((m,j)=>{
@@ -906,7 +907,7 @@ function renderSent(){
   const svg=svgel('svg',{viewBox:`0 0 ${W} ${H}`,style:`min-width:${Math.min(W,1100)}px`});
   agents.forEach((a,i)=>{
     const t=svgel('text',{x:L-8,y:T+i*(ch+gap)+ch/2+4,'text-anchor':'end'});
-    t.textContent=`${a.emoji} ${a.name.split(' ')[0]}`; t.setAttribute('fill','var(--ink)'); t.setAttribute('font-size','12'); svg.append(t);
+    t.textContent=`${a.emoji} ${shortName(a)}`; t.setAttribute('fill','var(--ink)'); t.setAttribute('font-size','12'); svg.append(t);
     weeks.forEach((wk,j)=>{
       const vals=wk.idx.map(k=>a.sentiment[k]).filter(v=>v!=null);
       if(!vals.length) return;
@@ -982,7 +983,7 @@ function renderChat(){
   f.append(el('span',{class:'lbl',text:'Who:'}));
   const allBtn=el('button',{class:'tgl on',text:'Everyone',onclick:()=>{chatAgent=null; syncChatBtns(); renderChat();}});
   f.append(allBtn);
-  for(const a of agents) f.append(el('button',{class:'tgl',text:`${a.emoji} ${a.name.split(' ')[0]}`,
+  for(const a of agents) f.append(el('button',{class:'tgl',text:`${a.emoji} ${shortName(a)}`,
     onclick:ev=>{ chatAgent=chatAgent===a.handle?null:a.handle; syncChatBtns(); renderChat(); }, 'data-h':a.handle}));
   f.append(el('span',{class:'sp'}));
   f.append(el('button',{class:'tgl',text:'big days only',onclick:ev=>{ chatBigOnly=!chatBigOnly; ev.currentTarget.classList.toggle('on',chatBigOnly); renderChat(); }}));
@@ -1018,7 +1019,7 @@ function renderJournal(){
 }
 {
   const f=$('#jrFilters');
-  agents.forEach((a,i)=>f.append(el('button',{class:'tgl'+(i===0?' on':''),text:`${a.emoji} ${a.name.split(' ')[0]}`,
+  agents.forEach((a,i)=>f.append(el('button',{class:'tgl'+(i===0?' on':''),text:`${a.emoji} ${shortName(a)}`,
     onclick:ev=>{ jrAgent=a.handle; $$('#jrFilters .tgl').forEach(b=>b.classList.remove('on')); ev.currentTarget.classList.add('on'); renderJournal(); }})));
   jrAgent=agents[0].handle;
 }
@@ -1056,7 +1057,7 @@ function renderTrades(){
     const [date,code,side,shares,price,value,pnl,reason]=x;
     const tr=el('tr');
     tr.append(el('td',{text:date}));
-    tr.append(el('td',{text:`${a.emoji} ${a.name.split(' ')[0]}`}));
+    tr.append(el('td',{text:`${a.emoji} ${shortName(a)}`}));
     tr.append(el('td',{text:`${D.meta.names[code]||code} (${code})`}));
     const sd=el('td'); sd.append(el('span',{class:'sidechip '+side,text:side.toUpperCase()})); tr.append(sd);
     tr.append(el('td',{text:fmt(shares)}));
