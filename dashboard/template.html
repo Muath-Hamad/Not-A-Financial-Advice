@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The TASI Majlis — 8 agents, SAR 100k each</title>
+<style>
+/* ---------- design tokens ---------- */
+:root{
+  color-scheme: light;
+  --surface-0:#f6f5f2; --surface-1:#fcfcfb; --surface-2:#f0efec;
+  --ink:#0b0b0b; --ink-2:#52514e; --ink-3:#8a8984;
+  --hairline:#e4e2dc; --hairline-2:#d6d4cd;
+  --good:#1a7f37; --bad:#d1242f;
+  --div-neg:#e34948; --div-mid:#f0efec; --div-pos:#2a78d6;
+  --accent:#2a78d6;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+  --ease-in-out:cubic-bezier(0.77,0,0.175,1);
+  --radius:14px; --radius-s:9px;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme: dark;
+    --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422;
+    --ink:#ffffff; --ink-2:#c3c2b7; --ink-3:#85847c;
+    --hairline:#32312e; --hairline-2:#403f3b;
+    --good:#3fb950; --bad:#f85149;
+    --div-neg:#e66767; --div-mid:#383835; --div-pos:#3987e5;
+    --accent:#3987e5;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422;
+  --ink:#ffffff; --ink-2:#c3c2b7; --ink-3:#85847c;
+  --hairline:#32312e; --hairline-2:#403f3b;
+  --good:#3fb950; --bad:#f85149;
+  --div-neg:#e66767; --div-mid:#383835; --div-pos:#3987e5;
+  --accent:#3987e5;
+}
+*{box-sizing:border-box; margin:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+body{
+  font-family:var(--sans); background:var(--surface-0); color:var(--ink);
+  line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+.wrap{max-width:1180px; margin:0 auto; padding:0 24px 96px}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky; top:0; z-index:50; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  background:color-mix(in srgb, var(--surface-0) 82%, transparent);
+  border-bottom:1px solid var(--hairline);
+}
+nav .row{max-width:1180px; margin:0 auto; padding:10px 24px; display:flex; gap:4px; align-items:center; overflow-x:auto; scrollbar-width:none}
+nav .row::-webkit-scrollbar{display:none}
+nav .brand{font-weight:700; font-size:14px; margin-right:12px; white-space:nowrap}
+nav .brand span{color:var(--ink-3); font-weight:500}
+nav a.pill{
+  font-size:12.5px; color:var(--ink-2); padding:5px 11px; border-radius:99px; white-space:nowrap;
+  transition:background 120ms var(--ease-out), color 120ms var(--ease-out), transform 100ms var(--ease-out);
+}
+nav a.pill:hover{background:var(--surface-2); text-decoration:none}
+nav a.pill:active{transform:scale(0.96)}
+nav a.pill.on{background:var(--ink); color:var(--surface-1)}
+#themeBtn{margin-left:auto; border:1px solid var(--hairline); background:var(--surface-1); color:var(--ink-2);
+  border-radius:99px; padding:4px 10px; font-size:12px; cursor:pointer; transition:transform 100ms var(--ease-out)}
+#themeBtn:active{transform:scale(0.94)}
+
+/* ---------- hero ---------- */
+header.hero{padding:64px 0 8px}
+.kicker{font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3); font-weight:600}
+h1{font-size:clamp(30px,4.4vw,46px); line-height:1.12; letter-spacing:-0.02em; font-weight:750; margin:10px 0 6px}
+h1 .ar{color:var(--ink-3); font-weight:400}
+.sub{color:var(--ink-2); font-size:15.5px; max-width:720px}
+.sub b{color:var(--ink)}
+.kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:26px 0 0}
+.kpi{background:var(--surface-1); border:1px solid var(--hairline); border-radius:var(--radius-s); padding:12px 14px}
+.kpi .l{font-size:11.5px; color:var(--ink-3); font-weight:600; letter-spacing:.02em}
+.kpi .v{font-size:21px; font-weight:700; letter-spacing:-0.01em; margin-top:2px}
+.kpi .v small{font-size:12px; color:var(--ink-3); font-weight:500}
+.hero-champ{display:flex; flex-wrap:wrap; align-items:baseline; gap:12px 22px; margin-top:34px;
+  background:var(--surface-1); border:1px solid var(--hairline); border-radius:var(--radius); padding:22px 26px}
+.hero-champ .big{font-size:clamp(38px,5vw,56px); font-weight:800; letter-spacing:-0.03em}
+.hero-champ .who{font-size:15px; color:var(--ink-2)}
+.delta{font-weight:700; font-variant-numeric: normal}
+.delta.up{color:var(--good)} .delta.down{color:var(--bad)}
+
+/* ---------- sections & cards ---------- */
+section{margin-top:64px; scroll-margin-top:64px}
+h2{font-size:22px; letter-spacing:-0.015em; font-weight:720; display:flex; align-items:baseline; gap:10px}
+h2 .tag{font-size:11.5px; color:var(--ink-3); font-weight:600; letter-spacing:.1em; text-transform:uppercase}
+.sec-sub{color:var(--ink-2); font-size:13.5px; margin-top:4px; max-width:760px}
+.card{background:var(--surface-1); border:1px solid var(--hairline); border-radius:var(--radius); padding:18px 20px; margin-top:16px; position:relative}
+.card h3{font-size:14px; font-weight:650; margin-bottom:2px}
+.card .hint{font-size:12px; color:var(--ink-3)}
+.cardbar{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px}
+.cardbar .sp{flex:1}
+button.tgl{border:1px solid var(--hairline); background:var(--surface-1); color:var(--ink-2); font-size:12px;
+  border-radius:8px; padding:4px 10px; cursor:pointer; transition:background 120ms var(--ease-out), transform 100ms var(--ease-out), color 120ms}
+button.tgl:hover{background:var(--surface-2)}
+button.tgl:active{transform:scale(0.95)}
+button.tgl.on{background:var(--ink); color:var(--surface-1); border-color:var(--ink)}
+
+/* ---------- roster ---------- */
+.roster{display:grid; grid-template-columns:repeat(auto-fill,minmax(255px,1fr)); gap:12px; margin-top:18px}
+.agent{
+  background:var(--surface-1); border:1px solid var(--hairline); border-radius:var(--radius); padding:16px;
+  cursor:pointer; transition:transform 150ms var(--ease-out), border-color 150ms var(--ease-out), background 150ms;
+  opacity:0; transform:translateY(8px); animation:rise 420ms var(--ease-out) forwards;
+}
+.agent:hover{transform:translateY(-2px)}
+.agent:active{transform:scale(0.98)}
+.agent.sel{border-color:var(--ink); box-shadow:0 0 0 1px var(--ink) inset}
+@keyframes rise{to{opacity:1; transform:translateY(0)}}
+@media (prefers-reduced-motion: reduce){ .agent{animation:none; opacity:1; transform:none} }
+.agent .top{display:flex; align-items:center; gap:10px}
+.agent .em{font-size:26px; width:44px; height:44px; display:grid; place-items:center; border-radius:12px; background:var(--surface-2); flex:none}
+.agent .nm{font-weight:700; font-size:15px; line-height:1.2}
+.agent .tg{font-size:12px; color:var(--ink-3); line-height:1.35; margin-top:1px}
+.agent .fin{display:flex; align-items:baseline; gap:8px; margin-top:12px}
+.agent .fin .eq{font-size:20px; font-weight:750; letter-spacing:-0.01em}
+.agent .spark{margin-top:8px}
+.agent .chip{display:inline-block; font-size:10.5px; font-weight:650; letter-spacing:.04em; padding:2px 8px;
+  border-radius:99px; background:var(--surface-2); color:var(--ink-2); margin-top:10px; text-transform:uppercase}
+
+/* ---------- awards ---------- */
+.awards{display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px; margin-top:18px}
+.award{background:var(--surface-1); border:1px solid var(--hairline); border-radius:var(--radius); padding:16px}
+.award .t{font-size:12px; color:var(--ink-3); font-weight:650; letter-spacing:.03em}
+.award .w{font-size:15.5px; font-weight:700; margin-top:4px}
+.award .d{font-size:12.5px; color:var(--ink-2); margin-top:3px; line-height:1.45}
+
+/* ---------- tables ---------- */
+.tblwrap{overflow-x:auto; margin-top:14px; border:1px solid var(--hairline); border-radius:var(--radius-s); background:var(--surface-1)}
+table{border-collapse:collapse; width:100%; font-size:12.8px}
+th,td{padding:7px 12px; text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums}
+th{font-size:11.5px; color:var(--ink-3); font-weight:650; border-bottom:1px solid var(--hairline); position:sticky; top:0; background:var(--surface-1)}
+td:first-child, th:first-child{text-align:left; position:sticky; left:0; background:var(--surface-1); font-variant-numeric:normal}
+tbody tr{border-bottom:1px solid var(--hairline)}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover td{background:var(--surface-2)}
+td .pos{color:var(--good); font-weight:600} td .neg{color:var(--bad); font-weight:600}
+.mrow{font-weight:650}
+
+/* ---------- charts ---------- */
+.chart{position:relative; width:100%}
+.chart svg{display:block; width:100%; height:auto}
+.gridline{stroke:var(--surface-2); stroke-width:1}
+.axis text{fill:var(--ink-3); font-size:11px; font-family:var(--sans)}
+.tt{
+  position:absolute; pointer-events:none; z-index:20; background:var(--surface-1); border:1px solid var(--hairline-2);
+  border-radius:10px; padding:9px 12px; font-size:12px; min-width:170px; box-shadow:0 6px 24px rgba(0,0,0,.10);
+  opacity:0; transform:translateY(3px); transition:opacity 120ms var(--ease-out), transform 120ms var(--ease-out);
+}
+.tt.show{opacity:1; transform:none}
+.tt .d{font-weight:700; margin-bottom:5px}
+.tt .r{display:flex; align-items:center; gap:7px; padding:1.5px 0}
+.tt .k{width:14px; height:0; border-top:2.5px solid; border-radius:2px; flex:none}
+.tt .n{color:var(--ink-2); flex:1; padding-right:10px}
+.tt .v{font-weight:700; font-variant-numeric:tabular-nums}
+.legend{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px}
+.lg{display:inline-flex; align-items:center; gap:7px; font-size:12px; color:var(--ink-2); border:1px solid var(--hairline);
+  border-radius:99px; padding:3.5px 11px; cursor:pointer; background:var(--surface-1);
+  transition:opacity 150ms var(--ease-out), transform 100ms var(--ease-out), background 150ms}
+.lg:active{transform:scale(0.95)}
+.lg .k{width:14px; height:0; border-top:2.5px solid; border-radius:2px}
+.lg.dim{opacity:.38}
+.lg:hover{background:var(--surface-2)}
+
+/* filter row */
+.filterrow{
+  position:sticky; top:44px; z-index:40; display:flex; gap:6px; align-items:center; flex-wrap:wrap;
+  background:color-mix(in srgb, var(--surface-0) 88%, transparent); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  padding:10px 2px; margin-top:56px; border-bottom:1px solid var(--hairline);
+}
+.filterrow .lbl{font-size:12px; color:var(--ink-3); font-weight:650; margin-right:4px}
+
+/* small multiples */
+.sm-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; margin-top:14px}
+.sm{background:var(--surface-1); border:1px solid var(--hairline); border-radius:var(--radius-s); padding:12px 14px}
+.sm .h{display:flex; align-items:center; gap:7px; font-size:12.5px; font-weight:650}
+.sm .h .mdd{margin-left:auto; color:var(--bad); font-weight:700; font-variant-numeric:tabular-nums}
+
+/* heatmaps */
+.hm{overflow-x:auto}
+.hm svg{min-width:820px}
+.hm text{font-size:10.5px; fill:var(--ink-3)}
+
+/* ---------- majlis chat ---------- */
+.chatbox{max-height:640px; overflow-y:auto; padding:6px 4px; margin-top:8px}
+.msg{display:flex; gap:10px; padding:7px 6px; border-radius:12px; transition:background 120ms}
+.msg:hover{background:var(--surface-2)}
+.msg .av{font-size:19px; width:34px; height:34px; border-radius:10px; background:var(--surface-2); display:grid; place-items:center; flex:none; margin-top:2px}
+.msg .b{min-width:0}
+.msg .hd{display:flex; align-items:baseline; gap:8px; flex-wrap:wrap}
+.msg .who{font-weight:700; font-size:13px}
+.msg .dt{font-size:11px; color:var(--ink-3); font-variant-numeric:tabular-nums}
+.msg .mood{font-size:10.5px; padding:1px 7px; border-radius:99px; background:var(--surface-2); color:var(--ink-2)}
+.msg .sdot{width:8px; height:8px; border-radius:99px; align-self:center}
+.msg .tx{font-size:13.5px; margin-top:1px; overflow-wrap:break-word}
+.mhead{font-size:11px; font-weight:700; letter-spacing:.08em; color:var(--ink-3); text-transform:uppercase; padding:14px 6px 4px; position:sticky; top:0; background:var(--surface-1)}
+.evline{display:flex; align-items:center; gap:8px; font-size:11.5px; color:var(--ink-3); padding:6px 6px}
+.evline .b{height:1px; flex:1; background:var(--hairline)}
+.evline .e{font-weight:650}
+.evline .e.crash{color:var(--bad)} .evline .e.rally{color:var(--good)}
+
+/* journal */
+.jr{border-left:2px solid var(--hairline-2); margin:8px 0 8px 8px; padding:2px 0 2px 14px}
+.jr .hd{display:flex; gap:8px; align-items:baseline}
+.jr .dt{font-size:11px; color:var(--ink-3); font-variant-numeric:tabular-nums}
+.jr .mood{font-size:10.5px; padding:0 7px; border-radius:99px; background:var(--surface-2); color:var(--ink-2)}
+.jr .tx{font-size:13px; color:var(--ink); margin-top:2px}
+
+/* letters */
+details.letter{border:1px solid var(--hairline); border-radius:var(--radius-s); background:var(--surface-1); margin-top:8px; overflow:hidden}
+details.letter summary{cursor:pointer; padding:12px 16px; font-weight:650; font-size:13.5px; list-style:none; display:flex; gap:10px; align-items:center; transition:background 120ms}
+details.letter summary:hover{background:var(--surface-2)}
+details.letter summary::-webkit-details-marker{display:none}
+details.letter .bd{padding:2px 18px 16px; font-size:13.5px; color:var(--ink-2); white-space:pre-wrap; line-height:1.66}
+details.letter .caret{margin-left:auto; color:var(--ink-3); transition:transform 180ms var(--ease-out)}
+details.letter[open] .caret{transform:rotate(90deg)}
+
+/* trade explorer */
+.tfilters{display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin-top:12px}
+select.tgl{appearance:none; -webkit-appearance:none; border:1px solid var(--hairline); background:var(--surface-1); color:var(--ink-2);
+  font-size:12px; border-radius:8px; padding:4px 10px; cursor:pointer; font-family:var(--sans)}
+.pager{display:flex; gap:6px; align-items:center; margin-top:10px; font-size:12px; color:var(--ink-3)}
+.sidechip{font-size:10.5px; font-weight:700; letter-spacing:.05em; padding:1px 8px; border-radius:99px}
+.sidechip.buy{background:color-mix(in srgb, var(--div-pos) 14%, var(--surface-1)); color:var(--div-pos)}
+.sidechip.sell{background:color-mix(in srgb, var(--div-neg) 14%, var(--surface-1)); color:var(--div-neg)}
+
+/* method/footer */
+.method{font-size:13px; color:var(--ink-2); line-height:1.7}
+.method b{color:var(--ink)}
+footer{margin-top:70px; padding-top:18px; border-top:1px solid var(--hairline); font-size:12px; color:var(--ink-3)}
+.disc{background:var(--surface-2); border-radius:var(--radius-s); padding:10px 14px; font-size:12px; color:var(--ink-2); margin-top:14px}
+</style>
+</head>
+<body>
+<script>/*__DATA__*/</script>
+<nav><div class="row">
+  <div class="brand">TASI Majlis <span>· not financial advice</span></div>
+  <a class="pill" href="#roster">Agents</a>
+  <a class="pill" href="#awards">Awards</a>
+  <a class="pill" href="#boring">Numbers</a>
+  <a class="pill" href="#risk">Risk map</a>
+  <a class="pill" href="#race">The race</a>
+  <a class="pill" href="#dd">Drawdowns</a>
+  <a class="pill" href="#months">Months</a>
+  <a class="pill" href="#sent">Sentiment</a>
+  <a class="pill" href="#majlis">Majlis</a>
+  <a class="pill" href="#journal">Journals</a>
+  <a class="pill" href="#trades">Trades</a>
+  <a class="pill" href="#letters">Letters</a>
+  <a class="pill" href="#method">Method</a>
+  <button id="themeBtn" title="toggle theme">◐</button>
+</div></nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="kicker">Agent-based simulation · Tadawul top 50 · 2022 → 2026</div>
+  <h1>The TASI Majlis <span class="ar">مجلس التداول</span></h1>
+  <p class="sub">Eight AI agents were each handed <b>SAR 100,000</b> on the first trading day of 2022.
+  They strategized, argued in a shared majlis, and traded the <b>top-50 Saudi stocks</b> for
+  <b id="h-sessions"></b> sessions — every fill at the next open, real commissions, real dividends, no lookahead.
+  This is what happened.</p>
+  <div class="kpis" id="kpis"></div>
+  <div class="hero-champ" id="champ"></div>
+</header>
+
+<section id="roster">
+  <h2>The agents <span class="tag">click to focus one</span></h2>
+  <p class="sec-sub">Every agent wrote its own trading rules from its personality — then lived with them for 4.6 years.</p>
+  <div class="roster" id="rosterGrid"></div>
+</section>
+
+<section id="awards">
+  <h2>Superlatives <span class="tag">full period</span></h2>
+  <div class="awards" id="awardsGrid"></div>
+</section>
+
+<section id="boring">
+  <h2>The boring numbers <span class="tag">full period · the table quants read first</span></h2>
+  <div class="tblwrap" id="metricsTbl"></div>
+</section>
+
+<section id="risk">
+  <h2>Risk map <span class="tag">return vs volatility</span></h2>
+  <p class="sec-sub">Up and to the left is where you want to live. The gray rules mark TASI itself.</p>
+  <div class="card"><div class="chart" id="scatter"></div></div>
+</section>
+
+<div class="filterrow" id="rangeRow"><span class="lbl">Range</span></div>
+
+<section id="race">
+  <h2>The race <span class="tag">portfolio value, SAR</span></h2>
+  <div class="card">
+    <div class="cardbar">
+      <h3>Equity curves</h3><div class="sp"></div>
+      <button class="tgl" id="logBtn">log scale</button>
+      <button class="tgl" id="raceTblBtn">table</button>
+    </div>
+    <div class="chart" id="raceChart"></div>
+    <div class="legend" id="raceLegend"></div>
+    <div class="tblwrap" id="raceTbl" style="display:none"></div>
+  </div>
+</section>
+
+<section id="dd">
+  <h2>Drawdowns <span class="tag">pain, visualized</span></h2>
+  <p class="sec-sub">How far below their own peak each agent sat, day by day. Shallow and short is skill; deep and long is tuition.</p>
+  <div class="sm-grid" id="ddGrid"></div>
+</section>
+
+<section id="months">
+  <h2>Monthly returns <span class="tag">agents × months</span></h2>
+  <div class="card">
+    <div class="cardbar"><h3>Heatmap</h3><div class="sp"></div><button class="tgl" id="hmTblBtn">table</button></div>
+    <div class="hm chart" id="hmChart"></div>
+    <div class="tblwrap" id="hmTbl" style="display:none"></div>
+  </div>
+</section>
+
+<section id="sent">
+  <h2>Sentiment <span class="tag">what the majlis felt</span></h2>
+  <p class="sec-sub">Weekly average of each agent's recorded mood, from bearish <b style="color:var(--div-neg)">red</b> to bullish <b style="color:var(--div-pos)">blue</b> — with the crowd's consensus below.</p>
+  <div class="card">
+    <div class="hm chart" id="sentChart"></div>
+    <div class="chart" id="consChart" style="margin-top:10px"></div>
+  </div>
+</section>
+
+<section id="majlis">
+  <h2>The majlis <span class="tag">the group chat</span></h2>
+  <p class="sec-sub">Everything the agents said to each other, threaded with the market's big days.</p>
+  <div class="card">
+    <div class="cardbar" id="chatFilters"></div>
+    <div class="chatbox" id="chatBox"></div>
+  </div>
+</section>
+
+<section id="journal">
+  <h2>Journals <span class="tag">private diaries</span></h2>
+  <div class="card">
+    <div class="cardbar" id="jrFilters"></div>
+    <div id="jrBox" style="max-height:560px; overflow-y:auto"></div>
+  </div>
+</section>
+
+<section id="trades">
+  <h2>Trade explorer <span class="tag">every fill</span></h2>
+  <div class="card">
+    <div class="tfilters" id="tradeFilters"></div>
+    <div class="tblwrap" id="tradeTbl"></div>
+    <div class="pager" id="tradePager"></div>
+  </div>
+</section>
+
+<section id="letters">
+  <h2>Quarterly letters <span class="tag">in their own words</span></h2>
+  <div id="lettersBox"></div>
+</section>
+
+<section id="method">
+  <h2>Methodology</h2>
+  <div class="card method" id="methodBox"></div>
+  <div class="disc">⚠️ This is a simulation of fictional characters for research and entertainment.
+  Nothing here is investment advice, a recommendation, or a solicitation. Historical data via Yahoo Finance;
+  figures include simulated costs but not taxes, zakat, or your broker's actual fees. Past performance of
+  imaginary people guarantees nothing.</div>
+</section>
+
+<footer>Built from 51 fetched price histories · engine, strategies &amp; dashboard live in the repo · <span id="ftMeta"></span></footer>
+</div>
+
+<script>
+"use strict";
+/* ============ helpers ============ */
+const D = window.DATA;
+const $ = (s, el=document) => el.querySelector(s);
+const $$ = (s, el=document) => [...el.querySelectorAll(s)];
+const fmt = n => n==null?'—':Math.round(n).toLocaleString('en-US');
+const fmtSAR = n => n==null?'—':Math.round(n).toLocaleString('en-US')+' SAR';
+const pct = (x,d=1) => x==null?'—':(x*100).toFixed(d)+'%';
+const spct = (x,d=1) => x==null?'—':(x>0?'+':'')+(x*100).toFixed(d)+'%';
+const NBSP=' ';
+const isDark = () => document.documentElement.dataset.theme==='dark' ||
+  (document.documentElement.dataset.theme!=='light' && matchMedia('(prefers-color-scheme: dark)').matches);
+const seriesColor = a => isDark()? a.color_dark : a.color;
+const cssVar = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const el = (tag, attrs={}, ...kids) => {
+  const e = document.createElement(tag);
+  for (const [k,v] of Object.entries(attrs)) {
+    if (k==='class') e.className=v; else if (k==='text') e.textContent=v;
+    else if (k.startsWith('on')) e.addEventListener(k.slice(2), v); else e.setAttribute(k,v);
+  }
+  for (const k of kids) if (k!=null) e.append(k);
+  return e;
+};
+const svgel = (tag, attrs={}) => {
+  const e = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  for (const [k,v] of Object.entries(attrs)) e.setAttribute(k, v);
+  return e;
+};
+const monthKey = iso => iso.slice(0,7);
+const dates = D.dates, N = dates.length;
+const dateIdx = new Map(dates.map((d,i)=>[d,i]));
+const agents = D.agents;
+const byHandle = new Map(agents.map(a=>[a.handle,a]));
+const AR_MONTH = {'01':'Jan','02':'Feb','03':'Mar','04':'Apr','05':'May','06':'Jun','07':'Jul','08':'Aug','09':'Sep','10':'Oct','11':'Nov','12':'Dec'};
+const fmtDate = iso => `${AR_MONTH[iso.slice(5,7)]} ${+iso.slice(8,10)}, ${iso.slice(0,4)}`;
+const fmtMonth = k => `${AR_MONTH[k.slice(5,7)]} ${k.slice(2,4)}`;
+
+/* diverging color: t in [-1,1] -> css color mix of pos/neg with mid */
+function divColor(t){
+  const mid = cssVar('--div-mid'), pos = cssVar('--div-pos'), neg = cssVar('--div-neg');
+  const m = Math.min(1, Math.abs(t));
+  const c = t>=0? pos : neg;
+  return `color-mix(in oklab, ${c} ${Math.round(m*100)}%, ${mid})`;
+}
+
+/* global state */
+let selHandle = null;          // roster selection -> emphasis
+let range = [0, N-1];          // global date range (indices)
+const rerenders = [];          // functions to call on range/theme/selection change
+function rerenderAll(){ rerenders.forEach(f=>f()); }
+
+/* ============ hero ============ */
+{
+  $('#h-sessions').textContent = fmt(D.meta.sessions);
+  const kp = $('#kpis');
+  const tasiTR = D.tasi_metrics.total_return;
+  const rows = [
+    ['Agents','8', ''],
+    ['Capital each', '100,000', 'SAR'],
+    ['Universe', D.meta.universe_size, 'stocks'],
+    ['Sessions', fmt(D.meta.sessions), `${D.meta.sim_start.slice(0,4)}–${D.meta.sim_end.slice(0,4)}`],
+    ['TASI itself', spct(tasiTR), 'total return'],
+    ['Trades placed', fmt(agents.reduce((s,a)=>s+a.metrics.n_trades,0)), 'all agents'],
+  ];
+  for (const [l,v,s] of rows) kp.append(el('div',{class:'kpi'},
+    el('div',{class:'l',text:l}), el('div',{class:'v'}, String(v), s?el('small',{text:NBSP+s}):null)));
+  const ranked = [...agents].sort((x,y)=>y.metrics.final_equity-x.metrics.final_equity);
+  const w = ranked[0];
+  $('#champ').append(
+    el('div',{},
+      el('div',{class:'kicker',text:'Final champion'}),
+      el('div',{class:'big'}, `${w.emoji} ${fmt(w.metrics.final_equity)}`, el('small',{text:' SAR', style:'font-size:18px;color:var(--ink-3);font-weight:600'})),
+    ),
+    el('div',{class:'who'},
+      el('div',{}, el('b',{text:w.name}), ` — ${w.tagline}`),
+      el('div',{style:'margin-top:4px'},
+        el('span',{class:'delta '+(w.metrics.total_return>=0?'up':'down'), text:spct(w.metrics.total_return)}),
+        ` over the period, vs ${spct(tasiTR)} for TASI. `,
+        `Runner-up: ${ranked[1].emoji} ${ranked[1].name} (${spct(ranked[1].metrics.total_return)}).`)
+    ));
+}
+
+/* ============ roster ============ */
+{
+  const g = $('#rosterGrid');
+  agents.forEach((a,i)=>{
+    const m = a.metrics;
+    const card = el('div',{class:'agent', id:'agent-'+a.handle, style:`animation-delay:${i*45}ms`,
+      onclick:()=>{ selHandle = selHandle===a.handle? null : a.handle;
+        $$('.agent').forEach(c=>c.classList.toggle('sel', c.id==='agent-'+(selHandle||''))); rerenderAll(); }},
+      el('div',{class:'top'},
+        el('div',{class:'em',text:a.emoji}),
+        el('div',{}, el('div',{class:'nm',text:a.name}), el('div',{class:'tg',text:a.tagline}))),
+      el('div',{class:'fin'},
+        el('span',{class:'eq',text:fmt(m.final_equity)+' SAR'}),
+        el('span',{class:'delta '+(m.total_return>=0?'up':'down'),text:spct(m.total_return)})),
+      el('div',{class:'spark'}),
+      el('span',{class:'chip',text:a.risk_style}));
+    g.append(card);
+    card.querySelector('.spark').append(sparkline(a.equity, seriesColor(a)));
+  });
+  rerenders.push(()=>{ $$('.agent .spark').forEach((s,i)=>{ s.innerHTML=''; s.append(sparkline(agents[i].equity, seriesColor(agents[i]))); }); });
+}
+function sparkline(vals, color){
+  const w=225,h=34, step=Math.max(1,Math.floor(vals.length/110));
+  const v=[]; for(let i=0;i<vals.length;i+=step) v.push(vals[i]); v.push(vals[vals.length-1]);
+  const mn=Math.min(...v), mx=Math.max(...v);
+  const x=i=>i/(v.length-1)*w, y=t=>h-3-((t-mn)/(mx-mn||1))*(h-6);
+  const dstr=v.map((t,i)=>`${i?'L':'M'}${x(i).toFixed(1)},${y(t).toFixed(1)}`).join('');
+  const svg=svgel('svg',{viewBox:`0 0 ${w} ${h}`,width:w,height:h});
+  svg.append(svgel('path',{d:dstr,fill:'none',stroke:color,'stroke-width':2,'stroke-linecap':'round','stroke-linejoin':'round'}));
+  const last=svgel('circle',{cx:x(v.length-1),cy:y(v[v.length-1]),r:3,fill:color,stroke:'var(--surface-1)','stroke-width':2});
+  svg.append(last);
+  return svg;
+}
+
+/* ============ awards ============ */
+{
+  const g=$('#awardsGrid'); const M=a=>a.metrics;
+  const by=(f,dir=1)=>[...agents].sort((x,y)=>dir*(f(y)-f(x)))[0];
+  const items=[];
+  const sharpe=by(a=>M(a).sharpe); items.push(['Sharpest mind', sharpe, `Sharpe ${M(sharpe).sharpe} — best risk-adjusted return in the majlis.`]);
+  const dd=by(a=>M(a).max_drawdown); items.push(['Iron stomach (shallowest drawdown)', dd, `Never fell more than ${pct(Math.abs(M(dd).max_drawdown))} below their peak.`]);
+  const deepdd=by(a=>-M(a).max_drawdown); items.push(['Deepest crater', deepdd, `Sat ${pct(Math.abs(M(deepdd).max_drawdown))} below their peak at the worst moment (${M(deepdd).mdd_trough}).`]);
+  const fees=by(a=>a.commissions_paid); items.push(['Fee machine', fees, `Paid ${fmtSAR(fees.commissions_paid)} in commissions across ${fmt(M(fees).n_trades)} trades. The broker sends regards.`]);
+  const divs=by(a=>a.dividends_received); items.push(['Dividend royalty', divs, `Collected ${fmtSAR(divs.dividends_received)} in cash dividends. Patience pays — literally.`]);
+  const traders=by(a=>M(a).n_trades); items.push(['Most trigger-happy', traders, `${fmt(M(traders).n_trades)} trades. `+(M(traders).win_rate!=null?`Win rate ${pct(M(traders).win_rate)}.`:'')]);
+  const lazy=by(a=>-M(a).n_trades); items.push(['Fewest moves', lazy, `Just ${fmt(M(lazy).n_trades)} trades in 4.6 years. Conviction or napping — you decide.`]);
+  const hold=agents.filter(a=>M(a).longest_hold).sort((x,y)=>M(y).longest_hold.days-M(x).longest_hold.days)[0];
+  if(hold) items.push(['Diamond hands', hold, `Held ${M(hold).longest_hold.name} for ${M(hold).longest_hold.days} days before selling.`]);
+  const bt=by(a=>M(a).best_trade? M(a).best_trade.realized_pnl:-1e18);
+  if(M(bt).best_trade) items.push(['Single best trade', bt, `${D.meta.names[M(bt).best_trade.code]||M(bt).best_trade.code}: +${fmt(M(bt).best_trade.realized_pnl)} SAR realized on ${M(bt).best_trade.date}.`]);
+  const wt=by(a=>M(a).worst_trade? -M(a).worst_trade.realized_pnl:-1e18);
+  if(M(wt).worst_trade) items.push(['Single worst trade', wt, `${D.meta.names[M(wt).worst_trade.code]||M(wt).worst_trade.code}: ${fmt(M(wt).worst_trade.realized_pnl)} SAR realized on ${M(wt).worst_trade.date}. It still hurts.`]);
+  const vola=by(a=>M(a).ann_vol); items.push(['Wildest ride', vola, `Annualized volatility ${pct(M(vola).ann_vol)} — a rollercoaster with a brokerage account.`]);
+  const calm=by(a=>-M(a).ann_vol); items.push(['Steadiest hand', calm, `Only ${pct(M(calm).ann_vol)} volatility. You could serve tea on this equity curve.`]);
+  for(const [t,a,d] of items) g.append(el('div',{class:'award'},
+    el('div',{class:'t',text:t}), el('div',{class:'w',text:`${a.emoji} ${a.name}`}), el('div',{class:'d',text:d})));
+}
+
+/* ============ boring metrics table ============ */
+{
+  const rows = [
+    ['Final equity (SAR)', a=>fmt(a.metrics.final_equity), t=>fmt(t.final_equity), true],
+    ['Total return', a=>spct(a.metrics.total_return), t=>spct(t.total_return), true],
+    ['CAGR', a=>spct(a.metrics.cagr), t=>spct(t.cagr)],
+    ['Annualized volatility', a=>pct(a.metrics.ann_vol), t=>pct(t.ann_vol)],
+    ['Sharpe ratio', a=>a.metrics.sharpe, t=>t.sharpe],
+    ['Sortino ratio', a=>a.metrics.sortino, t=>t.sortino],
+    ['Max drawdown', a=>pct(a.metrics.max_drawdown), t=>pct(t.max_drawdown), true],
+    ['Drawdown window', a=>`${a.metrics.mdd_peak} → ${a.metrics.mdd_trough}`, t=>`${t.mdd_peak} → ${t.mdd_trough}`],
+    ['Recovered', a=>a.metrics.mdd_recovery||'never', t=>t.mdd_recovery||'never'],
+    ['Longest underwater (sessions)', a=>fmt(a.metrics.longest_underwater_sessions), t=>fmt(t.longest_underwater_sessions)],
+    ['Calmar ratio', a=>a.metrics.calmar??'—', t=>t.calmar??'—'],
+    ['Beta vs TASI', a=>a.metrics.beta_tasi, ()=>'1.000'],
+    ['Annual alpha', a=>spct(a.metrics.alpha_annual), ()=>'0.0%'],
+    ['Correlation w/ TASI', a=>a.metrics.corr_tasi, ()=>'1.000'],
+    ['Daily VaR (95%)', a=>pct(a.metrics.var95_daily), t=>pct(t.var95_daily)],
+    ['Return skew', a=>a.metrics.skew, t=>t.skew],
+    ['Best day', a=>`${spct(a.metrics.best_day?.ret)} (${a.metrics.best_day?.date})`, t=>`${spct(t.best_day?.ret)}`],
+    ['Worst day', a=>`${spct(a.metrics.worst_day?.ret)} (${a.metrics.worst_day?.date})`, t=>`${spct(t.worst_day?.ret)}`],
+    ['Positive months', a=>pct(a.metrics.positive_months_pct), t=>pct(t.positive_months_pct)],
+    ['Trades', a=>fmt(a.metrics.n_trades), ()=>'—'],
+    ['Win rate (closed)', a=>a.metrics.win_rate!=null?pct(a.metrics.win_rate):'—', ()=>'—'],
+    ['Profit factor', a=>a.metrics.profit_factor??'—', ()=>'—'],
+    ['Annual turnover', a=>a.metrics.turnover_annual!=null?a.metrics.turnover_annual+'×':'—', ()=>'—'],
+    ['Commissions paid (SAR)', a=>fmt(a.commissions_paid), ()=>'—'],
+    ['Dividends received (SAR)', a=>fmt(a.dividends_received), ()=>'—'],
+  ];
+  const t = el('table');
+  const thead = el('thead'); const hr = el('tr'); hr.append(el('th',{text:'Metric'}));
+  for(const a of agents) hr.append(el('th',{text:`${a.emoji} ${a.name.split(' ')[0]}`}));
+  hr.append(el('th',{text:'⚪ TASI'}));
+  thead.append(hr); t.append(thead);
+  const tb = el('tbody');
+  for(const [label, fa, ft, strong] of rows){
+    const tr = el('tr', strong?{class:'mrow'}:{}); tr.append(el('td',{text:label}));
+    for(const a of agents){
+      const v = fa(a); const td = el('td');
+      if(typeof v==='string' && v.startsWith('+')) td.append(el('span',{class:'pos',text:v}));
+      else if(typeof v==='string' && v.startsWith('-')) td.append(el('span',{class:'neg',text:v}));
+      else td.textContent = v;
+      tr.append(td);
+    }
+    const tv = ft(D.tasi_metrics); const td2 = el('td');
+    if(typeof tv==='string' && tv.startsWith('+')) td2.append(el('span',{class:'pos',text:tv}));
+    else if(typeof tv==='string' && tv.startsWith('-')) td2.append(el('span',{class:'neg',text:tv}));
+    else td2.textContent=tv;
+    tr.append(td2); tb.append(tr);
+  }
+  t.append(tb); $('#metricsTbl').append(t);
+}
+
+/* ============ risk scatter ============ */
+function renderScatter(){
+  const host=$('#scatter'); host.innerHTML='';
+  const W=980,H=430,P={l:56,r:26,t:18,b:44};
+  const xs=agents.map(a=>a.metrics.ann_vol), ys=agents.map(a=>a.metrics.cagr);
+  const tx=D.tasi_metrics.ann_vol, ty=D.tasi_metrics.cagr;
+  const xmin=0, xmax=Math.max(...xs,tx)*1.15;
+  const ymin=Math.min(0,...ys,ty)*1.25-0.01, ymax=Math.max(...ys,ty)*1.25+0.01;
+  const X=v=>P.l+(v-xmin)/(xmax-xmin)*(W-P.l-P.r);
+  const Y=v=>H-P.b-(v-ymin)/(ymax-ymin)*(H-P.t-P.b);
+  const svg=svgel('svg',{viewBox:`0 0 ${W} ${H}`});
+  for(let g=0; g<=5; g++){
+    const vy=ymin+(ymax-ymin)*g/5;
+    svg.append(svgel('line',{x1:P.l,x2:W-P.r,y1:Y(vy),y2:Y(vy),class:'gridline'}));
+    const t=svgel('text',{x:P.l-8,y:Y(vy)+4,'text-anchor':'end',class:'axis'}); t.textContent=pct(vy,0);
+    t.setAttribute('fill','var(--ink-3)'); t.setAttribute('font-size','11'); svg.append(t);
+  }
+  for(let g=0; g<=5; g++){
+    const vx=xmin+(xmax-xmin)*g/5;
+    const t=svgel('text',{x:X(vx),y:H-P.b+18,'text-anchor':'middle'}); t.textContent=pct(vx,0);
+    t.setAttribute('fill','var(--ink-3)'); t.setAttribute('font-size','11'); svg.append(t);
+  }
+  const xlab=svgel('text',{x:(P.l+W-P.r)/2,y:H-6,'text-anchor':'middle'}); xlab.textContent='Annualized volatility →';
+  xlab.setAttribute('fill','var(--ink-2)'); xlab.setAttribute('font-size','12'); svg.append(xlab);
+  const ylab=svgel('text',{x:14,y:(P.t+H-P.b)/2,'text-anchor':'middle',transform:`rotate(-90 14 ${(P.t+H-P.b)/2})`});
+  ylab.textContent='CAGR →'; ylab.setAttribute('fill','var(--ink-2)'); ylab.setAttribute('font-size','12'); svg.append(ylab);
+  // TASI reference rules
+  svg.append(svgel('line',{x1:X(tx),x2:X(tx),y1:P.t,y2:H-P.b,stroke:'var(--hairline-2)','stroke-width':1}));
+  svg.append(svgel('line',{x1:P.l,x2:W-P.r,y1:Y(ty),y2:Y(ty),stroke:'var(--hairline-2)','stroke-width':1}));
+  const tl=svgel('text',{x:X(tx)+5,y:P.t+12}); tl.textContent='TASI'; tl.setAttribute('fill','var(--ink-3)'); tl.setAttribute('font-size','10.5'); svg.append(tl);
+  for(const a of agents){
+    const cx=X(a.metrics.ann_vol), cy=Y(a.metrics.cagr);
+    const gr=svgel('g',{style:'cursor:default'});
+    gr.append(svgel('circle',{cx,cy,r:16,fill:'transparent'}));
+    gr.append(svgel('circle',{cx,cy,r:6.5,fill:seriesColor(a),stroke:'var(--surface-1)','stroke-width':2}));
+    const lbl=svgel('text',{x:cx+11,y:cy+4}); lbl.textContent=`${a.emoji} ${a.name.split(' ')[0]}`;
+    lbl.setAttribute('fill','var(--ink)'); lbl.setAttribute('font-size','11.5'); lbl.setAttribute('font-weight','650');
+    if (cx > W-130) { lbl.setAttribute('x', cx-11); lbl.setAttribute('text-anchor','end'); }
+    gr.append(lbl);
+    gr.addEventListener('pointerenter',e=>showTT(host,e,
+      `<div class="d">${a.emoji} ${esc(a.name)}</div>`+
+      ttRow(seriesColor(a),'CAGR',spct(a.metrics.cagr))+
+      ttRow(seriesColor(a),'Volatility',pct(a.metrics.ann_vol))+
+      ttRow(seriesColor(a),'Sharpe',a.metrics.sharpe)));
+    gr.addEventListener('pointerleave',()=>hideTT(host));
+    svg.append(gr);
+  }
+  host.append(svg);
+}
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function ttRow(color,name,val){ return `<div class="r"><span class="k" style="border-color:${color}"></span><span class="n">${esc(name)}</span><span class="v">${esc(String(val))}</span></div>`; }
+function showTT(host,e,html){
+  let tt=host.querySelector('.tt'); if(!tt){ tt=el('div',{class:'tt'}); host.append(tt); }
+  tt.innerHTML=html; tt.classList.add('show');
+  const r=host.getBoundingClientRect();
+  let x=e.clientX-r.left+14, y=e.clientY-r.top+10;
+  if(x+tt.offsetWidth>r.width-8) x=e.clientX-r.left-tt.offsetWidth-14;
+  if(y+tt.offsetHeight>r.height-4) y=r.height-tt.offsetHeight-4;
+  tt.style.left=x+'px'; tt.style.top=Math.max(2,y)+'px';
+}
+function hideTT(host){ const tt=host.querySelector('.tt'); if(tt) tt.classList.remove('show'); }
+rerenders.push(renderScatter);
+
+/* ============ range filter ============ */
+{
+  const row=$('#rangeRow');
+  const y0=+D.meta.sim_start.slice(0,4), y1=+D.meta.sim_end.slice(0,4);
+  const presets=[['All',0,N-1]];
+  for(let y=y0;y<=y1;y++){
+    const s=dates.findIndex(d=>d>=`${y}-01-01`);
+    let e=dates.findIndex(d=>d>`${y}-12-31`); e=e<0?N-1:e-1;
+    if(s>=0) presets.push([String(y),s,e]);
+  }
+  const li=Math.max(0,N-251); presets.push(['Last 12M',li,N-1]);
+  presets.forEach(([label,s,e],i)=>{
+    const b=el('button',{class:'tgl'+(i===0?' on':''),text:label,onclick:()=>{
+      $$('#rangeRow .tgl').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+      range=[s,e]; rerenderAll();
+    }});
+    row.append(b);
+  });
+}
+
+/* ============ race chart ============ */
+let raceLog=false;
+function renderRace(){
+  const host=$('#raceChart'); host.innerHTML='';
+  const [s,e]=range;
+  const W=1080,H=470,P={l:64,r:20,t:14,b:30};
+  const idx=[]; const step=Math.max(1,Math.floor((e-s)/720));
+  for(let i=s;i<=e;i+=step) idx.push(i); if(idx[idx.length-1]!==e) idx.push(e);
+  const sers = agents.map(a=>({a, vals:idx.map(i=>a.equity[i])}));
+  const tasiVals = idx.map(i=>D.tasi[i]);
+  let mn=Infinity,mx=-Infinity;
+  for(const q of sers) for(const v of q.vals){ if(v<mn)mn=v; if(v>mx)mx=v; }
+  for(const v of tasiVals){ if(v<mn)mn=v; if(v>mx)mx=v; }
+  mn*=0.98; mx*=1.02;
+  const Y = raceLog
+    ? v=>H-P.b-(Math.log(v)-Math.log(mn))/(Math.log(mx)-Math.log(mn))*(H-P.t-P.b)
+    : v=>H-P.b-(v-mn)/(mx-mn)*(H-P.t-P.b);
+  const X = k=>P.l+k/(idx.length-1)*(W-P.l-P.r);
+  const svg=svgel('svg',{viewBox:`0 0 ${W} ${H}`});
+  const ticks = raceLog? logTicks(mn,mx): linTicks(mn,mx,6);
+  for(const tv of ticks){
+    svg.append(svgel('line',{x1:P.l,x2:W-P.r,y1:Y(tv),y2:Y(tv),class:'gridline'}));
+    const t=svgel('text',{x:P.l-8,y:Y(tv)+4,'text-anchor':'end'}); t.textContent=fmt(tv);
+    t.setAttribute('fill','var(--ink-3)'); t.setAttribute('font-size','11'); svg.append(t);
+  }
+  const nx=Math.min(7,idx.length);
+  for(let g=0;g<nx;g++){
+    const k=Math.round(g/(nx-1)*(idx.length-1));
+    const t=svgel('text',{x:X(k),y:H-8,'text-anchor':g===0?'start':g===nx-1?'end':'middle'});
+    t.textContent=fmtDate(dates[idx[k]]); t.setAttribute('fill','var(--ink-3)'); t.setAttribute('font-size','11'); svg.append(t);
+  }
+  // start line at 100k
+  if(!raceLog || (100000>=mn&&100000<=mx)){
+    svg.append(svgel('line',{x1:P.l,x2:W-P.r,y1:Y(100000),y2:Y(100000),stroke:'var(--hairline-2)','stroke-width':1}));
+  }
+  // event ticks
+  for(const ev of D.events){
+    const i=dateIdx.get(ev.date); if(i==null||i<s||i>e) continue;
+    const k=Math.round((i-s)/step);
+    svg.append(svgel('line',{x1:X(k),x2:X(k),y1:H-P.b,y2:H-P.b-6,stroke:ev.type==='crash'?'var(--div-neg)':'var(--div-pos)','stroke-width':2,opacity:.65}));
+  }
+  // TASI baseline series (context gray)
+  svg.append(pathFor(tasiVals,X,Y,'var(--ink-3)',1.6,.7));
+  // agent series
+  const dimmed = h => selHandle && h!==selHandle;
+  for(const q of sers){
+    if(hiddenSeries.has(q.a.handle)) continue;
+    const p=pathFor(q.vals,X,Y,seriesColor(q.a), dimmed(q.a.handle)?1.4:2.2, dimmed(q.a.handle)?.18:1);
+    svg.append(p);
+  }
+  // end labels (selective: top 2 + selected + TASI)
+  const fin=[...sers].sort((a,b)=>b.vals[b.vals.length-1]-a.vals[a.vals.length-1]);
+  const lab=new Set([fin[0].a.handle, fin[1].a.handle]); if(selHandle) lab.add(selHandle);
+  let usedY=[];
+  for(const q of fin){
+    if(!lab.has(q.a.handle)||hiddenSeries.has(q.a.handle)) continue;
+    let yy=Y(q.vals[q.vals.length-1]);
+    while(usedY.some(u=>Math.abs(u-yy)<13)) yy+=13;
+    usedY.push(yy);
+    const t=svgel('text',{x:W-P.r-2,y:yy+4,'text-anchor':'end'});
+    t.textContent=`${q.a.emoji} ${fmt(q.vals[q.vals.length-1])}`;
+    t.setAttribute('fill','var(--ink)'); t.setAttribute('font-size','11.5'); t.setAttribute('font-weight','700');
+    t.setAttribute('stroke','var(--surface-1)'); t.setAttribute('stroke-width','3.5'); t.setAttribute('paint-order','stroke');
+    svg.append(t);
+  }
+  // crosshair
+  const cross=svgel('line',{y1:P.t,y2:H-P.b,stroke:'var(--hairline-2)','stroke-width':1,opacity:0});
+  svg.append(cross);
+  const hit=svgel('rect',{x:P.l,y:P.t,width:W-P.l-P.r,height:H-P.t-P.b,fill:'transparent'});
+  hit.addEventListener('pointermove',ev=>{
+    const r=svg.getBoundingClientRect();
+    const px=(ev.clientX-r.left)*(W/r.width);
+    const k=Math.max(0,Math.min(idx.length-1,Math.round((px-P.l)/(W-P.l-P.r)*(idx.length-1))));
+    cross.setAttribute('x1',X(k)); cross.setAttribute('x2',X(k)); cross.setAttribute('opacity',1);
+    const i=idx[k];
+    const rows=[...agents.filter(a=>!hiddenSeries.has(a.handle))].sort((a,b)=>b.equity[i]-a.equity[i])
+      .map(a=>ttRow(seriesColor(a), `${a.emoji} ${a.name.split(' ')[0]}`, fmt(a.equity[i])));
+    rows.push(ttRow('var(--ink-3)','TASI', fmt(D.tasi[i])));
+    showTT(host,ev,`<div class="d">${fmtDate(dates[i])}</div>`+rows.join(''));
+  });
+  hit.addEventListener('pointerleave',()=>{ cross.setAttribute('opacity',0); hideTT(host); });
+  svg.append(hit);
+  host.append(svg);
+  renderRaceLegend(); renderRaceTable();
+}
+const hiddenSeries=new Set();
+function pathFor(vals,X,Y,color,w,op){
+  const d=vals.map((v,i)=>`${i?'L':'M'}${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join('');
+  return svgel('path',{d,fill:'none',stroke:color,'stroke-width':w,opacity:op,'stroke-linejoin':'round','stroke-linecap':'round'});
+}
+function linTicks(mn,mx,n){
+  const span=mx-mn, raw=span/n, mag=Math.pow(10,Math.floor(Math.log10(raw)));
+  const stp=[1,2,2.5,5,10].map(m=>m*mag).find(s=>span/s<=n)||mag*10;
+  const out=[]; for(let v=Math.ceil(mn/stp)*stp; v<=mx; v+=stp) out.push(v); return out;
+}
+function logTicks(mn,mx){
+  const out=[]; const base=[1,1.5,2,3,5,7];
+  for(let m=Math.pow(10,Math.floor(Math.log10(mn))); m<=mx*10; m*=10)
+    for(const b of base){ const v=b*m; if(v>=mn&&v<=mx) out.push(v); }
+  return out.length>2?out:linTicks(mn,mx,6);
+}
+function renderRaceLegend(){
+  const lg=$('#raceLegend'); lg.innerHTML='';
+  for(const a of agents){
+    const b=el('span',{class:'lg'+(hiddenSeries.has(a.handle)?' dim':''),
+      onclick:()=>{ hiddenSeries.has(a.handle)?hiddenSeries.delete(a.handle):hiddenSeries.add(a.handle); renderRace(); }},
+      el('span',{class:'k',style:'border-color:'+seriesColor(a)}), `${a.emoji} ${a.name}`);
+    lg.append(b);
+  }
+  lg.append(el('span',{class:'lg',style:'cursor:default'},el('span',{class:'k',style:'border-color:var(--ink-3)'}),'TASI (index)'));
+}
+function renderRaceTable(){
+  const host=$('#raceTbl'); host.innerHTML='';
+  const [s,e]=range; const t=el('table');
+  const hr=el('tr'); hr.append(el('th',{text:'Month end'}));
+  for(const a of agents) hr.append(el('th',{text:`${a.emoji} ${a.name.split(' ')[0]}`}));
+  hr.append(el('th',{text:'TASI'}));
+  t.append(el('thead',{},hr));
+  const tb=el('tbody');
+  let lastM=null;
+  for(let i=s;i<=e;i++){
+    const m=monthKey(dates[i]);
+    if(i<e && monthKey(dates[i+1])===m) continue;
+    const tr=el('tr'); tr.append(el('td',{text:fmtMonth(m)}));
+    for(const a of agents) tr.append(el('td',{text:fmt(a.equity[i])}));
+    tr.append(el('td',{text:fmt(D.tasi[i])})); tb.append(tr); lastM=m;
+  }
+  t.append(tb); host.append(t);
+}
+$('#logBtn').addEventListener('click',()=>{ raceLog=!raceLog; $('#logBtn').classList.toggle('on',raceLog); renderRace(); });
+$('#raceTblBtn').addEventListener('click',()=>{
+  const tb=$('#raceTbl'); const show=tb.style.display==='none';
+  tb.style.display=show?'':'none'; $('#raceTblBtn').classList.toggle('on',show);
+});
+rerenders.push(renderRace);
+
+/* ============ drawdown small multiples ============ */
+function renderDD(){
+  const g=$('#ddGrid'); g.innerHTML='';
+  const [s,e]=range;
+  for(const a of agents){
+    const eq=a.equity.slice(s,e+1);
+    let peak=-Infinity; const dd=eq.map(v=>{ peak=Math.max(peak,v); return v/peak-1; });
+    const mdd=Math.min(...dd);
+    const W=300,H=86,P={l:2,r:2,t:4,b:4};
+    const X=i=>P.l+i/(dd.length-1)*(W-P.l-P.r);
+    const lo=Math.min(-0.35, mdd*1.05);
+    const Y=v=>P.t+(v/lo)*(H-P.t-P.b);
+    const svg=svgel('svg',{viewBox:`0 0 ${W} ${H}`});
+    svg.append(svgel('line',{x1:0,x2:W,y1:Y(0),y2:Y(0),class:'gridline'}));
+    const step=Math.max(1,Math.floor(dd.length/240));
+    let d=`M${X(0)},${Y(0)}`;
+    for(let i=0;i<dd.length;i+=step) d+=`L${X(i).toFixed(1)},${Y(dd[i]).toFixed(1)}`;
+    d+=`L${X(dd.length-1)},${Y(dd[dd.length-1])}L${X(dd.length-1)},${Y(0)}Z`;
+    svg.append(svgel('path',{d,fill:seriesColor(a),opacity:.14}));
+    let d2=''; for(let i=0;i<dd.length;i+=step) d2+=`${d2?'L':'M'}${X(i).toFixed(1)},${Y(dd[i]).toFixed(1)}`;
+    svg.append(svgel('path',{d:d2,fill:'none',stroke:seriesColor(a),'stroke-width':1.8}));
+    const card=el('div',{class:'sm'},
+      el('div',{class:'h'}, el('span',{text:a.emoji}), el('span',{text:a.name.split(' ')[0]+(a.name.includes(' ')?' '+a.name.split(' ').slice(1).join(' '):'')}),
+        el('span',{class:'mdd',text:pct(mdd)})),
+      svg);
+    g.append(card);
+  }
+}
+rerenders.push(renderDD);
+
+/* ============ monthly heatmap ============ */
+function monthlySeries(a){
+  // monthly returns within range from daily equity
+  const [s,e]=range; const out=[];
+  let mStart=s;
+  for(let i=s;i<=e;i++){
+    if(i===e || monthKey(dates[i+1])!==monthKey(dates[i])){
+      const prev = mStart===s? (s>0? a.equity[s-1]: a.equity[s]) : a.equity[mStart-1];
+      out.push({m:monthKey(dates[i]), r:a.equity[i]/prev-1});
+      mStart=i+1;
+    }
+  }
+  return out;
+}
+function renderHM(){
+  const host=$('#hmChart'); host.innerHTML='';
+  const series=agents.map(a=>({a, months:monthlySeries(a)}));
+  const months=series[0].months.map(x=>x.m);
+  const cw=Math.max(16, Math.min(26, Math.floor(880/months.length))), ch=30, gap=2;
+  const L=118, T=34;
+  const W=L+months.length*(cw+gap)+8, H=T+agents.length*(ch+gap)+6;
+  const svg=svgel('svg',{viewBox:`0 0 ${W} ${H}`,style:`min-width:${Math.min(W,1100)}px`});
+  let lastYr='';
+  months.forEach((m,j)=>{
+    const yr=m.slice(0,4);
+    if(yr!==lastYr){ const t=svgel('text',{x:L+j*(cw+gap),y:14}); t.textContent=yr; t.setAttribute('font-weight','700'); t.setAttribute('fill','var(--ink-2)'); svg.append(t); lastYr=yr; }
+    if(months.length<=30 || m.endsWith('-01') || m.endsWith('-07')){
+      const t=svgel('text',{x:L+j*(cw+gap)+cw/2,y:T-6,'text-anchor':'middle'}); t.textContent=m.slice(5); svg.append(t);
+    }
+  });
+  const amax=0.12;
+  series.forEach((q,i)=>{
+    const t=svgel('text',{x:L-8,y:T+i*(ch+gap)+ch/2+4,'text-anchor':'end'});
+    t.textContent=`${q.a.emoji} ${q.a.name.split(' ')[0]}`; t.setAttribute('fill','var(--ink)'); t.setAttribute('font-size','12'); svg.append(t);
+    q.months.forEach((mm,j)=>{
+      const v=Math.max(-amax,Math.min(amax,mm.r))/amax;
+      const rect=svgel('rect',{x:L+j*(cw+gap),y:T+i*(ch+gap),width:cw,height:ch,rx:3,fill:divColor(v)});
+      rect.addEventListener('pointerenter',e=>showTT(host,e,
+        `<div class="d">${q.a.emoji} ${esc(q.a.name)} · ${esc(fmtMonth(mm.m))}</div>`+
+        ttRow(divColor(v),'Month return',spct(mm.r))));
+      rect.addEventListener('pointerleave',()=>hideTT(host));
+      svg.append(rect);
+    });
+  });
+  host.append(svg);
+  // table twin
+  const tb=$('#hmTbl'); tb.innerHTML='';
+  const t2=el('table'); const hr=el('tr'); hr.append(el('th',{text:'Month'}));
+  for(const q of series) hr.append(el('th',{text:`${q.a.emoji} ${q.a.name.split(' ')[0]}`}));
+  t2.append(el('thead',{},hr));
+  const bd=el('tbody');
+  months.forEach((m,j)=>{
+    const tr=el('tr'); tr.append(el('td',{text:fmtMonth(m)}));
+    for(const q of series){
+      const v=q.months[j].r; const td=el('td');
+      td.append(el('span',{class:v>=0?'pos':'neg',text:spct(v)})); tr.append(td);
+    }
+    bd.append(tr);
+  });
+  t2.append(bd); tb.append(t2);
+}
+$('#hmTblBtn').addEventListener('click',()=>{
+  const tb=$('#hmTbl'); const show=tb.style.display==='none';
+  tb.style.display=show?'':'none'; $('#hmTblBtn').classList.toggle('on',show);
+});
+rerenders.push(renderHM);
+
+/* ============ sentiment heatmap + consensus ============ */
+function renderSent(){
+  const host=$('#sentChart'); host.innerHTML='';
+  const [s,e]=range;
+  // weekly buckets
+  const weeks=[]; let cur=[], curKey=null;
+  for(let i=s;i<=e && i<dates.length-1;i++){
+    const d=new Date(dates[i]); const wk=`${d.getUTCFullYear()}-${String(Math.floor((Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate())-Date.UTC(d.getUTCFullYear(),0,1))/(7*864e5))).padStart(2,'0')}`;
+    if(wk!==curKey && cur.length){ weeks.push({key:curKey,idx:cur}); cur=[]; }
+    curKey=wk; cur.push(i);
+  }
+  if(cur.length) weeks.push({key:curKey,idx:cur});
+  const cw=Math.max(6,Math.min(14,Math.floor(920/weeks.length))), ch=26, gap=2, L=118, T=10;
+  const W=L+weeks.length*(cw+gap)+8, H=T+agents.length*(ch+gap)+8;
+  const svg=svgel('svg',{viewBox:`0 0 ${W} ${H}`,style:`min-width:${Math.min(W,1100)}px`});
+  agents.forEach((a,i)=>{
+    const t=svgel('text',{x:L-8,y:T+i*(ch+gap)+ch/2+4,'text-anchor':'end'});
+    t.textContent=`${a.emoji} ${a.name.split(' ')[0]}`; t.setAttribute('fill','var(--ink)'); t.setAttribute('font-size','12'); svg.append(t);
+    weeks.forEach((wk,j)=>{
+      const vals=wk.idx.map(k=>a.sentiment[k]).filter(v=>v!=null);
+      if(!vals.length) return;
+      const avg=vals.reduce((x,y)=>x+y,0)/vals.length;
+      const rect=svgel('rect',{x:L+j*(cw+gap),y:T+i*(ch+gap),width:cw,height:ch,rx:2,fill:divColor(avg)});
+      rect.addEventListener('pointerenter',ev=>showTT(host,ev,
+        `<div class="d">${a.emoji} ${esc(a.name)} · wk of ${esc(fmtDate(dates[wk.idx[0]]))}</div>`+
+        ttRow(divColor(avg),'Avg sentiment',avg.toFixed(2))));
+      rect.addEventListener('pointerleave',()=>hideTT(host));
+      svg.append(rect);
+    });
+  });
+  host.append(svg);
+  // consensus line
+  const ch2=$('#consChart'); ch2.innerHTML='';
+  const W2=1080,H2=120,P={l:64,r:20,t:8,b:20};
+  const cons=weeks.map(wk=>{
+    let sum=0,n=0;
+    for(const a of agents) for(const k of wk.idx){ const v=a.sentiment[k]; if(v!=null){sum+=v;n++;} }
+    return n?sum/n:0;
+  });
+  const X=j=>P.l+j/(Math.max(1,cons.length-1))*(W2-P.l-P.r);
+  const Y=v=>P.t+(1-(v+1)/2)*(H2-P.t-P.b);
+  const svg2=svgel('svg',{viewBox:`0 0 ${W2} ${H2}`});
+  svg2.append(svgel('line',{x1:P.l,x2:W2-P.r,y1:Y(0),y2:Y(0),class:'gridline'}));
+  const lt=svgel('text',{x:P.l-8,y:Y(0)+4,'text-anchor':'end'}); lt.textContent='neutral'; lt.setAttribute('fill','var(--ink-3)'); lt.setAttribute('font-size','10.5'); svg2.append(lt);
+  const lbl=svgel('text',{x:P.l-8,y:Y(0.9)+4,'text-anchor':'end'}); lbl.textContent='crowd mood'; lbl.setAttribute('fill','var(--ink-3)'); lbl.setAttribute('font-size','10.5'); svg2.append(lbl);
+  let d=''; cons.forEach((v,j)=>{ d+=`${j?'L':'M'}${X(j).toFixed(1)},${Y(v).toFixed(1)}`; });
+  svg2.append(svgel('path',{d,fill:'none',stroke:'var(--accent)','stroke-width':2,'stroke-linejoin':'round'}));
+  ch2.append(svg2);
+}
+rerenders.push(renderSent);
+
+/* ============ majlis chat ============ */
+let chatAgent=null, chatBigOnly=false;
+function renderChat(){
+  const box=$('#chatBox'); box.innerHTML='';
+  const [s,e]=range;
+  const evByDate=new Map(D.events.map(ev=>[ev.date,ev]));
+  let lastMonth=null; let count=0;
+  const frag=document.createDocumentFragment();
+  for(const m of D.chat){
+    const i=dateIdx.get(m.date); if(i==null||i<s||i>e) continue;
+    if(chatAgent && m.handle!==chatAgent) continue;
+    if(chatBigOnly && !evByDate.has(m.date)) continue;
+    const a=byHandle.get(m.handle); if(!a) continue;
+    const mk=monthKey(m.date);
+    if(mk!==lastMonth){ frag.append(el('div',{class:'mhead',text:fmtMonth(mk)})); lastMonth=mk; }
+    const ev=evByDate.get(m.date);
+    if(ev && !ev._shown && !chatAgent){ ev._shown=true;
+      frag.append(el('div',{class:'evline'}, el('span',{class:'b'}),
+        el('span',{class:'e '+ev.type,text:`${ev.type==='crash'?'▼':'▲'} TASI ${spct(ev.tasi_ret)} — ${fmtDate(ev.date)}`}),
+        el('span',{class:'b'})));
+    }
+    frag.append(el('div',{class:'msg'},
+      el('div',{class:'av',text:a.emoji}),
+      el('div',{class:'b'},
+        el('div',{class:'hd'},
+          el('span',{class:'who',text:a.name}),
+          el('span',{class:'dt',text:m.date}),
+          m.mood?el('span',{class:'mood',text:m.mood}):null,
+          el('span',{class:'sdot',style:'background:'+divColor(m.sentiment||0)})),
+        el('div',{class:'tx',text:m.shout}))));
+    count++;
+    if(count>=900) break;
+  }
+  D.events.forEach(ev=>delete ev._shown);
+  if(!count) frag.append(el('div',{class:'hint',style:'padding:16px',text:'No messages in this slice.'}));
+  box.append(frag);
+}
+{
+  const f=$('#chatFilters');
+  f.append(el('span',{class:'lbl',text:'Who:'}));
+  const allBtn=el('button',{class:'tgl on',text:'Everyone',onclick:()=>{chatAgent=null; syncChatBtns(); renderChat();}});
+  f.append(allBtn);
+  for(const a of agents) f.append(el('button',{class:'tgl',text:`${a.emoji} ${a.name.split(' ')[0]}`,
+    onclick:ev=>{ chatAgent=chatAgent===a.handle?null:a.handle; syncChatBtns(); renderChat(); }, 'data-h':a.handle}));
+  f.append(el('span',{class:'sp'}));
+  f.append(el('button',{class:'tgl',text:'big days only',onclick:ev=>{ chatBigOnly=!chatBigOnly; ev.currentTarget.classList.toggle('on',chatBigOnly); renderChat(); }}));
+  function syncChatBtns(){
+    $$('#chatFilters .tgl').forEach(b=>{
+      if(b.dataset.h) b.classList.toggle('on', b.dataset.h===chatAgent);
+      else if(b.textContent==='Everyone') b.classList.toggle('on', !chatAgent);
+    });
+  }
+}
+rerenders.push(renderChat);
+
+/* ============ journals ============ */
+let jrAgent=null;
+function renderJournal(){
+  const box=$('#jrBox'); box.innerHTML='';
+  const [s,e]=range;
+  const a=byHandle.get(jrAgent)||agents[0];
+  const frag=document.createDocumentFragment();
+  let n=0;
+  for(const j of a.journal){
+    const i=dateIdx.get(j.date); if(i==null||i<s||i>e) continue;
+    frag.append(el('div',{class:'jr'},
+      el('div',{class:'hd'},
+        el('span',{class:'dt',text:j.date}),
+        j.mood?el('span',{class:'mood',text:j.mood}):null,
+        el('span',{class:'sdot', style:'width:8px;height:8px;border-radius:99px;display:inline-block;background:'+divColor(j.sentiment||0)})),
+      el('div',{class:'tx',text:j.note})));
+    n++;
+  }
+  if(!n) frag.append(el('div',{class:'hint',style:'padding:12px',text:'Nothing recorded in this slice.'}));
+  box.append(frag);
+}
+{
+  const f=$('#jrFilters');
+  agents.forEach((a,i)=>f.append(el('button',{class:'tgl'+(i===0?' on':''),text:`${a.emoji} ${a.name.split(' ')[0]}`,
+    onclick:ev=>{ jrAgent=a.handle; $$('#jrFilters .tgl').forEach(b=>b.classList.remove('on')); ev.currentTarget.classList.add('on'); renderJournal(); }})));
+  jrAgent=agents[0].handle;
+}
+rerenders.push(renderJournal);
+
+/* ============ trade explorer ============ */
+let trAgent=null, trSide=null, trSort='date', trPage=0;
+const PAGE=25;
+function allTrades(){
+  const [s,e]=range; const out=[];
+  for(const a of agents){
+    if(trAgent && a.handle!==trAgent) continue;
+    for(const t of a.trades){
+      const i=dateIdx.get(t[0]); if(i==null||i<s||i>e) continue;
+      if(trSide && t[2]!==trSide) continue;
+      out.push({a,t});
+    }
+  }
+  if(trSort==='date') out.sort((x,y)=>x.t[0]<y.t[0]?1:-1);
+  else if(trSort==='value') out.sort((x,y)=>y.t[5]-x.t[5]);
+  else if(trSort==='pnl') out.sort((x,y)=>(y.t[6]??-1e18)-(x.t[6]??-1e18));
+  else if(trSort==='loss') out.sort((x,y)=>(x.t[6]??1e18)-(y.t[6]??1e18));
+  return out;
+}
+function renderTrades(){
+  const rows=allTrades();
+  const host=$('#tradeTbl'); host.innerHTML='';
+  const t=el('table');
+  const hr=el('tr');
+  for(const h of ['Date','Agent','Stock','Side','Shares','Price','Value (SAR)','Realized P&L','Why']) hr.append(el('th',{text:h}));
+  t.append(el('thead',{},hr));
+  const tb=el('tbody');
+  const pageRows=rows.slice(trPage*PAGE,(trPage+1)*PAGE);
+  for(const {a,t:x} of pageRows){
+    const [date,code,side,shares,price,value,pnl,reason]=x;
+    const tr=el('tr');
+    tr.append(el('td',{text:date}));
+    tr.append(el('td',{text:`${a.emoji} ${a.name.split(' ')[0]}`}));
+    tr.append(el('td',{text:`${D.meta.names[code]||code} (${code})`}));
+    const sd=el('td'); sd.append(el('span',{class:'sidechip '+side,text:side.toUpperCase()})); tr.append(sd);
+    tr.append(el('td',{text:fmt(shares)}));
+    tr.append(el('td',{text:(+price).toFixed(2)}));
+    tr.append(el('td',{text:fmt(value)}));
+    const pd=el('td');
+    if(pnl!=null) pd.append(el('span',{class:pnl>=0?'pos':'neg',text:(pnl>=0?'+':'')+fmt(pnl)}));
+    else pd.textContent='—';
+    tr.append(pd);
+    tr.append(el('td',{text:reason||'', style:'max-width:340px;white-space:normal;font-size:11.5px;color:var(--ink-2)'}));
+    tb.append(tr);
+  }
+  if(!pageRows.length){ const tr=el('tr'); tr.append(el('td',{text:'No trades in this slice.',colspan:'9',style:'color:var(--ink-3)'})); tb.append(tr); }
+  t.append(tb); host.append(t);
+  const pg=$('#tradePager'); pg.innerHTML='';
+  const np=Math.ceil(rows.length/PAGE);
+  pg.append(el('span',{text:`${fmt(rows.length)} trades · page ${trPage+1}/${Math.max(1,np)}`}));
+  pg.append(el('button',{class:'tgl',text:'← prev',onclick:()=>{ if(trPage>0){trPage--; renderTrades();} }}));
+  pg.append(el('button',{class:'tgl',text:'next →',onclick:()=>{ if(trPage<np-1){trPage++; renderTrades();} }}));
+}
+{
+  const f=$('#tradeFilters');
+  const selA=el('select',{class:'tgl',onchange:e=>{ trAgent=e.target.value||null; trPage=0; renderTrades(); }});
+  selA.append(el('option',{value:'',text:'All agents'}));
+  for(const a of agents) selA.append(el('option',{value:a.handle,text:`${a.emoji} ${a.name}`}));
+  const selS=el('select',{class:'tgl',onchange:e=>{ trSide=e.target.value||null; trPage=0; renderTrades(); }});
+  selS.append(el('option',{value:'',text:'Buys & sells'}));
+  selS.append(el('option',{value:'buy',text:'Buys only'}));
+  selS.append(el('option',{value:'sell',text:'Sells only'}));
+  const selO=el('select',{class:'tgl',onchange:e=>{ trSort=e.target.value; trPage=0; renderTrades(); }});
+  for(const [v,l] of [['date','Newest first'],['value','Biggest value'],['pnl','Best P&L'],['loss','Worst P&L']])
+    selO.append(el('option',{value:v,text:l}));
+  f.append(el('span',{class:'lbl',text:'Filter:'}), selA, selS, selO);
+}
+rerenders.push(()=>{ trPage=0; renderTrades(); });
+
+/* ============ letters ============ */
+{
+  const box=$('#lettersBox');
+  let any=false;
+  for(const a of agents){
+    if(!a.letters || !a.letters.length) continue;
+    any=true;
+    const wrap=el('div',{class:'card'},
+      el('h3',{text:`${a.emoji} ${a.name}`}), el('div',{class:'hint',text:a.tagline}));
+    for(const L of a.letters){
+      wrap.append(el('details',{class:'letter'},
+        el('summary',{}, el('span',{text:L.quarter}), el('span',{class:'hint',text:L.title||''}), el('span',{class:'caret',text:'›'})),
+        el('div',{class:'bd',text:L.text})));
+    }
+    if(a.epitaph) wrap.append(el('div',{class:'disc',text:`Final word: ${a.epitaph}`}));
+    box.append(wrap);
+  }
+  if(!any) box.append(el('div',{class:'card hint',text:'Letters not generated for this build.'}));
+}
+
+/* ============ method ============ */
+{
+  $('#methodBox').innerHTML = `
+  <b>Universe.</b> The 50 largest liquid TASI names (all listed before 2022) across 13 sectors, plus the TASI index as benchmark. Daily OHLCV, dividends and bonus issues from Yahoo Finance (fetched ${esc(D.meta.sim_end)}).<br><br>
+  <b>Engine.</b> Decisions are made at each session's close using only information available at that close; orders fill at the <i>next</i> session's open with 10&nbsp;bps slippage. Tadawul commission of 15.5&nbsp;bps + 15% VAT applies to every side. Long-only, integer shares, no margin, no shorting. Dividends are credited as cash on the ex-date; bonus issues are handled via split-adjusted prices. Orders on halted stocks persist up to 5 sessions. Each agent starts with SAR&nbsp;100,000 on ${esc(D.meta.sim_start)}.<br><br>
+  <b>The majlis.</b> After every close, each agent posts its sentiment, mood and optional message to a shared board visible to all agents the next day. Some strategies genuinely read it — the contrarian fades consensus, the influencer follows it.<br><br>
+  <b>Indicators.</b> SMA(20/50/100/200), EMA(12/26), MACD, RSI(14), Bollinger(20,2σ), ATR(14), momentum (1w→12m), realized vol, drawdown, 52-week distance, relative strength vs TASI — all computed on dividend-adjusted series with no lookahead.<br><br>
+  <b>Metrics.</b> Sharpe/Sortino use a 4% SAR risk-free rate and 250 trading days. Alpha/beta from daily regression vs TASI. Win rate counts closed (sell) trades against average cost. TASI line is the index normalized to SAR 100,000 — it pays no dividends, the agents' curves include them.`;
+  $('#ftMeta').textContent = `simulated ${D.meta.sim_start} → ${D.meta.sim_end} · ${fmt(D.meta.sessions)} sessions · ${agents.length} agents`;
+}
+
+/* ============ nav + theme ============ */
+{
+  const secs=$$('section, header.hero');
+  const links=$$('nav a.pill');
+  const io=new IntersectionObserver(es=>{
+    for(const e of es) if(e.isIntersecting){
+      links.forEach(l=>l.classList.toggle('on', l.getAttribute('href')==='#'+e.target.id));
+    }
+  },{rootMargin:'-30% 0px -60% 0px'});
+  secs.forEach(s=>io.observe(s));
+  $('#themeBtn').addEventListener('click',()=>{
+    const cur=document.documentElement.dataset.theme;
+    const next=cur==='dark'?'light':cur==='light'?'dark':(matchMedia('(prefers-color-scheme: dark)').matches?'light':'dark');
+    document.documentElement.dataset.theme=next;
+    rerenderAll();
+  });
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>rerenderAll());
+}
+
+/* first render */
+rerenderAll();
+</script>
+</body>
+</html>

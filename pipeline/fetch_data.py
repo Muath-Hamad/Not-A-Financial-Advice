@@ -21,7 +21,7 @@ from pathlib import Path
 import pandas as pd
 
 START = os.environ.get("FETCH_START", "2021-01-01")
-END = os.environ.get("FETCH_END", "2026-08-03")  # exclusive; last row 2026-08-02
+END = os.environ.get("FETCH_END") or "2026-08-03"  # exclusive; last row 2026-08-02
 ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = ROOT / "data" / "raw"
 MIN_ROWS = 800
