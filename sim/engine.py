@@ -20,17 +20,19 @@ from __future__ import annotations
 
 import json
 import math
+import os
 from pathlib import Path
 
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-ENRICHED = ROOT / "data" / "enriched"
+ENRICHED = ROOT / os.environ.get("SIM_ENRICHED_SUBDIR", "data/enriched")
+RAW_SUBDIR = os.environ.get("SIM_RAW_SUBDIR", "data/raw")
 
 COMMISSION_RATE = 0.0008  # v2: discount-broker all-in commission per side (8 bps)
 SLIPPAGE = 0.0005          # v2: 5 bps
 START_CASH = 100_000.0
-SIM_START = "2022-01-01"
+SIM_START = os.environ.get("SIM_START", "2022-01-01")
 ORDER_TTL = 5                     # sessions an order survives a trading halt
 
 
@@ -39,7 +41,7 @@ class Market:
     sized for the full ~230-stock main market."""
 
     def __init__(self):
-        manifest = json.loads((ROOT / "data" / "raw" / "_manifest.json").read_text())
+        manifest = json.loads((ROOT / RAW_SUBDIR / "_manifest.json").read_text())
         self.names, self.sectors = {}, {}
         self._cols = {}     # code -> list of columns
         self._vals = {}     # code -> ndarray (n_rows, n_cols)

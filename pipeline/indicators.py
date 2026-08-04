@@ -8,6 +8,7 @@ All indicators at row t use data up to and including t (no lookahead).
 """
 
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -15,9 +16,9 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-RAW_DIR = ROOT / "data" / "raw"
-OUT_DIR = ROOT / "data" / "enriched"
-LAST_DATE = "2026-08-02"  # "up to yesterday"; the Aug 3 session was live/incomplete at fetch time
+RAW_DIR = ROOT / os.environ.get("IND_RAW_SUBDIR", "data/raw")
+OUT_DIR = ROOT / os.environ.get("IND_OUT_SUBDIR", "data/enriched")
+LAST_DATE = os.environ.get("IND_LAST_DATE", "2026-08-02")  # v1-v3: "up to yesterday" (Aug 3 was live at fetch time)
 
 TRADING_DAYS = 250  # Tadawul trades Sun-Thu, ~250 sessions/year
 

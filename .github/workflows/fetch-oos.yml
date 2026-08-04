@@ -1,0 +1,52 @@
+name: Fetch out-of-sample data (2015-2021)
+
+on:
+  push:
+    branches:
+      - claude/tasi-agent-simulation-fcili2
+    paths:
+      - ".github/workflows/fetch-oos.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-oos-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --quiet yfinance pandas requests
+
+      - name: Fetch 2015-2021 history for the known universe
+        env:
+          FETCH_START: "2015-01-01"
+          FETCH_END: "2022-01-01"
+          FETCH_RAW_SUBDIR: data/raw_oos
+          FETCH_MIN_OK: "0.45"
+        run: python pipeline/fetch_data.py
+
+      - name: Commit data back to branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/raw_oos
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "data: out-of-sample Tadawul history 2015-2021"
+            git pull --rebase origin "${{ github.ref_name }}" || true
+            git push || (sleep 5 && git pull --rebase origin "${{ github.ref_name }}" && git push)
+          fi

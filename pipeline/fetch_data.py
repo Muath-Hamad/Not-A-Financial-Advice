@@ -23,9 +23,9 @@ import pandas as pd
 START = os.environ.get("FETCH_START", "2021-01-01")
 END = os.environ.get("FETCH_END") or "2026-08-03"  # exclusive; last row 2026-08-02
 ROOT = Path(__file__).resolve().parents[1]
-RAW_DIR = ROOT / "data" / "raw"
+RAW_DIR = ROOT / os.environ.get("FETCH_RAW_SUBDIR", "data/raw")
 MIN_ROWS = 120   # newly-listed names are allowed short histories
-MIN_OK_FRACTION = 0.85
+MIN_OK_FRACTION = float(os.environ.get("FETCH_MIN_OK", "0.85"))
 
 
 def yahoo_symbol(code: str) -> str:
