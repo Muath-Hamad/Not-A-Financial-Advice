@@ -131,14 +131,19 @@ def main() -> int:
         code = e.get("code") or e["symbol"]
         symbol = e.get("symbol") or yahoo_symbol(code)
         df, source, err = None, None, None
-        for attempt in range(3):
+        for attempt in range(4):
             try:
                 df = fetch_yfinance(symbol)
                 source = "yfinance"
                 break
             except Exception as exc:  # noqa: BLE001
                 err = f"yfinance: {exc}"
-                time.sleep(2 * (attempt + 1))
+                msg = str(exc)
+                if "Rate" in msg or "Too Many" in msg or "429" in msg:
+                    print(f"  rate limited on {symbol}; cooling 75s", file=sys.stderr)
+                    time.sleep(75)
+                else:
+                    time.sleep(2 * (attempt + 1))
         if df is None or df.empty:
             for attempt in range(3):
                 try:
@@ -175,7 +180,9 @@ def main() -> int:
                 "rows": 0, "status": "failed", "error": err,
             }
             print(f"[{i + 1}/{len(entries)}] {symbol} {e['name']}: FAILED ({err})")
-        time.sleep(0.35)
+        time.sleep(0.5)
+        if (i + 1) % 40 == 0:
+            time.sleep(15)  # periodic breather to stay under Yahoo's rate limits
 
     (RAW_DIR / "_manifest.json").write_text(json.dumps(manifest, indent=2))
     print(f"\nFetched {ok}/{len(entries)} symbols with >= {MIN_ROWS} rows")

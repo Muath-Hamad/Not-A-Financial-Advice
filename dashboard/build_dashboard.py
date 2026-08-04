@@ -79,13 +79,20 @@ def main():
 
     events_dates = {e["date"] for e in res["events"]}
     agents = []
-    for i, a in enumerate(res["agents"]):
+    slot = 0
+    for a in res["agents"]:
         com = commentary.get(a["meta"]["handle"], {})
+        handle = a["meta"]["handle"]
+        if handle == "zahab":
+            color = color_dark = "var(--ink)"   # the golden standard renders in ink
+        else:
+            color, color_dark = PALETTE[slot % 8]
+            slot += 1
         agents.append({
             **{k: a["meta"].get(k) for k in ("handle", "name", "emoji", "tagline", "character", "risk_style")},
-            "slot": i + 1,
-            "color": PALETTE[i % 8][0],
-            "color_dark": PALETTE[i % 8][1],
+            "slot": slot,
+            "color": color,
+            "color_dark": color_dark,
             "equity": [round(x) for x in a["equity"]],
             "sentiment": a["sentiment"],
             "metrics": a["metrics"],

@@ -87,7 +87,12 @@ def main() -> int:
     manifest = json.loads((RAW_DIR / "_manifest.json").read_text())
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    tasi = pd.read_csv(RAW_DIR / "TASI.csv", index_col="Date", parse_dates=True)
+    def read_raw(code):
+        gz = RAW_DIR / f"{code}.csv.gz"
+        return pd.read_csv(gz if gz.exists() else RAW_DIR / f"{code}.csv",
+                           index_col="Date", parse_dates=True)
+
+    tasi = read_raw("TASI")
     tasi = tasi.loc[:LAST_DATE]
     tasi_ret63 = tasi["AdjClose"].pct_change(63)
 
@@ -96,7 +101,7 @@ def main() -> int:
         if meta.get("status") == "failed":
             print(f"skip {code}: fetch failed", file=sys.stderr)
             continue
-        df = pd.read_csv(RAW_DIR / f"{code}.csv", index_col="Date", parse_dates=True)
+        df = read_raw(code)
         df = df.loc[:LAST_DATE]
         df = enrich(df)
         if code != "TASI":

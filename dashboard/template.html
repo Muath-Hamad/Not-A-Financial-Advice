@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The TASI Majlis — 8 agents, SAR 100k each</title>
+<title>The TASI Majlis v2 — the whole market, SAR 100k each</title>
 <style>
 /* ---------- design tokens ---------- */
 :root{
@@ -266,10 +266,10 @@ footer{margin-top:70px; padding-top:18px; border-top:1px solid var(--hairline); 
 <header class="hero">
   <div class="kicker">Agent-based simulation · Tadawul top 50 · 2022 → 2026</div>
   <h1>The TASI Majlis <span class="ar">مجلس التداول</span></h1>
-  <p class="sub">Eight AI agents were each handed <b>SAR 100,000</b> on the first trading day of 2022.
-  They strategized, argued in a shared majlis, and traded the <b>top-50 Saudi stocks</b> for
+  <p class="sub"><b id="h-nagents"></b> AI agents were each handed <b>SAR 100,000</b> on the first trading day of 2022.
+  They strategized, argued in a shared majlis, and traded <b id="h-universe"></b> Tadawul main-market stocks for
   <b id="h-sessions"></b> sessions — every fill at the next open, real commissions, real dividends, no lookahead.
-  This is what happened.</p>
+  One of them, <b>🏆 Zahab</b>, trades nothing but the others' experience. This is what happened.</p>
   <div class="kpis" id="kpis"></div>
   <div class="hero-champ" id="champ"></div>
 </header>
@@ -435,10 +435,12 @@ function rerenderAll(){ rerenders.forEach(f=>f()); }
 /* ============ hero ============ */
 {
   $('#h-sessions').textContent = fmt(D.meta.sessions);
+  const nag = $('#h-nagents'); if (nag) nag.textContent = ['','','','','','','','','Eight','Nine','Ten'][agents.length] || agents.length;
+  const nun = $('#h-universe'); if (nun) nun.textContent = fmt(D.meta.universe_size);
   const kp = $('#kpis');
   const tasiTR = D.tasi_metrics.total_return;
   const rows = [
-    ['Agents','8', ''],
+    ['Agents', agents.length, ''],
     ['Capital each', '100,000', 'SAR'],
     ['Universe', D.meta.universe_size, 'stocks'],
     ['Sessions', fmt(D.meta.sessions), `${D.meta.sim_start.slice(0,4)}–${D.meta.sim_end.slice(0,4)}`],
@@ -1117,9 +1119,9 @@ rerenders.push(()=>{ trPage=0; renderTrades(); });
 /* ============ method ============ */
 {
   $('#methodBox').innerHTML = `
-  <b>Universe.</b> The 50 largest liquid TASI names (all listed before 2022) across 13 sectors, plus the TASI index as benchmark. Daily OHLCV, dividends and bonus issues from Yahoo Finance (fetched ${esc(D.meta.sim_end)}).<br><br>
-  <b>Engine.</b> Decisions are made at each session's close using only information available at that close; orders fill at the <i>next</i> session's open with 10&nbsp;bps slippage. Tadawul commission of 15.5&nbsp;bps + 15% VAT applies to every side. Long-only, integer shares, no margin, no shorting. Dividends are credited as cash on the ex-date; bonus issues are handled via split-adjusted prices. Orders on halted stocks persist up to 5 sessions. Each agent starts with SAR&nbsp;100,000 on ${esc(D.meta.sim_start)}.<br><br>
-  <b>The majlis.</b> After every close, each agent posts its sentiment, mood and optional message to a shared board visible to all agents the next day. Some strategies genuinely read it — the contrarian fades consensus, the influencer follows it.<br><br>
+  <b>Universe.</b> All ${esc(String(D.meta.universe_size))} Tadawul main-market names with usable Yahoo Finance histories (Nomu excluded; names listed mid-period join once their indicators warm up), plus the TASI index as benchmark. Daily OHLCV, dividends and bonus issues (fetched ${esc(D.meta.sim_end)}).<br><br>
+  <b>Engine.</b> Decisions are made at each session's close using only information available at that close; orders fill at the <i>next</i> session's open with 5&nbsp;bps slippage. A discount-broker commission of 8&nbsp;bps applies to every side. Long-only, integer shares, no margin, no shorting. Dividends are credited as cash on the ex-date; bonus issues are handled via split-adjusted prices. Orders on halted stocks persist up to 5 sessions. Each agent starts with SAR&nbsp;100,000 on ${esc(D.meta.sim_start)}.<br><br>
+  <b>The majlis.</b> After every close, each agent posts its sentiment, mood and optional message to a shared board visible to all agents the next day, and every agent can see the others' public books (weights, cash, trailing returns, fills). The contrarian fades consensus, the influencer follows it — and Zahab, the golden standard, allocates purely on the others' proven track records, learning from their wins and their tuition. No agent sees the future; Zahab's only edge is everyone else's experience.<br><br>
   <b>Indicators.</b> SMA(20/50/100/200), EMA(12/26), MACD, RSI(14), Bollinger(20,2σ), ATR(14), momentum (1w→12m), realized vol, drawdown, 52-week distance, relative strength vs TASI — all computed on dividend-adjusted series with no lookahead.<br><br>
   <b>Metrics.</b> Sharpe/Sortino use a 4% SAR risk-free rate and 250 trading days. Alpha/beta from daily regression vs TASI. Win rate counts closed (sell) trades against average cost. TASI line is the index normalized to SAR 100,000 — it pays no dividends, the agents' curves include them.`;
   $('#ftMeta').textContent = `simulated ${D.meta.sim_start} → ${D.meta.sim_end} · ${fmt(D.meta.sessions)} sessions · ${agents.length} agents`;

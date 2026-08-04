@@ -17,6 +17,11 @@ ctx: dict with keys:
       breadth_sma50  float, fraction of universe above its 50-day SMA
       tasi_ret_1d    float, index return today
       majlis         list of yesterday's posts: {handle, sentiment, mood, shout}
+      peers          dict handle -> the OTHER agents' public books as of this close:
+                     {equity, ret_21, ret_63, cash_frac,
+                      positions: {code: weight}, today_trades: [{code, side,
+                      value, realized_pnl}]}. Public track records — usable for
+                     copy-trading, fading, or learning from their mistakes.
       equity_history list of my own daily equity values so far
       names          dict code -> company name
       sectors        dict code -> sector

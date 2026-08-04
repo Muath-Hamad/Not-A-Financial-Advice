@@ -5,12 +5,15 @@ Realism model:
   so positions never need share adjustments; dividends (also split-adjusted)
   are credited as cash on their ex-date.
 - Decisions happen at the close of day t; orders fill at the open of t+1 with
-  slippage. Commission is Tadawul's 15.5 bps + 15% VAT per side.
+  slippage. Commission is a discount-broker 8 bps per side (v2).
 - Long-only, integer shares, no margin. Halted names: orders stay pending up
   to 5 sessions, then expire.
 - All agents share one calendar. Each day, after the close, every agent posts
   (sentiment, mood, optional shout) to the "majlis" board; the next day every
   agent can read yesterday's board — agents genuinely communicate.
+- v2: every agent also sees ctx["peers"] — the other agents' current books
+  (weights, cash fraction, trailing returns, today's fills). Public track
+  records, same information set for everyone, no lookahead.
 """
 
 from __future__ import annotations
@@ -24,66 +27,85 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 ENRICHED = ROOT / "data" / "enriched"
 
-COMMISSION_RATE = 0.00155 * 1.15  # Tadawul max commission + 15% VAT, per side
-SLIPPAGE = 0.001                  # 10 bps
+COMMISSION_RATE = 0.0008  # v2: discount-broker all-in commission per side (8 bps)
+SLIPPAGE = 0.0005          # v2: 5 bps
 START_CASH = 100_000.0
 SIM_START = "2022-01-01"
 ORDER_TTL = 5                     # sessions an order survives a trading halt
 
 
 class Market:
+    """Numpy-backed market data: per-code value matrices with lazy row dicts,
+    sized for the full ~230-stock main market."""
+
     def __init__(self):
         manifest = json.loads((ROOT / "data" / "raw" / "_manifest.json").read_text())
-        cfg = json.loads((ROOT / "data" / "tickers.json").read_text())
-        self.names = {e["code"]: e["name"] for e in cfg["universe"]}
-        self.sectors = {e["code"]: e["sector"] for e in cfg["universe"]}
-        self.frames = {}
-        for code in manifest:
-            if manifest[code].get("status") == "failed":
+        self.names, self.sectors = {}, {}
+        self._cols = {}     # code -> list of columns
+        self._vals = {}     # code -> ndarray (n_rows, n_cols)
+        self._pos = {}      # code -> {Timestamp: row index}
+        above_parts, valid_parts = {}, {}
+        for code, meta in manifest.items():
+            if meta.get("status") == "failed":
                 continue
             df = pd.read_csv(ENRICHED / f"{code}.csv", index_col="Date", parse_dates=True)
-            self.frames[code] = df
-        self.codes = [c for c in self.frames if c != "TASI"]
+            if code != "TASI":
+                self.names[code] = meta.get("name", code)
+                self.sectors[code] = meta.get("sector", "Other")
+                above_parts[code] = (df["AdjClose"] > df["sma50"]).astype("float64")
+                valid_parts[code] = df["sma50"].notna().astype("float64")
+            self._cols[code] = list(df.columns)
+            self._vals[code] = df.to_numpy(dtype="float64")
+            self._pos[code] = {d: i for i, d in enumerate(df.index)}
+        self.codes = [c for c in self._cols if c != "TASI"]
 
-        dates = sorted(set().union(*[set(self.frames[c].index) for c in self.codes]))
+        dates = sorted(set().union(*[set(self._pos[c]) for c in self.codes]))
         self.dates = [d for d in dates if d >= pd.Timestamp(SIM_START)]
 
-        tasi = self.frames["TASI"]["AdjClose"].reindex(
-            pd.Index(sorted(set(tasi_d for tasi_d in self.frames["TASI"].index) | set(self.dates)))
-        ).ffill()
-        self.tasi = tasi.reindex(self.dates)
+        tasi_idx = pd.DatetimeIndex(sorted(self._pos["TASI"]))
+        ci = self._cols["TASI"].index("AdjClose")
+        tasi_ser = pd.Series(self._vals["TASI"][:, ci], index=tasi_idx)
+        union_idx = pd.DatetimeIndex(sorted(set(tasi_idx) | set(self.dates)))
+        tasi = tasi_ser.reindex(union_idx).ffill()
+        self.tasi = tasi.reindex(pd.DatetimeIndex(self.dates))
         self.tasi_ret = self.tasi.pct_change().fillna(0.0)
 
-        # Precompute per-date row lookups (as-of close) and open prices.
-        self._rows = {c: df.to_dict("index") for c, df in self.frames.items()}
-        # breadth: fraction of universe above sma50, per date
-        self._breadth = {}
-        for d in self.dates:
-            above = tot = 0
-            for c in self.codes:
-                r = self._rows[c].get(d)
-                if r and not math.isnan(r.get("sma50", float("nan"))):
-                    tot += 1
-                    if r["AdjClose"] > r["sma50"]:
-                        above += 1
-            self._breadth[d] = above / tot if tot else 0.5
+        above = pd.DataFrame(above_parts).reindex(pd.DatetimeIndex(self.dates))
+        valid = pd.DataFrame(valid_parts).reindex(pd.DatetimeIndex(self.dates))
+        num = (above * valid).sum(axis=1)
+        den = valid.sum(axis=1).replace(0, float("nan"))
+        self._breadth = (num / den).fillna(0.5).to_dict()
 
-    def row(self, code, date):
-        return self._rows[code].get(date)
+        self._cache_date = None
+        self._cache_view = None
 
-    def view(self, date):
+    def _build_view(self, date):
         v = {}
         for c in self.codes:
-            r = self._rows[c].get(date)
-            if r is not None:
-                v[c] = r
-        t = self._rows["TASI"].get(date)
-        if t is not None:
-            v["TASI"] = t
+            i = self._pos[c].get(date)
+            if i is not None:
+                v[c] = dict(zip(self._cols[c], self._vals[c][i]))
+        it = self._pos["TASI"].get(date)
+        if it is not None:
+            v["TASI"] = dict(zip(self._cols["TASI"], self._vals["TASI"][it]))
         return v
 
+    def view(self, date):
+        if self._cache_date != date:
+            self._cache_view = self._build_view(date)
+            self._cache_date = date
+        return self._cache_view
+
+    def row(self, code, date):
+        if self._cache_date == date:
+            return self._cache_view.get(code)
+        i = self._pos[code].get(date)
+        if i is None:
+            return None
+        return dict(zip(self._cols[code], self._vals[code][i]))
+
     def breadth(self, date):
-        return self._breadth[date]
+        return self._breadth.get(date, 0.5)
 
 
 class Portfolio:
@@ -188,6 +210,7 @@ class Engine:
                     if r:
                         pf.last_price[c] = r["Close"]
                 snap = pf.snapshot(date, m)
+                a._snap = snap
                 a.equity_hist.append(round(snap["equity"], 2))
                 a.cash_hist.append(round(pf.cash, 2))
                 if i == len(m.dates) - 1 or (i > 0 and date.month != m.dates[i - 1].month):
@@ -208,6 +231,21 @@ class Engine:
             if i == len(m.dates) - 1:
                 break
             view = m.view(date)
+            peers_all = {}
+            for a in agents:
+                eq = a.equity_hist
+                snap = a._snap
+                peers_all[a.handle] = {
+                    "equity": eq[-1],
+                    "ret_21": eq[-1] / eq[-22] - 1 if len(eq) >= 22 else 0.0,
+                    "ret_63": eq[-1] / eq[-64] - 1 if len(eq) >= 64 else 0.0,
+                    "cash_frac": snap["cash"] / snap["equity"] if snap["equity"] > 0 else 1.0,
+                    "positions": {c: round(pp["weight"], 4) for c, pp in snap["positions"].items()},
+                    "today_trades": [
+                        {"code": t["code"], "side": t["side"], "value": t["value"],
+                         "realized_pnl": t.get("realized_pnl")}
+                        for t in a.trades if t["date"] == iso],
+                }
             ctx = {
                 "day_index": i,
                 "breadth_sma50": m.breadth(date),
@@ -218,8 +256,9 @@ class Engine:
             }
             new_posts = []
             for a in agents:
-                snap = a.pf.snapshot(date, m)
+                snap = a._snap
                 ctx["equity_history"] = a.equity_hist
+                ctx["peers"] = {h: v for h, v in peers_all.items() if h != a.handle}
                 try:
                     decision = a.strategy.decide(date, view, snap, ctx) or {}
                 except Exception:
