@@ -115,6 +115,7 @@ class Portfolio:
         self.avg_cost = {}    # code -> float
         self.last_price = {}  # code -> last seen close (for marking through halts)
         self.first_bought = {}  # code -> date of position opening (for holding-period stats)
+        self.silent_days = {}   # code -> consecutive sessions without a price row
 
     def snapshot(self, date, market):
         pos = {}
@@ -204,11 +205,30 @@ class Engine:
                         continue
                     self._fill(a, od, r, iso)
                 a.pending = still_pending
-                # mark to market at close
+                # mark to market at close; force-exit names silent for 20+ sessions
+                # (delisted or long-suspended — prevents zombie holdings)
                 for c in list(pf.shares):
                     r = m.row(c, date)
                     if r:
                         pf.last_price[c] = r["Close"]
+                        pf.silent_days[c] = 0
+                    else:
+                        pf.silent_days[c] = pf.silent_days.get(c, 0) + 1
+                        if pf.silent_days[c] >= 20 and pf.shares.get(c, 0) > 0:
+                            n = pf.shares.pop(c)
+                            px = pf.last_price.get(c, pf.avg_cost.get(c, 0.0)) * (1 - SLIPPAGE)
+                            gross = n * px
+                            fee = gross * COMMISSION_RATE
+                            pf.cash += gross - fee
+                            realized = (px - pf.avg_cost.get(c, px)) * n
+                            a.commissions_paid += fee
+                            a.trades.append({
+                                "date": iso, "code": c, "side": "sell", "shares": n,
+                                "price": round(px, 3), "value": round(gross, 2),
+                                "fee": round(fee, 2), "realized_pnl": round(realized, 2),
+                                "held_since": pf.first_bought.pop(c, None),
+                                "reason": "forced exit: name suspended/delisted (20 sessions without prices)"})
+                            pf.silent_days.pop(c, None)
                 snap = pf.snapshot(date, m)
                 a._snap = snap
                 a.equity_hist.append(round(snap["equity"], 2))
