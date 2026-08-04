@@ -1,5 +1,5 @@
 {
- "count": 160,
+ "count": 196,
  "universe": [
   {
    "code": "1010",
@@ -727,48 +727,188 @@
    "sector": "Diversified / Services"
   },
   {
-   "code": "4322",
-   "name": "4322",
+   "code": "4140",
+   "name": "4140",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4142",
+   "name": "4142",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4143",
+   "name": "4143",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4144",
+   "name": "4144",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4146",
+   "name": "4146",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4147",
+   "name": "4147",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4148",
+   "name": "4148",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4160",
+   "name": "4160",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4161",
+   "name": "Bindawood Holding",
+   "sector": "Consumer Retail"
+  },
+  {
+   "code": "4162",
+   "name": "4162",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4163",
+   "name": "4163",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4164",
+   "name": "4164",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4165",
+   "name": "4165",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4170",
+   "name": "4170",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4180",
+   "name": "4180",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4191",
+   "name": "4191",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4192",
+   "name": "4192",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4193",
+   "name": "4193",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4194",
+   "name": "4194",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4200",
+   "name": "Aldrees Petroleum",
+   "sector": "Energy"
+  },
+  {
+   "code": "4220",
+   "name": "Emaar The Economic City",
    "sector": "Real Estate"
   },
   {
-   "code": "7200",
-   "name": "7200",
-   "sector": "Telecom & IT"
+   "code": "4230",
+   "name": "4230",
+   "sector": "Diversified / Services"
   },
   {
-   "code": "7201",
-   "name": "7201",
-   "sector": "Telecom & IT"
+   "code": "4240",
+   "name": "4240",
+   "sector": "Diversified / Services"
   },
   {
-   "code": "7202",
-   "name": "7202",
-   "sector": "Telecom & IT"
+   "code": "4250",
+   "name": "Jabal Omar",
+   "sector": "Real Estate"
   },
   {
-   "code": "7203",
-   "name": "7203",
-   "sector": "Telecom & IT"
+   "code": "4260",
+   "name": "4260",
+   "sector": "Diversified / Services"
   },
   {
-   "code": "7204",
-   "name": "7204",
-   "sector": "Telecom & IT"
+   "code": "4261",
+   "name": "4261",
+   "sector": "Diversified / Services"
   },
   {
-   "code": "7205",
-   "name": "7205",
-   "sector": "Telecom & IT"
+   "code": "4262",
+   "name": "4262",
+   "sector": "Diversified / Services"
   },
   {
-   "code": "7211",
-   "name": "7211",
-   "sector": "Telecom & IT"
+   "code": "4263",
+   "name": "4263",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4264",
+   "name": "4264",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4265",
+   "name": "4265",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4270",
+   "name": "4270",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4280",
+   "name": "Kingdom Holding",
+   "sector": "Financial Services"
+  },
+  {
+   "code": "8010",
+   "name": "Tawuniya",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8012",
+   "name": "8012",
+   "sector": "Insurance"
   },
   {
    "code": "8020",
    "name": "8020",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8030",
+   "name": "8030",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8040",
+   "name": "8040",
    "sector": "Insurance"
   },
   {
@@ -779,6 +919,11 @@
   {
    "code": "8060",
    "name": "8060",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8070",
+   "name": "8070",
    "sector": "Insurance"
   },
   {
@@ -797,8 +942,43 @@
    "sector": "Insurance"
   },
   {
-   "code": "8311",
-   "name": "8311",
+   "code": "8160",
+   "name": "8160",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8170",
+   "name": "8170",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8180",
+   "name": "8180",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8190",
+   "name": "8190",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8200",
+   "name": "8200",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8240",
+   "name": "8240",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8250",
+   "name": "8250",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8260",
+   "name": "8260",
    "sector": "Insurance"
   }
  ]

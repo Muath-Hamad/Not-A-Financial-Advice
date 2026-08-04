@@ -1459,82 +1459,342 @@
     "source": "yfinance",
     "status": "ok"
   },
-  "4322": {
-    "symbol": "4322.SR",
-    "name": "4322",
+  "4140": {
+    "symbol": "4140.SR",
+    "name": "4140",
+    "sector": "Diversified / Services",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4142": {
+    "symbol": "4142.SR",
+    "name": "4142",
+    "sector": "Diversified / Services",
+    "rows": 901,
+    "first": "2022-12-22",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4143": {
+    "symbol": "4143.SR",
+    "name": "4143",
+    "sector": "Diversified / Services",
+    "rows": 534,
+    "first": "2024-06-23",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4144": {
+    "symbol": "4144.SR",
+    "name": "4144",
+    "sector": "Diversified / Services",
+    "rows": 1108,
+    "first": "2022-02-21",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4146": {
+    "symbol": "4146.SR",
+    "name": "4146",
+    "sector": "Diversified / Services",
+    "rows": 1117,
+    "first": "2022-02-07",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4147": {
+    "symbol": "4147.SR",
+    "name": "4147",
+    "sector": "Diversified / Services",
+    "rows": 163,
+    "first": "2025-12-09",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4148": {
+    "symbol": "4148.SR",
+    "name": "4148",
+    "sector": "Diversified / Services",
+    "rows": 1091,
+    "first": "2022-03-16",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4160": {
+    "symbol": "4160.SR",
+    "name": "4160",
+    "sector": "Diversified / Services",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4161": {
+    "symbol": "4161.SR",
+    "name": "Bindawood Holding",
+    "sector": "Consumer Retail",
+    "rows": 1317,
+    "first": "2021-04-19",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4162": {
+    "symbol": "4162.SR",
+    "name": "4162",
+    "sector": "Diversified / Services",
+    "rows": 1151,
+    "first": "2021-12-21",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4163": {
+    "symbol": "4163.SR",
+    "name": "4163",
+    "sector": "Diversified / Services",
+    "rows": 1091,
+    "first": "2022-03-16",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4164": {
+    "symbol": "4164.SR",
+    "name": "4164",
+    "sector": "Diversified / Services",
+    "rows": 1068,
+    "first": "2022-04-18",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4165": {
+    "symbol": "4165.SR",
+    "name": "4165",
+    "sector": "Diversified / Services",
+    "rows": 458,
+    "first": "2024-10-08",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4170": {
+    "symbol": "4170.SR",
+    "name": "4170",
+    "sector": "Diversified / Services",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4180": {
+    "symbol": "4180.SR",
+    "name": "4180",
+    "sector": "Diversified / Services",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4191": {
+    "symbol": "4191.SR",
+    "name": "4191",
+    "sector": "Diversified / Services",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4192": {
+    "symbol": "4192.SR",
+    "name": "4192",
+    "sector": "Diversified / Services",
+    "rows": 896,
+    "first": "2022-12-29",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4193": {
+    "symbol": "4193.SR",
+    "name": "4193",
+    "sector": "Diversified / Services",
+    "rows": 392,
+    "first": "2025-01-08",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4194": {
+    "symbol": "4194.SR",
+    "name": "4194",
+    "sector": "Diversified / Services",
+    "rows": 232,
+    "first": "2025-09-02",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4200": {
+    "symbol": "4200.SR",
+    "name": "Aldrees Petroleum",
+    "sector": "Energy",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4220": {
+    "symbol": "4220.SR",
+    "name": "Emaar The Economic City",
     "sector": "Real Estate",
-    "rows": 1019,
-    "first": "2022-07-03",
+    "rows": 1394,
+    "first": "2021-01-03",
     "last": "2026-08-02",
     "source": "yfinance",
     "status": "ok"
   },
-  "7200": {
-    "symbol": "7200.SR",
-    "name": "7200",
-    "sector": "Telecom & IT",
+  "4230": {
+    "symbol": "4230.SR",
+    "name": "4230",
+    "sector": "Diversified / Services",
     "rows": 1393,
     "first": "2021-01-03",
     "last": "2026-08-02",
     "source": "yfinance",
     "status": "ok"
   },
-  "7201": {
-    "symbol": "7201.SR",
-    "name": "7201",
-    "sector": "Telecom & IT",
+  "4240": {
+    "symbol": "4240.SR",
+    "name": "4240",
+    "sector": "Diversified / Services",
     "rows": 1393,
     "first": "2021-01-03",
     "last": "2026-08-02",
     "source": "yfinance",
     "status": "ok"
   },
-  "7202": {
-    "symbol": "7202.SR",
-    "name": "7202",
-    "sector": "Telecom & IT",
-    "rows": 1198,
-    "first": "2021-10-17",
+  "4250": {
+    "symbol": "4250.SR",
+    "name": "Jabal Omar",
+    "sector": "Real Estate",
+    "rows": 1393,
+    "first": "2021-01-03",
     "last": "2026-08-02",
     "source": "yfinance",
     "status": "ok"
   },
-  "7203": {
-    "symbol": "7203.SR",
-    "name": "7203",
-    "sector": "Telecom & IT",
-    "rows": 1110,
-    "first": "2022-02-16",
+  "4260": {
+    "symbol": "4260.SR",
+    "name": "4260",
+    "sector": "Diversified / Services",
+    "rows": 1394,
+    "first": "2021-01-03",
     "last": "2026-08-02",
     "source": "yfinance",
     "status": "ok"
   },
-  "7204": {
-    "symbol": "7204.SR",
-    "name": "7204",
-    "sector": "Telecom & IT",
-    "rows": 921,
-    "first": "2022-11-27",
+  "4261": {
+    "symbol": "4261.SR",
+    "name": "4261",
+    "sector": "Diversified / Services",
+    "rows": 1333,
+    "first": "2021-03-29",
     "last": "2026-08-02",
     "source": "yfinance",
     "status": "ok"
   },
-  "7205": {
-    "symbol": "7205.SR",
-    "name": "7205",
-    "sector": "Telecom & IT",
-    "rows": 52,
-    "first": "2026-05-21",
+  "4262": {
+    "symbol": "4262.SR",
+    "name": "4262",
+    "sector": "Diversified / Services",
+    "rows": 716,
+    "first": "2023-09-25",
     "last": "2026-08-02",
     "source": "yfinance",
-    "status": "short"
+    "status": "ok"
   },
-  "7211": {
-    "symbol": "7211.SR",
-    "name": "7211",
-    "sector": "Telecom & IT",
-    "rows": 1098,
-    "first": "2022-03-07",
+  "4263": {
+    "symbol": "4263.SR",
+    "name": "4263",
+    "sector": "Diversified / Services",
+    "rows": 689,
+    "first": "2023-11-01",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4264": {
+    "symbol": "4264.SR",
+    "name": "4264",
+    "sector": "Diversified / Services",
+    "rows": 286,
+    "first": "2025-06-18",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4265": {
+    "symbol": "4265.SR",
+    "name": "4265",
+    "sector": "Diversified / Services",
+    "rows": 169,
+    "first": "2025-12-01",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4270": {
+    "symbol": "4270.SR",
+    "name": "4270",
+    "sector": "Diversified / Services",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4280": {
+    "symbol": "4280.SR",
+    "name": "Kingdom Holding",
+    "sector": "Financial Services",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8010": {
+    "symbol": "8010.SR",
+    "name": "Tawuniya",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8012": {
+    "symbol": "8012.SR",
+    "name": "8012",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
     "last": "2026-08-02",
     "source": "yfinance",
     "status": "ok"
@@ -1542,6 +1802,26 @@
   "8020": {
     "symbol": "8020.SR",
     "name": "8020",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8030": {
+    "symbol": "8030.SR",
+    "name": "8030",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8040": {
+    "symbol": "8040.SR",
+    "name": "8040",
     "sector": "Insurance",
     "rows": 1393,
     "first": "2021-01-03",
@@ -1562,6 +1842,16 @@
   "8060": {
     "symbol": "8060.SR",
     "name": "8060",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8070": {
+    "symbol": "8070.SR",
+    "name": "8070",
     "sector": "Insurance",
     "rows": 1393,
     "first": "2021-01-03",
@@ -1599,9 +1889,79 @@
     "source": "yfinance",
     "status": "ok"
   },
-  "8311": {
-    "symbol": "8311.SR",
-    "name": "8311",
+  "8160": {
+    "symbol": "8160.SR",
+    "name": "8160",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8170": {
+    "symbol": "8170.SR",
+    "name": "8170",
+    "sector": "Insurance",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8180": {
+    "symbol": "8180.SR",
+    "name": "8180",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8190": {
+    "symbol": "8190.SR",
+    "name": "8190",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8200": {
+    "symbol": "8200.SR",
+    "name": "8200",
+    "sector": "Insurance",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8240": {
+    "symbol": "8240.SR",
+    "name": "8240",
+    "sector": "Insurance",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8250": {
+    "symbol": "8250.SR",
+    "name": "8250",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8260": {
+    "symbol": "8260.SR",
+    "name": "8260",
     "sector": "Insurance",
     "rows": 1393,
     "first": "2021-01-03",
