@@ -1,0 +1,1542 @@
+{
+  "TASI": {
+    "symbol": "^TASI.SR",
+    "name": "Tadawul All Share Index",
+    "sector": "Index",
+    "rows": 1564,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1010": {
+    "symbol": "1010.SR",
+    "name": "Riyad Bank",
+    "sector": "Banks",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1020": {
+    "symbol": "1020.SR",
+    "name": "Bank AlJazira",
+    "sector": "Banks",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1030": {
+    "symbol": "1030.SR",
+    "name": "1030",
+    "sector": "Banks",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1050": {
+    "symbol": "1050.SR",
+    "name": "Banque Saudi Fransi",
+    "sector": "Banks",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1060": {
+    "symbol": "1060.SR",
+    "name": "Saudi Awwal Bank",
+    "sector": "Banks",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1080": {
+    "symbol": "1080.SR",
+    "name": "Arab National Bank",
+    "sector": "Banks",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1111": {
+    "symbol": "1111.SR",
+    "name": "Saudi Tadawul Group",
+    "sector": "Financial Services",
+    "rows": 15,
+    "first": "2021-12-12",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "short"
+  },
+  "1120": {
+    "symbol": "1120.SR",
+    "name": "Al Rajhi Bank",
+    "sector": "Banks",
+    "rows": 1790,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1140": {
+    "symbol": "1140.SR",
+    "name": "Bank Albilad",
+    "sector": "Banks",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1150": {
+    "symbol": "1150.SR",
+    "name": "Alinma Bank",
+    "sector": "Banks",
+    "rows": 1790,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1180": {
+    "symbol": "1180.SR",
+    "name": "Saudi National Bank",
+    "sector": "Banks",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1182": {
+    "symbol": "1182.SR",
+    "name": "1182",
+    "sector": "Banks",
+    "rows": 367,
+    "first": "2020-07-14",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1183": {
+    "symbol": "1183.SR",
+    "name": "1183",
+    "sector": "Banks",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1183.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1183.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1183.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "1201": {
+    "symbol": "1201.SR",
+    "name": "1201",
+    "sector": "Capital Goods / Industry",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1202": {
+    "symbol": "1202.SR",
+    "name": "1202",
+    "sector": "Capital Goods / Industry",
+    "rows": 1533,
+    "first": "2015-12-21",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1210": {
+    "symbol": "1210.SR",
+    "name": "1210",
+    "sector": "Capital Goods / Industry",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1211": {
+    "symbol": "1211.SR",
+    "name": "Ma'aden",
+    "sector": "Materials",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1212": {
+    "symbol": "1212.SR",
+    "name": "1212",
+    "sector": "Capital Goods / Industry",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1213": {
+    "symbol": "1213.SR",
+    "name": "1213",
+    "sector": "Capital Goods / Industry",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1214": {
+    "symbol": "1214.SR",
+    "name": "1214",
+    "sector": "Capital Goods / Industry",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1301": {
+    "symbol": "1301.SR",
+    "name": "1301",
+    "sector": "Capital Goods / Industry",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1302": {
+    "symbol": "1302.SR",
+    "name": "1302",
+    "sector": "Capital Goods / Industry",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1303": {
+    "symbol": "1303.SR",
+    "name": "1303",
+    "sector": "Capital Goods / Industry",
+    "rows": 1532,
+    "first": "2015-12-22",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1304": {
+    "symbol": "1304.SR",
+    "name": "1304",
+    "sector": "Capital Goods / Industry",
+    "rows": 1433,
+    "first": "2016-05-22",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1320": {
+    "symbol": "1320.SR",
+    "name": "1320",
+    "sector": "Capital Goods / Industry",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1321": {
+    "symbol": "1321.SR",
+    "name": "1321",
+    "sector": "Capital Goods / Industry",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1321.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1321.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1321.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "1322": {
+    "symbol": "1322.SR",
+    "name": "1322",
+    "sector": "Capital Goods / Industry",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1322.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1322.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1322.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "1323": {
+    "symbol": "1323.SR",
+    "name": "1323",
+    "sector": "Capital Goods / Industry",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1323.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1323.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1323.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "1324": {
+    "symbol": "1324.SR",
+    "name": "1324",
+    "sector": "Capital Goods / Industry",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1324.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1324.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1324.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "1810": {
+    "symbol": "1810.SR",
+    "name": "Seera Group",
+    "sector": "Consumer Services",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1820": {
+    "symbol": "1820.SR",
+    "name": "1820",
+    "sector": "Consumer Services",
+    "rows": 1532,
+    "first": "2015-12-22",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1830": {
+    "symbol": "1830.SR",
+    "name": "Leejam Sports",
+    "sector": "Consumer Services",
+    "rows": 841,
+    "first": "2018-09-10",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1831": {
+    "symbol": "1831.SR",
+    "name": "1831",
+    "sector": "Consumer Services",
+    "rows": 640,
+    "first": "2019-06-19",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1832": {
+    "symbol": "1832.SR",
+    "name": "1832",
+    "sector": "Consumer Services",
+    "rows": 256,
+    "first": "2020-12-24",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "1833": {
+    "symbol": "1833.SR",
+    "name": "1833",
+    "sector": "Consumer Services",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1833.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1833.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1833.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "1834": {
+    "symbol": "1834.SR",
+    "name": "1834",
+    "sector": "Consumer Services",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1834.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1834.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1834.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "1835": {
+    "symbol": "1835.SR",
+    "name": "1835",
+    "sector": "Consumer Services",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1835.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1835.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/1835.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "2001": {
+    "symbol": "2001.SR",
+    "name": "2001",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2010": {
+    "symbol": "2010.SR",
+    "name": "SABIC",
+    "sector": "Materials",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2020": {
+    "symbol": "2020.SR",
+    "name": "SABIC Agri-Nutrients",
+    "sector": "Materials",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2030": {
+    "symbol": "2030.SR",
+    "name": "2030",
+    "sector": "Materials & Energy",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2040": {
+    "symbol": "2040.SR",
+    "name": "2040",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2050": {
+    "symbol": "2050.SR",
+    "name": "Savola Group",
+    "sector": "Food & Staples",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2060": {
+    "symbol": "2060.SR",
+    "name": "Tasnee",
+    "sector": "Materials",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2070": {
+    "symbol": "2070.SR",
+    "name": "2070",
+    "sector": "Materials & Energy",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2080": {
+    "symbol": "2080.SR",
+    "name": "2080",
+    "sector": "Materials & Energy",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2081": {
+    "symbol": "2081.SR",
+    "name": "2081",
+    "sector": "Materials & Energy",
+    "rows": 168,
+    "first": "2021-04-27",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2082": {
+    "symbol": "2082.SR",
+    "name": "ACWA Power",
+    "sector": "Utilities",
+    "rows": 10,
+    "first": "2021-12-19",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "short"
+  },
+  "2083": {
+    "symbol": "2083.SR",
+    "name": "2083",
+    "sector": "Materials & Energy",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2083.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2083.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2083.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "2084": {
+    "symbol": "2084.SR",
+    "name": "2084",
+    "sector": "Materials & Energy",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2084.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2084.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2084.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "2090": {
+    "symbol": "2090.SR",
+    "name": "2090",
+    "sector": "Materials & Energy",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2100": {
+    "symbol": "2100.SR",
+    "name": "2100",
+    "sector": "Materials & Energy",
+    "rows": 1790,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2110": {
+    "symbol": "2110.SR",
+    "name": "2110",
+    "sector": "Materials & Energy",
+    "rows": 1794,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2120": {
+    "symbol": "2120.SR",
+    "name": "2120",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2130": {
+    "symbol": "2130.SR",
+    "name": "2130",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2140": {
+    "symbol": "2140.SR",
+    "name": "2140",
+    "sector": "Materials & Energy",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2150": {
+    "symbol": "2150.SR",
+    "name": "2150",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2160": {
+    "symbol": "2160.SR",
+    "name": "2160",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2170": {
+    "symbol": "2170.SR",
+    "name": "Alujain",
+    "sector": "Materials",
+    "rows": 1789,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2180": {
+    "symbol": "2180.SR",
+    "name": "2180",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2190": {
+    "symbol": "2190.SR",
+    "name": "2190",
+    "sector": "Materials & Energy",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2200": {
+    "symbol": "2200.SR",
+    "name": "2200",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2210": {
+    "symbol": "2210.SR",
+    "name": "2210",
+    "sector": "Materials & Energy",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2220": {
+    "symbol": "2220.SR",
+    "name": "2220",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2222": {
+    "symbol": "2222.SR",
+    "name": "Saudi Aramco",
+    "sector": "Energy",
+    "rows": 516,
+    "first": "2019-12-11",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2223": {
+    "symbol": "2223.SR",
+    "name": "2223",
+    "sector": "Materials & Energy",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2223.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2223.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2223.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "2230": {
+    "symbol": "2230.SR",
+    "name": "2230",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2240": {
+    "symbol": "2240.SR",
+    "name": "2240",
+    "sector": "Materials & Energy",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2250": {
+    "symbol": "2250.SR",
+    "name": "2250",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2270": {
+    "symbol": "2270.SR",
+    "name": "SADAFCO",
+    "sector": "Food & Staples",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2280": {
+    "symbol": "2280.SR",
+    "name": "Almarai",
+    "sector": "Food & Staples",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2281": {
+    "symbol": "2281.SR",
+    "name": "2281",
+    "sector": "Materials & Energy",
+    "rows": 22,
+    "first": "2021-12-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "short"
+  },
+  "2282": {
+    "symbol": "2282.SR",
+    "name": "2282",
+    "sector": "Materials & Energy",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2282.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2282.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2282.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "2283": {
+    "symbol": "2283.SR",
+    "name": "2283",
+    "sector": "Materials & Energy",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2283.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2283.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2283.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "2284": {
+    "symbol": "2284.SR",
+    "name": "2284",
+    "sector": "Materials & Energy",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2284.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2284.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2284.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "2285": {
+    "symbol": "2285.SR",
+    "name": "2285",
+    "sector": "Materials & Energy",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2285.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2285.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2285.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "2286": {
+    "symbol": "2286.SR",
+    "name": "2286",
+    "sector": "Materials & Energy",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2286.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2286.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2286.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "2287": {
+    "symbol": "2287.SR",
+    "name": "2287",
+    "sector": "Materials & Energy",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2287.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2287.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2287.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "2288": {
+    "symbol": "2288.SR",
+    "name": "2288",
+    "sector": "Materials & Energy",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2288.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2288.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2288.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "2290": {
+    "symbol": "2290.SR",
+    "name": "Yansab",
+    "sector": "Materials",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2300": {
+    "symbol": "2300.SR",
+    "name": "2300",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2310": {
+    "symbol": "2310.SR",
+    "name": "Sipchem",
+    "sector": "Materials",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2320": {
+    "symbol": "2320.SR",
+    "name": "2320",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2330": {
+    "symbol": "2330.SR",
+    "name": "Advanced Petrochemical",
+    "sector": "Materials",
+    "rows": 1794,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2340": {
+    "symbol": "2340.SR",
+    "name": "2340",
+    "sector": "Materials & Energy",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2350": {
+    "symbol": "2350.SR",
+    "name": "Saudi Kayan",
+    "sector": "Materials",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2360": {
+    "symbol": "2360.SR",
+    "name": "2360",
+    "sector": "Materials & Energy",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2370": {
+    "symbol": "2370.SR",
+    "name": "2370",
+    "sector": "Materials & Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2380": {
+    "symbol": "2380.SR",
+    "name": "Petro Rabigh",
+    "sector": "Energy",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "2381": {
+    "symbol": "2381.SR",
+    "name": "2381",
+    "sector": "Materials & Energy",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2381.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2381.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2381.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "2382": {
+    "symbol": "2382.SR",
+    "name": "2382",
+    "sector": "Materials & Energy",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2382.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2382.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/2382.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "3002": {
+    "symbol": "3002.SR",
+    "name": "3002",
+    "sector": "Cement",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3003": {
+    "symbol": "3003.SR",
+    "name": "3003",
+    "sector": "Cement",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3004": {
+    "symbol": "3004.SR",
+    "name": "3004",
+    "sector": "Cement",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3005": {
+    "symbol": "3005.SR",
+    "name": "3005",
+    "sector": "Cement",
+    "rows": 1532,
+    "first": "2015-12-21",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3007": {
+    "symbol": "3007.SR",
+    "name": "3007",
+    "sector": "Cement",
+    "rows": 1098,
+    "first": "2017-09-17",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3008": {
+    "symbol": "3008.SR",
+    "name": "3008",
+    "sector": "Cement",
+    "rows": 543,
+    "first": "2019-11-04",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3010": {
+    "symbol": "3010.SR",
+    "name": "3010",
+    "sector": "Cement",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3020": {
+    "symbol": "3020.SR",
+    "name": "3020",
+    "sector": "Cement",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3030": {
+    "symbol": "3030.SR",
+    "name": "3030",
+    "sector": "Cement",
+    "rows": 1781,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3040": {
+    "symbol": "3040.SR",
+    "name": "3040",
+    "sector": "Cement",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3050": {
+    "symbol": "3050.SR",
+    "name": "3050",
+    "sector": "Cement",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3060": {
+    "symbol": "3060.SR",
+    "name": "3060",
+    "sector": "Cement",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3080": {
+    "symbol": "3080.SR",
+    "name": "3080",
+    "sector": "Cement",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3090": {
+    "symbol": "3090.SR",
+    "name": "3090",
+    "sector": "Cement",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3091": {
+    "symbol": "3091.SR",
+    "name": "3091",
+    "sector": "Cement",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "3092": {
+    "symbol": "3092.SR",
+    "name": "3092",
+    "sector": "Cement",
+    "rows": 335,
+    "first": "2020-09-03",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4001": {
+    "symbol": "4001.SR",
+    "name": "Al Othaim Markets",
+    "sector": "Consumer Retail",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4002": {
+    "symbol": "4002.SR",
+    "name": "Mouwasat Medical",
+    "sector": "Healthcare",
+    "rows": 1794,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4003": {
+    "symbol": "4003.SR",
+    "name": "eXtra (United Electronics)",
+    "sector": "Consumer Retail",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4004": {
+    "symbol": "4004.SR",
+    "name": "Dallah Healthcare",
+    "sector": "Healthcare",
+    "rows": 1781,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4005": {
+    "symbol": "4005.SR",
+    "name": "4005",
+    "sector": "Retail & Consumer",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4006": {
+    "symbol": "4006.SR",
+    "name": "4006",
+    "sector": "Retail & Consumer",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4007": {
+    "symbol": "4007.SR",
+    "name": "4007",
+    "sector": "Retail & Consumer",
+    "rows": 1794,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4008": {
+    "symbol": "4008.SR",
+    "name": "4008",
+    "sector": "Retail & Consumer",
+    "rows": 1533,
+    "first": "2015-12-21",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4009": {
+    "symbol": "4009.SR",
+    "name": "4009",
+    "sector": "Retail & Consumer",
+    "rows": 1471,
+    "first": "2016-03-29",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4011": {
+    "symbol": "4011.SR",
+    "name": "4011",
+    "sector": "Retail & Consumer",
+    "rows": 1406,
+    "first": "2016-06-29",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4012": {
+    "symbol": "4012.SR",
+    "name": "4012",
+    "sector": "Retail & Consumer",
+    "rows": 538,
+    "first": "2019-11-11",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4013": {
+    "symbol": "4013.SR",
+    "name": "Dr. Sulaiman Al Habib",
+    "sector": "Healthcare",
+    "rows": 447,
+    "first": "2020-03-17",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4014": {
+    "symbol": "4014.SR",
+    "name": "4014",
+    "sector": "Retail & Consumer",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4014.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4014.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4014.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "4015": {
+    "symbol": "4015.SR",
+    "name": "4015",
+    "sector": "Retail & Consumer",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4015.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4015.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4015.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "4016": {
+    "symbol": "4016.SR",
+    "name": "4016",
+    "sector": "Retail & Consumer",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4016.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4016.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4016.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "4017": {
+    "symbol": "4017.SR",
+    "name": "4017",
+    "sector": "Retail & Consumer",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4017.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4017.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4017.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "4018": {
+    "symbol": "4018.SR",
+    "name": "4018",
+    "sector": "Retail & Consumer",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4018.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4018.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4018.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "4019": {
+    "symbol": "4019.SR",
+    "name": "4019",
+    "sector": "Retail & Consumer",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4019.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4019.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4019.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "4020": {
+    "symbol": "4020.SR",
+    "name": "4020",
+    "sector": "Retail & Consumer",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4021": {
+    "symbol": "4021.SR",
+    "name": "4021",
+    "sector": "Retail & Consumer",
+    "rows": 96,
+    "first": "2021-08-18",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "short"
+  },
+  "4030": {
+    "symbol": "4030.SR",
+    "name": "Bahri",
+    "sector": "Transportation",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4031": {
+    "symbol": "4031.SR",
+    "name": "Saudi Ground Services",
+    "sector": "Transportation",
+    "rows": 1532,
+    "first": "2015-12-21",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4040": {
+    "symbol": "4040.SR",
+    "name": "4040",
+    "sector": "Retail & Consumer",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4050": {
+    "symbol": "4050.SR",
+    "name": "4050",
+    "sector": "Retail & Consumer",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4051": {
+    "symbol": "4051.SR",
+    "name": "4051",
+    "sector": "Retail & Consumer",
+    "rows": 521,
+    "first": "2019-12-04",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4061": {
+    "symbol": "4061.SR",
+    "name": "4061",
+    "sector": "Retail & Consumer",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4070": {
+    "symbol": "4070.SR",
+    "name": "4070",
+    "sector": "Retail & Consumer",
+    "rows": 1782,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4071": {
+    "symbol": "4071.SR",
+    "name": "4071",
+    "sector": "Retail & Consumer",
+    "rows": 9,
+    "first": "2021-12-20",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "short"
+  },
+  "4072": {
+    "symbol": "4072.SR",
+    "name": "4072",
+    "sector": "Retail & Consumer",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4072.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4072.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4072.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "4080": {
+    "symbol": "4080.SR",
+    "name": "4080",
+    "sector": "Retail & Consumer",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4081": {
+    "symbol": "4081.SR",
+    "name": "4081",
+    "sector": "Retail & Consumer",
+    "rows": 17,
+    "first": "2021-12-08",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "short"
+  },
+  "4082": {
+    "symbol": "4082.SR",
+    "name": "4082",
+    "sector": "Retail & Consumer",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4082.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4082.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4082.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "4083": {
+    "symbol": "4083.SR",
+    "name": "4083",
+    "sector": "Retail & Consumer",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4083.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4083.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4083.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "4084": {
+    "symbol": "4084.SR",
+    "name": "4084",
+    "sector": "Retail & Consumer",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4084.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4084.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4084.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "4090": {
+    "symbol": "4090.SR",
+    "name": "4090",
+    "sector": "Retail & Consumer",
+    "rows": 1790,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4100": {
+    "symbol": "4100.SR",
+    "name": "4100",
+    "sector": "Diversified / Services",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4110": {
+    "symbol": "4110.SR",
+    "name": "4110",
+    "sector": "Diversified / Services",
+    "rows": 1790,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4130": {
+    "symbol": "4130.SR",
+    "name": "4130",
+    "sector": "Diversified / Services",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4322": {
+    "symbol": "4322.SR",
+    "name": "4322",
+    "sector": "Real Estate",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4322.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4322.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/4322.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "7200": {
+    "symbol": "7200.SR",
+    "name": "7200",
+    "sector": "Telecom & IT",
+    "rows": 680,
+    "first": "2019-04-24",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7201": {
+    "symbol": "7201.SR",
+    "name": "7201",
+    "sector": "Telecom & IT",
+    "rows": 426,
+    "first": "2020-04-15",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7202": {
+    "symbol": "7202.SR",
+    "name": "7202",
+    "sector": "Telecom & IT",
+    "rows": 55,
+    "first": "2021-10-17",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "short"
+  },
+  "7203": {
+    "symbol": "7203.SR",
+    "name": "7203",
+    "sector": "Telecom & IT",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/7203.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/7203.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/7203.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "7204": {
+    "symbol": "7204.SR",
+    "name": "7204",
+    "sector": "Telecom & IT",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/7204.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/7204.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/7204.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "7205": {
+    "symbol": "7205.SR",
+    "name": "7205",
+    "sector": "Telecom & IT",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/7205.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/7205.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/7205.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "7211": {
+    "symbol": "7211.SR",
+    "name": "7211",
+    "sector": "Telecom & IT",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/7211.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/7211.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/7211.SR?period1=1420070400&period2=1640995200&interval=1d&events=div%7Csplit"
+  },
+  "8020": {
+    "symbol": "8020.SR",
+    "name": "8020",
+    "sector": "Insurance",
+    "rows": 1781,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8050": {
+    "symbol": "8050.SR",
+    "name": "8050",
+    "sector": "Insurance",
+    "rows": 1790,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8060": {
+    "symbol": "8060.SR",
+    "name": "8060",
+    "sector": "Insurance",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8100": {
+    "symbol": "8100.SR",
+    "name": "8100",
+    "sector": "Insurance",
+    "rows": 1779,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8120": {
+    "symbol": "8120.SR",
+    "name": "8120",
+    "sector": "Insurance",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8150": {
+    "symbol": "8150.SR",
+    "name": "8150",
+    "sector": "Insurance",
+    "rows": 1780,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8311": {
+    "symbol": "8311.SR",
+    "name": "8311",
+    "sector": "Insurance",
+    "rows": 1790,
+    "first": "2015-01-01",
+    "last": "2021-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  }
+}
