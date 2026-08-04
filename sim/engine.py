@@ -8,12 +8,12 @@ Realism model:
   slippage. Commission is a discount-broker 8 bps per side (v2).
 - Long-only, integer shares, no margin. Halted names: orders stay pending up
   to 5 sessions, then expire.
-- All agents share one calendar. Each day, after the close, every agent posts
-  (sentiment, mood, optional shout) to the "majlis" board; the next day every
-  agent can read yesterday's board — agents genuinely communicate.
-- v2: every agent also sees ctx["peers"] — the other agents' current books
-  (weights, cash fraction, trailing returns, today's fills). Public track
-  records, same information set for everyone, no lookahead.
+- All agents share one calendar and are simulated day-synchronized.
+- Every agent sees ctx["peers"] — the other agents' current books (weights,
+  cash fraction, trailing returns, today's fills). Public track records, same
+  information set for everyone, no lookahead.
+- v3: no chat. Agents keep private journals (note, mood, sentiment) but do not
+  message each other; competition is purely through performance.
 """
 
 from __future__ import annotations
@@ -176,8 +176,6 @@ class Engine:
     def run_all(self, strategies, progress_every=250):
         m = self.m
         agents = [AgentState(s) for s in strategies]
-        majlis = []  # yesterday's posts
-        chat = []    # full chat log
         events = []  # notable market events for the dashboard/commentary
 
         for i, date in enumerate(m.dates):
@@ -270,11 +268,9 @@ class Engine:
                 "day_index": i,
                 "breadth_sma50": m.breadth(date),
                 "tasi_ret_1d": tret,
-                "majlis": majlis,
                 "names": m.names,
                 "sectors": m.sectors,
             }
-            new_posts = []
             for a in agents:
                 snap = a._snap
                 ctx["equity_history"] = a.equity_hist
@@ -292,12 +288,6 @@ class Engine:
                 note = str(decision.get("note", ""))[:500]
                 if note:
                     a.journal.append({"date": iso, "mood": mood, "sentiment": sent, "note": note})
-                shout = decision.get("shout")
-                if shout:
-                    post = {"date": iso, "handle": a.handle, "sentiment": sent,
-                            "mood": mood, "shout": str(shout)[:400]}
-                    new_posts.append(post)
-                    chat.append(post)
                 for od in decision.get("orders", []) or []:
                     od = _validated(od, snap)
                     if od is None:
@@ -306,12 +296,11 @@ class Engine:
                     od["ttl"] = ORDER_TTL
                     od["queued"] = iso
                     a.pending.append(od)
-            majlis = new_posts
             if progress_every and i % progress_every == 0:
                 lead = max(agents, key=lambda x: x.equity_hist[-1])
                 print(f"  {iso}: leader {lead.handle} {lead.equity_hist[-1]:,.0f} SAR")
 
-        return agents, chat, events
+        return agents, events
 
     def _fill(self, a: AgentState, od, r, iso):
         pf = a.pf

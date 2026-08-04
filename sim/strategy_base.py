@@ -16,7 +16,6 @@ ctx: dict with keys:
       day_index      int, 0-based sim day
       breadth_sma50  float, fraction of universe above its 50-day SMA
       tasi_ret_1d    float, index return today
-      majlis         list of yesterday's posts: {handle, sentiment, mood, shout}
       peers          dict handle -> the OTHER agents' public books as of this close:
                      {equity, ret_21, ret_63, cash_frac,
                       positions: {code: weight}, today_trades: [{code, side,
@@ -29,9 +28,8 @@ ctx: dict with keys:
 Return a dict:
       orders     list of order dicts (see below), may be empty
       sentiment  float in [-1, 1], today's market mood
-      mood       short label, in character ("greedy", "nervous", ...)
-      note       one journal line, in character
-      shout      optional message posted to the shared majlis chat
+      mood       short label ("confident", "defensive", ...)
+      note       one private journal line (kept and shown in the dashboard)
 
 Order dicts (long-only, no margin):
       {"code": "1120", "side": "buy",  "sar": 25000, "reason": "..."}

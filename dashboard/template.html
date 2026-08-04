@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The TASI Majlis v2 — the whole market, SAR 100k each</title>
+<title>TASI Arena v3 — eight agents, one goal: maximum profit</title>
 <style>
 /* ---------- design tokens ---------- */
 :root{
@@ -192,7 +192,7 @@ td .pos{color:var(--good); font-weight:600} td .neg{color:var(--bad); font-weigh
 .hm svg{min-width:820px}
 .hm text{font-size:10.5px; fill:var(--ink-3)}
 
-/* ---------- majlis chat ---------- */
+/* ---------- (chat styles retired in v3; .chatbox kept unused) ---------- */
 .chatbox{max-height:640px; overflow-y:auto; padding:6px 4px; margin-top:8px}
 .msg{display:flex; gap:10px; padding:7px 6px; border-radius:12px; transition:background 120ms}
 .msg:hover{background:var(--surface-2)}
@@ -245,7 +245,7 @@ footer{margin-top:70px; padding-top:18px; border-top:1px solid var(--hairline); 
 <body>
 <script>/*__DATA__*/</script>
 <nav><div class="row">
-  <div class="brand">TASI Majlis <span>· not financial advice</span></div>
+  <div class="brand">TASI Arena <span>· not financial advice</span></div>
   <a class="pill" href="#roster">Agents</a>
   <a class="pill" href="#awards">Awards</a>
   <a class="pill" href="#boring">Numbers</a>
@@ -254,7 +254,6 @@ footer{margin-top:70px; padding-top:18px; border-top:1px solid var(--hairline); 
   <a class="pill" href="#dd">Drawdowns</a>
   <a class="pill" href="#months">Months</a>
   <a class="pill" href="#sent">Sentiment</a>
-  <a class="pill" href="#majlis">Majlis</a>
   <a class="pill" href="#journal">Journals</a>
   <a class="pill" href="#trades">Trades</a>
   <a class="pill" href="#letters">Letters</a>
@@ -264,12 +263,13 @@ footer{margin-top:70px; padding-top:18px; border-top:1px solid var(--hairline); 
 
 <div class="wrap">
 <header class="hero">
-  <div class="kicker">Agent-based simulation · Tadawul top 50 · 2022 → 2026</div>
-  <h1>The TASI Majlis <span class="ar">مجلس التداول</span></h1>
-  <p class="sub"><b id="h-nagents"></b> AI agents were each handed <b>SAR 100,000</b> on the first trading day of 2022.
-  They strategized, argued in a shared majlis, and traded <b id="h-universe"></b> Tadawul main-market stocks for
-  <b id="h-sessions"></b> sessions — every fill at the next open, real commissions, real dividends, no lookahead.
-  One of them, <b>🏆 Zahab</b>, trades nothing but the others' experience. This is what happened.</p>
+  <div class="kicker">Agent-based simulation · full Tadawul main market · 2022 → 2026 · v3</div>
+  <h1>TASI Arena <span class="ar">حلبة التداول</span></h1>
+  <p class="sub"><b id="h-nagents"></b> AI agents were each handed <b>SAR 100,000</b> on the first trading day of 2022,
+  with one instruction: <b>maximize profit</b>. Each follows a different investment school, every one of them free to
+  mix and adapt strategies, all trained on the lessons of two earlier seasons. They traded <b id="h-universe"></b>
+  Tadawul main-market stocks for <b id="h-sessions"></b> sessions — fills at the next open, real commissions,
+  real dividends, no lookahead, no chat. Only the journals remain. This is the race for the best investment agent.</p>
   <div class="kpis" id="kpis"></div>
   <div class="hero-champ" id="champ"></div>
 </header>
@@ -328,20 +328,11 @@ footer{margin-top:70px; padding-top:18px; border-top:1px solid var(--hairline); 
 </section>
 
 <section id="sent">
-  <h2>Sentiment <span class="tag">what the majlis felt</span></h2>
-  <p class="sec-sub">Weekly average of each agent's recorded mood, from bearish <b style="color:var(--div-neg)">red</b> to bullish <b style="color:var(--div-pos)">blue</b> — with the crowd's consensus below.</p>
+  <h2>Sentiment <span class="tag">what the field felt</span></h2>
+  <p class="sec-sub">Weekly average of each agent's journaled mood, from bearish <b style="color:var(--div-neg)">red</b> to bullish <b style="color:var(--div-pos)">blue</b> — with the field's average below.</p>
   <div class="card">
     <div class="hm chart" id="sentChart"></div>
     <div class="chart" id="consChart" style="margin-top:10px"></div>
-  </div>
-</section>
-
-<section id="majlis">
-  <h2>The majlis <span class="tag">the group chat</span></h2>
-  <p class="sec-sub">Everything the agents said to each other, threaded with the market's big days.</p>
-  <div class="card">
-    <div class="cardbar" id="chatFilters"></div>
-    <div class="chatbox" id="chatBox"></div>
   </div>
 </section>
 
@@ -504,7 +495,7 @@ function sparkline(vals, color){
   const g=$('#awardsGrid'); const M=a=>a.metrics;
   const by=(f,dir=1)=>[...agents].sort((x,y)=>dir*(f(y)-f(x)))[0];
   const items=[];
-  const sharpe=by(a=>M(a).sharpe); items.push(['Sharpest mind', sharpe, `Sharpe ${M(sharpe).sharpe} — best risk-adjusted return in the majlis.`]);
+  const sharpe=by(a=>M(a).sharpe); items.push(['Sharpest mind', sharpe, `Sharpe ${M(sharpe).sharpe} — best risk-adjusted return in the arena.`]);
   const dd=by(a=>M(a).max_drawdown); items.push(['Iron stomach (shallowest drawdown)', dd, `Never fell more than ${pct(Math.abs(M(dd).max_drawdown))} below their peak.`]);
   const deepdd=by(a=>-M(a).max_drawdown); items.push(['Deepest crater', deepdd, `Sat ${pct(Math.abs(M(deepdd).max_drawdown))} below their peak at the worst moment (${M(deepdd).mdd_trough}).`]);
   const fees=by(a=>a.commissions_paid); items.push(['Fee machine', fees, `Paid ${fmtSAR(fees.commissions_paid)} in commissions across ${fmt(M(fees).n_trades)} trades. The broker sends regards.`]);
@@ -943,61 +934,6 @@ function renderSent(){
 }
 rerenders.push(renderSent);
 
-/* ============ majlis chat ============ */
-let chatAgent=null, chatBigOnly=false;
-function renderChat(){
-  const box=$('#chatBox'); box.innerHTML='';
-  const [s,e]=range;
-  const evByDate=new Map(D.events.map(ev=>[ev.date,ev]));
-  let lastMonth=null; let count=0;
-  const frag=document.createDocumentFragment();
-  for(const m of D.chat){
-    const i=dateIdx.get(m.date); if(i==null||i<s||i>e) continue;
-    if(chatAgent && m.handle!==chatAgent) continue;
-    if(chatBigOnly && !evByDate.has(m.date)) continue;
-    const a=byHandle.get(m.handle); if(!a) continue;
-    const mk=monthKey(m.date);
-    if(mk!==lastMonth){ frag.append(el('div',{class:'mhead',text:fmtMonth(mk)})); lastMonth=mk; }
-    const ev=evByDate.get(m.date);
-    if(ev && !ev._shown && !chatAgent){ ev._shown=true;
-      frag.append(el('div',{class:'evline'}, el('span',{class:'b'}),
-        el('span',{class:'e '+ev.type,text:`${ev.type==='crash'?'▼':'▲'} TASI ${spct(ev.tasi_ret)} — ${fmtDate(ev.date)}`}),
-        el('span',{class:'b'})));
-    }
-    frag.append(el('div',{class:'msg'},
-      el('div',{class:'av',text:a.emoji}),
-      el('div',{class:'b'},
-        el('div',{class:'hd'},
-          el('span',{class:'who',text:a.name}),
-          el('span',{class:'dt',text:m.date}),
-          m.mood?el('span',{class:'mood',text:m.mood}):null,
-          el('span',{class:'sdot',style:'background:'+divColor(m.sentiment||0)})),
-        el('div',{class:'tx',text:m.shout}))));
-    count++;
-    if(count>=900) break;
-  }
-  D.events.forEach(ev=>delete ev._shown);
-  if(!count) frag.append(el('div',{class:'hint',style:'padding:16px',text:'No messages in this slice.'}));
-  box.append(frag);
-}
-{
-  const f=$('#chatFilters');
-  f.append(el('span',{class:'lbl',text:'Who:'}));
-  const allBtn=el('button',{class:'tgl on',text:'Everyone',onclick:()=>{chatAgent=null; syncChatBtns(); renderChat();}});
-  f.append(allBtn);
-  for(const a of agents) f.append(el('button',{class:'tgl',text:`${a.emoji} ${shortName(a)}`,
-    onclick:ev=>{ chatAgent=chatAgent===a.handle?null:a.handle; syncChatBtns(); renderChat(); }, 'data-h':a.handle}));
-  f.append(el('span',{class:'sp'}));
-  f.append(el('button',{class:'tgl',text:'big days only',onclick:ev=>{ chatBigOnly=!chatBigOnly; ev.currentTarget.classList.toggle('on',chatBigOnly); renderChat(); }}));
-  function syncChatBtns(){
-    $$('#chatFilters .tgl').forEach(b=>{
-      if(b.dataset.h) b.classList.toggle('on', b.dataset.h===chatAgent);
-      else if(b.textContent==='Everyone') b.classList.toggle('on', !chatAgent);
-    });
-  }
-}
-rerenders.push(renderChat);
-
 /* ============ journals ============ */
 let jrAgent=null;
 function renderJournal(){
@@ -1121,7 +1057,7 @@ rerenders.push(()=>{ trPage=0; renderTrades(); });
   $('#methodBox').innerHTML = `
   <b>Universe.</b> All ${esc(String(D.meta.universe_size))} Tadawul main-market names with usable Yahoo Finance histories (Nomu excluded; names listed mid-period join once their indicators warm up), plus the TASI index as benchmark. Daily OHLCV, dividends and bonus issues (fetched ${esc(D.meta.sim_end)}).<br><br>
   <b>Engine.</b> Decisions are made at each session's close using only information available at that close; orders fill at the <i>next</i> session's open with 5&nbsp;bps slippage. A discount-broker commission of 8&nbsp;bps applies to every side. Long-only, integer shares, no margin, no shorting. Dividends are credited as cash on the ex-date; bonus issues are handled via split-adjusted prices. Orders on halted stocks persist up to 5 sessions. Each agent starts with SAR&nbsp;100,000 on ${esc(D.meta.sim_start)}.<br><br>
-  <b>The majlis.</b> After every close, each agent posts its sentiment, mood and optional message to a shared board visible to all agents the next day, and every agent can see the others' public books (weights, cash, trailing returns, fills). The contrarian fades consensus, the influencer follows it — and Zahab, the golden standard, allocates purely on the others' proven track records, learning from their wins and their tuition. No agent sees the future; Zahab's only edge is everyone else's experience.<br><br>
+  <b>The arena (v3).</b> There is no chat. Every agent pursues one objective — maximum terminal wealth — using whatever blend of strategies it chooses, informed by the archived results of seasons one and two. Agents still see each other's public books (weights, cash, trailing returns, fills) and may copy, fade, or ignore each other; each keeps a private journal of every decision. No agent sees the future.<br><br>
   <b>Indicators.</b> SMA(20/50/100/200), EMA(12/26), MACD, RSI(14), Bollinger(20,2σ), ATR(14), momentum (1w→12m), realized vol, drawdown, 52-week distance, relative strength vs TASI — all computed on dividend-adjusted series with no lookahead.<br><br>
   <b>Metrics.</b> Sharpe/Sortino use a 4% SAR risk-free rate and 250 trading days. Alpha/beta from daily regression vs TASI. Win rate counts closed (sell) trades against average cost. TASI line is the index normalized to SAR 100,000 — it pays no dividends, the agents' curves include them.`;
   $('#ftMeta').textContent = `simulated ${D.meta.sim_start} → ${D.meta.sim_end} · ${fmt(D.meta.sessions)} sessions · ${agents.length} agents`;

@@ -52,7 +52,7 @@ def main() -> int:
         return 1
 
     engine = Engine(market)
-    agents, chat, events = engine.run_all(strategies)
+    agents, events = engine.run_all(strategies)
 
     dates = [str(d.date()) for d in market.dates]
     tasi_norm = (market.tasi / market.tasi.iloc[0] * START_CASH).round(2)
@@ -70,7 +70,6 @@ def main() -> int:
         "dates": dates,
         "tasi": [float(x) for x in tasi_norm],
         "events": events,
-        "chat": chat,
         "agents": [],
     }
 

@@ -42,8 +42,7 @@ def main():
         sells = [t for t in a["trades"] if t["side"] == "sell"]
         best = sorted(sells, key=lambda t: -t.get("realized_pnl", 0))[:3]
         worst = sorted(sells, key=lambda t: t.get("realized_pnl", 0))[:3]
-        my_shouts = [c for c in res["chat"] if c["handle"] == a["meta"]["handle"]]
-        others = [c for c in res["chat"] if c["handle"] != a["meta"]["handle"]]
+        my_notes = [j for j in a["journal"]]
         briefs[a["meta"]["handle"]] = {
             "meta": a["meta"],
             "metrics": a["metrics"],
@@ -53,8 +52,7 @@ def main():
             "best_trades": [{**t, "name": names.get(t["code"], t["code"])} for t in best],
             "worst_trades": [{**t, "name": names.get(t["code"], t["code"])} for t in worst],
             "n_trades": a["metrics"]["n_trades"],
-            "sample_own_shouts": my_shouts[:: max(1, len(my_shouts) // 12)][:12],
-            "sample_others_shouts": others[:: max(1, len(others) // 15)][:15],
+            "sample_journal": my_notes[:: max(1, len(my_notes) // 14)][:14],
             "final_positions": a["final_positions"],
         }
 

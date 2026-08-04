@@ -105,20 +105,12 @@ def main():
             "epitaph": com.get("epitaph", ""),
         })
 
-    chat = res["chat"]
-    extra_chat = []
-    for h, com in commentary.items():
-        for msg in com.get("extra_chat", []):
-            extra_chat.append({**msg, "handle": h, "generated": True})
-    chat = sorted(chat + extra_chat, key=lambda m: m["date"])
-
     payload = {
         "meta": res["meta"],
         "dates": res["dates"],
         "tasi": [round(x) for x in res["tasi"]],
         "tasi_metrics": res["tasi_metrics"],
         "events": res["events"],
-        "chat": chat,
         "agents": agents,
     }
 
