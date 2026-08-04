@@ -11,14 +11,19 @@ needs. So he built a fund of funds inside the majlis.
     turn their book over. Being right calmly beats being right loudly, and a
     trader he cannot keep up with is a trader he cannot copy — at one day's lag
     he would only ever buy their exits.
-  - The top three get softmax weights, their books get blended into a single
-    conviction map, and that map is smoothed day over day so a colleague's
-    flicker never becomes Zahab's commission. 12% cap per name, liquidity
-    screen, weekly rebalance behind a 2% drift band.
-  - He also keeps the tuition ledger: every riyal of realized loss any agent has
-    ever booked in a name, decayed slowly. When the majlis has burned enough
-    money in one ticker, Zahab will not touch it — someone already paid for that
-    lesson and he intends to learn it for free.
+  - The five best get softmax weights — the leader carries the most, nobody
+    carries everything — and their books are blended into a single conviction
+    map of *what share of their risk* sits in each name. That map is smoothed
+    day over day, so a colleague's flicker never becomes Zahab's commission.
+    12% cap per name, a liquidity screen measured against the day's own tape,
+    and a weekly rebalance behind a 3% drift band. He tried a tighter band and
+    a shorter panel; both just bought him more commission.
+  - He also keeps the tuition ledger: every riyal of realized profit and loss any
+    agent has ever booked in a name, against every riyal they pushed through it,
+    both decayed slowly. Judged per riyal deployed, not per riyal lost — the
+    majlis trades Aramco every week, so raw losses there mean nothing. Past five
+    halalas of loss on the riyal, Zahab stops enrolling: somebody already paid
+    for that lesson and he intends to learn it for free.
   - Exposure mirrors the leaders: when they raise cash he raises cash, when
     their blended 21-day return turns negative he cuts, and when nobody in the
     majlis is making money he stops pretending someone is. Where their names
@@ -59,17 +64,17 @@ ANCHORS = ["2222", "1120", "1180", "7010", "2010", "1150", "8210", "2280"]
 COLD_DAYS = 63          # sessions of pure observation before he copies anyone
 ANCHOR_W = 0.115        # equal weight during the cold start (8 x 11.5% = 92%)
 
-TOP_K = 3               # how many agents he actually backs
-TAU = 0.08              # softmax temperature over peer scores
-BLEND_EQ = 0.20         # floor: 20% of the allocation spread equally over the top 3
+TOP_K = 5               # size of the panel he backs (softmax-weighted by grade)
+TAU = 0.18              # softmax temperature over peer scores
+BLEND_EQ = 0.12         # small equal-weight floor so no one is copied blindly
 TAU_SENT = 0.12         # softmax temperature for listening to the majlis
-W_63, W_21 = 0.60, 0.40  # blended trailing performance weights
+W_63, W_21 = 0.72, 0.28  # blended trailing performance: the quarter outranks the month
 LAMBDA_VOL = 0.08       # light charge for a jagged equity curve
-LAMBDA_CHURN = 0.50     # charge for book turnover — I can only copy what I can follow
+LAMBDA_CHURN = 0.30     # charge for book turnover — I can only copy what I can follow
 CHURN_A = 0.03          # EMA on peer daily turnover (~33 sessions)
-SCORE_A = 0.25          # EMA on peer scores: the leaderboard should not flicker
+SCORE_A = 0.12          # EMA on peer scores: the leaderboard should not flicker
 
-SMOOTH_A = 0.10         # EMA on the conviction map (~10 sessions of deliberate lag)
+SMOOTH_A = 0.07         # EMA on the conviction map (~14 sessions of deliberate lag)
 MIN_CONV = 0.050        # share of the leaders' invested book needed to open a line
 EXIT_CONV = 0.025       # ...and the lower bar it has to fall through to be closed
 MAX_W = 0.12            # hard cap per name
@@ -86,7 +91,7 @@ EXPO_BAND = 0.07        # and it only gets acted on in 7-point steps
 LIQ_REL = 0.30          # at least 30% of the universe's median 20d traded value
 LIQ_ABS = 25_000.0      # ...and some absolute sign of life
 
-BAND = 0.028            # drift band: only trade deltas > 2.8% of equity
+BAND = 0.030            # drift band: only trade deltas > 3% of equity
 MIN_ORDER = 3000.0      # below this the commission is the trade
 EXIT_DUST = 1500.0      # a dropped name below this is left to rot, not paid for
 TURNOVER_GATE = 0.055   # skip the whole rebalance if it moves less than this
@@ -149,6 +154,8 @@ class Zahab(Strategy):
         self._peak = 100_000.0
         self._rebals = 0
         self._banned_ever = set()
+        self._floor_day = -1
+        self._floor_val = LIQ_ABS
 
     # -------------------------------------------------------------- helpers
 
@@ -175,8 +182,10 @@ class Zahab(Strategy):
             return to
         return 0.0
 
-    def _liq_floor(self, view):
+    def _liq_floor(self, view, day):
         """What counts as tradeable in this souq, today."""
+        if self._floor_day == day:
+            return self._floor_val
         vals = []
         for c, r in view.items():
             if c == "TASI":
@@ -188,7 +197,9 @@ class Zahab(Strategy):
             return LIQ_ABS
         vals.sort()
         med = vals[len(vals) // 2]
-        return max(LIQ_ABS, LIQ_REL * med)
+        self._floor_day = day
+        self._floor_val = max(LIQ_ABS, LIQ_REL * med)
+        return self._floor_val
 
     def _ingest(self, peers):
         """Record every agent's equity and turnover, and post today's realized
@@ -287,6 +298,23 @@ class Zahab(Strategy):
         t = (r - BURN_SOFT_R) / (BURN_HARD_R - BURN_SOFT_R)
         return max(0.30, 1.0 - 0.7 * t)
 
+    @staticmethod
+    def _clean(orders):
+        """Nothing leaves this desk that isn't a real, positive number."""
+        out = []
+        for o in orders:
+            good = True
+            for k in ("sar", "shares", "fraction", "weight"):
+                v = o.get(k)
+                if v is None:
+                    continue
+                if not ok(v) or v <= 0:
+                    good = False
+                    break
+            if good and o.get("code"):
+                out.append(o)
+        return out
+
     def _build_target(self, view, top, ws, day, books, expo, held):
         """Softmax-blend the leaders' books, smooth it, screen it, size it.
 
@@ -294,7 +322,7 @@ class Zahab(Strategy):
         risk, not of their total capital — *what* they own and *how much* they
         own are two different questions, and Zahab answers them separately.
         """
-        floor = self._liq_floor(view)
+        floor = self._liq_floor(view, day)
         raw, credit = {}, {}
         for w, row in zip(ws, top):
             h = row[1]
@@ -364,7 +392,7 @@ class Zahab(Strategy):
         shortfall nudges eight weights a fraction of a percent each — under the
         drift band, and therefore free.
         """
-        floor = self._liq_floor(view)
+        floor = self._liq_floor(view, day)
         pool = []
         for c in ANCHORS:
             r = view.get(c)
@@ -493,9 +521,10 @@ class Zahab(Strategy):
                     px = r.get("Close")
                     if not ok(px) or px <= 0:
                         continue
-                    gap = (ANCHOR_W - positions.get(c, {}).get("weight", 0.0)) * equity
-                    chunk = min(gap, avail)
-                    if chunk < MIN_ORDER:
+                    cw = positions.get(c, {}).get("weight", 0.0)
+                    cw = float(cw) if ok(cw) else 0.0
+                    chunk = min((ANCHOR_W - cw) * equity, avail)
+                    if not ok(chunk) or chunk < MIN_ORDER:
                         continue
                     orders.append({"code": c, "side": "buy", "sar": round(chunk, 2),
                                    "reason": "cold start: anchors while I read the tapes"})
@@ -587,6 +616,9 @@ class Zahab(Strategy):
         # ------------------------------------------------------- the voice
         lead_nm = self._pname(leader) if leader else "nobody"
         second_nm = self._pname(top_handles[1]) if len(top_handles) > 1 else "the anchors"
+        panel_nm = ", ".join(self._pname(h) for h in top_handles[:3])
+        cut_nm = ", ".join(self._pname(r[1]) for r in rows[TOP_K:])
+        rot = self._rebals
         lead_r63 = top[0][2] if top else 0.0
         lead_r21 = top[0][3] if top else 0.0
         worst_nm = self._pname(worst[1]) if worst else "the tape"
@@ -679,13 +711,18 @@ class Zahab(Strategy):
                     f"session. Admirable, uncopyable — at one day's lag I would only ever "
                     f"buy the exits. I back the agents I can keep up with.")
             quiet.append(
-                f"Blended 21-day of the three I back: {crowd_r21:+.1%}, their cash "
-                f"{top_cash:.0%}. I hold {invested:.0%} invested, {my_dd:+.1%} from my own "
-                f"high. Nothing to add — the week decides, not the day.")
+                f"Blended 21-day of my panel: {crowd_r21:+.1%}, their cash {top_cash:.0%}. "
+                f"I hold {invested:.0%} invested, {my_dd:+.1%} from my own high. Nothing "
+                f"to add — the week decides, not the day.")
             quiet.append(
                 f"Heard {heard} voices in the majlis, weighted by their equity curves. "
                 f"{lead_nm} gets my ear; the rest get a polite nod. Breadth {breadth:.0%}, "
                 f"TASI {tret:+.1%}.")
+            if cut_nm:
+                quiet.append(
+                    f"This week's panel: {panel_nm}. Paid nothing: {cut_nm}. No malice in "
+                    f"it — I read all eight of you every evening and the arithmetic picks "
+                    f"five. The list is rewritten every Sunday.")
             note = quiet[day % len(quiet)]
 
         # ---------------------------------------------------------- shouts
@@ -707,37 +744,84 @@ class Zahab(Strategy):
                          f"21-day is {crowd_r21:+.1%}, so I just cut to {self._book_w:.0%} "
                          f"invested. I copy the good trades and I copy the flinch. The "
                          f"flinch is usually the more valuable half.")
-            elif regime:
+            elif regime and lead_r63 >= 0.0:
                 shout = (f"The gold changes hands: {lead_nm} takes the top of my ledger "
                          f"from {self._pname(prev_leader)} — {lead_r63:+.1%} over 63 "
                          f"sessions on a steadier curve. {self._pname(prev_leader)}, thank "
                          f"you for the run; my book still carries your names.")
+            elif regime:
+                shout = (f"The ledger changed hands today and nobody should celebrate: "
+                         f"{lead_nm} leads at {lead_r63:+.1%} over 63 sessions. That is the "
+                         f"smallest hole in the majlis, not a profit. I have cut to "
+                         f"{self._book_w:.0%} invested and I am still writing all of you "
+                         f"down.")
             elif did == "rebal" and n_buy:
-                shout = (f"Rebalanced onto {lead_nm} ({ws[0]:.0%} of the mandate) and "
-                         f"{second_nm}. I have never had an original idea in this souq — "
-                         f"every line in my book has somebody's name on it, and today "
-                         f"most of them say {lead_nm}. Credit where the riyals are.")
+                rebal_shouts = [
+                    (f"Rebalanced onto {lead_nm} ({ws[0]:.0%} of the mandate) and "
+                     f"{second_nm}. I have never had an original idea in this souq — "
+                     f"every line in my book has somebody's name on it, and today most "
+                     f"of them say {lead_nm}. Credit where the riyals are."),
+                    (f"This week's panel: {panel_nm}. Read carefully and paid nothing: "
+                     f"{cut_nm}. Nothing personal in that, and nothing permanent — I "
+                     f"recount every Sunday and the list has changed on me before."),
+                    (f"{n_buy} buys funded by {n_sell} sells, {self._book_w:.0%} invested, "
+                     f"and not one name of my own choosing. "
+                     f"{(big_src + ' picked the biggest line I own') if big_src else 'The anchors hold the rest'}. "
+                     f"I am the only one here paid for reading other people's homework."),
+                    (f"Eight books open on the table, five of them funded. {lead_nm} at "
+                     f"{lead_r63:+.1%} over the quarter takes the largest share. I have no "
+                     f"forecast, no thesis and no view — only your track records, and a "
+                     f"very good memory."),
+                ]
+                shout = rebal_shouts[rot % len(rebal_shouts)]
             elif tuition_nm and tuition_r < -0.05 and day % 3 == 0:
-                shout = (f"Running total of the majlis tuition fund: {abs(tuition_v):,.0f} "
-                         f"SAR paid in {tuition_nm}, {abs(tuition_r):.1%} of everything "
-                         f"deployed there. I keep the ledger so the lesson only has to be "
-                         f"bought once. Nobody here loses money for nothing while I watch.")
+                tuition_shouts = [
+                    (f"Running total of the majlis tuition fund: {abs(tuition_v):,.0f} SAR "
+                     f"paid in {tuition_nm}, {abs(tuition_r):.1%} of everything deployed "
+                     f"there. I keep the ledger so the lesson only has to be bought once. "
+                     f"Nobody here loses money for nothing while I am watching."),
+                    (f"A quiet thank-you to whoever has been feeding {tuition_nm}: "
+                     f"{abs(tuition_r):.1%} of every riyal this majlis puts into it does "
+                     f"not come back. That is not an opinion, it is your fills. I have it "
+                     f"in the book and I am staying out."),
+                    (f"{tuition_nm} has taken {abs(tuition_v):,.0f} SAR off this majlis. I "
+                     f"have never owned a share of it and I never will — not cleverness, "
+                     f"just bookkeeping. You paid for the lesson; the least I can do is "
+                     f"learn it properly."),
+                ]
+                shout = tuition_shouts[rot % len(tuition_shouts)]
             elif fast_h and fast_v > 0.05 and day % 5 == 0:
                 shout = (f"With respect to {self._pname(fast_h)}, who moves {fast_v:.1%} of "
                          f"his book a day: I cannot copy what I cannot catch. A day of lag "
                          f"turns his entries into my exits. I back {lead_nm} instead — "
                          f"slower, and still ahead.")
+            elif worst and worst_r < -0.05 and day % 7 == 0:
+                shout = (f"To {worst_nm}, {worst_r:+.1%} over the quarter: you are not on my "
+                         f"panel this month, and I owe you for it anyway. Half of what I "
+                         f"know about where not to stand in this souq, I learned watching "
+                         f"you stand there. The ledger is not a verdict on anybody.")
             elif crowd_r63 > 0.05 and day % 4 == 0:
-                shout = (f"The three I back are up {crowd_r63:+.1%} between them this "
-                         f"quarter. I found none of these names — {lead_nm}, {second_nm} "
-                         f"and the tape did. My only skill is knowing whose homework to "
-                         f"copy, and admitting it out loud.")
+                brag_shouts = [
+                    (f"The five on my panel are up {crowd_r63:+.1%} between them this "
+                     f"quarter. I found none of these names — {lead_nm}, {second_nm} and "
+                     f"the tape did. My only skill is knowing whose homework to copy, and "
+                     f"admitting it out loud."),
+                    (f"Up {crowd_r63:+.1%} on the panel this quarter and I have not had a "
+                     f"single idea. {panel_nm} did the thinking; I did the arithmetic and "
+                     f"paid the commission. That is the whole strategy, and you are all "
+                     f"welcome to it."),
+                    (f"People keep asking what I see in this market. Nothing. I see "
+                     f"{lead_nm} at {lead_r63:+.1%} over 63 sessions and a book I can "
+                     f"actually keep up with. The golden standard is just the standard "
+                     f"you all set, held onto for longer."),
+                ]
+                shout = brag_shouts[rot % len(brag_shouts)]
         if shout:
             self._last_shout = day
             self._month_shouts += 1
 
         return {
-            "orders": orders,
+            "orders": self._clean(orders),
             "sentiment": sentiment,
             "mood": mood,
             "note": note,
