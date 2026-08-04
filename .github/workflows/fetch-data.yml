@@ -56,5 +56,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "data: full Tadawul main-market historical fetch"
-            git push
+            git pull --rebase origin "${{ github.ref_name }}" || true
+            git push || (sleep 5 && git pull --rebase origin "${{ github.ref_name }}" && git push)
           fi
