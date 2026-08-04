@@ -7,6 +7,7 @@ on:
     paths:
       - ".github/workflows/fetch-data.yml"
       - "pipeline/fetch_data.py"
+      - "pipeline/discover_universe.py"
       - "data/tickers.json"
   workflow_dispatch:
     inputs:
@@ -25,7 +26,7 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,6 +39,9 @@ jobs:
       - name: Install dependencies
         run: pip install --quiet yfinance pandas requests
 
+      - name: Discover full main-market universe
+        run: python pipeline/discover_universe.py
+
       - name: Fetch market data
         env:
           FETCH_END: ${{ github.event.inputs.fetch_end }}
@@ -47,10 +51,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw
+          git add data/raw data/universe_full.json
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "data: TASI historical fetch (top 50 + index)"
+            git commit -m "data: full Tadawul main-market historical fetch"
             git push
           fi

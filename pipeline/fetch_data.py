@@ -24,8 +24,8 @@ START = os.environ.get("FETCH_START", "2021-01-01")
 END = os.environ.get("FETCH_END") or "2026-08-03"  # exclusive; last row 2026-08-02
 ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = ROOT / "data" / "raw"
-MIN_ROWS = 800
-MIN_OK = 48  # fail the job if fewer symbols succeed (out of 51)
+MIN_ROWS = 120   # newly-listed names are allowed short histories
+MIN_OK_FRACTION = 0.85
 
 
 def yahoo_symbol(code: str) -> str:
@@ -116,9 +116,15 @@ def fetch_chart_api(symbol: str) -> pd.DataFrame:
 
 
 def main() -> int:
+    full = ROOT / "data" / "universe_full.json"
     cfg = json.loads((ROOT / "data" / "tickers.json").read_text())
-    entries = [cfg["benchmark"]] + cfg["universe"]
+    if full.exists():
+        entries = [cfg["benchmark"]] + json.loads(full.read_text())["universe"]
+    else:
+        entries = [cfg["benchmark"]] + cfg["universe"]
     RAW_DIR.mkdir(parents=True, exist_ok=True)
+    for stale in RAW_DIR.glob("*.csv"):
+        stale.unlink()
     manifest = {}
     ok = 0
     for i, e in enumerate(entries):
@@ -146,15 +152,15 @@ def main() -> int:
         if df is not None and not df.empty:
             df = df.dropna(subset=["Close"]).sort_index()
             df = df[~df.index.duplicated(keep="last")]
-            df.to_csv(RAW_DIR / f"{code_safe}.csv", float_format="%.6f")
+            df.to_csv(RAW_DIR / f"{code_safe}.csv.gz", float_format="%.6f")
             rows = len(df)
             status = "ok" if rows >= MIN_ROWS else "short"
             if status == "ok":
                 ok += 1
             manifest[code_safe] = {
                 "symbol": symbol,
-                "name": e["name"],
-                "sector": e["sector"],
+                "name": e.get("name", code),
+                "sector": e.get("sector", "Other"),
                 "rows": rows,
                 "first": str(df.index[0].date()),
                 "last": str(df.index[-1].date()),
@@ -169,12 +175,12 @@ def main() -> int:
                 "rows": 0, "status": "failed", "error": err,
             }
             print(f"[{i + 1}/{len(entries)}] {symbol} {e['name']}: FAILED ({err})")
-        time.sleep(1.0)
+        time.sleep(0.35)
 
     (RAW_DIR / "_manifest.json").write_text(json.dumps(manifest, indent=2))
     print(f"\nFetched {ok}/{len(entries)} symbols with >= {MIN_ROWS} rows")
-    if ok < MIN_OK:
-        print(f"ERROR: fewer than {MIN_OK} symbols fetched successfully", file=sys.stderr)
+    if ok < MIN_OK_FRACTION * len(entries):
+        print(f"ERROR: below {MIN_OK_FRACTION:.0%} success threshold", file=sys.stderr)
         return 1
     return 0
 
