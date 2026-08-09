@@ -1,0 +1,3144 @@
+{
+ "briefs": {
+  "badr": {
+   "meta": {
+    "handle": "badr",
+    "name": "Badr",
+    "emoji": "🌗",
+    "tagline": "Buy the dip — but only the dips that come back.",
+    "character": "A disciplined mean-reversion specialist who treats the 200-day line as a border, not a suggestion: nothing below it is ever a candidate, however cheap it looks. He buys short-term pain inside long-term strength, enters in tranches, kills a failed read within weeks, and refuses on principle to sell a winner just because it has become expensive.",
+    "risk_style": "quality mean reversion / asymmetric exits",
+    "color": "#888888"
+   },
+   "metrics": {
+    "final_equity": 230262.51,
+    "total_return": 1.3026,
+    "cagr": 0.1997,
+    "ann_vol": 0.1699,
+    "sharpe": 0.923,
+    "sortino": 1.345,
+    "max_drawdown": -0.2465,
+    "mdd_peak": "2022-05-08",
+    "mdd_trough": "2022-11-10",
+    "mdd_recovery": "2023-12-04",
+    "longest_underwater_sessions": 465,
+    "calmar": 0.81,
+    "beta_tasi": 0.48,
+    "alpha_annual": 0.2187,
+    "corr_tasi": 0.381,
+    "var95_daily": -0.0147,
+    "skew": 0.747,
+    "best_day": {
+     "date": "2024-03-17",
+     "ret": 0.081
+    },
+    "worst_day": {
+     "date": "2024-03-18",
+     "ret": -0.071
+    },
+    "monthly_returns": {
+     "2022-01": 0.0072,
+     "2022-02": 0.0046,
+     "2022-03": 0.0596,
+     "2022-04": 0.1821,
+     "2022-05": -0.1088,
+     "2022-06": -0.1115,
+     "2022-07": -0.0011,
+     "2022-08": 0.0187,
+     "2022-09": -0.0304,
+     "2022-10": 0.0272,
+     "2022-11": -0.0242,
+     "2022-12": -0.0074,
+     "2023-01": 0.0227,
+     "2023-02": -0.0047,
+     "2023-03": -0.0049,
+     "2023-04": 0.0349,
+     "2023-05": 0.0246,
+     "2023-06": 0.0319,
+     "2023-07": 0.0433,
+     "2023-08": 0.0358,
+     "2023-09": -0.0043,
+     "2023-10": -0.0181,
+     "2023-11": 0.0664,
+     "2023-12": 0.095,
+     "2024-01": -0.0591,
+     "2024-02": 0.2603,
+     "2024-03": 0.2782,
+     "2024-04": 0.0544,
+     "2024-05": -0.0393,
+     "2024-06": 0.0423,
+     "2024-07": 0.0161,
+     "2024-08": -0.04,
+     "2024-09": 0.0379,
+     "2024-10": 0.0402,
+     "2024-11": -0.0601,
+     "2024-12": 0.0141,
+     "2025-01": 0.0379,
+     "2025-02": -0.0413,
+     "2025-03": -0.0236,
+     "2025-04": 0.033,
+     "2025-05": -0.0081,
+     "2025-06": 0.0034,
+     "2025-07": 0.0026,
+     "2025-08": 0.0225,
+     "2025-09": 0.0417,
+     "2025-10": -0.0024,
+     "2025-11": -0.0354,
+     "2025-12": 0.0181,
+     "2026-01": 0.1282,
+     "2026-02": -0.0552,
+     "2026-03": -0.0456,
+     "2026-04": -0.0014,
+     "2026-05": -0.0264,
+     "2026-06": 0.0387,
+     "2026-07": -0.0082,
+     "2026-08": -0.0002
+    },
+    "positive_months_pct": 0.554,
+    "n_trades": 376,
+    "n_buys": 225,
+    "n_sells": 151,
+    "win_rate": 0.298,
+    "profit_factor": 1.935,
+    "realized_pnl": 126941.32,
+    "avg_win": 5838.01,
+    "avg_loss": -1280.84,
+    "turnover_annual": 11.46,
+    "favorite_stock": {
+     "code": "1303",
+     "name": "1303",
+     "trades": 18
+    },
+    "most_profitable_stock": {
+     "code": "1320",
+     "name": "1320",
+     "realized": 57693.05
+    },
+    "most_painful_stock": {
+     "code": "4090",
+     "name": "4090",
+     "realized": -8319.72
+    },
+    "best_trade": {
+     "date": "2024-03-19",
+     "code": "1320",
+     "side": "sell",
+     "shares": 1568,
+     "price": 73.263,
+     "value": 114876.94,
+     "fee": 91.9,
+     "realized_pnl": 60005.87,
+     "held_since": "2023-11-28",
+     "reason": "trail: +129.2% after peaking +154.6%"
+    },
+    "worst_trade": {
+     "date": "2024-11-25",
+     "code": "4090",
+     "side": "sell",
+     "shares": 2366,
+     "price": 20.41,
+     "value": 48289.22,
+     "fee": 38.63,
+     "realized_pnl": -6771.11,
+     "held_since": "2024-09-01",
+     "reason": "time stop: 60 sessions for -12.0%"
+    },
+    "longest_hold": {
+     "code": "2270",
+     "name": "SADAFCO",
+     "days": 189,
+     "sold": "2023-06-18",
+     "bought": "2022-12-11"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 98506,
+     "year_return": -0.0149,
+     "rank": 8
+    },
+    "2023": {
+     "end_equity": 134670,
+     "year_return": 0.3671,
+     "rank": 8
+    },
+    "2024": {
+     "end_equity": 216292,
+     "year_return": 0.6061,
+     "rank": 8
+    },
+    "2025": {
+     "end_equity": 226010,
+     "year_return": 0.0449,
+     "rank": 6
+    },
+    "2026": {
+     "end_equity": 230263,
+     "year_return": 0.0188,
+     "rank": 7
+    }
+   },
+   "dividends_received": 10169.96,
+   "commissions_paid": 7064.79,
+   "best_trades": [
+    {
+     "date": "2024-03-19",
+     "code": "1320",
+     "side": "sell",
+     "shares": 1568,
+     "price": 73.263,
+     "value": 114876.94,
+     "fee": 91.9,
+     "realized_pnl": 60005.87,
+     "held_since": "2023-11-28",
+     "reason": "trail: +129.2% after peaking +154.6%",
+     "name": "1320"
+    },
+    {
+     "date": "2024-04-02",
+     "code": "2082",
+     "side": "sell",
+     "shares": 208,
+     "price": 343.341,
+     "value": 71414.97,
+     "fee": 57.13,
+     "realized_pnl": 14918.28,
+     "held_since": "2024-01-04",
+     "reason": "trail: +28.6% after peaking +45.8%",
+     "name": "ACWA Power"
+    },
+    {
+     "date": "2024-01-22",
+     "code": "2200",
+     "side": "sell",
+     "shares": 6929,
+     "price": 6.187,
+     "value": 42869.06,
+     "fee": 34.3,
+     "realized_pnl": 12914.45,
+     "held_since": "2023-09-26",
+     "reason": "trail: +43.2% after peaking +55.4%",
+     "name": "2200"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2024-11-25",
+     "code": "4090",
+     "side": "sell",
+     "shares": 2366,
+     "price": 20.41,
+     "value": 48289.22,
+     "fee": 38.63,
+     "realized_pnl": -6771.11,
+     "held_since": "2024-09-01",
+     "reason": "time stop: 60 sessions for -12.0%",
+     "name": "4090"
+    },
+    {
+     "date": "2024-04-01",
+     "code": "4009",
+     "side": "sell",
+     "shares": 263,
+     "price": 91.954,
+     "value": 24183.9,
+     "fee": 19.35,
+     "realized_pnl": -5023.69,
+     "held_since": "2024-03-20",
+     "reason": "entry invalidated: lost sma50 after 8 sessions (-10.9%)",
+     "name": "4009"
+    },
+    {
+     "date": "2024-08-15",
+     "code": "2300",
+     "side": "sell",
+     "shares": 463,
+     "price": 65.667,
+     "value": 30403.89,
+     "fee": 24.32,
+     "realized_pnl": -4724.77,
+     "held_since": "2024-05-16",
+     "reason": "time stop: 60 sessions for -13.5%",
+     "name": "2300"
+    }
+   ],
+   "n_trades": 376,
+   "sample_journal": [
+    {
+     "date": "2022-01-02",
+     "mood": "watchful",
+     "sentiment": -0.2,
+     "note": "Nothing clears quality-plus-dip today; the screen is empty by construction. Index under its 200-day but not yet rolled over."
+    },
+    {
+     "date": "2022-04-26",
+     "mood": "unhurried",
+     "sentiment": 0.04,
+     "note": "Equity SAR 124,780, 6 positions, 99% deployed. 1 names pass quality-plus-dip right now."
+    },
+    {
+     "date": "2022-08-30",
+     "mood": "constructive",
+     "sentiment": 0.43,
+     "note": "Opened Arab National Bank: RSI 47, one-week move -2.2%, -10% off its 52-week high — but 12-month return +42% and still +13% above its 200-day line. Quality first, discomfort second."
+    },
+    {
+     "date": "2022-12-25",
+     "mood": "reserved",
+     "sentiment": -0.76,
+     "note": "Equity SAR 98,186, 2 positions, 35% deployed. 1 names pass quality-plus-dip right now."
+    },
+    {
+     "date": "2023-04-25",
+     "mood": "dry-powder",
+     "sentiment": 0.28,
+     "note": "TASI 11,265, breadth 96%. Nothing clears quality-plus-dip today; the screen is empty by construction. Book 22% invested across 1 names, SAR 79,592 idle."
+    },
+    {
+     "date": "2023-08-23",
+     "mood": "watchful",
+     "sentiment": -0.34,
+     "note": "TASI 11,367, breadth 25%. Top of the watchlist: SADAFCO, RSI 42, 12m +104%, turnover SAR 27.6m. Book 100% invested across 6 names, SAR 292 idle."
+    },
+    {
+     "date": "2023-12-17",
+     "mood": "unhurried",
+     "sentiment": 0.31,
+     "note": "TASI 11,601, breadth 87%. Nothing clears quality-plus-dip today; the screen is empty by construction. Book 70% invested across 3 names, SAR 38,413 idle."
+    },
+    {
+     "date": "2024-04-16",
+     "mood": "protective",
+     "sentiment": 0.15,
+     "note": "7203 lost its 50-day line 13 sessions after I bought it, out at -5.0%. A pullback entry that fails that fast was a wrong read, not bad luck. Small and early beats large and late."
+    },
+    {
+     "date": "2024-08-14",
+     "mood": "trimmed back",
+     "sentiment": -0.25,
+     "note": "2300 held 60 sessions and produced -13.5%. A reversion that has not reverted in three months is not a reversion, it is rent. Capital recycled."
+    },
+    {
+     "date": "2024-12-08",
+     "mood": "engaged",
+     "sentiment": -0.15,
+     "note": "Opened 4020: RSI 44, one-week move -4.6%, -9% off its 52-week high — but 12-month return +78% and still +10% above its 200-day line. Quality first, discomfort second."
+    },
+    {
+     "date": "2025-04-07",
+     "mood": "watchful",
+     "sentiment": -0.68,
+     "note": "Equity SAR 206,835, 2 positions, 32% deployed. 1 names pass quality-plus-dip right now."
+    },
+    {
+     "date": "2025-08-04",
+     "mood": "unhurried",
+     "sentiment": -0.31,
+     "note": "Equity SAR 217,387, 2 positions, 29% deployed. 1 names pass quality-plus-dip right now."
+    },
+    {
+     "date": "2025-11-26",
+     "mood": "protective",
+     "sentiment": -0.8,
+     "note": "Seera Group lost its 50-day line 17 sessions after I bought it, out at -7.0%. A pullback entry that fails that fast was a wrong read, not bad luck. Small and early beats large and late."
+    },
+    {
+     "date": "2026-03-29",
+     "mood": "reserved",
+     "sentiment": -0.34,
+     "note": "Nothing clears quality-plus-dip today; the screen is empty by construction. Index above its own 200-day, so the candidate pool is wide."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 211798.26,
+    "positions": {
+     "1831": {
+      "shares": 3517,
+      "value": 18464.25
+     }
+    }
+   }
+  },
+  "dira": {
+   "meta": {
+    "handle": "dira",
+    "name": "Dira",
+    "emoji": "🛡️",
+    "tagline": "The shield is what you own and when you leave — not how much cash you hide behind.",
+    "character": "A risk manager who audits her own defenses the way she audits her positions: she measured every market-timing rule available on this tape, found each one cost more than it saved, and rebuilt the shield out of liquidity screens, sector limits and trailing stops instead. She stays invested through the ugly quarters, keeps a tight leash on every individual name, and spends her patience where it compounds — buying survivors while the rest of the room is counting its losses.",
+    "risk_style": "adaptive defense — trend core, hard per-name risk limits, opportunistic in fear",
+    "color": "#888888"
+   },
+   "metrics": {
+    "final_equity": 243930.44,
+    "total_return": 1.4393,
+    "cagr": 0.2149,
+    "ann_vol": 0.1759,
+    "sharpe": 0.97,
+    "sortino": 1.379,
+    "max_drawdown": -0.2377,
+    "mdd_peak": "2024-11-06",
+    "mdd_trough": "2025-09-14",
+    "mdd_recovery": null,
+    "longest_underwater_sessions": 436,
+    "calmar": 0.904,
+    "beta_tasi": 0.832,
+    "alpha_annual": 0.2364,
+    "corr_tasi": 0.636,
+    "var95_daily": -0.0178,
+    "skew": -0.209,
+    "best_day": {
+     "date": "2023-06-11",
+     "ret": 0.0547
+    },
+    "worst_day": {
+     "date": "2025-04-06",
+     "ret": -0.0599
+    },
+    "monthly_returns": {
+     "2022-01": 0.0404,
+     "2022-02": 0.0344,
+     "2022-03": 0.0912,
+     "2022-04": 0.0523,
+     "2022-05": -0.0556,
+     "2022-06": -0.1093,
+     "2022-07": 0.0685,
+     "2022-08": 0.0045,
+     "2022-09": -0.0594,
+     "2022-10": 0.0345,
+     "2022-11": -0.0126,
+     "2022-12": -0.0167,
+     "2023-01": 0.0079,
+     "2023-02": -0.0268,
+     "2023-03": 0.064,
+     "2023-04": 0.0753,
+     "2023-05": 0.0285,
+     "2023-06": 0.1236,
+     "2023-07": 0.0365,
+     "2023-08": 0.0731,
+     "2023-09": -0.0281,
+     "2023-10": -0.0059,
+     "2023-11": 0.1268,
+     "2023-12": 0.1516,
+     "2024-01": 0.0483,
+     "2024-02": 0.2445,
+     "2024-03": 0.0178,
+     "2024-04": 0.048,
+     "2024-05": -0.0267,
+     "2024-06": 0.0424,
+     "2024-07": 0.0748,
+     "2024-08": -0.0545,
+     "2024-09": 0.0318,
+     "2024-10": 0.0407,
+     "2024-11": -0.0781,
+     "2024-12": 0.057,
+     "2025-01": 0.0081,
+     "2025-02": -0.0586,
+     "2025-03": -0.0548,
+     "2025-04": -0.0069,
+     "2025-05": -0.0477,
+     "2025-06": -0.0226,
+     "2025-07": -0.0164,
+     "2025-08": -0.0051,
+     "2025-09": 0.0596,
+     "2025-10": -0.0016,
+     "2025-11": -0.0675,
+     "2025-12": 0.0164,
+     "2026-01": 0.1244,
+     "2026-02": -0.0762,
+     "2026-03": 0.0095,
+     "2026-04": 0.0517,
+     "2026-05": -0.0104,
+     "2026-06": -0.0197,
+     "2026-07": -0.0321,
+     "2026-08": 0.0115
+    },
+    "positive_months_pct": 0.571,
+    "n_trades": 249,
+    "n_buys": 125,
+    "n_sells": 124,
+    "win_rate": 0.476,
+    "profit_factor": 1.971,
+    "realized_pnl": 109687.28,
+    "avg_win": 3774.61,
+    "avg_loss": -1738.69,
+    "turnover_annual": 4.17,
+    "favorite_stock": {
+     "code": "4030",
+     "name": "Bahri",
+     "trades": 8
+    },
+    "most_profitable_stock": {
+     "code": "1303",
+     "name": "1303",
+     "realized": 52099.31
+    },
+    "most_painful_stock": {
+     "code": "1302",
+     "name": "1302",
+     "realized": -7079.14
+    },
+    "best_trade": {
+     "date": "2025-03-06",
+     "code": "1303",
+     "side": "sell",
+     "shares": 7851,
+     "price": 6.477,
+     "value": 50849.04,
+     "fee": 40.68,
+     "realized_pnl": 39726.47,
+     "held_since": "2023-04-11",
+     "reason": "trend broken: close 6.45 under its 200d line, +355.3% on the position"
+    },
+    "worst_trade": {
+     "date": "2025-12-01",
+     "code": "2250",
+     "side": "sell",
+     "shares": 1225,
+     "price": 14.113,
+     "value": 17288.35,
+     "fee": 13.83,
+     "realized_pnl": -5912.49,
+     "held_since": "2025-09-01",
+     "reason": "trailing stop: -28.2% off the 19.60 peak, booking -25.7%"
+    },
+    "longest_hold": {
+     "code": "1303",
+     "name": "1303",
+     "days": 695,
+     "sold": "2025-03-06",
+     "bought": "2023-04-11"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 105397,
+     "year_return": 0.054,
+     "rank": 6
+    },
+    "2023": {
+     "end_equity": 190629,
+     "year_return": 0.8087,
+     "rank": 4
+    },
+    "2024": {
+     "end_equity": 286184,
+     "year_return": 0.5013,
+     "rank": 2
+    },
+    "2025": {
+     "end_equity": 232885,
+     "year_return": -0.1862,
+     "rank": 5
+    },
+    "2026": {
+     "end_equity": 243930,
+     "year_return": 0.0474,
+     "rank": 4
+    }
+   },
+   "dividends_received": 16906.61,
+   "commissions_paid": 2999.22,
+   "best_trades": [
+    {
+     "date": "2025-03-06",
+     "code": "1303",
+     "side": "sell",
+     "shares": 7851,
+     "price": 6.477,
+     "value": 50849.04,
+     "fee": 40.68,
+     "realized_pnl": 39726.47,
+     "held_since": "2023-04-11",
+     "reason": "trend broken: close 6.45 under its 200d line, +355.3% on the position",
+     "name": "1303"
+    },
+    {
+     "date": "2024-11-17",
+     "code": "2200",
+     "side": "sell",
+     "shares": 4371,
+     "price": 8.621,
+     "value": 37681.03,
+     "fee": 30.14,
+     "realized_pnl": 24036.69,
+     "held_since": "2023-06-20",
+     "reason": "trend broken: close 8.62 under its 200d line, +176.3% on the position",
+     "name": "2200"
+    },
+    {
+     "date": "2024-04-23",
+     "code": "7203",
+     "side": "sell",
+     "shares": 28,
+     "price": 914.742,
+     "value": 25612.79,
+     "fee": 20.49,
+     "realized_pnl": 16990.08,
+     "held_since": "2022-09-19",
+     "reason": "weekly review: rank 32, outside the top 30 — slot reassigned",
+     "name": "7203"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2025-12-01",
+     "code": "2250",
+     "side": "sell",
+     "shares": 1225,
+     "price": 14.113,
+     "value": 17288.35,
+     "fee": 13.83,
+     "realized_pnl": -5912.49,
+     "held_since": "2025-09-01",
+     "reason": "trailing stop: -28.2% off the 19.60 peak, booking -25.7%",
+     "name": "2250"
+    },
+    {
+     "date": "2024-08-07",
+     "code": "8060",
+     "side": "sell",
+     "shares": 893,
+     "price": 21.829,
+     "value": 19493.37,
+     "fee": 15.59,
+     "realized_pnl": -5701.82,
+     "held_since": "2024-07-29",
+     "reason": "trend broken: close 21.80 under its 200d line, -22.7% on the position",
+     "name": "8060"
+    },
+    {
+     "date": "2026-01-08",
+     "code": "4030",
+     "side": "sell",
+     "shares": 747,
+     "price": 24.428,
+     "value": 18247.55,
+     "fee": 14.6,
+     "realized_pnl": -5459.13,
+     "held_since": "2025-11-17",
+     "reason": "trend broken: close 24.30 under its 200d line, -23.4% on the position",
+     "name": "Bahri"
+    }
+   ],
+   "n_trades": 249,
+   "sample_journal": [
+    {
+     "date": "2022-01-02",
+     "mood": "measured",
+     "sentiment": -0.107,
+     "note": "Opportunity set: 0 of 0 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 32%, TASI +0.00% today."
+    },
+    {
+     "date": "2022-04-26",
+     "mood": "composed",
+     "sentiment": 0.216,
+     "note": "Opportunity set: 71 of 116 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 46%, TASI -0.29% today."
+    },
+    {
+     "date": "2022-08-30",
+     "mood": "disciplined",
+     "sentiment": 0.336,
+     "note": "Opportunity set: 82 of 120 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 86%, TASI -0.60% today."
+    },
+    {
+     "date": "2022-12-25",
+     "mood": "re-underwriting",
+     "sentiment": -0.305,
+     "note": "Opportunity set: 40 of 104 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 12%, TASI +0.18% today."
+    },
+    {
+     "date": "2023-04-25",
+     "mood": "on the balls of my feet",
+     "sentiment": 0.15,
+     "note": "Opportunity set: 129 of 131 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 96%, TASI +0.91% today."
+    },
+    {
+     "date": "2023-08-23",
+     "mood": "measured",
+     "sentiment": 0.08,
+     "note": "Opportunity set: 65 of 123 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 25%, TASI -0.09% today."
+    },
+    {
+     "date": "2023-12-17",
+     "mood": "disciplined",
+     "sentiment": 0.555,
+     "note": "Opportunity set: 98 of 119 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 87%, TASI +0.50% today."
+    },
+    {
+     "date": "2024-04-16",
+     "mood": "composed",
+     "sentiment": 0.265,
+     "note": "Opportunity set: 95 of 135 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 50%, TASI -1.64% today."
+    },
+    {
+     "date": "2024-08-14",
+     "mood": "re-underwriting",
+     "sentiment": 0.01,
+     "note": "Opportunity set: 56 of 130 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 34%, TASI +0.45% today."
+    },
+    {
+     "date": "2024-12-08",
+     "mood": "on the balls of my feet",
+     "sentiment": 0.135,
+     "note": "Opportunity set: 74 of 129 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 47%, TASI +0.20% today."
+    },
+    {
+     "date": "2025-04-07",
+     "mood": "defensive",
+     "sentiment": -0.381,
+     "note": "Opportunity set: 21 of 124 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 4%, TASI +1.05% today."
+    },
+    {
+     "date": "2025-08-04",
+     "mood": "watching the exits",
+     "sentiment": -0.105,
+     "note": "Opportunity set: 56 of 130 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 38%, TASI +0.06% today."
+    },
+    {
+     "date": "2025-11-26",
+     "mood": "patient",
+     "sentiment": -0.254,
+     "note": "Opportunity set: 23 of 121 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 11%, TASI -0.48% today."
+    },
+    {
+     "date": "2026-03-29",
+     "mood": "re-underwriting",
+     "sentiment": 0.046,
+     "note": "Opportunity set: 57 of 124 screened names sit above both their 50- and 100-day lines. That count is my entire regime model — when it falls under 11 the book cannot fill itself and de-risks without my forecasting anything. Breadth 39%, TASI -0.13% today."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 33428.77,
+    "positions": {
+     "1321": {
+      "shares": 115,
+      "value": 21298.0
+     },
+     "7200": {
+      "shares": 151,
+      "value": 38505.0
+     },
+     "4030": {
+      "shares": 369,
+      "value": 11165.94
+     },
+     "1050": {
+      "shares": 524,
+      "value": 10270.4
+     },
+     "2223": {
+      "shares": 185,
+      "value": 23125.0
+     },
+     "2380": {
+      "shares": 1769,
+      "value": 27295.67
+     },
+     "2200": {
+      "shares": 3648,
+      "value": 22690.56
+     },
+     "1150": {
+      "shares": 990,
+      "value": 23651.1
+     },
+     "1831": {
+      "shares": 1944,
+      "value": 10206.0
+     },
+     "4020": {
+      "shares": 1420,
+      "value": 22294.0
+     }
+    }
+   }
+  },
+  "hikma": {
+   "meta": {
+    "handle": "hikma",
+    "name": "Hikma",
+    "emoji": "🏛️",
+    "tagline": "Own the compounders. Steer the exposure. Collect the cash.",
+    "character": "A quality-compounding manager who treats a portfolio like an endowment with a pulse: durable, liquid, cash-returning businesses at the core, accumulated in slices rather than lumps. She is unsentimental about a name that stops earning its place, and she would rather hold 50% cash for a quarter than explain a 40% drawdown to anyone.",
+    "risk_style": "quality core with an active exposure valve",
+    "color": "#888888"
+   },
+   "metrics": {
+    "final_equity": 231990.88,
+    "total_return": 1.3199,
+    "cagr": 0.2017,
+    "ann_vol": 0.1596,
+    "sharpe": 0.983,
+    "sortino": 1.418,
+    "max_drawdown": -0.1841,
+    "mdd_peak": "2024-09-26",
+    "mdd_trough": "2025-09-14",
+    "mdd_recovery": null,
+    "longest_underwater_sessions": 465,
+    "calmar": 1.096,
+    "beta_tasi": 0.777,
+    "alpha_annual": 0.2194,
+    "corr_tasi": 0.656,
+    "var95_daily": -0.0156,
+    "skew": -0.201,
+    "best_day": {
+     "date": "2024-04-15",
+     "ret": 0.051
+    },
+    "worst_day": {
+     "date": "2025-04-06",
+     "ret": -0.0528
+    },
+    "monthly_returns": {
+     "2022-01": 0.0394,
+     "2022-02": 0.0459,
+     "2022-03": 0.0573,
+     "2022-04": 0.0911,
+     "2022-05": -0.0727,
+     "2022-06": -0.0897,
+     "2022-07": 0.0577,
+     "2022-08": -0.006,
+     "2022-09": -0.0227,
+     "2022-10": 0.0388,
+     "2022-11": -0.041,
+     "2022-12": -0.019,
+     "2023-01": 0.0149,
+     "2023-02": 0.0046,
+     "2023-03": 0.0664,
+     "2023-04": 0.0695,
+     "2023-05": 0.0163,
+     "2023-06": 0.0553,
+     "2023-07": 0.0336,
+     "2023-08": 0.0033,
+     "2023-09": -0.0359,
+     "2023-10": -0.0167,
+     "2023-11": 0.0837,
+     "2023-12": 0.1862,
+     "2024-01": 0.0321,
+     "2024-02": 0.2067,
+     "2024-03": 0.0163,
+     "2024-04": 0.0618,
+     "2024-05": 0.003,
+     "2024-06": 0.0357,
+     "2024-07": 0.0422,
+     "2024-08": -0.0145,
+     "2024-09": 0.0354,
+     "2024-10": -0.0032,
+     "2024-11": -0.0788,
+     "2024-12": 0.0177,
+     "2025-01": 0.056,
+     "2025-02": -0.0608,
+     "2025-03": -0.0235,
+     "2025-04": -0.0054,
+     "2025-05": -0.0444,
+     "2025-06": 0.0231,
+     "2025-07": -0.0256,
+     "2025-08": 0.011,
+     "2025-09": 0.051,
+     "2025-10": 0.0028,
+     "2025-11": -0.0371,
+     "2025-12": -0.0091,
+     "2026-01": 0.0956,
+     "2026-02": -0.0433,
+     "2026-03": 0.0204,
+     "2026-04": 0.0471,
+     "2026-05": -0.0197,
+     "2026-06": -0.0181,
+     "2026-07": -0.0132,
+     "2026-08": 0.0053
+    },
+    "positive_months_pct": 0.607,
+    "n_trades": 2343,
+    "n_buys": 1038,
+    "n_sells": 1305,
+    "win_rate": 0.501,
+    "profit_factor": 1.806,
+    "realized_pnl": 116363.89,
+    "avg_win": 398.81,
+    "avg_loss": -221.91,
+    "turnover_annual": 12.15,
+    "favorite_stock": {
+     "code": "1303",
+     "name": "1303",
+     "trades": 94
+    },
+    "most_profitable_stock": {
+     "code": "1303",
+     "name": "1303",
+     "realized": 39939.02
+    },
+    "most_painful_stock": {
+     "code": "4015",
+     "name": "4015",
+     "realized": -8271.39
+    },
+    "best_trade": {
+     "date": "2024-05-06",
+     "code": "2200",
+     "side": "sell",
+     "shares": 1338,
+     "price": 9.215,
+     "value": 12330.19,
+     "fee": 9.86,
+     "realized_pnl": 5586.0,
+     "held_since": "2023-09-04",
+     "reason": "scaling back toward target weight"
+    },
+    "worst_trade": {
+     "date": "2024-11-18",
+     "code": "4015",
+     "side": "sell",
+     "shares": 69,
+     "price": 145.927,
+     "value": 10068.96,
+     "fee": 8.06,
+     "realized_pnl": -2285.02,
+     "held_since": "2024-09-09",
+     "reason": "scaling back toward target weight"
+    },
+    "longest_hold": {
+     "code": "1303",
+     "name": "1303",
+     "days": 602,
+     "sold": "2025-03-24",
+     "bought": "2023-07-31"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 106308,
+     "year_return": 0.0631,
+     "rank": 5
+    },
+    "2023": {
+     "end_equity": 167554,
+     "year_return": 0.5761,
+     "rank": 7
+    },
+    "2024": {
+     "end_equity": 232464,
+     "year_return": 0.3874,
+     "rank": 6
+    },
+    "2025": {
+     "end_equity": 216919,
+     "year_return": -0.0669,
+     "rank": 7
+    },
+    "2026": {
+     "end_equity": 231991,
+     "year_return": 0.0695,
+     "rank": 6
+    }
+   },
+   "dividends_received": 16767.06,
+   "commissions_paid": 7985.95,
+   "best_trades": [
+    {
+     "date": "2024-05-06",
+     "code": "2200",
+     "side": "sell",
+     "shares": 1338,
+     "price": 9.215,
+     "value": 12330.19,
+     "fee": 9.86,
+     "realized_pnl": 5586.0,
+     "held_since": "2023-09-04",
+     "reason": "scaling back toward target weight",
+     "name": "2200"
+    },
+    {
+     "date": "2024-03-11",
+     "code": "1321",
+     "side": "sell",
+     "shares": 71,
+     "price": 154.523,
+     "value": 10971.11,
+     "fee": 8.78,
+     "realized_pnl": 5582.47,
+     "held_since": "2023-11-20",
+     "reason": "harvest: RSI 83, +100% over its 200-day mean",
+     "name": "1321"
+    },
+    {
+     "date": "2024-04-15",
+     "code": "1212",
+     "side": "sell",
+     "shares": 67,
+     "price": 177.911,
+     "value": 11920.04,
+     "fee": 9.54,
+     "realized_pnl": 4789.37,
+     "held_since": "2023-07-10",
+     "reason": "scaling back toward target weight",
+     "name": "1212"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2024-11-18",
+     "code": "4015",
+     "side": "sell",
+     "shares": 69,
+     "price": 145.927,
+     "value": 10068.96,
+     "fee": 8.06,
+     "realized_pnl": -2285.02,
+     "held_since": "2024-09-09",
+     "reason": "scaling back toward target weight",
+     "name": "4015"
+    },
+    {
+     "date": "2025-11-24",
+     "code": "2250",
+     "side": "sell",
+     "shares": 596,
+     "price": 14.863,
+     "value": 8858.09,
+     "fee": 7.09,
+     "realized_pnl": -1616.8,
+     "held_since": "2025-07-14",
+     "reason": "scaling back toward target weight",
+     "name": "2250"
+    },
+    {
+     "date": "2025-06-02",
+     "code": "4100",
+     "side": "sell",
+     "shares": 85,
+     "price": 89.855,
+     "value": 7637.68,
+     "fee": 6.11,
+     "realized_pnl": -1533.04,
+     "held_since": "2025-02-17",
+     "reason": "scaling back toward target weight",
+     "name": "4100"
+    }
+   ],
+   "n_trades": 2343,
+   "sample_journal": [
+    {
+     "date": "2022-01-02",
+     "mood": "cautious",
+     "sentiment": -0.152,
+     "note": "No position clears the gate today: cash 100,000 SAR is a position too."
+    },
+    {
+     "date": "2022-04-26",
+     "mood": "patient",
+     "sentiment": 0.23,
+     "note": "Dividends banked to date 324 SAR. Breadth 46%, exposure target 100%. Nothing to do is a decision I am paid to make correctly."
+    },
+    {
+     "date": "2022-08-30",
+     "mood": "patient",
+     "sentiment": 0.873,
+     "note": "Ranking table steady — 40 names clear the quality, liquidity and trend gates. Holding 11; the other 29 can wait their turn."
+    },
+    {
+     "date": "2022-12-25",
+     "mood": "defensive",
+     "sentiment": -0.655,
+     "note": "Opened 4071 at 96.71 — 12m +27%, 6m +20%, turnover 26.2m SAR/day. Position built in slices, not lumps."
+    },
+    {
+     "date": "2023-04-25",
+     "mood": "accumulating",
+     "sentiment": 1.0,
+     "note": "Rotation week: released SADAFCO (below trend, out of the top 9) and started Dallah Healthcare. The core is a standard the holding has to keep meeting, not a shrine."
+    },
+    {
+     "date": "2023-08-23",
+     "mood": "defensive",
+     "sentiment": -0.1,
+     "note": "SADAFCO paid 96 SAR today — 2,813 SAR of dividends banked so far. That cash gets ranked like any other riyal at the next accumulation, not parked out of sentiment."
+    },
+    {
+     "date": "2023-12-17",
+     "mood": "accumulating",
+     "sentiment": 0.918,
+     "note": "Opened 1831 at 5.43 — 12m +88%, 6m +39%, turnover 24.0m SAR/day. Position built in slices, not lumps."
+    },
+    {
+     "date": "2024-04-16",
+     "mood": "patient",
+     "sentiment": 0.267,
+     "note": "Ranking table steady — 29 names clear the quality, liquidity and trend gates. Holding 17; the other 12 can wait their turn."
+    },
+    {
+     "date": "2024-08-14",
+     "mood": "cautious",
+     "sentiment": -0.3,
+     "note": "Equity 232,826 SAR, -4.5% below the high-water mark. Breadth 34%, exposure 80%. Nothing here has broken a rule, so nothing here gets sold on feeling."
+    },
+    {
+     "date": "2024-12-08",
+     "mood": "accumulating",
+     "sentiment": -0.095,
+     "note": "Topped up 5 core holdings back toward target; breadth 47% says the tape is carrying more names than it is dropping. Cash at 1% of the book and shrinking."
+    },
+    {
+     "date": "2025-04-07",
+     "mood": "defensive",
+     "sentiment": -0.763,
+     "note": "Risk-off holds at 73% invested against a 70% target; breadth 4%, TASI +1.1% today. Capital that survives a bad tape is the only capital that compounds through one."
+    },
+    {
+     "date": "2025-08-04",
+     "mood": "cautious",
+     "sentiment": -0.235,
+     "note": "Dividends banked to date 10,465 SAR. Breadth 38%, exposure target 97%. Nothing to do is a decision I am paid to make correctly."
+    },
+    {
+     "date": "2025-11-26",
+     "mood": "defensive",
+     "sentiment": -0.692,
+     "note": "Risk-off holds at 77% invested against a 70% target; breadth 11%, TASI -0.5% today. Capital that survives a bad tape is the only capital that compounds through one."
+    },
+    {
+     "date": "2026-03-29",
+     "mood": "cautious",
+     "sentiment": 0.123,
+     "note": "Opened Saudi Aramco at 26.65 — 12m +13%, 6m +10%, turnover 345.1m SAR/day. Position built in slices, not lumps."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 66571.24,
+    "positions": {
+     "1303": {
+      "shares": 1000,
+      "value": 14540.0
+     },
+     "4030": {
+      "shares": 517,
+      "value": 15644.42
+     },
+     "2020": {
+      "shares": 28,
+      "value": 3334.8
+     },
+     "1050": {
+      "shares": 853,
+      "value": 16718.8
+     },
+     "7200": {
+      "shares": 77,
+      "value": 19635.0
+     },
+     "1321": {
+      "shares": 90,
+      "value": 16668.0
+     },
+     "2223": {
+      "shares": 133,
+      "value": 16625.0
+     },
+     "2380": {
+      "shares": 1088,
+      "value": 16787.84
+     },
+     "2286": {
+      "shares": 1636,
+      "value": 6445.84
+     },
+     "2050": {
+      "shares": 157,
+      "value": 4119.68
+     },
+     "2290": {
+      "shares": 538,
+      "value": 16355.2
+     },
+     "2222": {
+      "shares": 229,
+      "value": 6086.82
+     },
+     "1831": {
+      "shares": 2373,
+      "value": 12458.25
+     }
+    }
+   }
+  },
+  "malik": {
+   "meta": {
+    "handle": "malik",
+    "name": "Malik",
+    "emoji": "👑",
+    "tagline": "I grade the field every night. Then I try to beat it.",
+    "character": "A meta-allocator who keeps a nightly scorecard on every rival book — trailing return, curve quality, turnover — and folds the ones worth following into his own ranking. Underneath it he runs his own cross-sectional momentum engine, seven names deep, and when his signal outranks the field he takes the position first and lets them arrive later. Courteous about credit, ruthless about the arithmetic: he only follows a leader who is actually ahead of him.",
+    "risk_style": "meta-ensemble momentum — peer-graded, self-led",
+    "color": "#888888"
+   },
+   "metrics": {
+    "final_equity": 283513.2,
+    "total_return": 1.8351,
+    "cagr": 0.2555,
+    "ann_vol": 0.191,
+    "sharpe": 1.08,
+    "sortino": 1.611,
+    "max_drawdown": -0.1647,
+    "mdd_peak": "2022-04-20",
+    "mdd_trough": "2022-07-14",
+    "mdd_recovery": "2023-07-03",
+    "longest_underwater_sessions": 301,
+    "calmar": 1.551,
+    "beta_tasi": 0.811,
+    "alpha_annual": 0.2812,
+    "corr_tasi": 0.572,
+    "var95_daily": -0.0195,
+    "skew": -0.039,
+    "best_day": {
+     "date": "2024-04-15",
+     "ret": 0.0531
+    },
+    "worst_day": {
+     "date": "2025-04-06",
+     "ret": -0.073
+    },
+    "monthly_returns": {
+     "2022-01": 0.0498,
+     "2022-02": 0.0837,
+     "2022-03": 0.0908,
+     "2022-04": 0.0618,
+     "2022-05": -0.0569,
+     "2022-06": -0.0904,
+     "2022-07": 0.0607,
+     "2022-08": -0.0108,
+     "2022-09": 0.0299,
+     "2022-10": 0.066,
+     "2022-11": -0.0377,
+     "2022-12": -0.0412,
+     "2023-01": 0.0331,
+     "2023-02": -0.0387,
+     "2023-03": 0.0772,
+     "2023-04": 0.0019,
+     "2023-05": 0.0,
+     "2023-06": 0.0,
+     "2023-07": 0.0521,
+     "2023-08": 0.0396,
+     "2023-09": -0.0229,
+     "2023-10": -0.0089,
+     "2023-11": 0.0777,
+     "2023-12": 0.1413,
+     "2024-01": 0.0396,
+     "2024-02": 0.1681,
+     "2024-03": 0.0341,
+     "2024-04": 0.028,
+     "2024-05": 0.0346,
+     "2024-06": 0.0455,
+     "2024-07": 0.0797,
+     "2024-08": -0.0157,
+     "2024-09": 0.0472,
+     "2024-10": -0.0091,
+     "2024-11": -0.0142,
+     "2024-12": 0.0331,
+     "2025-01": 0.0761,
+     "2025-02": -0.062,
+     "2025-03": 0.0003,
+     "2025-04": -0.009,
+     "2025-05": -0.0284,
+     "2025-06": 0.0289,
+     "2025-07": -0.0007,
+     "2025-08": -0.0256,
+     "2025-09": 0.0578,
+     "2025-10": 0.0096,
+     "2025-11": -0.0569,
+     "2025-12": 0.0145,
+     "2026-01": 0.0877,
+     "2026-02": -0.0731,
+     "2026-03": 0.0408,
+     "2026-04": 0.1311,
+     "2026-05": -0.0347,
+     "2026-06": 0.0099,
+     "2026-07": -0.0782,
+     "2026-08": 0.0157
+    },
+    "positive_months_pct": 0.607,
+    "n_trades": 413,
+    "n_buys": 205,
+    "n_sells": 208,
+    "win_rate": 0.524,
+    "profit_factor": 1.861,
+    "realized_pnl": 159070.3,
+    "avg_win": 3153.43,
+    "avg_loss": -1865.19,
+    "turnover_annual": 12.07,
+    "favorite_stock": {
+     "code": "2320",
+     "name": "2320",
+     "trades": 14
+    },
+    "most_profitable_stock": {
+     "code": "1303",
+     "name": "1303",
+     "realized": 64714.41
+    },
+    "most_painful_stock": {
+     "code": "2370",
+     "name": "2370",
+     "realized": -13256.77
+    },
+    "best_trade": {
+     "date": "2024-12-02",
+     "code": "1303",
+     "side": "sell",
+     "shares": 5219,
+     "price": 7.096,
+     "value": 37036.37,
+     "fee": 29.63,
+     "realized_pnl": 26958.67,
+     "held_since": "2023-10-24",
+     "reason": "fell out of the monthly ranking"
+    },
+    "worst_trade": {
+     "date": "2026-07-14",
+     "code": "8311",
+     "side": "sell",
+     "shares": 3610,
+     "price": 8.936,
+     "value": 32257.26,
+     "fee": 25.81,
+     "realized_pnl": -9278.49,
+     "held_since": "2026-06-02",
+     "reason": "broke 8% under its 100d average"
+    },
+    "longest_hold": {
+     "code": "1303",
+     "name": "1303",
+     "days": 405,
+     "sold": "2024-12-02",
+     "bought": "2023-10-24"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 120104,
+     "year_return": 0.201,
+     "rank": 2
+    },
+    "2023": {
+     "end_equity": 167692,
+     "year_return": 0.3962,
+     "rank": 6
+    },
+    "2024": {
+     "end_equity": 262987,
+     "year_return": 0.5683,
+     "rank": 4
+    },
+    "2025": {
+     "end_equity": 261702,
+     "year_return": -0.0049,
+     "rank": 3
+    },
+    "2026": {
+     "end_equity": 283513,
+     "year_return": 0.0833,
+     "rank": 3
+    }
+   },
+   "dividends_received": 20409.49,
+   "commissions_paid": 8815.49,
+   "best_trades": [
+    {
+     "date": "2024-12-02",
+     "code": "1303",
+     "side": "sell",
+     "shares": 5219,
+     "price": 7.096,
+     "value": 37036.37,
+     "fee": 29.63,
+     "realized_pnl": 26958.67,
+     "held_since": "2023-10-24",
+     "reason": "fell out of the monthly ranking",
+     "name": "1303"
+    },
+    {
+     "date": "2024-08-04",
+     "code": "7211",
+     "side": "sell",
+     "shares": 1775,
+     "price": 24.988,
+     "value": 44352.81,
+     "fee": 35.48,
+     "realized_pnl": 13665.47,
+     "held_since": "2024-07-02",
+     "reason": "fell out of the monthly ranking",
+     "name": "7211"
+    },
+    {
+     "date": "2025-07-02",
+     "code": "2240",
+     "side": "sell",
+     "shares": 1054,
+     "price": 44.978,
+     "value": 47406.28,
+     "fee": 37.93,
+     "realized_pnl": 13661.42,
+     "held_since": "2025-04-06",
+     "reason": "fell out of the monthly ranking",
+     "name": "2240"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2026-07-14",
+     "code": "8311",
+     "side": "sell",
+     "shares": 3610,
+     "price": 8.936,
+     "value": 32257.26,
+     "fee": 25.81,
+     "realized_pnl": -9278.49,
+     "held_since": "2026-06-02",
+     "reason": "broke 8% under its 100d average",
+     "name": "8311"
+    },
+    {
+     "date": "2025-12-02",
+     "code": "2380",
+     "side": "sell",
+     "shares": 4349,
+     "price": 7.196,
+     "value": 31297.14,
+     "fee": 25.04,
+     "realized_pnl": -6209.98,
+     "held_since": "2025-11-03",
+     "reason": "fell out of the monthly ranking",
+     "name": "Petro Rabigh"
+    },
+    {
+     "date": "2025-09-02",
+     "code": "2130",
+     "side": "sell",
+     "shares": 1016,
+     "price": 29.285,
+     "value": 29753.91,
+     "fee": 23.8,
+     "realized_pnl": -5152.97,
+     "held_since": "2025-08-04",
+     "reason": "fell out of the monthly ranking",
+     "name": "2130"
+    }
+   ],
+   "n_trades": 413,
+   "sample_journal": [
+    {
+     "date": "2022-01-02",
+     "mood": "composed",
+     "sentiment": -0.118,
+     "note": "Turn of the month, re-rank #1. Top of the board: 1832 at score +0.59, then 7201, Bank Albilad (1140), Sipchem (2310) (+3 more). in: 1030, Banque Saudi Fransi (1050), Bank Albilad (1140) (+4 more). Book is 7 names at roughly 14% each, cash 100,000 SAR. Follow dial at zero: I am +0.0% over 63 sessions against badr at +0.0%. Nobody out there is worth copying today, so this book is entirely mine."
+    },
+    {
+     "date": "2022-04-26",
+     "mood": "holding the line",
+     "sentiment": 0.149,
+     "note": "Tuition ledger: the field has given back 6,080 SAR in 7201, 3.1% of every riyal it has pushed through the name. Demoted on my borderline list. Somebody paid for that lesson; I intend to attend it for free."
+    },
+    {
+     "date": "2022-08-30",
+     "mood": "composed",
+     "sentiment": 0.19,
+     "note": "Largest line is Dallah Healthcare (4004) at 16% of the book, +15.0% on cost — my own find. Nothing to do: the monthly re-rank is the only thing allowed to sell a winner in this system."
+    },
+    {
+     "date": "2022-12-25",
+     "mood": "holding the line",
+     "sentiment": -0.29,
+     "note": "Book by sector: Healthcare x2, Banks x1, Capital Goods / Industry x1. Cap is 3 names per sector — the ranking would happily put five banks in here and one bad week would take all five out together. 98% invested, equity 119,295 SAR."
+    },
+    {
+     "date": "2023-04-25",
+     "mood": "constructive",
+     "sentiment": 0.588,
+     "note": "Scorecard: saqr leads the field at +19.1% over 63 sessions (+7.9% over 21); badr brings up the rear at +0.6%. I sit at +4.7%. Follow dial 0.03."
+    },
+    {
+     "date": "2023-08-23",
+     "mood": "holding the line",
+     "sentiment": -0.189,
+     "note": "Every line is above its 100-day — the weakest, 4005, still has +13.8% of clearance. Nothing to cut, nothing to add until the calendar says so. 98% invested, 2,752 SAR idle."
+    },
+    {
+     "date": "2023-12-17",
+     "mood": "constructive",
+     "sentiment": 0.724,
+     "note": "Every line is above its 100-day — the weakest, 8120, still has +13.9% of clearance. Nothing to cut, nothing to add until the calendar says so. 100% invested, 688 SAR idle."
+    },
+    {
+     "date": "2024-04-16",
+     "mood": "holding the line",
+     "sentiment": -0.015,
+     "note": "Largest line is ACWA Power (2082) at 16% of the book, +21.1% on cost — saqr was in it before me. Nothing to do: the monthly re-rank is the only thing allowed to sell a winner in this system."
+    },
+    {
+     "date": "2024-08-14",
+     "mood": "composed",
+     "sentiment": -0.147,
+     "note": "Tuition ledger: the field has given back 9,772 SAR in 8060, 5.3% of every riyal it has pushed through the name. Demoted on my borderline list. Somebody paid for that lesson; I intend to attend it for free."
+    },
+    {
+     "date": "2024-12-08",
+     "mood": "holding the line",
+     "sentiment": -0.117,
+     "note": "Scorecard: raad leads the field at +9.2% over 63 sessions (-1.4% over 21); hikma brings up the rear at -3.2%. I sit at +5.0%. Follow dial 0.00."
+    },
+    {
+     "date": "2025-04-07",
+     "mood": "underwater, holding process",
+     "sentiment": -0.422,
+     "note": "Panel blended 21-day -2.1%, field cash 58%. My gross is 96% with 9,851 SAR resting. When eight books flinch at once that is data; when one does it is a mood."
+    },
+    {
+     "date": "2025-08-04",
+     "mood": "holding the line",
+     "sentiment": -0.092,
+     "note": "Panel blended 21-day +0.7%, field cash 37%. My gross is 99% with 1,568 SAR resting. When eight books flinch at once that is data; when one does it is a mood."
+    },
+    {
+     "date": "2025-11-26",
+     "mood": "composed",
+     "sentiment": -0.4,
+     "note": "Holding pattern. 7 names, 99% invested, -8.7% off my own high, equity 260,660 SAR. Breadth 11%, TASI -0.48%. Next scheduled re-rank is the first session of next month — between now and then only a 100-day break gets me to trade."
+    },
+    {
+     "date": "2026-03-29",
+     "mood": "holding the line",
+     "sentiment": -0.08,
+     "note": "Closest thing to a problem: 1322 is -1.1% against its 100-day. The break rule fires at -8%, so it has 6.9% of rope left. I do not pre-empt my own rules; I let them trigger."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 1756.2,
+    "positions": {
+     "1321": {
+      "shares": 227,
+      "value": 42040.4
+     },
+     "7200": {
+      "shares": 173,
+      "value": 44115.0
+     },
+     "1833": {
+      "shares": 369,
+      "value": 38818.8
+     },
+     "2190": {
+      "shares": 1090,
+      "value": 40199.2
+     },
+     "2223": {
+      "shares": 291,
+      "value": 36375.0
+     },
+     "2380": {
+      "shares": 2677,
+      "value": 41306.11
+     },
+     "3007": {
+      "shares": 14250,
+      "value": 38902.5
+     }
+    }
+   }
+  },
+  "mizan": {
+   "meta": {
+    "handle": "mizan",
+    "name": "Mizan",
+    "emoji": "⚖️",
+    "tagline": "Four sleeves, nine names, one balance sheet. Turnover is the enemy.",
+    "risk_style": "aggressive systematic multi-factor",
+    "color": "#888888",
+    "character": "A multi-factor portfolio manager who rebuilt the family factor book after watching a previous generation diversify and over-trade its edge to nothing. She scores the whole market on trend quality, momentum, volatility and reversal, concentrates nine conviction-weighted positions, and defends the turnover budget like it is her own money — because in this competition it is."
+   },
+   "metrics": {
+    "final_equity": 221705.28,
+    "total_return": 1.2171,
+    "cagr": 0.1898,
+    "ann_vol": 0.1904,
+    "sharpe": 0.8,
+    "sortino": 1.165,
+    "max_drawdown": -0.2406,
+    "mdd_peak": "2022-04-18",
+    "mdd_trough": "2022-07-05",
+    "mdd_recovery": "2023-05-17",
+    "longest_underwater_sessions": 383,
+    "calmar": 0.789,
+    "beta_tasi": 0.902,
+    "alpha_annual": 0.2143,
+    "corr_tasi": 0.638,
+    "var95_daily": -0.0182,
+    "skew": -0.174,
+    "best_day": {
+     "date": "2023-07-03",
+     "ret": 0.0504
+    },
+    "worst_day": {
+     "date": "2025-04-06",
+     "ret": -0.0792
+    },
+    "monthly_returns": {
+     "2022-01": 0.0494,
+     "2022-02": 0.0264,
+     "2022-03": 0.0807,
+     "2022-04": 0.0373,
+     "2022-05": -0.0723,
+     "2022-06": -0.1297,
+     "2022-07": 0.1177,
+     "2022-08": -0.0163,
+     "2022-09": -0.0235,
+     "2022-10": 0.0224,
+     "2022-11": -0.0524,
+     "2022-12": -0.0112,
+     "2023-01": 0.0201,
+     "2023-02": -0.0107,
+     "2023-03": 0.1172,
+     "2023-04": 0.0535,
+     "2023-05": 0.043,
+     "2023-06": 0.0903,
+     "2023-07": 0.0442,
+     "2023-08": 0.0123,
+     "2023-09": -0.0512,
+     "2023-10": 0.0273,
+     "2023-11": 0.0803,
+     "2023-12": 0.17,
+     "2024-01": 0.0477,
+     "2024-02": 0.1956,
+     "2024-03": -0.0419,
+     "2024-04": 0.0232,
+     "2024-05": -0.0418,
+     "2024-06": 0.0663,
+     "2024-07": 0.0489,
+     "2024-08": -0.0259,
+     "2024-09": 0.0477,
+     "2024-10": 0.0001,
+     "2024-11": -0.0849,
+     "2024-12": 0.0239,
+     "2025-01": 0.016,
+     "2025-02": -0.076,
+     "2025-03": -0.045,
+     "2025-04": 0.0338,
+     "2025-05": -0.0587,
+     "2025-06": 0.0371,
+     "2025-07": -0.0336,
+     "2025-08": 0.0101,
+     "2025-09": 0.0691,
+     "2025-10": 0.0144,
+     "2025-11": -0.0613,
+     "2025-12": 0.0024,
+     "2026-01": 0.1264,
+     "2026-02": -0.0613,
+     "2026-03": 0.0527,
+     "2026-04": 0.0672,
+     "2026-05": -0.0226,
+     "2026-06": -0.0352,
+     "2026-07": -0.0249,
+     "2026-08": 0.0145
+    },
+    "positive_months_pct": 0.625,
+    "n_trades": 167,
+    "n_buys": 87,
+    "n_sells": 80,
+    "win_rate": 0.487,
+    "profit_factor": 1.925,
+    "realized_pnl": 80033.93,
+    "avg_win": 4270.71,
+    "avg_loss": -2110.34,
+    "turnover_annual": 3.52,
+    "favorite_stock": {
+     "code": "1303",
+     "name": "1303",
+     "trades": 6
+    },
+    "most_profitable_stock": {
+     "code": "1303",
+     "name": "1303",
+     "realized": 28138.28
+    },
+    "most_painful_stock": {
+     "code": "2050",
+     "name": "Savola Group",
+     "realized": -7785.69
+    },
+    "best_trade": {
+     "date": "2024-12-23",
+     "code": "1303",
+     "side": "sell",
+     "shares": 3739,
+     "price": 7.376,
+     "value": 27580.02,
+     "fee": 22.06,
+     "realized_pnl": 18153.03,
+     "held_since": "2023-12-04",
+     "reason": "trim 20.0% to target 7.4%"
+    },
+    "worst_trade": {
+     "date": "2025-03-24",
+     "code": "2050",
+     "side": "sell",
+     "shares": 857,
+     "price": 30.285,
+     "value": 25954.12,
+     "fee": 20.76,
+     "realized_pnl": -7785.69,
+     "held_since": "2025-02-10",
+     "reason": "rank #32 of 129 — outside the 31 buffer"
+    },
+    "longest_hold": {
+     "code": "7203",
+     "name": "7203",
+     "days": 546,
+     "sold": "2024-03-25",
+     "bought": "2022-09-26"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 100273,
+     "year_return": 0.0027,
+     "rank": 7
+    },
+    "2023": {
+     "end_equity": 176372,
+     "year_return": 0.7589,
+     "rank": 5
+    },
+    "2024": {
+     "end_equity": 221995,
+     "year_return": 0.2587,
+     "rank": 7
+    },
+    "2025": {
+     "end_equity": 200058,
+     "year_return": -0.0988,
+     "rank": 8
+    },
+    "2026": {
+     "end_equity": 221705,
+     "year_return": 0.1082,
+     "rank": 8
+    }
+   },
+   "dividends_received": 14917.17,
+   "commissions_paid": 2218.82,
+   "best_trades": [
+    {
+     "date": "2024-12-23",
+     "code": "1303",
+     "side": "sell",
+     "shares": 3739,
+     "price": 7.376,
+     "value": 27580.02,
+     "fee": 22.06,
+     "realized_pnl": 18153.03,
+     "held_since": "2023-12-04",
+     "reason": "trim 20.0% to target 7.4%",
+     "name": "1303"
+    },
+    {
+     "date": "2024-06-10",
+     "code": "1212",
+     "side": "sell",
+     "shares": 179,
+     "price": 143.528,
+     "value": 25691.55,
+     "fee": 20.55,
+     "realized_pnl": 15179.0,
+     "held_since": "2023-03-27",
+     "reason": "rank #38 of 135 — outside the 31 buffer",
+     "name": "1212"
+    },
+    {
+     "date": "2024-04-22",
+     "code": "4009",
+     "side": "sell",
+     "shares": 260,
+     "price": 93.953,
+     "value": 24427.78,
+     "fee": 19.54,
+     "realized_pnl": 14985.06,
+     "held_since": "2023-03-27",
+     "reason": "rank #66 of 141 — outside the 31 buffer",
+     "name": "4009"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2025-03-24",
+     "code": "2050",
+     "side": "sell",
+     "shares": 857,
+     "price": 30.285,
+     "value": 25954.12,
+     "fee": 20.76,
+     "realized_pnl": -7785.69,
+     "held_since": "2025-02-10",
+     "reason": "rank #32 of 129 — outside the 31 buffer",
+     "name": "Savola Group"
+    },
+    {
+     "date": "2025-12-01",
+     "code": "1183",
+     "side": "sell",
+     "shares": 1317,
+     "price": 17.721,
+     "value": 23338.73,
+     "fee": 18.67,
+     "realized_pnl": -5254.46,
+     "held_since": "2025-09-01",
+     "reason": "dropped out of the investable set",
+     "name": "1183"
+    },
+    {
+     "date": "2025-07-07",
+     "code": "4100",
+     "side": "sell",
+     "shares": 276,
+     "price": 90.905,
+     "value": 25089.65,
+     "fee": 20.07,
+     "realized_pnl": -5230.31,
+     "held_since": "2025-03-24",
+     "reason": "rank #42 of 142 — outside the 31 buffer",
+     "name": "4100"
+    }
+   ],
+   "n_trades": 167,
+   "sample_journal": [
+    {
+     "date": "2022-01-02",
+     "mood": "rebalancing",
+     "sentiment": -0.158,
+     "note": "W1: 9 adds, 0 exits, 0 trims. Gross target 100% (book sigma 20% vs a 34% budget), 119 names passed the SAR 2m liquidity screen. Top add 7201 at #1: z +2.14, 6m +55%, -4% off its high, RSI 60 -> 14% weight."
+    },
+    {
+     "date": "2022-04-26",
+     "mood": "fully deployed",
+     "sentiment": 0.687,
+     "note": "Position check: largest weight 1202 at 12.3% (+45.0%) against a 22% cap. Nine slots, conviction-tilted — the rank-1 name carries roughly twice the tilt of rank 9. Diversification past ten names measured as pure dilution."
+    },
+    {
+     "date": "2022-08-30",
+     "mood": "systematic",
+     "sentiment": 0.186,
+     "note": "Breadth 86%, index above the 200d, TASI 3m -0.6%. I hold 9 names and I am not trading on any of that: the only index rule in this book is the crisis brake, and it is not armed."
+    },
+    {
+     "date": "2022-12-25",
+     "mood": "declining to trade",
+     "sentiment": -0.735,
+     "note": "W51: zero trades. All 9 holdings sit inside the rank-31 buffer (weakest Bank Albilad at #31) and every weight is within the 10% drift band. Turnover at 13 bps a side is the one cost I control absolutely, so I decline to pay it."
+    },
+    {
+     "date": "2023-04-25",
+     "mood": "fully deployed",
+     "sentiment": 0.823,
+     "note": "Daily: TASI +0.91%, book +1.16%, gross 96%. No rebalance window, no cap breach, no trail hit — so no orders. Most days the correct output of a factor model is silence."
+    },
+    {
+     "date": "2023-08-23",
+     "mood": "systematic",
+     "sentiment": 0.22,
+     "note": "Breadth 25%, index above the 200d, TASI 3m +0.2%. I hold 9 names and I am not trading on any of that: the only index rule in this book is the crisis brake, and it is not armed."
+    },
+    {
+     "date": "2023-12-17",
+     "mood": "rebalancing",
+     "sentiment": 0.79,
+     "note": "W90: 1 adds, 1 exits, 0 trims. Gross target 100% (book sigma 26% vs a 34% budget), 134 names passed the SAR 2m liquidity screen. Top add ACWA Power at #3: z +2.09, 6m +65%, +0% off its high, RSI 79 -> 14% weight."
+    },
+    {
+     "date": "2024-04-16",
+     "mood": "fully deployed",
+     "sentiment": 0.409,
+     "note": "Breadth 50%, index above the 200d, TASI 3m +3.0%. I hold 9 names and I am not trading on any of that: the only index rule in this book is the crisis brake, and it is not armed."
+    },
+    {
+     "date": "2024-08-14",
+     "mood": "systematic",
+     "sentiment": -0.666,
+     "note": "Regime health -0.94 on 34% breadth; gross 86% across 9 names, SAR 29,712 idle. The vol budget only bites when the book's own sigma clears 34% — it prints 27% today, so we stay fully deployed."
+    },
+    {
+     "date": "2024-12-08",
+     "mood": "declining to trade",
+     "sentiment": -0.497,
+     "note": "W139 review: nothing to do. Gross 100%, 9 names, weakest link 2080 at #13. The previous generation of this book traded 16x a year and handed roughly four points of annual return to the broker. I run six."
+    },
+    {
+     "date": "2025-04-07",
+     "mood": "systematic",
+     "sentiment": -0.666,
+     "note": "Position check: largest weight 4100 at 15.5% (-5.1%) against a 22% cap. Nine slots, conviction-tilted — the rank-1 name carries roughly twice the tilt of rank 9. Diversification past ten names measured as pure dilution."
+    },
+    {
+     "date": "2025-08-04",
+     "mood": "systematic",
+     "sentiment": -0.745,
+     "note": "Position check: largest weight 2110 at 15.0% (+10.2%) against a 22% cap. Nine slots, conviction-tilted — the rank-1 name carries roughly twice the tilt of rank 9. Diversification past ten names measured as pure dilution."
+    },
+    {
+     "date": "2025-11-26",
+     "mood": "systematic",
+     "sentiment": -0.788,
+     "note": "Daily: TASI -0.48%, book -0.83%, gross 94%. No rebalance window, no cap breach, no trail hit — so no orders. Most days the correct output of a factor model is silence."
+    },
+    {
+     "date": "2026-03-29",
+     "mood": "fully deployed",
+     "sentiment": 0.486,
+     "note": "Risk note: estimated book sigma 30% annualized against a 34% budget, 9 positions, sector cap 40%. Equity SAR 221,028, drawdown discipline handled by the ranking rather than tight stops — I tested tight stops and they cost more than they saved."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 1072.2,
+    "positions": {
+     "4030": {
+      "shares": 1041,
+      "value": 31500.66
+     },
+     "1303": {
+      "shares": 1952,
+      "value": 28382.08
+     },
+     "7200": {
+      "shares": 112,
+      "value": 28560.0
+     },
+     "1321": {
+      "shares": 122,
+      "value": 22594.4
+     },
+     "2380": {
+      "shares": 1806,
+      "value": 27866.58
+     },
+     "2223": {
+      "shares": 167,
+      "value": 20875.0
+     },
+     "2200": {
+      "shares": 3443,
+      "value": 21415.46
+     },
+     "2370": {
+      "shares": 651,
+      "value": 20298.18
+     },
+     "2190": {
+      "shares": 519,
+      "value": 19140.72
+     }
+    }
+   }
+  },
+  "raad": {
+   "meta": {
+    "handle": "raad",
+    "name": "Raad",
+    "emoji": "⚡",
+    "tagline": "I don't predict the storm. I trade the strike.",
+    "character": "A systematic small/mid-cap breakout trader who treats every entry as a hypothesis with a pre-written funeral: fixed risk in, ATR trail out, no arguing with the tape. Competitive to the bone and quietly smug about the trades he does not take.",
+    "risk_style": "selective small/mid-cap breakout momentum",
+    "color": "#888888"
+   },
+   "metrics": {
+    "final_equity": 300290.69,
+    "total_return": 2.0029,
+    "cagr": 0.2713,
+    "ann_vol": 0.177,
+    "sharpe": 1.219,
+    "sortino": 2.3,
+    "max_drawdown": -0.145,
+    "mdd_peak": "2025-02-11",
+    "mdd_trough": "2026-03-01",
+    "mdd_recovery": "2026-04-29",
+    "longest_underwater_sessions": 299,
+    "calmar": 1.871,
+    "beta_tasi": 0.376,
+    "alpha_annual": 0.2922,
+    "corr_tasi": 0.286,
+    "var95_daily": -0.0132,
+    "skew": 5.553,
+    "best_day": {
+     "date": "2023-12-11",
+     "ret": 0.2035
+    },
+    "worst_day": {
+     "date": "2022-05-12",
+     "ret": -0.04
+    },
+    "monthly_returns": {
+     "2022-01": 0.0378,
+     "2022-02": 0.0097,
+     "2022-03": -0.0015,
+     "2022-04": 0.1598,
+     "2022-05": -0.0704,
+     "2022-06": -0.0203,
+     "2022-07": 0.028,
+     "2022-08": -0.057,
+     "2022-09": 0.0979,
+     "2022-10": 0.0021,
+     "2022-11": 0.0268,
+     "2022-12": 0.0193,
+     "2023-01": -0.019,
+     "2023-02": -0.0014,
+     "2023-03": 0.057,
+     "2023-04": 0.0028,
+     "2023-05": 0.0039,
+     "2023-06": 0.0462,
+     "2023-07": 0.0407,
+     "2023-08": 0.0372,
+     "2023-09": -0.046,
+     "2023-10": 0.0,
+     "2023-11": 0.0457,
+     "2023-12": 0.3864,
+     "2024-01": 0.0432,
+     "2024-02": 0.1826,
+     "2024-03": 0.0169,
+     "2024-04": 0.0125,
+     "2024-05": -0.014,
+     "2024-06": 0.0105,
+     "2024-07": 0.0266,
+     "2024-08": -0.0637,
+     "2024-09": 0.0514,
+     "2024-10": 0.025,
+     "2024-11": 0.0083,
+     "2024-12": -0.0039,
+     "2025-01": 0.0569,
+     "2025-02": -0.0394,
+     "2025-03": -0.0369,
+     "2025-04": 0.0,
+     "2025-05": 0.0,
+     "2025-06": 0.0,
+     "2025-07": 0.0207,
+     "2025-08": 0.0217,
+     "2025-09": 0.0281,
+     "2025-10": 0.0191,
+     "2025-11": -0.0431,
+     "2025-12": -0.0152,
+     "2026-01": 0.0109,
+     "2026-02": -0.0673,
+     "2026-03": 0.0157,
+     "2026-04": 0.1564,
+     "2026-05": -0.0391,
+     "2026-06": 0.0325,
+     "2026-07": 0.014,
+     "2026-08": 0.0125
+    },
+    "positive_months_pct": 0.643,
+    "n_trades": 164,
+    "n_buys": 77,
+    "n_sells": 87,
+    "win_rate": 0.517,
+    "profit_factor": 2.69,
+    "realized_pnl": 163175.53,
+    "avg_win": 5772.12,
+    "avg_loss": -2299.29,
+    "turnover_annual": 5.7,
+    "favorite_stock": {
+     "code": "1303",
+     "name": "1303",
+     "trades": 11
+    },
+    "most_profitable_stock": {
+     "code": "1303",
+     "name": "1303",
+     "realized": 51396.28
+    },
+    "most_painful_stock": {
+     "code": "1202",
+     "name": "1202",
+     "realized": -11593.26
+    },
+    "best_trade": {
+     "date": "2024-08-04",
+     "code": "1213",
+     "side": "sell",
+     "shares": 602,
+     "price": 67.066,
+     "value": 40374.0,
+     "fee": 32.3,
+     "realized_pnl": 24679.39,
+     "held_since": "2023-11-20",
+     "reason": "trail hit: 73.00 vs peak 85.90 less 5 ATR (2.57); banked +180.0%"
+    },
+    "worst_trade": {
+     "date": "2024-08-05",
+     "code": "2370",
+     "side": "sell",
+     "shares": 1775,
+     "price": 30.984,
+     "value": 54997.49,
+     "fee": 44.0,
+     "realized_pnl": -9644.82,
+     "held_since": "2024-07-16",
+     "reason": "stop: 32.10 through 33.57 (2.4 ATR under cost)"
+    },
+    "longest_hold": {
+     "code": "4004",
+     "name": "Dallah Healthcare",
+     "days": 275,
+     "sold": "2022-12-28",
+     "bought": "2022-03-28"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 123353,
+     "year_return": 0.2335,
+     "rank": 1
+    },
+    "2023": {
+     "end_equity": 200840,
+     "year_return": 0.6282,
+     "rank": 2
+    },
+    "2024": {
+     "end_equity": 264431,
+     "year_return": 0.3166,
+     "rank": 3
+    },
+    "2025": {
+     "end_equity": 266196,
+     "year_return": 0.0067,
+     "rank": 2
+    },
+    "2026": {
+     "end_equity": 300291,
+     "year_return": 0.1281,
+     "rank": 2
+    }
+   },
+   "dividends_received": 10344.33,
+   "commissions_paid": 4226.86,
+   "best_trades": [
+    {
+     "date": "2024-08-04",
+     "code": "1213",
+     "side": "sell",
+     "shares": 602,
+     "price": 67.066,
+     "value": 40374.0,
+     "fee": 32.3,
+     "realized_pnl": 24679.39,
+     "held_since": "2023-11-20",
+     "reason": "trail hit: 73.00 vs peak 85.90 less 5 ATR (2.57); banked +180.0%",
+     "name": "1213"
+    },
+    {
+     "date": "2026-01-05",
+     "code": "1303",
+     "side": "sell",
+     "shares": 7621,
+     "price": 10.975,
+     "value": 83636.74,
+     "fee": 66.91,
+     "realized_pnl": 19054.6,
+     "held_since": "2025-07-06",
+     "reason": "trail hit: 10.96 vs peak 12.20 less 5 ATR (0.25); banked +29.3%",
+     "name": "1303"
+    },
+    {
+     "date": "2024-08-08",
+     "code": "1321",
+     "side": "sell",
+     "shares": 263,
+     "price": 140.93,
+     "value": 37064.46,
+     "fee": 29.65,
+     "realized_pnl": 18118.99,
+     "held_since": "2023-11-20",
+     "reason": "trail hit: 141.40 vs peak 172.60 less 5 ATR (5.91); banked +96.3%",
+     "name": "1321"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2024-08-05",
+     "code": "2370",
+     "side": "sell",
+     "shares": 1775,
+     "price": 30.984,
+     "value": 54997.49,
+     "fee": 44.0,
+     "realized_pnl": -9644.82,
+     "held_since": "2024-07-16",
+     "reason": "stop: 32.10 through 33.57 (2.4 ATR under cost)",
+     "name": "2370"
+    },
+    {
+     "date": "2024-03-31",
+     "code": "1202",
+     "side": "sell",
+     "shares": 1352,
+     "price": 38.431,
+     "value": 51958.41,
+     "fee": 41.57,
+     "realized_pnl": -8912.01,
+     "held_since": "2024-02-21",
+     "reason": "time stop: 25 sessions for -5.6% — capital has a better job",
+     "name": "1202"
+    },
+    {
+     "date": "2026-02-18",
+     "code": "7200",
+     "side": "sell",
+     "shares": 359,
+     "price": 163.718,
+     "value": 58774.8,
+     "fee": 47.02,
+     "realized_pnl": -7134.64,
+     "held_since": "2026-01-26",
+     "reason": "stop: 164.20 through 172.81 (2.4 ATR under cost)",
+     "name": "7200"
+    }
+   ],
+   "n_trades": 164,
+   "sample_journal": [
+    {
+     "date": "2022-01-02",
+     "mood": "hands off",
+     "sentiment": -0.33,
+     "note": "No new risk — TASI is under its own 50-day. Breakouts bought into a broken tape are the most expensive habit in this business. Holding 0 names, 0% invested, SAR 100,000 dry."
+    },
+    {
+     "date": "2022-04-26",
+     "mood": "letting it work",
+     "sentiment": 0.52,
+     "note": "Nothing within 2% of a 52-week high in the 8-70M turnover band today. Breadth 46%, TASI -0.29%. 6 positions on trails, 95% invested, SAR 6,067 dry. A quiet screen is information, not a problem."
+    },
+    {
+     "date": "2022-08-30",
+     "mood": "in the trend",
+     "sentiment": 0.84,
+     "note": "Zero qualifying breakouts. The mid-cap band is chopping, not resolving. Book SAR 106,938, -12.1% off the high, nothing forced."
+    },
+    {
+     "date": "2022-12-25",
+     "mood": "no tape, no trade",
+     "sentiment": -0.82,
+     "note": "No new risk — TASI is under its own 50-day. Breakouts bought into a broken tape are the most expensive habit in this business. Holding 2 names, 44% invested, SAR 66,408 dry."
+    },
+    {
+     "date": "2023-04-25",
+     "mood": "position on",
+     "sentiment": 0.91,
+     "note": "Nothing within 2% of a 52-week high in the 8-70M turnover band today. Breadth 96%, TASI +0.91%. 1 positions on trails, 29% invested, SAR 89,995 dry. A quiet screen is information, not a problem."
+    },
+    {
+     "date": "2023-08-23",
+     "mood": "cash is a position",
+     "sentiment": -0.36,
+     "note": "Tape fails the regime test again — TASI is under its own 50-day. 1 positions left running on their trails, no additions. Patience is a position size."
+    },
+    {
+     "date": "2023-12-17",
+     "mood": "letting it work",
+     "sentiment": 0.9,
+     "note": "Zero qualifying breakouts. The mid-cap band is chopping, not resolving. Book SAR 187,033, +0.0% off the high, nothing forced."
+    },
+    {
+     "date": "2024-04-16",
+     "mood": "in the trend",
+     "sentiment": 0.58,
+     "note": "Zero qualifying breakouts. The mid-cap band is chopping, not resolving. Book SAR 259,153, -2.3% off the high, nothing forced."
+    },
+    {
+     "date": "2024-08-14",
+     "mood": "hands off",
+     "sentiment": -0.23,
+     "note": "Tape fails the regime test again — breadth 33.8% sits under my 44% floor. 2 positions left running on their trails, no additions. Patience is a position size."
+    },
+    {
+     "date": "2024-12-08",
+     "mood": "position on",
+     "sentiment": -0.09,
+     "note": "Strike: 2240. Closed 1.7% under its 52-week high on 0.6x average volume, breadth 47%, TASI over its 50-day. Sized to 24% on ATR, stop pre-committed. 4 names passed the screen today; I took 2."
+    },
+    {
+     "date": "2025-04-07",
+     "mood": "standing down",
+     "sentiment": -0.84,
+     "note": "No new risk — TASI is under its own 50-day. Breakouts bought into a broken tape are the most expensive habit in this business. Holding 0 names, 0% invested, SAR 258,549 dry."
+    },
+    {
+     "date": "2025-08-04",
+     "mood": "no tape, no trade",
+     "sentiment": -0.54,
+     "note": "No new risk — TASI is under its own 50-day. Breakouts bought into a broken tape are the most expensive habit in this business. Holding 3 names, 77% invested, SAR 61,784 dry."
+    },
+    {
+     "date": "2025-11-26",
+     "mood": "hands off",
+     "sentiment": -0.84,
+     "note": "Tape fails the regime test again — TASI is under its own 50-day. 3 positions left running on their trails, no additions. Patience is a position size."
+    },
+    {
+     "date": "2026-03-29",
+     "mood": "cash is a position",
+     "sentiment": 0.32,
+     "note": "Screen is switched off: breadth 38.6% sits under my 44% floor, index -0.13% today. I can see setups; I'm not paid to see them, I'm paid to see them work. SAR 183,071 waiting."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 147870.69,
+    "positions": {
+     "2223": {
+      "shares": 538,
+      "value": 67250.0
+     },
+     "7200": {
+      "shares": 334,
+      "value": 85170.0
+     }
+    }
+   }
+  },
+  "saqr": {
+   "meta": {
+    "handle": "saqr",
+    "name": "Saqr",
+    "emoji": "🦅",
+    "tagline": "The falcon does not chase every bird — only the one already climbing.",
+    "character": "A systematic momentum trader who runs the entire main market through one ranking every session and never argues with the output. Competitive to the bone, openly bored by valuation debates, and convinced the only two questions that pay are 'is it going up?' and 'is it still going up?'. Keeps his losses small and boring so the occasional winner can get embarrassing.",
+    "risk_style": "concentrated trend-momentum, trailing exits",
+    "color": "#888888"
+   },
+   "metrics": {
+    "final_equity": 467937.18,
+    "total_return": 3.6794,
+    "cagr": 0.4006,
+    "ann_vol": 0.2406,
+    "sharpe": 1.357,
+    "sortino": 2.173,
+    "max_drawdown": -0.2066,
+    "mdd_peak": "2022-04-12",
+    "mdd_trough": "2022-09-19",
+    "mdd_recovery": "2023-03-22",
+    "longest_underwater_sessions": 233,
+    "calmar": 1.939,
+    "beta_tasi": 0.654,
+    "alpha_annual": 0.4443,
+    "corr_tasi": 0.366,
+    "var95_daily": -0.0226,
+    "skew": 0.345,
+    "best_day": {
+     "date": "2024-04-15",
+     "ret": 0.0685
+    },
+    "worst_day": {
+     "date": "2026-02-01",
+     "ret": -0.0681
+    },
+    "monthly_returns": {
+     "2022-01": -0.0055,
+     "2022-02": 0.0618,
+     "2022-03": 0.1464,
+     "2022-04": 0.0847,
+     "2022-05": -0.0658,
+     "2022-06": -0.096,
+     "2022-07": 0.0408,
+     "2022-08": -0.0063,
+     "2022-09": 0.074,
+     "2022-10": 0.0066,
+     "2022-11": 0.036,
+     "2022-12": -0.0673,
+     "2023-01": 0.0465,
+     "2023-02": -0.0027,
+     "2023-03": 0.0964,
+     "2023-04": 0.0718,
+     "2023-05": -0.0334,
+     "2023-06": 0.2398,
+     "2023-07": 0.0774,
+     "2023-08": 0.1588,
+     "2023-09": -0.162,
+     "2023-10": 0.0314,
+     "2023-11": 0.051,
+     "2023-12": 0.1383,
+     "2024-01": 0.0711,
+     "2024-02": 0.2919,
+     "2024-03": -0.0416,
+     "2024-04": 0.0629,
+     "2024-05": -0.0249,
+     "2024-06": 0.1063,
+     "2024-07": 0.0322,
+     "2024-08": -0.0505,
+     "2024-09": 0.0548,
+     "2024-10": -0.0114,
+     "2024-11": -0.0403,
+     "2024-12": 0.053,
+     "2025-01": 0.0593,
+     "2025-02": -0.0743,
+     "2025-03": -0.0054,
+     "2025-04": -0.0783,
+     "2025-05": -0.0109,
+     "2025-06": 0.0267,
+     "2025-07": 0.0322,
+     "2025-08": 0.0223,
+     "2025-09": 0.0944,
+     "2025-10": 0.0601,
+     "2025-11": -0.0657,
+     "2025-12": 0.0247,
+     "2026-01": 0.1085,
+     "2026-02": -0.058,
+     "2026-03": 0.0706,
+     "2026-04": 0.0838,
+     "2026-05": -0.0092,
+     "2026-06": -0.0251,
+     "2026-07": 0.0043,
+     "2026-08": 0.0422
+    },
+    "positive_months_pct": 0.625,
+    "n_trades": 248,
+    "n_buys": 125,
+    "n_sells": 123,
+    "win_rate": 0.463,
+    "profit_factor": 2.418,
+    "realized_pnl": 319057.34,
+    "avg_win": 9544.2,
+    "avg_loss": -3408.51,
+    "turnover_annual": 11.9,
+    "favorite_stock": {
+     "code": "1303",
+     "name": "1303",
+     "trades": 12
+    },
+    "most_profitable_stock": {
+     "code": "1303",
+     "name": "1303",
+     "realized": 189548.3
+    },
+    "most_painful_stock": {
+     "code": "1831",
+     "name": "1831",
+     "realized": -24066.12
+    },
+    "best_trade": {
+     "date": "2024-04-01",
+     "code": "1303",
+     "side": "sell",
+     "shares": 34846,
+     "price": 4.328,
+     "value": 150807.74,
+     "fee": 120.65,
+     "realized_pnl": 72016.4,
+     "held_since": "2023-11-12",
+     "reason": "sky closed — cutting the book to 2 best-ranked names"
+    },
+    "worst_trade": {
+     "date": "2026-06-28",
+     "code": "2200",
+     "side": "sell",
+     "shares": 29371,
+     "price": 6.727,
+     "value": 197568.0,
+     "fee": 158.05,
+     "realized_pnl": -28701.78,
+     "held_since": "2026-06-15",
+     "reason": "closed -3.8% through its 50-day line"
+    },
+    "longest_hold": {
+     "code": "7203",
+     "name": "7203",
+     "days": 279,
+     "sold": "2023-09-18",
+     "bought": "2022-12-13"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 119803,
+     "year_return": 0.198,
+     "rank": 3
+    },
+    "2023": {
+     "end_equity": 227342,
+     "year_return": 0.8976,
+     "rank": 1
+    },
+    "2024": {
+     "end_equity": 357059,
+     "year_return": 0.5706,
+     "rank": 1
+    },
+    "2025": {
+     "end_equity": 381946,
+     "year_return": 0.0697,
+     "rank": 1
+    },
+    "2026": {
+     "end_equity": 467937,
+     "year_return": 0.2251,
+     "rank": 1
+    }
+   },
+   "dividends_received": 20996.57,
+   "commissions_paid": 11593.42,
+   "best_trades": [
+    {
+     "date": "2024-04-01",
+     "code": "1303",
+     "side": "sell",
+     "shares": 34846,
+     "price": 4.328,
+     "value": 150807.74,
+     "fee": 120.65,
+     "realized_pnl": 72016.4,
+     "held_since": "2023-11-12",
+     "reason": "sky closed — cutting the book to 2 best-ranked names",
+     "name": "1303"
+    },
+    {
+     "date": "2023-09-18",
+     "code": "7203",
+     "side": "sell",
+     "shares": 162,
+     "price": 712.044,
+     "value": 115351.1,
+     "fee": 92.28,
+     "realized_pnl": 63193.44,
+     "held_since": "2022-12-13",
+     "reason": "trail hit: -16.2% off its 850.00 peak close (band 16%)",
+     "name": "7203"
+    },
+    {
+     "date": "2026-05-05",
+     "code": "1303",
+     "side": "sell",
+     "shares": 12934,
+     "price": 17.881,
+     "value": 231273.55,
+     "fee": 185.02,
+     "realized_pnl": 57612.49,
+     "held_since": "2026-02-01",
+     "reason": "sky closed — cutting the book to 2 best-ranked names",
+     "name": "1303"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2026-06-28",
+     "code": "2200",
+     "side": "sell",
+     "shares": 29371,
+     "price": 6.727,
+     "value": 197568.0,
+     "fee": 158.05,
+     "realized_pnl": -28701.78,
+     "held_since": "2026-06-15",
+     "reason": "closed -3.8% through its 50-day line",
+     "name": "2200"
+    },
+    {
+     "date": "2025-12-03",
+     "code": "4030",
+     "side": "sell",
+     "shares": 5407,
+     "price": 28.606,
+     "value": 154670.97,
+     "fee": 123.74,
+     "realized_pnl": -16816.64,
+     "held_since": "2025-11-11",
+     "reason": "closed -5.1% through its 50-day line",
+     "name": "Bahri"
+    },
+    {
+     "date": "2025-04-07",
+     "code": "3092",
+     "side": "sell",
+     "shares": 4778,
+     "price": 32.634,
+     "value": 155923.71,
+     "fee": 124.74,
+     "realized_pnl": -16170.3,
+     "held_since": "2025-03-11",
+     "reason": "closed -5.9% through its 50-day line",
+     "name": "3092"
+    }
+   ],
+   "n_trades": 248,
+   "sample_journal": [
+    {
+     "date": "2022-01-02",
+     "mood": "circling",
+     "sentiment": -0.1,
+     "note": "Into 7201: +15.8%/1m, +19.1%/3m, sitting above sma50 above sma200, top of a 21-name screen. Also opened 1832. Sky closed, 2 slots live, book 0% deployed, SAR 100,000 still dry."
+    },
+    {
+     "date": "2022-04-26",
+     "mood": "riding the thermal",
+     "sentiment": 0.51,
+     "note": "Quiet tape. 6 positions, SAR 1,772 idle, -2.3% off my own equity high. Winners stay until the 50-day says otherwise; that is the whole edge."
+    },
+    {
+     "date": "2022-08-30",
+     "mood": "hunting",
+     "sentiment": 0.82,
+     "note": "TASI 12,456 (-0.60%), breadth 86%, open sky. Nothing to do: the book is aligned and no leash is loose. Best open position 7202 at +10.2%."
+    },
+    {
+     "date": "2022-12-25",
+     "mood": "grounded",
+     "sentiment": -0.66,
+     "note": "Top of the ranking unchanged — 2081, -3.0%/1m, out of 6 qualifiers. Equity SAR 118,572, 77% deployed. Sitting still is a position."
+    },
+    {
+     "date": "2023-04-25",
+     "mood": "hunting",
+     "sentiment": 0.81,
+     "note": "Empty screen. TASI 11,265, breadth 96%, open sky. SAR 2,638 in cash — a falcon doesn't work an empty valley just to look busy."
+    },
+    {
+     "date": "2023-08-23",
+     "mood": "perched",
+     "sentiment": -0.57,
+     "note": "Screen is 24 deep with 7203 on top. Breadth 25% and sky closed — the tape decides my size, I only decide which names. Best open position 7203 at +139.8%."
+    },
+    {
+     "date": "2023-12-17",
+     "mood": "hunting",
+     "sentiment": 0.89,
+     "note": "Top of the ranking unchanged — 1303, +28.3%/1m, out of 35 qualifiers. Equity SAR 219,895, 100% deployed. Sitting still is a position."
+    },
+    {
+     "date": "2024-04-16",
+     "mood": "riding the thermal",
+     "sentiment": 0.52,
+     "note": "Quiet tape. 6 positions, SAR 3,630 idle, -8.4% off my own equity high. Winners stay until the 50-day says otherwise; that is the whole edge."
+    },
+    {
+     "date": "2024-08-14",
+     "mood": "grounded",
+     "sentiment": -0.47,
+     "note": "TASI 11,850 (+0.45%), breadth 34%, sky closed. Nothing to do: the book is aligned and no leash is loose. Best open position 2080 at +5.2%."
+    },
+    {
+     "date": "2024-12-08",
+     "mood": "counting cash",
+     "sentiment": -0.39,
+     "note": "TASI 11,955 (+0.20%), breadth 47%, sky closed. Nothing to do: the book is aligned and no leash is loose. Best open position 4130 at +9.9%."
+    },
+    {
+     "date": "2025-04-07",
+     "mood": "perched",
+     "sentiment": -0.71,
+     "note": "3 names clear the trend gate; 3003 leads at +5.2%/1m (score 3.45). Holding 0 of 2 slots, 0% invested."
+    },
+    {
+     "date": "2025-08-04",
+     "mood": "hooded",
+     "sentiment": -0.46,
+     "note": "Screen is 13 deep with 2250 on top. Breadth 38% and sky closed — the tape decides my size, I only decide which names. Best open position 2320 at +17.6%."
+    },
+    {
+     "date": "2025-11-26",
+     "mood": "waiting out the storm",
+     "sentiment": -0.72,
+     "note": "7 names clear the trend gate; Bahri leads at -0.3%/1m (score 3.22). Holding 2 of 2 slots, 99% invested. Best open position 1303 at +22.8%."
+    },
+    {
+     "date": "2026-03-29",
+     "mood": "riding the thermal",
+     "sentiment": 0.39,
+     "note": "16 names clear the trend gate; 1303 leads at +11.6%/1m (score 4.79). Holding 6 of 6 slots, 100% invested. Best open position 1303 at +23.2%."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 69003.69,
+    "positions": {
+     "7200": {
+      "shares": 987,
+      "value": 251685.0
+     },
+     "2380": {
+      "shares": 9543,
+      "value": 147248.49
+     }
+    }
+   }
+  },
+  "waqt": {
+   "meta": {
+    "handle": "waqt",
+    "name": "Waqt",
+    "emoji": "⏳",
+    "tagline": "The regime decides the size. The tape decides the names.",
+    "risk_style": "regime-timed sector rotation",
+    "character": "A top-down allocator who believes exposure is the only decision that compounds: he reads trend, breadth, volatility and drawdown as one instrument and moves the whole book on it, early and without asking the tape for permission twice. Inside a risk-on regime he owns leadership and nothing else; inside a risk-off one he owns cash and says so plainly.",
+    "color": "#888888"
+   },
+   "metrics": {
+    "final_equity": 240581.73,
+    "total_return": 1.4058,
+    "cagr": 0.2113,
+    "ann_vol": 0.1138,
+    "sharpe": 1.393,
+    "sortino": 2.151,
+    "max_drawdown": -0.133,
+    "mdd_peak": "2024-07-31",
+    "mdd_trough": "2026-02-19",
+    "mdd_recovery": null,
+    "longest_underwater_sessions": 505,
+    "calmar": 1.588,
+    "beta_tasi": 0.236,
+    "alpha_annual": 0.2201,
+    "corr_tasi": 0.28,
+    "var95_daily": -0.0092,
+    "skew": 0.787,
+    "best_day": {
+     "date": "2024-04-15",
+     "ret": 0.0454
+    },
+    "worst_day": {
+     "date": "2026-02-01",
+     "ret": -0.0352
+    },
+    "monthly_returns": {
+     "2022-01": 0.0171,
+     "2022-02": 0.0426,
+     "2022-03": 0.0978,
+     "2022-04": 0.0782,
+     "2022-05": -0.0467,
+     "2022-06": 0.0,
+     "2022-07": 0.0012,
+     "2022-08": -0.0246,
+     "2022-09": -0.0127,
+     "2022-10": 0.0208,
+     "2022-11": 0.0,
+     "2022-12": 0.0,
+     "2023-01": -0.0093,
+     "2023-02": 0.0017,
+     "2023-03": 0.0013,
+     "2023-04": 0.086,
+     "2023-05": 0.068,
+     "2023-06": 0.1099,
+     "2023-07": 0.066,
+     "2023-08": 0.0015,
+     "2023-09": -0.0055,
+     "2023-10": 0.0,
+     "2023-11": 0.0606,
+     "2023-12": 0.164,
+     "2024-01": 0.0049,
+     "2024-02": 0.196,
+     "2024-03": 0.0299,
+     "2024-04": 0.0323,
+     "2024-05": 0.0283,
+     "2024-06": 0.0,
+     "2024-07": 0.0335,
+     "2024-08": -0.0687,
+     "2024-09": -0.0132,
+     "2024-10": -0.0414,
+     "2024-11": 0.0135,
+     "2024-12": -0.0152,
+     "2025-01": 0.0407,
+     "2025-02": -0.025,
+     "2025-03": 0.0,
+     "2025-04": 0.0,
+     "2025-05": 0.0,
+     "2025-06": 0.0001,
+     "2025-07": 0.0074,
+     "2025-08": 0.0,
+     "2025-09": 0.03,
+     "2025-10": -0.0003,
+     "2025-11": -0.0266,
+     "2025-12": 0.0,
+     "2026-01": 0.0358,
+     "2026-02": -0.0664,
+     "2026-03": 0.0074,
+     "2026-04": 0.0084,
+     "2026-05": -0.0085,
+     "2026-06": 0.0224,
+     "2026-07": 0.0,
+     "2026-08": 0.0
+    },
+    "positive_months_pct": 0.536,
+    "n_trades": 563,
+    "n_buys": 309,
+    "n_sells": 254,
+    "win_rate": 0.567,
+    "profit_factor": 2.437,
+    "realized_pnl": 146594.23,
+    "avg_win": 1726.3,
+    "avg_loss": -927.21,
+    "turnover_annual": 13.05,
+    "favorite_stock": {
+     "code": "1303",
+     "name": "1303",
+     "trades": 45
+    },
+    "most_profitable_stock": {
+     "code": "1303",
+     "name": "1303",
+     "realized": 39860.34
+    },
+    "most_painful_stock": {
+     "code": "1831",
+     "name": "1831",
+     "realized": -6224.36
+    },
+    "best_trade": {
+     "date": "2024-04-18",
+     "code": "2320",
+     "side": "sell",
+     "shares": 1010,
+     "price": 41.879,
+     "value": 42297.84,
+     "fee": 33.84,
+     "realized_pnl": 13527.46,
+     "held_since": "2024-01-22",
+     "reason": "rotation: out of the top 4, rank 9"
+    },
+    "worst_trade": {
+     "date": "2024-10-07",
+     "code": "7200",
+     "side": "sell",
+     "shares": 169,
+     "price": 176.912,
+     "value": 29898.04,
+     "fee": 23.92,
+     "realized_pnl": -5102.45,
+     "held_since": "2024-09-22",
+     "reason": "hard stop -14.0% from cost"
+    },
+    "longest_hold": {
+     "code": "1303",
+     "name": "1303",
+     "days": 161,
+     "sold": "2024-04-25",
+     "bought": "2023-11-16"
+    }
+   },
+   "yearly": {
+    "2022": {
+     "end_equity": 117761,
+     "year_return": 0.1776,
+     "rank": 4
+    },
+    "2023": {
+     "end_equity": 197470,
+     "year_return": 0.6769,
+     "rank": 3
+    },
+    "2024": {
+     "end_equity": 235751,
+     "year_return": 0.1939,
+     "rank": 5
+    },
+    "2025": {
+     "end_equity": 241587,
+     "year_return": 0.0248,
+     "rank": 4
+    },
+    "2026": {
+     "end_equity": 240582,
+     "year_return": -0.0042,
+     "rank": 5
+    }
+   },
+   "dividends_received": 3217.4,
+   "commissions_paid": 9229.97,
+   "best_trades": [
+    {
+     "date": "2024-04-18",
+     "code": "2320",
+     "side": "sell",
+     "shares": 1010,
+     "price": 41.879,
+     "value": 42297.84,
+     "fee": 33.84,
+     "realized_pnl": 13527.46,
+     "held_since": "2024-01-22",
+     "reason": "rotation: out of the top 4, rank 9",
+     "name": "2320"
+    },
+    {
+     "date": "2024-04-18",
+     "code": "1212",
+     "side": "sell",
+     "shares": 212,
+     "price": 176.112,
+     "value": 37335.72,
+     "fee": 29.87,
+     "realized_pnl": 12907.71,
+     "held_since": "2023-11-19",
+     "reason": "rotation: out of the top 4, rank 8",
+     "name": "1212"
+    },
+    {
+     "date": "2024-05-12",
+     "code": "1303",
+     "side": "sell",
+     "shares": 7838,
+     "price": 5.867,
+     "value": 45986.06,
+     "fee": 36.79,
+     "realized_pnl": 8736.94,
+     "held_since": "2024-05-01",
+     "reason": "regime risk-off (score -0.21) — to cash",
+     "name": "1303"
+    }
+   ],
+   "worst_trades": [
+    {
+     "date": "2024-10-07",
+     "code": "7200",
+     "side": "sell",
+     "shares": 169,
+     "price": 176.912,
+     "value": 29898.04,
+     "fee": 23.92,
+     "realized_pnl": -5102.45,
+     "held_since": "2024-09-22",
+     "reason": "hard stop -14.0% from cost",
+     "name": "7200"
+    },
+    {
+     "date": "2026-02-02",
+     "code": "1831",
+     "side": "sell",
+     "shares": 7896,
+     "price": 4.558,
+     "value": 35986.56,
+     "fee": 28.79,
+     "realized_pnl": -4413.74,
+     "held_since": "2026-01-19",
+     "reason": "trend break: below the 50d (4.61 vs 4.71)",
+     "name": "1831"
+    },
+    {
+     "date": "2024-08-05",
+     "code": "1321",
+     "side": "sell",
+     "shares": 201,
+     "price": 139.93,
+     "value": 28125.93,
+     "fee": 22.5,
+     "realized_pnl": -4013.53,
+     "held_since": "2024-07-18",
+     "reason": "regime risk-off (score -0.47) — to cash",
+     "name": "1321"
+    }
+   ],
+   "n_trades": 563,
+   "sample_journal": [
+    {
+     "date": "2022-01-02",
+     "mood": "repositioning",
+     "sentiment": -0.362,
+     "note": "Sector board: Banks +6.7% at the front, Insurance -18.4% at the back — a 25% spread on median 3/6m. That spread is the whole business; the index return is a rounding error next to it."
+    },
+    {
+     "date": "2022-04-26",
+     "mood": "pressed",
+     "sentiment": 0.374,
+     "note": "Book check: 8 names, 100% deployed, SAR 356 idle, equity SAR 125,209. Best thing on the screen is Alinma Bank at composite +2.08."
+    },
+    {
+     "date": "2022-08-30",
+     "mood": "grinding",
+     "sentiment": 0.642,
+     "note": "Regime read +0.33: trend +0.46, breadth 86% (+0.69), momentum +0.26, stress 0.34. Gross 50%, actually 51% invested across 4 names. No change earns its commission today."
+    },
+    {
+     "date": "2022-12-25",
+     "mood": "grinding",
+     "sentiment": -0.95,
+     "note": "Volatility and drawdown together read 0.59 of stress; the trend leg is -0.89. Net -0.70 — risk-off. Next scheduled rotation in 8 sessions unless the tape forces one sooner."
+    },
+    {
+     "date": "2023-04-25",
+     "mood": "pressed",
+     "sentiment": 0.95,
+     "note": "Book check: 8 names, 96% deployed, SAR 4,601 idle, equity SAR 126,613. Best thing on the screen is 7203 at composite +1.50."
+    },
+    {
+     "date": "2023-08-23",
+     "mood": "in cash",
+     "sentiment": -0.65,
+     "note": "Sector board: Telecom & IT +30.8% at the front, Materials -3.3% at the back — a 34% spread on median 3/6m. That spread is the whole business; the index return is a rounding error next to it."
+    },
+    {
+     "date": "2023-12-17",
+     "mood": "pressed",
+     "sentiment": 0.95,
+     "note": "Regime read +0.71: trend +1.00, breadth 87% (+1.00), momentum +0.87, stress 0.09. Gross 100%, actually 100% invested across 8 names. No change earns its commission today."
+    },
+    {
+     "date": "2024-04-16",
+     "mood": "pressed",
+     "sentiment": 0.066,
+     "note": "Book check: 8 names, 100% deployed, SAR 541 idle, equity SAR 249,481. Best thing on the screen is 1213 at composite +3.40."
+    },
+    {
+     "date": "2024-08-14",
+     "mood": "in cash",
+     "sentiment": -0.819,
+     "note": "Regime read -0.50: trend -0.21, breadth 34% (-1.00), momentum -0.37, stress 0.55. Gross 0%, actually 0% invested across 0 names. No change earns its commission today."
+    },
+    {
+     "date": "2024-12-08",
+     "mood": "repositioning",
+     "sentiment": -0.125,
+     "note": "Regime risk-off to constructive: score -0.08 (trend -0.08, breadth +0.06, mom -0.25, stress 0.24). Gross 0% to 50% across 0 exits and 4 adds. The model moves the book; my opinion does not."
+    },
+    {
+     "date": "2025-04-07",
+     "mood": "grinding",
+     "sentiment": -0.95,
+     "note": "Sector board: Banks +3.1% at the front, Diversified / Services -22.0% at the back — a 25% spread on median 3/6m. That spread is the whole business; the index return is a rounding error next to it."
+    },
+    {
+     "date": "2025-08-04",
+     "mood": "grinding",
+     "sentiment": -0.95,
+     "note": "Peer tape: 7 books visible, best trailing quarter among them +3.5%, average cash 23%. My score reads -0.70. Confirmation is welcome; instruction is not."
+    },
+    {
+     "date": "2025-11-26",
+     "mood": "grinding",
+     "sentiment": -0.95,
+     "note": "Holding fire at 0% gross, 0 names, equity SAR 241,587. Nothing in the regime model (-0.80) argues for a different number, and I do not trade to feel busy."
+    },
+    {
+     "date": "2026-03-29",
+     "mood": "grinding",
+     "sentiment": 0.002,
+     "note": "Peer tape: 7 books visible, best trailing quarter among them +8.9%, average cash 24%. My score reads +0.03. Confirmation is welcome; instruction is not."
+    }
+   ],
+   "final_positions": {
+    "date": "2026-08-02",
+    "cash": 240581.73,
+    "positions": {}
+   }
+  }
+ },
+ "events_big": [
+  {
+   "date": "2025-04-06",
+   "type": "crash",
+   "tasi_ret": -0.0678
+  },
+  {
+   "date": "2025-09-24",
+   "type": "rally",
+   "tasi_ret": 0.0506
+  },
+  {
+   "date": "2022-06-19",
+   "type": "crash",
+   "tasi_ret": -0.0444
+  },
+  {
+   "date": "2022-05-12",
+   "type": "crash",
+   "tasi_ret": -0.0406
+  },
+  {
+   "date": "2025-04-10",
+   "type": "rally",
+   "tasi_ret": 0.0366
+  },
+  {
+   "date": "2022-06-22",
+   "type": "crash",
+   "tasi_ret": -0.0291
+  },
+  {
+   "date": "2022-12-05",
+   "type": "crash",
+   "tasi_ret": -0.0284
+  },
+  {
+   "date": "2022-06-21",
+   "type": "rally",
+   "tasi_ret": 0.0262
+  },
+  {
+   "date": "2022-09-25",
+   "type": "crash",
+   "tasi_ret": -0.0262
+  },
+  {
+   "date": "2024-06-09",
+   "type": "rally",
+   "tasi_ret": 0.0255
+  },
+  {
+   "date": "2022-12-07",
+   "type": "crash",
+   "tasi_ret": -0.0248
+  },
+  {
+   "date": "2022-05-15",
+   "type": "rally",
+   "tasi_ret": 0.0245
+  }
+ ],
+ "leaderboard_final": [
+  {
+   "handle": "saqr",
+   "name": "Saqr",
+   "final": 467937.18,
+   "ret": 3.6794
+  },
+  {
+   "handle": "raad",
+   "name": "Raad",
+   "final": 300290.69,
+   "ret": 2.0029
+  },
+  {
+   "handle": "malik",
+   "name": "Malik",
+   "final": 283513.2,
+   "ret": 1.8351
+  },
+  {
+   "handle": "dira",
+   "name": "Dira",
+   "final": 243930.44,
+   "ret": 1.4393
+  },
+  {
+   "handle": "waqt",
+   "name": "Waqt",
+   "final": 240581.73,
+   "ret": 1.4058
+  },
+  {
+   "handle": "hikma",
+   "name": "Hikma",
+   "final": 231990.88,
+   "ret": 1.3199
+  },
+  {
+   "handle": "badr",
+   "name": "Badr",
+   "final": 230262.51,
+   "ret": 1.3026
+  },
+  {
+   "handle": "mizan",
+   "name": "Mizan",
+   "final": 221705.28,
+   "ret": 1.2171
+  }
+ ],
+ "tasi_return": -0.0498,
+ "sim_span": [
+  "2022-01-02",
+  "2026-08-02"
+ ]
+}
