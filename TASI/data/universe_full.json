@@ -1,5 +1,5 @@
 {
- "count": 196,
+ "count": 269,
  "universe": [
   {
    "code": "1010",
@@ -732,6 +732,11 @@
    "sector": "Diversified / Services"
   },
   {
+   "code": "4141",
+   "name": "4141",
+   "sector": "Diversified / Services"
+  },
+  {
    "code": "4142",
    "name": "4142",
    "sector": "Diversified / Services"
@@ -747,6 +752,11 @@
    "sector": "Diversified / Services"
   },
   {
+   "code": "4145",
+   "name": "4145",
+   "sector": "Diversified / Services"
+  },
+  {
    "code": "4146",
    "name": "4146",
    "sector": "Diversified / Services"
@@ -759,6 +769,11 @@
   {
    "code": "4148",
    "name": "4148",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4150",
+   "name": "4150",
    "sector": "Diversified / Services"
   },
   {
@@ -802,6 +817,11 @@
    "sector": "Diversified / Services"
   },
   {
+   "code": "4190",
+   "name": "Jarir Marketing",
+   "sector": "Consumer Retail"
+  },
+  {
    "code": "4191",
    "name": "4191",
    "sector": "Diversified / Services"
@@ -825,6 +845,11 @@
    "code": "4200",
    "name": "Aldrees Petroleum",
    "sector": "Energy"
+  },
+  {
+   "code": "4210",
+   "name": "4210",
+   "sector": "Diversified / Services"
   },
   {
    "code": "4220",
@@ -885,6 +910,311 @@
    "code": "4280",
    "name": "Kingdom Holding",
    "sector": "Financial Services"
+  },
+  {
+   "code": "4290",
+   "name": "4290",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4291",
+   "name": "4291",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4292",
+   "name": "4292",
+   "sector": "Diversified / Services"
+  },
+  {
+   "code": "4300",
+   "name": "Dar Al Arkan",
+   "sector": "Real Estate"
+  },
+  {
+   "code": "4310",
+   "name": "4310",
+   "sector": "Real Estate"
+  },
+  {
+   "code": "4320",
+   "name": "4320",
+   "sector": "Real Estate"
+  },
+  {
+   "code": "4321",
+   "name": "Cenomi Centers",
+   "sector": "Real Estate"
+  },
+  {
+   "code": "4322",
+   "name": "4322",
+   "sector": "Real Estate"
+  },
+  {
+   "code": "4323",
+   "name": "4323",
+   "sector": "Real Estate"
+  },
+  {
+   "code": "4324",
+   "name": "4324",
+   "sector": "Real Estate"
+  },
+  {
+   "code": "4325",
+   "name": "4325",
+   "sector": "Real Estate"
+  },
+  {
+   "code": "4326",
+   "name": "4326",
+   "sector": "Real Estate"
+  },
+  {
+   "code": "4327",
+   "name": "4327",
+   "sector": "Real Estate"
+  },
+  {
+   "code": "4330",
+   "name": "4330",
+   "sector": "REITs"
+  },
+  {
+   "code": "4331",
+   "name": "4331",
+   "sector": "REITs"
+  },
+  {
+   "code": "4332",
+   "name": "4332",
+   "sector": "REITs"
+  },
+  {
+   "code": "4333",
+   "name": "4333",
+   "sector": "REITs"
+  },
+  {
+   "code": "4334",
+   "name": "4334",
+   "sector": "REITs"
+  },
+  {
+   "code": "4335",
+   "name": "4335",
+   "sector": "REITs"
+  },
+  {
+   "code": "4336",
+   "name": "4336",
+   "sector": "REITs"
+  },
+  {
+   "code": "4337",
+   "name": "4337",
+   "sector": "REITs"
+  },
+  {
+   "code": "4338",
+   "name": "4338",
+   "sector": "REITs"
+  },
+  {
+   "code": "4339",
+   "name": "4339",
+   "sector": "REITs"
+  },
+  {
+   "code": "4340",
+   "name": "4340",
+   "sector": "REITs"
+  },
+  {
+   "code": "4342",
+   "name": "4342",
+   "sector": "REITs"
+  },
+  {
+   "code": "4344",
+   "name": "4344",
+   "sector": "REITs"
+  },
+  {
+   "code": "4345",
+   "name": "4345",
+   "sector": "REITs"
+  },
+  {
+   "code": "4346",
+   "name": "4346",
+   "sector": "REITs"
+  },
+  {
+   "code": "4347",
+   "name": "4347",
+   "sector": "REITs"
+  },
+  {
+   "code": "4348",
+   "name": "4348",
+   "sector": "REITs"
+  },
+  {
+   "code": "4349",
+   "name": "4349",
+   "sector": "REITs"
+  },
+  {
+   "code": "5110",
+   "name": "Saudi Electricity",
+   "sector": "Utilities"
+  },
+  {
+   "code": "6001",
+   "name": "6001",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6002",
+   "name": "6002",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6004",
+   "name": "Saudi Airlines Catering",
+   "sector": "Consumer Services"
+  },
+  {
+   "code": "6010",
+   "name": "NADEC",
+   "sector": "Food & Staples"
+  },
+  {
+   "code": "6012",
+   "name": "6012",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6013",
+   "name": "6013",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6014",
+   "name": "6014",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6015",
+   "name": "6015",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6016",
+   "name": "6016",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6017",
+   "name": "6017",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6018",
+   "name": "6018",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6019",
+   "name": "6019",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6020",
+   "name": "6020",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6040",
+   "name": "6040",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6050",
+   "name": "6050",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6060",
+   "name": "6060",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6070",
+   "name": "6070",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "6090",
+   "name": "6090",
+   "sector": "Food & Agriculture"
+  },
+  {
+   "code": "7010",
+   "name": "stc",
+   "sector": "Telecom"
+  },
+  {
+   "code": "7020",
+   "name": "Etihad Etisalat (Mobily)",
+   "sector": "Telecom"
+  },
+  {
+   "code": "7030",
+   "name": "Zain KSA",
+   "sector": "Telecom"
+  },
+  {
+   "code": "7040",
+   "name": "7040",
+   "sector": "Telecom & IT"
+  },
+  {
+   "code": "7200",
+   "name": "7200",
+   "sector": "Telecom & IT"
+  },
+  {
+   "code": "7201",
+   "name": "7201",
+   "sector": "Telecom & IT"
+  },
+  {
+   "code": "7202",
+   "name": "7202",
+   "sector": "Telecom & IT"
+  },
+  {
+   "code": "7203",
+   "name": "7203",
+   "sector": "Telecom & IT"
+  },
+  {
+   "code": "7204",
+   "name": "7204",
+   "sector": "Telecom & IT"
+  },
+  {
+   "code": "7205",
+   "name": "7205",
+   "sector": "Telecom & IT"
+  },
+  {
+   "code": "7211",
+   "name": "7211",
+   "sector": "Telecom & IT"
   },
   {
    "code": "8010",
@@ -967,6 +1297,16 @@
    "sector": "Insurance"
   },
   {
+   "code": "8210",
+   "name": "Bupa Arabia",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8230",
+   "name": "8230",
+   "sector": "Insurance"
+  },
+  {
    "code": "8240",
    "name": "8240",
    "sector": "Insurance"
@@ -979,6 +1319,31 @@
   {
    "code": "8260",
    "name": "8260",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8280",
+   "name": "8280",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8300",
+   "name": "8300",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8310",
+   "name": "8310",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8311",
+   "name": "8311",
+   "sector": "Insurance"
+  },
+  {
+   "code": "8313",
+   "name": "8313",
    "sector": "Insurance"
   }
  ]

@@ -1469,6 +1469,16 @@
     "source": "yfinance",
     "status": "ok"
   },
+  "4141": {
+    "symbol": "4141.SR",
+    "name": "4141",
+    "sector": "Diversified / Services",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
   "4142": {
     "symbol": "4142.SR",
     "name": "4142",
@@ -1499,6 +1509,16 @@
     "source": "yfinance",
     "status": "ok"
   },
+  "4145": {
+    "symbol": "4145.SR",
+    "name": "4145",
+    "sector": "Diversified / Services",
+    "rows": 1057,
+    "first": "2022-05-10",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
   "4146": {
     "symbol": "4146.SR",
     "name": "4146",
@@ -1525,6 +1545,16 @@
     "sector": "Diversified / Services",
     "rows": 1091,
     "first": "2022-03-16",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4150": {
+    "symbol": "4150.SR",
+    "name": "4150",
+    "sector": "Diversified / Services",
+    "rows": 1394,
+    "first": "2021-01-03",
     "last": "2026-08-02",
     "source": "yfinance",
     "status": "ok"
@@ -1609,6 +1639,16 @@
     "source": "yfinance",
     "status": "ok"
   },
+  "4190": {
+    "symbol": "4190.SR",
+    "name": "Jarir Marketing",
+    "sector": "Consumer Retail",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
   "4191": {
     "symbol": "4191.SR",
     "name": "4191",
@@ -1654,6 +1694,16 @@
     "name": "Aldrees Petroleum",
     "sector": "Energy",
     "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4210": {
+    "symbol": "4210.SR",
+    "name": "4210",
+    "sector": "Diversified / Services",
+    "rows": 1393,
     "first": "2021-01-03",
     "last": "2026-08-02",
     "source": "yfinance",
@@ -1775,6 +1825,616 @@
     "sector": "Financial Services",
     "rows": 1393,
     "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4290": {
+    "symbol": "4290.SR",
+    "name": "4290",
+    "sector": "Diversified / Services",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4291": {
+    "symbol": "4291.SR",
+    "name": "4291",
+    "sector": "Diversified / Services",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4292": {
+    "symbol": "4292.SR",
+    "name": "4292",
+    "sector": "Diversified / Services",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4300": {
+    "symbol": "4300.SR",
+    "name": "Dar Al Arkan",
+    "sector": "Real Estate",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4310": {
+    "symbol": "4310.SR",
+    "name": "4310",
+    "sector": "Real Estate",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4320": {
+    "symbol": "4320.SR",
+    "name": "4320",
+    "sector": "Real Estate",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4321": {
+    "symbol": "4321.SR",
+    "name": "Cenomi Centers",
+    "sector": "Real Estate",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4322": {
+    "symbol": "4322.SR",
+    "name": "4322",
+    "sector": "Real Estate",
+    "rows": 1019,
+    "first": "2022-07-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4323": {
+    "symbol": "4323.SR",
+    "name": "4323",
+    "sector": "Real Estate",
+    "rows": 1269,
+    "first": "2021-07-01",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4324": {
+    "symbol": "4324.SR",
+    "name": "4324",
+    "sector": "Real Estate",
+    "rows": 1222,
+    "first": "2021-09-12",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4325": {
+    "symbol": "4325.SR",
+    "name": "4325",
+    "sector": "Real Estate",
+    "rows": 340,
+    "first": "2025-03-24",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4326": {
+    "symbol": "4326.SR",
+    "name": "4326",
+    "sector": "Real Estate",
+    "rows": 226,
+    "first": "2025-09-10",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4327": {
+    "symbol": "4327.SR",
+    "name": "4327",
+    "sector": "Real Estate",
+    "rows": 156,
+    "first": "2025-12-18",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4330": {
+    "symbol": "4330.SR",
+    "name": "4330",
+    "sector": "REITs",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4331": {
+    "symbol": "4331.SR",
+    "name": "4331",
+    "sector": "REITs",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4332": {
+    "symbol": "4332.SR",
+    "name": "4332",
+    "sector": "REITs",
+    "rows": 1209,
+    "first": "2021-09-30",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4333": {
+    "symbol": "4333.SR",
+    "name": "4333",
+    "sector": "REITs",
+    "rows": 666,
+    "first": "2023-12-04",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4334": {
+    "symbol": "4334.SR",
+    "name": "4334",
+    "sector": "REITs",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4335": {
+    "symbol": "4335.SR",
+    "name": "4335",
+    "sector": "REITs",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4336": {
+    "symbol": "4336.SR",
+    "name": "4336",
+    "sector": "REITs",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4337": {
+    "symbol": "4337.SR",
+    "name": "4337",
+    "sector": "REITs",
+    "rows": 608,
+    "first": "2024-02-25",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4338": {
+    "symbol": "4338.SR",
+    "name": "4338",
+    "sector": "REITs",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4339": {
+    "symbol": "4339.SR",
+    "name": "4339",
+    "sector": "REITs",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4340": {
+    "symbol": "4340.SR",
+    "name": "4340",
+    "sector": "REITs",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4342": {
+    "symbol": "4342.SR",
+    "name": "4342",
+    "sector": "REITs",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4344": {
+    "symbol": "4344.SR",
+    "name": "4344",
+    "sector": "REITs",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4345": {
+    "symbol": "4345.SR",
+    "name": "4345",
+    "sector": "REITs",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4346": {
+    "symbol": "4346.SR",
+    "name": "4346",
+    "sector": "REITs",
+    "rows": 1209,
+    "first": "2021-09-30",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4347": {
+    "symbol": "4347.SR",
+    "name": "4347",
+    "sector": "REITs",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4348": {
+    "symbol": "4348.SR",
+    "name": "4348",
+    "sector": "REITs",
+    "rows": 1209,
+    "first": "2021-09-30",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "4349": {
+    "symbol": "4349.SR",
+    "name": "4349",
+    "sector": "REITs",
+    "rows": 872,
+    "first": "2023-02-01",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "5110": {
+    "symbol": "5110.SR",
+    "name": "Saudi Electricity",
+    "sector": "Utilities",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6001": {
+    "symbol": "6001.SR",
+    "name": "6001",
+    "sector": "Food & Agriculture",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6002": {
+    "symbol": "6002.SR",
+    "name": "6002",
+    "sector": "Food & Agriculture",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6004": {
+    "symbol": "6004.SR",
+    "name": "Saudi Airlines Catering",
+    "sector": "Consumer Services",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6010": {
+    "symbol": "6010.SR",
+    "name": "NADEC",
+    "sector": "Food & Staples",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6012": {
+    "symbol": "6012.SR",
+    "name": "6012",
+    "sector": "Food & Agriculture",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6013": {
+    "symbol": "6013.SR",
+    "name": "6013",
+    "sector": "Food & Agriculture",
+    "rows": 1268,
+    "first": "2021-07-01",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6014": {
+    "symbol": "6014.SR",
+    "name": "6014",
+    "sector": "Food & Agriculture",
+    "rows": 986,
+    "first": "2022-08-23",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6015": {
+    "symbol": "6015.SR",
+    "name": "6015",
+    "sector": "Food & Agriculture",
+    "rows": 904,
+    "first": "2022-12-20",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6016": {
+    "symbol": "6016.SR",
+    "name": "6016",
+    "sector": "Food & Agriculture",
+    "rows": 1210,
+    "first": "2021-09-30",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6017": {
+    "symbol": "6017.SR",
+    "name": "6017",
+    "sector": "Food & Agriculture",
+    "rows": 1045,
+    "first": "2022-05-26",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6018": {
+    "symbol": "6018.SR",
+    "name": "6018",
+    "sector": "Food & Agriculture",
+    "rows": 262,
+    "first": "2025-07-22",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6019": {
+    "symbol": "6019.SR",
+    "name": "6019",
+    "sector": "Food & Agriculture",
+    "rows": 168,
+    "first": "2025-12-02",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6020": {
+    "symbol": "6020.SR",
+    "name": "6020",
+    "sector": "Food & Agriculture",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6040": {
+    "symbol": "6040.SR",
+    "name": "6040",
+    "sector": "Food & Agriculture",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6050": {
+    "symbol": "6050.SR",
+    "name": "6050",
+    "sector": "Food & Agriculture",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6060": {
+    "symbol": "6060.SR",
+    "name": "6060",
+    "sector": "Food & Agriculture",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6070": {
+    "symbol": "6070.SR",
+    "name": "6070",
+    "sector": "Food & Agriculture",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "6090": {
+    "symbol": "6090.SR",
+    "name": "6090",
+    "sector": "Food & Agriculture",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7010": {
+    "symbol": "7010.SR",
+    "name": "stc",
+    "sector": "Telecom",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7020": {
+    "symbol": "7020.SR",
+    "name": "Etihad Etisalat (Mobily)",
+    "sector": "Telecom",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7030": {
+    "symbol": "7030.SR",
+    "name": "Zain KSA",
+    "sector": "Telecom",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7040": {
+    "symbol": "7040.SR",
+    "name": "7040",
+    "sector": "Telecom & IT",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7200": {
+    "symbol": "7200.SR",
+    "name": "7200",
+    "sector": "Telecom & IT",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7201": {
+    "symbol": "7201.SR",
+    "name": "7201",
+    "sector": "Telecom & IT",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7202": {
+    "symbol": "7202.SR",
+    "name": "7202",
+    "sector": "Telecom & IT",
+    "rows": 1198,
+    "first": "2021-10-17",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7203": {
+    "symbol": "7203.SR",
+    "name": "7203",
+    "sector": "Telecom & IT",
+    "rows": 1110,
+    "first": "2022-02-16",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7204": {
+    "symbol": "7204.SR",
+    "name": "7204",
+    "sector": "Telecom & IT",
+    "rows": 921,
+    "first": "2022-11-27",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "7205": {
+    "symbol": "7205.SR",
+    "name": "7205",
+    "sector": "Telecom & IT",
+    "rows": 52,
+    "first": "2026-05-21",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "short"
+  },
+  "7211": {
+    "symbol": "7211.SR",
+    "name": "7211",
+    "sector": "Telecom & IT",
+    "rows": 1098,
+    "first": "2022-03-07",
     "last": "2026-08-02",
     "source": "yfinance",
     "status": "ok"
@@ -1939,6 +2599,26 @@
     "source": "yfinance",
     "status": "ok"
   },
+  "8210": {
+    "symbol": "8210.SR",
+    "name": "Bupa Arabia",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8230": {
+    "symbol": "8230.SR",
+    "name": "8230",
+    "sector": "Insurance",
+    "rows": 1394,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
   "8240": {
     "symbol": "8240.SR",
     "name": "8240",
@@ -1965,6 +2645,56 @@
     "sector": "Insurance",
     "rows": 1393,
     "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8280": {
+    "symbol": "8280.SR",
+    "name": "8280",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8300": {
+    "symbol": "8300.SR",
+    "name": "8300",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8310": {
+    "symbol": "8310.SR",
+    "name": "8310",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8311": {
+    "symbol": "8311.SR",
+    "name": "8311",
+    "sector": "Insurance",
+    "rows": 1393,
+    "first": "2021-01-03",
+    "last": "2026-08-02",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "8313": {
+    "symbol": "8313.SR",
+    "name": "8313",
+    "sector": "Insurance",
+    "rows": 534,
+    "first": "2024-06-23",
     "last": "2026-08-02",
     "source": "yfinance",
     "status": "ok"
