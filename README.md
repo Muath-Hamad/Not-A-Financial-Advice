@@ -5,6 +5,10 @@ with distinct investment philosophies each receive **SAR 100,000** and trade the
 Tadawul main market from **2022-01-02 to 2026-08-02** (1,144 sessions), plus an
 out-of-sample walk-back over **2016–2021**. Everything lives under [`TASI/`](TASI).
 
+📖 **Full technical documentation: [`TASI/docs/`](TASI/docs)** — data acquisition,
+preprocessing, engine internals, every agent's complete parameter set, metric
+definitions, and the out-of-sample validation.
+
 ## Layout
 
 ```
@@ -30,6 +34,7 @@ TASI/
 │   ├── template.html         dashboard shell (charts, tables, no data)
 │   ├── build_dashboard.py    injects results → index.html
 │   └── index.html            the self-contained dashboard (open this)
+├── docs/                     full technical documentation (start here)
 ├── out/
 │   ├── results.json          v3 in-sample results (2022–2026)
 │   ├── results_oos.json      v3 out-of-sample results (2016–2021)
