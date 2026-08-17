@@ -33,7 +33,7 @@ jobs:
       - name: Fetch full history 2015 -> latest (agents already frozen)
         env:
           FETCH_START: "2015-01-01"
-          FETCH_END: ""
+          FETCH_END: "2026-08-06"
           FETCH_RAW_SUBDIR: data/raw_full
         run: python NASDAQ/pipeline/fetch_data.py
 

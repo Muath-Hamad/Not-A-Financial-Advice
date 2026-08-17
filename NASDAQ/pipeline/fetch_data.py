@@ -21,7 +21,8 @@ from pathlib import Path
 import pandas as pd
 
 START = os.environ.get("FETCH_START", "2015-01-01")
-END = os.environ.get("FETCH_END") or "2023-01-01"  # exclusive; stage 1 = in-sample only
+_default_end = str(__import__("datetime").date.today() + __import__("datetime").timedelta(days=1))
+END = os.environ.get("FETCH_END") or _default_end  # exclusive; empty env = through today
 ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = ROOT / os.environ.get("FETCH_RAW_SUBDIR", "data/raw")
 MIN_ROWS = 120   # newly-listed names are allowed short histories
