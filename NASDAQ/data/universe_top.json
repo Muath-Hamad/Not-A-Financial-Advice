@@ -1,0 +1,4006 @@
+{
+ "count": 500,
+ "as_of": "runner fetch date",
+ "universe": [
+  {
+   "code": "NVDA",
+   "name": "NVIDIA Corporation Common Stock",
+   "mcap": 5504532000000.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "AAPL",
+   "name": "Apple Inc. Common Stock",
+   "mcap": 4445022373500.0,
+   "sector": "Technology",
+   "industry": "Computer Manufacturing",
+   "country": "United States"
+  },
+  {
+   "code": "GOOGL",
+   "name": "Alphabet Inc. Class A Common Stock",
+   "mcap": 4208098400000.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "United States"
+  },
+  {
+   "code": "GOOG",
+   "name": "Alphabet Inc. Class C Capital Stock",
+   "mcap": 4176728450000.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "United States"
+  },
+  {
+   "code": "MSFT",
+   "name": "Microsoft Corporation Common Stock",
+   "mcap": 3595968914927.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "AMZN",
+   "name": "Amazon.com Inc. Common Stock",
+   "mcap": 2820405272807.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Catalog/Specialty Distribution",
+   "country": "United States"
+  },
+  {
+   "code": "SPCX",
+   "name": "Space Exploration Technologies Corp. Class A Common Stock",
+   "mcap": 1958393319225.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "United States"
+  },
+  {
+   "code": "AVGO",
+   "name": "Broadcom Inc. Common Stock",
+   "mcap": 1877293570329.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "META",
+   "name": "Meta Platforms Inc. Class A Common Stock",
+   "mcap": 1462510586241.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "United States"
+  },
+  {
+   "code": "TSLA",
+   "name": "Tesla Inc. Common Stock",
+   "mcap": 1346005751875.0,
+   "sector": "Industrials",
+   "industry": "Auto Manufacturing",
+   "country": "United States"
+  },
+  {
+   "code": "SKHY",
+   "name": "SK hynix Inc. American Depositary Shares",
+   "mcap": 1283969464800.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "South Korea"
+  },
+  {
+   "code": "MU",
+   "name": "Micron Technology Inc. Common Stock",
+   "mcap": 1165601495421.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "WMT",
+   "name": "Walmart Inc. Common Stock",
+   "mcap": 910881740081.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Department/Specialty Retail Stores",
+   "country": "United States"
+  },
+  {
+   "code": "AMD",
+   "name": "Advanced Micro Devices Inc. Common Stock",
+   "mcap": 841736781156.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "ASML",
+   "name": "ASML Holding N.V. New York Registry Shares",
+   "mcap": 725525629303.0,
+   "sector": "Technology",
+   "industry": "Industrial Machinery/Components",
+   "country": "Netherlands"
+  },
+  {
+   "code": "GOOGM",
+   "name": "Alphabet Inc. Depositary Shares representing a 1/20th Interest in a Share of Series A Mandatory Convertible Preferred Stock",
+   "mcap": 599392300000.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "United States"
+  },
+  {
+   "code": "GOOGN",
+   "name": "Alphabet Inc. Depositary Shares representing a 1/20th Interest in a Share of Series B Mandatory Convertible Preferred Stock",
+   "mcap": 595356400000.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "United States"
+  },
+  {
+   "code": "INTC",
+   "name": "Intel Corporation Common Stock",
+   "mcap": 555725059082.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "CSCO",
+   "name": "Cisco Systems Inc. Common Stock (DE)",
+   "mcap": 443070859857.0,
+   "sector": "Telecommunications",
+   "industry": "Computer Communications Equipment",
+   "country": "United States"
+  },
+  {
+   "code": "LRCX",
+   "name": "Lam Research Corporation Common Stock",
+   "mcap": 427942397093.0,
+   "sector": "Technology",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "AMAT",
+   "name": "Applied Materials Inc. Common Stock",
+   "mcap": 425705167177.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "COST",
+   "name": "Costco Wholesale Corporation Common Stock",
+   "mcap": 421588690235.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Department/Specialty Retail Stores",
+   "country": "United States"
+  },
+  {
+   "code": "PLTR",
+   "name": "Palantir Technologies Inc. Class A Common Stock",
+   "mcap": 420611574615.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "NFLX",
+   "name": "Netflix Inc. Common Stock",
+   "mcap": 318249909437.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Consumer Electronics/Video Chains",
+   "country": "United States"
+  },
+  {
+   "code": "PANW",
+   "name": "Palo Alto Networks Inc. Common Stock",
+   "mcap": 308465275000.0,
+   "sector": "Technology",
+   "industry": "Computer peripheral equipment",
+   "country": "United States"
+  },
+  {
+   "code": "ARM",
+   "name": "Arm Holdings plc American Depositary Shares",
+   "mcap": 299105931337.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United Kingdom"
+  },
+  {
+   "code": "KLAC",
+   "name": "KLA Corporation Common Stock",
+   "mcap": 270037089110.0,
+   "sector": "Technology",
+   "industry": "Electronic Components",
+   "country": "United States"
+  },
+  {
+   "code": "SNDK",
+   "name": "Sandisk Corporation Common Stock",
+   "mcap": 267050260601.0,
+   "sector": "Technology",
+   "industry": "Electronic Components",
+   "country": "United States"
+  },
+  {
+   "code": "TXN",
+   "name": "Texas Instruments Incorporated Common Stock",
+   "mcap": 260321252894.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "STX",
+   "name": "Seagate Technology Holdings PLC Ordinary Shares (Ireland)",
+   "mcap": 226591256538.0,
+   "sector": "Technology",
+   "industry": "Electronic Components",
+   "country": "Ireland"
+  },
+  {
+   "code": "AMGN",
+   "name": "Amgen Inc. Common Stock",
+   "mcap": 225903083289.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "CRWD",
+   "name": "CrowdStrike Holdings Inc. Class A Common Stock",
+   "mcap": 219292318541.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "LIN",
+   "name": "Linde plc Ordinary Shares",
+   "mcap": 218977101929.0,
+   "sector": "Basic Materials",
+   "industry": "Major Chemicals",
+   "country": "United States"
+  },
+  {
+   "code": "MRVL",
+   "name": "Marvell Technology Inc. Common Stock",
+   "mcap": 209308175097.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "SHOP",
+   "name": "Shopify Inc. Class A Subordinate Voting Shares",
+   "mcap": 194300384144.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "Canada"
+  },
+  {
+   "code": "TMUS",
+   "name": "T-Mobile US Inc. Common Stock",
+   "mcap": 193424145256.0,
+   "sector": "Telecommunications",
+   "industry": "Telecommunications Equipment",
+   "country": "United States"
+  },
+  {
+   "code": "ADI",
+   "name": "Analog Devices Inc. Common Stock",
+   "mcap": 191639525018.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "PEP",
+   "name": "PepsiCo Inc. Common Stock",
+   "mcap": 188518821991.0,
+   "sector": "Consumer Staples",
+   "industry": "Beverages (Production/Distribution)",
+   "country": "United States"
+  },
+  {
+   "code": "WDC",
+   "name": "Western Digital Corporation Common Stock",
+   "mcap": 187372653233.0,
+   "sector": "Technology",
+   "industry": "Electronic Components",
+   "country": "United States"
+  },
+  {
+   "code": "QCOM",
+   "name": "QUALCOMM Incorporated Common Stock",
+   "mcap": 171821840271.0,
+   "sector": "Technology",
+   "industry": "Radio And Television Broadcasting And Communications Equipment",
+   "country": "United States"
+  },
+  {
+   "code": "GILD",
+   "name": "Gilead Sciences Inc. Common Stock",
+   "mcap": 171770987622.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "BKNG",
+   "name": "Booking Holdings Inc. Common Stock",
+   "mcap": 156737972300.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Transportation Services",
+   "country": "United States"
+  },
+  {
+   "code": "ISRG",
+   "name": "Intuitive Surgical Inc. Common Stock",
+   "mcap": 138076954762.0,
+   "sector": "Health Care",
+   "industry": "Industrial Specialties",
+   "country": "United States"
+  },
+  {
+   "code": "MNST",
+   "name": "Monster Beverage Corporation",
+   "mcap": 134234361123.0,
+   "sector": "Consumer Staples",
+   "industry": "Beverages (Production/Distribution)",
+   "country": "United States"
+  },
+  {
+   "code": "VRTX",
+   "name": "Vertex Pharmaceuticals Incorporated Common Stock",
+   "mcap": 130275746674.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "SBUX",
+   "name": "Starbucks Corporation Common Stock",
+   "mcap": 122721000000.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Restaurants",
+   "country": "United States"
+  },
+  {
+   "code": "PDD",
+   "name": "PDD Holdings Inc. American Depositary Shares",
+   "mcap": 121323197439.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "China"
+  },
+  {
+   "code": "FTNT",
+   "name": "Fortinet Inc. Common Stock",
+   "mcap": 115325111979.0,
+   "sector": "Technology",
+   "industry": "Computer peripheral equipment",
+   "country": "United States"
+  },
+  {
+   "code": "ABNB",
+   "name": "Airbnb Inc. Class A Common Stock",
+   "mcap": 108468469452.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Diversified Commercial Services",
+   "country": "United States"
+  },
+  {
+   "code": "EQIX",
+   "name": "Equinix Inc. Common Stock REIT",
+   "mcap": 108455970384.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "SNY",
+   "name": "Sanofi ADS",
+   "mcap": 108211960499.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "France"
+  },
+  {
+   "code": "ADP",
+   "name": "Automatic Data Processing Inc. Common Stock",
+   "mcap": 105924149880.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "United States"
+  },
+  {
+   "code": "APP",
+   "name": "Applovin Corporation Class A Common Stock",
+   "mcap": 104387686430.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "United States"
+  },
+  {
+   "code": "ADBE",
+   "name": "Adobe Inc. Common Stock",
+   "mcap": 100905375000.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "CEG",
+   "name": "Constellation Energy Corporation Common Stock",
+   "mcap": 97294577810.0,
+   "sector": "Utilities",
+   "industry": "Electric Utilities: Central",
+   "country": "United States"
+  },
+  {
+   "code": "CME",
+   "name": "CME Group Inc. Class A Common Stock",
+   "mcap": 96899419793.0,
+   "sector": "Finance",
+   "industry": "Investment Bankers/Brokers/Service",
+   "country": "United States"
+  },
+  {
+   "code": "CSX",
+   "name": "CSX Corporation Common Stock",
+   "mcap": 94161300031.0,
+   "sector": "Industrials",
+   "industry": "Railroads",
+   "country": "United States"
+  },
+  {
+   "code": "DASH",
+   "name": "DoorDash Inc. Class A Common Stock",
+   "mcap": 94146975751.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "United States"
+  },
+  {
+   "code": "MAR",
+   "name": "Marriott International Class A Common Stock",
+   "mcap": 92663300441.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Hotels/Resorts",
+   "country": "United States"
+  },
+  {
+   "code": "INTU",
+   "name": "Intuit Inc. Common Stock",
+   "mcap": 91950830235.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "CMCSA",
+   "name": "Comcast Corporation Class A Common Stock",
+   "mcap": 91199959926.0,
+   "sector": "Telecommunications",
+   "industry": "Cable & Other Pay Television Services",
+   "country": "United States"
+  },
+  {
+   "code": "MELI",
+   "name": "MercadoLibre Inc. Common Stock",
+   "mcap": 90588594590.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "Argentina"
+  },
+  {
+   "code": "CDNS",
+   "name": "Cadence Design Systems Inc. Common Stock",
+   "mcap": 90547841435.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "DDOG",
+   "name": "Datadog Inc. Class A Common Stock",
+   "mcap": 90149375525.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "HOOD",
+   "name": "Robinhood Markets Inc. Class A Common Stock",
+   "mcap": 86163549633.0,
+   "sector": "Finance",
+   "industry": "Investment Bankers/Brokers/Service",
+   "country": "United States"
+  },
+  {
+   "code": "REGN",
+   "name": "Regeneron Pharmaceuticals Inc. Common Stock",
+   "mcap": 83300880791.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "SNPS",
+   "name": "Synopsys Inc. Common Stock",
+   "mcap": 80276749610.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "MDLZ",
+   "name": "Mondelez International Inc. Class A Common Stock",
+   "mcap": 79845832046.0,
+   "sector": "Consumer Staples",
+   "industry": "Packaged Foods",
+   "country": "United States"
+  },
+  {
+   "code": "NTES",
+   "name": "NetEase Inc. American Depositary Shares",
+   "mcap": 79440567791.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "China"
+  },
+  {
+   "code": "CTAS",
+   "name": "Cintas Corporation Common Stock",
+   "mcap": 78961457777.0,
+   "sector": "Industrials",
+   "industry": "Garments and Clothing",
+   "country": "United States"
+  },
+  {
+   "code": "LITE",
+   "name": "Lumentum Holdings Inc. Common Stock",
+   "mcap": 77290410000.0,
+   "sector": "Telecommunications",
+   "industry": "Telecommunications Equipment",
+   "country": "United States"
+  },
+  {
+   "code": "ROST",
+   "name": "Ross Stores Inc. Common Stock",
+   "mcap": 77058030077.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Clothing/Shoe/Accessory Stores",
+   "country": "United States"
+  },
+  {
+   "code": "NBIS",
+   "name": "Nebius Group N.V. Class A Ordinary Shares",
+   "mcap": 74809118889.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "Netherlands"
+  },
+  {
+   "code": "ORLY",
+   "name": "O'Reilly Automotive Inc. Common Stock",
+   "mcap": 73340385403.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Auto & Home Supply Stores",
+   "country": "United States"
+  },
+  {
+   "code": "HON",
+   "name": "Honeywell International Inc. Common Stock",
+   "mcap": 72945328002.0,
+   "sector": "Industrials",
+   "industry": "Aerospace",
+   "country": "United States"
+  },
+  {
+   "code": "MPWR",
+   "name": "Monolithic Power Systems Inc. Common Stock",
+   "mcap": 70913349000.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "WBD",
+   "name": "Warner Bros. Discovery Inc. Series A Common Stock",
+   "mcap": 69646909930.0,
+   "sector": "Telecommunications",
+   "industry": "Cable & Other Pay Television Services",
+   "country": "United States"
+  },
+  {
+   "code": "PCAR",
+   "name": "PACCAR Inc. Common Stock",
+   "mcap": 68811690306.0,
+   "sector": "Industrials",
+   "industry": "Auto Manufacturing",
+   "country": "United States"
+  },
+  {
+   "code": "AEP",
+   "name": "American Electric Power Company Inc. Common Stock",
+   "mcap": 68256539994.0,
+   "sector": "Utilities",
+   "industry": "Electric Utilities: Central",
+   "country": "United States"
+  },
+  {
+   "code": "TER",
+   "name": "Teradyne Inc. Common Stock",
+   "mcap": 67747918901.0,
+   "sector": "Industrials",
+   "industry": "Electrical Products",
+   "country": "United States"
+  },
+  {
+   "code": "BRKRP",
+   "name": "Bruker Corporation 6.375% Mandatory Convertible Preferred Stock Series A",
+   "mcap": 64422089584.0,
+   "sector": "Industrials",
+   "industry": "Biotechnology: Laboratory Analytical Instruments",
+   "country": "United States"
+  },
+  {
+   "code": "BKR",
+   "name": "Baker Hughes Company Class A Common Stock",
+   "mcap": 63858722987.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Oil and Gas Field Machinery",
+   "country": "United States"
+  },
+  {
+   "code": "ARGX",
+   "name": "argenx SE American Depositary Shares",
+   "mcap": 61702923250.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "Netherlands"
+  },
+  {
+   "code": "NXPI",
+   "name": "NXP Semiconductors N.V. Common Stock",
+   "mcap": 59785604014.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "Netherlands"
+  },
+  {
+   "code": "CBRS",
+   "name": "Cerebras Systems Inc. Class A Common Stock",
+   "mcap": 59531173034.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "FAST",
+   "name": "Fastenal Company Common Stock",
+   "mcap": 58705975835.0,
+   "sector": "Consumer Discretionary",
+   "industry": "RETAIL: Building Materials",
+   "country": "United States"
+  },
+  {
+   "code": "CRWV",
+   "name": "CoreWeave Inc. Class A Common Stock",
+   "mcap": 58176080779.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "ALAB",
+   "name": "Astera Labs Inc. Common Stock",
+   "mcap": 57815645759.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "FANG",
+   "name": "Diamondback Energy Inc. Common Stock",
+   "mcap": 56611123324.0,
+   "sector": "Energy",
+   "industry": "Oil & Gas Production",
+   "country": "United States"
+  },
+  {
+   "code": "NDAQ",
+   "name": "Nasdaq Inc. Common Stock",
+   "mcap": 54198445989.0,
+   "sector": "Finance",
+   "industry": "Investment Bankers/Brokers/Service",
+   "country": "United States"
+  },
+  {
+   "code": "CRDO",
+   "name": "Credo Technology Group Holding Ltd Ordinary Shares",
+   "mcap": 52322901010.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "HONA",
+   "name": "Honeywell Aerospace Inc. Common Stock",
+   "mcap": 51932703991.0,
+   "sector": "Industrials",
+   "industry": "Aerospace",
+   "country": "United States"
+  },
+  {
+   "code": "ADSK",
+   "name": "Autodesk Inc. Common Stock",
+   "mcap": 51708715000.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "PYPL",
+   "name": "PayPal Holdings Inc. Common Stock",
+   "mcap": 51618509137.0,
+   "sector": "Industrials",
+   "industry": "Diversified Commercial Services",
+   "country": "United States"
+  },
+  {
+   "code": "HBANL",
+   "name": "Huntington Bancshares Incorporated Depositary Shares Each Representing a 1/40th Interest in a Share of 6.875% Series J Non-Cumulative Perpetual Preferred Stock",
+   "mcap": 50752820429.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "AXON",
+   "name": "Axon Enterprise Inc. Common Stock",
+   "mcap": 49898457415.0,
+   "sector": "Industrials",
+   "industry": "Ordnance And Accessories",
+   "country": "United States"
+  },
+  {
+   "code": "RKLB",
+   "name": "Rocket Lab Corporation Common Stock",
+   "mcap": 49522543402.0,
+   "sector": "Industrials",
+   "industry": "Military/Government/Technical",
+   "country": "United States"
+  },
+  {
+   "code": "XEL",
+   "name": "Xcel Energy Inc. Common Stock",
+   "mcap": 49158719882.0,
+   "sector": "Utilities",
+   "industry": "Power Generation",
+   "country": "United States"
+  },
+  {
+   "code": "CCEP",
+   "name": "Coca-Cola Europacific Partners plc Ordinary Shares",
+   "mcap": 48108518425.0,
+   "sector": "Consumer Staples",
+   "industry": "Beverages (Production/Distribution)",
+   "country": "United Kingdom"
+  },
+  {
+   "code": "FLEX",
+   "name": "Flex Ltd. Ordinary Shares",
+   "mcap": 48087032661.0,
+   "sector": "Technology",
+   "industry": "Electrical Products",
+   "country": "Singapore"
+  },
+  {
+   "code": "WDAY",
+   "name": "Workday Inc. Class A Common Stock",
+   "mcap": 47186880000.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "United States"
+  },
+  {
+   "code": "EXC",
+   "name": "Exelon Corporation Common Stock",
+   "mcap": 46776588515.0,
+   "sector": "Utilities",
+   "industry": "Power Generation",
+   "country": "United States"
+  },
+  {
+   "code": "MDLN",
+   "name": "Medline Inc. Class A Common Stock",
+   "mcap": 46100218207.0,
+   "sector": "Health Care",
+   "industry": "Medical/Dental Instruments",
+   "country": "United States"
+  },
+  {
+   "code": "FER",
+   "name": "Ferrovial N.V. Ordinary Shares",
+   "mcap": 45915793733.0,
+   "sector": "Industrials",
+   "industry": "Military/Government/Technical",
+   "country": "Netherlands"
+  },
+  {
+   "code": "TTWO",
+   "name": "Take-Two Interactive Software Inc. Common Stock",
+   "mcap": 45857888548.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "NTRA",
+   "name": "Natera Inc. Common Stock",
+   "mcap": 45674948733.0,
+   "sector": "Health Care",
+   "industry": "Medical Specialities",
+   "country": "United States"
+  },
+  {
+   "code": "EBAY",
+   "name": "eBay Inc. Common Stock",
+   "mcap": 45405575000.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "United States"
+  },
+  {
+   "code": "RVMD",
+   "name": "Revolution Medicines Inc. Common Stock",
+   "mcap": 45245346158.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "ODFL",
+   "name": "Old Dominion Freight Line Inc. Common Stock",
+   "mcap": 43915022190.0,
+   "sector": "Industrials",
+   "industry": "Trucking Freight/Courier Services",
+   "country": "United States"
+  },
+  {
+   "code": "MCHP",
+   "name": "Microchip Technology Incorporated Common Stock",
+   "mcap": 43904967711.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "TRI",
+   "name": "Thomson Reuters Corporation Common Shares",
+   "mcap": 43458624000.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Publishing",
+   "country": "United States"
+  },
+  {
+   "code": "IDXX",
+   "name": "IDEXX Laboratories Inc. Common Stock",
+   "mcap": 42806507190.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: In Vitro & In Vivo Diagnostic Substances",
+   "country": "United States"
+  },
+  {
+   "code": "PAYX",
+   "name": "Paychex Inc. Common Stock",
+   "mcap": 42374277526.0,
+   "sector": "Industrials",
+   "industry": "Diversified Commercial Services",
+   "country": "United States"
+  },
+  {
+   "code": "IBKR",
+   "name": "Interactive Brokers Group Inc. Class A Common Stock",
+   "mcap": 41873484564.0,
+   "sector": "Finance",
+   "industry": "Investment Bankers/Brokers/Service",
+   "country": "United States"
+  },
+  {
+   "code": "HBANM",
+   "name": "Huntington Bancshares Incorporated Depositary Shares each representing a 1/1000th interest in a share of Huntington Series I Preferred Stock",
+   "mcap": 41519524674.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "KDP",
+   "name": "Keurig Dr Pepper Inc. Common Stock",
+   "mcap": 41212616561.0,
+   "sector": "Consumer Staples",
+   "industry": "Beverages (Production/Distribution)",
+   "country": "United States"
+  },
+  {
+   "code": "ONC",
+   "name": "BeOne Medicines Ltd. American Depositary Shares",
+   "mcap": 40747910170.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "Cayman Islands"
+  },
+  {
+   "code": "NTAP",
+   "name": "NetApp Inc. Common Stock",
+   "mcap": 40381087052.0,
+   "sector": "Technology",
+   "industry": "Electronic Components",
+   "country": "United States"
+  },
+  {
+   "code": "UAL",
+   "name": "United Airlines Holdings Inc. Common Stock",
+   "mcap": 40329533671.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Air Freight/Delivery Services",
+   "country": "United States"
+  },
+  {
+   "code": "TEAM",
+   "name": "Atlassian Corporation Class A Common Stock",
+   "mcap": 40303411843.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "Australia"
+  },
+  {
+   "code": "COIN",
+   "name": "Coinbase Global Inc. Class A Common Stock",
+   "mcap": 39686824864.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "United States"
+  },
+  {
+   "code": "HBANZ",
+   "name": "Huntington Bancshares Incorporated Depositary Shares Each Representing a 1/1000th Interest in a Share of 5.50% Series L Non-Cumulative Perpetual Preferred Stock",
+   "mcap": 39307170440.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "SMCIP",
+   "name": "Super Micro Computer Inc. Depositary Shares representing a 1/20th Interest in a Share of 7% Series A Mandatory Convertible Preferred Stock",
+   "mcap": 39248570135.0,
+   "sector": "Technology",
+   "industry": "Computer Manufacturing",
+   "country": "United States"
+  },
+  {
+   "code": "ROP",
+   "name": "Roper Technologies Inc. Common Stock",
+   "mcap": 38740411904.0,
+   "sector": "Industrials",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "VOD",
+   "name": "Vodafone Group Plc American Depositary Shares",
+   "mcap": 38287642004.0,
+   "sector": "Telecommunications",
+   "industry": "Telecommunications Equipment",
+   "country": "United Kingdom"
+  },
+  {
+   "code": "JD",
+   "name": "JD.com Inc. American Depositary Shares",
+   "mcap": 38230080000.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Other Specialty Stores",
+   "country": "China"
+  },
+  {
+   "code": "MCHPP",
+   "name": "Microchip Technology Incorporated Depositary Shares Each Representing a 1/20th Interest in a Share of 7.50% Series A Mandatory Convertible Preferred Stock",
+   "mcap": 37592491678.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "EXPE",
+   "name": "Expedia Group Inc. Common Stock",
+   "mcap": 37311348480.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Transportation Services",
+   "country": "United States"
+  },
+  {
+   "code": "MSTR",
+   "name": "Strategy Inc Common Stock Class A",
+   "mcap": 37310241551.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "STRF",
+   "name": "Strategy Inc 10.00% Series A Perpetual Strife Preferred Stock",
+   "mcap": 37004782079.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "STLD",
+   "name": "Steel Dynamics Inc.",
+   "mcap": 36795186751.0,
+   "sector": "Industrials",
+   "industry": "Steel/Iron Ore",
+   "country": "United States"
+  },
+  {
+   "code": "ESLT",
+   "name": "Elbit Systems Ltd. Ordinary Shares",
+   "mcap": 36562997678.0,
+   "sector": "Industrials",
+   "industry": "Military/Government/Technical",
+   "country": "Israel"
+  },
+  {
+   "code": "STRC",
+   "name": "Strategy Inc Variable Rate Series A Perpetual Stretch Preferred Stock",
+   "mcap": 36395784263.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "HBAN",
+   "name": "Huntington Bancshares Incorporated Common Stock",
+   "mcap": 36377568942.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "KMB",
+   "name": "Kimberly-Clark Corporation Common Stock",
+   "mcap": 35825413973.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Containers/Packaging",
+   "country": "United States"
+  },
+  {
+   "code": "MDB",
+   "name": "MongoDB Inc. Class A Common Stock",
+   "mcap": 35656277558.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "NTRS",
+   "name": "Northern Trust Corporation Common Stock",
+   "mcap": 35268361229.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "BIDU",
+   "name": "Baidu Inc. ADS",
+   "mcap": 34909922813.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "China"
+  },
+  {
+   "code": "ERIC",
+   "name": "Ericsson American Depositary Shares",
+   "mcap": 34438357973.0,
+   "sector": "Technology",
+   "industry": "Radio And Television Broadcasting And Communications Equipment",
+   "country": "Sweden"
+  },
+  {
+   "code": "RPRX",
+   "name": "Royalty Pharma plc Class A Ordinary Shares",
+   "mcap": 33959571108.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "DXCM",
+   "name": "DexCom Inc. Common Stock",
+   "mcap": 33696429511.0,
+   "sector": "Health Care",
+   "industry": "Medical/Dental Instruments",
+   "country": "United States"
+  },
+  {
+   "code": "ACGL",
+   "name": "Arch Capital Group Ltd. Common Stock",
+   "mcap": 33634954950.0,
+   "sector": "Finance",
+   "industry": "Property-Casualty Insurers",
+   "country": "Bermuda"
+  },
+  {
+   "code": "ON",
+   "name": "ON Semiconductor Corporation Common Stock",
+   "mcap": 33262793442.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "GEHC",
+   "name": "GE HealthCare Technologies Inc. Common Stock",
+   "mcap": 32715635232.0,
+   "sector": "Health Care",
+   "industry": "Medical Electronics",
+   "country": "United States"
+  },
+  {
+   "code": "HBANP",
+   "name": "Huntington Bancshares Incorporated Depositary Shares 4.500% Series H Non-Cumulative Perpetual Preferred Stock",
+   "mcap": 32590503392.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "CASY",
+   "name": "Casey's General Stores Inc. Common Stock",
+   "mcap": 31961144222.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Retail-Auto Dealers and Gas Stations",
+   "country": "United States"
+  },
+  {
+   "code": "TSEM",
+   "name": "Tower Semiconductor Ltd. Ordinary Shares",
+   "mcap": 30945625640.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "Israel"
+  },
+  {
+   "code": "BIIB",
+   "name": "Biogen Inc. Common Stock",
+   "mcap": 30938948411.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "ZM",
+   "name": "Zoom Communications Inc. Class A Common Stock",
+   "mcap": 30881751039.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "United States"
+  },
+  {
+   "code": "GFS",
+   "name": "GlobalFoundries Inc. Ordinary Shares",
+   "mcap": 30719796704.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "AGNCN",
+   "name": "AGNC Investment Corp. Depositary Shares Each Representing a 1/1000th Interest in a Share of 7.00% Series C Fixed-To-Floating Rate Cumulative Redeemable Preferred Stock",
+   "mcap": 30703969477.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "RYAAY",
+   "name": "Ryanair Holdings plc American Depositary Shares",
+   "mcap": 30558396127.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Air Freight/Delivery Services",
+   "country": "Ireland"
+  },
+  {
+   "code": "WTW",
+   "name": "Willis Towers Watson Public Limited Company Ordinary Shares",
+   "mcap": 30514932340.0,
+   "sector": "Finance",
+   "industry": "Specialty Insurers",
+   "country": "United Kingdom"
+  },
+  {
+   "code": "AGNCO",
+   "name": "AGNC Investment Corp. Depositary Shares each representing a 1/1000th interest in a share of 6.50% Series E Fixed-to-Floating Cumulative Redeemable Preferred Stock",
+   "mcap": 30466873188.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "AGNCZ",
+   "name": "AGNC Investment Corp. Depositary Shares Each Representing a 1/1000th Interest in a Share of 8.75% Series H Fixed-Rate Cumulative Redeemable Preferred Stock",
+   "mcap": 30217922084.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "AGNCP",
+   "name": "AGNC Investment Corp. Depositary Shares Each Representing a 1/1000th Interest in a Share of 6.125% Series F Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock",
+   "mcap": 30040099867.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "ZS",
+   "name": "Zscaler Inc. Common Stock",
+   "mcap": 30019756221.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "United States"
+  },
+  {
+   "code": "ALNY",
+   "name": "Alnylam Pharmaceuticals Inc. Common Stock",
+   "mcap": 30002011392.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "AGNCM",
+   "name": "AGNC Investment Corp. Depositary Shares rep 6.875% Series D Fixed-to-Floating Cumulative Redeemable Preferred Stock",
+   "mcap": 29874132464.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "AGNCL",
+   "name": "AGNC Investment Corp. Depositary Shares Each Representing a 1/1000th Interest in a Share of 7.75% Series G Fixed-Rate Reset Cumulative Redeemable Preferred Stock",
+   "mcap": 29660745804.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "KHC",
+   "name": "The Kraft Heinz Company Common Stock",
+   "mcap": 29532940693.0,
+   "sector": "Consumer Staples",
+   "industry": "Packaged Foods",
+   "country": "United States"
+  },
+  {
+   "code": "CPRT",
+   "name": "Copart Inc. (DE) Common Stock",
+   "mcap": 29500982874.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Retail-Auto Dealers and Gas Stations",
+   "country": "United States"
+  },
+  {
+   "code": "LPLA",
+   "name": "LPL Financial Holdings Inc. Common Stock",
+   "mcap": 29312998587.0,
+   "sector": "Finance",
+   "industry": "Investment Bankers/Brokers/Service",
+   "country": "United States"
+  },
+  {
+   "code": "ILMN",
+   "name": "Illumina Inc. Common Stock",
+   "mcap": 29166405000.0,
+   "sector": "Health Care",
+   "industry": "Medical Specialities",
+   "country": "United States"
+  },
+  {
+   "code": "FOXA",
+   "name": "Fox Corporation Class A Common Stock",
+   "mcap": 28989432293.0,
+   "sector": "Industrials",
+   "industry": "Broadcasting",
+   "country": "United States"
+  },
+  {
+   "code": "TCOM",
+   "name": "Trip.com Group Limited American Depositary Shares",
+   "mcap": 28223388050.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "China"
+  },
+  {
+   "code": "ASTS",
+   "name": "AST SpaceMobile Inc. Class A Common Stock",
+   "mcap": 28070651342.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Telecommunications Equipment",
+   "country": "United States"
+  },
+  {
+   "code": "FISV",
+   "name": "Fiserv Inc. Common Stock",
+   "mcap": 27944341189.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "United States"
+  },
+  {
+   "code": "INSM",
+   "name": "Insmed Incorporated Common Stock",
+   "mcap": 27629627760.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "ECHO",
+   "name": "EchoStar  Corporation Common Stock",
+   "mcap": 27111497778.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Telecommunications Equipment",
+   "country": "United States"
+  },
+  {
+   "code": "JBHT",
+   "name": "J.B. Hunt Transport Services Inc. Common Stock",
+   "mcap": 26910386621.0,
+   "sector": "Industrials",
+   "industry": "Trucking Freight/Courier Services",
+   "country": "United States"
+  },
+  {
+   "code": "CINF",
+   "name": "Cincinnati Financial Corporation Common Stock",
+   "mcap": 26450406275.0,
+   "sector": "Finance",
+   "industry": "Property-Casualty Insurers",
+   "country": "United States"
+  },
+  {
+   "code": "STRK",
+   "name": "Strategy Inc 8.00% Series A Perpetual Strike Preferred Stock",
+   "mcap": 26427047154.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "STRD",
+   "name": "Strategy Inc 10.00% Series A Perpetual Stride Preferred Stock",
+   "mcap": 26394387965.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "ROIV",
+   "name": "Roivant Sciences Ltd. Common Shares",
+   "mcap": 26184209294.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United Kingdom"
+  },
+  {
+   "code": "SYM",
+   "name": "Symbotic Inc. Class A Common Stock",
+   "mcap": 25906681162.0,
+   "sector": "Industrials",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "FOX",
+   "name": "Fox Corporation Class B Common Stock",
+   "mcap": 25785403405.0,
+   "sector": "Industrials",
+   "industry": "Broadcasting",
+   "country": "United States"
+  },
+  {
+   "code": "CTSH",
+   "name": "Cognizant Technology Solutions Corporation Class A Common Stock",
+   "mcap": 25776669860.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "United States"
+  },
+  {
+   "code": "MRNA",
+   "name": "Moderna Inc. Common Stock",
+   "mcap": 25698814175.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "FCNCA",
+   "name": "First Citizens BancShares Inc. Class A Common Stock",
+   "mcap": 25584789222.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "FWONK",
+   "name": "Liberty Media Corporation Series C Liberty Formula One Common Stock",
+   "mcap": 25490785212.0,
+   "sector": "Industrials",
+   "industry": "Broadcasting",
+   "country": "United States"
+  },
+  {
+   "code": "BSP",
+   "name": "Bending Spoons S.p.A. Ordinary Shares",
+   "mcap": 25348729084.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "Italy"
+  },
+  {
+   "code": "ENTG",
+   "name": "Entegris Inc. Common Stock",
+   "mcap": 25247144000.0,
+   "sector": "Industrials",
+   "industry": "Plastic Products",
+   "country": "United States"
+  },
+  {
+   "code": "OKTA",
+   "name": "Okta Inc. Class A Common Stock",
+   "mcap": 25199460815.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "AFRM",
+   "name": "Affirm Holdings Inc. Class A Common Stock",
+   "mcap": 25095623968.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "United States"
+  },
+  {
+   "code": "MTSI",
+   "name": "MACOM Technology Solutions Holdings Inc. Common Stock",
+   "mcap": 25087468979.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "VRSN",
+   "name": "VeriSign Inc. Common Stock",
+   "mcap": 24859590000.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "United States"
+  },
+  {
+   "code": "DLTR",
+   "name": "Dollar Tree Inc. Common Stock",
+   "mcap": 24722299873.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Department/Specialty Retail Stores",
+   "country": "United States"
+  },
+  {
+   "code": "INCY",
+   "name": "Incyte Corp. Common Stock",
+   "mcap": 24689598952.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Commercial Physical & Biological Resarch",
+   "country": "United States"
+  },
+  {
+   "code": "TW",
+   "name": "Tradeweb Markets Inc. Class A Common Stock",
+   "mcap": 24664238532.0,
+   "sector": "Finance",
+   "industry": "Investment Bankers/Brokers/Service",
+   "country": "United States"
+  },
+  {
+   "code": "PFG",
+   "name": "Principal Financial Group Inc Common Stock",
+   "mcap": 24538532905.0,
+   "sector": "Finance",
+   "industry": "Accident &Health Insurance",
+   "country": "United States"
+  },
+  {
+   "code": "ARXS",
+   "name": "Arxis Inc. Class A Common Stock",
+   "mcap": 24059047943.0,
+   "sector": "Industrials",
+   "industry": "Military/Government/Technical",
+   "country": "United States"
+  },
+  {
+   "code": "FSLR",
+   "name": "First Solar Inc. Common Stock",
+   "mcap": 23979196448.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "SOFI",
+   "name": "SoFi Technologies Inc. Common Stock",
+   "mcap": 23687399742.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "United States"
+  },
+  {
+   "code": "FTAI",
+   "name": "FTAI Aviation Ltd. Common Stock",
+   "mcap": 23613387292.0,
+   "sector": "Industrials",
+   "industry": "Misc Corporate Leasing Services",
+   "country": "United States"
+  },
+  {
+   "code": "TROW",
+   "name": "T. Rowe Price Group Inc. Common Stock",
+   "mcap": 23503140353.0,
+   "sector": "Finance",
+   "industry": "Investment Managers",
+   "country": "United States"
+  },
+  {
+   "code": "ROKU",
+   "name": "Roku Inc. Class A Common Stock",
+   "mcap": 23429418446.0,
+   "sector": "Telecommunications",
+   "industry": "Cable & Other Pay Television Services",
+   "country": "United States"
+  },
+  {
+   "code": "FWONA",
+   "name": "Liberty Media Corporation Series A Liberty Formula One Common Stock",
+   "mcap": 23361016632.0,
+   "sector": "Industrials",
+   "industry": "Broadcasting",
+   "country": "United States"
+  },
+  {
+   "code": "SMCI",
+   "name": "Super Micro Computer Inc. Common Stock",
+   "mcap": 23232735818.0,
+   "sector": "Technology",
+   "industry": "Computer Manufacturing",
+   "country": "United States"
+  },
+  {
+   "code": "VRSK",
+   "name": "Verisk Analytics Inc. Common Stock",
+   "mcap": 22988154839.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "United States"
+  },
+  {
+   "code": "BNTX",
+   "name": "BioNTech SE American Depositary Share",
+   "mcap": 22982687445.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "Germany"
+  },
+  {
+   "code": "SITM",
+   "name": "SiTime Corporation Common Stock",
+   "mcap": 22627552459.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "FFIV",
+   "name": "F5 Inc. Common Stock",
+   "mcap": 22498545680.0,
+   "sector": "Telecommunications",
+   "industry": "Computer Communications Equipment",
+   "country": "United States"
+  },
+  {
+   "code": "MKSI",
+   "name": "MKS Inc. Common Stock",
+   "mcap": 21814100386.0,
+   "sector": "Industrials",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "WWD",
+   "name": "Woodward Inc. Common Stock",
+   "mcap": 21800307202.0,
+   "sector": "Energy",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "UTHR",
+   "name": "United Therapeutics Corporation Common Stock",
+   "mcap": 21770242992.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "RIVN",
+   "name": "Rivian Automotive Inc. Class A Common Stock",
+   "mcap": 21609319903.0,
+   "sector": "Industrials",
+   "industry": "Auto Manufacturing",
+   "country": "United States"
+  },
+  {
+   "code": "GH",
+   "name": "Guardant Health Inc. Common Stock",
+   "mcap": 21570692366.0,
+   "sector": "Health Care",
+   "industry": "Medical Specialities",
+   "country": "United States"
+  },
+  {
+   "code": "EXE",
+   "name": "Expand Energy Corporation Common Stock",
+   "mcap": 21548372680.0,
+   "sector": "Energy",
+   "industry": "Oil & Gas Production",
+   "country": "United States"
+  },
+  {
+   "code": "ULTA",
+   "name": "Ulta Beauty Inc. Common Stock",
+   "mcap": 21447367258.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Other Specialty Stores",
+   "country": "United States"
+  },
+  {
+   "code": "INIO",
+   "name": "INNIO N.V. Ordinary Shares",
+   "mcap": 20977500000.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Metal Fabrications",
+   "country": "Germany"
+  },
+  {
+   "code": "RGLD",
+   "name": "Royal Gold Inc. Common Stock",
+   "mcap": 19922069489.0,
+   "sector": "Industrials",
+   "industry": "Precious Metals",
+   "country": "United States"
+  },
+  {
+   "code": "TPG",
+   "name": "TPG Inc. Class A Common Stock",
+   "mcap": 19821839277.0,
+   "sector": "Finance",
+   "industry": "Investment Managers",
+   "country": "United States"
+  },
+  {
+   "code": "SBAC",
+   "name": "SBA Communications Corporation Class A Common Stock",
+   "mcap": 19451254969.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "LSCC",
+   "name": "Lattice Semiconductor Corporation Common Stock",
+   "mcap": 19407016366.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "EVRG",
+   "name": "Evergy Inc. Common Stock",
+   "mcap": 19265985382.0,
+   "sector": "Utilities",
+   "industry": "Power Generation",
+   "country": "United States"
+  },
+  {
+   "code": "BPYPM",
+   "name": "Brookfield Property Partners L.P. 6.25% Class A Cumulative Redeemable Preferred Units Series 1",
+   "mcap": 19073321728.0,
+   "sector": "Finance",
+   "industry": "Real Estate",
+   "country": "Bermuda"
+  },
+  {
+   "code": "BPYPP",
+   "name": "Brookfield Property Partners L.P. 6.50% Class A Cumulative Redeemable Perpetual Preferred Units",
+   "mcap": 18894333794.0,
+   "sector": "Finance",
+   "industry": "Real Estate",
+   "country": "Bermuda"
+  },
+  {
+   "code": "SSNC",
+   "name": "SS&C Technologies Holdings Inc. Common Stock",
+   "mcap": 18880340978.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "EWBC",
+   "name": "East West Bancorp Inc. Common Stock",
+   "mcap": 18724040241.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "KSPI",
+   "name": "Joint Stock Company Kaspi.kz American Depository Shares",
+   "mcap": 18647452968.0,
+   "sector": "",
+   "industry": "",
+   "country": "Kazakhstan"
+  },
+  {
+   "code": "VTRS",
+   "name": "Viatris Inc. Common Stock",
+   "mcap": 18584085320.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "TSCO",
+   "name": "Tractor Supply Company Common Stock",
+   "mcap": 18301534812.0,
+   "sector": "Consumer Discretionary",
+   "industry": "RETAIL: Building Materials",
+   "country": "United States"
+  },
+  {
+   "code": "LNT",
+   "name": "Alliant Energy Corporation Common Stock",
+   "mcap": 18131779001.0,
+   "sector": "Utilities",
+   "industry": "Power Generation",
+   "country": "United States"
+  },
+  {
+   "code": "STRL",
+   "name": "Sterling Infrastructure Inc. Common Stock",
+   "mcap": 18122320432.0,
+   "sector": "Industrials",
+   "industry": "Military/Government/Technical",
+   "country": "United States"
+  },
+  {
+   "code": "BPYPO",
+   "name": "Brookfield Property Partners L.P. 6.375% Class A Cumulative Redeemable Perpetual Preferred Units Series 2",
+   "mcap": 17858087862.0,
+   "sector": "Finance",
+   "industry": "Real Estate",
+   "country": "Bermuda"
+  },
+  {
+   "code": "ZBRA",
+   "name": "Zebra Technologies Corporation Class A Common Stock",
+   "mcap": 17840376779.0,
+   "sector": "Industrials",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "NWS",
+   "name": "News Corporation Class B Common Stock",
+   "mcap": 17649137052.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Newspapers/Magazines",
+   "country": "United States"
+  },
+  {
+   "code": "NTNX",
+   "name": "Nutanix Inc. Class A Common Stock",
+   "mcap": 17581645905.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "AKAM",
+   "name": "Akamai Technologies Inc. Common Stock",
+   "mcap": 17539174962.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "United States"
+  },
+  {
+   "code": "CHTR",
+   "name": "Charter Communications Inc. Class A Common Stock New",
+   "mcap": 17516496088.0,
+   "sector": "Telecommunications",
+   "industry": "Cable & Other Pay Television Services",
+   "country": "United States"
+  },
+  {
+   "code": "NDSN",
+   "name": "Nordson Corporation Common Stock",
+   "mcap": 17243590547.0,
+   "sector": "Industrials",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "CHRW",
+   "name": "C.H. Robinson Worldwide Inc. Common Stock",
+   "mcap": 17207516253.0,
+   "sector": "Industrials",
+   "industry": "Integrated Freight & Logistics",
+   "country": "United States"
+  },
+  {
+   "code": "CG",
+   "name": "The Carlyle Group Inc. Common Stock",
+   "mcap": 17178804192.0,
+   "sector": "Finance",
+   "industry": "Investment Managers",
+   "country": "United States"
+  },
+  {
+   "code": "QNT",
+   "name": "Quantinuum Inc. Class A Common Stock",
+   "mcap": 17175590103.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "United States"
+  },
+  {
+   "code": "TLN",
+   "name": "Talen Energy Corporation Common Stock",
+   "mcap": 17119764741.0,
+   "sector": "Utilities",
+   "industry": "Electric Utilities: Central",
+   "country": "United States"
+  },
+  {
+   "code": "CDW",
+   "name": "CDW Corporation Common Stock",
+   "mcap": 16843597805.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Catalog/Specialty Distribution",
+   "country": "United States"
+  },
+  {
+   "code": "PAA",
+   "name": "Plains All American Pipeline L.P. Common Units representing Limited Partner Interests",
+   "mcap": 16728980767.0,
+   "sector": "Energy",
+   "industry": "Natural Gas Distribution",
+   "country": "United States"
+  },
+  {
+   "code": "GEN",
+   "name": "Gen Digital Inc. Common Stock",
+   "mcap": 16479100991.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "MEDP",
+   "name": "Medpace Holdings Inc. Common Stock",
+   "mcap": 16312129415.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Commercial Physical & Biological Resarch",
+   "country": "United States"
+  },
+  {
+   "code": "BPYPN",
+   "name": "Brookfield Property Partners L.P. 5.750% Class A Cumulative Redeemable Perpetual Preferred Units Series 3",
+   "mcap": 16270573051.0,
+   "sector": "Finance",
+   "industry": "Real Estate",
+   "country": "Bermuda"
+  },
+  {
+   "code": "IREN",
+   "name": "IREN Limited Ordinary Shares",
+   "mcap": 16214270439.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "Australia"
+  },
+  {
+   "code": "JAZZ",
+   "name": "Jazz Pharmaceuticals plc Common Stock (Ireland)",
+   "mcap": 16023514187.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "Ireland"
+  },
+  {
+   "code": "PTC",
+   "name": "PTC Inc. Common Stock",
+   "mcap": 15933601897.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "WSE",
+   "name": "Wise Group plc Class A Ordinary Shares",
+   "mcap": 15915920361.0,
+   "sector": "Industrials",
+   "industry": "Diversified Commercial Services",
+   "country": "United Kingdom"
+  },
+  {
+   "code": "NBIX",
+   "name": "Neurocrine Biosciences Inc. Common Stock",
+   "mcap": 15682943891.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "TIGO",
+   "name": "Millicom International Cellular S.A. Common Stock",
+   "mcap": 15678470778.0,
+   "sector": "Telecommunications",
+   "industry": "Telecommunications Equipment",
+   "country": "Luxembourg"
+  },
+  {
+   "code": "BBIO",
+   "name": "BridgeBio Pharma Inc. Common Stock",
+   "mcap": 15518773123.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "NWSA",
+   "name": "News Corporation Class A Common Stock",
+   "mcap": 15498452816.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Newspapers/Magazines",
+   "country": "United States"
+  },
+  {
+   "code": "HST",
+   "name": "Host Hotels & Resorts Inc. Common Stock",
+   "mcap": 15480385795.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "LECO",
+   "name": "Lincoln Electric Holdings Inc. Common Shares",
+   "mcap": 15475819585.0,
+   "sector": "Industrials",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "LAMR",
+   "name": "Lamar Advertising Company Class A Common Stock",
+   "mcap": 15452815414.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "AMKR",
+   "name": "Amkor Technology Inc. Common Stock",
+   "mcap": 15312125849.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "ASND",
+   "name": "Ascendis Pharma A/S Ordinary Share",
+   "mcap": 15306560454.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "Denmark"
+  },
+  {
+   "code": "FUTU",
+   "name": "Futu Holdings Limited American Depositary Shares",
+   "mcap": 15295091458.0,
+   "sector": "Finance",
+   "industry": "Investment Bankers/Brokers/Service",
+   "country": "Hong Kong"
+  },
+  {
+   "code": "IESC",
+   "name": "IES Holdings Inc. Common Stock",
+   "mcap": 15277199207.0,
+   "sector": "Industrials",
+   "industry": "Engineering & Construction",
+   "country": "United States"
+  },
+  {
+   "code": "VNOM",
+   "name": "Viper Energy Inc. Class A Common Stock",
+   "mcap": 15265782953.0,
+   "sector": "Energy",
+   "industry": "Oil & Gas Production",
+   "country": "United States"
+  },
+  {
+   "code": "NXT",
+   "name": "Nextpower Inc. Class A Common Stock",
+   "mcap": 15148675277.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "GRAB",
+   "name": "Grab Holdings Limited Class A Ordinary Shares",
+   "mcap": 14884748872.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "Singapore"
+  },
+  {
+   "code": "TTMI",
+   "name": "TTM Technologies Inc. Common Stock",
+   "mcap": 14776231665.0,
+   "sector": "Technology",
+   "industry": "Electrical Products",
+   "country": "United States"
+  },
+  {
+   "code": "COO",
+   "name": "The Cooper Companies Inc. Common Stock",
+   "mcap": 14744315628.0,
+   "sector": "Health Care",
+   "industry": "Ophthalmic Goods",
+   "country": "United States"
+  },
+  {
+   "code": "LOGI",
+   "name": "Logitech International S.A. Ordinary Shares",
+   "mcap": 14590891031.0,
+   "sector": "Technology",
+   "industry": "Computer peripheral equipment",
+   "country": "United States"
+  },
+  {
+   "code": "SMTC",
+   "name": "Semtech Corporation Common Stock",
+   "mcap": 14328512662.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "APA",
+   "name": "APA Corporation Common Stock",
+   "mcap": 14240037124.0,
+   "sector": "Energy",
+   "industry": "Oil & Gas Production",
+   "country": "United States"
+  },
+  {
+   "code": "VLYPN",
+   "name": "Valley National Bancorp 8.250% Fixed-Rate Reset Non-Cumulative Perpetual Preferred Stock Series C",
+   "mcap": 14196428256.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "AUR",
+   "name": "Aurora Innovation Inc. Class A Common Stock",
+   "mcap": 14157352813.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "United States"
+  },
+  {
+   "code": "ARCC",
+   "name": "Ares Capital Corporation Common Stock",
+   "mcap": 14155820389.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "United States"
+  },
+  {
+   "code": "HTHT",
+   "name": "H World Group Limited American Depositary Shares",
+   "mcap": 14099967101.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Hotels/Resorts",
+   "country": "China"
+  },
+  {
+   "code": "SLMBP",
+   "name": "SLM Corporation Floating Rate Non-Cumulative Preferred Stock Series B",
+   "mcap": 14020843067.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "United States"
+  },
+  {
+   "code": "REG",
+   "name": "Regency Centers Corporation Common Stock",
+   "mcap": 13924486394.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "VLYPP",
+   "name": "Valley National Bancorp 6.25% Fixed-to-Floating Rate Non-Cumulative Perpetual Preferred Stock Series A",
+   "mcap": 13881443277.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "AEIS",
+   "name": "Advanced Energy Industries Inc. Common Stock",
+   "mcap": 13774548517.0,
+   "sector": "Technology",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "VLYPO",
+   "name": "Valley National Bancorp 5.50% Fixed-to-Floating Rate Non-Cumulative Perpetual Preferred Stock Series B",
+   "mcap": 13740528944.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "NVMI",
+   "name": "Nova Ltd. Ordinary Shares",
+   "mcap": 13591034487.0,
+   "sector": "Technology",
+   "industry": "Electronic Components",
+   "country": "Israel"
+  },
+  {
+   "code": "WMG",
+   "name": "Warner Music Group Corp. Class A Common Stock",
+   "mcap": 13459614356.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Services-Misc. Amusement & Recreation",
+   "country": "United States"
+  },
+  {
+   "code": "HAS",
+   "name": "Hasbro Inc. Common Stock",
+   "mcap": 13457052596.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Recreational Games/Products/Toys",
+   "country": "United States"
+  },
+  {
+   "code": "TXRH",
+   "name": "Texas Roadhouse Inc. Common Stock",
+   "mcap": 13445230873.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Restaurants",
+   "country": "United States"
+  },
+  {
+   "code": "FIVE",
+   "name": "Five Below Inc. Common Stock",
+   "mcap": 13362398046.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Department/Specialty Retail Stores",
+   "country": "United States"
+  },
+  {
+   "code": "AAOI",
+   "name": "Applied Optoelectronics Inc. Common Stock",
+   "mcap": 13329380290.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "LI",
+   "name": "Li Auto Inc. American Depositary Shares",
+   "mcap": 13236647112.0,
+   "sector": "Industrials",
+   "industry": "Auto Manufacturing",
+   "country": "China"
+  },
+  {
+   "code": "CHKP",
+   "name": "Check Point Software Technologies Ltd. Ordinary Shares",
+   "mcap": 13167918767.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "Israel"
+  },
+  {
+   "code": "TRMB",
+   "name": "Trimble Inc. Common Stock",
+   "mcap": 13075559977.0,
+   "sector": "Industrials",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "AGNC",
+   "name": "AGNC Investment Corp. Common Stock",
+   "mcap": 13010658881.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "BMRN",
+   "name": "BioMarin Pharmaceutical Inc. Common Stock",
+   "mcap": 12998477917.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "EXEL",
+   "name": "Exelixis Inc. Common Stock",
+   "mcap": 12909426153.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "ICLR",
+   "name": "ICON plc Ordinary Shares",
+   "mcap": 12844934442.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Commercial Physical & Biological Resarch",
+   "country": "Ireland"
+  },
+  {
+   "code": "CSGP",
+   "name": "CoStar Group Inc. Common Stock",
+   "mcap": 12737386179.0,
+   "sector": "Finance",
+   "industry": "Real Estate",
+   "country": "United States"
+  },
+  {
+   "code": "SEIC",
+   "name": "SEI Investments Company Common Stock",
+   "mcap": 12723833580.0,
+   "sector": "Finance",
+   "industry": "Investment Bankers/Brokers/Service",
+   "country": "United States"
+  },
+  {
+   "code": "DKNG",
+   "name": "DraftKings Inc. Class A Common Stock",
+   "mcap": 12686883197.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Services-Misc. Amusement & Recreation",
+   "country": "United States"
+  },
+  {
+   "code": "LULU",
+   "name": "lululemon athletica inc. Common Stock",
+   "mcap": 12637359509.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Apparel",
+   "country": "Canada"
+  },
+  {
+   "code": "CORT",
+   "name": "Corcept Therapeutics Incorporated Common Stock",
+   "mcap": 12595625218.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "ARWR",
+   "name": "Arrowhead Pharmaceuticals Inc. Common Stock",
+   "mcap": 12494663878.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "ALGN",
+   "name": "Align Technology Inc. Common Stock",
+   "mcap": 12444050875.0,
+   "sector": "Health Care",
+   "industry": "Industrial Specialties",
+   "country": "United States"
+  },
+  {
+   "code": "COKE",
+   "name": "Coca-Cola Consolidated Inc. Common Stock",
+   "mcap": 12337691893.0,
+   "sector": "Consumer Staples",
+   "industry": "Beverages (Production/Distribution)",
+   "country": "United States"
+  },
+  {
+   "code": "GLPI",
+   "name": "Gaming and Leisure Properties Inc. Common Stock",
+   "mcap": 12164821598.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "DRS",
+   "name": "Leonardo DRS Inc. Common Stock",
+   "mcap": 12106199120.0,
+   "sector": "Industrials",
+   "industry": "Industrial Machinery/Components",
+   "country": "Israel"
+  },
+  {
+   "code": "BTSG",
+   "name": "BrightSpring Health Services Inc. Common Stock",
+   "mcap": 11993540968.0,
+   "sector": "Health Care",
+   "industry": "Medical/Nursing Services",
+   "country": "United States"
+  },
+  {
+   "code": "MDGL",
+   "name": "Madrigal Pharmaceuticals Inc. Common Stock",
+   "mcap": 11967359665.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "LFUS",
+   "name": "Littelfuse Inc. Common Stock",
+   "mcap": 11936649128.0,
+   "sector": "Energy",
+   "industry": "Electrical Products",
+   "country": "United States"
+  },
+  {
+   "code": "CHYM",
+   "name": "Chime Financial Inc. Class A Common Stock",
+   "mcap": 11914073443.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "United States"
+  },
+  {
+   "code": "FROG",
+   "name": "JFrog Ltd. Ordinary Shares",
+   "mcap": 11878848302.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "KTOS",
+   "name": "Kratos Defense & Security Solutions Inc. Common Stock",
+   "mcap": 11845215734.0,
+   "sector": "Industrials",
+   "industry": "Military/Government/Technical",
+   "country": "United States"
+  },
+  {
+   "code": "ERIE",
+   "name": "Erie Indemnity Company Class A Common Stock",
+   "mcap": 11670360866.0,
+   "sector": "Finance",
+   "industry": "Specialty Insurers",
+   "country": "United States"
+  },
+  {
+   "code": "HALO",
+   "name": "Halozyme Therapeutics Inc. Common Stock",
+   "mcap": 11661352010.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "ENLT",
+   "name": "Enlight Renewable Energy Ltd. Ordinary Shares",
+   "mcap": 11628240163.0,
+   "sector": "Utilities",
+   "industry": "Electric Utilities: Central",
+   "country": "Israel"
+  },
+  {
+   "code": "SANM",
+   "name": "Sanmina Corporation Common Stock",
+   "mcap": 11591768169.0,
+   "sector": "Technology",
+   "industry": "Electrical Products",
+   "country": "United States"
+  },
+  {
+   "code": "UMBF",
+   "name": "UMB Financial Corporation Common Stock",
+   "mcap": 11564911068.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "DOCU",
+   "name": "DocuSign Inc. Common Stock",
+   "mcap": 11519688201.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "VICR",
+   "name": "Vicor Corporation Common Stock",
+   "mcap": 11413721507.0,
+   "sector": "Technology",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "VIAV",
+   "name": "Viavi Solutions Inc. Common Stock",
+   "mcap": 11343089593.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "TECH",
+   "name": "Bio-Techne Corp Common Stock",
+   "mcap": 11342623166.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "BPOP",
+   "name": "Popular Inc. Common Stock",
+   "mcap": 11333439628.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "MANH",
+   "name": "Manhattan Associates Inc. Common Stock",
+   "mcap": 11302418822.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "CART",
+   "name": "Maplebear Inc. Common Stock",
+   "mcap": 11301833271.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "United States"
+  },
+  {
+   "code": "PSKY",
+   "name": "Paramount Skydance Corporation Class B Common Stock",
+   "mcap": 11253116163.0,
+   "sector": "Industrials",
+   "industry": "Broadcasting",
+   "country": "United States"
+  },
+  {
+   "code": "DPZ",
+   "name": "Domino's Pizza Inc Common Stock",
+   "mcap": 11243158457.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Food Distributors",
+   "country": "United States"
+  },
+  {
+   "code": "CGNX",
+   "name": "Cognex Corporation Common Stock",
+   "mcap": 11227259215.0,
+   "sector": "Industrials",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "VSAT",
+   "name": "ViaSat Inc. Common Stock",
+   "mcap": 11210567818.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Telecommunications Equipment",
+   "country": "United States"
+  },
+  {
+   "code": "AXSM",
+   "name": "Axsome Therapeutics Inc. Common Stock",
+   "mcap": 11196923656.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "RMBS",
+   "name": "Rambus Inc. Common Stock",
+   "mcap": 11175883573.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "WTFC",
+   "name": "Wintrust Financial Corporation Common Stock",
+   "mcap": 10906548225.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "FORM",
+   "name": "FormFactor Inc. FormFactor Inc. Common Stock",
+   "mcap": 10849406288.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "PRAX",
+   "name": "Praxis Precision Medicines Inc. Common Stock",
+   "mcap": 10825556547.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "SAIL",
+   "name": "SailPoint Inc. Common Stock",
+   "mcap": 10736774133.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "JKHY",
+   "name": "Jack Henry & Associates Inc. Common Stock",
+   "mcap": 10733996589.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "United States"
+  },
+  {
+   "code": "GSAT",
+   "name": "Globalstar Inc. Common Stock",
+   "mcap": 10731735594.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Telecommunications Equipment",
+   "country": "United States"
+  },
+  {
+   "code": "BSY",
+   "name": "Bentley Systems Incorporated Class B Common Stock",
+   "mcap": 10579292973.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "SWKS",
+   "name": "Skyworks Solutions Inc. Common Stock",
+   "mcap": 10532342376.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "ENSG",
+   "name": "The Ensign Group Inc. Common Stock",
+   "mcap": 10526390405.0,
+   "sector": "Health Care",
+   "industry": "Hospital/Nursing Management",
+   "country": "United States"
+  },
+  {
+   "code": "ZION",
+   "name": "Zions Bancorporation N.A. Common Stock",
+   "mcap": 10508641560.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "HUT",
+   "name": "Hut 8 Corp. Common Stock",
+   "mcap": 10506020755.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "United States"
+  },
+  {
+   "code": "ABVX",
+   "name": "Abivax SA American Depositary Shares",
+   "mcap": 10498367598.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "France"
+  },
+  {
+   "code": "WYNN",
+   "name": "Wynn Resorts Limited Common stock",
+   "mcap": 10449275589.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Hotels/Resorts",
+   "country": "United States"
+  },
+  {
+   "code": "CYTK",
+   "name": "Cytokinetics Incorporated Common Stock",
+   "mcap": 10426061233.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "ONB",
+   "name": "Old National Bancorp Common Stock",
+   "mcap": 10369559850.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "SAIA",
+   "name": "Saia Inc. Common Stock",
+   "mcap": 10313219930.0,
+   "sector": "Industrials",
+   "industry": "Trucking Freight/Courier Services",
+   "country": "United States"
+  },
+  {
+   "code": "PAYP",
+   "name": "PayPay Corporation American Depository Shares",
+   "mcap": 10224861339.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "Japan"
+  },
+  {
+   "code": "APGE",
+   "name": "Apogee Therapeutics Inc. Common Stock",
+   "mcap": 10183027867.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "SMMT",
+   "name": "Summit Therapeutics Inc. Common Stock",
+   "mcap": 10179284922.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "PTGX",
+   "name": "Protagonist Therapeutics Inc. Common Stock",
+   "mcap": 10110669531.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "KYMR",
+   "name": "Kymera Therapeutics Inc. Common Stock",
+   "mcap": 10077854902.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "HSIC",
+   "name": "Henry Schein Inc. Common Stock",
+   "mcap": 10003441610.0,
+   "sector": "Health Care",
+   "industry": "Medical Specialities",
+   "country": "United States"
+  },
+  {
+   "code": "KRYS",
+   "name": "Krystal Biotech Inc. Common Stock",
+   "mcap": 9901402619.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "SOLS",
+   "name": "Solstice Advanced Materials Inc. Common Stock",
+   "mcap": 9867598562.0,
+   "sector": "Industrials",
+   "industry": "Major Chemicals",
+   "country": "United States"
+  },
+  {
+   "code": "LLYVK",
+   "name": "Liberty Live Holdings Inc. Series C Liberty Live Group Common Stock",
+   "mcap": 9844575232.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Services-Misc. Amusement & Recreation",
+   "country": "United States"
+  },
+  {
+   "code": "PODD",
+   "name": "Insulet Corporation Common Stock",
+   "mcap": 9774780807.0,
+   "sector": "Health Care",
+   "industry": "Medical/Dental Instruments",
+   "country": "United States"
+  },
+  {
+   "code": "SIRI",
+   "name": "SiriusXM Holdings Inc. Common Stock",
+   "mcap": 9683931778.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Broadcasting",
+   "country": "United States"
+  },
+  {
+   "code": "AAL",
+   "name": "American Airlines Group Inc. Common Stock",
+   "mcap": 9636495168.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Air Freight/Delivery Services",
+   "country": "United States"
+  },
+  {
+   "code": "IONS",
+   "name": "Ionis Pharmaceuticals Inc. Common Stock",
+   "mcap": 9635366990.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "ONBPO",
+   "name": "Old National Bancorp Depositary Shares Each Representing a 1/40th Interest in a Share of Series C Preferred Stock",
+   "mcap": 9564250000.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "ONBPP",
+   "name": "Old National Bancorp Depositary Shares Each Representing a 1/40th Interest in a Share of Series A Preferred Stock",
+   "mcap": 9520943076.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "LLYVA",
+   "name": "Liberty Live Holdings Inc. Series A Liberty Live Group Common Stock",
+   "mcap": 9492654669.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Services-Misc. Amusement & Recreation",
+   "country": "United States"
+  },
+  {
+   "code": "FRHC",
+   "name": "Freedom Holding Corp. Common Stock",
+   "mcap": 9472468401.0,
+   "sector": "Finance",
+   "industry": "Investment Bankers/Brokers/Service",
+   "country": "Kazakhstan"
+  },
+  {
+   "code": "RGEN",
+   "name": "Repligen Corporation Common Stock",
+   "mcap": 9419387323.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "FCFS",
+   "name": "FirstCash Holdings Inc. Common Stock",
+   "mcap": 9398235342.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Other Specialty Stores",
+   "country": "United States"
+  },
+  {
+   "code": "TEM",
+   "name": "Tempus AI Inc. Class A Common Stock",
+   "mcap": 9369976879.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "United States"
+  },
+  {
+   "code": "LINE",
+   "name": "Lineage Inc. Common Stock",
+   "mcap": 9360020043.0,
+   "sector": "Real Estate",
+   "industry": "Real Estate Investment Trusts",
+   "country": "United States"
+  },
+  {
+   "code": "AVAV",
+   "name": "AeroVironment Inc. Common Stock",
+   "mcap": 9311371440.0,
+   "sector": "Industrials",
+   "industry": "Aerospace",
+   "country": "United States"
+  },
+  {
+   "code": "SIMO",
+   "name": "Silicon Motion Technology Corporation American Depositary Shares",
+   "mcap": 9245649369.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "Taiwan"
+  },
+  {
+   "code": "TTEK",
+   "name": "Tetra Tech Inc. Common Stock",
+   "mcap": 9217599408.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Military/Government/Technical",
+   "country": "United States"
+  },
+  {
+   "code": "COLB",
+   "name": "Columbia Banking System Inc. Common Stock",
+   "mcap": 9201396267.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "SYRE",
+   "name": "Spyre Therapeutics Inc. Common Stock",
+   "mcap": 9173598198.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "APLD",
+   "name": "Applied Digital Corporation Common Stock",
+   "mcap": 8997651487.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "United States"
+  },
+  {
+   "code": "CRNX",
+   "name": "Crinetics Pharmaceuticals Inc. Common Stock",
+   "mcap": 8985846201.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "IDCC",
+   "name": "InterDigital Inc. Common Stock",
+   "mcap": 8961006901.0,
+   "sector": "Miscellaneous",
+   "industry": "Multi-Sector Companies",
+   "country": "United States"
+  },
+  {
+   "code": "SFD",
+   "name": "Smithfield Foods Inc. Common Stock",
+   "mcap": 8946396032.0,
+   "sector": "Consumer Staples",
+   "industry": "Meat/Poultry/Fish",
+   "country": "United States"
+  },
+  {
+   "code": "IMVT",
+   "name": "Immunovant Inc. Common Stock",
+   "mcap": 8923075862.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "PCVX",
+   "name": "Vaxcyte Inc. Common Stock",
+   "mcap": 8922364469.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "BOKF",
+   "name": "BOK Financial Corporation Common Stock",
+   "mcap": 8867101233.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "BRKR",
+   "name": "Bruker Corporation Common Stock",
+   "mcap": 8824651583.0,
+   "sector": "Industrials",
+   "industry": "Biotechnology: Laboratory Analytical Instruments",
+   "country": "United States"
+  },
+  {
+   "code": "WULF",
+   "name": "TeraWulf Inc. Common Stock",
+   "mcap": 8719477631.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "United States"
+  },
+  {
+   "code": "QRVO",
+   "name": "Qorvo Inc. Common Stock",
+   "mcap": 8687184202.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "ALGM",
+   "name": "Allegro MicroSystems Inc. Common Stock",
+   "mcap": 8656511016.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "CAE",
+   "name": "CAE Inc. Common Shares",
+   "mcap": 8651798041.0,
+   "sector": "Miscellaneous",
+   "industry": "Industrial Machinery/Components",
+   "country": "Canada"
+  },
+  {
+   "code": "CBSH",
+   "name": "Commerce Bancshares Inc. Common Stock",
+   "mcap": 8607365002.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "HQY",
+   "name": "HealthEquity Inc. Common Stock",
+   "mcap": 8584269481.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "United States"
+  },
+  {
+   "code": "MTCH",
+   "name": "Match Group Inc. Common Stock",
+   "mcap": 8571433780.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "United States"
+  },
+  {
+   "code": "TTAN",
+   "name": "ServiceTitan Inc. Class A Common Stock",
+   "mcap": 8527589587.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "GLXY",
+   "name": "Galaxy Digital Inc. Class A Common Stock",
+   "mcap": 8505746598.0,
+   "sector": "Finance",
+   "industry": "Investment Bankers/Brokers/Service",
+   "country": "United States"
+  },
+  {
+   "code": "SATA",
+   "name": "Strive Inc. Variable Rate Series A Perpetual Preferred Stock",
+   "mcap": 8490900185.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "XE",
+   "name": "X-Energy Inc. Class A Common Stock",
+   "mcap": 8393491961.0,
+   "sector": "Industrials",
+   "industry": "Metal Fabrications",
+   "country": "United States"
+  },
+  {
+   "code": "ALKS",
+   "name": "Alkermes plc Ordinary Shares",
+   "mcap": 8360482660.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "Ireland"
+  },
+  {
+   "code": "TPGXL",
+   "name": "TPG Operating Group II L.P. 6.950% Fixed-Rate Junior Subordinated Notes due 2064",
+   "mcap": 8328972443.0,
+   "sector": "",
+   "industry": "",
+   "country": "United States"
+  },
+  {
+   "code": "VLY",
+   "name": "Valley National Bancorp Common Stock",
+   "mcap": 8272500233.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "IBRX",
+   "name": "ImmunityBio Inc. Common Stock",
+   "mcap": 8261423748.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "CAMT",
+   "name": "Camtek Ltd. Ordinary Shares",
+   "mcap": 8178822993.0,
+   "sector": "Technology",
+   "industry": "Electronic Components",
+   "country": "Israel"
+  },
+  {
+   "code": "SNEX",
+   "name": "StoneX Group Inc. Common Stock",
+   "mcap": 8170577629.0,
+   "sector": "Finance",
+   "industry": "Investment Bankers/Brokers/Service",
+   "country": "United States"
+  },
+  {
+   "code": "TWST",
+   "name": "Twist Bioscience Corporation Common Stock",
+   "mcap": 8131507485.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "XP",
+   "name": "XP Inc. Class A Common Stock",
+   "mcap": 8083074689.0,
+   "sector": "Finance",
+   "industry": "Investment Bankers/Brokers/Service",
+   "country": "Brazil"
+  },
+  {
+   "code": "RYTM",
+   "name": "Rhythm Pharmaceuticals Inc. Common Stock",
+   "mcap": 7989595595.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "AVT",
+   "name": "Avnet Inc. Common Stock",
+   "mcap": 7887845749.0,
+   "sector": "Technology",
+   "industry": "Electronic Components",
+   "country": "United States"
+  },
+  {
+   "code": "MXL",
+   "name": "MaxLinear Inc. Common Stock",
+   "mcap": 7877610570.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "POWL",
+   "name": "Powell Industries Inc. Common Stock",
+   "mcap": 7851217542.0,
+   "sector": "Energy",
+   "industry": "Electrical Products",
+   "country": "United States"
+  },
+  {
+   "code": "MBLY",
+   "name": "Mobileye Global Inc. Class A Common Stock",
+   "mcap": 7837879466.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "Israel"
+  },
+  {
+   "code": "CBC",
+   "name": "Central Bancompany Inc. Class A Common Stock",
+   "mcap": 7830828171.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "QBTS",
+   "name": "D-Wave Quantum Inc. Common Stock",
+   "mcap": 7773003769.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "United States"
+  },
+  {
+   "code": "ZG",
+   "name": "Zillow Group Inc. Class A Common Stock",
+   "mcap": 7762683412.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "United States"
+  },
+  {
+   "code": "MORN",
+   "name": "Morningstar Inc. Common Stock",
+   "mcap": 7723669133.0,
+   "sector": "Finance",
+   "industry": "Investment Managers",
+   "country": "United States"
+  },
+  {
+   "code": "PCTY",
+   "name": "Paylocity Holding Corporation Common Stock",
+   "mcap": 7712360142.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "Z",
+   "name": "Zillow Group Inc. Class C Capital Stock",
+   "mcap": 7662614058.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "United States"
+  },
+  {
+   "code": "DBX",
+   "name": "Dropbox Inc. Class A Common Stock",
+   "mcap": 7604145812.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "CELH",
+   "name": "Celsius Holdings Inc. Common Stock",
+   "mcap": 7585990709.0,
+   "sector": "Consumer Staples",
+   "industry": "Beverages (Production/Distribution)",
+   "country": "United States"
+  },
+  {
+   "code": "TGTX",
+   "name": "TG Therapeutics Inc. Common Stock",
+   "mcap": 7575387433.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "CIFR",
+   "name": "Cipher Digital Inc. Common Stock",
+   "mcap": 7543183372.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "United States"
+  },
+  {
+   "code": "SFM",
+   "name": "Sprouts Farmers Market Inc. Common Stock",
+   "mcap": 7535340576.0,
+   "sector": "Consumer Staples",
+   "industry": "Food Chains",
+   "country": "United States"
+  },
+  {
+   "code": "CHRD",
+   "name": "Chord Energy Corporation Common Stock",
+   "mcap": 7530803017.0,
+   "sector": "Energy",
+   "industry": "Oil & Gas Production",
+   "country": "United States"
+  },
+  {
+   "code": "FIGR",
+   "name": "Figure Technology Solutions Inc. Class A Common Stock",
+   "mcap": 7508562854.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "U.S. Virgin Islands"
+  },
+  {
+   "code": "ORKA",
+   "name": "Oruka Therapeutics Inc. Common Stock",
+   "mcap": 7455874204.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: In Vitro & In Vivo Diagnostic Substances",
+   "country": "United States"
+  },
+  {
+   "code": "TXG",
+   "name": "10x Genomics Inc. Class A Common Stock",
+   "mcap": 7442231516.0,
+   "sector": "Industrials",
+   "industry": "Biotechnology: Laboratory Analytical Instruments",
+   "country": "United States"
+  },
+  {
+   "code": "NAVN",
+   "name": "Navan Inc. Class A Common Stock",
+   "mcap": 7436646101.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "VFS",
+   "name": "VinFast Auto Ltd. Ordinary Shares",
+   "mcap": 7404631472.0,
+   "sector": "Industrials",
+   "industry": "Auto Manufacturing",
+   "country": "Singapore"
+  },
+  {
+   "code": "LGN",
+   "name": "Legence Corp. Class A Common stock",
+   "mcap": 7371828491.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Engineering & Construction",
+   "country": "United States"
+  },
+  {
+   "code": "SLAB",
+   "name": "Silicon Laboratories Inc. Common Stock",
+   "mcap": 7313326676.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "RIOT",
+   "name": "Riot Platforms Inc. Common Stock",
+   "mcap": 7311920348.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "United States"
+  },
+  {
+   "code": "PLXS",
+   "name": "Plexus Corp. Common Stock",
+   "mcap": 7287749951.0,
+   "sector": "Technology",
+   "industry": "Electrical Products",
+   "country": "United States"
+  },
+  {
+   "code": "VCTR",
+   "name": "Victory Capital Holdings Inc. Class A Common Stock",
+   "mcap": 7261820070.0,
+   "sector": "Finance",
+   "industry": "Investment Managers",
+   "country": "United States"
+  },
+  {
+   "code": "MAAS",
+   "name": "Maase Inc. Class A Ordinary Shares",
+   "mcap": 7203040166.0,
+   "sector": "Finance",
+   "industry": "Investment Managers",
+   "country": "China"
+  },
+  {
+   "code": "BZ",
+   "name": "KANZHUN LIMITED American Depository Shares",
+   "mcap": 7164232282.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "China"
+  },
+  {
+   "code": "AAON",
+   "name": "AAON Inc. Common Stock",
+   "mcap": 7152028647.0,
+   "sector": "Industrials",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "BILI",
+   "name": "Bilibili Inc. American Depositary Shares",
+   "mcap": 7145095546.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "China"
+  },
+  {
+   "code": "GDS",
+   "name": "GDS Holdings Limited ADS",
+   "mcap": 7087356172.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "China"
+  },
+  {
+   "code": "GGAL",
+   "name": "Grupo Financiero Galicia S.A. American Depositary Shares",
+   "mcap": 7012100658.0,
+   "sector": "Finance",
+   "industry": "Commercial Banks",
+   "country": "Argentina"
+  },
+  {
+   "code": "GTLB",
+   "name": "GitLab Inc. Class A Common Stock",
+   "mcap": 6974725500.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "APPF",
+   "name": "AppFolio Inc. Class A Common Stock",
+   "mcap": 6911625989.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "LQDA",
+   "name": "Liquidia Corporation Common Stock",
+   "mcap": 6907848663.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "GLBE",
+   "name": "Global-E Online Ltd. Ordinary Shares",
+   "mcap": 6882029588.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "Israel"
+  },
+  {
+   "code": "ROAD",
+   "name": "Construction Partners Inc. Class A Common Stock",
+   "mcap": 6877487908.0,
+   "sector": "Industrials",
+   "industry": "Military/Government/Technical",
+   "country": "United States"
+  },
+  {
+   "code": "POOL",
+   "name": "Pool Corporation Common Stock",
+   "mcap": 6857862366.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Industrial Specialties",
+   "country": "United States"
+  },
+  {
+   "code": "CPB",
+   "name": "The Campbell's Company Common Stock",
+   "mcap": 6857252558.0,
+   "sector": "Consumer Staples",
+   "industry": "Packaged Foods",
+   "country": "United States"
+  },
+  {
+   "code": "ACT",
+   "name": "Enact Holdings Inc. Common Stock",
+   "mcap": 6832938449.0,
+   "sector": "Finance",
+   "industry": "Specialty Insurers",
+   "country": "United States"
+  },
+  {
+   "code": "CGON",
+   "name": "CG Oncology Inc. Common stock",
+   "mcap": 6830627298.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "VSEC",
+   "name": "VSE Corporation Common Stock",
+   "mcap": 6795652320.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Military/Government/Technical",
+   "country": "United States"
+  },
+  {
+   "code": "PPC",
+   "name": "Pilgrim's Pride Corporation Common Stock",
+   "mcap": 6793236190.0,
+   "sector": "Consumer Staples",
+   "industry": "Meat/Poultry/Fish",
+   "country": "United States"
+  },
+  {
+   "code": "SSRM",
+   "name": "SSR Mining Inc. Common Stock",
+   "mcap": 6720850924.0,
+   "sector": "Industrials",
+   "industry": "Precious Metals",
+   "country": "Canada"
+  },
+  {
+   "code": "WFRD",
+   "name": "Weatherford International plc Ordinary Shares",
+   "mcap": 6693269813.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Oil and Gas Field Machinery",
+   "country": "United States"
+  },
+  {
+   "code": "UBSI",
+   "name": "United Bankshares Inc. Common Stock",
+   "mcap": 6681226608.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "MRCY",
+   "name": "Mercury Systems Inc Common Stock",
+   "mcap": 6664203980.0,
+   "sector": "Technology",
+   "industry": "Electrical Products",
+   "country": "United States"
+  },
+  {
+   "code": "ACGLO",
+   "name": "Arch Capital Group Ltd. Depositary Shares Each Representing 1/1000th Interest in a Share of 5.45% Non-Cumulative Preferred Shares Series F",
+   "mcap": 6599371297.0,
+   "sector": "Finance",
+   "industry": "Property-Casualty Insurers",
+   "country": "Bermuda"
+  },
+  {
+   "code": "BLTE",
+   "name": "Belite Bio Inc American Depositary Shares",
+   "mcap": 6589328201.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "AUGO",
+   "name": "Aura Minerals Inc. Common Shares",
+   "mcap": 6586670820.0,
+   "sector": "Basic Materials",
+   "industry": "Metal Mining",
+   "country": "United States"
+  },
+  {
+   "code": "RRR",
+   "name": "Red Rock Resorts Inc. Class A Common Stock",
+   "mcap": 6586615374.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Hotels/Resorts",
+   "country": "United States"
+  },
+  {
+   "code": "LYFT",
+   "name": "Lyft Inc. Class A Common Stock",
+   "mcap": 6580922229.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "United States"
+  },
+  {
+   "code": "LNTH",
+   "name": "Lantheus Holdings Inc. Common Stock",
+   "mcap": 6580760243.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: In Vitro & In Vivo Diagnostic Substances",
+   "country": "United States"
+  },
+  {
+   "code": "COGT",
+   "name": "Cogent Biosciences Inc. Common Stock",
+   "mcap": 6554906195.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "URBN",
+   "name": "Urban Outfitters Inc. Common Stock",
+   "mcap": 6552796551.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Clothing/Shoe/Accessory Stores",
+   "country": "United States"
+  },
+  {
+   "code": "LSTR",
+   "name": "Landstar System Inc. Common Stock",
+   "mcap": 6538118286.0,
+   "sector": "Industrials",
+   "industry": "Trucking Freight/Courier Services",
+   "country": "United States"
+  },
+  {
+   "code": "MIRM",
+   "name": "Mirum Pharmaceuticals Inc. Common Stock",
+   "mcap": 6530880978.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "ERAS",
+   "name": "Erasca Inc. Common Stock",
+   "mcap": 6447863115.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "RUSHA",
+   "name": "Rush Enterprises Inc. Common Stock Cl A",
+   "mcap": 6438849719.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Retail-Auto Dealers and Gas Stations",
+   "country": "United States"
+  },
+  {
+   "code": "DNTH",
+   "name": "Dianthus Therapeutics Inc. Common Stock",
+   "mcap": 6431474618.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "SRRK",
+   "name": "Scholar Rock Holding Corporation Common Stock",
+   "mcap": 6397380863.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Biological Products (No Diagnostic Substances)",
+   "country": "United States"
+  },
+  {
+   "code": "LKQ",
+   "name": "LKQ Corporation Common Stock",
+   "mcap": 6390832692.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Motor Vehicles",
+   "country": "United States"
+  },
+  {
+   "code": "CORZ",
+   "name": "Core Scientific Inc. Common Stock",
+   "mcap": 6385034563.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "United States"
+  },
+  {
+   "code": "DSGX",
+   "name": "Descartes Systems Group Inc. (The) Common Stock",
+   "mcap": 6377102776.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "Canada"
+  },
+  {
+   "code": "CORZZ",
+   "name": "Core Scientific Inc. Tranche 2 Warrants",
+   "mcap": 6375394349.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "United States"
+  },
+  {
+   "code": "TTD",
+   "name": "The Trade Desk Inc. Class A Common Stock",
+   "mcap": 6373924832.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Programming Data Processing",
+   "country": "United States"
+  },
+  {
+   "code": "HWC",
+   "name": "Hancock Whitney Corporation Common Stock",
+   "mcap": 6341632735.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "MWH",
+   "name": "SOLV Energy Inc. Class A Common Stock",
+   "mcap": 6322836451.0,
+   "sector": "Industrials",
+   "industry": "Military/Government/Technical",
+   "country": "United States"
+  },
+  {
+   "code": "QLYS",
+   "name": "Qualys Inc. Common Stock",
+   "mcap": 6316701233.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "AMRX",
+   "name": "Amneal Pharmaceuticals Inc. Class A Common Stock",
+   "mcap": 6316348268.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "RUSHB",
+   "name": "Rush Enterprises Inc. Class B",
+   "mcap": 6275427137.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Retail-Auto Dealers and Gas Stations",
+   "country": "United States"
+  },
+  {
+   "code": "NOVT",
+   "name": "Novanta Inc. Common Stock",
+   "mcap": 6274346221.0,
+   "sector": "Miscellaneous",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "RGTI",
+   "name": "Rigetti Computing Inc. Common Stock",
+   "mcap": 6256495163.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "United States"
+  },
+  {
+   "code": "CAI",
+   "name": "Caris Life Sciences Inc. Common Stock",
+   "mcap": 6217094092.0,
+   "sector": "Health Care",
+   "industry": "Medical Specialities",
+   "country": "United States"
+  },
+  {
+   "code": "DOX",
+   "name": "Amdocs Limited Ordinary Shares",
+   "mcap": 6194684296.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "Guernsey"
+  },
+  {
+   "code": "CROX",
+   "name": "Crocs Inc. Common Stock",
+   "mcap": 6170531153.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Shoe Manufacturing",
+   "country": "United States"
+  },
+  {
+   "code": "CHDN",
+   "name": "Churchill Downs Incorporated Common Stock",
+   "mcap": 6160114446.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Services-Misc. Amusement & Recreation",
+   "country": "United States"
+  },
+  {
+   "code": "AXTI",
+   "name": "AXT Inc Common Stock",
+   "mcap": 6134373983.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "FSV",
+   "name": "FirstService Corporation Common Shares",
+   "mcap": 6127633555.0,
+   "sector": "Finance",
+   "industry": "Real Estate",
+   "country": "Canada"
+  },
+  {
+   "code": "NTSK",
+   "name": "Netskope Inc. Class A Common Stock",
+   "mcap": 6101266718.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "KNSA",
+   "name": "Kiniksa Pharmaceuticals International plc Class A Ordinary Shares",
+   "mcap": 6089774215.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "CRUS",
+   "name": "Cirrus Logic Inc. Common Stock",
+   "mcap": 6083269554.0,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States"
+  },
+  {
+   "code": "DUOL",
+   "name": "Duolingo Inc. Class A Common Stock",
+   "mcap": 6068179089.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "XENE",
+   "name": "Xenon Pharmaceuticals Inc. Common Shares",
+   "mcap": 6056400617.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "Canada"
+  },
+  {
+   "code": "PTCT",
+   "name": "PTC Therapeutics Inc. Common Stock",
+   "mcap": 6048404321.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "CZR",
+   "name": "Caesars Entertainment Inc. Common Stock",
+   "mcap": 6044383437.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Hotels/Resorts",
+   "country": "United States"
+  },
+  {
+   "code": "RDNT",
+   "name": "RadNet Inc. Common Stock",
+   "mcap": 6021127133.0,
+   "sector": "Health Care",
+   "industry": "Medical Specialities",
+   "country": "United States"
+  },
+  {
+   "code": "DFTX",
+   "name": "Definium Therapeutics Inc. Common Shares",
+   "mcap": 6011577343.0,
+   "sector": "Health Care",
+   "industry": "Medicinal Chemicals and Botanical Products",
+   "country": "United States"
+  },
+  {
+   "code": "OTEX",
+   "name": "Open Text Corporation Common Shares",
+   "mcap": 6001936509.0,
+   "sector": "Technology",
+   "industry": "EDP Services",
+   "country": "Canada"
+  },
+  {
+   "code": "CACC",
+   "name": "Credit Acceptance Corporation Common Stock",
+   "mcap": 5978331731.0,
+   "sector": "Finance",
+   "industry": "Finance: Consumer Services",
+   "country": "United States"
+  },
+  {
+   "code": "TVTX",
+   "name": "Travere Therapeutics Inc. Common Stock",
+   "mcap": 5933735112.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "LGND",
+   "name": "Ligand Pharmaceuticals Incorporated Common Stock",
+   "mcap": 5922769756.0,
+   "sector": "Health Care",
+   "industry": "Biotechnology: Pharmaceutical Preparations",
+   "country": "United States"
+  },
+  {
+   "code": "CVLT",
+   "name": "Commvault Systems Inc. Common Stock",
+   "mcap": 5914139283.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States"
+  },
+  {
+   "code": "NICE",
+   "name": "NICE Ltd American Depositary Shares",
+   "mcap": 5894023208.0,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "Israel"
+  },
+  {
+   "code": "STEP",
+   "name": "StepStone Group Inc. Class A Common Stock",
+   "mcap": 5873333432.0,
+   "sector": "Finance",
+   "industry": "Investment Managers",
+   "country": "United States"
+  },
+  {
+   "code": "ACMR",
+   "name": "ACM Research Inc. Class A Common Stock",
+   "mcap": 5843323772.0,
+   "sector": "Technology",
+   "industry": "Industrial Machinery/Components",
+   "country": "United States"
+  },
+  {
+   "code": "FTDR",
+   "name": "Frontdoor Inc. Common Stock",
+   "mcap": 5824240935.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Diversified Commercial Services",
+   "country": "United States"
+  },
+  {
+   "code": "CGABL",
+   "name": "The Carlyle Group Inc. 4.625% Subordinated Notes due 2061",
+   "mcap": 5816251075.0,
+   "sector": "Finance",
+   "industry": "Investment Managers",
+   "country": "United States"
+  },
+  {
+   "code": "OZK",
+   "name": "Bank OZK Common Stock",
+   "mcap": 5764285925.0,
+   "sector": "Finance",
+   "industry": "Major Banks",
+   "country": "United States"
+  },
+  {
+   "code": "MKTX",
+   "name": "MarketAxess Holdings Inc. Common Stock",
+   "mcap": 5723243899.0,
+   "sector": "Finance",
+   "industry": "Investment Bankers/Brokers/Service",
+   "country": "United States"
+  },
+  {
+   "code": "CWST",
+   "name": "Casella Waste Systems Inc. Class A Common Stock",
+   "mcap": 5687510911.0,
+   "sector": "Utilities",
+   "industry": "Environmental Services",
+   "country": "United States"
+  },
+  {
+   "code": "MMYT",
+   "name": "MakeMyTrip Limited Ordinary Shares",
+   "mcap": 5686786705.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Transportation Services",
+   "country": "India"
+  },
+  {
+   "code": "BCPC",
+   "name": "Balchem Corporation Common Stock",
+   "mcap": 5666318233.0,
+   "sector": "Industrials",
+   "industry": "Major Chemicals",
+   "country": "United States"
+  },
+  {
+   "code": "HLNE",
+   "name": "Hamilton Lane Incorporated Class A Common Stock",
+   "mcap": 5655453672.0,
+   "sector": "Finance",
+   "industry": "Investment Managers",
+   "country": "United States"
+  },
+  {
+   "code": "NXST",
+   "name": "Nexstar Media Group Inc. Common Stock",
+   "mcap": 5612040110.0,
+   "sector": "Industrials",
+   "industry": "Broadcasting",
+   "country": "United States"
+  },
+  {
+   "code": "SIGI",
+   "name": "Selective Insurance Group Inc. Common Stock",
+   "mcap": 5538140993.0,
+   "sector": "Finance",
+   "industry": "Property-Casualty Insurers",
+   "country": "United States"
+  },
+  {
+   "code": "PSMT",
+   "name": "PriceSmart Inc. Common Stock",
+   "mcap": 5536717471.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Department/Specialty Retail Stores",
+   "country": "United States"
+  },
+  {
+   "code": "ACGLN",
+   "name": "Arch Capital Group Ltd. Depositary Shares each Representing a 1/1000th Interest in a 4.550% Non-Cumulative Preferred Share Series G",
+   "mcap": 5531324132.0,
+   "sector": "Finance",
+   "industry": "Property-Casualty Insurers",
+   "country": "Bermuda"
+  },
+  {
+   "code": "RELY",
+   "name": "Remitly Global Inc. Common Stock",
+   "mcap": 5506960665.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Business Services",
+   "country": "United States"
+  },
+  {
+   "code": "CAKE",
+   "name": "Cheesecake Factory Incorporated (The) Common Stock",
+   "mcap": 5476655378.0,
+   "sector": "Consumer Discretionary",
+   "industry": "Restaurants",
+   "country": "United States"
+  }
+ ]
+}
