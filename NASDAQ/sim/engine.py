@@ -72,7 +72,7 @@ class Market:
 
         tasi_idx = pd.DatetimeIndex(sorted(self._pos["IXIC"]))
         ci = self._cols["IXIC"].index("AdjClose")
-        tasi_ser = pd.Series(self._vals["TASI"][:, ci], index=tasi_idx)
+        tasi_ser = pd.Series(self._vals["IXIC"][:, ci], index=tasi_idx)
         union_idx = pd.DatetimeIndex(sorted(set(tasi_idx) | set(self.dates)))
         tasi = tasi_ser.reindex(union_idx).ffill()
         self.tasi = tasi.reindex(pd.DatetimeIndex(self.dates))
@@ -377,7 +377,7 @@ class Engine:
 
             if progress_every and i % progress_every == 0:
                 lead = max(agents, key=lambda x: x.equity_hist[-1])
-                print(f"  {iso}: leader {lead.handle} {lead.equity_hist[-1]:,.0f} SAR")
+                print(f"  {iso}: leader {lead.handle} {lead.equity_hist[-1]:,.0f} USD")
 
         return agents, events
 
