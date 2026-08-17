@@ -1,0 +1,209 @@
+{
+ "method": "OOS-dominant weighted score; see module docstring",
+ "weights": {
+  "oos_sharpe": 40,
+  "oos_cagr": 20,
+  "oos_dd": 15,
+  "robustness": 15,
+  "tradability": 10
+ },
+ "freeze_commit": "7e8cdf12f1a63e6e23f691ff1f01e580ca946acf",
+ "windows": {
+  "in_sample": [
+   "2016-01-04",
+   "2022-12-30"
+  ],
+  "out_of_sample": [
+   "2023-01-03",
+   "2026-08-04"
+  ]
+ },
+ "elected": "trend",
+ "ranking": [
+  {
+   "handle": "trend",
+   "score": 78.36,
+   "components": {
+    "oos_sharpe": 38.66,
+    "oos_cagr": 13.44,
+    "oos_dd": 15.0,
+    "robustness": 11.25,
+    "tradability": 0.0
+   },
+   "is_rank": 1,
+   "oos_rank": 3,
+   "is": {
+    "total_return": 3.3982,
+    "cagr": 0.2361,
+    "sharpe": 0.968,
+    "max_drawdown": -0.2646,
+    "n_trades": 1270,
+    "turnover_annual": 12.83
+   },
+   "oos": {
+    "total_return": 2.0756,
+    "cagr": 0.3682,
+    "sharpe": 1.222,
+    "max_drawdown": -0.1617,
+    "n_trades": 806,
+    "turnover_annual": 15.69,
+    "sortino": 1.756,
+    "calmar": 2.277,
+    "alpha_annual": 0.1725,
+    "beta_tasi": 0.671,
+    "win_rate": 0.442,
+    "profit_factor": 1.895
+   },
+   "rank_consistency": 0.5,
+   "cagr_retention": 1.0
+  },
+  {
+   "handle": "regime",
+   "score": 74.8,
+   "components": {
+    "oos_sharpe": 40.0,
+    "oos_cagr": 14.87,
+    "oos_dd": 6.86,
+    "robustness": 9.38,
+    "tradability": 3.69
+   },
+   "is_rank": 5,
+   "oos_rank": 2,
+   "is": {
+    "total_return": 1.6263,
+    "cagr": 0.1482,
+    "sharpe": 0.652,
+    "max_drawdown": -0.3099,
+    "n_trades": 1394,
+    "turnover_annual": 11.46
+   },
+   "oos": {
+    "total_return": 2.2338,
+    "cagr": 0.3875,
+    "sharpe": 1.24,
+    "max_drawdown": -0.2343,
+    "n_trades": 765,
+    "turnover_annual": 12.75,
+    "sortino": 1.663,
+    "calmar": 1.654,
+    "alpha_annual": 0.1725,
+    "beta_tasi": 0.73,
+    "win_rate": 0.522,
+    "profit_factor": 2.187
+   },
+   "rank_consistency": 0.25,
+   "cagr_retention": 1.0
+  },
+  {
+   "handle": "factor",
+   "score": 73.23,
+   "components": {
+    "oos_sharpe": 36.81,
+    "oos_cagr": 20.0,
+    "oos_dd": 0.0,
+    "robustness": 13.12,
+    "tradability": 3.29
+   },
+   "is_rank": 2,
+   "oos_rank": 1,
+   "is": {
+    "total_return": 3.3556,
+    "cagr": 0.2344,
+    "sharpe": 0.771,
+    "max_drawdown": -0.3441,
+    "n_trades": 1683,
+    "turnover_annual": 18.02
+   },
+   "oos": {
+    "total_return": 2.8526,
+    "cagr": 0.4569,
+    "sharpe": 1.197,
+    "max_drawdown": -0.2955,
+    "n_trades": 835,
+    "turnover_annual": 13.07,
+    "sortino": 1.765,
+    "calmar": 1.546,
+    "alpha_annual": 0.1758,
+    "beta_tasi": 0.966,
+    "win_rate": 0.612,
+    "profit_factor": 2.263
+   },
+   "rank_consistency": 0.75,
+   "cagr_retention": 1.0
+  },
+  {
+   "handle": "defense",
+   "score": 58.01,
+   "components": {
+    "oos_sharpe": 25.83,
+    "oos_cagr": 6.45,
+    "oos_dd": 4.57,
+    "robustness": 15.0,
+    "tradability": 6.16
+   },
+   "is_rank": 4,
+   "oos_rank": 4,
+   "is": {
+    "total_return": 2.5088,
+    "cagr": 0.1968,
+    "sharpe": 0.819,
+    "max_drawdown": -0.2747,
+    "n_trades": 961,
+    "turnover_annual": 8.9
+   },
+   "oos": {
+    "total_return": 1.3788,
+    "cagr": 0.2736,
+    "sharpe": 1.049,
+    "max_drawdown": -0.2547,
+    "n_trades": 583,
+    "turnover_annual": 10.79,
+    "sortino": 1.504,
+    "calmar": 1.074,
+    "alpha_annual": 0.0921,
+    "beta_tasi": 0.638,
+    "win_rate": 0.428,
+    "profit_factor": 1.832
+   },
+   "rank_consistency": 1.0,
+   "cagr_retention": 1.0
+  },
+  {
+   "handle": "breakout",
+   "score": 25.31,
+   "components": {
+    "oos_sharpe": 0.0,
+    "oos_cagr": 0.0,
+    "oos_dd": 5.38,
+    "robustness": 9.93,
+    "tradability": 10.0
+   },
+   "is_rank": 3,
+   "oos_rank": 5,
+   "is": {
+    "total_return": 3.1536,
+    "cagr": 0.2261,
+    "sharpe": 0.92,
+    "max_drawdown": -0.2381,
+    "n_trades": 406,
+    "turnover_annual": 4.97
+   },
+   "oos": {
+    "total_return": 0.8446,
+    "cagr": 0.1863,
+    "sharpe": 0.701,
+    "max_drawdown": -0.2475,
+    "n_trades": 335,
+    "turnover_annual": 7.73,
+    "sortino": 0.973,
+    "calmar": 0.753,
+    "alpha_annual": 0.0148,
+    "beta_tasi": 0.66,
+    "win_rate": 0.348,
+    "profit_factor": 1.538
+   },
+   "rank_consistency": 0.5,
+   "cagr_retention": 0.824
+  }
+ ]
+}
