@@ -1,5 +1,5 @@
 __pycache__/
 *.pyc
 .venv/
-data/enriched/
-data/enriched_oos/
+TASI/data/enriched/
+TASI/data/enriched_oos/

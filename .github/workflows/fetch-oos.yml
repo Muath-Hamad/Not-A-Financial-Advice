@@ -36,13 +36,13 @@ jobs:
           FETCH_END: "2022-01-01"
           FETCH_RAW_SUBDIR: data/raw_oos
           FETCH_MIN_OK: "0.45"
-        run: python pipeline/fetch_data.py
+        run: python TASI/pipeline/fetch_data.py
 
       - name: Commit data back to branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw_oos
+          git add TASI/data/raw_oos
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else

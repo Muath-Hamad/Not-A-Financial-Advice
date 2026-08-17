@@ -6,9 +6,9 @@ on:
       - claude/tasi-agent-simulation-fcili2
     paths:
       - ".github/workflows/fetch-data.yml"
-      - "pipeline/fetch_data.py"
-      - "pipeline/discover_universe.py"
-      - "data/tickers.json"
+      - "TASI/pipeline/fetch_data.py"
+      - "TASI/pipeline/discover_universe.py"
+      - "TASI/data/tickers.json"
   workflow_dispatch:
     inputs:
       fetch_end:
@@ -40,18 +40,18 @@ jobs:
         run: pip install --quiet yfinance pandas requests
 
       - name: Discover full main-market universe
-        run: python pipeline/discover_universe.py
+        run: python TASI/pipeline/discover_universe.py
 
       - name: Fetch market data
         env:
           FETCH_END: ${{ github.event.inputs.fetch_end }}
-        run: python pipeline/fetch_data.py
+        run: python TASI/pipeline/fetch_data.py
 
       - name: Commit data back to branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw data/universe_full.json
+          git add TASI/data/raw TASI/data/universe_full.json
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
