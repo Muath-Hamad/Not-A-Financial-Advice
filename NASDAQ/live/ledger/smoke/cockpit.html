@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trend Live Cockpit</title>
+<style>
+:root{
+  --sans:-apple-system,"SF Pro Text",Inter,"Segoe UI",system-ui,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+  --surface-0:#f6f5f2; --surface-1:#fcfcfb; --surface-2:#f0efec;
+  --ink:#0b0b0b; --ink-2:#52514e; --ink-3:#8a8984;
+  --hairline:#e3e1dc;
+  --accent:#2a78d6; --accent-soft:#e2edf9;
+  --bench:#8a8984;
+  --ok:#0f8a60; --ok-soft:#e0f2ea;
+  --warn:#a97a08; --warn-soft:#f6eed6;
+  --crit:#c2403f; --crit-soft:#f8e6e5;
+  --gold:#b98a2f;
+  --radius:14px; --radius-s:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422;
+    --ink:#ffffff; --ink-2:#c3c2b7; --ink-3:#85847c;
+    --hairline:#2e2d2a;
+    --accent:#3987e5; --accent-soft:#1b2c40;
+    --bench:#85847c;
+    --ok:#3fbf8f; --ok-soft:#16352a;
+    --warn:#d8a83c; --warn-soft:#35300f;
+    --crit:#e06c6c; --crit-soft:#3a2323;
+    --gold:#d1a54e;
+  }
+}
+:root[data-theme="dark"]{
+  --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422;
+  --ink:#ffffff; --ink-2:#c3c2b7; --ink-3:#85847c;
+  --hairline:#2e2d2a;
+  --accent:#3987e5; --accent-soft:#1b2c40;
+  --bench:#85847c;
+  --ok:#3fbf8f; --ok-soft:#16352a;
+  --warn:#d8a83c; --warn-soft:#35300f;
+  --crit:#e06c6c; --crit-soft:#3a2323;
+  --gold:#d1a54e;
+}
+*{box-sizing:border-box; margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans); background:var(--surface-0); color:var(--ink);
+  line-height:1.5; -webkit-font-smoothing:antialiased; padding:0 18px 70px}
+.wrap{max-width:1120px; margin:0 auto}
+.num{font-variant-numeric:tabular-nums}
+a{color:var(--accent)}
+
+header{padding:34px 0 14px; display:flex; flex-wrap:wrap; align-items:baseline; gap:14px}
+.kicker{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3); font-weight:600; width:100%}
+h1{font-size:30px; letter-spacing:-.02em}
+#themeBtn{margin-left:auto; border:1px solid var(--hairline); background:var(--surface-1);
+  color:var(--ink-2); border-radius:99px; padding:5px 13px; font:inherit; font-size:12.5px; cursor:pointer}
+
+.strip{display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 22px}
+.chip{display:inline-flex; align-items:center; gap:7px; font-size:12.5px; font-weight:600;
+  padding:6px 12px; border-radius:99px; background:var(--surface-1); border:1px solid var(--hairline); color:var(--ink-2)}
+.chip .dot{width:8px; height:8px; border-radius:50%; background:var(--ink-3); flex:none}
+.chip.ok{background:var(--ok-soft); color:var(--ok); border-color:transparent}
+.chip.ok .dot{background:var(--ok)}
+.chip.warn{background:var(--warn-soft); color:var(--warn); border-color:transparent}
+.chip.warn .dot{background:var(--warn)}
+.chip.crit{background:var(--crit-soft); color:var(--crit); border-color:transparent}
+.chip.crit .dot{background:var(--crit)}
+
+section{margin:26px 0}
+h2{font-size:16.5px; margin-bottom:12px; letter-spacing:-.01em}
+h2 small{color:var(--ink-3); font-weight:500; font-size:12.5px; margin-left:8px}
+.card{background:var(--surface-1); border:1px solid var(--hairline); border-radius:var(--radius); padding:18px}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+@media (max-width:860px){.grid2{grid-template-columns:1fr}}
+
+.kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:14px}
+.kpi{background:var(--surface-1); border:1px solid var(--hairline); border-radius:var(--radius-s); padding:11px 13px}
+.kpi .l{font-size:11px; color:var(--ink-3); font-weight:600; letter-spacing:.05em; text-transform:uppercase}
+.kpi .v{font-size:20px; font-weight:700; letter-spacing:-.01em; margin-top:2px}
+.kpi .v small{font-size:11.5px; color:var(--ink-3); font-weight:500}
+.kpi .s{font-size:11.5px; color:var(--ink-3); margin-top:1px}
+.up{color:var(--ok)} .down{color:var(--crit)}
+
+.chart{position:relative}
+.chart svg{display:block; width:100%; height:auto}
+.tip{position:absolute; pointer-events:none; background:var(--surface-1); border:1px solid var(--hairline);
+  border-radius:8px; padding:7px 10px; font-size:12px; box-shadow:0 4px 14px rgba(0,0,0,.10);
+  display:none; z-index:5; white-space:nowrap}
+.tip b{font-weight:700}
+.legend{display:flex; gap:16px; font-size:12px; color:var(--ink-2); margin-top:8px; flex-wrap:wrap}
+.legend .sw{display:inline-block; width:14px; height:0; border-top:2.5px solid var(--accent); vertical-align:middle; margin-right:6px; border-radius:2px}
+.legend .sw.dash{border-top-style:dashed; border-top-color:var(--bench)}
+
+table{width:100%; border-collapse:collapse; font-size:12.8px}
+th{font-size:10.5px; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-3);
+  text-align:left; font-weight:600; padding:7px 9px; border-bottom:1px solid var(--hairline)}
+td{padding:7px 9px; border-bottom:1px solid var(--hairline); vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.r,th.r{text-align:right}
+.scroll{overflow-x:auto}
+.mono{font-family:var(--mono); font-size:11.5px}
+.coname{display:block; color:var(--ink-3); font-size:10.5px; max-width:120px;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.muted{color:var(--ink-3)}
+.reason{color:var(--ink-3); font-size:11.5px; max-width:330px}
+
+.wbar{height:6px; border-radius:3px; background:var(--surface-2); overflow:hidden; min-width:70px}
+.wbar i{display:block; height:100%; background:var(--accent); border-radius:3px}
+
+.bullet{display:grid; grid-template-columns:150px 1fr 90px; gap:12px; align-items:center; padding:8px 0; border-bottom:1px solid var(--hairline)}
+.bullet:last-child{border-bottom:none}
+.bullet .bl{font-size:12.5px; color:var(--ink-2); font-weight:600}
+.bullet .bv{font-size:12.5px; text-align:right}
+.track{position:relative; height:14px}
+.track .band{position:absolute; top:4px; height:6px; border-radius:3px; background:var(--surface-2)}
+.track .iqr{position:absolute; top:4px; height:6px; border-radius:3px; background:var(--accent-soft)}
+.track .mark{position:absolute; top:1px; width:3px; height:12px; border-radius:2px; background:var(--accent)}
+.track .mark.out{background:var(--warn)}
+
+.param{display:grid; grid-template-columns:130px 1fr 110px; gap:12px; align-items:center; padding:7px 0; border-bottom:1px solid var(--hairline)}
+.param:last-child{border-bottom:none}
+.param .pl{font-family:var(--mono); font-size:11.5px; color:var(--ink-2)}
+.param .pv{font-size:12px; text-align:right}
+.param .pv b{font-weight:700}
+.param .pv small{color:var(--ink-3)}
+
+.dots{display:flex; gap:5px; flex-wrap:wrap; align-items:center}
+.dots i{width:12px; height:12px; border-radius:4px; background:var(--surface-2); border:1px solid var(--hairline)}
+.dots i.m{background:var(--ok); border-color:transparent}
+.dots i.x{background:var(--crit); border-color:transparent}
+
+.timeline{display:flex; flex-direction:column; gap:6px}
+.trow{display:flex; gap:10px; align-items:center; font-size:12.5px; padding:7px 10px;
+  background:var(--surface-1); border:1px solid var(--hairline); border-radius:9px}
+.trow .d{font-family:var(--mono); font-size:11.5px; color:var(--ink-2); width:88px; flex:none}
+.trow .cyc{font-weight:700; width:18px; flex:none}
+.trow .st{font-size:11px; font-weight:700; padding:2px 9px; border-radius:99px}
+.st.ok{background:var(--ok-soft); color:var(--ok)}
+.st.warn{background:var(--warn-soft); color:var(--warn)}
+.st.crit{background:var(--crit-soft); color:var(--crit)}
+.trow .info{color:var(--ink-3); font-size:11.5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+
+details{border-bottom:1px solid var(--hairline); padding:8px 0}
+details:last-child{border-bottom:none}
+summary{cursor:pointer; font-size:12.8px; font-weight:600; color:var(--ink-2); list-style:none; display:flex; gap:10px; align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary .d{font-family:var(--mono); font-size:11.5px; color:var(--ink-3)}
+details .body{font-size:12.5px; color:var(--ink-2); padding:8px 0 4px}
+details .body code{font-family:var(--mono); font-size:11px; background:var(--surface-2); padding:1px 6px; border-radius:5px}
+
+.empty{color:var(--ink-3); font-size:13px; padding:14px 0; text-align:center}
+footer{margin-top:40px; padding-top:16px; border-top:1px solid var(--hairline); color:var(--ink-3); font-size:12px}
+footer .mono{font-size:11px}
+@media (prefers-reduced-motion: no-preference){
+  .card, .kpi{transition:border-color .18s cubic-bezier(.25,.46,.45,.94)}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <p class="kicker">NASDAQ · live deployment · <span id="modeKick">ghost mode</span></p>
+  <h1>Trend Live Cockpit</h1>
+  <button id="themeBtn" type="button">theme</button>
+</header>
+
+<div class="strip" id="statusStrip"></div>
+
+<section>
+  <div class="kpis" id="kpis"></div>
+  <div class="card">
+    <h2>Equity <small>live window, $100,000 start · twin vs NASDAQ Composite</small></h2>
+    <div class="chart" id="eqChart"></div>
+    <div class="legend"><span><span class="sw"></span>trend (sim twin)</span>
+      <span><span class="sw dash"></span>IXIC (rebased)</span></div>
+  </div>
+</section>
+
+<section class="grid2">
+  <div class="card">
+    <h2>Drawdown <small>from live peak</small></h2>
+    <div class="chart" id="ddChart"></div>
+  </div>
+  <div class="card">
+    <h2>Anomaly panel <small>today vs the OOS distribution (p5–p95 band, p25–p75 shaded)</small></h2>
+    <div id="anomaly"></div>
+  </div>
+</section>
+
+<section class="grid2">
+  <div class="card">
+    <h2>Book <small id="bookSub"></small></h2>
+    <div class="scroll"><table id="bookTable"></table></div>
+  </div>
+  <div class="card">
+    <h2>Orders for next open <small id="ordersSub"></small></h2>
+    <div class="scroll"><table id="ordersTable"></table></div>
+  </div>
+</section>
+
+<section class="grid2">
+  <div class="card">
+    <h2>Agent internals <small>adapted parameters vs their declared bounds</small></h2>
+    <div id="params"></div>
+    <p class="muted" style="font-size:12px; margin-top:10px" id="adaptNext"></p>
+  </div>
+  <div class="card">
+    <h2>Back-propagation trail <small>every adapt() event, newest first</small></h2>
+    <div id="adaptations" style="max-height:340px; overflow-y:auto"></div>
+  </div>
+</section>
+
+<section class="grid2">
+  <div class="card">
+    <h2>System health <small>determinism gate &amp; cycle quality</small></h2>
+    <div id="health"></div>
+  </div>
+  <div class="card">
+    <h2>Compliance <small>AAOIFI universe &amp; manual controls</small></h2>
+    <div id="compliance"></div>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Cycle timeline <small>most recent first</small></h2>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<footer>
+  <p>Ghost-mode ledger: <span class="mono">NASDAQ/live/ledger/</span> · agent frozen at
+    <span class="mono" id="freeze"></span> · plan: <span class="mono">NASDAQ/docs/05</span> ·
+    runbook: <span class="mono">NASDAQ/docs/06</span></p>
+  <p id="builtLine" style="margin-top:4px"></p>
+  <p style="margin-top:4px">Not financial advice.</p>
+</footer>
+</div>
+
+<script>
+const DATA = {"built_utc": "2026-08-18T02:15:56+00:00", "mode": "ghost", "twin": {"asof": "2026-08-17", "live_start": "2026-05-19", "sessions": 62, "equity_final": 115811.32, "cash_final": 26874.26, "positions": {"SYRE": {"shares": 115, "price": 104.599998, "value": 12029.0, "avg_cost": 68.6743, "weight": 0.1039, "unrealized_pct": 0.5231}, "RVMD": {"shares": 80, "price": 212.0, "value": 16960.0, "avg_cost": 150.4052, "weight": 0.1464, "unrealized_pct": 0.4095}, "TVTX": {"shares": 50, "price": 63.529999, "value": 3176.5, "avg_cost": 57.8189, "weight": 0.0274, "unrealized_pct": 0.0988}, "DNTH": {"shares": 81, "price": 114.860001, "value": 9303.66, "avg_cost": 99.8999, "weight": 0.0803, "unrealized_pct": 0.1498}, "JAZZ": {"shares": 36, "price": 248.360001, "value": 8940.96, "avg_cost": 241.7308, "weight": 0.0772, "unrealized_pct": 0.0274}, "APGE": {"shares": 23, "price": 134.589996, "value": 3095.57, "avg_cost": 134.2171, "weight": 0.0267, "unrealized_pct": 0.0028}, "DFTX": {"shares": 148, "price": 45.259998, "value": 6698.48, "avg_cost": 42.3111, "weight": 0.0578, "unrealized_pct": 0.0697}, "GSAT": {"shares": 61, "price": 83.029999, "value": 5064.83, "avg_cost": 83.1616, "weight": 0.0437, "unrealized_pct": -0.0016}, "GH": {"shares": 56, "price": 161.669998, "value": 9053.52, "avg_cost": 162.7213, "weight": 0.0782, "unrealized_pct": -0.0065}, "CRNX": {"shares": 29, "price": 84.75, "value": 2457.75, "avg_cost": 84.7123, "weight": 0.0212, "unrealized_pct": 0.0004}, "ROKU": {"shares": 59, "price": 158.309998, "value": 9340.29, "avg_cost": 155.5577, "weight": 0.0807, "unrealized_pct": 0.0177}, "ORKA": {"shares": 25, "price": 112.660004, "value": 2816.5, "avg_cost": 110.2751, "weight": 0.0243, "unrealized_pct": 0.0216}}, "params": {"EXP_MAX": 0.95, "RISK_PER_TRADE": 0.016, "STOP_ATR": 3.0, "TRAIL_ATR": 5.0, "TIME_STOP": 35.0, "RANK_BUFFER": 2.0, "TARGET_VOL": 0.17, "W3": 0.3, "W6": 0.35, "W12": 0.35}, "param_space": {"EXP_MAX": [0.55, 1.0], "RISK_PER_TRADE": [0.008, 0.03], "STOP_ATR": [2.0, 4.5], "TRAIL_ATR": [3.0, 8.0], "TIME_STOP": [20.0, 60.0], "RANK_BUFFER": [1.3, 3.0], "TARGET_VOL": [0.1, 0.3], "W3": [0.12, 0.6], "W6": [0.12, 0.6], "W12": [0.12, 0.6]}, "adaptations": [], "freeze_commit": "7e8cdf12f1a63e6e23f691ff1f01e580ca946acf", "dates": ["2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-29", "2026-06-30", "2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17"], "equity": [100000.0, 100230.86, 102735.87, 102298.4, 105504.06, 105109.35, 105182.98, 105749.72, 105849.19, 106739.17, 110196.18, 109695.32, 102152.78, 103692.77, 104165.38, 101363.84, 105713.23, 108124.44, 112118.89, 111684.58, 114095.5, 116881.4, 119328.27, 116047.71, 114116.35, 116011.05, 113932.67, 117200.57, 117160.47, 115508.5, 112958.68, 114529.23, 114015.42, 114991.69, 116309.11, 115739.85, 113187.75, 114712.23, 114263.62, 110319.41, 113168.51, 110912.62, 114191.1, 113974.98, 115399.29, 114980.04, 114479.02, 114145.6, 113481.9, 116299.04, 113398.87, 112177.22, 115429.88, 116749.51, 116257.83, 117603.85, 117912.95, 115758.27, 115438.16, 113512.75, 114156.56, 115811.32], "cash": [100000.0, 62527.85, 21550.48, 5273.4, 5273.4, 5273.4, 5273.4, 5273.4, 5273.4, 5273.4, 6691.29, 6691.29, 6693.84, 20801.15, 20801.15, 20801.15, 29629.88, 29629.88, 29629.88, 29629.88, 33459.89, 33459.89, 33459.89, 33459.89, 50511.42, 50511.42, 50511.42, 50511.42, 50511.42, 50511.42, 50511.42, 52254.41, 49363.47, 49363.47, 44444.7, 40098.95, 40098.95, 45001.05, 35636.37, 33174.09, 32398.16, 32398.16, 32398.16, 32398.16, 32398.16, 39661.6, 47603.63, 47603.63, 44516.64, 42192.64, 42192.64, 41385.09, 32272.7, 32272.7, 32272.7, 32272.7, 32272.7, 32272.7, 32272.7, 29816.04, 29631.13, 26874.26], "bench": [100000.0, 101544.79, 101632.69, 101829.33, 103036.13, 103107.84, 104046.12, 104259.29, 104700.68, 104728.09, 103800.71, 103711.73, 99376.59, 100227.86, 99258.27, 97289.56, 99764.02, 100070.08, 103143.43, 101954.45, 100583.48, 102501.74, 101143.72, 98903.5, 98476.77, 98020.5, 97784.79, 99804.53, 101325.86, 100654.48, 99852.96, 100968.08, 99798.92, 99999.77, 101299.46, 101588.28, 100009.54, 100913.38, 101540.43, 100043.44, 98645.3, 98598.26, 99870.51, 99304.96, 97166.6, 96540.91, 96371.84, 96158.59, 94481.13, 97106.65, 98079.44, 100166.94, 102760.96, 101904.58, 101846.25, 103169.25, 102839.69, 102221.58, 102774.49, 103603.76, 103318.23, 102992.57], "metrics": {"sharpe": 1.964, "cagr": 0.8144, "max_drawdown": -0.0802, "ann_vol": 0.3196, "sortino": 2.766, "calmar": 10.16, "win_rate": 0.353, "n_trades": 44}}, "orders": [{"code": "ERAS", "side": "buy", "sar": 2598.83, "reason": "rank 6 momentum, 19% off the 52w high, ATR 6.0% -> 9% line", "ttl": 5, "queued": "2026-08-17", "share_preview": {"symbol": "ERAS", "side": "buy", "qty": 142}}], "cycles": [{"asof": "2026-08-17", "cycle": "A", "status": "ok", "info": "equity $115,811 \u00b7 1 orders \u00b7 0 flags"}], "last_a": {"cycle": "A", "ts_utc": "2026-08-18T02:07:39+00:00", "mode": "ghost", "smoke": true, "code_version": "f3608d0031ffa9249d875719e02ea00b2a6f7321", "asof": "2026-08-17", "data_gate": {"status": "pass", "asof": "2026-08-17", "checks": {"ixic_at_asof": {"pass": true, "last": "2026-08-17"}, "fetch_ok": {"pass": true, "value": 0.9756, "min": 0.9}, "coverage_at_asof": {"pass": true, "value": 1.0, "min": 0.95, "missing": []}, "cross_source": {"pass": true, "compared": 40, "unavailable": 0, "disagreements": [], "tol": 0.005}}}, "determinism": {"match": true, "sha256": "2cb1d1e733ad333d"}, "drawdown_from_peak": -0.0295, "guardrails": {"n_orders": 1, "checked": [{"code": "ERAS", "side": "buy", "est_value": 2598.83}], "buy_total": 2598.83, "sell_total": 0.0, "turnover": 0.0224, "violations": []}, "status": "ok", "twin": {"sessions": 62, "equity_final": 115811.32, "ret_total": 0.1581, "n_positions": 12, "n_orders_next_open": 1, "n_trades": 44, "n_adaptations": 0, "decide_errors": 0, "inputs": {"manifest_sha": "42293032d54e8579293dd72a881f41e20be98d4fa25f35c981a9a6d8d8433856", "universe_sha": "02a34f4f83c8da8008a7a6a236a8dabbff5c3614f42209cd73c9dd9c9e085ecb", "strategy_sha": "a251225eb9a8fc066947ce698844ce718d25167dd07f7c3e23152f555ea31ccd", "engine_sha": "ded722f2e21dabec2e47bf3cebcdda918698bfa5722ebe2c933cd26851895f5d", "commission": "0.0", "slippage": "0.0005", "adapt_every": "63"}}, "duration_s": 496.1}, "last_b": {}, "gate": {"streak": 0, "target": 10, "passed": false, "history": []}, "controls": {"kill": false, "pause_entries": false, "excluded_symbols": [], "gross_cap": null}, "baseline": {"source": "out/results_oos.json \u00b7 trend \u00b7 2023-01-03 \u2192 2026-08-04", "exposure": {"p5": 0.1875, "p25": 0.6928, "p50": 0.8979, "p75": 0.9729, "p95": 0.9977, "n": 899}, "turnover_daily_all": {"p5": 0.0, "p25": 0.0, "p50": 0.0, "p75": 0.1037, "p95": 0.242, "n": 899}, "turnover_daily_active": {"p5": 0.0241, "p25": 0.0581, "p50": 0.1068, "p75": 0.17, "p95": 0.2873, "n": 432}, "orders_per_active_day": {"p5": 1.0, "p25": 1.0, "p50": 2.0, "p75": 2.0, "p95": 3.0, "n": 432}, "positions_monthly": {"p5": 4.0, "p25": 10.0, "p50": 12.0, "p75": 14.0, "p95": 15.0, "n": 44}, "trades_per_week": 4.48, "oos": {"sharpe": 1.222, "max_drawdown": -0.1617, "cagr": 0.3682, "total_return": 2.0756, "ann_vol": 0.2616, "calmar": 2.277}}, "anomaly": {"exposure": 0.7679, "turnover": 0.0238, "orders": 1, "positions": 12}, "screen": {"screened": 500, "passed": 327, "basis": "as-of deployment screen; quarterly re-screen updates exclusions"}, "names": {"RVMD": "Revolution Medicines Inc. Common Stock", "ROKU": "Roku Inc. Class A Common Stock", "GH": "Guardant Health Inc. Common Stock", "JAZZ": "Jazz Pharmaceuticals plc Common Stock (Ireland)", "GSAT": "Globalstar Inc. Common Stock", "APGE": "Apogee Therapeutics Inc. Common Stock", "SYRE": "Spyre Therapeutics Inc. Common Stock", "CRNX": "Crinetics Pharmaceuticals Inc. Common Stock", "ORKA": "Oruka Therapeutics Inc. Common Stock", "DNTH": "Dianthus Therapeutics Inc. Common Stock", "DFTX": "Definium Therapeutics Inc. Common Shares", "TVTX": "Travere Therapeutics Inc. Common Stock"}};
+
+// ---------- helpers ----------
+const $ = s => document.querySelector(s);
+const fmt$ = v => "$" + Math.round(v).toLocaleString("en-US");
+const fmtPct = (v, d=1) => (v >= 0 ? "+" : "") + (v*100).toFixed(d) + "%";
+const fmtPctU = (v, d=1) => (v*100).toFixed(d) + "%";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+// theme toggle
+const themeBtn = $("#themeBtn");
+themeBtn.onclick = () => {
+  const r = document.documentElement;
+  const cur = r.getAttribute("data-theme");
+  const sysDark = matchMedia("(prefers-color-scheme: dark)").matches;
+  const isDark = cur === "dark" || (!cur && sysDark);
+  r.setAttribute("data-theme", isDark ? "light" : "dark");
+};
+
+// ---------- status strip ----------
+(function(){
+  const t = DATA.twin, lastA = DATA.last_a || {};
+  const chips = [];
+  const mode = (DATA.mode || "ghost").toUpperCase();
+  chips.push(`<span class="chip"><span class="dot"></span>${mode} MODE</span>`);
+  const st = lastA.status || "no cycles yet";
+  const cls = st === "ok" ? "ok" : (st === "no cycles yet" ? "" : "crit");
+  chips.push(`<span class="chip ${cls}"><span class="dot"></span>last cycle A · ${esc(lastA.asof || "—")} · ${esc(st)}</span>`);
+  const g = DATA.gate || {};
+  const gs = g.passed ? "ok" : (g.streak > 0 ? "warn" : "");
+  chips.push(`<span class="chip ${gs}"><span class="dot"></span>ghost gate ${g.streak ?? 0}/${g.target ?? 10}${g.passed ? " · PASSED" : ""}</span>`);
+  const c = DATA.controls || {};
+  if (c.kill) chips.push(`<span class="chip crit"><span class="dot"></span>KILL SWITCH ON</span>`);
+  if (c.pause_entries) chips.push(`<span class="chip warn"><span class="dot"></span>entries paused</span>`);
+  chips.push(`<span class="chip"><span class="dot"></span>${t.sessions} live session${t.sessions === 1 ? "" : "s"} since ${t.live_start}</span>`);
+  $("#statusStrip").innerHTML = chips.join("");
+})();
+
+// ---------- KPIs ----------
+(function(){
+  const t = DATA.twin, b = DATA.baseline || {}, oos = b.oos || {};
+  const eq = t.equity, ret = t.equity_final / 100000 - 1;
+  const dd = eq.length ? t.equity_final / Math.max(...eq) - 1 : 0;
+  const m = t.metrics || {};
+  const kpis = [
+    ["Twin equity", fmt$(t.equity_final), `asof ${t.asof}`],
+    ["Total return", `<span class="${ret >= 0 ? "up" : "down"}">${fmtPct(ret, 2)}</span>`,
+      `IXIC ${fmtPct(t.bench[t.bench.length-1]/100000 - 1, 2)} same window`],
+    ["Drawdown from peak", `<span class="${dd < -0.10 ? "down" : ""}">${fmtPctU(dd)}</span>`,
+      `OOS precedent −16.2% · kill −25%`],
+    ["Rolling Sharpe", m.sharpe != null ? m.sharpe.toFixed(2) : "—",
+      m.sharpe != null ? `OOS baseline ${oos.sharpe?.toFixed(2) ?? "1.22"}` : "needs ≥ 22 sessions"],
+    ["Positions", `${Object.keys(t.positions).length}<small> / cash ${fmtPctU(t.cash_final / t.equity_final)}</small>`,
+      `typical ${b.positions_monthly?.p25 ?? 10}–${b.positions_monthly?.p75 ?? 14}`],
+    ["Orders queued", String((DATA.orders || []).length), "for the next open"],
+  ];
+  $("#kpis").innerHTML = kpis.map(([l, v, s]) =>
+    `<div class="kpi"><div class="l">${l}</div><div class="v num">${v}</div><div class="s">${esc(s)}</div></div>`).join("");
+})();
+
+// ---------- line chart factory ----------
+function lineChart(el, dates, series, opts){
+  // series: [{vals, color, dash, label}]; opts: {w, h, fmt, refLines:[{y,label,color}]}
+  const W = opts.w || 940, H = opts.h || 300, P = {t: 14, r: 14, b: 26, l: 52};
+  const all = series.flatMap(s => s.vals).concat((opts.refLines || []).map(r => r.y));
+  let lo = Math.min(...all), hi = Math.max(...all);
+  if (lo === hi) { lo -= 1; hi += 1; }
+  const pad = (hi - lo) * 0.06; lo -= pad; hi += pad;
+  const n = dates.length;
+  const x = i => P.l + (n <= 1 ? 0.5 : i / (n - 1)) * (W - P.l - P.r);
+  const y = v => P.t + (1 - (v - lo) / (hi - lo)) * (H - P.t - P.b);
+  const fmtV = opts.fmt || (v => fmt$(v));
+  let g = "";
+  const ticks = 4;
+  for (let k = 0; k <= ticks; k++){
+    const v = lo + (hi - lo) * k / ticks, yy = y(v);
+    g += `<line x1="${P.l}" x2="${W-P.r}" y1="${yy}" y2="${yy}" stroke="var(--hairline)" stroke-width="1"/>`;
+    g += `<text x="${P.l-8}" y="${yy+4}" text-anchor="end" font-size="10.5" fill="var(--ink-3)" class="num">${fmtV(v)}</text>`;
+  }
+  const xt = Math.max(1, Math.floor(n / 6));
+  for (let i = 0; i < n; i += xt){
+    g += `<text x="${x(i)}" y="${H-8}" text-anchor="middle" font-size="10.5" fill="var(--ink-3)">${dates[i].slice(5)}</text>`;
+  }
+  for (const r of opts.refLines || []){
+    const yy = y(r.y);
+    g += `<line x1="${P.l}" x2="${W-P.r}" y1="${yy}" y2="${yy}" stroke="${r.color}" stroke-width="1.4" stroke-dasharray="5 4" opacity="0.75"/>`;
+    g += `<text x="${W-P.r-4}" y="${yy-5}" text-anchor="end" font-size="10.5" font-weight="600" fill="${r.color}">${r.label}</text>`;
+  }
+  let paths = "", ends = "";
+  for (const s of series){
+    if (!s.vals.length) continue;
+    const d = s.vals.map((v, i) => (i ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1)).join("");
+    if (s.fill){
+      const base = y(Math.max(lo, 0) === 0 && lo <= 0 ? 0 : lo);
+      paths += `<path d="${d}L${x(s.vals.length-1)} ${base}L${x(0)} ${base}Z" fill="${s.color}" opacity="0.10"/>`;
+    }
+    paths += `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2"
+      ${s.dash ? 'stroke-dasharray="6 5"' : ""} stroke-linejoin="round" stroke-linecap="round"/>`;
+    const lx = x(s.vals.length - 1), ly = y(s.vals[s.vals.length - 1]);
+    ends += `<circle cx="${lx}" cy="${ly}" r="3.5" fill="${s.color}" stroke="var(--surface-1)" stroke-width="2"/>`;
+    if (s.label) ends += `<text x="${lx-6}" y="${ly-9}" text-anchor="end" font-size="10.5" font-weight="700" fill="${s.color}">${s.label}</text>`;
+  }
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img">${g}${paths}${ends}
+    <line id="xh" y1="${P.t}" y2="${H-P.b}" stroke="var(--ink-3)" stroke-width="1" opacity="0" pointer-events="none"/>
+    <rect x="${P.l}" y="${P.t}" width="${W-P.l-P.r}" height="${H-P.t-P.b}" fill="transparent"/></svg>
+    <div class="tip"></div>`;
+  const svg = el.querySelector("svg"), tip = el.querySelector(".tip"), xh = el.querySelector("#xh");
+  svg.addEventListener("mousemove", ev => {
+    const r = svg.getBoundingClientRect();
+    const mx = (ev.clientX - r.left) / r.width * W;
+    if (mx < P.l || mx > W - P.r){ tip.style.display = "none"; xh.setAttribute("opacity", 0); return; }
+    const i = Math.round((mx - P.l) / (W - P.l - P.r) * (n - 1));
+    if (i < 0 || i >= n) return;
+    xh.setAttribute("x1", x(i)); xh.setAttribute("x2", x(i)); xh.setAttribute("opacity", 0.5);
+    tip.innerHTML = `<b>${dates[i]}</b><br>` + series.map(s =>
+      `${s.label || "value"}: <b class="num">${fmtV(s.vals[i])}</b>`).join("<br>");
+    tip.style.display = "block";
+    const px = x(i) / W * r.width;
+    tip.style.left = Math.min(r.width - tip.offsetWidth - 8, Math.max(4, px + 12)) + "px";
+    tip.style.top = "14px";
+  });
+  svg.addEventListener("mouseleave", () => { tip.style.display = "none"; xh.setAttribute("opacity", 0); });
+}
+
+// ---------- performance & drawdown ----------
+(function(){
+  const t = DATA.twin;
+  lineChart($("#eqChart"), t.dates, [
+    {vals: t.equity, color: "var(--accent)", label: "trend", fill: true},
+    {vals: t.bench, color: "var(--bench)", dash: true, label: "IXIC"},
+  ], {h: 320});
+  let peak = -1e18;
+  const dd = t.equity.map(v => { peak = Math.max(peak, v); return v / peak - 1; });
+  lineChart($("#ddChart"), t.dates, [
+    {vals: dd, color: "var(--accent)", label: "dd", fill: true},
+  ], {w: 470, h: 250, fmt: v => (v*100).toFixed(1) + "%", refLines: [
+    {y: -0.162, label: "OOS max −16.2%", color: "var(--warn)"},
+    {y: -0.25, label: "kill −25%", color: "var(--crit)"},
+  ]});
+})();
+
+// ---------- anomaly panel ----------
+(function(){
+  const b = DATA.baseline || {}, a = DATA.anomaly || {};
+  const rows = [
+    ["Exposure", a.exposure, b.exposure, fmtPctU],
+    ["Turnover (today)", a.turnover, b.turnover_daily_all, fmtPctU],
+    ["Orders (today)", a.orders, b.orders_per_active_day, v => String(Math.round(v))],
+    ["Positions", a.positions, b.positions_monthly, v => String(Math.round(v))],
+  ];
+  $("#anomaly").innerHTML = rows.map(([label, val, dist, f]) => {
+    if (val == null || !dist || dist.p5 == null)
+      return `<div class="bullet"><div class="bl">${label}</div><div class="muted" style="font-size:12px">no baseline</div><div class="bv num">${val != null ? f(val) : "—"}</div></div>`;
+    const lo = Math.min(dist.p5, val), hi = Math.max(dist.p95, val);
+    const span = (hi - lo) || 1;
+    const pc = v => Math.max(0, Math.min(100, (v - lo) / span * 100));
+    const out = val < dist.p5 || val > dist.p95;
+    return `<div class="bullet"><div class="bl">${label}${out ? ' <span class="st warn" style="font-size:10px">outside p5–p95</span>' : ""}</div>
+      <div class="track">
+        <span class="band" style="left:${pc(dist.p5)}%; width:${pc(dist.p95)-pc(dist.p5)}%"></span>
+        <span class="iqr" style="left:${pc(dist.p25)}%; width:${pc(dist.p75)-pc(dist.p25)}%"></span>
+        <span class="mark ${out ? "out" : ""}" style="left:${pc(val)}%"></span>
+      </div>
+      <div class="bv num"><b>${f(val)}</b> <span class="muted">p50 ${f(dist.p50)}</span></div></div>`;
+  }).join("");
+})();
+
+// ---------- book ----------
+(function(){
+  const t = DATA.twin, pos = t.positions, names = DATA.names || {};
+  const rows = Object.entries(pos).sort((x, y) => y[1].value - x[1].value);
+  $("#bookSub").textContent = `${rows.length} positions · gross ${fmtPctU(1 - t.cash_final / t.equity_final)}`;
+  if (!rows.length){ $("#bookTable").outerHTML = '<div class="empty">All cash — no positions yet.</div>'; return; }
+  const maxW = Math.max(...rows.map(([, p]) => p.weight));
+  $("#bookTable").innerHTML = `<tr><th>name</th><th class="r">shares</th><th class="r">price</th>
+    <th class="r">value</th><th>weight</th><th class="r">unrlzd</th></tr>` +
+    rows.map(([c, p]) => `<tr><td><b>${c}</b><span class="coname">${esc(names[c] || "")}</span></td>
+      <td class="r num">${p.shares.toLocaleString()}</td>
+      <td class="r num">$${p.price.toFixed(2)}</td>
+      <td class="r num">${fmt$(p.value)}</td>
+      <td><div style="display:flex;align-items:center;gap:8px"><span class="wbar" style="width:90px"><i style="width:${p.weight/maxW*100}%"></i></span><span class="num" style="font-size:11.5px">${fmtPctU(p.weight)}</span></div></td>
+      <td class="r num ${p.unrealized_pct >= 0 ? "up" : "down"}">${fmtPct(p.unrealized_pct)}</td></tr>`).join("") +
+    `<tr><td class="muted">cash</td><td></td><td></td><td class="r num">${fmt$(t.cash_final)}</td>
+      <td class="num muted" style="font-size:11.5px">${fmtPctU(t.cash_final / t.equity_final)}</td><td></td></tr>`;
+})();
+
+// ---------- orders ----------
+(function(){
+  const t = DATA.twin, orders = DATA.orders || [];
+  $("#ordersSub").textContent = orders.length ? `${orders.length} queued` : "";
+  if (!orders.length){ $("#ordersTable").outerHTML = '<div class="empty">No orders queued — the agent holds.</div>'; return; }
+  $("#ordersTable").innerHTML = `<tr><th>side</th><th>name</th><th class="r">est. size</th><th>reason</th></tr>` +
+    orders.map(o => {
+      const sideCls = o.side === "buy" ? "ok" : "crit";
+      const sz = o.share_preview ? `${o.share_preview.qty.toLocaleString()} sh` :
+        (o.est_value ? fmt$(o.est_value) : "—");
+      return `<tr><td><span class="st ${sideCls}">${o.side}</span></td>
+        <td><b>${o.code}</b></td><td class="r num">${sz}</td>
+        <td class="reason">${esc((o.reason || "").slice(0, 130))}</td></tr>`;
+    }).join("");
+})();
+
+// ---------- params vs bounds ----------
+(function(){
+  const t = DATA.twin, ps = t.param_space || {}, pv = t.params || {};
+  const keys = Object.keys(ps);
+  if (!keys.length){ $("#params").innerHTML = '<div class="empty">No param space declared.</div>'; return; }
+  $("#params").innerHTML = keys.map(k => {
+    const [lo, hi] = ps[k], v = pv[k];
+    if (v == null) return "";
+    const pc = Math.max(0, Math.min(100, (v - lo) / ((hi - lo) || 1) * 100));
+    const near = pc < 4 || pc > 96;
+    return `<div class="param"><div class="pl">${k}</div>
+      <div class="track"><span class="band" style="left:0;width:100%"></span>
+        <span class="mark ${near ? "out" : ""}" style="left:${pc}%"></span></div>
+      <div class="pv num"><b>${+v.toFixed ? +v.toFixed(4) : v}</b> <small>[${lo}, ${hi}]</small></div></div>`;
+  }).join("");
+  const s = t.sessions % 63;
+  $("#adaptNext").textContent = `Back-propagation fires every 63 sessions — next in ${(63 - s) % 63 || 63} session(s). ${t.adaptations.length} adaptation(s) so far.`;
+})();
+
+// ---------- adaptation trail ----------
+(function(){
+  const ads = (DATA.twin.adaptations || []).slice().reverse();
+  if (!ads.length){ $("#adaptations").innerHTML = '<div class="empty">No adapt() events yet — the first fires after 63 live sessions.</div>'; return; }
+  $("#adaptations").innerHTML = ads.map(a =>
+    `<details><summary><span class="d">${a.date}</span> ${Object.keys(a.changes || {}).length} parameter(s) changed</summary>
+     <div class="body">${Object.entries(a.changes || {}).map(([k, v]) => `<code>${k} → ${typeof v === "number" ? +v.toFixed(4) : esc(String(v))}</code>`).join(" ")}
+     <p style="margin-top:6px">${esc(a.note || "")}</p></div></details>`).join("");
+})();
+
+// ---------- health ----------
+(function(){
+  const g = DATA.gate || {history: []}, lastA = DATA.last_a || {}, lastB = DATA.last_b || {};
+  const hist = (g.history || []).slice(-30);
+  const dots = hist.map(h => `<i class="${h.match ? "m" : "x"}" title="${h.asof}"></i>`).join("");
+  const gate = lastA.data_gate || {};
+  const cov = gate.checks?.coverage_at_asof?.value;
+  const xs = gate.checks?.cross_source;
+  $("#health").innerHTML = `
+    <div style="display:flex; flex-direction:column; gap:12px; font-size:12.8px">
+      <div><div class="muted" style="font-size:11px; text-transform:uppercase; letter-spacing:.06em; font-weight:600; margin-bottom:5px">Determinism (dual replay, last ${hist.length})</div>
+        <div class="dots">${dots || '<span class="muted">no runs yet</span>'}</div></div>
+      <div><b>Cycle A</b> <span class="muted">${esc(lastA.asof || "—")}</span> — ${esc(lastA.status || "—")}
+        · fetch ${gate.checks?.fetch_ok?.value != null ? fmtPctU(gate.checks.fetch_ok.value, 0) : "—"}
+        · coverage ${cov != null ? fmtPctU(cov, 0) : "—"}
+        · cross-check ${xs ? `${xs.compared} ok / ${xs.disagreements.length} off / ${xs.unavailable} n-a` : "—"}</div>
+      <div><b>Cycle B</b> <span class="muted">${esc(lastB.asof || "—")}</span> — ${esc(lastB.status || "not yet run")}
+        ${lastB.ledger_matches_twin === false ? '<span class="st crit">RECONCILIATION BREAK</span>' : ""}</div>
+      <div><b>Open revision</b> — ${lastA.open_revision ? (lastA.open_revision.worst != null ? `worst ${fmtPctU(lastA.open_revision.worst, 2)} across ${lastA.open_revision.n} fills` : esc(JSON.stringify(lastA.open_revision))) : "no fills compared yet"}</div>
+      <div><b>Guardrails</b> — ${(lastA.guardrails?.violations || []).length} flag(s) on the last cycle</div>
+    </div>`;
+})();
+
+// ---------- compliance ----------
+(function(){
+  const c = DATA.controls || {}, s = DATA.screen || {};
+  const ex = c.excluded_symbols || [];
+  $("#compliance").innerHTML = `
+    <div style="display:flex; flex-direction:column; gap:10px; font-size:12.8px">
+      <div><b>${s.passed ?? "—"}</b> AAOIFI-compliant names in the whitelist <span class="muted">(of ${s.screened ?? "—"} screened)</span></div>
+      <div>Screen basis: <span class="muted">${esc(s.basis || "as-of deployment; re-screen quarterly")}</span></div>
+      <div>Manual exclusions: ${ex.length ? ex.map(x => `<code class="mono">${esc(x)}</code>`).join(" ") : '<span class="muted">none</span>'}</div>
+      <div>Gross cap: ${c.gross_cap != null ? fmtPctU(+c.gross_cap, 0) : '<span class="muted">none</span>'} ·
+           Entries: ${c.pause_entries ? '<span class="st warn">paused</span>' : "open"} ·
+           Kill: ${c.kill ? '<span class="st crit">ON</span>' : "off"}</div>
+      <div class="muted" style="font-size:11.5px">Controls change only by editing <span class="mono">live/controls.json</span> — every change is a commit, every commit is an audit event.</div>
+    </div>`;
+})();
+
+// ---------- timeline ----------
+(function(){
+  const rows = (DATA.cycles || []).slice(0, 18);
+  if (!rows.length){ $("#timeline").innerHTML = '<div class="empty">No cycle records yet — the first Cycle A runs after the next close.</div>'; return; }
+  $("#timeline").innerHTML = rows.map(r => {
+    const cls = r.status === "ok" ? "ok" : (["no_orders_ledgered", "killed"].includes(r.status) ? "warn" : "crit");
+    return `<div class="trow"><span class="d">${r.asof}</span><span class="cyc">${r.cycle}</span>
+      <span class="st ${cls}">${esc(r.status)}</span>
+      <span class="info">${esc(r.info || "")}</span></div>`;
+  }).join("");
+})();
+
+$("#freeze").textContent = (DATA.twin.freeze_commit || "").slice(0, 7);
+$("#modeKick").textContent = (DATA.mode || "ghost") + " mode";
+$("#builtLine").textContent = `Rebuilt after every Cycle A · this build: ${DATA.built_utc || ""} · data asof ${DATA.twin.asof}`;
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+ "asof": "2026-08-17",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "ERAS",
+   "side": "buy",
+   "sar": 2598.83,
+   "reason": "rank 6 momentum, 19% off the 52w high, ATR 6.0% -> 9% line",
+   "ttl": 5,
+   "queued": "2026-08-17",
+   "client_order_id": "nafa-2026-08-17-ERAS-buy-8d55995d",
+   "share_preview": {
+    "symbol": "ERAS",
+    "side": "buy",
+    "qty": 142
+   }
+  }
+ ],
+ "generated_utc": "2026-08-18T02:07:39+00:00"
+}
