@@ -205,7 +205,7 @@ def main() -> int:
             return 0
         if gate["status"] == "degraded":
             alert("P2", f"Cycle A {asof}: second data source unavailable",
-                  "Stooq cross-check could not compare any symbol; "
+                  "The second-source cross-check could not compare any symbol; "
                   "trading continues on the primary source only.")
 
     # ---- the twin, twice (determinism gate) ------------------------------

@@ -30,7 +30,7 @@ reset, no orders. `live/ledger/gate.json` tracks the streak (target 10).
 | Config | `live/config.py` | every threshold and path; changing it is change management |
 | Calendar | `live/calendar_util.py` | NASDAQ sessions, half-days, "latest completed session" |
 | Twin | `live/twin.py` | deterministic replay; emits state + today's orders + input hashes |
-| Data gate | `live/data_gate.py` | coverage + benchmark checks + Stooq cross-check (>0.5% close disagreement trips) |
+| Data gate | `live/data_gate.py` | coverage + benchmark checks + cross-check vs NASDAQ's own chart API (>0.5% close disagreement trips; Stooq was dropped — it challenges runner IPs) |
 | Guardrails | `live/guardrails.py` | whitelist, exclusions, long-only, 18% name cap, 75% daily turnover, 5% ADV |
 | Broker | `live/broker.py` | `GhostBroker` now; `AlpacaPaperBroker` (MOO/OPG, REST) dormant until keys |
 | Cycle A | `live/cycle_a.py` | post-close: fetch → gate → twin×2 → rails → ledger → cockpit |

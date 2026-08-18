@@ -6,10 +6,13 @@ Hard checks (any failure trips the gate — no orders tomorrow):
   * >= GATE_COVERAGE_MIN of fetched names have a bar at asof,
   * no cross-checked close disagrees with the second source by > GATE_CROSS_TOL.
 
-The second source is Stooq (independent of Yahoo). Only today's close is
-compared, where both vendors' adjustment conventions coincide. If Stooq is
-unreachable the gate does not trip — a second-source outage must not halt
-trading — but the run is marked degraded and a P2 goes out.
+The second source is NASDAQ's own chart API (api.nasdaq.com) — the exchange's
+published daily bars, fully independent of Yahoo, and proven reachable from
+GitHub runners (Stooq serves runners a JavaScript challenge page and was
+dropped). Only asof's close is compared, where adjustment conventions cannot
+differ. If the second source is unreachable the gate does not trip — an
+outage there must not halt trading — but the run is marked degraded and a P2
+goes out.
 """
 
 from __future__ import annotations
@@ -47,20 +50,27 @@ def _our_close(code: str, asof: str) -> float | None:
     return None
 
 
-def _stooq_close(code: str, asof: str) -> float | None:
-    sym = "^ndq" if code == "IXIC" else code.lower().replace("_", "-") + ".us"
-    d = asof.replace("-", "")
-    url = f"https://stooq.com/q/d/l/?s={sym}&d1={d}&d2={d}&i=d"
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+def _second_source_close(code: str, asof: str) -> float | None:
+    sym, cls = ("COMP", "index") if code == "IXIC" else (code, "stocks")
+    url = (f"https://api.nasdaq.com/api/quote/{sym}/chart"
+           f"?assetclass={cls}&fromdate={asof}&todate={asof}")
+    req = urllib.request.Request(url, headers={
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "en-US",
+    })
     with urllib.request.urlopen(req, timeout=20) as r:
-        text = r.read().decode("utf-8", "replace")
-    for line in text.strip().splitlines():
-        parts = line.split(",")
-        if parts and parts[0] == asof and len(parts) >= 5:
-            try:
-                return float(parts[4])
-            except ValueError:
-                return None
+        payload = json.loads(r.read().decode("utf-8", "replace"))
+    chart = ((payload.get("data") or {}).get("chart")) or []
+    y, m, d = asof.split("-")
+    want = f"{int(m)}/{int(d)}/{y}"   # the API prints dates as 8/17/2026
+    for bar in chart:
+        z = bar.get("z") or {}
+        if z.get("dateTime") == want:
+            # stocks carry z.close, indices z.lastSalePrice; the numeric y
+            # is the close in both shapes
+            val = bar.get("y")
+            return float(val) if isinstance(val, (int, float)) and val > 0 else None
     return None
 
 
@@ -98,7 +108,7 @@ def run_gate(asof: str, priority_codes: list[str]) -> dict:
             unavailable.append(c)
             continue
         try:
-            theirs = _stooq_close(c, asof)
+            theirs = _second_source_close(c, asof)
         except Exception:  # noqa: BLE001 - network trouble = unavailable, not disagreement
             theirs = None
         if theirs is None or theirs <= 0:
@@ -107,7 +117,7 @@ def run_gate(asof: str, priority_codes: list[str]) -> dict:
             compared += 1
             diff = abs(ours / theirs - 1.0)
             if diff > config.GATE_CROSS_TOL:
-                disagreements.append({"code": c, "ours": ours, "stooq": theirs,
+                disagreements.append({"code": c, "ours": ours, "nasdaq": theirs,
                                       "diff": round(diff, 5)})
         time.sleep(0.25)
 
