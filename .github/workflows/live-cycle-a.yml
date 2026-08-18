@@ -1,0 +1,74 @@
+name: Live cycle A (decision)
+
+# Post-close decision cycle for the live ghost/paper deployment (NASDAQ/docs/05 §3).
+# Crons fire at 21:00 and 22:00 UTC so exactly one lands at 17:00 ET in either
+# DST regime; the script itself skips any slot before 16:45 ET and exits early
+# if the session is already recorded, so double-firing is harmless.
+# A push to this file runs the full cycle in SMOKE mode (ledger/smoke/, no alerts).
+#
+# NOTE: scheduled workflows only fire once this file exists on the repository's
+# DEFAULT branch. Until then, only the push-triggered smoke run works.
+
+on:
+  push:
+    branches:
+      - claude/tasi-agent-simulation-fcili2
+    paths:
+      - ".github/workflows/live-cycle-a.yml"
+  schedule:
+    - cron: "0 21,22 * * 1-5"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: live-cycle-a
+  cancel-in-progress: false
+
+jobs:
+  cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/tasi-agent-simulation-fcili2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --quiet pandas numpy yfinance requests pandas_market_calendars
+
+      - name: Run cycle A (smoke — push-triggered)
+        if: github.event_name == 'push'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LIVE_MODE: ghost
+        run: python NASDAQ/live/cycle_a.py --smoke
+
+      - name: Run cycle A
+        if: github.event_name == 'schedule'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
+          LIVE_MODE: ${{ vars.LIVE_MODE || 'ghost' }}
+          APCA_API_KEY_ID: ${{ secrets.APCA_API_KEY_ID }}
+          APCA_API_SECRET_KEY: ${{ secrets.APCA_API_SECRET_KEY }}
+        run: python NASDAQ/live/cycle_a.py
+
+      - name: Commit ledger back to branch
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add NASDAQ/live/ledger NASDAQ/live/cockpit/index.html NASDAQ/live/controls.json
+          if git diff --cached --quiet; then
+            echo "No ledger changes to commit"
+          else
+            git commit -m "live: cycle A record ($(date -u +%F))"
+            git pull --rebase origin claude/tasi-agent-simulation-fcili2 || true
+            git push || (sleep 5 && git pull --rebase origin claude/tasi-agent-simulation-fcili2 && git push)
+          fi

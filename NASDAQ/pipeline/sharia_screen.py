@@ -36,8 +36,8 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-IN = ROOT / "data" / "universe_top.json"
-OUT = ROOT / "data" / "universe_screened.json"
+IN = ROOT / os.environ.get("SCREEN_IN", "data/universe_top.json")
+OUT = ROOT / os.environ.get("SCREEN_OUT", "data/universe_screened.json")
 
 DEBT_MAX = 0.30   # AAOIFI: interest-bearing debt < 30% of market cap
 CASH_MAX = 0.30   # AAOIFI: interest-bearing securities < 30% of market cap

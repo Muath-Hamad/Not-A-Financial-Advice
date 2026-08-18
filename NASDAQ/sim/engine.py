@@ -41,6 +41,10 @@ START_CASH = 100_000.0
 SIM_START = os.environ.get("SIM_START", "2016-01-01")
 ADAPT_EVERY = int(os.environ.get("SIM_ADAPT_EVERY", "63"))  # backprop cadence (sessions)
 ORDER_TTL = 5                     # sessions an order survives a trading halt
+# Live-twin mode: also run decide()/adapt() on the final session, so the last
+# close's orders (for the NEXT open) can be read from agent.pending. Off by
+# default — a backtest's final close has no next open to fill at.
+DECIDE_LAST = os.environ.get("SIM_DECIDE_LAST", "") == "1"
 
 
 class Market:
@@ -254,8 +258,9 @@ class Engine:
                 events.append({"date": iso, "type": "crash" if tret < 0 else "rally",
                                "tasi_ret": round(tret, 4)})
 
-            # --- decisions at the close (not on the final day) ---
-            if i == len(m.dates) - 1:
+            # --- decisions at the close (not on the final day, unless live) ---
+            last_day = i == len(m.dates) - 1
+            if last_day and not DECIDE_LAST:
                 break
             view = m.view(date)
             peers_all = {}
@@ -375,6 +380,8 @@ class Engine:
                             "note": str(res.get("note", ""))[:300],
                         })
 
+            if last_day:
+                break
             if progress_every and i % progress_every == 0:
                 lead = max(agents, key=lambda x: x.equity_hist[-1])
                 print(f"  {iso}: leader {lead.handle} {lead.equity_hist[-1]:,.0f} USD")

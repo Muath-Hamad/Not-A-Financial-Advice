@@ -12,6 +12,8 @@ virtual-account trial**.
 | [02 — Engine & the back-propagation loop](02-engine-and-backprop.md) | v4 engine, the adapt() protocol, the agent contract |
 | [03 — Agents](03-agents.md) | The five schools, their rules and their update laws |
 | [04 — Election & results](04-election-and-results.md) | Scoring formula, both races, the elected agent, limitations |
+| [05 — Live deployment plan](05-live-deployment-plan.md) | The operating plan for the live paper-trading step (venue, cycles, monitoring, controls, rollout) |
+| [06 — Live operations runbook](06-live-operations.md) | The system as built: ghost mode, the sim twin, ledger formats, alerts, controls, Phase 2 switch |
 
 ## The experiment in one diagram
 

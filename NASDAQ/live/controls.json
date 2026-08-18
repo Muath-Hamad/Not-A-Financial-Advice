@@ -1,0 +1,7 @@
+{
+  "kill": false,
+  "pause_entries": false,
+  "excluded_symbols": [],
+  "gross_cap": null,
+  "note": "Management controls (docs/05 §7.3). Human-edited; every change must be its own commit — the commit IS the audit event. kill=true cancels/blocks all orders and freezes cycles. pause_entries=true blocks new buys, exits still flow. excluded_symbols blocks a name in both directions except forced exits. gross_cap (0..1) caps gross exposure at the harness."
+}

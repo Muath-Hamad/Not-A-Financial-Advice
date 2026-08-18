@@ -1,0 +1,87 @@
+name: Live AAOIFI re-screen (quarterly)
+
+# Quarterly compliance cycle (NASDAQ/docs/05 §3): re-discover the universe,
+# re-run the AAOIFI screen into a DATED file (the frozen deployment screen is
+# never overwritten — decision fidelity), then report drift and update the
+# harness exclusions in controls.json. A push to this file runs the report
+# step only, against the current screen (a no-op drill, no network).
+#
+# NOTE: scheduled workflows only fire once this file exists on the repository's
+# DEFAULT branch.
+
+on:
+  push:
+    branches:
+      - claude/tasi-agent-simulation-fcili2
+    paths:
+      - ".github/workflows/live-rescreen.yml"
+  schedule:
+    - cron: "0 14 1 1,4,7,10 *"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: live-rescreen
+  cancel-in-progress: false
+
+jobs:
+  rescreen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/tasi-agent-simulation-fcili2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --quiet pandas numpy yfinance requests pandas_market_calendars
+
+      - name: Set the run date
+        run: echo "RS_DATE=$(date -u +%F)" >> "$GITHUB_ENV"
+
+      - name: Re-discover the universe
+        if: github.event_name == 'schedule'
+        env:
+          DISCOVER_OUT: data/rescreen/${{ env.RS_DATE }}-top.json
+        run: python NASDAQ/pipeline/discover_universe.py
+
+      - name: Re-run the AAOIFI screen
+        if: github.event_name == 'schedule'
+        env:
+          SCREEN_IN: data/rescreen/${{ env.RS_DATE }}-top.json
+          SCREEN_OUT: data/rescreen/${{ env.RS_DATE }}-screened.json
+        run: python NASDAQ/pipeline/sharia_screen.py
+
+      - name: Compliance report + harness exclusions
+        if: github.event_name == 'schedule'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
+        run: python NASDAQ/live/rescreen_report.py --fresh data/rescreen/${{ env.RS_DATE }}-screened.json
+
+      - name: Report drill (push-triggered, current screen vs itself)
+        if: github.event_name == 'push'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LIVE_SMOKE: "1"
+        run: python NASDAQ/live/rescreen_report.py --fresh data/universe_screened.json
+
+      - name: Commit results back to branch
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add NASDAQ/data/rescreen NASDAQ/live/ledger/compliance NASDAQ/live/controls.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "live: quarterly AAOIFI re-screen ($RS_DATE)"
+            git pull --rebase origin claude/tasi-agent-simulation-fcili2 || true
+            git push || (sleep 5 && git pull --rebase origin claude/tasi-agent-simulation-fcili2 && git push)
+          fi

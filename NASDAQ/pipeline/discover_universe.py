@@ -18,7 +18,7 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "universe_top.json"
+OUT = ROOT / __import__("os").environ.get("DISCOVER_OUT", "data/universe_top.json")
 TOP_N = int(__import__("os").environ.get("DISCOVER_TOP_N", "500"))
 
 HEADERS = {
