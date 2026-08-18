@@ -135,6 +135,20 @@ def main() -> int:
         if (ledger / "cycles" / f"{asof}-A.json").exists():
             print(f"cycle A for {asof} already recorded; nothing to do")
             return 0
+        if args.smoke:
+            # exercise the full machinery on a trailing window regardless of
+            # where LIVE_START sits relative to today
+            os.environ.setdefault("TWIN_START", str(
+                dt.date.fromisoformat(asof) - dt.timedelta(days=90)))
+        elif asof < config.LIVE_START:
+            # bootstrap: the first session of the live record has not
+            # completed yet — nothing to replay, and that is not an error
+            record["status"] = "awaiting_first_session"
+            record["live_start"] = config.LIVE_START
+            write_json(ledger / "cycles" / f"{asof}-A.json", record)
+            print(f"latest completed session {asof} predates LIVE_START "
+                  f"{config.LIVE_START}; the live record begins next session")
+            return 0
 
     # ---- controls / kill switch ------------------------------------------
     controls = json.loads((LIVE / "controls.json").read_text())

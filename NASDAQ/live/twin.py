@@ -67,6 +67,10 @@ def main() -> int:
 
     strategy = load_strategy()
     market = Market()
+    if not market.dates:
+        print(f"twin: no sessions on or after SIM_START={os.environ['SIM_START']} "
+              f"in the enriched data — nothing to replay", file=sys.stderr)
+        return 2
     agents, _events = Engine(market).run_all([strategy], progress_every=0)
     a = agents[0]
 
