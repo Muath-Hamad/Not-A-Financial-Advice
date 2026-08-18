@@ -107,3 +107,34 @@ account**:
   dashboard becomes the live monitor. The engine's env-parameterized costs
   (`SIM_COMMISSION`, `SIM_SLIPPAGE`) should be set to the venue's actuals.
 * Re-run the AAOIFI screen quarterly — compliance drifts with balance sheets.
+
+## Lab addendum — factor2, the drawdown-hardened variant
+
+After the election, `factor`'s drawdowns were diagnosed (it entered the COVID
+crash at 89% exposure; its risk response is entirely slow-path) and a guarded
+variant was built in `sim/strategies_lab/factor2.py` — sleeve engine untouched,
+risk valve rebuilt: same-session circuit breaker, continuous own-drawdown
+governor off a bleeding high-water mark, a one-sided index-vol *acceleration*
+term in the vol target, a re-risk ratchet (cut instantly, rebuild ≤4%/session),
+and breadth-as-risk-control (13 names @ 13% cap). Designed and tuned on
+in-sample evidence only (ensemble medians over micro-perturbed runs — the
+surface is chaotic); the OOS check is semi-clean since the original's OOS
+results were already known when the fix was commissioned.
+
+| Solo runs | factor IS | factor2 IS | factor OOS | factor2 OOS |
+|---|---|---|---|---|
+| Final | $435,564 | **$472,248** | **$385,258** | $321,312 |
+| Max drawdown | −34.4% | **−24.1%** | −29.5% | **−23.7%** |
+| Sharpe | 0.77 | **0.95** | 1.20 | **1.21** |
+| Calmar | 0.68 | **1.03** | 1.55 | **1.63** |
+| Recovered | — | — | 2025-10-29 | **2025-09-12** |
+
+Per-episode (IS): COVID −34.4% → −17.7%, 2018 Q4 −29.8% → −21.6%, 2021 unwind
+−32.2% → −24.1%. Two findings worth keeping: **past a modest point, cutting
+exposure makes max drawdown worse** (a de-risked book stays underwater longer
+and meets the next shock unrecovered — gross floors of 0.35/0.28 tested worse
+than 0.50), and **diversification bought more drawdown relief than
+de-leveraging**. Out-of-sample the guard is a genuine trade, not a free lunch:
+~20% of the max drawdown removed for ~17% of terminal wealth, with equal
+Sharpe, better Calmar, and a six-week-faster recovery. The frozen five and the
+election result are unchanged.
