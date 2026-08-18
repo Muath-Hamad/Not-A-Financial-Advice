@@ -1,0 +1,21 @@
+{
+ "asof": "2026-08-17",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "ORKA",
+   "side": "buy",
+   "sar": 2680.89,
+   "reason": "rank 4 momentum, 0% off the 52w high, ATR 4.7% -> 11% line",
+   "ttl": 5,
+   "queued": "2026-08-17",
+   "client_order_id": "nafa-2026-08-17-ORKA-buy-c30f8497",
+   "share_preview": {
+    "symbol": "ORKA",
+    "side": "buy",
+    "qty": 23
+   }
+  }
+ ],
+ "generated_utc": "2026-08-18T01:51:34+00:00"
+}
