@@ -15,17 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Stooq
+      - name: NASDAQ chart API index symbols
         run: |
-          for u in "https://stooq.com/q/d/l/?s=aapl.us&d1=20260814&d2=20260817&i=d" \
-                   "https://stooq.com/q/d/l/?s=%5Endq&d1=20260814&d2=20260817&i=d"; do
-            echo "== $u"
-            curl -sS -m 20 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" "$u" | head -c 500 || true
-            echo
-          done
-      - name: NASDAQ chart API
-        run: |
-          for q in "AAPL/chart?assetclass=stocks" "MSFT/chart?assetclass=stocks" "IXIC/chart?assetclass=index"; do
+          for q in "COMP/chart?assetclass=index" "NDX/chart?assetclass=index"; do
             echo "== $q"
             curl -sS -m 20 -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
               -H "Accept: application/json, text/plain, */*" -H "Accept-Language: en-US" \
