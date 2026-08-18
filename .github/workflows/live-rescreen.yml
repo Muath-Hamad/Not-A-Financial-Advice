@@ -77,7 +77,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add NASDAQ/data/rescreen NASDAQ/live/ledger/compliance NASDAQ/live/controls.json 2>/dev/null || true
+          for p in NASDAQ/data/rescreen NASDAQ/live/ledger NASDAQ/live/controls.json; do
+            git add "$p" 2>/dev/null || true
+          done
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
