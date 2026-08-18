@@ -75,4 +75,4 @@ jobs:
             git push || (sleep 5 && git pull --rebase origin claude/tasi-agent-simulation-fcili2 && git push)
           fi
 
-# smoke-trigger note: second data source switched to api.nasdaq.com (see live/data_gate.py)
+# smoke-trigger note: validation drill — nasdaq.com second source + re-runnable smoke (2026-08-18)
