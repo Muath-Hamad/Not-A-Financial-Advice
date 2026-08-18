@@ -132,7 +132,8 @@ def main() -> int:
                 return 0
         asof = latest_completed_session()
         record["asof"] = asof
-        if (ledger / "cycles" / f"{asof}-A.json").exists():
+        # idempotence guard for real cycles; smoke drills are re-runnable
+        if not args.smoke and (ledger / "cycles" / f"{asof}-A.json").exists():
             print(f"cycle A for {asof} already recorded; nothing to do")
             return 0
         if args.smoke:
