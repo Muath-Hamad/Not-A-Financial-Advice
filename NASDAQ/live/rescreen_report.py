@@ -72,7 +72,8 @@ def main() -> int:
         controls = json.loads(controls_path.read_text())
         merged = sorted(set(controls.get("excluded_symbols") or []) | set(newly_noncompliant))
         controls["excluded_symbols"] = merged
-        controls_path.write_text(json.dumps(controls, indent=2) + "\n")
+        controls_path.write_text(json.dumps(controls, indent=2, ensure_ascii=False) + "\n",
+                                 encoding="utf-8")
 
     if held_flagged:
         alert("P1", f"Re-screen: {len(held_flagged)} HELD name(s) no longer AAOIFI-compliant",
