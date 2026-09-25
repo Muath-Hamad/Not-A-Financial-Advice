@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NASDAQ Arena — electing a halal investment agent</title>
+<style>
+:root{
+  color-scheme: light;
+  --surface-0:#f6f5f2; --surface-1:#fcfcfb; --surface-2:#f0efec;
+  --ink:#0b0b0b; --ink-2:#52514e; --ink-3:#8a8984;
+  --hairline:#e4e2dc; --hairline-2:#d6d4cd;
+  --good:#1a7f37; --bad:#d1242f;
+  --div-neg:#e34948; --div-mid:#f0efec; --div-pos:#2a78d6;
+  --accent:#2a78d6; --gold:#b8860b;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+  --radius:14px; --radius-s:9px;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme: dark;
+    --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422;
+    --ink:#ffffff; --ink-2:#c3c2b7; --ink-3:#85847c;
+    --hairline:#32312e; --hairline-2:#403f3b;
+    --good:#3fb950; --bad:#f85149;
+    --div-neg:#e66767; --div-mid:#383835; --div-pos:#3987e5;
+    --accent:#3987e5; --gold:#d4a017;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422;
+  --ink:#ffffff; --ink-2:#c3c2b7; --ink-3:#85847c;
+  --hairline:#32312e; --hairline-2:#403f3b;
+  --good:#3fb950; --bad:#f85149;
+  --div-neg:#e66767; --div-mid:#383835; --div-pos:#3987e5;
+  --accent:#3987e5; --gold:#d4a017;
+}
+*{box-sizing:border-box; margin:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+body{font-family:var(--sans); background:var(--surface-0); color:var(--ink); line-height:1.55; -webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px; margin:0 auto; padding:0 24px 96px}
+a{color:var(--accent); text-decoration:none}
+nav{position:sticky; top:0; z-index:50; backdrop-filter:blur(12px);
+  background:color-mix(in srgb, var(--surface-0) 82%, transparent); border-bottom:1px solid var(--hairline)}
+nav .row{max-width:1180px; margin:0 auto; padding:10px 24px; display:flex; gap:4px; align-items:center; overflow-x:auto; scrollbar-width:none}
+nav .row::-webkit-scrollbar{display:none}
+nav .brand{font-weight:700; font-size:14px; margin-right:12px; white-space:nowrap}
+nav .brand span{color:var(--ink-3); font-weight:500}
+nav a.pill{font-size:12.5px; color:var(--ink-2); padding:5px 11px; border-radius:99px; white-space:nowrap;
+  transition:background 120ms var(--ease-out), color 120ms var(--ease-out)}
+nav a.pill:hover{background:var(--surface-2)}
+nav a.pill.on{background:var(--ink); color:var(--surface-1)}
+#themeBtn{margin-left:auto; border:1px solid var(--hairline); background:var(--surface-1); color:var(--ink-2);
+  border-radius:99px; padding:4px 10px; font-size:12px; cursor:pointer}
+header.hero{padding:64px 0 8px}
+.kicker{font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3); font-weight:600}
+h1{font-size:clamp(30px,4.4vw,46px); line-height:1.12; letter-spacing:-0.02em; font-weight:750; margin:10px 0 6px}
+h1 .ar{color:var(--ink-3); font-weight:400}
+.sub{color:var(--ink-2); font-size:15.5px; max-width:760px}
+.sub b{color:var(--ink)}
+.kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:26px 0 0}
+.kpi{background:var(--surface-1); border:1px solid var(--hairline); border-radius:var(--radius-s); padding:12px 14px}
+.kpi .l{font-size:11.5px; color:var(--ink-3); font-weight:600}
+.kpi .v{font-size:20px; font-weight:700; margin-top:2px}
+.kpi .v small{font-size:12px; color:var(--ink-3); font-weight:500}
+.champ{display:flex; flex-wrap:wrap; align-items:baseline; gap:12px 26px; margin-top:34px;
+  background:var(--surface-1); border:1.5px solid var(--gold); border-radius:var(--radius); padding:22px 26px}
+.champ .big{font-size:clamp(34px,4.6vw,52px); font-weight:800; letter-spacing:-0.03em}
+.champ .who{font-size:15px; color:var(--ink-2); max-width:640px}
+.delta{font-weight:700}
+.delta.up{color:var(--good)} .delta.down{color:var(--bad)}
+section{margin-top:64px; scroll-margin-top:64px}
+h2{font-size:22px; letter-spacing:-0.015em; font-weight:720; display:flex; align-items:baseline; gap:10px}
+h2 .tag{font-size:11.5px; color:var(--ink-3); font-weight:600; letter-spacing:.1em; text-transform:uppercase}
+.sec-sub{color:var(--ink-2); font-size:13.5px; margin-top:4px; max-width:780px}
+.card{background:var(--surface-1); border:1px solid var(--hairline); border-radius:var(--radius); padding:18px 20px; margin-top:16px; position:relative}
+.card h3{font-size:14px; font-weight:650; margin-bottom:2px}
+.cardbar{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px}
+.cardbar .sp{flex:1}
+button.tgl{border:1px solid var(--hairline); background:var(--surface-1); color:var(--ink-2); font-size:12px;
+  border-radius:8px; padding:4px 10px; cursor:pointer}
+button.tgl:hover{background:var(--surface-2)}
+button.tgl.on{background:var(--ink); color:var(--surface-1); border-color:var(--ink)}
+select.tgl{appearance:none; border:1px solid var(--hairline); background:var(--surface-1); color:var(--ink-2);
+  font-size:12px; border-radius:8px; padding:4px 10px; cursor:pointer; font-family:var(--sans)}
+.tblwrap{overflow-x:auto; margin-top:14px; border:1px solid var(--hairline); border-radius:var(--radius-s); background:var(--surface-1)}
+table{border-collapse:collapse; width:100%; font-size:12.8px}
+th,td{padding:7px 12px; text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums}
+th{font-size:11.5px; color:var(--ink-3); font-weight:650; border-bottom:1px solid var(--hairline); position:sticky; top:0; background:var(--surface-1)}
+td:first-child, th:first-child{text-align:left; position:sticky; left:0; background:var(--surface-1); font-variant-numeric:normal}
+tbody tr{border-bottom:1px solid var(--hairline)}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover td{background:var(--surface-2)}
+td .pos{color:var(--good); font-weight:600} td .neg{color:var(--bad); font-weight:600}
+tr.win td{background:color-mix(in srgb, var(--gold) 7%, var(--surface-1))}
+.chart{position:relative; width:100%}
+.chart svg{display:block; width:100%; height:auto}
+.gridline{stroke:var(--surface-2); stroke-width:1}
+.tt{position:absolute; pointer-events:none; z-index:20; background:var(--surface-1); border:1px solid var(--hairline-2);
+  border-radius:10px; padding:9px 12px; font-size:12px; min-width:170px; box-shadow:0 6px 24px rgba(0,0,0,.10);
+  opacity:0; transform:translateY(3px); transition:opacity 120ms var(--ease-out), transform 120ms var(--ease-out)}
+.tt.show{opacity:1; transform:none}
+.tt .d{font-weight:700; margin-bottom:5px}
+.tt .r{display:flex; align-items:center; gap:7px; padding:1.5px 0}
+.tt .k{width:14px; height:0; border-top:2.5px solid; border-radius:2px; flex:none}
+.tt .n{color:var(--ink-2); flex:1; padding-right:10px}
+.tt .v{font-weight:700; font-variant-numeric:tabular-nums}
+.legend{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px}
+.lg{display:inline-flex; align-items:center; gap:7px; font-size:12px; color:var(--ink-2); border:1px solid var(--hairline);
+  border-radius:99px; padding:3.5px 11px; background:var(--surface-1)}
+.lg .k{width:14px; height:0; border-top:2.5px solid; border-radius:2px}
+.scorebar{display:flex; height:22px; border-radius:6px; overflow:hidden; margin-top:4px}
+.scorebar div{height:100%}
+.scorelegend{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; font-size:11.5px; color:var(--ink-2)}
+.scorelegend .k{display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:5px; vertical-align:-1px}
+.bars{margin-top:12px}
+.bar{display:flex; align-items:center; gap:10px; margin:6px 0}
+.bar .l{width:220px; flex:none; font-size:12.5px; color:var(--ink-2); text-align:right}
+.bar .track{flex:1; height:14px; background:var(--surface-2); border-radius:5px; overflow:hidden}
+.bar .fill{height:100%; background:var(--accent); border-radius:5px 0 0 5px}
+.bar .v{width:44px; font-size:12px; font-variant-numeric:tabular-nums; color:var(--ink)}
+details.ad{border:1px solid var(--hairline); border-radius:var(--radius-s); background:var(--surface-1); margin-top:8px; overflow:hidden}
+details.ad summary{cursor:pointer; padding:11px 16px; font-weight:650; font-size:13.5px; list-style:none; display:flex; gap:10px; align-items:center}
+details.ad summary:hover{background:var(--surface-2)}
+details.ad summary::-webkit-details-marker{display:none}
+details.ad .bd{padding:2px 18px 14px; font-size:12.5px}
+.adev{border-left:2px solid var(--hairline-2); margin:8px 0 8px 6px; padding:1px 0 1px 12px}
+.adev .dt{font-size:11px; color:var(--ink-3); font-variant-numeric:tabular-nums}
+.adev .ch{font-family:ui-monospace,Menlo,monospace; font-size:11.5px; color:var(--ink-2); overflow-wrap:anywhere}
+.adev .nt{font-size:12.5px; margin-top:1px}
+.pager{display:flex; gap:6px; align-items:center; margin-top:10px; font-size:12px; color:var(--ink-3)}
+.sidechip{font-size:10.5px; font-weight:700; letter-spacing:.05em; padding:1px 8px; border-radius:99px}
+.sidechip.buy{background:color-mix(in srgb, var(--div-pos) 14%, var(--surface-1)); color:var(--div-pos)}
+.sidechip.sell{background:color-mix(in srgb, var(--div-neg) 14%, var(--surface-1)); color:var(--div-neg)}
+.method{font-size:13px; color:var(--ink-2); line-height:1.7}
+.method b{color:var(--ink)}
+.disc{background:var(--surface-2); border-radius:var(--radius-s); padding:10px 14px; font-size:12px; color:var(--ink-2); margin-top:14px}
+footer{margin-top:70px; padding-top:18px; border-top:1px solid var(--hairline); font-size:12px; color:var(--ink-3)}
+</style>
+</head>
+<body>
+<script>/*__DATA__*/</script>
+<nav><div class="row">
+  <div class="brand">NASDAQ Arena <span>· not financial advice</span></div>
+  <a class="pill" href="#election">Election</a>
+  <a class="pill" href="#races">The races</a>
+  <a class="pill" href="#numbers">Numbers</a>
+  <a class="pill" href="#adapt">Back-propagation</a>
+  <a class="pill" href="#screen">Sharia screen</a>
+  <a class="pill" href="#trades">Trades</a>
+  <a class="pill" href="#method">Method</a>
+  <button id="themeBtn" title="toggle theme">◐</button>
+</div></nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="kicker">Agent election · AAOIFI-screened NASDAQ · frozen before out-of-sample</div>
+  <h1>NASDAQ Arena <span class="ar">حلبة ناسداك</span></h1>
+  <p class="sub">Five lightweight AI agents — one school each — were tuned on <b>2016–2022</b>, then
+  <b>frozen</b> and released onto <b>2023 → today</b>, years that did not exist in their repository.
+  Each carries a deterministic <b>back-propagation loop</b>: every 63 sessions it receives its own
+  realized errors and adjusts its bounded parameters. The universe is <b id="h-univ"></b> NASDAQ
+  names that pass the <b>AAOIFI</b> sharia screen. One agent gets elected to trade a live virtual
+  account. This page is the ballot count.</p>
+  <div class="kpis" id="kpis"></div>
+  <div class="champ" id="champ"></div>
+</header>
+
+<section id="election">
+  <h2>The election <span class="tag">score = 40 OOS Sharpe · 20 OOS growth · 15 drawdown · 15 robustness · 10 tradability</span></h2>
+  <p class="sec-sub">Out-of-sample dominant by construction: the winner is chosen by how it performed on data nobody tuned against.</p>
+  <div class="card"><div id="scoreRows"></div><div class="scorelegend" id="scoreLegend"></div></div>
+</section>
+
+<section id="races">
+  <h2>The two races <span class="tag">USD portfolio value · gray = NASDAQ Composite</span></h2>
+  <div class="card">
+    <div class="cardbar"><h3>In-sample · 2016 → 2022 <span style="color:var(--ink-3);font-weight:500">(agents tuned here)</span></h3>
+      <div class="sp"></div><button class="tgl" id="logIs">log</button></div>
+    <div class="chart" id="chartIs"></div>
+  </div>
+  <div class="card">
+    <div class="cardbar"><h3>Out-of-sample · 2023 → today <span style="color:var(--ink-3);font-weight:500">(frozen agents + their adapt() loops)</span></h3>
+      <div class="sp"></div><button class="tgl" id="logOos">log</button></div>
+    <div class="chart" id="chartOos"></div>
+    <div class="legend" id="raceLegend"></div>
+  </div>
+</section>
+
+<section id="numbers">
+  <h2>The numbers <span class="tag">side by side</span></h2>
+  <div class="tblwrap" id="numTbl"></div>
+</section>
+
+<section id="adapt">
+  <h2>Back-propagation audit <span class="tag">every parameter change, logged</span></h2>
+  <p class="sec-sub">Each agent's adapt() ran on a 63-session cadence — deterministic, bounded update rules reacting to its own realized Sharpe, hit rate, payoff and drawdown. Expand an agent to read the full trail.</p>
+  <div id="adaptBox"></div>
+</section>
+
+<section id="screen">
+  <h2>The sharia screen <span class="tag">AAOIFI Shari'ah Standard No. 21</span></h2>
+  <p class="sec-sub" id="screenSub"></p>
+  <div class="card">
+    <h3>Why names were rejected</h3>
+    <div class="bars" id="rejBars"></div>
+  </div>
+  <div class="card">
+    <div class="cardbar"><h3>Largest names that passed</h3></div>
+    <div class="tblwrap" id="passTbl"></div>
+  </div>
+</section>
+
+<section id="trades">
+  <h2>Out-of-sample trades <span class="tag">every fill since the freeze</span></h2>
+  <div class="card">
+    <div class="cardbar" id="tradeFilters"></div>
+    <div class="tblwrap" id="tradeTbl"></div>
+    <div class="pager" id="tradePager"></div>
+  </div>
+</section>
+
+<section id="method">
+  <h2>Methodology</h2>
+  <div class="card method" id="methodBox"></div>
+  <div class="disc">⚠️ Simulation of algorithmic agents for research. Not investment advice. The AAOIFI screen
+  uses current-day fundamentals (not point-in-time) and a business-activity proxy for the 5% impermissible-income
+  rule; a production screen needs revenue-line data and a scholar review. Universe is today's listings —
+  survivorship bias inflates all backtest numbers. The benchmark is a price index (no dividends).</div>
+</section>
+
+<footer id="ft"></footer>
+</div>
+
+<script>
+"use strict";
+const D = window.DATA;
+const $ = (s, el=document) => el.querySelector(s);
+const $$ = (s, el=document) => [...el.querySelectorAll(s)];
+const fmt = n => n==null?'—':Math.round(n).toLocaleString('en-US');
+const pct = (x,d=1) => x==null?'—':(x*100).toFixed(d)+'%';
+const spct = (x,d=1) => x==null?'—':(x>0?'+':'')+(x*100).toFixed(d)+'%';
+const el = (tag, attrs={}, ...kids) => {
+  const e = document.createElement(tag);
+  for (const [k,v] of Object.entries(attrs)) {
+    if (k==='class') e.className=v; else if (k==='text') e.textContent=v;
+    else if (k.startsWith('on')) e.addEventListener(k.slice(2), v); else e.setAttribute(k,v);
+  }
+  for (const k of kids) if (k!=null) e.append(k);
+  return e;
+};
+const svgel = (tag, attrs={}) => {
+  const e = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  for (const [k,v] of Object.entries(attrs)) e.setAttribute(k, v);
+  return e;
+};
+const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const isDark = () => document.documentElement.dataset.theme==='dark' ||
+  (document.documentElement.dataset.theme!=='light' && matchMedia('(prefers-color-scheme: dark)').matches);
+const AM = D.agents_meta;
+const handles = D.election.ranking.map(r=>r.handle);
+const color = h => isDark()? AM[h].color_dark : AM[h].color;
+const elected = D.election.elected;
+const MON = {'01':'Jan','02':'Feb','03':'Mar','04':'Apr','05':'May','06':'Jun','07':'Jul','08':'Aug','09':'Sep','10':'Oct','11':'Nov','12':'Dec'};
+const fmtDate = iso => `${MON[iso.slice(5,7)]} ${+iso.slice(8,10)}, ${iso.slice(0,4)}`;
+const rerenders = [];
+
+/* ---------- hero ---------- */
+{
+  $('#h-univ').textContent = D.screen.passed;
+  const kp = $('#kpis');
+  const w = D.election.ranking[0];
+  const rows = [
+    ['Agents', handles.length, 'schools'],
+    ['Universe', D.screen.passed, 'AAOIFI-compliant'],
+    ['In-sample', `${D.is.meta.sim_start.slice(0,4)}–${D.is.meta.sim_end.slice(0,4)}`, `${fmt(D.is.meta.sessions)} sessions`],
+    ['Out-of-sample', `${D.oos.meta.sim_start.slice(0,4)}–${D.oos.meta.sim_end.slice(0,4)}`, `${fmt(D.oos.meta.sessions)} sessions`],
+    ['Capital', '$100,000', 'each'],
+    ['Freeze', D.election.freeze_commit.slice(0,7), 'before OOS fetch'],
+  ];
+  for (const [l,v,s] of rows) kp.append(el('div',{class:'kpi'},
+    el('div',{class:'l',text:l}), el('div',{class:'v'}, String(v), s?el('small',{text:' '+s}):null)));
+  $('#champ').append(
+    el('div',{},
+      el('div',{class:'kicker',text:'Elected for the live account'}),
+      el('div',{class:'big',text:`${AM[elected].name}`})),
+    el('div',{class:'who'},
+      el('div',{}, el('b',{text:AM[elected].style})),
+      el('div',{style:'margin-top:6px'},
+        `Election score ${w.score}/100 · out-of-sample `,
+        el('span',{class:'delta '+(w.oos.total_return>=0?'up':'down'),text:spct(w.oos.total_return)}),
+        ` (Sharpe ${w.oos.sharpe}, max drawdown ${pct(w.oos.max_drawdown)}) vs `,
+        el('span',{class:'delta '+(D.oos.tasi_metrics.total_return>=0?'up':'down'),text:spct(D.oos.tasi_metrics.total_return)}),
+        ` for the Composite. In-sample rank #${w.is_rank} → out-of-sample rank #${w.oos_rank}.`)));
+}
+
+/* ---------- election scorecard ---------- */
+{
+  const COMP = [['oos_sharpe','OOS Sharpe','#2a78d6'],['oos_cagr','OOS growth','#1baf7a'],
+                ['oos_dd','Drawdown','#eda100'],['robustness','Robustness','#e87ba4'],
+                ['tradability','Tradability','#9085e9']];
+  const box = $('#scoreRows');
+  for (const r of D.election.ranking) {
+    const row = el('div',{style:'margin:14px 0'});
+    row.append(el('div',{style:'display:flex; align-items:baseline; gap:10px'},
+      el('span',{style:'font-weight:700; font-size:14px'}, (r.handle===elected?'🏆 ':'')+AM[r.handle].name),
+      el('span',{style:'font-size:12px; color:var(--ink-3)'}, AM[r.handle].style),
+      el('span',{style:'margin-left:auto; font-weight:750; font-variant-numeric:tabular-nums'}, String(r.score))));
+    const bar = el('div',{class:'scorebar'});
+    for (const [k,,c] of COMP) {
+      const wpx = r.components[k];
+      bar.append(el('div',{style:`width:${wpx}%; background:${c}`, title:`${k}: ${r.components[k]}`}));
+    }
+    bar.append(el('div',{style:`width:${100-r.score}%; background:var(--surface-2)`}));
+    row.append(bar);
+    box.append(row);
+  }
+  const lg = $('#scoreLegend');
+  for (const [k,label,c] of COMP) lg.append(el('span',{}, el('span',{class:'k',style:'background:'+c}), `${label} (${D.election.weights[k]})`));
+}
+
+/* ---------- charts ---------- */
+function ttRow(c,name,val){ return `<div class="r"><span class="k" style="border-color:${c}"></span><span class="n">${esc(name)}</span><span class="v">${esc(String(val))}</span></div>`; }
+function showTT(host,e,html){
+  let tt=host.querySelector('.tt'); if(!tt){ tt=el('div',{class:'tt'}); host.append(tt); }
+  tt.innerHTML=html; tt.classList.add('show');
+  const r=host.getBoundingClientRect();
+  let x=e.clientX-r.left+14, y=e.clientY-r.top+10;
+  if(x+tt.offsetWidth>r.width-8) x=e.clientX-r.left-tt.offsetWidth-14;
+  if(y+tt.offsetHeight>r.height-4) y=r.height-tt.offsetHeight-4;
+  tt.style.left=x+'px'; tt.style.top=Math.max(2,y)+'px';
+}
+function hideTT(host){ const tt=host.querySelector('.tt'); if(tt) tt.classList.remove('show'); }
+function linTicks(mn,mx,n){
+  const span=mx-mn, raw=span/n, mag=Math.pow(10,Math.floor(Math.log10(raw)));
+  const stp=[1,2,2.5,5,10].map(m=>m*mag).find(s=>span/s<=n)||mag*10;
+  const out=[]; for(let v=Math.ceil(mn/stp)*stp; v<=mx; v+=stp) out.push(v); return out;
+}
+function logTicks(mn,mx){
+  const out=[]; for(let m=Math.pow(10,Math.floor(Math.log10(mn))); m<=mx*10; m*=10)
+    for(const b of [1,2,3,5,7]){ const v=b*m; if(v>=mn&&v<=mx) out.push(v); }
+  return out.length>2?out:linTicks(mn,mx,6);
+}
+const logState = {is:false, oos:false};
+function renderRace(key){
+  const P = D[key];
+  const host = $(key==='is' ? '#chartIs' : '#chartOos'); host.innerHTML='';
+  const W=1080,H=430,Pd={l:64,r:20,t:14,b:30};
+  const n = P.dates.length;
+  const sers = handles.map(h=>({h, vals:P.agents[h].equity}));
+  let mn=Infinity,mx=-Infinity;
+  for(const q of sers) for(const v of q.vals){ if(v<mn)mn=v; if(v>mx)mx=v; }
+  for(const v of P.tasi){ if(v<mn)mn=v; if(v>mx)mx=v; }
+  mn*=0.98; mx*=1.02;
+  const useLog = logState[key];
+  const Y = useLog ? v=>H-Pd.b-(Math.log(v)-Math.log(mn))/(Math.log(mx)-Math.log(mn))*(H-Pd.t-Pd.b)
+                   : v=>H-Pd.b-(v-mn)/(mx-mn)*(H-Pd.t-Pd.b);
+  const X = i=>Pd.l+i/(n-1)*(W-Pd.l-Pd.r);
+  const svg=svgel('svg',{viewBox:`0 0 ${W} ${H}`});
+  for(const tv of (useLog?logTicks(mn,mx):linTicks(mn,mx,6))){
+    svg.append(svgel('line',{x1:Pd.l,x2:W-Pd.r,y1:Y(tv),y2:Y(tv),class:'gridline'}));
+    const t=svgel('text',{x:Pd.l-8,y:Y(tv)+4,'text-anchor':'end'}); t.textContent=fmt(tv);
+    t.setAttribute('fill','var(--ink-3)'); t.setAttribute('font-size','11'); svg.append(t);
+  }
+  for(let g=0; g<6; g++){
+    const i=Math.round(g/5*(n-1));
+    const t=svgel('text',{x:X(i),y:H-8,'text-anchor':g===0?'start':g===5?'end':'middle'});
+    t.textContent=fmtDate(P.dates[i]); t.setAttribute('fill','var(--ink-3)'); t.setAttribute('font-size','11'); svg.append(t);
+  }
+  const path=(vals,c,w,op)=>{
+    let d=''; vals.forEach((v,i)=>{ d+=`${i?'L':'M'}${X(i).toFixed(1)},${Y(v).toFixed(1)}`; });
+    return svgel('path',{d,fill:'none',stroke:c,'stroke-width':w,opacity:op,'stroke-linejoin':'round','stroke-linecap':'round'});
+  };
+  svg.append(path(P.tasi,'var(--ink-3)',1.6,.7));
+  for(const q of sers) svg.append(path(q.vals,color(q.h), q.h===elected?2.6:2, 1));
+  const fin=[...sers].sort((a,b)=>b.vals[b.vals.length-1]-a.vals[a.vals.length-1]);
+  let usedY=[];
+  for(const q of fin.slice(0,3)){
+    let yy=Y(q.vals[q.vals.length-1]);
+    while(usedY.some(u=>Math.abs(u-yy)<13)) yy+=13;
+    usedY.push(yy);
+    const t=svgel('text',{x:W-Pd.r-2,y:yy+4,'text-anchor':'end'});
+    t.textContent=`${AM[q.h].name} ${fmt(q.vals[q.vals.length-1])}`;
+    t.setAttribute('fill','var(--ink)'); t.setAttribute('font-size','11.5'); t.setAttribute('font-weight','700');
+    t.setAttribute('stroke','var(--surface-1)'); t.setAttribute('stroke-width','3.5'); t.setAttribute('paint-order','stroke');
+    svg.append(t);
+  }
+  const cross=svgel('line',{y1:Pd.t,y2:H-Pd.b,stroke:'var(--hairline-2)','stroke-width':1,opacity:0});
+  svg.append(cross);
+  const hit=svgel('rect',{x:Pd.l,y:Pd.t,width:W-Pd.l-Pd.r,height:H-Pd.t-Pd.b,fill:'transparent'});
+  hit.addEventListener('pointermove',ev=>{
+    const r=svg.getBoundingClientRect();
+    const px=(ev.clientX-r.left)*(W/r.width);
+    const i=Math.max(0,Math.min(n-1,Math.round((px-Pd.l)/(W-Pd.l-Pd.r)*(n-1))));
+    cross.setAttribute('x1',X(i)); cross.setAttribute('x2',X(i)); cross.setAttribute('opacity',1);
+    const rows=[...sers].sort((a,b)=>b.vals[i]-a.vals[i]).map(q=>ttRow(color(q.h), AM[q.h].name, fmt(q.vals[i])));
+    rows.push(ttRow('var(--ink-3)','Composite', fmt(P.tasi[i])));
+    showTT(host,ev,`<div class="d">${fmtDate(P.dates[i])}</div>`+rows.join(''));
+  });
+  hit.addEventListener('pointerleave',()=>{ cross.setAttribute('opacity',0); hideTT(host); });
+  svg.append(hit);
+  host.append(svg);
+}
+$('#logIs').addEventListener('click',()=>{ logState.is=!logState.is; $('#logIs').classList.toggle('on',logState.is); renderRace('is'); });
+$('#logOos').addEventListener('click',()=>{ logState.oos=!logState.oos; $('#logOos').classList.toggle('on',logState.oos); renderRace('oos'); });
+rerenders.push(()=>{ renderRace('is'); renderRace('oos'); renderLegend(); });
+function renderLegend(){
+  const lg=$('#raceLegend'); lg.innerHTML='';
+  for(const h of handles) lg.append(el('span',{class:'lg'}, el('span',{class:'k',style:'border-color:'+color(h)}),
+    (h===elected?'🏆 ':'')+AM[h].name));
+  lg.append(el('span',{class:'lg'},el('span',{class:'k',style:'border-color:var(--ink-3)'}),'NASDAQ Composite'));
+}
+
+/* ---------- numbers table ---------- */
+{
+  const t = el('table');
+  const hr = el('tr'); hr.append(el('th',{text:'Metric'}));
+  for(const h of handles){ hr.append(el('th',{text:`${AM[h].name} IS`})); hr.append(el('th',{text:`${AM[h].name} OOS`})); }
+  hr.append(el('th',{text:'IXIC IS'})); hr.append(el('th',{text:'IXIC OOS'}));
+  t.append(el('thead',{},hr));
+  const gm=(P,h)=>{ const a=P.agents[h]; return a.metrics; };
+  const rows = [
+    ['Total return', m=>spct(m.total_return), true],
+    ['CAGR', m=>spct(m.cagr)],
+    ['Sharpe', m=>m.sharpe],
+    ['Sortino', m=>m.sortino],
+    ['Max drawdown', m=>pct(m.max_drawdown), true],
+    ['Calmar', m=>m.calmar??'—'],
+    ['Ann. volatility', m=>pct(m.ann_vol)],
+    ['Alpha (ann.)', m=>spct(m.alpha_annual)],
+    ['Beta', m=>m.beta_tasi],
+    ['Win rate', m=>m.win_rate!=null?pct(m.win_rate):'—'],
+    ['Profit factor', m=>m.profit_factor??'—'],
+    ['Trades', m=>fmt(m.n_trades)],
+    ['Turnover (ann.)', m=>m.turnover_annual!=null?m.turnover_annual+'×':'—'],
+  ];
+  const tb = el('tbody');
+  for(const [label, f, strong] of rows){
+    const tr = el('tr', strong?{class:'mrow'}:{}); tr.append(el('td',{text:label}));
+    for(const h of handles){
+      for(const P of [D.is, D.oos]){
+        const v = f(gm(P,h)); const td = el('td');
+        if(typeof v==='string' && v.startsWith('+')) td.append(el('span',{class:'pos',text:v}));
+        else if(typeof v==='string' && v.startsWith('-')) td.append(el('span',{class:'neg',text:v}));
+        else td.textContent = v;
+        tr.append(td);
+      }
+    }
+    for(const P of [D.is, D.oos]){
+      const v = f(P.tasi_metrics); const td = el('td');
+      if(typeof v==='string' && v.startsWith('+')) td.append(el('span',{class:'pos',text:v}));
+      else if(typeof v==='string' && v.startsWith('-')) td.append(el('span',{class:'neg',text:v}));
+      else td.textContent=v;
+      tr.append(td);
+    }
+    tb.append(tr);
+  }
+  t.append(tb); $('#numTbl').append(t);
+}
+
+/* ---------- adaptation audit ---------- */
+{
+  const box=$('#adaptBox');
+  for(const h of handles){
+    const evIs = D.is.agents[h].adaptations, evOos = D.oos.agents[h].adaptations;
+    const d=el('details',{class:'ad', ...(h===elected?{open:''}:{})});
+    d.append(el('summary',{},
+      el('span',{style:'width:14px;border-top:2.5px solid '+color(h)+';border-radius:2px'}),
+      el('span',{text:(h===elected?'🏆 ':'')+AM[h].name}),
+      el('span',{style:'color:var(--ink-3);font-size:12px', text:`${evIs.length} in-sample + ${evOos.length} out-of-sample adaptations`}),
+      el('span',{style:'margin-left:auto;color:var(--ink-3)',text:'›'})));
+    const bd=el('div',{class:'bd'});
+    const dump=(evs,label)=>{
+      if(!evs.length) return;
+      bd.append(el('div',{style:'font-weight:650;margin-top:10px;font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em',text:label}));
+      for(const ev of evs){
+        const chg = Object.entries(ev.changes||{}).map(([k,v])=>`${k}=${typeof v==='number'? (Math.abs(v)>=100?Math.round(v):+v.toFixed(4)) : v}`).join('  ');
+        bd.append(el('div',{class:'adev'},
+          el('div',{class:'dt',text:ev.date}),
+          chg?el('div',{class:'ch',text:chg}):null,
+          ev.note?el('div',{class:'nt',text:ev.note}):null));
+      }
+    };
+    dump(evIs,'In-sample'); dump(evOos,'Out-of-sample');
+    d.append(bd); box.append(d);
+  }
+}
+
+/* ---------- sharia screen ---------- */
+{
+  $('#screenSub').textContent = `${D.screen.screened} largest NASDAQ names screened → ${D.screen.passed} compliant, ${D.screen.rejected} rejected. Ratio rules: interest-bearing debt < 30% of market cap, cash & interest-bearing securities < 30% of market cap; prohibited core businesses excluded; the 5% impermissible-income rule is proxied by the business screen (free data has no revenue lines).`;
+  const bars=$('#rejBars');
+  const entries=Object.entries(D.screen.rejection_reasons);
+  const mx=Math.max(...entries.map(e=>e[1]));
+  for(const [k,v] of entries){
+    bars.append(el('div',{class:'bar'},
+      el('div',{class:'l',text:k}),
+      el('div',{class:'track'},el('div',{class:'fill',style:`width:${v/mx*100}%`})),
+      el('div',{class:'v',text:String(v)})));
+  }
+  const t=el('table');
+  const hr=el('tr'); for(const htxt of ['Company','Symbol','Debt / mcap','Cash / mcap']) hr.append(el('th',{text:htxt}));
+  t.append(el('thead',{},hr));
+  const tb=el('tbody');
+  for(const u of D.screen.top_passed){
+    const tr=el('tr');
+    tr.append(el('td',{text:u.name}));
+    tr.append(el('td',{text:u.code}));
+    tr.append(el('td',{text:u.debt_ratio!=null?pct(u.debt_ratio):'—'}));
+    tr.append(el('td',{text:u.cash_ratio!=null?pct(u.cash_ratio):'—'}));
+    tb.append(tr);
+  }
+  t.append(tb); $('#passTbl').append(t);
+}
+
+/* ---------- OOS trade explorer ---------- */
+let trAgent=null, trSide=null, trSort='date', trPage=0;
+const PAGE=25;
+function allTrades(){
+  const out=[];
+  for(const h of handles){
+    if(trAgent && h!==trAgent) continue;
+    for(const t of D.oos.agents[h].trades){
+      if(trSide && t[2]!==trSide) continue;
+      out.push({h,t});
+    }
+  }
+  if(trSort==='date') out.sort((a,b)=>a.t[0]<b.t[0]?1:-1);
+  else if(trSort==='value') out.sort((a,b)=>b.t[5]-a.t[5]);
+  else if(trSort==='pnl') out.sort((a,b)=>(b.t[6]??-1e18)-(a.t[6]??-1e18));
+  else if(trSort==='loss') out.sort((a,b)=>(a.t[6]??1e18)-(b.t[6]??1e18));
+  return out;
+}
+function renderTrades(){
+  const rows=allTrades();
+  const host=$('#tradeTbl'); host.innerHTML='';
+  const t=el('table');
+  const hr=el('tr');
+  for(const h of ['Date','Agent','Symbol','Side','Shares','Price','Value ($)','Realized P&L','Why']) hr.append(el('th',{text:h}));
+  t.append(el('thead',{},hr));
+  const tb=el('tbody');
+  for(const {h,t:x} of rows.slice(trPage*PAGE,(trPage+1)*PAGE)){
+    const [date,code,side,shares,price,value,pnl,reason]=x;
+    const tr=el('tr');
+    tr.append(el('td',{text:date}));
+    tr.append(el('td',{text:AM[h].name}));
+    tr.append(el('td',{text:code}));
+    const sd=el('td'); sd.append(el('span',{class:'sidechip '+side,text:side.toUpperCase()})); tr.append(sd);
+    tr.append(el('td',{text:fmt(shares)}));
+    tr.append(el('td',{text:(+price).toFixed(2)}));
+    tr.append(el('td',{text:fmt(value)}));
+    const pd=el('td');
+    if(pnl!=null) pd.append(el('span',{class:pnl>=0?'pos':'neg',text:(pnl>=0?'+':'')+fmt(pnl)}));
+    else pd.textContent='—';
+    tr.append(pd);
+    tr.append(el('td',{text:reason||'', style:'max-width:360px;white-space:normal;font-size:11.5px;color:var(--ink-2)'}));
+    tb.append(tr);
+  }
+  if(!rows.length){ const tr=el('tr'); tr.append(el('td',{text:'No trades.',colspan:'9'})); tb.append(tr); }
+  t.append(tb); host.append(t);
+  const pg=$('#tradePager'); pg.innerHTML='';
+  const np=Math.ceil(rows.length/PAGE);
+  pg.append(el('span',{text:`${fmt(rows.length)} fills · page ${trPage+1}/${Math.max(1,np)}`}));
+  pg.append(el('button',{class:'tgl',text:'← prev',onclick:()=>{ if(trPage>0){trPage--; renderTrades();} }}));
+  pg.append(el('button',{class:'tgl',text:'next →',onclick:()=>{ if(trPage<np-1){trPage++; renderTrades();} }}));
+}
+{
+  const f=$('#tradeFilters');
+  const selA=el('select',{class:'tgl',onchange:e=>{ trAgent=e.target.value||null; trPage=0; renderTrades(); }});
+  selA.append(el('option',{value:'',text:'All agents'}));
+  for(const h of handles) selA.append(el('option',{value:h,text:AM[h].name}));
+  const selS=el('select',{class:'tgl',onchange:e=>{ trSide=e.target.value||null; trPage=0; renderTrades(); }});
+  for(const [v,l] of [['','Buys & sells'],['buy','Buys only'],['sell','Sells only']]) selS.append(el('option',{value:v,text:l}));
+  const selO=el('select',{class:'tgl',onchange:e=>{ trSort=e.target.value; trPage=0; renderTrades(); }});
+  for(const [v,l] of [['date','Newest first'],['value','Biggest value'],['pnl','Best P&L'],['loss','Worst P&L']]) selO.append(el('option',{value:v,text:l}));
+  f.append(selA, selS, selO);
+}
+renderTrades();
+
+/* ---------- method ---------- */
+{
+  $('#methodBox').innerHTML = `
+  <b>Universe.</b> The ${esc(String(D.screen.screened))} largest NASDAQ names by market cap, screened against AAOIFI Shari'ah Standard No. 21 → ${esc(String(D.screen.passed))} compliant names. Benchmark: NASDAQ Composite (price index).<br><br>
+  <b>Split integrity.</b> Agents were designed and tuned by independent AI authors with access ONLY to 2015–2022 data — the out-of-sample years were not present in the repository. Strategies were frozen at commit <b>${esc(D.election.freeze_commit.slice(0,7))}</b>; only then was 2023→today data fetched. The out-of-sample run is a true first look.<br><br>
+  <b>Engine.</b> Decisions at each close; fills at the next open with 5 bps slippage + 2 bps commission per side. Long-only, integer shares, no margin. Dividends credited on ex-date; positions in names silent 20+ sessions force-exited. Agents see each other's public books (no chat).<br><br>
+  <b>Back-propagation.</b> Every 63 sessions the engine hands each agent its own realized window stats (return, Sharpe, hit rate, profit factor, drawdown, turnover, exposure, closed trades) and the agent's deterministic adapt() takes bounded, small-step parameter updates — declared in param_space, clamped, and logged. The loop runs in-sample AND out-of-sample: adaptation is part of the frozen agent.<br><br>
+  <b>Election.</b> score = 40·OOS Sharpe + 20·OOS CAGR + 15·OOS drawdown + 15·robustness (rank consistency + CAGR retention) + 10·tradability (low turnover), each min-max normalized across the field. Out-of-sample dominant by design — the elected agent is meant for a live virtual account next.`;
+  $('#ft').textContent = `NASDAQ Arena · freeze ${D.election.freeze_commit.slice(0,7)} · in-sample ${D.is.meta.sim_start} → ${D.is.meta.sim_end} · out-of-sample ${D.oos.meta.sim_start} → ${D.oos.meta.sim_end}`;
+}
+
+/* ---------- nav + theme ---------- */
+{
+  const secs=$$('section, header.hero');
+  const links=$$('nav a.pill');
+  const io=new IntersectionObserver(es=>{
+    for(const e of es) if(e.isIntersecting)
+      links.forEach(l=>l.classList.toggle('on', l.getAttribute('href')==='#'+e.target.id));
+  },{rootMargin:'-30% 0px -60% 0px'});
+  secs.forEach(s=>io.observe(s));
+  $('#themeBtn').addEventListener('click',()=>{
+    const cur=document.documentElement.dataset.theme;
+    document.documentElement.dataset.theme = cur==='dark'?'light':cur==='light'?'dark':(matchMedia('(prefers-color-scheme: dark)').matches?'light':'dark');
+    rerenders.forEach(f=>f());
+  });
+}
+rerenders.forEach(f=>f());
+</script>
+</body>
+</html>

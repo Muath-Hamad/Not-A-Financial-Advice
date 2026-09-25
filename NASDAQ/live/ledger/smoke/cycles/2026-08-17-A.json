@@ -1,0 +1,83 @@
+{
+ "cycle": "A",
+ "ts_utc": "2026-08-18T02:07:39+00:00",
+ "mode": "ghost",
+ "smoke": true,
+ "code_version": "f3608d0031ffa9249d875719e02ea00b2a6f7321",
+ "asof": "2026-08-17",
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "excluded_symbols": [],
+  "gross_cap": null
+ },
+ "data_gate": {
+  "status": "pass",
+  "asof": "2026-08-17",
+  "checks": {
+   "ixic_at_asof": {
+    "pass": true,
+    "last": "2026-08-17"
+   },
+   "fetch_ok": {
+    "pass": true,
+    "value": 0.9756,
+    "min": 0.9
+   },
+   "coverage_at_asof": {
+    "pass": true,
+    "value": 1.0,
+    "min": 0.95,
+    "missing": []
+   },
+   "cross_source": {
+    "pass": true,
+    "compared": 40,
+    "unavailable": 0,
+    "disagreements": [],
+    "tol": 0.005
+   }
+  }
+ },
+ "determinism": {
+  "match": true,
+  "sha256": "2cb1d1e733ad333d"
+ },
+ "drawdown_from_peak": -0.0295,
+ "guardrails": {
+  "n_orders": 1,
+  "checked": [
+   {
+    "code": "ERAS",
+    "side": "buy",
+    "est_value": 2598.83
+   }
+  ],
+  "buy_total": 2598.83,
+  "sell_total": 0.0,
+  "turnover": 0.0224,
+  "violations": []
+ },
+ "submitted": [],
+ "status": "ok",
+ "twin": {
+  "sessions": 62,
+  "equity_final": 115811.32,
+  "ret_total": 0.1581,
+  "n_positions": 12,
+  "n_orders_next_open": 1,
+  "n_trades": 44,
+  "n_adaptations": 0,
+  "decide_errors": 0,
+  "inputs": {
+   "manifest_sha": "42293032d54e8579293dd72a881f41e20be98d4fa25f35c981a9a6d8d8433856",
+   "universe_sha": "02a34f4f83c8da8008a7a6a236a8dabbff5c3614f42209cd73c9dd9c9e085ecb",
+   "strategy_sha": "a251225eb9a8fc066947ce698844ce718d25167dd07f7c3e23152f555ea31ccd",
+   "engine_sha": "ded722f2e21dabec2e47bf3cebcdda918698bfa5722ebe2c933cd26851895f5d",
+   "commission": "0.0",
+   "slippage": "0.0005",
+   "adapt_every": "63"
+  }
+ },
+ "duration_s": 496.1
+}

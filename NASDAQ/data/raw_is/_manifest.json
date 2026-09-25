@@ -1,0 +1,3206 @@
+{
+  "IXIC": {
+    "symbol": "^IXIC",
+    "name": "NASDAQ Composite",
+    "sector": "Index",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NVDA": {
+    "symbol": "NVDA",
+    "name": "NVIDIA Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AAPL": {
+    "symbol": "AAPL",
+    "name": "Apple Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "GOOGL": {
+    "symbol": "GOOGL",
+    "name": "Alphabet Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "GOOG": {
+    "symbol": "GOOG",
+    "name": "Alphabet Inc. Class C Capital Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MSFT": {
+    "symbol": "MSFT",
+    "name": "Microsoft Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AMZN": {
+    "symbol": "AMZN",
+    "name": "Amazon.com Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SPCX": {
+    "symbol": "SPCX",
+    "name": "Space Exploration Technologies Corp. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SPCX?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SPCX?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SPCX?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "AVGO": {
+    "symbol": "AVGO",
+    "name": "Broadcom Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "META": {
+    "symbol": "META",
+    "name": "Meta Platforms Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TSLA": {
+    "symbol": "TSLA",
+    "name": "Tesla Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MU": {
+    "symbol": "MU",
+    "name": "Micron Technology Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "WMT": {
+    "symbol": "WMT",
+    "name": "Walmart Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AMD": {
+    "symbol": "AMD",
+    "name": "Advanced Micro Devices Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ASML": {
+    "symbol": "ASML",
+    "name": "ASML Holding N.V. New York Registry Shares",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "INTC": {
+    "symbol": "INTC",
+    "name": "Intel Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CSCO": {
+    "symbol": "CSCO",
+    "name": "Cisco Systems Inc. Common Stock (DE)",
+    "sector": "Telecommunications",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "LRCX": {
+    "symbol": "LRCX",
+    "name": "Lam Research Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AMAT": {
+    "symbol": "AMAT",
+    "name": "Applied Materials Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "COST": {
+    "symbol": "COST",
+    "name": "Costco Wholesale Corporation Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "PLTR": {
+    "symbol": "PLTR",
+    "name": "Palantir Technologies Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 568,
+    "first": "2020-09-30",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NFLX": {
+    "symbol": "NFLX",
+    "name": "Netflix Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "PANW": {
+    "symbol": "PANW",
+    "name": "Palo Alto Networks Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ARM": {
+    "symbol": "ARM",
+    "name": "Arm Holdings plc American Depositary Shares",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/ARM?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/ARM?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/ARM?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "KLAC": {
+    "symbol": "KLAC",
+    "name": "KLA Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SNDK": {
+    "symbol": "SNDK",
+    "name": "Sandisk Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SNDK?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SNDK?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SNDK?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "TXN": {
+    "symbol": "TXN",
+    "name": "Texas Instruments Incorporated Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "STX": {
+    "symbol": "STX",
+    "name": "Seagate Technology Holdings PLC Ordinary Shares (Ireland)",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AMGN": {
+    "symbol": "AMGN",
+    "name": "Amgen Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CRWD": {
+    "symbol": "CRWD",
+    "name": "CrowdStrike Holdings Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 897,
+    "first": "2019-06-12",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "LIN": {
+    "symbol": "LIN",
+    "name": "Linde plc Ordinary Shares",
+    "sector": "Basic Materials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MRVL": {
+    "symbol": "MRVL",
+    "name": "Marvell Technology Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SHOP": {
+    "symbol": "SHOP",
+    "name": "Shopify Inc. Class A Subordinate Voting Shares",
+    "sector": "Technology",
+    "rows": 1919,
+    "first": "2015-05-20",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ADI": {
+    "symbol": "ADI",
+    "name": "Analog Devices Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "PEP": {
+    "symbol": "PEP",
+    "name": "PepsiCo Inc. Common Stock",
+    "sector": "Consumer Staples",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "WDC": {
+    "symbol": "WDC",
+    "name": "Western Digital Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "QCOM": {
+    "symbol": "QCOM",
+    "name": "QUALCOMM Incorporated Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "GILD": {
+    "symbol": "GILD",
+    "name": "Gilead Sciences Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "BKNG": {
+    "symbol": "BKNG",
+    "name": "Booking Holdings Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ISRG": {
+    "symbol": "ISRG",
+    "name": "Intuitive Surgical Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MNST": {
+    "symbol": "MNST",
+    "name": "Monster Beverage Corporation",
+    "sector": "Consumer Staples",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "VRTX": {
+    "symbol": "VRTX",
+    "name": "Vertex Pharmaceuticals Incorporated Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SBUX": {
+    "symbol": "SBUX",
+    "name": "Starbucks Corporation Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "FTNT": {
+    "symbol": "FTNT",
+    "name": "Fortinet Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ABNB": {
+    "symbol": "ABNB",
+    "name": "Airbnb Inc. Class A Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 518,
+    "first": "2020-12-10",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SNY": {
+    "symbol": "SNY",
+    "name": "Sanofi ADS",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ADP": {
+    "symbol": "ADP",
+    "name": "Automatic Data Processing Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "APP": {
+    "symbol": "APP",
+    "name": "Applovin Corporation Class A Common Stock",
+    "sector": "Technology",
+    "rows": 433,
+    "first": "2021-04-15",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ADBE": {
+    "symbol": "ADBE",
+    "name": "Adobe Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CEG": {
+    "symbol": "CEG",
+    "name": "Constellation Energy Corporation Common Stock",
+    "sector": "Utilities",
+    "rows": 240,
+    "first": "2022-01-19",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CSX": {
+    "symbol": "CSX",
+    "name": "CSX Corporation Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "DASH": {
+    "symbol": "DASH",
+    "name": "DoorDash Inc. Class A Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 519,
+    "first": "2020-12-09",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MAR": {
+    "symbol": "MAR",
+    "name": "Marriott International Class A Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "INTU": {
+    "symbol": "INTU",
+    "name": "Intuit Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MELI": {
+    "symbol": "MELI",
+    "name": "MercadoLibre Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CDNS": {
+    "symbol": "CDNS",
+    "name": "Cadence Design Systems Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "DDOG": {
+    "symbol": "DDOG",
+    "name": "Datadog Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 828,
+    "first": "2019-09-19",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "REGN": {
+    "symbol": "REGN",
+    "name": "Regeneron Pharmaceuticals Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SNPS": {
+    "symbol": "SNPS",
+    "name": "Synopsys Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MDLZ": {
+    "symbol": "MDLZ",
+    "name": "Mondelez International Inc. Class A Common Stock",
+    "sector": "Consumer Staples",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CTAS": {
+    "symbol": "CTAS",
+    "name": "Cintas Corporation Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "LITE": {
+    "symbol": "LITE",
+    "name": "Lumentum Holdings Inc. Common Stock",
+    "sector": "Telecommunications",
+    "rows": 1875,
+    "first": "2015-07-23",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ROST": {
+    "symbol": "ROST",
+    "name": "Ross Stores Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NBIS": {
+    "symbol": "NBIS",
+    "name": "Nebius Group N.V. Class A Ordinary Shares",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/NBIS?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/NBIS?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/NBIS?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "ORLY": {
+    "symbol": "ORLY",
+    "name": "O'Reilly Automotive Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MPWR": {
+    "symbol": "MPWR",
+    "name": "Monolithic Power Systems Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "PCAR": {
+    "symbol": "PCAR",
+    "name": "PACCAR Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TER": {
+    "symbol": "TER",
+    "name": "Teradyne Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "BRKRP": {
+    "symbol": "BRKRP",
+    "name": "Bruker Corporation 6.375% Mandatory Convertible Preferred Stock Series A",
+    "sector": "Industrials",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/BRKRP?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/BRKRP?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/BRKRP?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "BKR": {
+    "symbol": "BKR",
+    "name": "Baker Hughes Company Class A Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ARGX": {
+    "symbol": "ARGX",
+    "name": "argenx SE American Depositary Shares",
+    "sector": "Health Care",
+    "rows": 1416,
+    "first": "2017-05-18",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NXPI": {
+    "symbol": "NXPI",
+    "name": "NXP Semiconductors N.V. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CBRS": {
+    "symbol": "CBRS",
+    "name": "Cerebras Systems Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/CBRS?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/CBRS?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/CBRS?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "FAST": {
+    "symbol": "FAST",
+    "name": "Fastenal Company Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ALAB": {
+    "symbol": "ALAB",
+    "name": "Astera Labs Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/ALAB?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/ALAB?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/ALAB?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "FANG": {
+    "symbol": "FANG",
+    "name": "Diamondback Energy Inc. Common Stock",
+    "sector": "Energy",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CRDO": {
+    "symbol": "CRDO",
+    "name": "Credo Technology Group Holding Ltd Ordinary Shares",
+    "sector": "Technology",
+    "rows": 234,
+    "first": "2022-01-27",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ADSK": {
+    "symbol": "ADSK",
+    "name": "Autodesk Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AXON": {
+    "symbol": "AXON",
+    "name": "Axon Enterprise Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "RKLB": {
+    "symbol": "RKLB",
+    "name": "Rocket Lab Corporation Common Stock",
+    "sector": "Industrials",
+    "rows": 529,
+    "first": "2020-11-24",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CCEP": {
+    "symbol": "CCEP",
+    "name": "Coca-Cola Europacific Partners plc Ordinary Shares",
+    "sector": "Consumer Staples",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "FLEX": {
+    "symbol": "FLEX",
+    "name": "Flex Ltd. Ordinary Shares",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "WDAY": {
+    "symbol": "WDAY",
+    "name": "Workday Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MDLN": {
+    "symbol": "MDLN",
+    "name": "Medline Inc. Class A Common Stock",
+    "sector": "Health Care",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/MDLN?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/MDLN?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/MDLN?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "FER": {
+    "symbol": "FER",
+    "name": "Ferrovial N.V. Ordinary Shares",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TTWO": {
+    "symbol": "TTWO",
+    "name": "Take-Two Interactive Software Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NTRA": {
+    "symbol": "NTRA",
+    "name": "Natera Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1890,
+    "first": "2015-07-01",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "EBAY": {
+    "symbol": "EBAY",
+    "name": "eBay Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "RVMD": {
+    "symbol": "RVMD",
+    "name": "Revolution Medicines Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 727,
+    "first": "2020-02-13",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ODFL": {
+    "symbol": "ODFL",
+    "name": "Old Dominion Freight Line Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MCHP": {
+    "symbol": "MCHP",
+    "name": "Microchip Technology Incorporated Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TRI": {
+    "symbol": "TRI",
+    "name": "Thomson Reuters Corporation Common Shares",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "IDXX": {
+    "symbol": "IDXX",
+    "name": "IDEXX Laboratories Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "PAYX": {
+    "symbol": "PAYX",
+    "name": "Paychex Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ONC": {
+    "symbol": "ONC",
+    "name": "BeOne Medicines Ltd. American Depositary Shares",
+    "sector": "Health Care",
+    "rows": 1741,
+    "first": "2016-02-03",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NTAP": {
+    "symbol": "NTAP",
+    "name": "NetApp Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TEAM": {
+    "symbol": "TEAM",
+    "name": "Atlassian Corporation Class A Common Stock",
+    "sector": "Technology",
+    "rows": 1778,
+    "first": "2015-12-09",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SMCIP": {
+    "symbol": "SMCIP",
+    "name": "Super Micro Computer Inc. Depositary Shares representing a 1/20th Interest in a Share of 7% Series A Mandatory Convertible Preferred Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SMCIP?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SMCIP?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SMCIP?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "ROP": {
+    "symbol": "ROP",
+    "name": "Roper Technologies Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MCHPP": {
+    "symbol": "MCHPP",
+    "name": "Microchip Technology Incorporated Depositary Shares Each Representing a 1/20th Interest in a Share of 7.50% Series A Mandatory Convertible Preferred Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/MCHPP?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/MCHPP?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/MCHPP?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "EXPE": {
+    "symbol": "EXPE",
+    "name": "Expedia Group Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MSTR": {
+    "symbol": "MSTR",
+    "name": "Strategy Inc Common Stock Class A",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "STRF": {
+    "symbol": "STRF",
+    "name": "Strategy Inc 10.00% Series A Perpetual Strife Preferred Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/STRF?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/STRF?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/STRF?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "STLD": {
+    "symbol": "STLD",
+    "name": "Steel Dynamics Inc.",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ESLT": {
+    "symbol": "ESLT",
+    "name": "Elbit Systems Ltd. Ordinary Shares",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "STRC": {
+    "symbol": "STRC",
+    "name": "Strategy Inc Variable Rate Series A Perpetual Stretch Preferred Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/STRC?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/STRC?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/STRC?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "KMB": {
+    "symbol": "KMB",
+    "name": "Kimberly-Clark Corporation Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MDB": {
+    "symbol": "MDB",
+    "name": "MongoDB Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 1309,
+    "first": "2017-10-19",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "RPRX": {
+    "symbol": "RPRX",
+    "name": "Royalty Pharma plc Class A Ordinary Shares",
+    "sector": "Health Care",
+    "rows": 642,
+    "first": "2020-06-16",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "DXCM": {
+    "symbol": "DXCM",
+    "name": "DexCom Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ON": {
+    "symbol": "ON",
+    "name": "ON Semiconductor Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CASY": {
+    "symbol": "CASY",
+    "name": "Casey's General Stores Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TSEM": {
+    "symbol": "TSEM",
+    "name": "Tower Semiconductor Ltd. Ordinary Shares",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "BIIB": {
+    "symbol": "BIIB",
+    "name": "Biogen Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ZM": {
+    "symbol": "ZM",
+    "name": "Zoom Communications Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 934,
+    "first": "2019-04-18",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "GFS": {
+    "symbol": "GFS",
+    "name": "GlobalFoundries Inc. Ordinary Shares",
+    "sector": "Technology",
+    "rows": 296,
+    "first": "2021-10-28",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "RYAAY": {
+    "symbol": "RYAAY",
+    "name": "Ryanair Holdings plc American Depositary Shares",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ZS": {
+    "symbol": "ZS",
+    "name": "Zscaler Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 1208,
+    "first": "2018-03-16",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ALNY": {
+    "symbol": "ALNY",
+    "name": "Alnylam Pharmaceuticals Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CPRT": {
+    "symbol": "CPRT",
+    "name": "Copart Inc. (DE) Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ILMN": {
+    "symbol": "ILMN",
+    "name": "Illumina Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "FOXA": {
+    "symbol": "FOXA",
+    "name": "Fox Corporation Class A Common Stock",
+    "sector": "Industrials",
+    "rows": 961,
+    "first": "2019-03-12",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ASTS": {
+    "symbol": "ASTS",
+    "name": "AST SpaceMobile Inc. Class A Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 797,
+    "first": "2019-11-01",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "INSM": {
+    "symbol": "INSM",
+    "name": "Insmed Incorporated Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "JBHT": {
+    "symbol": "JBHT",
+    "name": "J.B. Hunt Transport Services Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "STRK": {
+    "symbol": "STRK",
+    "name": "Strategy Inc 8.00% Series A Perpetual Strike Preferred Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/STRK?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/STRK?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/STRK?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "ROIV": {
+    "symbol": "ROIV",
+    "name": "Roivant Sciences Ltd. Common Shares",
+    "sector": "Health Care",
+    "rows": 520,
+    "first": "2020-12-08",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SYM": {
+    "symbol": "SYM",
+    "name": "Symbotic Inc. Class A Common Stock",
+    "sector": "Industrials",
+    "rows": 459,
+    "first": "2021-03-09",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "FOX": {
+    "symbol": "FOX",
+    "name": "Fox Corporation Class B Common Stock",
+    "sector": "Industrials",
+    "rows": 960,
+    "first": "2019-03-13",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CTSH": {
+    "symbol": "CTSH",
+    "name": "Cognizant Technology Solutions Corporation Class A Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MRNA": {
+    "symbol": "MRNA",
+    "name": "Moderna Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1024,
+    "first": "2018-12-07",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "FWONK": {
+    "symbol": "FWONK",
+    "name": "Liberty Media Corporation Series C Liberty Formula One Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "BSP": {
+    "symbol": "BSP",
+    "name": "Bending Spoons S.p.A. Ordinary Shares",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/BSP?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/BSP?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/BSP?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "ENTG": {
+    "symbol": "ENTG",
+    "name": "Entegris Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "OKTA": {
+    "symbol": "OKTA",
+    "name": "Okta Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 1444,
+    "first": "2017-04-07",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MTSI": {
+    "symbol": "MTSI",
+    "name": "MACOM Technology Solutions Holdings Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "VRSN": {
+    "symbol": "VRSN",
+    "name": "VeriSign Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "INCY": {
+    "symbol": "INCY",
+    "name": "Incyte Corp. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ARXS": {
+    "symbol": "ARXS",
+    "name": "Arxis Inc. Class A Common Stock",
+    "sector": "Industrials",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/ARXS?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/ARXS?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/ARXS?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "FSLR": {
+    "symbol": "FSLR",
+    "name": "First Solar Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "FTAI": {
+    "symbol": "FTAI",
+    "name": "FTAI Aviation Ltd. Common Stock",
+    "sector": "Industrials",
+    "rows": 1923,
+    "first": "2015-05-14",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ROKU": {
+    "symbol": "ROKU",
+    "name": "Roku Inc. Class A Common Stock",
+    "sector": "Telecommunications",
+    "rows": 1324,
+    "first": "2017-09-28",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "FWONA": {
+    "symbol": "FWONA",
+    "name": "Liberty Media Corporation Series A Liberty Formula One Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "VRSK": {
+    "symbol": "VRSK",
+    "name": "Verisk Analytics Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SITM": {
+    "symbol": "SITM",
+    "name": "SiTime Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 784,
+    "first": "2019-11-20",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "FFIV": {
+    "symbol": "FFIV",
+    "name": "F5 Inc. Common Stock",
+    "sector": "Telecommunications",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MKSI": {
+    "symbol": "MKSI",
+    "name": "MKS Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "WWD": {
+    "symbol": "WWD",
+    "name": "Woodward Inc. Common Stock",
+    "sector": "Energy",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "UTHR": {
+    "symbol": "UTHR",
+    "name": "United Therapeutics Corporation Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "RIVN": {
+    "symbol": "RIVN",
+    "name": "Rivian Automotive Inc. Class A Common Stock",
+    "sector": "Industrials",
+    "rows": 287,
+    "first": "2021-11-10",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "GH": {
+    "symbol": "GH",
+    "name": "Guardant Health Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1068,
+    "first": "2018-10-04",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "EXE": {
+    "symbol": "EXE",
+    "name": "Expand Energy Corporation Common Stock",
+    "sector": "Energy",
+    "rows": 477,
+    "first": "2021-02-10",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ULTA": {
+    "symbol": "ULTA",
+    "name": "Ulta Beauty Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "INIO": {
+    "symbol": "INIO",
+    "name": "INNIO N.V. Ordinary Shares",
+    "sector": "Consumer Discretionary",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/INIO?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/INIO?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/INIO?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "RGLD": {
+    "symbol": "RGLD",
+    "name": "Royal Gold Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "LSCC": {
+    "symbol": "LSCC",
+    "name": "Lattice Semiconductor Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "STRL": {
+    "symbol": "STRL",
+    "name": "Sterling Infrastructure Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ZBRA": {
+    "symbol": "ZBRA",
+    "name": "Zebra Technologies Corporation Class A Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NWS": {
+    "symbol": "NWS",
+    "name": "News Corporation Class B Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NTNX": {
+    "symbol": "NTNX",
+    "name": "Nutanix Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 1574,
+    "first": "2016-09-30",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NDSN": {
+    "symbol": "NDSN",
+    "name": "Nordson Corporation Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CHRW": {
+    "symbol": "CHRW",
+    "name": "C.H. Robinson Worldwide Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "QNT": {
+    "symbol": "QNT",
+    "name": "Quantinuum Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/QNT?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/QNT?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/QNT?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "MEDP": {
+    "symbol": "MEDP",
+    "name": "Medpace Holdings Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1609,
+    "first": "2016-08-11",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "JAZZ": {
+    "symbol": "JAZZ",
+    "name": "Jazz Pharmaceuticals plc Common Stock (Ireland)",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "PTC": {
+    "symbol": "PTC",
+    "name": "PTC Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NBIX": {
+    "symbol": "NBIX",
+    "name": "Neurocrine Biosciences Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "BBIO": {
+    "symbol": "BBIO",
+    "name": "BridgeBio Pharma Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 886,
+    "first": "2019-06-27",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NWSA": {
+    "symbol": "NWSA",
+    "name": "News Corporation Class A Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "LECO": {
+    "symbol": "LECO",
+    "name": "Lincoln Electric Holdings Inc. Common Shares",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AMKR": {
+    "symbol": "AMKR",
+    "name": "Amkor Technology Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ASND": {
+    "symbol": "ASND",
+    "name": "Ascendis Pharma A/S Ordinary Share",
+    "sector": "Health Care",
+    "rows": 1997,
+    "first": "2015-01-28",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "IESC": {
+    "symbol": "IESC",
+    "name": "IES Holdings Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "VNOM": {
+    "symbol": "VNOM",
+    "name": "Viper Energy Inc. Class A Common Stock",
+    "sector": "Energy",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NXT": {
+    "symbol": "NXT",
+    "name": "Nextpower Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/NXT?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/NXT?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/NXT?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "TTMI": {
+    "symbol": "TTMI",
+    "name": "TTM Technologies Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "COO": {
+    "symbol": "COO",
+    "name": "The Cooper Companies Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "LOGI": {
+    "symbol": "LOGI",
+    "name": "Logitech International S.A. Ordinary Shares",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SMTC": {
+    "symbol": "SMTC",
+    "name": "Semtech Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "APA": {
+    "symbol": "APA",
+    "name": "APA Corporation Common Stock",
+    "sector": "Energy",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AUR": {
+    "symbol": "AUR",
+    "name": "Aurora Innovation Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 416,
+    "first": "2021-05-10",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AEIS": {
+    "symbol": "AEIS",
+    "name": "Advanced Energy Industries Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NVMI": {
+    "symbol": "NVMI",
+    "name": "Nova Ltd. Ordinary Shares",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "HAS": {
+    "symbol": "HAS",
+    "name": "Hasbro Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TXRH": {
+    "symbol": "TXRH",
+    "name": "Texas Roadhouse Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "FIVE": {
+    "symbol": "FIVE",
+    "name": "Five Below Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AAOI": {
+    "symbol": "AAOI",
+    "name": "Applied Optoelectronics Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CHKP": {
+    "symbol": "CHKP",
+    "name": "Check Point Software Technologies Ltd. Ordinary Shares",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TRMB": {
+    "symbol": "TRMB",
+    "name": "Trimble Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "EXEL": {
+    "symbol": "EXEL",
+    "name": "Exelixis Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ICLR": {
+    "symbol": "ICLR",
+    "name": "ICON plc Ordinary Shares",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CSGP": {
+    "symbol": "CSGP",
+    "name": "CoStar Group Inc. Common Stock",
+    "sector": "Finance",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "LULU": {
+    "symbol": "LULU",
+    "name": "lululemon athletica inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CORT": {
+    "symbol": "CORT",
+    "name": "Corcept Therapeutics Incorporated Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ARWR": {
+    "symbol": "ARWR",
+    "name": "Arrowhead Pharmaceuticals Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ALGN": {
+    "symbol": "ALGN",
+    "name": "Align Technology Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "COKE": {
+    "symbol": "COKE",
+    "name": "Coca-Cola Consolidated Inc. Common Stock",
+    "sector": "Consumer Staples",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "DRS": {
+    "symbol": "DRS",
+    "name": "Leonardo DRS Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "BTSG": {
+    "symbol": "BTSG",
+    "name": "BrightSpring Health Services Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/BTSG?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/BTSG?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/BTSG?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "MDGL": {
+    "symbol": "MDGL",
+    "name": "Madrigal Pharmaceuticals Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "LFUS": {
+    "symbol": "LFUS",
+    "name": "Littelfuse Inc. Common Stock",
+    "sector": "Energy",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "FROG": {
+    "symbol": "FROG",
+    "name": "JFrog Ltd. Ordinary Shares",
+    "sector": "Technology",
+    "rows": 578,
+    "first": "2020-09-16",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "KTOS": {
+    "symbol": "KTOS",
+    "name": "Kratos Defense & Security Solutions Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "HALO": {
+    "symbol": "HALO",
+    "name": "Halozyme Therapeutics Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SANM": {
+    "symbol": "SANM",
+    "name": "Sanmina Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "DOCU": {
+    "symbol": "DOCU",
+    "name": "DocuSign Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 1179,
+    "first": "2018-04-27",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "VICR": {
+    "symbol": "VICR",
+    "name": "Vicor Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "VIAV": {
+    "symbol": "VIAV",
+    "name": "Viavi Solutions Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TECH": {
+    "symbol": "TECH",
+    "name": "Bio-Techne Corp Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MANH": {
+    "symbol": "MANH",
+    "name": "Manhattan Associates Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CART": {
+    "symbol": "CART",
+    "name": "Maplebear Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/CART?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/CART?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/CART?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "CGNX": {
+    "symbol": "CGNX",
+    "name": "Cognex Corporation Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AXSM": {
+    "symbol": "AXSM",
+    "name": "Axsome Therapeutics Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1791,
+    "first": "2015-11-19",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "RMBS": {
+    "symbol": "RMBS",
+    "name": "Rambus Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "FORM": {
+    "symbol": "FORM",
+    "name": "FormFactor Inc. FormFactor Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "PRAX": {
+    "symbol": "PRAX",
+    "name": "Praxis Precision Medicines Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 556,
+    "first": "2020-10-16",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SAIL": {
+    "symbol": "SAIL",
+    "name": "SailPoint Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SAIL?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SAIL?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SAIL?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "JKHY": {
+    "symbol": "JKHY",
+    "name": "Jack Henry & Associates Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "GSAT": {
+    "symbol": "GSAT",
+    "name": "Globalstar Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "BSY": {
+    "symbol": "BSY",
+    "name": "Bentley Systems Incorporated Class B Common Stock",
+    "sector": "Technology",
+    "rows": 573,
+    "first": "2020-09-23",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SWKS": {
+    "symbol": "SWKS",
+    "name": "Skyworks Solutions Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ENSG": {
+    "symbol": "ENSG",
+    "name": "The Ensign Group Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ABVX": {
+    "symbol": "ABVX",
+    "name": "Abivax SA American Depositary Shares",
+    "sector": "Health Care",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/ABVX?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/ABVX?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/ABVX?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "CYTK": {
+    "symbol": "CYTK",
+    "name": "Cytokinetics Incorporated Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SAIA": {
+    "symbol": "SAIA",
+    "name": "Saia Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "APGE": {
+    "symbol": "APGE",
+    "name": "Apogee Therapeutics Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/APGE?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/APGE?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/APGE?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "SMMT": {
+    "symbol": "SMMT",
+    "name": "Summit Therapeutics Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1972,
+    "first": "2015-03-05",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "PTGX": {
+    "symbol": "PTGX",
+    "name": "Protagonist Therapeutics Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1609,
+    "first": "2016-08-11",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "KYMR": {
+    "symbol": "KYMR",
+    "name": "Kymera Therapeutics Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 595,
+    "first": "2020-08-21",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "KRYS": {
+    "symbol": "KRYS",
+    "name": "Krystal Biotech Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1330,
+    "first": "2017-09-20",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SOLS": {
+    "symbol": "SOLS",
+    "name": "Solstice Advanced Materials Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SOLS?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SOLS?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SOLS?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "LLYVK": {
+    "symbol": "LLYVK",
+    "name": "Liberty Live Holdings Inc. Series C Liberty Live Group Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/LLYVK?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/LLYVK?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/LLYVK?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "PODD": {
+    "symbol": "PODD",
+    "name": "Insulet Corporation Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "IONS": {
+    "symbol": "IONS",
+    "name": "Ionis Pharmaceuticals Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "LLYVA": {
+    "symbol": "LLYVA",
+    "name": "Liberty Live Holdings Inc. Series A Liberty Live Group Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/LLYVA?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/LLYVA?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/LLYVA?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "RGEN": {
+    "symbol": "RGEN",
+    "name": "Repligen Corporation Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TEM": {
+    "symbol": "TEM",
+    "name": "Tempus AI Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/TEM?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/TEM?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/TEM?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "AVAV": {
+    "symbol": "AVAV",
+    "name": "AeroVironment Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SIMO": {
+    "symbol": "SIMO",
+    "name": "Silicon Motion Technology Corporation American Depositary Shares",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TTEK": {
+    "symbol": "TTEK",
+    "name": "Tetra Tech Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SYRE": {
+    "symbol": "SYRE",
+    "name": "Spyre Therapeutics Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1697,
+    "first": "2016-04-07",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CRNX": {
+    "symbol": "CRNX",
+    "name": "Crinetics Pharmaceuticals Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1123,
+    "first": "2018-07-18",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "IDCC": {
+    "symbol": "IDCC",
+    "name": "InterDigital Inc. Common Stock",
+    "sector": "Miscellaneous",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SFD": {
+    "symbol": "SFD",
+    "name": "Smithfield Foods Inc. Common Stock",
+    "sector": "Consumer Staples",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SFD?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SFD?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SFD?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "IMVT": {
+    "symbol": "IMVT",
+    "name": "Immunovant Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 890,
+    "first": "2019-06-21",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "PCVX": {
+    "symbol": "PCVX",
+    "name": "Vaxcyte Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 644,
+    "first": "2020-06-12",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "BRKR": {
+    "symbol": "BRKR",
+    "name": "Bruker Corporation Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "QRVO": {
+    "symbol": "QRVO",
+    "name": "Qorvo Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ALGM": {
+    "symbol": "ALGM",
+    "name": "Allegro MicroSystems Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 547,
+    "first": "2020-10-29",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "HQY": {
+    "symbol": "HQY",
+    "name": "HealthEquity Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TTAN": {
+    "symbol": "TTAN",
+    "name": "ServiceTitan Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/TTAN?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/TTAN?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/TTAN?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "SATA": {
+    "symbol": "SATA",
+    "name": "Strive Inc. Variable Rate Series A Perpetual Preferred Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SATA?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SATA?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/SATA?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "XE": {
+    "symbol": "XE",
+    "name": "X-Energy Inc. Class A Common Stock",
+    "sector": "Industrials",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/XE?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/XE?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/XE?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "ALKS": {
+    "symbol": "ALKS",
+    "name": "Alkermes plc Ordinary Shares",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "IBRX": {
+    "symbol": "IBRX",
+    "name": "ImmunityBio Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1872,
+    "first": "2015-07-28",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CAMT": {
+    "symbol": "CAMT",
+    "name": "Camtek Ltd. Ordinary Shares",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TWST": {
+    "symbol": "TWST",
+    "name": "Twist Bioscience Corporation Common Stock",
+    "sector": "Health Care",
+    "rows": 1049,
+    "first": "2018-10-31",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "RYTM": {
+    "symbol": "RYTM",
+    "name": "Rhythm Pharmaceuticals Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1317,
+    "first": "2017-10-09",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MXL": {
+    "symbol": "MXL",
+    "name": "MaxLinear Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "POWL": {
+    "symbol": "POWL",
+    "name": "Powell Industries Inc. Common Stock",
+    "sector": "Energy",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MBLY": {
+    "symbol": "MBLY",
+    "name": "Mobileye Global Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 46,
+    "first": "2022-10-26",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "short"
+  },
+  "QBTS": {
+    "symbol": "QBTS",
+    "name": "D-Wave Quantum Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 517,
+    "first": "2020-12-11",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ZG": {
+    "symbol": "ZG",
+    "name": "Zillow Group Inc. Class A Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "PCTY": {
+    "symbol": "PCTY",
+    "name": "Paylocity Holding Corporation Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "Z": {
+    "symbol": "Z",
+    "name": "Zillow Group Inc. Class C Capital Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 1868,
+    "first": "2015-08-03",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CELH": {
+    "symbol": "CELH",
+    "name": "Celsius Holdings Inc. Common Stock",
+    "sector": "Consumer Staples",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TGTX": {
+    "symbol": "TGTX",
+    "name": "TG Therapeutics Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SFM": {
+    "symbol": "SFM",
+    "name": "Sprouts Farmers Market Inc. Common Stock",
+    "sector": "Consumer Staples",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CHRD": {
+    "symbol": "CHRD",
+    "name": "Chord Energy Corporation Common Stock",
+    "sector": "Energy",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ORKA": {
+    "symbol": "ORKA",
+    "name": "Oruka Therapeutics Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TXG": {
+    "symbol": "TXG",
+    "name": "10x Genomics Inc. Class A Common Stock",
+    "sector": "Industrials",
+    "rows": 833,
+    "first": "2019-09-12",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NAVN": {
+    "symbol": "NAVN",
+    "name": "Navan Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/NAVN?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/NAVN?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/NAVN?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "LGN": {
+    "symbol": "LGN",
+    "name": "Legence Corp. Class A Common stock",
+    "sector": "Consumer Discretionary",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/LGN?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/LGN?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/LGN?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "SLAB": {
+    "symbol": "SLAB",
+    "name": "Silicon Laboratories Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "PLXS": {
+    "symbol": "PLXS",
+    "name": "Plexus Corp. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AAON": {
+    "symbol": "AAON",
+    "name": "AAON Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "GTLB": {
+    "symbol": "GTLB",
+    "name": "GitLab Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 306,
+    "first": "2021-10-14",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "APPF": {
+    "symbol": "APPF",
+    "name": "AppFolio Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 1893,
+    "first": "2015-06-26",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "LQDA": {
+    "symbol": "LQDA",
+    "name": "Liquidia Corporation Common Stock",
+    "sector": "Health Care",
+    "rows": 1117,
+    "first": "2018-07-26",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "GLBE": {
+    "symbol": "GLBE",
+    "name": "Global-E Online Ltd. Ordinary Shares",
+    "sector": "Technology",
+    "rows": 414,
+    "first": "2021-05-12",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ROAD": {
+    "symbol": "ROAD",
+    "name": "Construction Partners Inc. Class A Common Stock",
+    "sector": "Industrials",
+    "rows": 1174,
+    "first": "2018-05-04",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "POOL": {
+    "symbol": "POOL",
+    "name": "Pool Corporation Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CGON": {
+    "symbol": "CGON",
+    "name": "CG Oncology Inc. Common stock",
+    "sector": "Health Care",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/CGON?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/CGON?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/CGON?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "VSEC": {
+    "symbol": "VSEC",
+    "name": "VSE Corporation Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SSRM": {
+    "symbol": "SSRM",
+    "name": "SSR Mining Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "WFRD": {
+    "symbol": "WFRD",
+    "name": "Weatherford International plc Ordinary Shares",
+    "sector": "Consumer Discretionary",
+    "rows": 503,
+    "first": "2021-01-04",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MRCY": {
+    "symbol": "MRCY",
+    "name": "Mercury Systems Inc Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "BLTE": {
+    "symbol": "BLTE",
+    "name": "Belite Bio Inc American Depositary Shares",
+    "sector": "Health Care",
+    "rows": 170,
+    "first": "2022-04-29",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AUGO": {
+    "symbol": "AUGO",
+    "name": "Aura Minerals Inc. Common Shares",
+    "sector": "Basic Materials",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/AUGO?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/AUGO?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/AUGO?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "LYFT": {
+    "symbol": "LYFT",
+    "name": "Lyft Inc. Class A Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 948,
+    "first": "2019-03-29",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "LNTH": {
+    "symbol": "LNTH",
+    "name": "Lantheus Holdings Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1894,
+    "first": "2015-06-25",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "COGT": {
+    "symbol": "COGT",
+    "name": "Cogent Biosciences Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1199,
+    "first": "2018-03-29",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "URBN": {
+    "symbol": "URBN",
+    "name": "Urban Outfitters Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "LSTR": {
+    "symbol": "LSTR",
+    "name": "Landstar System Inc. Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MIRM": {
+    "symbol": "MIRM",
+    "name": "Mirum Pharmaceuticals Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 872,
+    "first": "2019-07-18",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ERAS": {
+    "symbol": "ERAS",
+    "name": "Erasca Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 369,
+    "first": "2021-07-16",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "RUSHA": {
+    "symbol": "RUSHA",
+    "name": "Rush Enterprises Inc. Common Stock Cl A",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "DNTH": {
+    "symbol": "DNTH",
+    "name": "Dianthus Therapeutics Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 1141,
+    "first": "2018-06-21",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "SRRK": {
+    "symbol": "SRRK",
+    "name": "Scholar Rock Holding Corporation Common Stock",
+    "sector": "Health Care",
+    "rows": 1159,
+    "first": "2018-05-25",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "DSGX": {
+    "symbol": "DSGX",
+    "name": "Descartes Systems Group Inc. (The) Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TTD": {
+    "symbol": "TTD",
+    "name": "The Trade Desk Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 1581,
+    "first": "2016-09-21",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MWH": {
+    "symbol": "MWH",
+    "name": "SOLV Energy Inc. Class A Common Stock",
+    "sector": "Industrials",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/MWH?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/MWH?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/MWH?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "QLYS": {
+    "symbol": "QLYS",
+    "name": "Qualys Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "RUSHB": {
+    "symbol": "RUSHB",
+    "name": "Rush Enterprises Inc. Class B",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NOVT": {
+    "symbol": "NOVT",
+    "name": "Novanta Inc. Common Stock",
+    "sector": "Miscellaneous",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "RGTI": {
+    "symbol": "RGTI",
+    "name": "Rigetti Computing Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 428,
+    "first": "2021-04-22",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CAI": {
+    "symbol": "CAI",
+    "name": "Caris Life Sciences Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/CAI?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/CAI?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/CAI?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "DOX": {
+    "symbol": "DOX",
+    "name": "Amdocs Limited Ordinary Shares",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CROX": {
+    "symbol": "CROX",
+    "name": "Crocs Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "AXTI": {
+    "symbol": "AXTI",
+    "name": "AXT Inc Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "FSV": {
+    "symbol": "FSV",
+    "name": "FirstService Corporation Common Shares",
+    "sector": "Finance",
+    "rows": 1911,
+    "first": "2015-06-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NTSK": {
+    "symbol": "NTSK",
+    "name": "Netskope Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 0,
+    "status": "failed",
+    "error": "yfinance: empty frame | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/NTSK?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/NTSK?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit | chart_api: 400 Client Error: Bad Request for url: https://query1.finance.yahoo.com/v8/finance/chart/NTSK?period1=1420070400&period2=1672531200&interval=1d&events=div%7Csplit"
+  },
+  "KNSA": {
+    "symbol": "KNSA",
+    "name": "Kiniksa Pharmaceuticals International plc Class A Ordinary Shares",
+    "sector": "Health Care",
+    "rows": 1159,
+    "first": "2018-05-25",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CRUS": {
+    "symbol": "CRUS",
+    "name": "Cirrus Logic Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "DUOL": {
+    "symbol": "DUOL",
+    "name": "Duolingo Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 361,
+    "first": "2021-07-28",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "XENE": {
+    "symbol": "XENE",
+    "name": "Xenon Pharmaceuticals Inc. Common Shares",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "DFTX": {
+    "symbol": "DFTX",
+    "name": "Definium Therapeutics Inc. Common Shares",
+    "sector": "Health Care",
+    "rows": 1542,
+    "first": "2016-11-15",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "TVTX": {
+    "symbol": "TVTX",
+    "name": "Travere Therapeutics Inc. Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "LGND": {
+    "symbol": "LGND",
+    "name": "Ligand Pharmaceuticals Incorporated Common Stock",
+    "sector": "Health Care",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CVLT": {
+    "symbol": "CVLT",
+    "name": "Commvault Systems Inc. Common Stock",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "NICE": {
+    "symbol": "NICE",
+    "name": "NICE Ltd American Depositary Shares",
+    "sector": "Technology",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "ACMR": {
+    "symbol": "ACMR",
+    "name": "ACM Research Inc. Class A Common Stock",
+    "sector": "Technology",
+    "rows": 1299,
+    "first": "2017-11-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "FTDR": {
+    "symbol": "FTDR",
+    "name": "Frontdoor Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 1083,
+    "first": "2018-09-13",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "CWST": {
+    "symbol": "CWST",
+    "name": "Casella Waste Systems Inc. Class A Common Stock",
+    "sector": "Utilities",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "MMYT": {
+    "symbol": "MMYT",
+    "name": "MakeMyTrip Limited Ordinary Shares",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "BCPC": {
+    "symbol": "BCPC",
+    "name": "Balchem Corporation Common Stock",
+    "sector": "Industrials",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "PSMT": {
+    "symbol": "PSMT",
+    "name": "PriceSmart Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 2014,
+    "first": "2015-01-02",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  },
+  "RELY": {
+    "symbol": "RELY",
+    "name": "Remitly Global Inc. Common Stock",
+    "sector": "Consumer Discretionary",
+    "rows": 321,
+    "first": "2021-09-23",
+    "last": "2022-12-30",
+    "source": "yfinance",
+    "status": "ok"
+  }
+}

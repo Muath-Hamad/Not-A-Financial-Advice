@@ -1,0 +1,8 @@
+{
+ "date": "2026-08-18",
+ "fresh_screen": "data/universe_screened.json",
+ "newly_noncompliant": [],
+ "newly_eligible": [],
+ "held_and_flagged": [],
+ "policy": "excluded via controls.json (buys blocked); held names exit <= 5 sessions in paper mode; eligible names enter at the next redeploy"
+}

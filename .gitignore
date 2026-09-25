@@ -3,3 +3,6 @@ __pycache__/
 .venv/
 TASI/data/enriched/
 TASI/data/enriched_oos/
+NASDAQ/data/raw_live/
+NASDAQ/data/enriched_live/
+NASDAQ/data/enriched_cut/
