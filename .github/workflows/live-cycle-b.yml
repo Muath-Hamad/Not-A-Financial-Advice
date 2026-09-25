@@ -4,17 +4,21 @@ name: Live cycle B (reconciliation)
 # 14:50 UTC so one lands at 09:50 ET in either DST regime; the script skips
 # pre-open slots and already-recorded days. Push to this file = smoke run.
 #
-# NOTE: scheduled workflows only fire once this file exists on the repository's
-# DEFAULT branch.
+# Paper mode: traces every order the submit step sent by its client order id,
+# measures slippage against the official open, and reconciles the account
+# share for share; a break writes live/ledger/halt.json (docs/07).
+#
+# Scheduled workflows only fire from the repository's DEFAULT branch (main).
 
 on:
   push:
     branches:
-      - claude/tasi-agent-simulation-fcili2
+      - main
     paths:
       - ".github/workflows/live-cycle-b.yml"
   schedule:
     - cron: "50 13,14 * * 1-5"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -31,7 +35,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: claude/tasi-agent-simulation-fcili2
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
@@ -48,16 +52,17 @@ jobs:
         run: python NASDAQ/live/cycle_b.py --smoke
 
       - name: Run cycle B
-        if: github.event_name == 'schedule'
+        if: github.event_name != 'push'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
           LIVE_MODE: ${{ vars.LIVE_MODE || 'ghost' }}
+          LIVE_START: ${{ vars.LIVE_START }}
           APCA_API_KEY_ID: ${{ secrets.APCA_API_KEY_ID }}
           APCA_API_SECRET_KEY: ${{ secrets.APCA_API_SECRET_KEY }}
         run: python NASDAQ/live/cycle_b.py
 
-      - name: Commit ledger back to branch
+      - name: Commit ledger back to main
         if: always()
         run: |
           git config user.name "github-actions[bot]"
@@ -67,6 +72,6 @@ jobs:
             echo "No ledger changes to commit"
           else
             git commit -m "live: cycle B record ($(date -u +%F))"
-            git pull --rebase origin claude/tasi-agent-simulation-fcili2 || true
-            git push || (sleep 5 && git pull --rebase origin claude/tasi-agent-simulation-fcili2 && git push)
+            git pull --rebase origin main || true
+            git push || (sleep 5 && git pull --rebase origin main && git push)
           fi

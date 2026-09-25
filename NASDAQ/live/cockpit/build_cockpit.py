@@ -68,6 +68,15 @@ def main() -> int:
         elif r.get("cycle") == "B":
             n_opens = len([v for v in (r.get("opens") or {}).values() if v])
             info = f"{n_opens} opens recorded"
+            if (r.get("reconcile") or {}).get("status"):
+                info += f" · reconcile {r['reconcile']['status']}"
+        elif r.get("cycle") == "S":
+            plan = r.get("plan") or {}
+            info = (f"{len(r.get('submissions') or [])} sent · "
+                    f"{len(r.get('failures') or [])} rejected · "
+                    f"{len(plan.get('skipped') or [])} skipped")
+            if r.get("holds"):
+                info = "held: " + "; ".join(r["holds"])
         cycles.append({"asof": r.get("asof"), "cycle": r.get("cycle"),
                        "status": r.get("status", "?"), "info": info})
 

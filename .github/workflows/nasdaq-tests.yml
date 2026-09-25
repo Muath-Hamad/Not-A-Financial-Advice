@@ -1,0 +1,47 @@
+name: NASDAQ harness tests
+
+# Unit and end-to-end tests of the live harness rules (NASDAQ/tests): what the
+# submit step sends, reconciliation breaks, guardrails, the AAOIFI rule layers
+# and the committed universe. No network, no keys, no ledger writes.
+
+on:
+  push:
+    paths:
+      - "NASDAQ/live/**"
+      - "!NASDAQ/live/ledger/**"
+      - "!NASDAQ/live/cockpit/index.html"
+      - "NASDAQ/pipeline/**"
+      - "NASDAQ/tests/**"
+      - "NASDAQ/data/universe_screened.json"
+      - "NASDAQ/data/sharia_overrides.json"
+      - ".github/workflows/nasdaq-tests.yml"
+  pull_request:
+    paths:
+      - "NASDAQ/live/**"
+      - "!NASDAQ/live/ledger/**"
+      - "!NASDAQ/live/cockpit/index.html"
+      - "NASDAQ/pipeline/**"
+      - "NASDAQ/tests/**"
+      - "NASDAQ/data/universe_screened.json"
+      - "NASDAQ/data/sharia_overrides.json"
+      - ".github/workflows/nasdaq-tests.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --quiet pandas numpy pandas_market_calendars pytest
+
+      - name: Run the tests
+        run: python -m pytest NASDAQ/tests -q

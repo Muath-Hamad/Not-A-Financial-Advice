@@ -14,6 +14,7 @@ virtual-account trial**.
 | [04 — Election & results](04-election-and-results.md) | Scoring formula, both races, the elected agent, limitations |
 | [05 — Live deployment plan](05-live-deployment-plan.md) | The operating plan for the live paper-trading step (venue, cycles, monitoring, controls, rollout) |
 | [06 — Live operations runbook](06-live-operations.md) | The system as built: ghost mode, the sim twin, ledger formats, alerts, controls, Phase 2 switch |
+| [07 — Go-live plan](07-go-live-plan.md) | The dated route ghost → paper → real money: fixes, gates, the Unraid private deployment, owner decisions, task list |
 
 ## The experiment in one diagram
 
@@ -41,7 +42,7 @@ top 500 NASDAQ by mcap ──► AAOIFI screen (business + 30%/30% ratios) ─�
 
 | Parameter | Value |
 |---|---|
-| Universe | 327 AAOIFI-compliant names from the top 500 NASDAQ by market cap |
+| Universe | 327 AAOIFI-compliant names from the top 500 NASDAQ by market cap (election); 319 for deployment after the 2026-09-25 instrument and override correction (docs/07 §3) |
 | Benchmark | NASDAQ Composite (`^IXIC`), price index, rescaled to $100,000 |
 | Capital | USD 100,000 per agent |
 | In-sample | 2016-01-04 → 2022-12-30 (~1,762 sessions; 2015 = indicator warm-up) |

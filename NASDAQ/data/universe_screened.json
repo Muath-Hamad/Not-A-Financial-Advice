@@ -6,8 +6,8 @@
   "impermissible_income_max": "5% (proxied by business screen; not computable from free data)"
  },
  "screened": 500,
- "passed": 327,
- "rejected": 173,
+ "passed": 319,
+ "rejected": 181,
  "universe": [
   {
    "code": "NVDA",
@@ -26,7 +26,10 @@
    "cash_ratio": 0.0096,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AAPL",
@@ -45,7 +48,10 @@
    "cash_ratio": 0.0141,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GOOGL",
@@ -64,7 +70,10 @@
    "cash_ratio": 0.0576,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GOOG",
@@ -83,7 +92,10 @@
    "cash_ratio": 0.0581,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MSFT",
@@ -102,7 +114,10 @@
    "cash_ratio": 0.0213,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AMZN",
@@ -121,7 +136,10 @@
    "cash_ratio": 0.0437,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SPCX",
@@ -140,7 +158,10 @@
    "cash_ratio": 0.0507,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AVGO",
@@ -159,7 +180,10 @@
    "cash_ratio": 0.0104,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "META",
@@ -178,7 +202,10 @@
    "cash_ratio": 0.0618,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TSLA",
@@ -197,7 +224,10 @@
    "cash_ratio": 0.0322,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MU",
@@ -216,7 +246,10 @@
    "cash_ratio": 0.0224,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "WMT",
@@ -235,7 +268,10 @@
    "cash_ratio": 0.0118,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AMD",
@@ -254,7 +290,10 @@
    "cash_ratio": 0.0156,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ASML",
@@ -273,7 +312,10 @@
    "cash_ratio": 0.0105,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "INTC",
@@ -292,7 +334,10 @@
    "cash_ratio": 0.0536,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CSCO",
@@ -311,7 +356,10 @@
    "cash_ratio": 0.0361,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LRCX",
@@ -330,7 +378,10 @@
    "cash_ratio": 0.013,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AMAT",
@@ -349,7 +400,10 @@
    "cash_ratio": 0.0218,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "COST",
@@ -368,7 +422,10 @@
    "cash_ratio": 0.0264,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PLTR",
@@ -387,7 +444,10 @@
    "cash_ratio": 0.0223,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NFLX",
@@ -406,7 +466,12 @@
    "cash_ratio": 0.0286,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "film and TV entertainment content"
+   ]
   },
   {
    "code": "PANW",
@@ -425,7 +490,10 @@
    "cash_ratio": 0.0101,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ARM",
@@ -444,7 +512,10 @@
    "cash_ratio": 0.0129,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "KLAC",
@@ -463,7 +534,10 @@
    "cash_ratio": 0.0181,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SNDK",
@@ -482,7 +556,10 @@
    "cash_ratio": 0.0182,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TXN",
@@ -501,7 +578,10 @@
    "cash_ratio": 0.0269,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "STX",
@@ -520,7 +600,10 @@
    "cash_ratio": 0.0076,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AMGN",
@@ -539,7 +622,10 @@
    "cash_ratio": 0.062,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CRWD",
@@ -558,7 +644,10 @@
    "cash_ratio": 0.0207,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LIN",
@@ -577,7 +666,10 @@
    "cash_ratio": 0.0224,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MRVL",
@@ -596,7 +688,10 @@
    "cash_ratio": 0.018,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SHOP",
@@ -615,7 +710,10 @@
    "cash_ratio": 0.0256,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ADI",
@@ -634,7 +732,10 @@
    "cash_ratio": 0.0179,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PEP",
@@ -653,7 +754,10 @@
    "cash_ratio": 0.0568,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "WDC",
@@ -672,7 +776,10 @@
    "cash_ratio": 0.0085,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "QCOM",
@@ -691,7 +798,10 @@
    "cash_ratio": 0.0484,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GILD",
@@ -710,7 +820,10 @@
    "cash_ratio": 0.0284,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BKNG",
@@ -729,7 +842,10 @@
    "cash_ratio": 0.1064,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ISRG",
@@ -748,7 +864,10 @@
    "cash_ratio": 0.0373,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MNST",
@@ -767,7 +886,10 @@
    "cash_ratio": 0.0383,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VRTX",
@@ -786,7 +908,10 @@
    "cash_ratio": 0.0603,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SBUX",
@@ -805,7 +930,10 @@
    "cash_ratio": 0.0295,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FTNT",
@@ -824,7 +952,10 @@
    "cash_ratio": 0.0352,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ABNB",
@@ -843,7 +974,10 @@
    "cash_ratio": 0.1113,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SNY",
@@ -862,7 +996,10 @@
    "cash_ratio": 0.0598,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ADP",
@@ -881,7 +1018,10 @@
    "cash_ratio": 0.04,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "APP",
@@ -900,7 +1040,10 @@
    "cash_ratio": 0.0292,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ADBE",
@@ -919,7 +1062,10 @@
    "cash_ratio": 0.056,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CEG",
@@ -938,7 +1084,10 @@
    "cash_ratio": 0.0071,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CSX",
@@ -957,7 +1106,10 @@
    "cash_ratio": 0.0148,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "DASH",
@@ -976,7 +1128,10 @@
    "cash_ratio": 0.0567,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MAR",
@@ -995,7 +1150,12 @@
    "cash_ratio": 0.005,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "hotels: bar and entertainment revenue"
+   ]
   },
   {
    "code": "INTU",
@@ -1014,7 +1174,10 @@
    "cash_ratio": 0.0739,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MELI",
@@ -1033,7 +1196,10 @@
    "cash_ratio": 0.0633,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CDNS",
@@ -1052,7 +1218,10 @@
    "cash_ratio": 0.017,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "DDOG",
@@ -1071,7 +1240,10 @@
    "cash_ratio": 0.0554,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "REGN",
@@ -1090,7 +1262,10 @@
    "cash_ratio": 0.0959,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SNPS",
@@ -1109,7 +1284,10 @@
    "cash_ratio": 0.031,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MDLZ",
@@ -1128,7 +1306,10 @@
    "cash_ratio": 0.0214,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CTAS",
@@ -1147,7 +1328,10 @@
    "cash_ratio": 0.0037,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LITE",
@@ -1166,7 +1350,10 @@
    "cash_ratio": 0.0313,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ROST",
@@ -1185,7 +1372,10 @@
    "cash_ratio": 0.0542,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NBIS",
@@ -1204,7 +1394,10 @@
    "cash_ratio": 0.114,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ORLY",
@@ -1223,7 +1416,10 @@
    "cash_ratio": 0.0036,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MPWR",
@@ -1242,7 +1438,10 @@
    "cash_ratio": 0.02,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PCAR",
@@ -1261,7 +1460,10 @@
    "cash_ratio": 0.126,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TER",
@@ -1280,26 +1482,10 @@
    "cash_ratio": 0.0052,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
-  },
-  {
-   "code": "BRKRP",
-   "name": "Bruker Corporation 6.375% Mandatory Convertible Preferred Stock Series A",
-   "mcap": null,
-   "sector": "Industrials",
-   "industry": "Biotechnology: Laboratory Analytical Instruments",
-   "country": "United States",
-   "total_debt": 1855200000.0,
-   "total_cash": 184900000.0,
-   "sector_yf": "Healthcare",
-   "industry_yf": "Medical Devices",
-   "business_reasons": [],
-   "business_pass": true,
-   "debt_ratio": 0.0288,
-   "cash_ratio": 0.0029,
-   "ratio_reasons": [],
-   "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BKR",
@@ -1318,7 +1504,10 @@
    "cash_ratio": 0.2668,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ARGX",
@@ -1337,7 +1526,10 @@
    "cash_ratio": 0.0837,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NXPI",
@@ -1356,7 +1548,10 @@
    "cash_ratio": 0.054,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CBRS",
@@ -1375,7 +1570,10 @@
    "cash_ratio": 0.1316,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FAST",
@@ -1394,7 +1592,10 @@
    "cash_ratio": 0.0035,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ALAB",
@@ -1413,7 +1614,10 @@
    "cash_ratio": 0.0217,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FANG",
@@ -1432,7 +1636,10 @@
    "cash_ratio": 0.0081,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CRDO",
@@ -1451,7 +1658,10 @@
    "cash_ratio": 0.0274,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ADSK",
@@ -1470,7 +1680,10 @@
    "cash_ratio": 0.0566,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AXON",
@@ -1489,7 +1702,12 @@
    "cash_ratio": 0.0139,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "weapons (conducted-energy devices): permitted by AAOIFI, excluded by some index methods"
+   ]
   },
   {
    "code": "RKLB",
@@ -1508,7 +1726,10 @@
    "cash_ratio": 0.043,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CCEP",
@@ -1527,7 +1748,10 @@
    "cash_ratio": 0.0426,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FLEX",
@@ -1546,7 +1770,10 @@
    "cash_ratio": 0.059,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "WDAY",
@@ -1565,7 +1792,10 @@
    "cash_ratio": 0.0923,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MDLN",
@@ -1584,7 +1814,10 @@
    "cash_ratio": 0.0572,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FER",
@@ -1603,7 +1836,10 @@
    "cash_ratio": 0.084,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TTWO",
@@ -1622,7 +1858,12 @@
    "cash_ratio": 0.04,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "video games: content varies by title"
+   ]
   },
   {
    "code": "NTRA",
@@ -1641,7 +1882,10 @@
    "cash_ratio": 0.0239,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "EBAY",
@@ -1660,7 +1904,10 @@
    "cash_ratio": 0.0726,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "RVMD",
@@ -1679,7 +1926,10 @@
    "cash_ratio": 0.0871,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ODFL",
@@ -1698,7 +1948,10 @@
    "cash_ratio": 0.0065,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MCHP",
@@ -1717,7 +1970,10 @@
    "cash_ratio": 0.0062,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TRI",
@@ -1736,7 +1992,10 @@
    "cash_ratio": 0.016,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "IDXX",
@@ -1755,7 +2014,10 @@
    "cash_ratio": 0.0046,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PAYX",
@@ -1774,7 +2036,10 @@
    "cash_ratio": 0.0271,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ONC",
@@ -1793,7 +2058,10 @@
    "cash_ratio": 0.1253,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NTAP",
@@ -1812,7 +2080,10 @@
    "cash_ratio": 0.0889,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TEAM",
@@ -1831,26 +2102,10 @@
    "cash_ratio": 0.0309,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
-  },
-  {
-   "code": "SMCIP",
-   "name": "Super Micro Computer Inc. Depositary Shares representing a 1/20th Interest in a Share of 7% Series A Mandatory Convertible Preferred Stock",
-   "mcap": null,
-   "sector": "Technology",
-   "industry": "Computer Manufacturing",
-   "country": "United States",
-   "total_debt": 9311492096.0,
-   "total_cash": 7521474048.0,
-   "sector_yf": "Technology",
-   "industry_yf": "Computer Hardware",
-   "business_reasons": [],
-   "business_pass": true,
-   "debt_ratio": 0.2372,
-   "cash_ratio": 0.1916,
-   "ratio_reasons": [],
-   "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ROP",
@@ -1869,26 +2124,10 @@
    "cash_ratio": 0.0094,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
-  },
-  {
-   "code": "MCHPP",
-   "name": "Microchip Technology Incorporated Depositary Shares Each Representing a 1/20th Interest in a Share of 7.50% Series A Mandatory Convertible Preferred Stock",
-   "mcap": null,
-   "sector": "Technology",
-   "industry": "Semiconductors",
-   "country": "United States",
-   "total_debt": 5398700032.0,
-   "total_cash": 272300000.0,
-   "sector_yf": "Technology",
-   "industry_yf": "Semiconductors",
-   "business_reasons": [],
-   "business_pass": true,
-   "debt_ratio": 0.1436,
-   "cash_ratio": 0.0072,
-   "ratio_reasons": [],
-   "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "EXPE",
@@ -1907,7 +2146,10 @@
    "cash_ratio": 0.1823,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MSTR",
@@ -1926,26 +2168,12 @@
    "cash_ratio": 0.0634,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
-  },
-  {
-   "code": "STRF",
-   "name": "Strategy Inc 10.00% Series A Perpetual Strife Preferred Stock",
-   "mcap": null,
-   "sector": "Technology",
-   "industry": "Computer Software: Prepackaged Software",
-   "country": "United States",
-   "total_debt": 6770777088.0,
-   "total_cash": 2447982080.0,
-   "sector_yf": "Technology",
-   "industry_yf": "Software - Application",
-   "business_reasons": [],
-   "business_pass": true,
-   "debt_ratio": 0.183,
-   "cash_ratio": 0.0662,
-   "ratio_reasons": [],
-   "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "bitcoin treasury company: scholars differ on crypto holdings"
+   ]
   },
   {
    "code": "STLD",
@@ -1964,7 +2192,10 @@
    "cash_ratio": 0.0154,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ESLT",
@@ -1983,26 +2214,12 @@
    "cash_ratio": 0.0261,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
-  },
-  {
-   "code": "STRC",
-   "name": "Strategy Inc Variable Rate Series A Perpetual Stretch Preferred Stock",
-   "mcap": null,
-   "sector": "Technology",
-   "industry": "Computer Software: Prepackaged Software",
-   "country": "United States",
-   "total_debt": 6770777088.0,
-   "total_cash": 2447982080.0,
-   "sector_yf": "Technology",
-   "industry_yf": "Software - Application",
-   "business_reasons": [],
-   "business_pass": true,
-   "debt_ratio": 0.186,
-   "cash_ratio": 0.0673,
-   "ratio_reasons": [],
-   "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "defense: permitted by AAOIFI, excluded by some index methods"
+   ]
   },
   {
    "code": "KMB",
@@ -2021,7 +2238,10 @@
    "cash_ratio": 0.0268,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MDB",
@@ -2040,7 +2260,10 @@
    "cash_ratio": 0.0681,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "RPRX",
@@ -2059,7 +2282,12 @@
    "cash_ratio": 0.0245,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "royalty financing business"
+   ]
   },
   {
    "code": "DXCM",
@@ -2078,7 +2306,10 @@
    "cash_ratio": 0.0583,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ON",
@@ -2097,7 +2328,10 @@
    "cash_ratio": 0.1163,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CASY",
@@ -2116,7 +2350,12 @@
    "cash_ratio": 0.0164,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "convenience stores: alcohol and tobacco revenue"
+   ]
   },
   {
    "code": "TSEM",
@@ -2135,7 +2374,10 @@
    "cash_ratio": 0.0477,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BIIB",
@@ -2154,7 +2396,10 @@
    "cash_ratio": 0.0415,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ZM",
@@ -2173,7 +2418,10 @@
    "cash_ratio": 0.2503,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GFS",
@@ -2192,7 +2440,10 @@
    "cash_ratio": 0.0779,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "RYAAY",
@@ -2211,7 +2462,10 @@
    "cash_ratio": 0.0932,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ZS",
@@ -2230,7 +2484,10 @@
    "cash_ratio": 0.1179,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ALNY",
@@ -2249,7 +2506,10 @@
    "cash_ratio": 0.11,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CPRT",
@@ -2268,7 +2528,10 @@
    "cash_ratio": 0.1374,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ILMN",
@@ -2287,7 +2550,10 @@
    "cash_ratio": 0.0401,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FOXA",
@@ -2306,7 +2572,12 @@
    "cash_ratio": 0.1452,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "broadcasting and entertainment content"
+   ]
   },
   {
    "code": "ASTS",
@@ -2325,7 +2596,10 @@
    "cash_ratio": 0.0811,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "INSM",
@@ -2344,7 +2618,10 @@
    "cash_ratio": 0.0419,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "JBHT",
@@ -2363,26 +2640,10 @@
    "cash_ratio": 0.0002,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
-  },
-  {
-   "code": "STRK",
-   "name": "Strategy Inc 8.00% Series A Perpetual Strike Preferred Stock",
-   "mcap": null,
-   "sector": "Technology",
-   "industry": "Computer Software: Prepackaged Software",
-   "country": "United States",
-   "total_debt": 6770777088.0,
-   "total_cash": 2447982080.0,
-   "sector_yf": "Technology",
-   "industry_yf": "Software - Application",
-   "business_reasons": [],
-   "business_pass": true,
-   "debt_ratio": 0.2562,
-   "cash_ratio": 0.0926,
-   "ratio_reasons": [],
-   "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ROIV",
@@ -2401,7 +2662,10 @@
    "cash_ratio": 0.1467,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SYM",
@@ -2420,7 +2684,10 @@
    "cash_ratio": 0.067,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FOX",
@@ -2439,7 +2706,12 @@
    "cash_ratio": 0.1632,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "broadcasting and entertainment content"
+   ]
   },
   {
    "code": "CTSH",
@@ -2458,7 +2730,10 @@
    "cash_ratio": 0.0389,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MRNA",
@@ -2477,7 +2752,10 @@
    "cash_ratio": 0.1988,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FWONK",
@@ -2496,7 +2774,12 @@
    "cash_ratio": 0.0507,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "broadcasting and entertainment content"
+   ]
   },
   {
    "code": "BSP",
@@ -2515,7 +2798,10 @@
    "cash_ratio": 0.0343,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ENTG",
@@ -2534,7 +2820,10 @@
    "cash_ratio": 0.014,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "OKTA",
@@ -2553,7 +2842,10 @@
    "cash_ratio": 0.1021,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MTSI",
@@ -2572,7 +2864,10 @@
    "cash_ratio": 0.0264,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VRSN",
@@ -2591,7 +2886,10 @@
    "cash_ratio": 0.0417,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "INCY",
@@ -2610,7 +2908,10 @@
    "cash_ratio": 0.1839,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ARXS",
@@ -2629,7 +2930,10 @@
    "cash_ratio": 0.0204,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FSLR",
@@ -2648,7 +2952,10 @@
    "cash_ratio": 0.0719,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FTAI",
@@ -2667,7 +2974,10 @@
    "cash_ratio": 0.0142,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ROKU",
@@ -2686,7 +2996,12 @@
    "cash_ratio": 0.1091,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "streaming entertainment platform"
+   ]
   },
   {
    "code": "FWONA",
@@ -2705,7 +3020,12 @@
    "cash_ratio": 0.0554,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "broadcasting and entertainment content"
+   ]
   },
   {
    "code": "VRSK",
@@ -2724,7 +3044,10 @@
    "cash_ratio": 0.0239,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SITM",
@@ -2743,7 +3066,10 @@
    "cash_ratio": 0.0852,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FFIV",
@@ -2762,7 +3088,10 @@
    "cash_ratio": 0.0716,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MKSI",
@@ -2781,7 +3110,10 @@
    "cash_ratio": 0.0279,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "WWD",
@@ -2800,7 +3132,10 @@
    "cash_ratio": 0.0217,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "UTHR",
@@ -2819,7 +3154,10 @@
    "cash_ratio": 0.1225,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "RIVN",
@@ -2838,7 +3176,10 @@
    "cash_ratio": 0.2451,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GH",
@@ -2857,7 +3198,10 @@
    "cash_ratio": 0.0489,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "EXE",
@@ -2876,7 +3220,10 @@
    "cash_ratio": 0.0299,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ULTA",
@@ -2895,7 +3242,10 @@
    "cash_ratio": 0.0104,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "INIO",
@@ -2914,7 +3264,10 @@
    "cash_ratio": 0.0491,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "RGLD",
@@ -2933,7 +3286,10 @@
    "cash_ratio": 0.0091,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LSCC",
@@ -2952,7 +3308,10 @@
    "cash_ratio": 0.0089,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "STRL",
@@ -2971,7 +3330,10 @@
    "cash_ratio": 0.0255,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ZBRA",
@@ -2990,7 +3352,10 @@
    "cash_ratio": 0.0088,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NWS",
@@ -3009,7 +3374,12 @@
    "cash_ratio": 0.1192,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "news and entertainment media"
+   ]
   },
   {
    "code": "NTNX",
@@ -3028,7 +3398,10 @@
    "cash_ratio": 0.1143,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NDSN",
@@ -3047,7 +3420,10 @@
    "cash_ratio": 0.006,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CHRW",
@@ -3066,7 +3442,10 @@
    "cash_ratio": 0.009,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "QNT",
@@ -3085,7 +3464,10 @@
    "cash_ratio": 0.1209,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MEDP",
@@ -3104,7 +3486,10 @@
    "cash_ratio": 0.0308,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "JAZZ",
@@ -3123,7 +3508,10 @@
    "cash_ratio": 0.1372,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PTC",
@@ -3142,7 +3530,10 @@
    "cash_ratio": 0.0221,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NBIX",
@@ -3161,7 +3552,10 @@
    "cash_ratio": 0.0249,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BBIO",
@@ -3180,7 +3574,10 @@
    "cash_ratio": 0.0462,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NWSA",
@@ -3199,7 +3596,12 @@
    "cash_ratio": 0.1357,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "news and entertainment media"
+   ]
   },
   {
    "code": "LECO",
@@ -3218,7 +3620,10 @@
    "cash_ratio": 0.0156,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AMKR",
@@ -3237,7 +3642,10 @@
    "cash_ratio": 0.1649,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ASND",
@@ -3256,7 +3664,10 @@
    "cash_ratio": 0.0496,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "IESC",
@@ -3275,7 +3686,10 @@
    "cash_ratio": 0.0253,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VNOM",
@@ -3294,7 +3708,10 @@
    "cash_ratio": 0.0035,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NXT",
@@ -3313,7 +3730,10 @@
    "cash_ratio": 0.0792,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TTMI",
@@ -3332,7 +3752,10 @@
    "cash_ratio": 0.0345,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "COO",
@@ -3351,7 +3774,10 @@
    "cash_ratio": 0.0094,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LOGI",
@@ -3370,7 +3796,10 @@
    "cash_ratio": 0.1201,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SMTC",
@@ -3389,7 +3818,10 @@
    "cash_ratio": 0.0114,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "APA",
@@ -3408,7 +3840,10 @@
    "cash_ratio": 0.0311,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AUR",
@@ -3427,7 +3862,10 @@
    "cash_ratio": 0.0872,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AEIS",
@@ -3446,7 +3884,10 @@
    "cash_ratio": 0.1012,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NVMI",
@@ -3465,7 +3906,10 @@
    "cash_ratio": 0.0748,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HAS",
@@ -3484,7 +3928,10 @@
    "cash_ratio": 0.1027,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TXRH",
@@ -3503,7 +3950,12 @@
    "cash_ratio": 0.0151,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "restaurant chain: alcohol sales"
+   ]
   },
   {
    "code": "FIVE",
@@ -3522,7 +3974,10 @@
    "cash_ratio": 0.0838,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AAOI",
@@ -3541,7 +3996,10 @@
    "cash_ratio": 0.0378,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CHKP",
@@ -3560,7 +4018,10 @@
    "cash_ratio": 0.1734,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TRMB",
@@ -3579,7 +4040,10 @@
    "cash_ratio": 0.0163,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "EXEL",
@@ -3598,7 +4062,10 @@
    "cash_ratio": 0.0648,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ICLR",
@@ -3617,7 +4084,10 @@
    "cash_ratio": 0.0716,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CSGP",
@@ -3636,7 +4106,10 @@
    "cash_ratio": 0.0997,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LULU",
@@ -3655,7 +4128,10 @@
    "cash_ratio": 0.1149,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CORT",
@@ -3674,7 +4150,10 @@
    "cash_ratio": 0.0244,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ARWR",
@@ -3693,7 +4172,10 @@
    "cash_ratio": 0.1289,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ALGN",
@@ -3712,7 +4194,10 @@
    "cash_ratio": 0.0893,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "COKE",
@@ -3731,7 +4216,10 @@
    "cash_ratio": 0.0042,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "DRS",
@@ -3750,7 +4238,12 @@
    "cash_ratio": 0.0222,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "defense: permitted by AAOIFI, excluded by some index methods"
+   ]
   },
   {
    "code": "BTSG",
@@ -3769,7 +4262,10 @@
    "cash_ratio": 0.0459,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MDGL",
@@ -3788,7 +4284,10 @@
    "cash_ratio": 0.0703,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LFUS",
@@ -3807,7 +4306,10 @@
    "cash_ratio": 0.0527,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FROG",
@@ -3826,7 +4328,10 @@
    "cash_ratio": 0.0709,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "KTOS",
@@ -3845,7 +4350,12 @@
    "cash_ratio": 0.1198,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "defense: permitted by AAOIFI, excluded by some index methods"
+   ]
   },
   {
    "code": "HALO",
@@ -3864,7 +4374,10 @@
    "cash_ratio": 0.0198,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SANM",
@@ -3883,7 +4396,10 @@
    "cash_ratio": 0.1609,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "DOCU",
@@ -3902,7 +4418,10 @@
    "cash_ratio": 0.0708,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VICR",
@@ -3921,7 +4440,10 @@
    "cash_ratio": 0.0393,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VIAV",
@@ -3940,7 +4462,10 @@
    "cash_ratio": 0.0575,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TECH",
@@ -3959,7 +4484,10 @@
    "cash_ratio": 0.0235,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MANH",
@@ -3978,7 +4506,10 @@
    "cash_ratio": 0.0164,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CART",
@@ -3997,7 +4528,10 @@
    "cash_ratio": 0.0752,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CGNX",
@@ -4016,7 +4550,10 @@
    "cash_ratio": 0.0361,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AXSM",
@@ -4035,7 +4572,10 @@
    "cash_ratio": 0.0285,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "RMBS",
@@ -4054,7 +4594,10 @@
    "cash_ratio": 0.0742,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FORM",
@@ -4073,7 +4616,10 @@
    "cash_ratio": 0.032,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PRAX",
@@ -4092,7 +4638,10 @@
    "cash_ratio": 0.0703,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SAIL",
@@ -4111,7 +4660,10 @@
    "cash_ratio": 0.0363,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "JKHY",
@@ -4130,7 +4682,10 @@
    "cash_ratio": 0.0019,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GSAT",
@@ -4149,7 +4704,10 @@
    "cash_ratio": 0.0382,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BSY",
@@ -4168,7 +4726,10 @@
    "cash_ratio": 0.0139,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SWKS",
@@ -4187,7 +4748,10 @@
    "cash_ratio": 0.0759,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ENSG",
@@ -4206,7 +4770,10 @@
    "cash_ratio": 0.0305,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ABVX",
@@ -4225,7 +4792,10 @@
    "cash_ratio": 0.0458,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CYTK",
@@ -4244,7 +4814,10 @@
    "cash_ratio": 0.1119,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SAIA",
@@ -4263,7 +4836,10 @@
    "cash_ratio": 0.0082,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "APGE",
@@ -4282,7 +4858,10 @@
    "cash_ratio": 0.0954,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SMMT",
@@ -4301,7 +4880,10 @@
    "cash_ratio": 0.0671,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PTGX",
@@ -4320,7 +4902,10 @@
    "cash_ratio": 0.077,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "KYMR",
@@ -4339,7 +4924,10 @@
    "cash_ratio": 0.0687,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "KRYS",
@@ -4358,7 +4946,10 @@
    "cash_ratio": 0.0854,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SOLS",
@@ -4377,7 +4968,10 @@
    "cash_ratio": 0.0758,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LLYVK",
@@ -4396,7 +4990,12 @@
    "cash_ratio": 0.053,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "entertainment venues"
+   ]
   },
   {
    "code": "PODD",
@@ -4415,7 +5014,10 @@
    "cash_ratio": 0.0548,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "IONS",
@@ -4434,7 +5036,10 @@
    "cash_ratio": 0.217,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LLYVA",
@@ -4453,7 +5058,12 @@
    "cash_ratio": 0.055,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "entertainment venues"
+   ]
   },
   {
    "code": "RGEN",
@@ -4472,7 +5082,10 @@
    "cash_ratio": 0.0862,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TEM",
@@ -4491,7 +5104,10 @@
    "cash_ratio": 0.0872,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AVAV",
@@ -4510,7 +5126,12 @@
    "cash_ratio": 0.0672,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "defense: permitted by AAOIFI, excluded by some index methods"
+   ]
   },
   {
    "code": "SIMO",
@@ -4529,7 +5150,10 @@
    "cash_ratio": 0.0081,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TTEK",
@@ -4548,7 +5172,10 @@
    "cash_ratio": 0.025,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SYRE",
@@ -4567,7 +5194,10 @@
    "cash_ratio": 0.1265,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CRNX",
@@ -4586,7 +5216,10 @@
    "cash_ratio": 0.1342,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "IDCC",
@@ -4605,26 +5238,10 @@
    "cash_ratio": 0.1241,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
-  },
-  {
-   "code": "SFD",
-   "name": "Smithfield Foods Inc. Common Stock",
-   "mcap": 8927998976.0,
-   "sector": "Consumer Staples",
-   "industry": "Meat/Poultry/Fish",
-   "country": "United States",
-   "total_debt": 2396000000.0,
-   "total_cash": 1350000000.0,
-   "sector_yf": "Consumer Defensive",
-   "industry_yf": "Packaged Foods",
-   "business_reasons": [],
-   "business_pass": true,
-   "debt_ratio": 0.2684,
-   "cash_ratio": 0.1512,
-   "ratio_reasons": [],
-   "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "IMVT",
@@ -4643,7 +5260,10 @@
    "cash_ratio": 0.0892,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PCVX",
@@ -4662,7 +5282,10 @@
    "cash_ratio": 0.1663,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BRKR",
@@ -4681,7 +5304,10 @@
    "cash_ratio": 0.021,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "QRVO",
@@ -4700,7 +5326,10 @@
    "cash_ratio": 0.153,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ALGM",
@@ -4719,7 +5348,10 @@
    "cash_ratio": 0.0188,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HQY",
@@ -4738,7 +5370,10 @@
    "cash_ratio": 0.0309,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TTAN",
@@ -4757,26 +5392,10 @@
    "cash_ratio": 0.0496,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
-  },
-  {
-   "code": "SATA",
-   "name": "Strive Inc. Variable Rate Series A Perpetual Preferred Stock",
-   "mcap": null,
-   "sector": "Technology",
-   "industry": "Computer Software: Prepackaged Software",
-   "country": "United States",
-   "total_debt": 3319000.0,
-   "total_cash": 188320000.0,
-   "sector_yf": "Financial Services",
-   "industry_yf": "Asset Management",
-   "business_reasons": [],
-   "business_pass": true,
-   "debt_ratio": 0.0004,
-   "cash_ratio": 0.0222,
-   "ratio_reasons": [],
-   "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "XE",
@@ -4795,7 +5414,10 @@
    "cash_ratio": 0.2724,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ALKS",
@@ -4814,7 +5436,10 @@
    "cash_ratio": 0.0785,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "IBRX",
@@ -4833,7 +5458,10 @@
    "cash_ratio": 0.0427,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CAMT",
@@ -4852,7 +5480,10 @@
    "cash_ratio": 0.0811,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TWST",
@@ -4871,7 +5502,10 @@
    "cash_ratio": 0.0218,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "RYTM",
@@ -4890,7 +5524,10 @@
    "cash_ratio": 0.0414,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MXL",
@@ -4909,7 +5546,10 @@
    "cash_ratio": 0.0082,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "POWL",
@@ -4928,7 +5568,10 @@
    "cash_ratio": 0.0807,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MBLY",
@@ -4947,7 +5590,10 @@
    "cash_ratio": 0.183,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "QBTS",
@@ -4966,7 +5612,10 @@
    "cash_ratio": 0.0689,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ZG",
@@ -4985,7 +5634,10 @@
    "cash_ratio": 0.0903,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PCTY",
@@ -5004,7 +5656,10 @@
    "cash_ratio": 0.0353,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "Z",
@@ -5023,7 +5678,10 @@
    "cash_ratio": 0.0914,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CELH",
@@ -5042,7 +5700,10 @@
    "cash_ratio": 0.083,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TGTX",
@@ -5061,7 +5722,10 @@
    "cash_ratio": 0.0729,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SFM",
@@ -5080,7 +5744,10 @@
    "cash_ratio": 0.0297,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CHRD",
@@ -5099,7 +5766,10 @@
    "cash_ratio": 0.0809,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ORKA",
@@ -5118,7 +5788,10 @@
    "cash_ratio": 0.1172,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TXG",
@@ -5137,7 +5810,10 @@
    "cash_ratio": 0.0738,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NAVN",
@@ -5156,7 +5832,10 @@
    "cash_ratio": 0.0918,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LGN",
@@ -5175,7 +5854,10 @@
    "cash_ratio": 0.0221,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SLAB",
@@ -5194,7 +5876,10 @@
    "cash_ratio": 0.0543,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PLXS",
@@ -5213,7 +5898,10 @@
    "cash_ratio": 0.0431,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AAON",
@@ -5232,7 +5920,10 @@
    "cash_ratio": 0.0,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GTLB",
@@ -5251,7 +5942,10 @@
    "cash_ratio": 0.1943,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "APPF",
@@ -5270,7 +5964,10 @@
    "cash_ratio": 0.0321,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LQDA",
@@ -5289,7 +5986,10 @@
    "cash_ratio": 0.0411,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GLBE",
@@ -5308,7 +6008,10 @@
    "cash_ratio": 0.0768,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ROAD",
@@ -5327,7 +6030,10 @@
    "cash_ratio": 0.0138,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "POOL",
@@ -5346,7 +6052,10 @@
    "cash_ratio": 0.0051,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CGON",
@@ -5365,7 +6074,10 @@
    "cash_ratio": 0.1508,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VSEC",
@@ -5384,7 +6096,10 @@
    "cash_ratio": 0.011,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SSRM",
@@ -5403,7 +6118,10 @@
    "cash_ratio": 0.2672,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "WFRD",
@@ -5422,7 +6140,10 @@
    "cash_ratio": 0.1642,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MRCY",
@@ -5441,7 +6162,12 @@
    "cash_ratio": 0.0489,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "defense: permitted by AAOIFI, excluded by some index methods"
+   ]
   },
   {
    "code": "BLTE",
@@ -5460,7 +6186,10 @@
    "cash_ratio": null,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AUGO",
@@ -5479,7 +6208,10 @@
    "cash_ratio": 0.0375,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LYFT",
@@ -5498,7 +6230,10 @@
    "cash_ratio": 0.2724,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LNTH",
@@ -5517,7 +6252,10 @@
    "cash_ratio": 0.0902,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "COGT",
@@ -5536,7 +6274,10 @@
    "cash_ratio": 0.1214,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "URBN",
@@ -5555,7 +6296,10 @@
    "cash_ratio": 0.0629,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LSTR",
@@ -5574,7 +6318,10 @@
    "cash_ratio": 0.0532,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MIRM",
@@ -5593,7 +6340,10 @@
    "cash_ratio": 0.0711,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ERAS",
@@ -5612,7 +6362,10 @@
    "cash_ratio": 0.0413,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "RUSHA",
@@ -5631,7 +6384,10 @@
    "cash_ratio": 0.0269,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "DNTH",
@@ -5650,7 +6406,10 @@
    "cash_ratio": 0.1412,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SRRK",
@@ -5669,7 +6428,10 @@
    "cash_ratio": 0.0769,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "DSGX",
@@ -5688,7 +6450,10 @@
    "cash_ratio": 0.0591,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TTD",
@@ -5707,7 +6472,10 @@
    "cash_ratio": 0.2338,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MWH",
@@ -5726,7 +6494,10 @@
    "cash_ratio": 0.0574,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "QLYS",
@@ -5745,7 +6516,10 @@
    "cash_ratio": 0.0664,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "RUSHB",
@@ -5764,7 +6538,10 @@
    "cash_ratio": 0.0274,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NOVT",
@@ -5783,7 +6560,10 @@
    "cash_ratio": 0.1145,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "RGTI",
@@ -5802,7 +6582,10 @@
    "cash_ratio": 0.0626,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CAI",
@@ -5821,7 +6604,10 @@
    "cash_ratio": 0.1285,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "DOX",
@@ -5840,7 +6626,10 @@
    "cash_ratio": 0.0339,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CROX",
@@ -5859,7 +6648,10 @@
    "cash_ratio": 0.0277,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AXTI",
@@ -5878,7 +6670,10 @@
    "cash_ratio": 0.0684,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FSV",
@@ -5897,7 +6692,10 @@
    "cash_ratio": 0.0284,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NTSK",
@@ -5916,7 +6714,10 @@
    "cash_ratio": 0.1789,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "KNSA",
@@ -5935,7 +6736,10 @@
    "cash_ratio": 0.0871,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CRUS",
@@ -5954,7 +6758,10 @@
    "cash_ratio": 0.1465,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "DUOL",
@@ -5973,7 +6780,10 @@
    "cash_ratio": 0.2174,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "XENE",
@@ -5992,7 +6802,10 @@
    "cash_ratio": 0.1538,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "DFTX",
@@ -6011,7 +6824,10 @@
    "cash_ratio": 0.1794,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TVTX",
@@ -6030,7 +6846,10 @@
    "cash_ratio": 0.0833,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LGND",
@@ -6049,7 +6868,10 @@
    "cash_ratio": 0.2297,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CVLT",
@@ -6068,7 +6890,10 @@
    "cash_ratio": 0.1575,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NICE",
@@ -6087,7 +6912,10 @@
    "cash_ratio": 0.0611,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ACMR",
@@ -6106,7 +6934,10 @@
    "cash_ratio": 0.2473,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FTDR",
@@ -6125,7 +6956,10 @@
    "cash_ratio": 0.1079,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CWST",
@@ -6144,7 +6978,10 @@
    "cash_ratio": 0.0049,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MMYT",
@@ -6163,7 +7000,10 @@
    "cash_ratio": 0.1366,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BCPC",
@@ -6182,7 +7022,10 @@
    "cash_ratio": 0.0112,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PSMT",
@@ -6201,7 +7044,10 @@
    "cash_ratio": 0.0582,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "RELY",
@@ -6220,10 +7066,211 @@
    "cash_ratio": 0.1223,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": true
+   "pass": true,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   }
  ],
  "rejected_detail": [
+  {
+   "code": "BRKRP",
+   "name": "Bruker Corporation 6.375% Mandatory Convertible Preferred Stock Series A",
+   "mcap": null,
+   "sector": "Industrials",
+   "industry": "Biotechnology: Laboratory Analytical Instruments",
+   "country": "United States",
+   "total_debt": 1855200000.0,
+   "total_cash": 184900000.0,
+   "sector_yf": "Healthcare",
+   "industry_yf": "Medical Devices",
+   "business_reasons": [],
+   "business_pass": true,
+   "debt_ratio": 0.0288,
+   "cash_ratio": 0.0029,
+   "ratio_reasons": [],
+   "ratios_pass": true,
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
+  },
+  {
+   "code": "SMCIP",
+   "name": "Super Micro Computer Inc. Depositary Shares representing a 1/20th Interest in a Share of 7% Series A Mandatory Convertible Preferred Stock",
+   "mcap": null,
+   "sector": "Technology",
+   "industry": "Computer Manufacturing",
+   "country": "United States",
+   "total_debt": 9311492096.0,
+   "total_cash": 7521474048.0,
+   "sector_yf": "Technology",
+   "industry_yf": "Computer Hardware",
+   "business_reasons": [],
+   "business_pass": true,
+   "debt_ratio": 0.2372,
+   "cash_ratio": 0.1916,
+   "ratio_reasons": [],
+   "ratios_pass": true,
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
+  },
+  {
+   "code": "MCHPP",
+   "name": "Microchip Technology Incorporated Depositary Shares Each Representing a 1/20th Interest in a Share of 7.50% Series A Mandatory Convertible Preferred Stock",
+   "mcap": null,
+   "sector": "Technology",
+   "industry": "Semiconductors",
+   "country": "United States",
+   "total_debt": 5398700032.0,
+   "total_cash": 272300000.0,
+   "sector_yf": "Technology",
+   "industry_yf": "Semiconductors",
+   "business_reasons": [],
+   "business_pass": true,
+   "debt_ratio": 0.1436,
+   "cash_ratio": 0.0072,
+   "ratio_reasons": [],
+   "ratios_pass": true,
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
+  },
+  {
+   "code": "STRF",
+   "name": "Strategy Inc 10.00% Series A Perpetual Strife Preferred Stock",
+   "mcap": null,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States",
+   "total_debt": 6770777088.0,
+   "total_cash": 2447982080.0,
+   "sector_yf": "Technology",
+   "industry_yf": "Software - Application",
+   "business_reasons": [],
+   "business_pass": true,
+   "debt_ratio": 0.183,
+   "cash_ratio": 0.0662,
+   "ratio_reasons": [],
+   "ratios_pass": true,
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
+  },
+  {
+   "code": "STRC",
+   "name": "Strategy Inc Variable Rate Series A Perpetual Stretch Preferred Stock",
+   "mcap": null,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States",
+   "total_debt": 6770777088.0,
+   "total_cash": 2447982080.0,
+   "sector_yf": "Technology",
+   "industry_yf": "Software - Application",
+   "business_reasons": [],
+   "business_pass": true,
+   "debt_ratio": 0.186,
+   "cash_ratio": 0.0673,
+   "ratio_reasons": [],
+   "ratios_pass": true,
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
+  },
+  {
+   "code": "STRK",
+   "name": "Strategy Inc 8.00% Series A Perpetual Strike Preferred Stock",
+   "mcap": null,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States",
+   "total_debt": 6770777088.0,
+   "total_cash": 2447982080.0,
+   "sector_yf": "Technology",
+   "industry_yf": "Software - Application",
+   "business_reasons": [],
+   "business_pass": true,
+   "debt_ratio": 0.2562,
+   "cash_ratio": 0.0926,
+   "ratio_reasons": [],
+   "ratios_pass": true,
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
+  },
+  {
+   "code": "SFD",
+   "name": "Smithfield Foods Inc. Common Stock",
+   "mcap": 8927998976.0,
+   "sector": "Consumer Staples",
+   "industry": "Meat/Poultry/Fish",
+   "country": "United States",
+   "total_debt": 2396000000.0,
+   "total_cash": 1350000000.0,
+   "sector_yf": "Consumer Defensive",
+   "industry_yf": "Packaged Foods",
+   "business_reasons": [],
+   "business_pass": true,
+   "debt_ratio": 0.2684,
+   "cash_ratio": 0.1512,
+   "ratio_reasons": [],
+   "ratios_pass": true,
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [
+    "pork: Smithfield Foods is a pork producer; its 'Meat/Poultry/Fish' industry label escapes the keyword screen"
+   ],
+   "review_flags": [
+    "meat processing: confirm no pork"
+   ]
+  },
+  {
+   "code": "SATA",
+   "name": "Strive Inc. Variable Rate Series A Perpetual Preferred Stock",
+   "mcap": null,
+   "sector": "Technology",
+   "industry": "Computer Software: Prepackaged Software",
+   "country": "United States",
+   "total_debt": 3319000.0,
+   "total_cash": 188320000.0,
+   "sector_yf": "Financial Services",
+   "industry_yf": "Asset Management",
+   "business_reasons": [],
+   "business_pass": true,
+   "debt_ratio": 0.0004,
+   "cash_ratio": 0.0222,
+   "ratio_reasons": [],
+   "ratios_pass": true,
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
+  },
   {
    "code": "SKHY",
    "name": "SK hynix Inc. American Depositary Shares",
@@ -6244,7 +7291,10 @@
     "cash/mcap 7044% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GOOGM",
@@ -6265,7 +7315,12 @@
     "no debt data"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GOOGN",
@@ -6286,7 +7341,12 @@
     "no debt data"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TMUS",
@@ -6307,7 +7367,10 @@
     "debt/mcap 62% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PDD",
@@ -6328,7 +7391,10 @@
     "cash/mcap 358% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "EQIX",
@@ -6350,7 +7416,10 @@
    "cash_ratio": 0.009,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CME",
@@ -6372,7 +7441,10 @@
    "cash_ratio": 0.0235,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CMCSA",
@@ -6393,7 +7465,10 @@
     "debt/mcap 99% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HOOD",
@@ -6415,7 +7490,10 @@
    "cash_ratio": 0.2755,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NTES",
@@ -6436,7 +7514,10 @@
     "cash/mcap 214% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HON",
@@ -6457,7 +7538,10 @@
     "debt/mcap 48% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "WBD",
@@ -6478,7 +7562,10 @@
     "debt/mcap 46% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AEP",
@@ -6499,7 +7586,10 @@
     "debt/mcap 78% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CRWV",
@@ -6520,7 +7610,10 @@
     "debt/mcap 87% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NDAQ",
@@ -6542,7 +7635,10 @@
    "cash_ratio": 0.0102,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HONA",
@@ -6563,7 +7659,10 @@
     "debt/mcap 31% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PYPL",
@@ -6584,7 +7683,10 @@
    "cash_ratio": 0.2162,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HBANL",
@@ -6608,7 +7710,13 @@
     "cash/mcap 33% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "XEL",
@@ -6629,7 +7737,10 @@
     "debt/mcap 85% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "EXC",
@@ -6650,7 +7761,10 @@
     "debt/mcap 113% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "IBKR",
@@ -6674,7 +7788,10 @@
     "cash/mcap 83% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HBANM",
@@ -6698,7 +7815,12 @@
     "cash/mcap 40% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "KDP",
@@ -6719,7 +7841,10 @@
     "debt/mcap 82% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "UAL",
@@ -6741,7 +7866,10 @@
     "cash/mcap 41% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "COIN",
@@ -6762,7 +7890,10 @@
    "cash_ratio": 0.2199,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HBANZ",
@@ -6786,7 +7917,13 @@
     "cash/mcap 42% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VOD",
@@ -6808,7 +7945,10 @@
     "cash/mcap 39% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "JD",
@@ -6830,7 +7970,10 @@
     "cash/mcap 577% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HBAN",
@@ -6854,7 +7997,10 @@
     "cash/mcap 46% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NTRS",
@@ -6877,7 +8023,10 @@
     "debt/mcap 46% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BIDU",
@@ -6899,7 +8048,10 @@
     "cash/mcap 335% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ERIC",
@@ -6920,7 +8072,10 @@
     "no debt data"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ACGL",
@@ -6941,7 +8096,10 @@
    "cash_ratio": 0.1328,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GEHC",
@@ -6962,7 +8120,10 @@
     "debt/mcap 32% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HBANP",
@@ -6986,7 +8147,13 @@
     "cash/mcap 51% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AGNCN",
@@ -7011,7 +8178,12 @@
     "cash/mcap 62% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "WTW",
@@ -7033,7 +8205,10 @@
    "cash_ratio": 0.0544,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AGNCO",
@@ -7058,7 +8233,12 @@
     "cash/mcap 63% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AGNCZ",
@@ -7083,7 +8263,12 @@
     "cash/mcap 63% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AGNCP",
@@ -7108,7 +8293,12 @@
     "cash/mcap 64% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AGNCM",
@@ -7133,7 +8323,12 @@
     "cash/mcap 64% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AGNCL",
@@ -7158,7 +8353,12 @@
     "cash/mcap 65% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "KHC",
@@ -7179,7 +8379,10 @@
     "debt/mcap 65% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LPLA",
@@ -7201,7 +8404,10 @@
    "cash_ratio": 0.0971,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TCOM",
@@ -7223,7 +8429,10 @@
     "cash/mcap 287% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FISV",
@@ -7244,7 +8453,10 @@
     "no debt data"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ECHO",
@@ -7265,7 +8477,10 @@
     "debt/mcap 64% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CINF",
@@ -7286,7 +8501,10 @@
    "cash_ratio": 0.0717,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "STRD",
@@ -7308,7 +8526,13 @@
     "cash/mcap 302% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FCNCA",
@@ -7332,7 +8556,10 @@
     "cash/mcap 93% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AFRM",
@@ -7355,7 +8582,10 @@
     "debt/mcap 36% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "DLTR",
@@ -7376,7 +8606,10 @@
     "debt/mcap 31% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TW",
@@ -7398,7 +8631,10 @@
    "cash_ratio": 0.0892,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PFG",
@@ -7419,7 +8655,10 @@
    "cash_ratio": 0.2599,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SOFI",
@@ -7440,7 +8679,10 @@
    "cash_ratio": 0.1421,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TROW",
@@ -7461,7 +8703,10 @@
    "cash_ratio": 0.1376,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SMCI",
@@ -7483,7 +8728,10 @@
     "cash/mcap 30% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BNTX",
@@ -7504,7 +8752,10 @@
     "cash/mcap 59% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TPG",
@@ -7525,7 +8776,10 @@
    "cash_ratio": 0.0469,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SBAC",
@@ -7549,7 +8803,10 @@
     "debt/mcap 78% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "EVRG",
@@ -7570,7 +8827,10 @@
     "debt/mcap 86% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BPYPM",
@@ -7591,7 +8851,13 @@
     "no debt data"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)",
+    "unit (bundled instrument), not a share"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BPYPP",
@@ -7612,7 +8878,14 @@
     "debt/mcap 286% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)",
+    "unit (bundled instrument), not a share"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SSNC",
@@ -7633,7 +8906,10 @@
     "debt/mcap 41% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "EWBC",
@@ -7654,7 +8930,10 @@
    "cash_ratio": 0.2999,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "KSPI",
@@ -7675,7 +8954,10 @@
     "no debt data"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VTRS",
@@ -7696,7 +8978,10 @@
     "debt/mcap 73% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TSCO",
@@ -7717,7 +9002,10 @@
     "debt/mcap 36% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LNT",
@@ -7738,7 +9026,10 @@
     "debt/mcap 67% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BPYPO",
@@ -7759,7 +9050,14 @@
     "debt/mcap 303% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)",
+    "unit (bundled instrument), not a share"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AKAM",
@@ -7780,7 +9078,10 @@
     "debt/mcap 53% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CHTR",
@@ -7801,7 +9102,10 @@
     "debt/mcap 490% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CG",
@@ -7824,7 +9128,10 @@
     "debt/mcap 83% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TLN",
@@ -7845,7 +9152,10 @@
     "debt/mcap 56% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CDW",
@@ -7866,7 +9176,10 @@
     "debt/mcap 38% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PAA",
@@ -7887,7 +9200,12 @@
     "debt/mcap 52% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "unit (bundled instrument), not a share"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GEN",
@@ -7908,7 +9226,10 @@
     "debt/mcap 50% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BPYPN",
@@ -7929,7 +9250,14 @@
     "debt/mcap 332% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)",
+    "unit (bundled instrument), not a share"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "IREN",
@@ -7950,7 +9278,10 @@
    "cash_ratio": 0.1349,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "WSE",
@@ -7971,7 +9302,10 @@
     "cash/mcap 42% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TIGO",
@@ -7992,7 +9326,10 @@
     "debt/mcap 77% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HST",
@@ -8016,7 +9353,10 @@
     "debt/mcap 36% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LAMR",
@@ -8040,7 +9380,10 @@
     "debt/mcap 32% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FUTU",
@@ -8065,7 +9408,10 @@
     "cash/mcap 860% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GRAB",
@@ -8086,7 +9432,10 @@
     "cash/mcap 44% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VLYPN",
@@ -8107,7 +9456,13 @@
    "cash_ratio": 0.0887,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ARCC",
@@ -8130,7 +9485,10 @@
     "debt/mcap 112% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HTHT",
@@ -8152,7 +9510,12 @@
     "cash/mcap 111% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "hotels: bar and entertainment revenue"
+   ]
   },
   {
    "code": "SLMBP",
@@ -8176,7 +9539,12 @@
     "cash/mcap 33% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "REG",
@@ -8200,7 +9568,10 @@
     "debt/mcap 36% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VLYPP",
@@ -8221,7 +9592,13 @@
    "cash_ratio": 0.0907,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VLYPO",
@@ -8242,7 +9619,13 @@
    "cash_ratio": 0.0916,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "perpetual fixed-income instrument",
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "WMG",
@@ -8263,7 +9646,12 @@
     "debt/mcap 37% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "entertainment venues"
+   ]
   },
   {
    "code": "LI",
@@ -8285,7 +9673,10 @@
     "cash/mcap 765% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AGNC",
@@ -8310,7 +9701,10 @@
     "cash/mcap 147% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BMRN",
@@ -8331,7 +9725,10 @@
     "debt/mcap 32% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SEIC",
@@ -8353,7 +9750,10 @@
    "cash_ratio": 0.0331,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "DKNG",
@@ -8374,7 +9774,12 @@
    "cash_ratio": 0.0777,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "entertainment venues"
+   ]
   },
   {
    "code": "GLPI",
@@ -8398,7 +9803,10 @@
     "debt/mcap 67% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CHYM",
@@ -8419,7 +9827,10 @@
    "cash_ratio": 0.0975,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ERIE",
@@ -8441,7 +9852,10 @@
    "cash_ratio": 0.0232,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ENLT",
@@ -8462,7 +9876,10 @@
     "debt/mcap 55% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "UMBF",
@@ -8485,7 +9902,10 @@
     "debt/mcap 32% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BPOP",
@@ -8508,7 +9928,10 @@
     "cash/mcap 44% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PSKY",
@@ -8529,7 +9952,12 @@
     "debt/mcap 144% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "broadcasting and entertainment content"
+   ]
   },
   {
    "code": "DPZ",
@@ -8550,7 +9978,10 @@
     "debt/mcap 46% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VSAT",
@@ -8571,7 +10002,10 @@
     "debt/mcap 61% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "WTFC",
@@ -8595,7 +10029,10 @@
     "cash/mcap 39% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ZION",
@@ -8619,7 +10056,10 @@
     "cash/mcap 36% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HUT",
@@ -8642,7 +10082,10 @@
     "debt/mcap 72% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "WYNN",
@@ -8665,7 +10108,12 @@
     "debt/mcap 118% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "hotels: bar and entertainment revenue"
+   ]
   },
   {
    "code": "ONB",
@@ -8688,7 +10136,10 @@
     "debt/mcap 86% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PAYP",
@@ -8710,7 +10161,10 @@
     "cash/mcap 734% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HSIC",
@@ -8731,7 +10185,10 @@
     "debt/mcap 37% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SIRI",
@@ -8752,7 +10209,12 @@
     "debt/mcap 99% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "broadcasting and entertainment content"
+   ]
   },
   {
    "code": "AAL",
@@ -8774,7 +10236,10 @@
     "cash/mcap 87% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ONBPO",
@@ -8797,7 +10262,12 @@
     "debt/mcap 93% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ONBPP",
@@ -8820,7 +10290,12 @@
     "debt/mcap 94% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FRHC",
@@ -8844,7 +10319,10 @@
     "cash/mcap 46% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FCFS",
@@ -8865,7 +10343,10 @@
    "cash_ratio": 0.0184,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "LINE",
@@ -8889,7 +10370,10 @@
     "debt/mcap 83% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "COLB",
@@ -8912,7 +10396,10 @@
     "debt/mcap 55% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "APLD",
@@ -8933,7 +10420,10 @@
     "debt/mcap 57% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BOKF",
@@ -8957,7 +10447,10 @@
     "cash/mcap 77% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "WULF",
@@ -8980,7 +10473,10 @@
     "debt/mcap 60% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CAE",
@@ -9001,7 +10497,10 @@
     "debt/mcap 37% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CBSH",
@@ -9024,7 +10523,10 @@
     "cash/mcap 48% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MTCH",
@@ -9045,7 +10547,10 @@
     "debt/mcap 43% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GLXY",
@@ -9069,7 +10574,10 @@
     "debt/mcap 39% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "TPGXL",
@@ -9090,7 +10598,12 @@
     "no debt data"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "debt security"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VLY",
@@ -9113,7 +10626,10 @@
     "debt/mcap 45% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "SNEX",
@@ -9138,7 +10654,10 @@
     "cash/mcap 468% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "XP",
@@ -9163,7 +10682,10 @@
     "cash/mcap 3591% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AVT",
@@ -9184,7 +10706,10 @@
     "debt/mcap 44% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CBC",
@@ -9205,7 +10730,10 @@
    "cash_ratio": 0.0984,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MORN",
@@ -9226,7 +10754,10 @@
    "cash_ratio": 0.0677,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "DBX",
@@ -9247,7 +10778,10 @@
     "debt/mcap 54% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CIFR",
@@ -9270,7 +10804,10 @@
     "debt/mcap 73% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "FIGR",
@@ -9291,7 +10828,10 @@
    "cash_ratio": 0.1836,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VFS",
@@ -9312,7 +10852,10 @@
     "no debt data"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "RIOT",
@@ -9333,7 +10876,10 @@
    "cash_ratio": 0.0639,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "VCTR",
@@ -9354,7 +10900,10 @@
    "cash_ratio": 0.0096,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MAAS",
@@ -9375,7 +10924,10 @@
    "cash_ratio": 0.0049,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BZ",
@@ -9396,7 +10948,10 @@
     "cash/mcap 296% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "BILI",
@@ -9418,7 +10973,10 @@
     "cash/mcap 337% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GDS",
@@ -9440,7 +10998,10 @@
     "cash/mcap 210% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "GGAL",
@@ -9464,7 +11025,10 @@
     "cash/mcap 96915% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CPB",
@@ -9485,7 +11049,10 @@
     "debt/mcap 108% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ACT",
@@ -9506,7 +11073,10 @@
    "cash_ratio": 0.0727,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "PPC",
@@ -9527,7 +11097,12 @@
     "debt/mcap 46% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "meat processing: confirm no pork"
+   ]
   },
   {
    "code": "UBSI",
@@ -9550,7 +11125,10 @@
     "cash/mcap 31% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ACGLO",
@@ -9574,7 +11152,12 @@
     "cash/mcap 68% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "RRR",
@@ -9597,7 +11180,12 @@
     "debt/mcap 57% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "hotels: bar and entertainment revenue"
+   ]
   },
   {
    "code": "LKQ",
@@ -9618,7 +11206,10 @@
     "debt/mcap 83% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CORZ",
@@ -9641,7 +11232,10 @@
     "debt/mcap 69% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CORZZ",
@@ -9664,7 +11258,12 @@
     "debt/mcap 69% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "warrant, not a share"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HWC",
@@ -9687,7 +11286,10 @@
     "debt/mcap 31% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "AMRX",
@@ -9708,7 +11310,10 @@
     "debt/mcap 44% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CHDN",
@@ -9731,7 +11336,12 @@
     "debt/mcap 79% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "entertainment venues"
+   ]
   },
   {
    "code": "PTCT",
@@ -9753,7 +11363,10 @@
     "cash/mcap 37% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CZR",
@@ -9776,7 +11389,12 @@
     "debt/mcap 429% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "hotels: bar and entertainment revenue"
+   ]
   },
   {
    "code": "RDNT",
@@ -9797,7 +11415,10 @@
     "debt/mcap 36% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "OTEX",
@@ -9818,7 +11439,10 @@
     "debt/mcap 103% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CACC",
@@ -9841,7 +11465,10 @@
     "debt/mcap 104% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "STEP",
@@ -9862,7 +11489,10 @@
    "cash_ratio": 0.112,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CGABL",
@@ -9885,7 +11515,12 @@
     "no debt data"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "debt security"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "OZK",
@@ -9906,7 +11541,10 @@
    "cash_ratio": 0.2793,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "MKTX",
@@ -9928,7 +11566,10 @@
    "cash_ratio": 0.0605,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "HLNE",
@@ -9949,7 +11590,10 @@
    "cash_ratio": 0.0489,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "NXST",
@@ -9970,7 +11614,12 @@
     "debt/mcap 215% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": [
+    "broadcasting and entertainment content"
+   ]
   },
   {
    "code": "SIGI",
@@ -9991,7 +11640,10 @@
    "cash_ratio": 0.0686,
    "ratio_reasons": [],
    "ratios_pass": true,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "ACGLN",
@@ -10015,7 +11667,12 @@
     "cash/mcap 81% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [
+    "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+   ],
+   "override_reasons": [],
+   "review_flags": []
   },
   {
    "code": "CAKE",
@@ -10036,7 +11693,78 @@
     "debt/mcap 38% >= 30%"
    ],
    "ratios_pass": false,
-   "pass": false
+   "pass": false,
+   "instrument_reasons": [],
+   "override_reasons": [],
+   "review_flags": []
+  }
+ ],
+ "corrections": [
+  {
+   "date": "2026-09-25",
+   "rule_layers": "instrument screen (common shares only) + data/sharia_overrides.json",
+   "removed": [
+    {
+     "code": "BRKRP",
+     "name": "Bruker Corporation 6.375% Mandatory Convertible Preferred Stock Series A",
+     "reasons": [
+      "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+     ]
+    },
+    {
+     "code": "SMCIP",
+     "name": "Super Micro Computer Inc. Depositary Shares representing a 1/20th Interest in a Share of 7% Series A Mandatory Convertible Preferred Stock",
+     "reasons": [
+      "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+     ]
+    },
+    {
+     "code": "MCHPP",
+     "name": "Microchip Technology Incorporated Depositary Shares Each Representing a 1/20th Interest in a Share of 7.50% Series A Mandatory Convertible Preferred Stock",
+     "reasons": [
+      "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+     ]
+    },
+    {
+     "code": "STRF",
+     "name": "Strategy Inc 10.00% Series A Perpetual Strife Preferred Stock",
+     "reasons": [
+      "perpetual fixed-income instrument",
+      "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+     ]
+    },
+    {
+     "code": "STRC",
+     "name": "Strategy Inc Variable Rate Series A Perpetual Stretch Preferred Stock",
+     "reasons": [
+      "perpetual fixed-income instrument",
+      "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+     ]
+    },
+    {
+     "code": "STRK",
+     "name": "Strategy Inc 8.00% Series A Perpetual Strike Preferred Stock",
+     "reasons": [
+      "perpetual fixed-income instrument",
+      "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+     ]
+    },
+    {
+     "code": "SFD",
+     "name": "Smithfield Foods Inc. Common Stock",
+     "reasons": [
+      "pork: Smithfield Foods is a pork producer; its 'Meat/Poultry/Fish' industry label escapes the keyword screen"
+     ]
+    },
+    {
+     "code": "SATA",
+     "name": "Strive Inc. Variable Rate Series A Perpetual Preferred Stock",
+     "reasons": [
+      "perpetual fixed-income instrument",
+      "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"
+     ]
+    }
+   ]
   }
  ]
 }

@@ -5,9 +5,15 @@ leave the harness: AAOIFI whitelist and manual exclusions, long-only, per-name
 weight cap, daily turnover cap, and an order-size sanity cap against the
 name's average daily dollar volume.
 
-Ghost mode is report-only: violations are recorded and alerted, because the
-ghost ledger must mirror the twin exactly. In paper mode (Phase 2) the same
-checks filter what is actually submitted to the broker.
+The whitelist and exclusions stop BUYS only. A sale is never blocked for
+compliance reasons: a name that fell out of compliance is exactly the name
+that must be sold (docs/07; the forced exit is generated in cycle_a).
+
+Every violation is recorded and alerted, and the ledger still mirrors the
+twin. What reaches the broker is decided downstream: a per-order violation
+blocks the buy it flags (the submit step skips it; sells are never blocked),
+and a portfolio-level violation (daily turnover, gross cap) holds the night
+until a human releases it (cycle_submit.py).
 """
 
 from __future__ import annotations
@@ -57,12 +63,12 @@ def check_orders(orders: list[dict], twin: dict, refs: dict, universe: set[str],
         est = _est_value(od, equity, ref.get("close"), held_value)
         entry = {"code": code, "side": side, "est_value": round(est, 2) if est else None}
 
-        if code not in universe:
+        if side == "buy" and code not in universe:
             violations.append({**entry, "rule": "whitelist",
                                "detail": "not in the AAOIFI-screened universe"})
-        if code in set(controls.get("excluded_symbols") or []):
+        if side == "buy" and code in set(controls.get("excluded_symbols") or []):
             violations.append({**entry, "rule": "excluded",
-                               "detail": "manually excluded via controls.json"})
+                               "detail": "excluded via controls.json (buys only; sales always allowed)"})
         if side == "buy" and controls.get("pause_entries"):
             violations.append({**entry, "rule": "pause_entries",
                                "detail": "new entries paused via controls.json"})

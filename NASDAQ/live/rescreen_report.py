@@ -4,9 +4,10 @@ Compares a fresh screen against the deployment screen and the twin's book.
 The deployment whitelist itself stays frozen — decision fidelity means the
 twin's universe never changes mid-flight — so the re-screen acts through the
 HARNESS layer: names that fell out of compliance are appended to
-controls.json excluded_symbols (blocked from buys; in paper mode the harness
-also force-exits them over <= 5 sessions). Newly eligible names are reported
-and enter at the next declared redeploy (a change-management event).
+controls.json excluded_symbols. That blocks new buys, and Cycle A adds a
+forced exit at the next open for any that are held (sales are never
+blocked). Newly eligible names are reported and enter at the next declared
+redeploy (a change-management event).
 
 Usage: python NASDAQ/live/rescreen_report.py --fresh data/rescreen/<file>.json
 """
@@ -36,7 +37,10 @@ def main() -> int:
     deployed = json.loads((PKG / "data" / "universe_screened.json").read_text())
     fresh_ok = {u["code"] for u in fresh["universe"]}
     deployed_ok = {u["code"] for u in deployed["universe"]}
-    reasons = {r["code"]: r.get("reason", "?") for r in fresh.get("rejected_detail", [])}
+    reasons = {r["code"]: "; ".join(r.get("business_reasons", []) + r.get("ratio_reasons", [])
+                                    + r.get("instrument_reasons", [])
+                                    + r.get("override_reasons", [])) or "?"
+               for r in fresh.get("rejected_detail", [])}
 
     newly_noncompliant = sorted(deployed_ok - fresh_ok)
     newly_eligible = sorted(fresh_ok - deployed_ok)
@@ -55,8 +59,9 @@ def main() -> int:
                                for c in newly_noncompliant],
         "newly_eligible": newly_eligible,
         "held_and_flagged": held_flagged,
-        "policy": "excluded via controls.json (buys blocked); held names exit <= 5 sessions "
-                  "in paper mode; eligible names enter at the next redeploy",
+        "policy": "excluded via controls.json: buys blocked; held names are force-exited "
+                  "at the next open (Cycle A ledger, submit step); eligible names enter "
+                  "at the next redeploy",
     }
     out = config.LEDGER / "compliance" / f"{today}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -71,8 +76,8 @@ def main() -> int:
 
     if held_flagged:
         alert("P1", f"Re-screen: {len(held_flagged)} HELD name(s) no longer AAOIFI-compliant",
-              f"{', '.join(held_flagged)} — excluded from buys now; orderly exit within "
-              f"5 sessions is the declared policy (harness-enforced in paper mode). "
+              f"{', '.join(held_flagged)} — excluded from buys now; Cycle A ledgers a "
+              f"forced exit at the next open for each (sent by the submit step in paper mode). "
               f"Report: live/ledger/compliance/{today}.json")
     elif newly_noncompliant:
         alert("P2", f"Re-screen: {len(newly_noncompliant)} whitelist name(s) fell out of compliance",

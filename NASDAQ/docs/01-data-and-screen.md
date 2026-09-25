@@ -60,6 +60,27 @@ AMZN, AVGO, META, TSLA — consistent with commercial AAOIFI screens.
 4. **Survivorship bias** — today's listings only; both backtest windows are
    inflated by the absence of the era's failures.
 
+### The 2026-09-25 correction (deployment universe: 319)
+
+A review before go-live (docs/07 §2–3) found eight names the two layers
+above could not catch, and added two offline layers:
+
+3. **Instrument screen** — common shares only. Preferred, perpetual, warrant,
+   unit, right and note lines are rejected by name whatever the issuer's
+   ratios: fixed or priority returns are not common equity under SS 21. It
+   removed BRKRP, SMCIP, MCHPP, STRF, STRC, STRK and SATA.
+4. **Curated overrides** — `data/sharia_overrides.json`. `exclude` rejects
+   names the keyword screen cannot see (SFD, a pork producer filed under
+   "Meat/Poultry/Fish"); `review` flags method-dependent names (media and
+   entertainment, defense, hotels, a bitcoin treasury company, royalty
+   financing, alcohol-selling retailers) for the owner's written policy
+   without excluding them. 22 names carry a review flag.
+
+`pipeline/apply_screen_rules.py` re-applies layers 3 and 4 to a screened file
+without refetching fundamentals and records the correction inside it. The
+election ran on the 327-name universe and its record stands; the deployment
+runs on 319, with the regression in `out/regression_2026-09-25_universe.json`.
+
 ## The two-stage fetch and split integrity
 
 The single most important design decision in this experiment:

@@ -9,6 +9,12 @@ out-of-sample walk-back over **2016–2021**. Everything lives under [`TASI/`](T
 preprocessing, engine internals, every agent's complete parameter set, metric
 definitions, and the out-of-sample validation.
 
+**Second track — [`NASDAQ/`](NASDAQ):** five agents on an AAOIFI-screened
+NASDAQ universe, frozen before an out-of-sample race. The elected `trend`
+agent runs a live harness: ghost mode, then an Alpaca paper account, then a
+real account on a private server. Documentation: [`NASDAQ/docs/`](NASDAQ/docs);
+the dated go-live plan and task list: [`NASDAQ/docs/07-go-live-plan.md`](NASDAQ/docs/07-go-live-plan.md).
+
 ## Layout
 
 ```

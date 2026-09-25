@@ -25,6 +25,8 @@ import hashlib
 import json
 import os
 import sys
+import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -72,6 +74,15 @@ def to_share_order(od: dict, equity: float, close: float | None,
     return {"symbol": code, "side": side, "qty": qty}
 
 
+class BrokerError(RuntimeError):
+    """A venue refusal, with the HTTP status and the venue's own message."""
+
+    def __init__(self, status: int, body: str):
+        super().__init__(f"HTTP {status}: {body[:300]}")
+        self.status = status
+        self.body = body
+
+
 class GhostBroker:
     """Logs instead of trading. The ledger written by cycle_a IS its record."""
 
@@ -86,6 +97,9 @@ class GhostBroker:
 
     def positions(self) -> list:
         return []
+
+    def order_by_client_id(self, coid: str) -> dict | None:
+        return None
 
     def fills(self, day: str) -> list:
         return []
@@ -115,11 +129,15 @@ class AlpacaPaperBroker:
                      "APCA-API-SECRET-KEY": self.secret,
                      "Content-Type": "application/json"},
         )
-        with urllib.request.urlopen(req, timeout=30) as r:
-            body = r.read()
-            return json.loads(body) if body else {}
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                body = r.read()
+                return json.loads(body) if body else {}
+        except urllib.error.HTTPError as exc:
+            raise BrokerError(exc.code, exc.read().decode("utf-8", "replace")) from exc
 
     def submit_moo(self, symbol: str, side: str, qty: int, coid: str) -> dict:
+        """Market-on-open. Only accepted 19:00-09:28 ET (see config)."""
         return self._req("POST", "/v2/orders", {
             "symbol": symbol, "side": side, "qty": str(qty),
             "type": "market", "time_in_force": "opg",
@@ -131,6 +149,18 @@ class AlpacaPaperBroker:
 
     def positions(self) -> list:
         return self._req("GET", "/v2/positions")
+
+    def order_by_client_id(self, coid: str) -> dict | None:
+        """The order we submitted under our own id: status, filled_qty,
+        filled_avg_price. Fill activities only carry Alpaca's order id, so
+        this is how a fill is traced back to the ledger."""
+        q = urllib.parse.urlencode({"client_order_id": coid})
+        try:
+            return self._req("GET", f"/v2/orders:by_client_order_id?{q}")
+        except BrokerError as exc:
+            if exc.status == 404:
+                return None
+            raise
 
     def fills(self, day: str) -> list:
         return self._req("GET", f"/v2/account/activities/FILL?date={day}")
