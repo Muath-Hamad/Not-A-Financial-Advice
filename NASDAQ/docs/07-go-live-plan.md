@@ -76,12 +76,12 @@ twin's universe (decision fidelity).
 | **2 — Paper** | from **Mon 2 Nov 2026** | Same, against an Alpaca paper account. First week in approval mode (a human releases each night) | 10 clean paper sessions (earliest **Fri 13 Nov**): no P1, no reconciliation break, average slippage ≤ 10 bps/side |
 | **3 — Evaluation** | 2 Nov 2026 → **Tue 4 May 2027** (126 sessions, 2 live adaptations) | Steady state; quarterly re-screens (1 Jan, 1 Apr); monthly reviews | The pre-registered bands (docs/05 §8): tracking error to twin < 0.5%/month, slippage ≤ 10 bps/side, rolling 63-session Sharpe > 0.5 absent a bear market, zero unresolved P1 |
 | **4 — Private build** (parallel) | Jan 2027 build; burn-in **Mon 1 Feb → Mon 1 Mar 2027** (20 sessions) | The Unraid container in ghost mode | 20 sessions in which the private twin's orders and book equal the public twin's |
-| **5 — Real money** | pilot from **Mon 10 May 2027** at the earliest | The Unraid executor against a live cash account | Evaluation passed + burn-in passed + decisions D1–D6 made + tasks R1–R6 done |
+| **5 — Real money** | pilot from **Mon 10 May 2027** at the earliest | The Unraid executor against a live cash account | Evaluation passed + burn-in passed + decisions D1–D8 made + tasks R1–R5 done |
 
 Real money is gated on the evaluation verdict. An earlier **micro-pilot**
-(a small live account from Tue 2 Mar 2027, after the burn-in) is an option
-for testing the real execution path only (§7, R7); it is not a verdict on the
-agent.
+(at most $5,000 from Tue 2 Mar 2027, after the burn-in) is an option for
+testing the real execution path only (D7, task R6); it is not a verdict on
+the agent.
 
 ## 5. Private deployment on the Unraid server
 
@@ -127,8 +127,8 @@ whether a day is a session, so the cron lines stay simple.
 | Idempotent steps, safe to re-run after a power cut | done |
 | Push alerts without GitHub | done: `ALERT_WEBHOOK_URL` (ntfy, Telegram, Discord, Slack-style JSON) |
 | A live broker class, armed only on the box | **to do (R2)** |
-| Twin at the account's real capital | **to do (R3)** |
-| Cash-account execution | **to do (R4)** |
+| Orders sized to the account's own capital (the mirror) | **to do (R1)** |
+| Cash-account settlement and withholding | **to do (R4)** |
 | Container, crontab, `run-step`, heartbeat pings | **to do (U2, U4)** |
 | Cross-check of private vs public twin decisions | **to do (U6)** |
 
@@ -154,11 +154,13 @@ whether a day is a session, so the cron lines stay simple.
 | ID | Decision | Recommendation | Needed by |
 |---|---|---|---|
 | D1 | **Sharia policy in writing**: the standard (AAOIFI SS 21), a ruling on each of the 22 review-flagged names (media and entertainment, defense, hotels, MSTR, RPRX, CASY, TXRH, …), and the purification method | Rule on the review list **before 30 Oct 2026**: a universe change after the paper start breaks decision fidelity, so later rulings can only act as exclusions and forced exits | 30 Oct 2026 |
-| D2 | Real-money account type | **Cash account** (no margin agreement), with the execution change in R4 | Feb 2027 |
-| D3 | Real-money broker | **Alpaca live**: the same API as paper, so the evaluated path is the traded path. Alternative: Interactive Brokers (lower costs at size, a different API, a new adapter to write and test) | Jan 2027 |
-| D4 | Pilot capital and hard limits | Start small; set a loss limit that halts the pilot. Note R3: very small accounts round positions coarsely | Apr 2027 |
-| D5 | Cold or warm start at each switch | **Cold**: reset `LIVE_START` so the twin and the account both start in cash on the same session | at each switch |
-| D6 | Private ledger remote | A **private GitHub repository** (off-site copy, issues for P1s); Gitea on the Unraid box keeps everything home but loses the off-site copy | Jan 2027 |
+| D2 | Real-money account type | **Cash account** (no margin agreement), with the settlement guard in R4 | Feb 2027 |
+| D3 | Real-money broker | **Alpaca live**: the same API as paper, so the evaluated path is the traded path. Alternatives: Interactive Brokers (a different API and a new adapter), or a Saudi platform with orders placed by hand | Jan 2027 |
+| D4 | Pilot capital and pain threshold | $10,000–25,000, below the $60,000 estate-tax line; review at −15% from the pilot's high | Apr 2027 |
+| D5 | Cold or warm start at each switch | **Cold**: reset `LIVE_START` so the twin and the account both start in cash on the same session. Warm keeps the learned parameters but starts the account fully invested through the mirror | at each switch |
+| D6 | Ledger remote for the Unraid box | A **private GitHub repository** (off-site copy, issues for P1s); Gitea on the box keeps everything home but loses the off-site copy | Jan 2027 |
+| D7 | When real money starts | **After the verdict** (Mon 10 May 2027), or add an operations-only micro-pilot of at most $5,000 from Tue 2 Mar 2027 | Feb 2027 |
+| D8 | `factor2` as a second paper account | Doc 05 recommends it: one more state file, and the evaluation becomes a live election | Fri 16 Oct 2026 |
 
 ## 7. Task list
 
@@ -169,6 +171,7 @@ one; dates are the latest sensible completion.
 
 | ID | Task | Owner | Due | Status |
 |---|---|---|---|---|
+| G0 | Fix the paper path, move the workflows to `main`, correct the universe, add tests (this change, §2) | Claude | Fri 25 Sep 2026 | done |
 | G1 | Merge `claude/trading-agent-market-deploy-357d6j` into `main` | you | Sun 27 Sep 2026 | open |
 | G2 | Check the post-merge push drills: `live-cycle-a`, `live-cycle-b`, `live-submit`, `live-rescreen`, `nasdaq-tests` all green | you / Claude | Sun 27 Sep | open |
 | G3 | If the merge slips past 27 Sep, set the repository variable `LIVE_START` to the first session after the merge | you | at merge | conditional |
@@ -214,23 +217,29 @@ one; dates are the latest sensible completion.
 
 | ID | Task | Owner | Due | Status |
 |---|---|---|---|---|
-| R1 | Open the live account (cash, individual); W-8BEN; fund it only at pilot start | you | Apr 2027 | open |
-| R2 | Live broker class: `LIVE_MODE=live`, base URL from the environment, refuses to start unless an arming variable is set, per-order and per-night notional caps, never configured on GitHub | Claude | Feb 2027 | open |
-| R3 | Twin capital: make the starting capital configurable (`sim/engine.py` change, byte-identical when unset, proven by regression) and run the OOS window at the pilot's capital to measure rounding cost | Claude | Feb 2027 | open |
-| R4 | Cash-account execution. In a cash account, buying power at 19:15 ET does not include proceeds from sells that fill at the next open. Options: (a) keep a cash reserve and accept that rotation buys wait a day (measured drift); (b) send rotation buys as market orders after the open once the sells fill; the new position must then not be sold before the sale proceeds settle (T+1), or it is a good-faith violation. Verify Alpaca's cash-account rules on the live account, then implement the chosen option with tests | Claude + you | Mar 2027 | open |
-| R5 | Purification ledger: dividends received × each name's impermissible-income share (source per S2), reported quarterly | Claude | Mar 2027 | open |
-| R6 | Tax and estate check with a professional: 30% withholding on US dividends for a Saudi resident (no treaty), US estate tax on US assets above $60,000 for non-residents | you | Apr 2027 | open |
-| R7 | Optional micro-pilot on the box from Tue 2 Mar 2027: small capital, tests the live execution path only | you | Mar 2027 | option |
-| R8 | Go/no-go for the pilot (evaluation passed, burn-in passed, D1–D6 made, R1–R6 done); pilot start Mon 10 May 2027 at the earliest | you | May 2027 | open |
+| R1 | **Mirror**: each evening turn the twin's book after tomorrow's orders into share targets at the account's own equity, and trade the difference at the open above a small no-trade band; excluded names target zero. Works at any capital and heals partial fills and rounding. Tested on a second paper account: 20 sessions within 1% of the twin. (Rejected alternative: run the twin at the account's capital, which changes the evaluated configuration) | Claude | Fri 26 Feb 2027 | open |
+| R2 | Live broker class: `LIVE_MODE=live`, base URL from the environment, refuses to start unless an arming variable is set, per-order and per-night notional caps, never configured on GitHub | Claude | Fri 26 Feb 2027 | open |
+| R3 | Licensed Sharia data: AAOIFI status and the 5% impermissible-income test from Zoya (or Musaffa) for every name, a dated status log, a purification entry per dividend, a yearly zakat statement | Claude (you buy the subscription) | Fri 26 Feb 2027 | open |
+| R4 | Settlement and tax. In a cash account, buying power at 19:15 ET does not include proceeds from sells that fill at the next open. Options: (a) keep a cash reserve and let rotation buys wait a day (measured drift); (b) send rotation buys as market orders after the open once the sells fill, and never sell that position before the sale proceeds settle (T+1), or it is a good-faith violation. Verify Alpaca's cash-account rules, implement the chosen option with tests, and book the 30% dividend withholding and pay dates in the ledger | Claude + you | Fri 26 Feb 2027 | open |
+| R5 | Open the live cash account with no margin, shorting, stock lending or high-yield cash; file a W-8BEN; take written tax advice on withholding and on US estate tax above $60,000 | you | Fri 26 Feb 2027 | open |
+| R6 | Optional micro-pilot on the box (D7): at most $5,000 from Tue 2 Mar 2027; tests funding, fills, withholding and reconciliation, not performance | you + Claude | Mar 2027 | option |
+| R7 | Go/no-go: evaluation passed, burn-in passed, D1–D8 made, R1–R5 done. Fund the pilot (D4); the first 10 sessions run in approval mode; pilot from Mon 10 May 2027 at the earliest | you | May 2027 | open |
 
 ### S — Sharia
 
 | ID | Task | Owner | Due | Status |
 |---|---|---|---|---|
 | S1 | Written policy (D1), optionally reviewed by a scholar | you | Fri 30 Oct 2026 | open |
-| S2 | Revenue-based 5% impermissible-income test from a Shariah data API (Zoya or Musaffa) for held names, quarterly. The free-data screen can only proxy it | Claude (needs an API key on the box) | Mar 2027 | open |
-| S3 | Quarterly cross-check of the universe against a Shariah ETF's holdings (HLAL, SPUS); investigate disagreements | Claude | 1 Jan 2027 | open |
-| S4 | Apply D1 rulings: before 30 Oct via `data/sharia_overrides.json` + `apply_screen_rules.py` + regression; after that only through `controls.json` exclusions | Claude | Fri 30 Oct 2026 | open |
+| S2 | Apply the D1 rulings: before 30 Oct through `data/sharia_overrides.json`, `apply_screen_rules.py` and a regression; after that only through `controls.json` exclusions | Claude | Fri 30 Oct 2026 | open |
+| S3 | Quarterly cross-check of the universe against Shariah ETF holdings (HLAL, SPUS); investigate every disagreement on a held name | Claude | Fri 1 Jan 2027 | open |
+
+### X — Recommended during the evaluation
+
+| ID | Task | Owner | Due | Status |
+|---|---|---|---|---|
+| X1 | Broker-grade data and a history lock: Alpaca daily bars as the primary source, NASDAQ as cross-check, Yahoo as fallback; each night, check that data revisions have not changed a decision already sent. A new data vendor feeds the indicators, so a 2023–26 regression must show decisions unchanged or document the differences | Claude | Fri 29 Jan 2027 | open |
+| X2 | Learning-loop oversight: an alert with the parameter changes each time `adapt()` fires, and the pause control doc 05 lists | Claude | Fri 29 Jan 2027 | open |
+| X3 | If D8 says yes: `factor2` on a second paper account from the same first session (agent and ledger chosen by environment, a second key pair, the workflows run once per agent) | Claude + you | Fri 30 Oct 2026 | conditional |
 
 ## 8. Risks and how the plan answers them
 
@@ -238,7 +247,7 @@ one; dates are the latest sensible completion.
 |---|---|
 | GitHub cron delays (often 10–60 min at busy times) | Submit slots every 30 minutes; a late Cycle A is picked up by the next slot; manual runs until 09:28 ET; dead-man checks |
 | Data-source outage or bad prints | The data gate trips and nothing trades that day; the second source cross-checks up to 40 names |
-| Paper fills flatter than real auction fills | The micro-pilot (R7) or the pilot measures real slippage; the 10 bps band applies to both |
+| Paper fills flatter than real auction fills | The micro-pilot (R6) or the pilot measures real slippage; the 10 bps band applies to both |
 | Splits or other corporate actions between submit and reconcile | They show up as a reconciliation break, which halts until a human writes the cause into `halt.json` and clears it |
 | Twin/account drift from whole-share estimates | Measured nightly (`account_drift`), tolerance ±2 shares or 5%; persistent drift is a P1 |
 | Forced exits make the account differ from the twin | Expected and labelled (`explained`) in the drift report; not a breach |
