@@ -1,0 +1,86 @@
+{
+ "cycle": "A",
+ "ts_utc": "2026-09-25T23:51:41+00:00",
+ "mode": "ghost",
+ "smoke": false,
+ "code_version": "42c139510f8636c5104842e1890e97ede5c7ef02",
+ "asof": "2026-09-25",
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "excluded_symbols": [],
+  "gross_cap": null
+ },
+ "data_gate": {
+  "status": "pass",
+  "asof": "2026-09-25",
+  "checks": {
+   "ixic_at_asof": {
+    "pass": true,
+    "last": "2026-09-25"
+   },
+   "fetch_ok": {
+    "pass": true,
+    "value": 0.9695,
+    "min": 0.9
+   },
+   "coverage_at_asof": {
+    "pass": true,
+    "value": 1.0,
+    "min": 0.95,
+    "missing": []
+   },
+   "cross_source": {
+    "pass": true,
+    "compared": 1,
+    "unavailable": 39,
+    "disagreements": [],
+    "tol": 0.005
+   }
+  }
+ },
+ "determinism": {
+  "match": true,
+  "sha256": "94678b8da5e16f53"
+ },
+ "ghost_gate": {
+  "streak": 1,
+  "target": 10,
+  "passed": false
+ },
+ "drawdown_from_peak": -0.0959,
+ "guardrails": {
+  "n_orders": 0,
+  "checked": [],
+  "buy_total": 0.0,
+  "sell_total": 0.0,
+  "turnover": 0.0,
+  "violations": []
+ },
+ "open_revision": {
+  "n": 0,
+  "worst": 0.0
+ },
+ "submitted": [],
+ "status": "ok",
+ "twin": {
+  "sessions": 28,
+  "equity_final": 90407.14,
+  "ret_total": -0.0959,
+  "n_positions": 10,
+  "n_orders_next_open": 0,
+  "n_trades": 30,
+  "n_adaptations": 0,
+  "decide_errors": 0,
+  "inputs": {
+   "manifest_sha": "dfa13ef86a00ed8ea188103815dfeb59ed11f1a1bef52d56ff353106e4ffcd71",
+   "universe_sha": "02a34f4f83c8da8008a7a6a236a8dabbff5c3614f42209cd73c9dd9c9e085ecb",
+   "strategy_sha": "a251225eb9a8fc066947ce698844ce718d25167dd07f7c3e23152f555ea31ccd",
+   "engine_sha": "ded722f2e21dabec2e47bf3cebcdda918698bfa5722ebe2c933cd26851895f5d",
+   "commission": "0.0",
+   "slippage": "0.0005",
+   "adapt_every": "63"
+  }
+ },
+ "duration_s": 446.2
+}
