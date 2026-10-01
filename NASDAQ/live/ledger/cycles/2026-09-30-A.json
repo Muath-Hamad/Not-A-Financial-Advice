@@ -1,0 +1,69 @@
+{
+ "cycle": "A",
+ "ts_utc": "2026-10-01T00:23:21+00:00",
+ "mode": "ghost",
+ "smoke": false,
+ "code_version": "3e88381e863da58b421a74f1156976b752d15222",
+ "asof": "2026-09-30",
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "excluded_symbols": [],
+  "gross_cap": null
+ },
+ "data_gate": {
+  "status": "trip",
+  "asof": "2026-09-30",
+  "checks": {
+   "ixic_at_asof": {
+    "pass": true,
+    "last": "2026-09-30"
+   },
+   "fetch_ok": {
+    "pass": true,
+    "value": 0.9695,
+    "min": 0.9
+   },
+   "coverage_at_asof": {
+    "pass": false,
+    "value": 0.0063,
+    "min": 0.95,
+    "missing": [
+     "AAOI",
+     "AAON",
+     "AAPL",
+     "ABNB",
+     "ABVX",
+     "ACMR",
+     "ADBE",
+     "ADI",
+     "ADP",
+     "ADSK",
+     "AEIS",
+     "ALAB",
+     "ALGM",
+     "ALGN",
+     "ALKS",
+     "ALNY",
+     "AMAT",
+     "AMD",
+     "AMGN",
+     "AMKR",
+     "AMZN",
+     "APA",
+     "APP",
+     "APPF",
+     "ARGX"
+    ]
+   },
+   "cross_source": {
+    "pass": true,
+    "compared": 1,
+    "unavailable": 39,
+    "disagreements": [],
+    "tol": 0.005
+   }
+  }
+ },
+ "status": "data_gate_tripped"
+}
