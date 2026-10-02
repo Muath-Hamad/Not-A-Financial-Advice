@@ -28,6 +28,49 @@ export interface SystemStatus {
   /** A stop-and-flatten is queued for the next open. */
   flatten: boolean;
   clock: Clock;
+  facts: Facts;
+}
+
+/**
+ * Dated facts the chrome and banners quote. The server derives them from the
+ * ledger and the exchange calendar so no copy hard-codes a date.
+ */
+export interface Facts {
+  /** Today's date in ET (ISO). */
+  today: string;
+  model: {
+    /** Session the Model book (the twin) is valued at. */
+    asof: string;
+    /** ET time the last good Cycle A finished, e.g. "17:05 ET". */
+    builtAt: string | null;
+    /** Minutes since that Cycle A finished. */
+    ageMin: number | null;
+    /** Completed sessions after `asof` that have no good Cycle A. */
+    sessionsBehind: number;
+  };
+  /** The latest Cycle A run. */
+  lastCycleA: { session: string; ok: boolean; finishedAt: string | null; durationS: number | null } | null;
+  /** Consecutive failed Cycle A sessions, newest last. */
+  failing: { count: number; from: string; to: string; reason: string; checks: string } | null;
+  /** Next regular session (ISO), where orders would fill at the open. */
+  nextOpen: string;
+  /** Minutes until tonight's 19:15 ET submit, when still ahead. */
+  submitInMin: number | null;
+  /** Minutes until the next 09:30 ET open. */
+  openInMin: number | null;
+  ledger: { commit: string | null; syncedMinAgo: number | null; down: boolean; downMin: number | null };
+  broker: { reachable: boolean; lastOk: string | null; latencyMs: number | null } | null;
+  /** ET time of the last account snapshot (paper/live only). */
+  accountAt: string | null;
+  halt: { symbol: string; expected: number; actual: number; at: string } | null;
+  screen: { last: string; next: string };
+  /** Owner decision D1 (written Sharia policy) due date. */
+  d1Due: string;
+  /** First paper session (docs/07). */
+  paperStart: string;
+  twinStart: string;
+  /** One-line market backdrop from the agent's journal, or null. */
+  regime: string | null;
 }
 
 export interface ManualOrder {
@@ -114,22 +157,30 @@ export interface Position {
   shares: number;
   avgCost: number;
   last: number;
-  dayPct: number;
+  /** Change since the previous session's close, % — null without a previous price. */
+  dayPct: number | null;
   entryDate: string;
   heldSessions: number;
-  atr: number;
-  high: number;
-  rank: number;
-  offHighPct: number;
-  smaStack: string;
+  /** Average true range in $ (from the insights step, M3). */
+  atr: number | null;
+  /** 52-week high. */
+  high: number | null;
+  /** Momentum rank in the universe today. */
+  rank: number | null;
+  offHighPct: number | null;
+  smaStack: string | null;
   /** avg − STOP_ATR × ATR */
-  initialStop: number;
+  initialStop: number | null;
   /** 52-week-high − TRAIL_ATR × ATR */
-  trailingStop: number;
-  confidence: Confidence;
-  crossSource: 'agree' | 'unavailable' | 'disagree';
-  debtPct: number;
-  cashPct: number;
+  trailingStop: number | null;
+  /** null until ledger/insights/<asof>.json exists (docs/08 §6, milestone M3). */
+  confidence: Confidence | null;
+  crossSource: 'agree' | 'unavailable' | 'disagree' | null;
+  /** Debt and cash vs market cap, % (null when the screen has no figure). */
+  debtPct: number | null;
+  cashPct: number | null;
+  /** Date of the screen the ratios come from. */
+  screenedOn: string | null;
   /** Review-flagged by the business screen; owner ruling pending (D1). */
   review: { keyword: string; category: string } | null;
   entryReason: string;
@@ -165,6 +216,8 @@ export interface HoldingDetailPayload {
   prices: { date: string; close: number }[];
   /** Overall confidence per session since entry, oldest first. */
   confidenceHistory: number[];
+  /** Why `prices` is empty, when it is. */
+  pricesNote: string | null;
   lots: Lot[];
 }
 
@@ -206,7 +259,8 @@ export interface HistOrder {
   shares: number;
   /** Account shares when the submit adjusted the order (F6). */
   accountShares: number | null;
-  decisionClose: number;
+  /** Close the decision was made at (null in Ghost: the twin does not ledger it). */
+  decisionClose: number | null;
   officialOpen: number;
   fillPrice: number;
   fees: number;
@@ -222,7 +276,7 @@ export interface HistoryPayload {
   orders: HistOrder[];
 }
 
-export type ExitReason = 'stop' | 'trail' | 'rank' | 'time' | 'sma' | 'forced' | 'manual';
+export type ExitReason = 'stop' | 'trail' | 'rank' | 'time' | 'sma' | 'derisk' | 'forced' | 'manual' | 'other';
 
 export interface RoundTrip {
   symbol: string;
@@ -234,7 +288,10 @@ export interface RoundTrip {
   exitPrice: number;
   pnl: number;
   exitReason: ExitReason;
-  confAtEntry: number;
+  /** Confidence at entry (null before the insights step, M3). */
+  confAtEntry: number | null;
+  /** The ledger's own wording of the exit. */
+  reason: string;
 }
 
 export interface RoundTripsPayload {
@@ -249,8 +306,8 @@ export interface UniverseName {
   name: string;
   grade: Grade;
   status: 'Compliant' | 'Under review' | 'Excluded';
-  debtPct: number;
-  cashPct: number;
+  debtPct: number | null;
+  cashPct: number | null;
   flag: string;
 }
 

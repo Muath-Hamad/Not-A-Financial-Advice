@@ -5,6 +5,7 @@ import type { Alert, Intent as OrderIntent, Position } from '@/api/types';
 import { control, nav, toast, type Intent, type Screen } from './actions';
 import { openAlerts, pendingRows, pill, tonight, type TimelineStep } from './core';
 import type { Ctx } from './ctx';
+import { ago, daysBetween, hm, wdLabel } from '@/lib/dates';
 
 export interface TopBar {
   envL: string;
@@ -32,16 +33,18 @@ export function selectTop(c: Ctx, alerts: Alert[]): TopBar {
   const al = openAlerts(alerts);
   const p1 = al.filter((a) => a.priority === 'P1').length;
   const p2 = al.filter((a) => a.priority === 'P2').length;
-  let sync1 = 'Ledger synced 2 min ago';
+  const fa = c.facts;
+  let sync1 = 'Ledger synced ' + ago(fa.ledger.syncedMinAgo) + ' ago';
   let sync2 = env === 'ghost' ? 'No broker (ghost)' : 'Broker live';
   let syncCls = '';
   if (c.data === 'error') {
-    if (env === 'ghost') { sync1 = 'Indexer down 14 min'; sync2 = 'last commit 7f3c2a1'; } else sync2 = 'Broker unreachable';
+    if (fa.ledger.down) { sync1 = 'Indexer down ' + ago(fa.ledger.downMin); sync2 = 'last commit ' + (fa.ledger.commit ?? '—'); } else sync2 = 'Broker unreachable';
     syncCls = 'red';
   }
   if (c.data === 'loading') { sync1 = 'Syncing ledger…'; syncCls = 'amber'; }
-  if (c.data === 'stale') { sync2 = 'model book 6 days old'; syncCls = 'amber'; }
-  const cdMap = { running: c.released ? 'Open in 13h59m' : 'Submit in 1h12m', paused: 'Submit in 1h12m', held: 'Release by 09:28', halted: 'Clear the halt', stopped: 'Kill active' };
+  if (c.data === 'stale') { sync2 = 'model book ' + daysBetween(fa.model.asof, fa.today) + ' days old'; syncCls = 'amber'; }
+  const next = c.released || fa.submitInMin == null ? 'Open in ' + hm(fa.openInMin) : 'Submit in ' + hm(fa.submitInMin);
+  const cdMap = { running: next, paused: next, held: 'Release by 09:28', halted: 'Clear the halt', stopped: 'Kill active' };
   return {
     envL: { ghost: 'GHOST', paper: 'PAPER', live: 'LIVE' }[env],
     envCls: env,
@@ -75,11 +78,19 @@ export function selectBanners(c: Ctx): Banner[] {
   const own = c.role === 'owner';
   const g = c.env === 'ghost';
   const A = (l: string, intent: Intent, cls = ''): BannerAct => ({ l, intent, cls });
-  if (c.data === 'stale') B.push({ tone: 'red', title: 'Cycle A has failed 4 sessions in a row (Mon 28 Sep → Thu 1 Oct).', text: 'Data gate tripped: coverage at asof 0.6% < 95%. Model book is from Fri 25 Sep.', acts: [A('View details', nav('health')), ...(own ? [A('Re-run Cycle A', control('rerun', 'Cycle A'), 'primary')] : [])] });
+  const fa = c.facts;
+  const fl = fa.failing;
+  if (c.data === 'stale' && fl) {
+    const title = fl.count === 1 ? 'Cycle A failed on ' + wdLabel(fl.to) + '.' : 'Cycle A has failed ' + fl.count + ' sessions in a row (' + wdLabel(fl.from) + ' → ' + wdLabel(fl.to) + ').';
+    B.push({ tone: 'red', title, text: fl.reason + '. Model book is from ' + wdLabel(fa.model.asof) + '.', acts: [A('View details', nav('health')), ...(own ? [A('Re-run Cycle A', control('rerun', 'Cycle A'), 'primary')] : [])] });
+  }
   if (c.data === 'error') B.push(g
-    ? { tone: 'red', title: 'Indexer unreachable.', text: 'The ledger has not synced for 14 min; panels show the last indexed commit 7f3c2a1.', acts: [A('View health', nav('health')), A('Retry', toast('Retrying… the indexer is still unreachable'))] }
-    : { tone: 'red', title: 'Broker unreachable.', text: 'Gateway timeout after 10 s (last success 17:41 ET). Account figures are last known; immediate broker commands will fail.', acts: [A('View health', nav('health')), A('Retry', toast('Retrying… the gateway is still timing out'))] });
-  if (c.trading === 'halted') B.push({ tone: 'red', title: 'Submit halted — reconciliation break.', text: 'Cycle B 09:50: ROKU expected 75, the account holds 74. Nothing is sent until you clear the halt with a cause.', acts: own ? [A('Resolve in Controls', nav('controls'), 'primary')] : [] });
+    ? { tone: 'red', title: 'Indexer unreachable.', text: 'The ledger has not synced for ' + ago(fa.ledger.downMin) + '; panels show the last indexed commit ' + (fa.ledger.commit ?? '—') + '.', acts: [A('View health', nav('health')), A('Retry', toast('Retrying… the indexer is still unreachable'))] }
+    : { tone: 'red', title: 'Broker unreachable.', text: 'Gateway timeout after 10 s (last success ' + (fa.broker?.lastOk ?? '—') + '). Account figures are last known; immediate broker commands will fail.', acts: [A('View health', nav('health')), A('Retry', toast('Retrying… the gateway is still timing out'))] });
+  if (c.trading === 'halted') {
+    const h = fa.halt;
+    B.push({ tone: 'red', title: 'Submit halted — reconciliation break.', text: (h ? 'Cycle B 09:50: ' + h.symbol + ' expected ' + h.expected + ', the account holds ' + h.actual + '. ' : '') + 'Nothing is sent until you clear the halt with a cause.', acts: own ? [A('Resolve in Controls', nav('controls'), 'primary')] : [] });
+  }
   if (c.trading === 'stopped') B.push({ tone: 'red', title: 'Trading stopped (kill switch).', text: c.flatten ? 'Every position sells at Monday’s open. The twin keeps running for comparison.' : 'No orders are ledgered or sent. The twin keeps running for comparison.', acts: own ? [A('Resume…', { kind: 'preflight' })] : [] });
   if (c.trading === 'held') B.push({ tone: 'blue', title: 'Approval mode:', text: 'tonight’s orders need your release before 09:28 ET.', acts: own ? [A('Review & release', nav('controls'), 'primary')] : [] });
   if (c.trading === 'paused') B.push({ tone: 'amber', title: 'Entries paused.', text: 'Buys are blocked by pause_entries; sells, stops and forced exits still flow.', acts: own ? [A('Controls', nav('controls'))] : [] });
@@ -102,7 +113,7 @@ export interface NavBadges {
   moreN: string;
 }
 
-export const MORE_SCREENS: Screen[] = ['performance', 'compliance', 'agent', 'health', 'alerts', 'audit', 'roadmap', 'settings', 'more'];
+export const MORE_SCREENS: Screen[] = ['performance', 'compliance', 'agent', 'health', 'alerts', 'audit', 'roadmap', 'glossary', 'settings', 'more'];
 
 export function selectNav(c: Ctx, positions: Position[], intents: OrderIntent[], alerts: Alert[]): NavBadges {
   const pend = pendingRows(intents, positions, c).filter((x) => x.live).length;
@@ -117,7 +128,7 @@ export function selectNav(c: Ctx, positions: Position[], intents: OrderIntent[],
     bCompCls: rev ? 'amber' : '',
     bCtl: ctlAlert ? '!' : '',
     bCtlCls: ctlAlert ? (c.trading === 'held' ? 'amber' : 'red') : '',
-    bHealth: c.data === 'stale' ? '4' : c.data === 'error' ? '!' : '',
+    bHealth: c.data === 'stale' ? String(c.facts.failing?.count ?? '!') : c.data === 'error' ? '!' : '',
     bHealthCls: c.data === 'stale' || c.data === 'error' ? 'red' : '',
     bAl: al.length ? String(al.length) : '',
     bAlCls: p1 ? 'red' : al.length ? 'amber' : '',
@@ -143,19 +154,24 @@ export interface Freshness {
 /** Data age per panel (docs/08 §11): amber > 1 session behind, red > 2. */
 export function selectFresh(c: Ctx): Freshness {
   const g = c.env === 'ghost';
+  const fa = c.facts;
+  const m = fa.model;
+  const age = ago(m.ageMin);
+  const behind = m.sessionsBehind;
+  const days = daysBetween(m.asof, fa.today);
   const fr: Freshness = {
-    model: { cls: '', l: 'Model book · Fri 25 Sep 17:05 ET · 58 min', s: '58 min' },
-    acct: { cls: '', l: g ? 'No broker (ghost)' : 'Account · 2 min ago', s: '2 min' },
-    ledger: { cls: '', l: '2 min ago', s: '2 min' },
-    broker: { cls: '', l: g ? 'Ghost · no broker' : 'Live · 142 ms', s: '' },
+    model: { cls: behind > 2 ? 'red' : behind > 1 ? 'amber' : '', l: 'Model book · ' + wdLabel(m.asof) + (m.builtAt ? ' ' + m.builtAt : '') + ' · ' + age, s: age },
+    acct: { cls: '', l: g ? 'No broker (ghost)' : 'Account · ' + (fa.accountAt ?? '—'), s: fa.accountAt ?? '—' },
+    ledger: { cls: '', l: ago(fa.ledger.syncedMinAgo) + ' ago', s: ago(fa.ledger.syncedMinAgo) },
+    broker: { cls: '', l: g ? 'Ghost · no broker' : 'Live · ' + (fa.broker?.latencyMs ?? '—') + ' ms', s: '' },
   };
-  if (c.data === 'stale') fr.model = { cls: 'red', l: 'Stale · model book from Fri 25 Sep (6 days)', s: 'Stale · 6 d' };
+  if (c.data === 'stale') fr.model = { cls: 'red', l: 'Stale · model book from ' + wdLabel(m.asof) + ' (' + days + ' days)', s: 'Stale · ' + days + ' d' };
   if (c.data === 'error') {
-    if (g) {
-      fr.ledger = { cls: 'red', l: 'Indexer down · 14 min', s: '14 min' };
-      fr.model = { cls: 'amber', l: 'Last indexed 14 min ago', s: '14 min' };
+    if (fa.ledger.down) {
+      fr.ledger = { cls: 'red', l: 'Indexer down · ' + ago(fa.ledger.downMin), s: ago(fa.ledger.downMin) };
+      fr.model = { cls: 'amber', l: 'Last indexed ' + ago(fa.ledger.downMin) + ' ago', s: ago(fa.ledger.downMin) };
     } else {
-      fr.acct = { cls: 'red', l: 'Broker unreachable · last 17:41 ET', s: 'Error' };
+      fr.acct = { cls: 'red', l: 'Broker unreachable · last ' + (fa.broker?.lastOk ?? '—'), s: 'Error' };
       fr.broker = { cls: 'red', l: 'Unreachable · timeout 10 s', s: '' };
     }
   }
@@ -168,18 +184,21 @@ export interface EmptyCopy {
   p: string;
 }
 
-const EMPTY: Partial<Record<Screen, [string, string, string]>> = {
-  overview: ['Overview', 'Nothing to show yet', 'The Alpaca paper account starts in cash on Mon 2 Nov 2026. The first Cycle A runs at 17:05 ET that evening, and positions appear after the open on Tue 3 Nov.'],
-  holdings: ['Holdings', 'No positions yet', 'Account starts in cash on Mon 2 Nov. Holdings appear after the first fills at the 09:30 ET open the next morning.'],
-  orders: ['Orders', 'No orders yet', 'The first orders are ledgered by Cycle A on Mon 2 Nov at 17:05 ET and sent by the 19:15 ET submit. In approval mode you release each night by hand.'],
-  performance: ['Performance', 'No history yet', 'Performance starts with the first paper session on Mon 2 Nov. The OOS reference — Sharpe 1.22, max drawdown −16.2%, CAGR 36.8% — will sit next to it.'],
-  compliance: ['Compliance', 'No holdings to screen', 'The 319-name universe is screened and frozen. Per-holding compliance cards appear once positions exist.'],
-};
+function emptyCopy(start: string): Partial<Record<Screen, [string, string, string]>> {
+  const d = wdLabel(start);
+  return {
+    overview: ['Overview', 'Nothing to show yet', 'The account starts in cash on ' + d + '. The first Cycle A runs at 17:05 ET that evening, and positions appear after the next 09:30 ET open.'],
+    holdings: ['Holdings', 'No positions yet', 'The account starts in cash on ' + d + '. Holdings appear after the first fills at the 09:30 ET open the next morning.'],
+    orders: ['Orders', 'No orders yet', 'The first orders are ledgered by Cycle A on ' + d + ' at 17:05 ET and sent by the 19:15 ET submit. In approval mode you release each night by hand.'],
+    performance: ['Performance', 'No history yet', 'Performance starts with the first session on ' + d + '. The OOS reference — Sharpe 1.22, max drawdown −16.2%, CAGR 36.8% — will sit next to it.'],
+    compliance: ['Compliance', 'No holdings to screen', 'The universe is screened and frozen. Per-holding compliance cards appear once positions exist.'],
+  };
+}
 
-export function selectEmpty(screen: Screen): EmptyCopy {
-  const m = EMPTY[screen] || ['', '', ''];
+export function selectEmpty(screen: Screen, start = '2026-11-02'): EmptyCopy {
+  const m = emptyCopy(start)[screen] || ['', '', ''];
   return { title: m[0], h: m[1], p: m[2] };
 }
 
 /** Screens that still render in the Empty state (system screens). */
-export const SYSTEM_SCREENS: Screen[] = ['controls', 'agent', 'health', 'alerts', 'audit', 'roadmap', 'settings', 'more'];
+export const SYSTEM_SCREENS: Screen[] = ['controls', 'agent', 'health', 'alerts', 'audit', 'roadmap', 'glossary', 'settings', 'more'];

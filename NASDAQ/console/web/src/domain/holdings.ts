@@ -55,7 +55,7 @@ export interface HoldingsView {
   cash: string;
   eq: string;
   tC: string;
-  tBand: Band;
+  tBand: Band | 'none';
   tGrades: string;
   sectors: string[];
 }
@@ -91,7 +91,9 @@ export function selectHoldings(c: Ctx, positions: Position[], intents: OrderInte
   const eq = isA ? acctEquity(positions, c) : c.equity;
   const mv = all.reduce((a, r) => a + r._val, 0);
   const tu = all.reduce((a, r) => a + r._u, 0);
-  const wc = Math.round(all.reduce((a, r) => a + r._val * r._c, 0) / Math.max(mv, 1));
+  const rated = all.filter((r) => r._c != null);
+  const rv = rated.reduce((a, r) => a + r._val, 0);
+  const wc = rated.length ? Math.round(rated.reduce((a, r) => a + r._val * (r._c as number), 0) / Math.max(rv, 1)) : null;
   const grades: Record<string, number> = {};
   all.forEach((r) => { grades[r._g] = (grades[r._g] || 0) + 1; });
   const sectors = Array.from(new Set(positions.map((h) => h.sector)));
@@ -104,9 +106,9 @@ export function selectHoldings(c: Ctx, positions: Position[], intents: OrderInte
     tagCls: isA ? 'acct' : '',
     count: rows.length === all.length ? all.length + ' positions' : rows.length + ' of ' + all.length + ' positions',
     frCls: isA ? (err ? 'red' : '') : c.data === 'stale' ? 'red' : '',
-    frL: isA ? (err ? 'Broker unreachable · last 17:41 ET' : 'Account · 2 min ago') : modelFresh.l,
+    frL: isA ? (err ? 'Broker unreachable · last ' + (c.facts.broker?.lastOk ?? '—') : 'Account · ' + (c.facts.accountAt ?? '—')) : modelFresh.l,
     errNote: isA && err && acct,
-    errText: 'Broker unreachable — showing the last known account positions from 17:41 ET, valued at Friday’s close.',
+    errText: 'Broker unreachable — showing the last known account positions from ' + (c.facts.broker?.lastOk ?? '—') + ', valued at the last close.',
     noAcct: (isA || isS) && !acct,
     main: !isS && !(isA && !acct),
     side: isS && acct,
@@ -122,8 +124,8 @@ export function selectHoldings(c: Ctx, positions: Position[], intents: OrderInte
     tRCls: 'muted',
     cash: usd(isA ? c.accountCash ?? 0 : c.cash),
     eq: usd(eq),
-    tC: String(wc),
-    tBand: band(wc),
+    tC: wc == null ? '—' : String(wc),
+    tBand: wc == null ? 'none' : band(wc),
     tGrades: Object.keys(grades).sort().map((k) => grades[k] + ' × ' + k).join(' · '),
     sectors,
   };
@@ -237,10 +239,10 @@ export function selectDrawer(c: Ctx, h: Position, positions: Position[], intents
   });
   return {
     s: h.symbol, n: h.name, sec: h.sector, ind: h.industry,
-    g: sv.g, gCls: sv.gCls, c: String(cv.tot), band: cv.band, bandL: cv.bandL, locked, forced,
+    g: sv.g, gCls: sv.gCls, c: cv ? String(cv.tot) : '—', band: cv ? cv.band : 'none', bandL: cv ? cv.bandL : 'Pending', locked, forced,
     u: susd(u), uP: spct((h.last / avg - 1) * 100), uCls: tn(u), val: usd(val), w: f(w, 1) + '%',
     isA,
-    sh: String(sh), avg: usd(avg), last: usd(h.last), day: spct(h.dayPct, 2), dayCls: tn(h.dayPct),
+    sh: String(sh), avg: usd(avg), last: usd(h.last), day: h.dayPct == null ? '' : spct(h.dayPct, 2), dayCls: h.dayPct == null ? 'dim' : tn(h.dayPct),
     cap: f(18 - w, 1) + ' pp below the 18% cap',
     ed: wdLabel(h.entryDate) + ' ' + h.entryDate.slice(0, 4),
     why: h.entryReason,
@@ -289,13 +291,15 @@ export function sma(ser: number[], k: number): (number | null)[] {
   });
 }
 
-export function selectPrice(h: Position, d: HoldingDetailPayload): PriceView {
+/** null when the ledger holds no daily prices for this name (see `pricesNote`). */
+export function selectPrice(h: Position, d: HoldingDetailPayload): PriceView | null {
+  if (!d.prices.length) return null;
   const ser = d.prices.map((p) => p.close);
   const show = Math.min(PRICE_SESSIONS, ser.length);
   const s50 = sma(ser, 50).slice(-show);
   const s200 = sma(ser, 200).slice(-show);
   const P = ser.slice(-show);
-  const vals = [...P, ...(s50.filter((x) => x != null) as number[]), ...(s200.filter((x) => x != null) as number[]), h.avgCost, exitOf(h).stopP];
+  const vals = [...P, ...(s50.filter((x) => x != null) as number[]), ...(s200.filter((x) => x != null) as number[]), h.avgCost, ...(exitOf(h).stopP != null ? [exitOf(h).stopP as number] : [])];
   let lo = Math.min(...vals);
   let hi = Math.max(...vals);
   const pad = (hi - lo) * 0.08;
@@ -310,8 +314,8 @@ export function selectPrice(h: Position, d: HoldingDetailPayload): PriceView {
     sma50: s50,
     sma200: s200,
     avg: h.avgCost,
-    initialStop: h.initialStop >= lo && h.initialStop <= hi ? h.initialStop : null,
-    trailingStop: h.trailingStop >= lo && h.trailingStop <= hi ? h.trailingStop : null,
+    initialStop: h.initialStop != null && h.initialStop >= lo && h.initialStop <= hi ? h.initialStop : null,
+    trailingStop: h.trailingStop != null && h.trailingStop >= lo && h.trailingStop <= hi ? h.trailingStop : null,
     entryIndex: show - h.heldSessions,
     entryText: 'Buy ' + h.shares + ' @ ' + usd(h.avgCost) + ' · ' + wdLabel(h.entryDate),
     lo,
@@ -324,19 +328,21 @@ export function selectPrice(h: Position, d: HoldingDetailPayload): PriceView {
 const CONF_NAMES = ['Signal', 'Risk room', 'Regime', 'Data'];
 const CONF_W = ['40%', '30%', '20%', '10%'];
 
+/** null until the insights step (M3) ledgers confidence for this holding. */
 export function selectConf(c: Ctx, h: Position, trips: RoundTrip[], history: number[]) {
   const cv = confOf(h, c);
+  if (!cv || !h.confidence) return null;
   const ex = exitOf(h);
-  const stale = c.data === 'stale';
+  const fa = c.facts;
   const why = [
-    'Rank ' + h.rank + ' of 319 (exit above 30) · ' + h.smaStack + ' · ' + h.offHighPct + '% off the 52-week high',
+    (h.rank != null ? 'Rank ' + h.rank + ' (exit above 30)' : 'Rank n/a') + (h.smaStack ? ' · ' + h.smaStack : '') + (h.offHighPct != null ? ' · ' + h.offHighPct + '% off the 52-week high' : ''),
     (h.rankExit ? 'Rank exit triggered' : ex.k + ' ' + ex.p + ', ' + ex.d) + ' · ' + (35 - h.heldSessions) + ' sessions left on the time stop',
-    'NASDAQ Composite 6.2% above SMA200 and 1.1% above SMA50 · breadth 54% · mood trending',
-    stale
-      ? 'Data gate tripped since Mon 28 Sep · last good fetch Fri 25 Sep — inputs are stale'
-      : h.crossSource === 'agree' ? 'Data gate passed · the second source agrees · fetched 17:02 ET' : 'Data gate passed · second source unavailable for this name · fetched 17:02 ET',
+    fa.regime ?? 'Market backdrop not available',
+    c.data === 'stale' && fa.failing
+      ? 'Data gate tripped since ' + wdLabel(fa.failing.from) + ' · last good data ' + wdLabel(fa.model.asof) + ' — inputs are stale'
+      : h.crossSource === 'agree' ? 'Data gate passed · the second source agrees' : 'Data gate passed · second source unavailable for this name',
   ];
-  const inBand = trips.filter((r) => band(r.confAtEntry) === cv.band);
+  const inBand = trips.filter((r) => r.confAtEntry != null && band(r.confAtEntry) === cv.band);
   const wins = inBand.filter((r) => r.pnl > 0).length;
   const name = { high: 'High', med: 'Medium', low: 'Low' }[cv.band];
   const live = inBand.length ? 'Live so far: ' + wins + ' of ' + inBand.length + '.' : 'Live: no round trips yet.';

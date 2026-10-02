@@ -5,6 +5,7 @@ import { selectFresh } from '@/domain/chrome';
 import { selectHealth } from '@/domain/health';
 import { cx } from '@/lib/format';
 import { Chip, Fresh, PageHeader, Panel, Sk } from '@/components/ui';
+import { Gloss, T } from '@/glossary/Term';
 
 export function Health() {
   const ctx = useCtx();
@@ -15,10 +16,10 @@ export function Health() {
   const he = selectHealth(hq.data, cell);
   return (
     <div className="page">
-      <PageHeader title="Health" sub={he.sub}><span className="sp" /><span className={cx('pill static', he.pillCls)}><span className="pd" />{he.pill}</span></PageHeader>
+      <PageHeader title="Health" sub={<Gloss text={he.sub} />}><span className="sp" /><span className={cx('pill static', he.pillCls)}><span className="pd" />{he.pill}</span></PageHeader>
       <div className="g12">
         <section className="panel c8">
-          <div className="ph"><h3>Cycle timeline</h3><span className="hint">last 14 sessions × Cycle A · Submit · Cycle B — click a cell for its record</span><Fresh cls={fr.ledger.cls} l={fr.ledger.l} /></div>
+          <div className="ph"><h3>Cycle timeline</h3><span className="hint">last 14 <T k="session">sessions</T> × <T k="cycleA">Cycle A</T> · <T k="submit">Submit</T> · <T k="cycleB">Cycle B</T> — click a cell for its record</span><Fresh cls={fr.ledger.cls} l={fr.ledger.l} /></div>
           <div className="pb col" style={{ gap: 10 }}>
             <div className="twrap">
               <div className="col gap4" style={{ minWidth: 620 }}>
@@ -44,30 +45,30 @@ export function Health() {
           </div>
         </section>
 
-        <Panel className="c4" title="Ghost gate" hint="10 consecutive deterministic sessions">
+        <Panel className="c4" title={<T k="ghostGate">Ghost gate</T>} hint={<>10 consecutive <T k="determinism">deterministic</T> sessions</>}>
           <div className="pb col" style={{ gap: 12 }}>
             <div className="row"><span className="kpi-v num">{he.gate.streak}<span className="muted" style={{ fontSize: 14 }}> / {he.gate.target}</span></span><span className="sp" /><Chip cls={he.gate.cls}>{he.gate.l}</Chip></div>
             <div className="slots" style={{ height: 10 }}>{he.gate.slots.map((f, i) => <span key={i} className={f ? 'f' : ''} />)}</div>
             <span className="xs muted">{he.gate.note}</span>
             <hr className="hr" />
-            <span className="up">Hash history</span>
+            <span className="up"><T k="determinism">Hash history</T></span>
             <div className="col" style={{ gap: 6 }}>
               {he.gate.hashes.map((h) => (
                 <div key={h.date} className="row xs" style={{ gap: 8 }}><span className="num muted" style={{ width: 70, flex: 'none' }}>{h.date}</span><span className="mono sp" style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{h.hash}</span><span className={h.cls}>{h.result}</span></div>
               ))}
             </div>
             <hr className="hr" />
-            <span className="up">Determinism · last sha256</span>
+            <span className="up"><T k="determinism">Determinism · last sha256</T></span>
             <span className="hash">{he.gate.sha}</span>
             <span className="xs pos">{he.gate.replay}</span>
           </div>
         </Panel>
 
         <section className="panel c6">
-          <div className="ph"><h3>Data gate</h3><span className="hint">{he.dg.when}</span><Fresh cls={he.dg.cls} l={he.dg.l} /></div>
+          <div className="ph"><h3><T k="dataGate">Data gate</T></h3><span className="hint">{he.dg.when}</span><Fresh cls={he.dg.cls} l={he.dg.l} /></div>
           <div className="pb col" style={{ gap: 0 }}>
             {he.dg.checks.map((c) => (
-              <div key={c.l} className="limit"><span className="row gap4"><span className={cx(c.cls, 'b')} style={{ width: 16 }}>{c.g}</span>{c.l}</span><span className="num"><b className={c.cls}>{c.v}</b> <span className="xs muted">{c.min}</span></span></div>
+              <div key={c.l} className="limit"><span className="row gap4"><span className={cx(c.cls, 'b')} style={{ width: 16 }}>{c.g}</span><Gloss text={c.l} /></span><span className="num"><b className={c.cls}>{c.v}</b> <span className="xs muted">{c.min}</span></span></div>
             ))}
           </div>
           {he.dg.missing && (
@@ -83,7 +84,7 @@ export function Health() {
           <div className="pb"><dl className="kv" style={{ margin: 0 }}>{he.broker.map((b) => <Pair key={b.k} k={b.k} v={b.v} cls={b.cls} />)}</dl></div>
         </Panel>
 
-        <Panel className="c8" title="Heartbeats" hint="external check per scheduled step · a dead-man inside the box cannot see its own death">
+        <Panel className="c8" title={<T k="heartbeat">Heartbeats</T>} hint={<>external check per scheduled step · a <T k="deadman">dead-man</T> inside the box cannot see its own death</>}>
           <div className="twrap">
             <div className="dt flush dense">
               <div className="dt-r dt-h" style={{ gridTemplateColumns: 'minmax(180px, 1fr) 120px 150px 120px 120px' }}><span>Step</span><span>Expected (ET)</span><span>Last ping</span><span>Duration</span><span>Status</span></div>
@@ -97,10 +98,10 @@ export function Health() {
           </div>
         </Panel>
 
-        <Panel className="c4" title="Indexer" fresh={{ cls: he.ix.cls, l: he.ix.label }}>
+        <Panel className="c4" title={<T k="indexer">Indexer</T>} fresh={{ cls: he.ix.cls, l: he.ix.label }}>
           <div className="pb">
             <dl className="kv" style={{ margin: 0 }}>
-              <dt>Last commit indexed</dt><dd className="mono">{he.ix.commit}</dd>
+              <dt>Last <T k="commit">commit</T> indexed</dt><dd className="mono">{he.ix.commit}</dd>
               <dt>Message</dt><dd className="xs dim">{he.ix.message}</dd>
               <dt>Lag</dt><dd>{he.ix.lag}</dd>
               <dt>Errors (24 h)</dt><dd>{he.ix.errors}</dd>

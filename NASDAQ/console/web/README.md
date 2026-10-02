@@ -1,8 +1,8 @@
 # NAFA Console: web UI
 
-This folder is the React port of the Claude Design prototype
-([docs/09c](../../docs/09c-console-prototype/HANDOFF.md)), milestone **M0
-(read-only)**.
+This folder is the React port of the Claude Design prototype (the docs/09c
+hand-off, kept locally and not committed), milestone **M0 (read-only)**. It
+runs against the real API in `../api`, or against a mocked API.
 
 ## Run it
 
@@ -10,9 +10,9 @@ You need Node 20+.
 
 ```sh
 npm install
-npm run dev:mock     # http://localhost:5173 with the API mocked by MSW (prototype fixtures)
-npm run dev          # same, but /api is proxied to the console API on :8080
-npm test             # Vitest: selector unit tests + app smoke tests (45)
+npm run dev          # http://localhost:5173, /api proxied to the real console API on :8080 (../api)
+npm run dev:mock     # same UI, API mocked by MSW with the prototype fixtures
+npm test             # Vitest: selector unit tests + app smoke tests (49)
 npm run storybook    # state catalogue at http://localhost:6006
 npm run build        # typecheck + production bundle in dist/
 ```
@@ -50,6 +50,7 @@ leave it unset to use Playwright's own Chromium.
 | `src/app/` | Shell (top bar, banners, nav, rail, phone tab bar), app context, routes, ⌘K palette, mock-scenario panel |
 | `src/screens/` | Overview, Holdings (+ drawer), Orders, Compliance, Health, Roadmap, Settings, More, and placeholders for the M1/M2 screens |
 | `src/components/` | Shared components from the component sheet, icons, and ECharts charts. Equity and drawdown share one crosshair. |
+| `src/glossary/` | `terms.ts`: a plain-English explanation of every term and abbreviation. `Term.tsx`: `<T k="atr">ATR</T>` for one term, and `<Gloss text>` to find terms inside free text such as order reasons. |
 | `src/styles/nafa.css` | The prototype stylesheet, verbatim from docs/09b. Components use its class names, so spacing and states match the prototype. |
 | `src/mocks/` | MSW handlers and `scenario.ts`, which builds every payload from `sample-data.json` for each environment × data × trading × role |
 | `src/stories/` | Storybook state catalogue (HANDOFF §5), M0 frames |
@@ -76,9 +77,11 @@ leave it unset to use Playwright's own Chromium.
 
 * **Read-only:** control buttons explain that controls arrive with M1. No
   modal, TOTP or preview/apply yet.
+* **Pending from the insights step (M3):** confidence, stop levels, ATR,
+  rank and live prices. The API returns null and the UI says pending; nothing
+  is estimated.
 * **Placeholders:** Performance, Agent, Alerts and Audit are placeholder
   pages until their milestones. The equity chart and the open alerts already
   show in Overview and in the top bar.
-* **Illustrative fixtures:** some copy still carries the fixture scenario's
-  dates (for example "Mon 28 Sep" and "Cycle A failed 4×"). The API will
-  supply these facts when the backend lands.
+* **Dates come from the server:** every date and count in the copy comes
+  from `system.facts`, so no copy hard-codes a date.

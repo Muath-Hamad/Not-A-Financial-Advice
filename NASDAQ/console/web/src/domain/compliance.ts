@@ -26,7 +26,8 @@ interface UniRow extends Pick<UniverseName, 'symbol' | 'name' | 'grade' | 'statu
   held: boolean;
 }
 
-const headroom = (v: number) => {
+const headroom = (v: number | null) => {
+  if (v == null) return { t: '—', cls: 'dim' };
   const x = 30 - v;
   return { t: (x >= 0 ? '' : '−') + f(Math.abs(x), 1) + ' pp', cls: x < 0 ? 'danger' : x < 3 ? 'warn' : x < 10 ? '' : 'dim' };
 };
@@ -54,14 +55,14 @@ export function selectUniverse(c: Ctx, positions: Position[], p: CompliancePaylo
         s: u.symbol, n: u.name, st: u.status,
         stCls: u.status === 'Compliant' ? 'pos' : u.status === 'Under review' ? 'warn' : 'danger',
         g: u.grade, gCls: 'g' + u.grade,
-        dh: d.t, dCls: d.cls, d: f(u.debtPct, 1) + '%',
-        ch: ch.t, cCls: ch.cls, c: f(u.cashPct, 1) + '%',
+        dh: d.t, dCls: d.cls, d: u.debtPct == null ? 'n/a' : f(u.debtPct, 1) + '%',
+        ch: ch.t, cCls: ch.cls, c: u.cashPct == null ? 'n/a' : f(u.cashPct, 1) + '%',
         flag: u.flag || (onWatch(u) ? 'watchlist: within 3 pp of the 30% line' : ''),
         held: u.held ? 'Held' : '—',
       };
     }),
-    hint: list.length + ' shown · sample of the ' + p.universeSize + '-name universe',
-    foot: 'Showing ' + list.length + ' of ' + p.universeSize + ' · watchlist ' + all.filter(onWatch).length + ' · review-flagged ' + p.reviewFlagged + ' · excluded after 1 Oct: ' + p.excludedAfterRescreen,
+    hint: list.length + ' shown of the ' + p.universeSize + '-name universe',
+    foot: 'Showing ' + list.length + ' of ' + p.universeSize + ' · watchlist ' + all.filter(onWatch).length + ' · review-flagged ' + p.reviewFlagged + ' · excluded: ' + p.excludedAfterRescreen,
   };
 }
 

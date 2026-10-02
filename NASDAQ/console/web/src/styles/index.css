@@ -16,3 +16,17 @@ body { background: #0B0D10; }
 /* Mock-mode scenario launcher: clear of the nav foot and the phone tab bar. */
 .proto-launch { position: absolute; right: 12px; bottom: 12px; z-index: 65; background: var(--bg-1); cursor: pointer; }
 @container app (max-width: 767px) { .proto-launch { bottom: 76px; } }
+
+/* Glossary terms: a dotted underline marks a word that explains itself on hover. */
+.nafa .term { text-decoration: underline dotted; text-decoration-color: var(--fg-3); text-underline-offset: 3px; text-decoration-thickness: 1px; cursor: help; border-radius: 2px; }
+.nafa .term:hover { text-decoration-color: var(--fg-1); }
+.nafa .term:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.gloss-pop {
+  position: fixed; z-index: 95; width: 300px; max-width: calc(100vw - 16px);
+  display: flex; flex-direction: column; gap: 4px; padding: 10px 12px;
+  background: var(--bg-1); border: 1px solid var(--line-3); border-radius: 8px; box-shadow: var(--shadow);
+  color: var(--fg-2); font: 400 12px/1.5 Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: normal; text-transform: none; text-align: left; white-space: normal; pointer-events: auto;
+}
+.gloss-pop .gt { color: var(--fg-1); font-weight: 650; font-size: 12.5px; }
+.gloss-pop .gh { color: var(--fg-3); border-top: 1px solid var(--line-1); padding-top: 5px; margin-top: 2px; font-size: 11.5px; }

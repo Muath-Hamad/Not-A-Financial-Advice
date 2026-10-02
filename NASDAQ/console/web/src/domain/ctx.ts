@@ -1,4 +1,4 @@
-import type { Clock, ControlsState, DataHealth, Env, OverviewPayload, Role, TradingState } from '@/api/types';
+import type { Clock, ControlsState, DataHealth, Env, Facts, OverviewPayload, Role, TradingState } from '@/api/types';
 
 /** The prototype's `dataState`: server health plus the client-only `loading`. */
 export type DataState = DataHealth | 'loading';
@@ -17,6 +17,8 @@ export interface Ctx {
   stopAt: string | null;
   flatten: boolean;
   clock: Clock;
+  /** Dated facts from the server (no copy hard-codes a date). */
+  facts: Facts;
   /** Model book as-of session (ISO). */
   asof: string;
   controls: ControlsState;
@@ -38,6 +40,7 @@ export function ctxFrom(o: OverviewPayload, loading = false): Ctx {
     stopAt: o.system.stopAt,
     flatten: o.system.flatten,
     clock: o.system.clock,
+    facts: o.system.facts,
     asof: o.asof,
     controls: o.controls,
     equity: o.equity,

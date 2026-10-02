@@ -12,6 +12,7 @@ import { Empty, PageHeader, Sk } from '@/components/ui';
 import { useConsole, useCtx } from './console';
 import { HoldingDrawer } from '@/screens/HoldingDrawer';
 import { Palette } from './Palette';
+import { Gloss, T } from '@/glossary/Term';
 
 export function Shell({ height = '100vh', overlay }: { height?: string; overlay?: ReactNode }) {
   const { ctx, theme, apiDown, toast, palette, setPalette, drawer } = useConsole();
@@ -90,7 +91,7 @@ function TopBar() {
   return (
     <header className="top">
       <Brand />
-      <span className={cx('env', top.envCls)} title={top.envT}>{top.envL}</span>
+      <span className={cx('env', top.envCls)}><T k={top.envCls as 'ghost' | 'paper' | 'live'}>{top.envL}</T></span>
       <button type="button" className={cx('pill', top.pillCls)} onClick={() => go(owner ? 'controls' : 'health')} title="Trading state — open Controls">
         <span className="pd" /><span className="wide-only">{top.pillL}</span><span className="narrow-only">{top.pillS}</span>
       </button>
@@ -102,7 +103,7 @@ function TopBar() {
         ))}
       </div>
       <span className="top-sp" />
-      <span className={cx('sync', top.syncCls)} title={top.syncT}><span className="d" /><span>{top.sync1}</span><span className="st">· {top.sync2}</span></span>
+      <span className={cx('sync', top.syncCls)}><span className="d" /><T k="ledger">{top.sync1}</T><span className="st">· {top.sync2}</span></span>
       <button type="button" className="top-btn" onClick={() => setPalette(true)} aria-label="Command palette"><Icon name="search" /><span className="kbd">⌘K</span></button>
       <button type="button" className="top-btn" onClick={() => go('alerts')} aria-label={top.bellT} title={top.bellT}>
         <Icon name="bell" /><span className={cx('bell-n', top.p1Cls)}>{top.p1}</span><span className={cx('bell-n', top.p2Cls)}>{top.p2}</span>
@@ -138,7 +139,7 @@ function Banners() {
       {selectBanners(ctx).map((b) => (
         <div key={b.title} className={cx('banner', b.tone)} role="status">
           <ToneIcon tone={b.tone} className="bi" />
-          <div className="bt"><b>{b.title}</b> {b.text}</div>
+          <div className="bt"><b><Gloss text={b.title} /></b> <Gloss text={b.text} /></div>
           <div className="ba">{b.acts.map((x) => <button key={x.l} type="button" className={cx('btn sm', x.cls)} onClick={() => dispatch(x.intent)}>{x.l}</button>)}</div>
         </div>
       ))}
@@ -182,6 +183,7 @@ function Nav() {
       <NavItem k="alerts" icon="bell" label="Alerts" badge={n.bAl} badgeCls={n.bAlCls} />
       <NavItem k="audit" icon="audit" label="Audit log" />
       <NavItem k="roadmap" icon="roadmap" label="Roadmap" />
+      <NavItem k="glossary" icon="book" label="Glossary" />
       <div className="nav-foot">
         <NavItem k="settings" icon="settings" label="Settings" />
       </div>
@@ -234,8 +236,8 @@ function LoadingPage() {
 }
 
 function EmptyPage({ screen }: { screen: Screen }) {
-  const { go } = useConsole();
-  const em = selectEmpty(screen);
+  const { go, ctx } = useConsole();
+  const em = selectEmpty(screen, ctx?.facts.paperStart);
   const kpis: [string, string, string, boolean][] = [
     ['Equity', '$100,000.00', 'all cash · nothing invested', false],
     ['Today’s P&L', '$0.00', 'no session yet', true],

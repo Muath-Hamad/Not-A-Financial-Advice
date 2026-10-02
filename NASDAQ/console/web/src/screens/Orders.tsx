@@ -9,6 +9,7 @@ import { cx } from '@/lib/format';
 import { Icon } from '@/components/icons';
 import { Chip, Conf, Empty, ExportButton, Fresh, Guardrail, HBars, Lifecycle, MiniLifecycle, Note, PageHeader, Panel, Seg, SideTag, Sk, Stat, Tabs } from '@/components/ui';
 import { exportCsv } from './csv';
+import { Gloss, T } from '@/glossary/Term';
 
 type Tab = 'pending' | 'history' | 'round';
 
@@ -24,7 +25,7 @@ export function Orders() {
   const nP = pq.data ? String(selectPending(ctx, pq.data, positions).count) : '';
   return (
     <div className="page">
-      <PageHeader title="Orders" sub={ORDERS_SUB} />
+      <PageHeader title="Orders" sub={<Gloss text={ORDERS_SUB} />} />
       <Tabs<Tab>
         value={t} onChange={(k) => navigate('/orders/' + k)}
         items={[{ k: 'pending', l: 'Pending', n: nP }, { k: 'history', l: 'History', n: hq.data ? String(hq.data.total) : '' }, { k: 'round', l: 'Round trips', n: rq.data ? String(rq.data.trips.length) : '' }]}
@@ -55,12 +56,12 @@ function Pending() {
     <>
       <section className="panel">
         <div className="pb row wrap" style={{ gap: 20, alignItems: 'flex-start' }}>
-          <div className="col gap4"><span className="up">Next open</span><span className="lg b">{pe.nextOpen}</span><span className="sm dim">{pe.window}</span></div>
+          <div className="col gap4"><span className="up"><T k="nextOpen">Next open</T></span><span className="lg b">{pe.nextOpen}</span><span className="sm dim"><T k="submit">Submit 19:15 ET</T> (retry 19:45) · manual submit until 09:28 ET</span></div>
           <div className="col gap4"><span className="up">Status</span><span className={cx('pill static', pe.stCls)}><span className="pd" />{pe.status}</span></div>
           <span className="sp" />
           {pe.held && (
             <div className="col gap4" style={{ alignItems: 'flex-start', maxWidth: 340 }}>
-              <span className="sm warn b">Night held — {pe.holdWhy}</span>
+              <span className="sm warn b"><T k="approval">Night held</T> — {pe.holdWhy}</span>
               {owner && <button type="button" className="btn primary" onClick={() => dispatch(control('release'))}>Release night…</button>}
               <span className="eff">Effective: <b>now</b> — submit runs with --approved; window closes 09:28 ET</span>
             </div>
@@ -72,7 +73,7 @@ function Pending() {
         <div className="ph"><h3>Orders for the next open</h3><span className="hint">{pe.hint}</span><Fresh cls={fr.model.cls} l={fr.model.s} /></div>
         {pe.none && (
           <Empty icon="orders" title={pe.noneH} actions={pe.noneAct ? <><button type="button" className="btn" onClick={() => dispatch(nav('health'))}>View details</button>{owner && <button type="button" className="btn primary" onClick={() => dispatch(control('rerun', 'Cycle A'))}>Re-run Cycle A…</button>}</> : undefined}>
-            {pe.noneP}
+            <Gloss text={pe.noneP} />
           </Empty>
         )}
         {!pe.none && (
@@ -80,7 +81,7 @@ function Pending() {
             <div className="twrap wide-only">
               <div className="dt flush">
                 <div className="dt-r dt-h" style={{ gridTemplateColumns: PEND_COLS }}>
-                  <span className="stick">Symbol</span><span>Side</span><span>Quantity</span><span>Type</span><span className="r">Ref close</span><span className="r">Est. value</span><span>Reason</span><span>Source</span><span>Guardrails</span><span>Lifecycle</span><span>Client order id</span><span />
+                  <span className="stick">Symbol</span><span>Side</span><span>Quantity</span><span><T k="moo">Type</T></span><span className="r"><T k="refClose">Ref close</T></span><span className="r"><T k="estValue">Est. value</T></span><span>Reason</span><span><T k="source">Source</T></span><span><T k="guardrails">Guardrails</T></span><span><T k="lifecycle">Lifecycle</T></span><span><T k="clientOrderId">Client order id</T></span><span />
                 </div>
                 {pe.rows.map((o) => (
                   <Fragment key={o.id}>
@@ -88,10 +89,10 @@ function Pending() {
                       <span className="stick"><span className="sym">{o.s}</span><span className="symname">{o.n}</span></span>
                       <span><SideTag side={o.sideCls} label={o.sideL} /></span>
                       <span><span className="num">{o.qty}</span><span className="xs muted" style={{ display: 'block' }}>{o.amt}</span></span>
-                      <span className="mono xs dim">MOO · opg</span>
+                      <span className="mono xs dim"><T k="moo">MOO · opg</T></span>
                       <span className="r num">{o.ref}</span>
                       <span className="r num">{o.est}</span>
-                      <span className="wc dim sm" title={o.why}>{o.why}</span>
+                      <span className="wc dim sm"><Gloss text={o.why} /></span>
                       <span><Chip cls={o.srcCls}>{o.srcL}</Chip></span>
                       <span><Guardrail ok={o.grOk} rule={o.gr} note={o.grNote} /></span>
                       <span><MiniLifecycle steps={o.lc} state={o.state} sc={o.sc} /></span>
@@ -110,7 +111,7 @@ function Pending() {
               {pe.rows.map((o) => (
                 <div key={o.id} className="mcard">
                   <span className="mcard-h"><SideTag side={o.sideCls} label={o.sideL} /><span className="sym">{o.s}</span><span className="num sm">{o.qty}</span><span className="sp" /><span className="num b">{o.est}</span></span>
-                  <span className="xs dim">{o.why}</span>
+                  <span className="xs dim"><Gloss text={o.why} /></span>
                   <span className="row wrap" style={{ gap: 6 }}>
                     <Chip cls={o.srcCls}>{o.srcL}</Chip><Guardrail ok={o.grOk} rule={o.gr} small /><span className="sp" />
                     <MiniLifecycle steps={o.lc} state={o.state} sc={o.sc} small />
@@ -120,8 +121,8 @@ function Pending() {
               ))}
             </div>
             <div className="pf">
-              <span>Buys <b className="num">{pe.buys}</b></span><span>Sells <b className="num">{pe.sells}</b></span><span>Net cash need <b className="num">{pe.net}</b></span>
-              <span>Turnover <b className="num">{pe.turn}</b> <span className="muted">of 75% limit</span></span><span>Cash left (est.) <b className="num">{pe.left}</b></span>
+              <span>Buys <b className="num">{pe.buys}</b></span><span>Sells <b className="num">{pe.sells}</b></span><span><T k="netCash">Net cash need</T> <b className="num">{pe.net}</b></span>
+              <span><T k="turnover">Turnover</T> <b className="num">{pe.turn}</b> <span className="muted">of 75% limit</span></span><span><T k="cashLeft">Cash left (est.)</T> <b className="num">{pe.left}</b></span>
             </div>
           </>
         )}
@@ -155,7 +156,7 @@ function History() {
         <div className="twrap" style={{ maxHeight: 620 }}>
           <div className="dt flush dense">
             <div className="dt-r dt-h" style={{ gridTemplateColumns: HIST_COLS }}>
-              <span /><span>Decision</span><span>Fill</span><span>Symbol</span><span>Side</span><span className="r">Qty</span><span className="r">Decision close</span><span className="r">Official open</span><span className="r">Fill price</span><span className="r">Slip bps</span><span className="r">Shortfall</span><span className="r">Value</span><span className="r">Fees</span><span className="r">Realized</span><span className="r">Days</span><span>Status</span><span>Source</span><span>Reason</span>
+              <span /><span>Decision</span><span>Fill</span><span>Symbol</span><span>Side</span><span className="r">Qty</span><span className="r"><T k="decisionClose">Decision close</T></span><span className="r"><T k="officialOpen">Official open</T></span><span className="r"><T k="fillPrice">Fill price</T></span><span className="r"><T k="slippage">Slip</T> <T k="bps">bps</T></span><span className="r"><T k="shortfall">Shortfall</T></span><span className="r"><T k="value">Value</T></span><span className="r"><T k="fees">Fees</T></span><span className="r"><T k="realized">Realized</T></span><span className="r"><T k="session">Days</T></span><span><T k="reconcile">Status</T></span><span><T k="source">Source</T></span><span>Reason</span>
             </div>
             {hi.rows.map((o) => (
               <Fragment key={o.id}>
@@ -168,7 +169,7 @@ function History() {
                   <span className={cx('r num', o.rpCls)}>{o.rp}</span><span className="r num">{o.days}</span>
                   <span><span className="lc"><span className="dot ok" />{o.st}</span>{o.hasAdj && <span className="xs warn" style={{ display: 'block' }}>{o.adjS}</span>}</span>
                   <span><Chip>Agent</Chip></span>
-                  <span className="dim wc">{o.why}</span>
+                  <span className="dim wc"><Gloss text={o.why} /></span>
                 </div>
                 {open === o.id && (
                   <div className="dt-x">
@@ -189,7 +190,7 @@ function History() {
             ))}
           </div>
         </div>
-        <div className="pf"><span>{hi.foot}</span><span className="sp" /><span className="muted">Slippage = fill − official open (signed by side, + is a cost) · Shortfall = fill − decision close</span></div>
+        <div className="pf"><span>{hi.foot}</span><span className="sp" /><span className="muted"><T k="slippage">Slippage</T> = fill − official open (signed by side, + is a cost) · <T k="shortfall">Shortfall</T> = fill − decision close</span></div>
       </section>
     </>
   );
@@ -206,24 +207,24 @@ function RoundTrips() {
   return (
     <>
       <div className="g4">
-        <Stat l="Win rate" v={rt.win} s={rt.winN} />
-        <Stat l="Average win / average loss" v={<><span className="pos">{rt.avgW}</span> <span className="muted">/</span> <span className="neg">{rt.avgL}</span></>} s={'payoff ratio ' + rt.payoff} />
-        <Stat l="Profit factor" v={rt.pf} s="gross wins ÷ gross losses" />
-        <Stat l="Realized since start" v={rt.tot} vCls={rt.totCls} s={rt.totN} />
+        <Stat l={<T k="winRate">Win rate</T>} v={rt.win} s={<Gloss text={rt.winN} />} />
+        <Stat l={<T k="avgWinLoss">Average win / average loss</T>} v={<><span className="pos">{rt.avgW}</span> <span className="muted">/</span> <span className="neg">{rt.avgL}</span></>} s={<><T k="payoff">payoff ratio</T> {rt.payoff}</>} />
+        <Stat l={<T k="profitFactor">Profit factor</T>} v={rt.pf} s="gross wins ÷ gross losses" />
+        <Stat l={<T k="realized">Realized since start</T>} v={rt.tot} vCls={rt.totCls} s={rt.totN} />
       </div>
       <div className="g12">
-        <Panel className="c5" title="P&L by exit reason" fresh={{ cls: fr.model.cls, l: fr.model.s }} footer={<span className="muted">Stops did most of the damage in a choppy month: 10 initial stops, 2 of them gaps through the level.</span>}>
+        <Panel className="c5" title={<><T k="pnl">P&amp;L</T> by exit reason</>} fresh={{ cls: fr.model.cls, l: fr.model.s }}>
           <HBars items={rt.byR} wrapLabel />
         </Panel>
-        <Panel className="c7" title="Round trips" hint="one row per closed position · FIFO" fresh={{ cls: fr.model.cls, l: fr.model.s }}>
+        <Panel className="c7" title={<T k="roundTrip">Round trips</T>} hint={<>one row per closed position · <T k="fifo">FIFO</T></>} fresh={{ cls: fr.model.cls, l: fr.model.s }}>
           <div className="twrap" style={{ maxHeight: 520 }}>
             <div className="dt flush dense">
-              <div className="dt-r dt-h" style={{ gridTemplateColumns: RT_COLS }}><span>Symbol</span><span>Entry</span><span>Exit</span><span className="r">Days</span><span className="r">Entry px</span><span className="r">Exit px</span><span className="r">P&amp;L</span><span className="r">P&amp;L %</span><span>Exit reason</span><span>Conf. at entry</span></div>
+              <div className="dt-r dt-h" style={{ gridTemplateColumns: RT_COLS }}><span>Symbol</span><span>Entry</span><span>Exit</span><span className="r">Days</span><span className="r">Entry px</span><span className="r">Exit px</span><span className="r"><T k="pnl">P&amp;L</T></span><span className="r">P&amp;L %</span><span>Exit reason</span><span><T k="confidence">Conf. at entry</T></span></div>
               {rt.rows.map((r) => (
                 <div key={r.s + r.x} className="dt-r" style={{ gridTemplateColumns: RT_COLS }}>
                   <span className="sym">{r.s}</span><span className="num">{r.e}</span><span className="num">{r.x}</span><span className="r num">{r.d}</span><span className="r num">{r.ep}</span><span className="r num">{r.xp}</span>
                   <span className={cx('r num', r.cls)}>{r.pnl}</span><span className={cx('r num', r.cls)}>{r.pct}</span>
-                  <span><Chip>{r.r}</Chip></span><span><Conf c={r.c} band={r.band} bandL={r.bandL} bar={false} /></span>
+                  <span title={r.why}><Chip><Gloss text={r.r} /></Chip></span><span><Conf c={r.c} band={r.band} bandL={r.bandL} bar={false} /></span>
                 </div>
               ))}
             </div>

@@ -39,7 +39,7 @@ const Console = createContext<ConsoleValue | null>(null);
 
 export const SCREEN_PATH: Record<Screen, string> = {
   overview: '/', holdings: '/holdings', orders: '/orders', performance: '/performance', compliance: '/compliance',
-  controls: '/controls', agent: '/agent', health: '/health', alerts: '/alerts', audit: '/audit', roadmap: '/roadmap',
+  controls: '/controls', agent: '/agent', health: '/health', alerts: '/alerts', audit: '/audit', roadmap: '/roadmap', glossary: '/glossary',
   settings: '/settings', more: '/more',
 };
 

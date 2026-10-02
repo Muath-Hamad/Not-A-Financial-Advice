@@ -148,29 +148,31 @@ export function selectHistory(c: Ctx, h: { orders: HistOrder[]; total: number; f
   const g = c.env === 'ghost';
   let fees = 0;
   const rows: HistRow[] = orders.filter((o) => side === 'all' || o.side === side).map((o) => {
-    const fp = g ? o.officialOpen : o.fillPrice;
+    // In Ghost the fill is the twin's own: the official open plus the modelled 5 bps slippage.
+    const fp = o.fillPrice;
     const q = g ? o.shares : o.accountShares || o.shares;
     const slip = slippageBps(o.side, o.officialOpen, fp);
-    const sf = o.side === 'BUY' ? ((fp - o.decisionClose) / o.decisionClose) * 1e4 : ((o.decisionClose - fp) / o.decisionClose) * 1e4;
+    const dc = o.decisionClose;
+    const sf = dc == null ? null : o.side === 'BUY' ? ((fp - dc) / dc) * 1e4 : ((dc - fp) / dc) * 1e4;
     const cid = 'trend-' + compact(o.decisionDate) + '-' + o.symbol + '-' + (o.side === 'BUY' ? 'B' : 'S') + '1';
     fees += g ? 0 : o.fees;
     const adj = !!(o.accountShares && !g);
     return {
       id: o.id, s: o.symbol, side: o.side, sideCls: o.side === 'BUY' ? 'buy' : 'sell',
       dd: wdLabel(o.decisionDate), fd: wdLabel(o.fillDate), q: String(q),
-      dc: usd(o.decisionClose), op: usd(o.officialOpen), fp: usd(fp),
-      slip: sgn(slip), slipCls: Math.abs(slip) > 10 ? 'danger' : '', sf: sgn(sf),
+      dc: dc == null ? '—' : usd(dc), op: usd(o.officialOpen), fp: usd(fp),
+      slip: sgn(slip), slipCls: Math.abs(slip) > 10 ? 'danger' : '', sf: sf == null ? '—' : sgn(sf),
       val: usd(q * fp), fee: usd(g ? 0 : o.fees),
       rp: o.realized == null ? '—' : susd(o.realized), rpCls: o.realized == null ? 'muted' : tn(o.realized),
       days: o.heldDays == null ? '—' : String(o.heldDays),
       st: 'Reconciled', hasAdj: adj, adjS: adj ? 'adjusted ' + o.shares + ' → ' + o.accountShares : '',
       adj: 'Adjusted at submit: the twin bought ' + o.shares + ' sh; buys are trimmed to the cash the night’s sells free (F6), so the account bought ' + o.accountShares + '. Drift alert A-38.',
       why: o.reason, cid, file: o.decisionDate, lc: lcHist(o, !g),
-      json: JSON.stringify({ client_order_id: cid, symbol: o.symbol, side: o.side.toLowerCase(), qty: q, type: 'market', time_in_force: 'opg', decision_close: o.decisionClose, official_open: o.officialOpen, filled_avg_price: fp, slippage_bps: +slip.toFixed(1), shortfall_bps: +sf.toFixed(1), fees: g ? 0 : o.fees, status: 'reconciled' }, null, 2),
+      json: JSON.stringify({ client_order_id: cid, symbol: o.symbol, side: o.side.toLowerCase(), qty: q, type: 'market', time_in_force: 'opg', decision_close: o.decisionClose, official_open: o.officialOpen, filled_avg_price: fp, slippage_bps: +slip.toFixed(1), shortfall_bps: sf == null ? null : +sf.toFixed(1), fees: g ? 0 : o.fees, status: 'reconciled' }, null, 2),
     };
   });
   return {
-    hint: 'latest ' + rows.length + ' of ' + total + ' orders · since ' + wdLabel(since) + (g ? ' · ghost fills at the official open' : ''),
+    hint: 'latest ' + rows.length + ' of ' + total + ' orders · since ' + wdLabel(since) + (g ? ' · ghost: the twin fills at the open with modelled slippage' : ''),
     rows,
     foot: 'Fees on these orders ' + usd(fees) + ' · since start ' + susd(-feesSinceStart) + ' · 0 rejected · 0 missed',
   };
@@ -178,7 +180,7 @@ export function selectHistory(c: Ctx, h: { orders: HistOrder[]; total: number; f
 
 /* ───────── round trips ───────── */
 
-const REASONS: [RoundTrip['exitReason'], string][] = [['stop', 'Initial stop'], ['trail', 'Trailing stop'], ['rank', 'Rank decay'], ['time', 'Time stop'], ['sma', 'SMA200'], ['forced', 'Forced (Sharia)'], ['manual', 'Manual']];
+const REASONS: [RoundTrip['exitReason'], string][] = [['stop', 'Initial stop'], ['trail', 'Trailing stop'], ['rank', 'Rank decay'], ['time', 'Time stop'], ['sma', 'SMA200'], ['derisk', 'De-risk trim'], ['forced', 'Forced (Sharia)'], ['manual', 'Manual'], ['other', 'Other']];
 const REASON_L = Object.fromEntries(REASONS) as Record<RoundTrip['exitReason'], string>;
 
 export function selectRoundTrips(trips: RoundTrip[], fees: number) {
@@ -205,7 +207,8 @@ export function selectRoundTrips(trips: RoundTrip[], fees: number) {
     rows: trips.map((r) => ({
       s: r.symbol, e: dayLabel(r.entryDate), x: dayLabel(r.exitDate), d: String(r.days),
       ep: usd(r.entryPrice), xp: usd(r.exitPrice), pnl: susd(r.pnl), pct: spct((r.exitPrice / r.entryPrice - 1) * 100), cls: tn(r.pnl),
-      r: REASON_L[r.exitReason], c: String(r.confAtEntry), band: band(r.confAtEntry), bandL: bandL(r.confAtEntry),
+      r: REASON_L[r.exitReason], why: r.reason,
+      c: r.confAtEntry == null ? '—' : String(r.confAtEntry), band: r.confAtEntry == null ? 'none' : band(r.confAtEntry), bandL: r.confAtEntry == null ? 'Pending' : bandL(r.confAtEntry),
     })),
     count: trips.length,
   };

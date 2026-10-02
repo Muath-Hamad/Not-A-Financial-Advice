@@ -18,7 +18,7 @@ interface Item {
 const SCREENS: [Screen, string, string][] = [
   ['overview', 'Overview', 'g o'], ['holdings', 'Holdings', 'g h'], ['orders', 'Orders', 'g r'], ['performance', 'Performance', 'g p'],
   ['compliance', 'Compliance', 'g c'], ['controls', 'Controls', 'g x'], ['agent', 'Agent', 'g a'], ['health', 'Health', 'g e'],
-  ['alerts', 'Alerts', 'g l'], ['audit', 'Audit log', 'g u'], ['roadmap', 'Roadmap', 'g m'], ['settings', 'Settings', 'g s'],
+  ['alerts', 'Alerts', 'g l'], ['audit', 'Audit log', 'g u'], ['roadmap', 'Roadmap', 'g m'], ['glossary', 'Glossary', 'g y'], ['settings', 'Settings', 'g s'],
 ];
 
 export function Palette() {

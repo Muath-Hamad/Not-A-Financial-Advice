@@ -20,6 +20,7 @@ const P: Record<string, ReactNode> = {
   health: <path d="M3 12h4l3-8 4 16 3-8h4" />,
   audit: <><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z" /><path d="M14 3v5h5M9 13h6M9 17h6" /></>,
   roadmap: <><path d="M4 21V4" /><path d="M4 4h12l-2 4 2 4H4" /></>,
+  book: <><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Z" /><path d="M4 19a2 2 0 0 1 2-2h13" /><path d="M9 7h6" /></>,
   settings: <><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1" /><circle cx="15" cy="6" r="2" /><circle cx="9" cy="12" r="2" /><circle cx="17" cy="18" r="2" /></>,
   proto: <><rect x="3" y="3" width="18" height="18" rx="3" style={{ strokeDasharray: '3 3' }} /><path d="M9 9h6v6H9z" /></>,
   more: <><circle cx="5" cy="12" r="1.3" /><circle cx="12" cy="12" r="1.3" /><circle cx="19" cy="12" r="1.3" /></>,

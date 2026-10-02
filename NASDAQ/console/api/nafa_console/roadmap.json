@@ -1,0 +1,482 @@
+{
+ "_note": "Hand-maintained route from docs/07 (phases, owner decisions D1–D8, task list). Edit statuses here as work lands; the console shows days left from dueIso.",
+ "ghostEnds": "2026-10-30",
+ "ghostEarliestPass": null,
+ "paperStart": "2026-11-02",
+ "d1Due": "2026-10-30",
+ "phases": [
+  {
+   "n": "1",
+   "label": "Ghost",
+   "env": "ghost",
+   "dates": "Mon 28 Sep → Fri 30 Oct 2026 · 25 sessions",
+   "gates": [
+    "ghost_streak",
+    "no_open_p1",
+    "Nightly rehearsal sends what the ledger says"
+   ]
+  },
+  {
+   "n": "2",
+   "label": "Paper",
+   "env": "paper",
+   "dates": "from Mon 2 Nov 2026 · first week in approval mode",
+   "gates": [
+    "10 clean paper sessions (earliest Fri 13 Nov)",
+    "No P1 and no reconciliation break",
+    "Average slippage ≤ 10 bps/side"
+   ]
+  },
+  {
+   "n": "3",
+   "label": "Evaluation",
+   "env": null,
+   "dates": "2 Nov 2026 → Tue 4 May 2027 · 126 sessions · 2 adaptations",
+   "gates": [
+    "Tracking error to twin < 0.5%/month",
+    "Slippage ≤ 10 bps/side",
+    "Rolling 63-session Sharpe > 0.5 absent a bear market",
+    "Zero unresolved P1"
+   ]
+  },
+  {
+   "n": "4",
+   "label": "Private build",
+   "env": null,
+   "dates": "Jan 2027 build · burn-in Mon 1 Feb → Mon 1 Mar 2027",
+   "gates": [
+    "20 sessions where the private twin equals the public twin"
+   ]
+  },
+  {
+   "n": "5",
+   "label": "Real money",
+   "env": "live",
+   "dates": "pilot from Mon 10 May 2027 at the earliest",
+   "gates": [
+    "Evaluation passed and burn-in passed",
+    "Decisions D1–D8 made",
+    "Tasks R1–R5 done"
+   ]
+  }
+ ],
+ "decisions": [
+  {
+   "id": "D1",
+   "title": "Sharia policy in writing",
+   "recommendation": "AAOIFI SS 21, a ruling on each of the 22 review-flagged names, and the purification method — rule before 30 Oct",
+   "due": "Fri 30 Oct 2026",
+   "dueIso": "2026-10-30",
+   "status": "Open"
+  },
+  {
+   "id": "D2",
+   "title": "Real-money account type",
+   "recommendation": "Cash account (no margin agreement), with the settlement guard in R4",
+   "due": "Feb 2027",
+   "dueIso": null,
+   "status": "Open"
+  },
+  {
+   "id": "D3",
+   "title": "Real-money broker",
+   "recommendation": "Alpaca live — the same API as paper, so the evaluated path is the traded path",
+   "due": "Jan 2027",
+   "dueIso": null,
+   "status": "Open"
+  },
+  {
+   "id": "D4",
+   "title": "Pilot capital and pain threshold",
+   "recommendation": "$10,000–25,000, below the $60,000 estate-tax line; review at −15% from the pilot high",
+   "due": "Apr 2027",
+   "dueIso": null,
+   "status": "Open"
+  },
+  {
+   "id": "D5",
+   "title": "Cold or warm start at each switch",
+   "recommendation": "Cold: reset LIVE_START so the twin and the account both start in cash",
+   "due": "at each switch",
+   "dueIso": null,
+   "status": "Recommended"
+  },
+  {
+   "id": "D6",
+   "title": "Ledger remote for the Unraid box",
+   "recommendation": "A private GitHub repository (off-site copy, issues for P1s)",
+   "due": "Jan 2027",
+   "dueIso": null,
+   "status": "Open"
+  },
+  {
+   "id": "D7",
+   "title": "When real money starts",
+   "recommendation": "After the verdict (Mon 10 May 2027), or a ≤ $5,000 operations micro-pilot from Tue 2 Mar 2027",
+   "due": "Feb 2027",
+   "dueIso": null,
+   "status": "Open"
+  },
+  {
+   "id": "D8",
+   "title": "factor2 as a second paper account",
+   "recommendation": "Doc 05 recommends it: the evaluation becomes a live election",
+   "due": "Fri 16 Oct 2026",
+   "dueIso": "2026-10-16",
+   "status": "Open"
+  }
+ ],
+ "tasks": [
+  {
+   "group": "G",
+   "id": "G0",
+   "task": "Fix the paper path, move the workflows to main, correct the universe, add tests",
+   "owner": "Claude",
+   "due": "Fri 25 Sep",
+   "dueIso": "2026-09-25",
+   "status": "done"
+  },
+  {
+   "group": "G",
+   "id": "G1",
+   "task": "Merge the deploy branch into main",
+   "owner": "you",
+   "due": "Sun 27 Sep",
+   "dueIso": "2026-09-27",
+   "status": "open"
+  },
+  {
+   "group": "G",
+   "id": "G2",
+   "task": "Check the post-merge push drills are all green",
+   "owner": "you / Claude",
+   "due": "Sun 27 Sep",
+   "dueIso": "2026-09-27",
+   "status": "open"
+  },
+  {
+   "group": "G",
+   "id": "G3",
+   "task": "If the merge slips past 27 Sep, set LIVE_START to the first session after it",
+   "owner": "you",
+   "due": "at merge",
+   "dueIso": null,
+   "status": "conditional"
+  },
+  {
+   "group": "G",
+   "id": "G4",
+   "task": "First scheduled nights run on their own (A 17:00 · submit 19:15 · B 09:50 ET)",
+   "owner": "automatic",
+   "due": "Mon 28 Sep",
+   "dueIso": "2026-09-28",
+   "status": "open"
+  },
+  {
+   "group": "G",
+   "id": "G5",
+   "task": "Read the first quarterly re-screen report",
+   "owner": "you",
+   "due": "Thu 1 Oct",
+   "dueIso": "2026-10-01",
+   "status": "open"
+  },
+  {
+   "group": "G",
+   "id": "G6",
+   "task": "Ghost gate passes: 10 deterministic sessions in gate.json",
+   "owner": "automatic",
+   "due": "Fri 9 Oct",
+   "dueIso": "2026-10-09",
+   "status": "open"
+  },
+  {
+   "group": "P",
+   "id": "P1",
+   "task": "Open the Alpaca paper account; add paper keys as repository secrets",
+   "owner": "you",
+   "due": "Fri 23 Oct",
+   "dueIso": "2026-10-23",
+   "status": "open"
+  },
+  {
+   "group": "P",
+   "id": "P2",
+   "task": "Optional: ALERT_WEBHOOK_URL secret for phone alerts",
+   "owner": "you",
+   "due": "Fri 23 Oct",
+   "dueIso": "2026-10-23",
+   "status": "open"
+  },
+  {
+   "group": "P",
+   "id": "P3",
+   "task": "Reset the paper account to $100,000 cash and no positions",
+   "owner": "you",
+   "due": "Fri 30 Oct",
+   "dueIso": "2026-10-30",
+   "status": "open"
+  },
+  {
+   "group": "P",
+   "id": "P4",
+   "task": "Set LIVE_START=2026-11-02, LIVE_MODE=paper, APPROVAL_MODE=true",
+   "owner": "you",
+   "due": "Sat 31 Oct",
+   "dueIso": "2026-10-31",
+   "status": "open"
+  },
+  {
+   "group": "P",
+   "id": "P5",
+   "task": "Approval week: read each night’s orders, then release the submit by hand",
+   "owner": "you",
+   "due": "2–6 Nov",
+   "dueIso": null,
+   "status": "open"
+  },
+  {
+   "group": "P",
+   "id": "P6",
+   "task": "Remove APPROVAL_MODE after five clean nights",
+   "owner": "you",
+   "due": "Mon 9 Nov",
+   "dueIso": "2026-11-09",
+   "status": "open"
+  },
+  {
+   "group": "P",
+   "id": "P7",
+   "task": "Paper gate: 10 clean sessions",
+   "owner": "automatic",
+   "due": "Fri 13 Nov",
+   "dueIso": "2026-11-13",
+   "status": "open"
+  },
+  {
+   "group": "E",
+   "id": "E1",
+   "task": "Monthly review: tracking error, slippage, missed fills, P1 count, anomalies",
+   "owner": "you + Claude",
+   "due": "monthly",
+   "dueIso": null,
+   "status": "open"
+  },
+  {
+   "group": "E",
+   "id": "E2",
+   "task": "Check the first live adaptation record",
+   "owner": "you + Claude",
+   "due": "Wed 3 Feb 2027",
+   "dueIso": "2027-02-03",
+   "status": "open"
+  },
+  {
+   "group": "E",
+   "id": "E3",
+   "task": "Quarterly re-screens: rule on anything flagged",
+   "owner": "you",
+   "due": "1 Jan, 1 Apr 2027",
+   "dueIso": null,
+   "status": "open"
+  },
+  {
+   "group": "E",
+   "id": "E4",
+   "task": "Verdict against the pre-registered bands; publish it",
+   "owner": "you + Claude",
+   "due": "Fri 7 May 2027",
+   "dueIso": "2027-05-07",
+   "status": "open"
+  },
+  {
+   "group": "U",
+   "id": "U1",
+   "task": "Decide the ledger remote (D6) and create it",
+   "owner": "you",
+   "due": "Mon 4 Jan 2027",
+   "dueIso": "2027-01-04",
+   "status": "open"
+  },
+  {
+   "group": "U",
+   "id": "U2",
+   "task": "Container image, crontab (ET) and run-step wrapper",
+   "owner": "Claude",
+   "due": "Fri 15 Jan 2027",
+   "dueIso": "2027-01-15",
+   "status": "open"
+  },
+  {
+   "group": "U",
+   "id": "U3",
+   "task": "Appdata share, live.env (chmod 600), container autostart",
+   "owner": "you",
+   "due": "Fri 22 Jan 2027",
+   "dueIso": "2027-01-22",
+   "status": "open"
+  },
+  {
+   "group": "U",
+   "id": "U4",
+   "task": "Heartbeat checks per step with phone alerts",
+   "owner": "you + Claude",
+   "due": "Fri 22 Jan 2027",
+   "dueIso": "2027-01-22",
+   "status": "open"
+  },
+  {
+   "group": "U",
+   "id": "U5",
+   "task": "UPS + NUT graceful shutdown; NTP; restart policy",
+   "owner": "you",
+   "due": "Fri 22 Jan 2027",
+   "dueIso": "2027-01-22",
+   "status": "open"
+  },
+  {
+   "group": "U",
+   "id": "U6",
+   "task": "Nightly cross-check of the private twin against the public twin",
+   "owner": "Claude",
+   "due": "Fri 29 Jan 2027",
+   "dueIso": "2027-01-29",
+   "status": "open"
+  },
+  {
+   "group": "U",
+   "id": "U7",
+   "task": "Box runbook: power, network, disk, key rotation, restore",
+   "owner": "Claude",
+   "due": "Fri 29 Jan 2027",
+   "dueIso": "2027-01-29",
+   "status": "open"
+  },
+  {
+   "group": "U",
+   "id": "U8",
+   "task": "Burn-in: 20 ghost sessions matching the public twin",
+   "owner": "automatic",
+   "due": "Mon 1 Mar 2027",
+   "dueIso": "2027-03-01",
+   "status": "open"
+  },
+  {
+   "group": "R",
+   "id": "R1",
+   "task": "Mirror: trade the twin’s targets at the account’s own equity",
+   "owner": "Claude",
+   "due": "Fri 26 Feb 2027",
+   "dueIso": "2027-02-26",
+   "status": "open"
+  },
+  {
+   "group": "R",
+   "id": "R2",
+   "task": "Live broker class, armed only on the box, with notional caps",
+   "owner": "Claude",
+   "due": "Fri 26 Feb 2027",
+   "dueIso": "2027-02-26",
+   "status": "open"
+  },
+  {
+   "group": "R",
+   "id": "R3",
+   "task": "Licensed Sharia data, a purification entry per dividend, a zakat statement",
+   "owner": "Claude · you buy",
+   "due": "Fri 26 Feb 2027",
+   "dueIso": "2027-02-26",
+   "status": "open"
+  },
+  {
+   "group": "R",
+   "id": "R4",
+   "task": "Cash-account settlement guard; withholding and pay dates in the ledger",
+   "owner": "Claude + you",
+   "due": "Fri 26 Feb 2027",
+   "dueIso": "2027-02-26",
+   "status": "open"
+  },
+  {
+   "group": "R",
+   "id": "R5",
+   "task": "Open the live cash account; W-8BEN; written tax advice",
+   "owner": "you",
+   "due": "Fri 26 Feb 2027",
+   "dueIso": "2027-02-26",
+   "status": "open"
+  },
+  {
+   "group": "R",
+   "id": "R6",
+   "task": "Optional operations micro-pilot of at most $5,000 on the box",
+   "owner": "you + Claude",
+   "due": "Mar 2027",
+   "dueIso": null,
+   "status": "option"
+  },
+  {
+   "group": "R",
+   "id": "R7",
+   "task": "Go / no-go; fund the pilot; first 10 sessions in approval mode",
+   "owner": "you",
+   "due": "May 2027",
+   "dueIso": null,
+   "status": "open"
+  },
+  {
+   "group": "S",
+   "id": "S1",
+   "task": "Written Sharia policy (D1), optionally reviewed by a scholar",
+   "owner": "you",
+   "due": "Fri 30 Oct 2026",
+   "dueIso": "2026-10-30",
+   "status": "open"
+  },
+  {
+   "group": "S",
+   "id": "S2",
+   "task": "Apply the D1 rulings: overrides before 30 Oct, exclusions after",
+   "owner": "Claude",
+   "due": "Fri 30 Oct 2026",
+   "dueIso": "2026-10-30",
+   "status": "open"
+  },
+  {
+   "group": "S",
+   "id": "S3",
+   "task": "Quarterly cross-check of the universe against HLAL and SPUS holdings",
+   "owner": "Claude",
+   "due": "Fri 1 Jan 2027",
+   "dueIso": "2027-01-01",
+   "status": "open"
+  },
+  {
+   "group": "X",
+   "id": "X1",
+   "task": "Broker-grade data and a history lock",
+   "owner": "Claude",
+   "due": "Fri 29 Jan 2027",
+   "dueIso": "2027-01-29",
+   "status": "open"
+  },
+  {
+   "group": "X",
+   "id": "X2",
+   "task": "Learning-loop oversight: alert when adapt() fires, plus the pause control",
+   "owner": "Claude",
+   "due": "Fri 29 Jan 2027",
+   "dueIso": "2027-01-29",
+   "status": "open"
+  },
+  {
+   "group": "X",
+   "id": "X3",
+   "task": "If D8 is yes: factor2 on a second paper account",
+   "owner": "Claude + you",
+   "due": "Fri 30 Oct 2026",
+   "dueIso": "2026-10-30",
+   "status": "conditional"
+  }
+ ]
+}

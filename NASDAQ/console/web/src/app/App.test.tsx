@@ -16,6 +16,14 @@ beforeAll(() => server.listen({ onUnhandledRequest: 'error' }));
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
+/** Match an element whose own full text is `t`, even when glossary terms split it into spans. */
+const fullText = (t: string | RegExp) => (_: string, el: Element | null) => {
+  if (!el) return false;
+  const txt = el.textContent ?? '';
+  const ok = typeof t === 'string' ? txt === t : t.test(txt);
+  return ok && Array.from(el.children).every((ch) => !(typeof t === 'string' ? ch.textContent === t : t.test(ch.textContent ?? '')));
+};
+
 function mount(path: string, scenario: Partial<MockState> = {}) {
   resetMockState(scenario);
   return render(
@@ -30,7 +38,7 @@ describe('console M0 screens', () => {
     mount('/');
     expect(await screen.findByRole('heading', { name: 'Overview' })).toBeInTheDocument();
     expect(await screen.findAllByText('$90,407.14')).not.toHaveLength(0);
-    expect(await screen.findByText('ORKA 0.4 ATR above its initial stop')).toBeInTheDocument();
+    expect(await screen.findByText(fullText(/^ORKA 0.4 ATR above its initial stop/))).toBeInTheDocument();
     expect(screen.getByText('PAPER')).toBeInTheDocument();
   });
 
@@ -51,7 +59,7 @@ describe('console M0 screens', () => {
 
   it('raises the stale banner and the tripped data gate in Ghost', async () => {
     mount('/health', { env: 'ghost', health: 'stale' });
-    expect(await screen.findByText(/Cycle A has failed 4 sessions in a row/)).toBeInTheDocument();
+    expect(await screen.findByText(fullText(/^Cycle A has failed 4 sessions in a row/))).toBeInTheDocument();
     expect(await screen.findByText('Stalled — 4 failed sessions')).toBeInTheDocument();
     expect(screen.getByText('GHOST')).toBeInTheDocument();
   });
@@ -60,6 +68,19 @@ describe('console M0 screens', () => {
     mount('/compliance');
     expect(await screen.findByText('Under review')).toBeInTheDocument();
     expect(screen.getAllByTitle('Sharia grade A').length).toBeGreaterThan(0);
+  });
+
+  it('explains a term on hover', async () => {
+    mount('/');
+    const term = (await screen.findAllByText('Drawdown from peak'))[0];
+    term.focus();
+    expect(await screen.findByRole('tooltip')).toHaveTextContent('How far the portfolio has fallen from its highest value');
+  });
+
+  it('lists every term on the glossary page', async () => {
+    mount('/glossary');
+    expect(await screen.findByRole('heading', { name: 'Glossary' })).toBeInTheDocument();
+    expect(screen.getByText('ATR — Average True Range')).toBeInTheDocument();
   });
 
   it('renders the roadmap decisions', async () => {

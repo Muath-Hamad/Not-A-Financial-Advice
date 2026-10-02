@@ -4,7 +4,7 @@
 
 import type { Decision, EquityMarker, Intent as OrderIntent, OverviewPayload, Position, UniverseName } from '@/api/types';
 import { f, spark, spct, susd, tn, usd, type Tone } from '@/lib/format';
-import { dayLabel, wdLabel } from '@/lib/dates';
+import { ago, dayLabel, wdLabel } from '@/lib/dates';
 import { control, drawer, nav, type Intent } from './actions';
 import { acctEquity, acctShares, confOf, exitOf, holdingRows, pendingRows, sharia, type HoldingRow } from './core';
 import type { Ctx } from './ctx';
@@ -27,19 +27,27 @@ export function attention(c: Ctx, positions: Position[], intents: OrderIntent[],
   const A: AttentionItem[] = [];
   const acct = c.env !== 'ghost';
   const it = (tone: AttentionItem['tone'], t: string, s: string, btn: string, intent: Intent): AttentionItem => ({ tone, t, s, btn, intent });
-  if (c.data === 'stale') A.push(it('red', 'Cycle A failed 4× — data gate', 'coverage at asof 0.6% < 95% · book from Fri 25 Sep', 'Details', nav('health')));
-  if (c.data === 'error') A.push(it('red', acct ? 'Broker unreachable' : 'Indexer unreachable', acct ? 'gateway timeout · last success 17:41 ET' : 'ledger not synced for 14 min', 'Health', nav('health')));
-  if (c.trading === 'halted') A.push(it('red', 'Reconciliation break — ROKU 75 vs 74', 'submit halted until cleared with a cause', 'Resolve', nav('controls')));
+  const fa = c.facts;
+  const fl = fa.failing;
+  if (c.data === 'stale' && fl) {
+    const [what, why] = fl.reason.split(': ');
+    A.push(it('red', 'Cycle A failed ' + fl.count + '× — ' + what.toLowerCase(), (why ?? fl.reason) + ' · book from ' + wdLabel(fa.model.asof), 'Details', nav('health')));
+  }
+  if (c.data === 'error') A.push(it('red', acct ? 'Broker unreachable' : 'Indexer unreachable', acct ? 'gateway timeout · last success ' + (fa.broker?.lastOk ?? '—') : 'ledger not synced for ' + ago(fa.ledger.downMin), 'Health', nav('health')));
+  if (c.trading === 'halted') A.push(it('red', 'Reconciliation break' + (fa.halt ? ' — ' + fa.halt.symbol + ' ' + fa.halt.expected + ' vs ' + fa.halt.actual : ''), 'submit halted until cleared with a cause', 'Resolve', nav('controls')));
   if (c.trading === 'stopped') A.push(it('red', 'Trading stopped (kill switch)', 'since ' + (c.stopAt || '18:04 ET') + ' · preflight needed to resume', 'Resume…', { kind: 'preflight' }));
-  if (c.trading === 'held') A.push(it('amber', 'Night held — release before 09:28 ET', 'approval mode · 3 orders waiting', 'Release', control('release')));
+  if (c.trading === 'held') {
+    const n = pendingRows(intents, positions, c).filter((o) => o.live).length;
+    A.push(it('amber', 'Night held — release before 09:28 ET', 'approval mode · ' + n + ' order' + (n === 1 ? '' : 's') + ' waiting', 'Release', control('release')));
+  }
   positions
     .filter((h) => h.review && !c.controls.forcedExits.includes(h.symbol))
-    .forEach((h) => A.push(it('amber', h.symbol + ' review-flagged', (h.review?.keyword ?? '') + ' · ruling due Fri 30 Oct (D1)', 'Review', drawer(h.symbol))));
+    .forEach((h) => A.push(it('amber', h.symbol + ' review-flagged', (h.review?.keyword ?? '') + ' · ruling due ' + wdLabel(fa.d1Due) + ' (D1)', 'Review', drawer(h.symbol))));
   positions.forEach((h) => {
     const ex = exitOf(h);
-    if (h.rankExit || ex.dist >= 1) return;
+    if (h.rankExit || ex.dist == null || ex.stopP == null || ex.dist >= 1) return;
     const cv = confOf(h, c);
-    A.push(it('amber', h.symbol + ' ' + f(ex.dist, 1) + ' ATR above its ' + ex.stopK.toLowerCase(), 'stop ' + usd(ex.stopP) + ' · last ' + usd(h.last) + ' · confidence ' + cv.tot + ' ' + cv.bandL, 'View', drawer(h.symbol)));
+    A.push(it('amber', h.symbol + ' ' + f(ex.dist, 1) + ' ATR above its ' + ex.stopK.toLowerCase(), 'stop ' + usd(ex.stopP) + ' · last ' + usd(h.last) + (cv ? ' · confidence ' + cv.tot + ' ' + cv.bandL : ''), 'View', drawer(h.symbol)));
   });
   if (acct && c.data !== 'stale') {
     const d = driftPct(positions, c);
@@ -53,7 +61,7 @@ export function attention(c: Ctx, positions: Position[], intents: OrderIntent[],
     const dayName = { Mon: 'Monday', Tue: 'Tuesday', Wed: 'Wednesday', Thu: 'Thursday', Fri: 'Friday' }[day] ?? day;
     positions.filter((h) => h.rankExit).forEach((h) => {
       const sell = intents.find((o) => o.symbol === h.symbol && o.side === 'SELL');
-      A.push(it('blue', h.symbol + ' rank exit at ' + dayName + '’s open', 'rank ' + h.rank + ' > 30 · sell ' + (sell ? sell.shares : h.shares) + ' sh queued', 'Orders', nav('orders', { tab: 'pending' })));
+      A.push(it('blue', h.symbol + ' rank exit at ' + dayName + '’s open', (h.rank != null ? 'rank ' + h.rank + ' > 30' : 'out of the top 30') + ' · sell ' + (sell ? sell.shares : h.shares) + ' sh queued', 'Orders', nav('orders', { tab: 'pending' })));
     });
   }
   decisions
@@ -133,6 +141,7 @@ export function selectOverview(c: Ctx, o: OverviewPayload, positions: Position[]
   if (T === 'halted') ordNote = 'halted — the submit sends nothing';
   if (c.released) ordNote = 'accepted by the broker 19:31 ET';
   if (stale) ordNote = 'no plan since ' + wdLabel(o.asof) + ' — Cycle A failing';
+  const fa = c.facts;
   const blkRules = blk.map((x) => x.guardrail).filter((x, i, a) => a.indexOf(x) === i).join(', ');
   const invested = rows.reduce((a, r) => a + r._val, 0);
   const expPct = (1 - c.cash / c.equity) * 100;
@@ -143,15 +152,15 @@ export function selectOverview(c: Ctx, o: OverviewPayload, positions: Position[]
   const eqChg = (M[n - 1] / o.startCapital - 1) * 100;
   return {
     sub: stale
-      ? 'Model book from ' + wdLabel(o.asof) + ' 17:05 ET — Cycle A has failed since Mon 28 Sep'
-      : 'Model book ' + wdLabel(o.asof) + ' 17:05 ET' + (acct ? ' · Account (Alpaca ' + (c.env === 'live' ? 'live' : 'paper') + ') ' + (c.data === 'error' ? 'last known 17:41 ET' : '18:01 ET') : ' · Ghost: no broker account yet'),
+      ? 'Model book from ' + wdLabel(o.asof) + (fa.model.builtAt ? ' ' + fa.model.builtAt : '') + (fa.failing ? ' — Cycle A has failed since ' + wdLabel(fa.failing.from) : '')
+      : 'Model book ' + wdLabel(o.asof) + (fa.model.builtAt ? ' ' + fa.model.builtAt : '') + (acct ? ' · Account (Alpaca ' + (c.env === 'live' ? 'live' : 'paper') + ') ' + (c.data === 'error' ? 'last known ' + (fa.broker?.lastOk ?? '—') : fa.accountAt ?? '—') : ' · Ghost: no broker account yet'),
     eq: usd(M[n - 1]),
     eqSince: spct(eqChg),
     eqCls: tn(eqChg),
     ixic: spct(benchChg),
     ixCls: tn(benchChg),
     sEq: spark(M),
-    eqAcct: acct ? 'Account ' + usd(aEq) + ' (' + susd(aEq - M[n - 1]) + ' vs Model)' : 'Account — starts in cash Mon 2 Nov',
+    eqAcct: acct ? 'Account ' + usd(aEq) + ' (' + susd(aEq - M[n - 1]) + ' vs Model)' : 'Account — starts in cash ' + wdLabel(fa.paperStart),
     day: susd(dayChg),
     dayP: spct((dayChg / M[n - 2]) * 100, 2),
     dayCls: tn(dayChg),
@@ -170,7 +179,7 @@ export function selectOverview(c: Ctx, o: OverviewPayload, positions: Position[]
     posFree: String(MAX_POSITIONS - rows.length),
     largest: largest ? largest.s + ' ' + f(largest._w, 1) + '%' : '—',
     slots: Array.from({ length: MAX_POSITIONS }, (_, i) => i < rows.length),
-    underRev: positions.some((h) => h.review && c.controls.forcedExits.includes(h.symbol)) ? '1 excluded' : positions.filter((h) => h.review).length + ' under review',
+    underRev: c.controls.forcedExits.length ? c.controls.forcedExits.length + ' excluded' : positions.filter((h) => h.review).length + ' under review',
     ord: stale ? '0' : String(live.length),
     ordSplit: stale ? 'no new plan' : buys + ' buys · ' + sells + ' sell' + (sells === 1 ? '' : 's') + (blk.length ? ' · ' + blk.length + ' blocked' : ''),
     ordWhen: wdLabel(nextOpen) + ' 09:30 ET',
@@ -244,7 +253,7 @@ export function selectEquity(c: Ctx, o: OverviewPayload, range: Range): EquityVi
     marks,
     lastM: usd(pts[pts.length - 1].model),
     lastB: usd(pts[pts.length - 1].benchmark),
-    acctLeg: acct && lastA != null ? 'Account ' + usd(lastA) : 'Account — starts Mon 2 Nov',
+    acctLeg: acct && lastA != null ? 'Account ' + usd(lastA) : 'Account — starts ' + wdLabel(c.facts.paperStart),
     acctLegCls: acct ? '' : 'muted',
     refDD: -16.2,
     killDD: -25,
@@ -271,7 +280,8 @@ export interface StackSeg {
 }
 
 /** Watchlist: within 3 pp of either 30% line and not excluded. */
-export const onWatch = (u: { debtPct: number; cashPct: number; status: string }) => Math.min(30 - u.debtPct, 30 - u.cashPct) < 3 && u.status !== 'Excluded';
+export const onWatch = (u: { debtPct: number | null; cashPct: number | null; status: string }) =>
+  u.debtPct != null && u.cashPct != null && Math.min(30 - u.debtPct, 30 - u.cashPct) < 3 && u.status !== 'Excluded';
 
 export function selectCompStrip(c: Ctx, positions: Position[], universe: UniverseName[] = []) {
   const tot = c.equity;
@@ -287,7 +297,8 @@ export function selectCompStrip(c: Ctx, positions: Position[], universe: Univers
     stackL: stack.map((s) => (s.l === '$' ? 'cash ' : s.l + ' ') + s.p).join(' · '),
     rev: rev.length ? rev.length + ' · ' + rev.map((h) => h.symbol).join(', ') : '0',
     watch: watch + (watch === 1 ? ' name' : ' names'),
-    fresh: 'screened Thu 1 Oct',
+    fresh: 'screened ' + wdLabel(c.facts.screen.last),
+    next: wdLabel(c.facts.screen.next) + ' ' + c.facts.screen.next.slice(0, 4),
   };
 }
 

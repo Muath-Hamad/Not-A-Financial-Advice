@@ -9,7 +9,8 @@ import { NO_FILTERS, selectHoldings, selectSide, type Book, type HoldingsFilters
 import { cx } from '@/lib/format';
 import { Icon } from '@/components/icons';
 import { BookTag, Chip, Conf, Empty, ExportButton, Fresh, Note, PageHeader, Seg, Shar } from '@/components/ui';
-import { HoldingCard, WeightCell } from './Overview';
+import { ExitCell, HoldingCard, WeightCell } from './Overview';
+import { Gloss, T } from '@/glossary/Term';
 import { exportCsv } from './csv';
 
 const col = createColumnHelper<HoldingRow>();
@@ -17,7 +18,7 @@ const col = createColumnHelper<HoldingRow>();
 interface ColMeta {
   w: string;
   cls?: string;
-  head?: string;
+  head?: ReactNode;
   stick?: boolean;
 }
 
@@ -51,20 +52,20 @@ export function Holdings() {
         <span className="symname">{h.n} · {h.sec}</span>
       </button>
     ) }),
-    col.accessor('sh', { meta: { w: '64px', cls: 'r num', head: 'Shares' } as ColMeta }),
-    col.accessor('avg', { meta: { w: '84px', cls: 'r num', head: 'Avg cost' } as ColMeta }),
-    col.display({ id: 'last', meta: { w: '88px', cls: 'r', head: 'Last' } as ColMeta, cell: ({ row: { original: h } }) => <><span className="num">{h.last}</span><span className={cx('xs', h.dayCls)} style={{ display: 'block' }}>{h.day}</span></> }),
-    col.accessor('val', { meta: { w: '96px', cls: 'r num', head: 'Value' } as ColMeta }),
-    col.display({ id: 'weight', meta: { w: '140px', head: 'Weight · cap 18%' } as ColMeta, cell: ({ row: { original: h } }) => <WeightCell h={h} /> }),
-    col.display({ id: 'unrealized', meta: { w: '112px', cls: 'r', head: 'Unrealized' } as ColMeta, cell: ({ row: { original: h } }) => <><span className={cx('num', h.uCls)}>{h.u}</span><span className={cx('xs', h.uCls)} style={{ display: 'block' }}>{h.uP}</span></> }),
-    col.accessor('rz', { id: 'realized', meta: { w: '84px', cls: 'r num muted', head: 'Realized' } as ColMeta }),
-    col.display({ id: 'held', meta: { w: '120px', head: 'Held / 35' } as ColMeta, cell: ({ row: { original: h } }) => (
+    col.accessor('sh', { meta: { w: '64px', cls: 'r num', head: <T k="shares">Shares</T> } as ColMeta }),
+    col.accessor('avg', { meta: { w: '84px', cls: 'r num', head: <T k="avgCost">Avg cost</T> } as ColMeta }),
+    col.display({ id: 'last', meta: { w: '88px', cls: 'r', head: <T k="last">Last</T> } as ColMeta, cell: ({ row: { original: h } }) => <><span className="num">{h.last}</span><span className={cx('xs', h.dayCls)} style={{ display: 'block' }}>{h.day}</span></> }),
+    col.accessor('val', { meta: { w: '96px', cls: 'r num', head: <T k="value">Value</T> } as ColMeta }),
+    col.display({ id: 'weight', meta: { w: '140px', head: <><T k="weight">Weight</T> · <T k="posCap">cap 18%</T></> } as ColMeta, cell: ({ row: { original: h } }) => <WeightCell h={h} /> }),
+    col.display({ id: 'unrealized', meta: { w: '112px', cls: 'r', head: <T k="unrealized">Unrealized</T> } as ColMeta, cell: ({ row: { original: h } }) => <><span className={cx('num', h.uCls)}>{h.u}</span><span className={cx('xs', h.uCls)} style={{ display: 'block' }}>{h.uP}</span></> }),
+    col.accessor('rz', { id: 'realized', meta: { w: '84px', cls: 'r num muted', head: <T k="realized">Realized</T> } as ColMeta }),
+    col.display({ id: 'held', meta: { w: '120px', head: <T k="timeStop">Held / 35</T> } as ColMeta, cell: ({ row: { original: h } }) => (
       <span className="held"><span className="num xs" style={{ width: 40 }}>{h.held}</span><span className="bar"><i className={cx('bar-f', h.heldCls)} style={{ width: h.heldB + '%' }} /></span></span>
     ) }),
-    col.display({ id: 'exit', meta: { w: '210px', head: 'Nearest exit' } as ColMeta, cell: ({ row: { original: h } }) => <span className={h.exCls}><span className="b">{h.exK}</span> <span className="num">{h.exP}</span><span className="xs" style={{ display: 'block' }}>{h.exD}</span></span> }),
-    col.display({ id: 'conf', meta: { w: '150px', head: 'Confidence' } as ColMeta, cell: ({ row: { original: h } }) => <Conf c={h.c} band={h.band} bandL={h.bandL} segs={h.segs} title={h.cT} /> }),
-    col.display({ id: 'sharia', meta: { w: '140px', head: 'Sharia' } as ColMeta, cell: ({ row: { original: h } }) => <Shar g={h.g} gCls={h.gCls} stat={h.stat} /> }),
-    col.display({ id: 'pending', meta: { w: '180px', head: 'Pending' } as ColMeta, cell: ({ row: { original: h } }) => <span className={cx('xs', h.pCls)}>{h.pend}</span> }),
+    col.display({ id: 'exit', meta: { w: '210px', head: <T k="nearestExit">Nearest exit</T> } as ColMeta, cell: ({ row: { original: h } }) => <ExitCell h={h} /> }),
+    col.display({ id: 'conf', meta: { w: '150px', head: <T k="confidence">Confidence</T> } as ColMeta, cell: ({ row: { original: h } }) => <Conf c={h.c} band={h.band} bandL={h.bandL} segs={h.segs} title={h.cT} /> }),
+    col.display({ id: 'sharia', meta: { w: '140px', head: <T k="shariaGrade">Sharia</T> } as ColMeta, cell: ({ row: { original: h } }) => <Shar g={h.g} gCls={h.gCls} stat={h.stat} /> }),
+    col.display({ id: 'pending', meta: { w: '180px', head: <T k="nextOpen">Pending</T> } as ColMeta, cell: ({ row: { original: h } }) => <span className={cx('xs', h.pCls)}><Gloss text={h.pend} /></span> }),
     col.display({ id: 'menu', meta: { w: '48px', cls: 'c', head: '' } as ColMeta, cell: ({ row: { original: h } }) => owner
       ? <button type="button" className="btn ghost sm icon" onClick={() => setMenu(menu === h.s ? null : h.s)} aria-label={'Overrides for ' + h.s} aria-expanded={menu === h.s} title="Lock · Trim · Force exit">⋯</button>
       : null }),
@@ -80,7 +81,7 @@ export function Holdings() {
     unrealized: <span className={cx('num', hd.tUCls)}>{hd.tU}</span>,
     realized: <span className={cx('num', hd.tRCls)}>{hd.tR}</span>,
     exit: <span className="dim" style={{ fontWeight: 500 }}>Cash {hd.cash} · Equity <b>{hd.eq}</b></span>,
-    conf: <Conf c={hd.tC} band={hd.tBand} bandL="weighted" bar={false} />,
+    conf: <Conf c={hd.tC} band={hd.tBand} bandL={hd.tBand === 'none' ? 'Pending' : 'weighted'} bar={false} />,
     sharia: <span className="xs muted" style={{ fontWeight: 500 }}>{hd.tGrades}</span>,
   };
 
@@ -130,7 +131,7 @@ export function Holdings() {
 
       <section className="panel">
         <div className="ph">
-          <h3>{hd.title}</h3><BookTag acct={hd.tagCls === 'acct'} style={{ marginLeft: 0 }}>{hd.tag}</BookTag><span className="hint">{hd.count}</span>
+          <h3><T k={hd.tag === 'ACCOUNT' ? 'account' : hd.tag === 'BOTH' ? 'drift' : 'model'}>{hd.title}</T></h3><BookTag acct={hd.tagCls === 'acct'} style={{ marginLeft: 0 }}>{hd.tag}</BookTag><span className="hint">{hd.count}</span>
           <Fresh cls={hd.frCls} l={hd.frL} />
         </div>
         {hd.errNote && <div className="pb" style={{ paddingBottom: 0 }}><Note tone="danger">{hd.errText}</Note></div>}
@@ -205,11 +206,11 @@ function SideBySide() {
   const sd = selectSide(ctx, positions);
   return (
     <>
-      <div className="pb" style={{ paddingBottom: 0 }}><Note tone={sd.noteCls === 'warn' ? 'warn' : 'info'}>{sd.note}</Note></div>
+      <div className="pb" style={{ paddingBottom: 0 }}><Note tone={sd.noteCls === 'warn' ? 'warn' : 'info'}><Gloss text={sd.note} /></Note></div>
       <div className="twrap wide-only" style={{ marginTop: 12 }}>
         <div className="dt flush">
           <div className="dt-r dt-h" style={{ gridTemplateColumns: SIDE_COLS }}>
-            <span className="stick">Symbol</span><span className="r">Model sh</span><span className="r acct">Account sh</span><span className="c">Drift</span><span className="r">Model value</span><span className="r acct">Account value</span><span className="r">Δ value</span><span className="r">Model avg</span><span className="r acct">Account avg</span><span className="r">Slippage</span><span>Explanation</span>
+            <span className="stick">Symbol</span><span className="r">Model sh</span><span className="r acct">Account sh</span><span className="c"><T k="drift">Drift</T></span><span className="r">Model value</span><span className="r acct">Account value</span><span className="r">Δ value</span><span className="r">Model avg</span><span className="r acct">Account avg</span><span className="r"><T k="slippage">Slippage</T></span><span>Explanation</span>
           </div>
           {sd.rows.map((r) => (
             <div key={r.s} className="dt-r" style={{ gridTemplateColumns: SIDE_COLS }}>
@@ -218,7 +219,7 @@ function SideBySide() {
               <span className="c"><Chip cls={r.dCls}>{r.dSh}</Chip></span>
               <span className="r num">{r.mV}</span><span className="r num">{r.aV}</span><span className={cx('r num', r.dVCls)}>{r.dV}</span>
               <span className="r num">{r.mA}</span><span className="r num">{r.aA}</span><span className={cx('r num', r.slipCls)}>{r.slip}</span>
-              <span className="wc dim">{r.ex}</span>
+              <span className="wc dim"><Gloss text={r.ex} /></span>
             </div>
           ))}
           <div className="dt-r dt-tot" style={{ gridTemplateColumns: SIDE_COLS }}>

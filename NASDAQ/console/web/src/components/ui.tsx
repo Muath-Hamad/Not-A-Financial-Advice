@@ -5,6 +5,7 @@ import type { CSSProperties, ReactNode } from 'react';
 import { cx } from '@/lib/format';
 import type { LcStep } from '@/domain/core';
 import { Icon, ToneIcon } from './icons';
+import { Gloss, T } from '@/glossary/Term';
 
 export function Panel({ title, hint, extra, fresh, className, style, children, footer }: {
   title?: ReactNode;
@@ -95,6 +96,14 @@ export function Conf({ c, band, bandL, segs, title, bar = true, label = true }: 
   bar?: boolean;
   label?: boolean;
 }) {
+  if (band === 'none') {
+    return (
+      <span className="conf" title={title ?? 'Confidence is computed by the insights step (milestone M3)'}>
+        <span className="conf-n muted">—</span>
+        {label && <span className="conf-b muted">Pending</span>}
+      </span>
+    );
+  }
   return (
     <span className={cx('conf', band)} title={title}>
       <span className="conf-n">{c}</span>
@@ -115,7 +124,8 @@ export function MicroBar({ segs, className }: { segs: { w: number; f: number }[]
 }
 
 export function BookTag({ acct, children, style }: { acct?: boolean; children: ReactNode; style?: CSSProperties }) {
-  return <span className={cx('booktag', acct && 'acct')} style={style}>{children}</span>;
+  const k = children === 'ACCOUNT' ? 'account' : children === 'BOTH' ? 'drift' : 'model';
+  return <span className={cx('booktag', acct && 'acct')} style={style}><T k={k}>{children}</T></span>;
 }
 
 export function SideTag({ side, label }: { side: 'buy' | 'sell' | string; label: ReactNode }) {
@@ -170,10 +180,10 @@ export function MiniLifecycle({ steps, state, sc, small }: { steps: LcStep[]; st
 }
 
 export function Guardrail({ ok, rule, note, small }: { ok: boolean; rule: string; note?: string; small?: boolean }) {
-  if (ok) return <span className={cx('gr ok', small && 'xs')}>✓ {small ? 'guardrails' : 'passed'}</span>;
+  if (ok) return <span className={cx('gr ok', small && 'xs')}>✓ {small ? <T k="guardrails">guardrails</T> : 'passed'}</span>;
   return (
     <>
-      <span className={cx('gr blk', small && 'xs')}>⊘ {small ? null : 'blocked '}<span className="rule">{rule}</span></span>
+      <span className={cx('gr blk', small && 'xs')}>⊘ {small ? null : 'blocked '}<span className="rule"><Gloss text={rule} /></span></span>
       {note && !small && <span className="xs muted" style={{ display: 'block' }}>{note}</span>}
     </>
   );
@@ -181,9 +191,10 @@ export function Guardrail({ ok, rule, note, small }: { ok: boolean; rule: string
 
 /** Debt or cash vs market cap, with the 30% threshold at 75% of the track (0–40%). */
 export function RatioGauge({ label, r }: { label: string; r: { v: string; w: string; head: string; hCls: string; cls: string } }) {
+  const k = label.startsWith('Debt') ? 'debtMcap' : 'cashMcap';
   return (
     <div className="gauge">
-      <div className="gauge-lbl"><span>{label}</span><span className="num"><b className="dim">{r.v}</b> · <span className={r.hCls}>{r.head}</span></span></div>
+      <div className="gauge-lbl"><span><T k={k}>{label}</T></span><span className="num"><b className="dim">{r.v}</b> · <span className={r.hCls}>{r.head.endsWith('headroom') ? <>{r.head.replace(' headroom', ' ')}<T k="headroom">headroom</T></> : r.head}</span></span></div>
       <div className="gauge-t"><i className={cx('gauge-f', r.cls)} style={{ width: r.w + '%' }} /><i className="gauge-th" style={{ left: '75%' }} title="30% threshold" /></div>
     </div>
   );

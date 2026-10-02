@@ -4,7 +4,7 @@
 
 import type { Alert, HistOrder, Intent, Position } from '@/api/types';
 import { band, bandL, f, spct, susd, tn, usd, type Band, type Tone } from '@/lib/format';
-import { compact, wdLabel } from '@/lib/dates';
+import { compact, dow, hm, wdLabel } from '@/lib/dates';
 import type { Ctx } from './ctx';
 
 /* ───────── trading state ───────── */
@@ -43,14 +43,17 @@ export function tonight(c: Ctx): TimelineStep[] {
     title: title || l + ' ' + time,
     mcls: cls === 'done' ? 'pos' : cls === 'fail' ? 'danger' : cls === 'run' || cls === 'held' ? 'warn' : 'muted',
   });
-  const A = S('Cycle A', '17:05', 'done', '✓', '', 'A', 'Cycle A 17:05 ET — ok in 41 s');
+  const fa = c.facts;
+  const la = fa.lastCycleA;
+  const openDay = dow(fa.nextOpen);
+  const A = S('Cycle A', '17:05', 'done', '✓', '', 'A', 'Cycle A 17:05 ET — ok' + (la?.durationS ? ' in ' + Math.round(la.durationS) + ' s' : ''));
   const T = c.trading;
-  if (c.data === 'stale') return [S('Cycle A', '17:05', 'fail', '✗', '', 'A', 'Cycle A 17:05 ET — failed: data gate'), S('Submit', '19:15', 'skip', '–', '', 'Submit', 'Submit 19:15 ET — nothing to send'), S('Open', 'Fri 09:30', '', '·', '', 'Open'), S('Cycle B', '09:50', '', '·', '', 'B')];
-  if (T === 'halted') return [S('Cycle A', 'Fri 17:05', 'done', '✓', '', 'A'), S('Submit', '19:15', 'done', '✓', '', 'Submit'), S('Open', '09:30', 'done', '✓', '', 'Open'), S('Cycle B', '09:50', 'fail', '✗', '', 'B', 'Cycle B 09:50 ET — reconciliation break')];
-  if (T === 'held') return [A, S('Submit', '19:15', 'held', '‖', 'held', 'Submit', 'Submit 19:15 ET — held for approval'), S('Open', 'Mon 09:30', '', '·', '', 'Open'), S('Cycle B', '09:50', '', '·', '', 'B')];
-  if (T === 'stopped') return [A, S('Submit', '19:15', 'skip', '–', '', 'Submit', 'Submit — skipped: kill switch'), S('Open', 'Mon 09:30', 'skip', '–', '', 'Open'), S('Cycle B', '09:50', '', '·', '', 'B')];
-  if (c.released) return [A, S('Submit', '19:31', 'done', '✓', '', 'Submit', 'Submit — released 19:31 ET'), S('Open', 'Mon 09:30', 'run', '◷', '13h59m', 'Open'), S('Cycle B', '09:50', '', '·', '', 'B')];
-  return [A, S('Submit', '19:15', 'run', '◷', '1h12m', 'Submit', 'Submit 19:15 ET — in 1h12m'), S('Open', 'Mon 09:30', '', '·', '', 'Open'), S('Cycle B', '09:50', '', '·', '', 'B')];
+  if (c.data === 'stale') return [S('Cycle A', '17:05', 'fail', '✗', '', 'A', 'Cycle A 17:05 ET — failed: ' + (fa.failing?.reason.split(':')[0].toLowerCase() ?? 'see Health')), S('Submit', '19:15', 'skip', '–', '', 'Submit', 'Submit 19:15 ET — nothing to send'), S('Open', openDay + ' 09:30', '', '·', '', 'Open'), S('Cycle B', '09:50', '', '·', '', 'B')];
+  if (T === 'halted') return [S('Cycle A', dow(fa.model.asof) + ' 17:05', 'done', '✓', '', 'A'), S('Submit', '19:15', 'done', '✓', '', 'Submit'), S('Open', '09:30', 'done', '✓', '', 'Open'), S('Cycle B', '09:50', 'fail', '✗', '', 'B', 'Cycle B 09:50 ET — reconciliation break')];
+  if (T === 'held') return [A, S('Submit', '19:15', 'held', '‖', 'held', 'Submit', 'Submit 19:15 ET — held for approval'), S('Open', openDay + ' 09:30', '', '·', '', 'Open'), S('Cycle B', '09:50', '', '·', '', 'B')];
+  if (T === 'stopped') return [A, S('Submit', '19:15', 'skip', '–', '', 'Submit', 'Submit — skipped: kill switch'), S('Open', openDay + ' 09:30', 'skip', '–', '', 'Open'), S('Cycle B', '09:50', '', '·', '', 'B')];
+  if (c.released || fa.submitInMin == null) return [A, S('Submit', c.released ? '19:31' : '19:15', 'done', '✓', '', 'Submit', c.released ? 'Submit — released 19:31 ET' : 'Submit 19:15 ET'), S('Open', openDay + ' 09:30', 'run', '◷', hm(fa.openInMin), 'Open'), S('Cycle B', '09:50', '', '·', '', 'B')];
+  return [A, S('Submit', '19:15', 'run', '◷', hm(fa.submitInMin), 'Submit', 'Submit 19:15 ET — in ' + hm(fa.submitInMin)), S('Open', openDay + ' 09:30', '', '·', '', 'Open'), S('Cycle B', '09:50', '', '·', '', 'B')];
 }
 
 /* ───────── Sharia (docs/08 §5) ───────── */
@@ -81,7 +84,8 @@ export interface ShariaCard {
   purif: string;
 }
 
-function ratio(v: number): RatioGauge {
+function ratio(v: number | null): RatioGauge {
+  if (v == null) return { v: '—', w: '0', head: 'Not available – licensed data pending', hCls: 'dim', cls: 'ok' };
   const hd = 30 - v;
   return {
     v: f(v, 1) + '%',
@@ -92,33 +96,51 @@ function ratio(v: number): RatioGauge {
   };
 }
 
+/** Sharia grade (docs/08 §5): A ≥ 10 pp headroom on both ratios and no flag;
+ *  B under 10 pp; C review-flagged, under 3 pp or ratios missing; F excluded or failing. */
+export function gradeOf(debt: number | null, cash: number | null, review: boolean, excluded: boolean): ShariaCard['g'] {
+  if (excluded) return 'F';
+  if (debt == null || cash == null) return 'C';
+  const head = Math.min(30 - debt, 30 - cash);
+  if (head < 0) return 'F';
+  if (review || head < 3) return 'C';
+  if (head < 10) return 'B';
+  return 'A';
+}
+
+const year = (iso: string) => iso.slice(0, 4);
+
 export function sharia(h: Position, c: Ctx): ShariaCard {
   const forced = c.controls.forcedExits.includes(h.symbol);
   const review = !!h.review && !forced;
+  const g = gradeOf(h.debtPct, h.cashPct, review, forced);
   let status = 'Compliant';
   let stCls: ShariaCard['stCls'] = 'pos';
-  let g: ShariaCard['g'] = 'A';
-  let why = 'Passes every layer · both ratios ≥ 10 pp headroom · no review flag · data under 100 days old';
+  let why = g === 'A'
+    ? 'Passes every layer · both ratios ≥ 10 pp headroom · no review flag'
+    : g === 'B' ? 'Passes every layer, but a ratio is within 10 pp of the 30% line' : 'Passes, but a ratio is within 3 pp of the 30% line or missing';
   if (review) {
-    status = 'Under review'; stCls = 'warn'; g = 'C';
+    status = 'Under review'; stCls = 'warn';
     why = 'Passes the ratios, but review-flagged: owner ruling pending (D1)';
   }
   if (forced) {
-    status = 'Excluded — exit queued'; stCls = 'danger'; g = 'F';
-    why = 'Excluded by owner ruling · forced exit at the next open';
+    status = 'Excluded — exit queued'; stCls = 'danger';
+    why = 'Excluded · forced exit at the next open';
   }
   const d = h.nextDividend;
+  const scr = c.facts.screen;
+  const on = h.screenedOn ?? scr.last;
   return {
     status, stCls, g, gCls: 'g' + g, why,
     short: review ? 'Under review' : forced ? 'Excluded' : 'Compliant',
     debt: ratio(h.debtPct),
     cash: ratio(h.cashPct),
-    biz: h.industry + (review && h.review ? ' · keyword: "' + h.review.keyword + '" (' + h.review.category + ')' : ' · no impermissible keywords · pass'),
+    biz: h.industry + (review && h.review ? ' · flag: "' + h.review.keyword + '"' : ' · no impermissible keywords · pass'),
     bizCls: review ? 'warn' : '',
-    flag: review ? 'Flagged — ruling pending' : forced ? 'Owner ruling: exclude' : 'None',
+    flag: review ? 'Flagged — ruling pending' : forced ? 'Excluded' : 'None',
     flagCls: review ? 'warn' : forced ? 'danger' : 'dim',
-    ruling: review ? 'Due Fri 30 Oct 2026 (D1)' : forced ? 'Excluded today · forced exit queued' : '—',
-    screened: 'Thu 1 Oct 2026 · next Fri 1 Jan 2027',
+    ruling: review ? 'Due ' + wdLabel(c.facts.d1Due) + ' ' + year(c.facts.d1Due) + ' (D1)' : forced ? 'Excluded · forced exit queued' : '—',
+    screened: wdLabel(on) + ' ' + year(on) + ' · next ' + wdLabel(scr.next) + ' ' + year(scr.next),
     purif: d
       ? 'Next dividend ~' + usd(d.perShare * d.shares) + ' gross (' + d.shares + ' × $' + f(d.perShare, 3) + ', pay ' + wdLabel(d.payDate) + ') · rate pending'
       : 'No dividend received · nothing due',
@@ -138,8 +160,10 @@ export interface ConfView {
   title: string;
 }
 
-export function confOf(h: Position, c: Ctx): ConfView {
+/** null until the insights step (M3) ledgers confidence for this holding. */
+export function confOf(h: Position, c: Ctx): ConfView | null {
   const k = h.confidence;
+  if (!k) return null;
   const sub = [k.signal, k.riskRoom, k.regime, c.data === 'stale' ? 15 : k.data];
   const tot = Math.round(sub[0] * 0.4 + sub[1] * 0.3 + sub[2] * 0.2 + sub[3] * 0.1);
   return {
@@ -162,20 +186,26 @@ export interface ExitView {
   near: boolean;
   full: string;
   stopK: string;
-  stopP: number;
-  dist: number;
+  stopP: number | null;
+  dist: number | null;
 }
 
-export function stopOf(h: Position) {
-  const trailing = h.trailingStop > h.initialStop;
-  const stopP = trailing ? h.trailingStop : h.initialStop;
+export function stopOf(h: Position): { stopK: string; stopP: number | null; dist: number | null } {
+  if (h.initialStop == null || h.atr == null) return { stopK: 'Nearest exit', stopP: null, dist: null };
+  const trailing = h.trailingStop != null && h.trailingStop > h.initialStop;
+  const stopP = trailing ? (h.trailingStop as number) : h.initialStop;
   return { stopK: trailing ? 'Trailing stop' : 'Initial stop', stopP, dist: (h.last - stopP) / h.atr };
 }
+
+export const STOPS_PENDING = 'Stop levels come from the insights step (milestone M3)';
 
 export function exitOf(h: Position): ExitView {
   const s = stopOf(h);
   if (h.rankExit) {
-    return { ...s, k: 'Rank exit', p: 'rank ' + h.rank + ' > 30', d: 'triggered · sells at the open', cls: 'warn', near: true, full: 'Rank exit — rank ' + h.rank + ' is past the exit threshold of 30; sell queued for the open' };
+    return { ...s, k: 'Rank exit', p: h.rank != null ? 'rank ' + h.rank + ' > 30' : 'out of the top 30', d: 'triggered · sells at the open', cls: 'warn', near: true, full: 'Rank exit — momentum rank is past the exit threshold of 30; sell queued for the open' };
+  }
+  if (s.stopP == null || s.dist == null) {
+    return { ...s, k: 'Nearest exit', p: '—', d: 'awaiting insights (M3)', cls: 'muted', near: h.heldSessions >= 28, full: STOPS_PENDING + ' · time stop after 35 sessions (' + h.heldSessions + ' held)' };
   }
   return {
     ...s,
@@ -184,7 +214,7 @@ export function exitOf(h: Position): ExitView {
     d: f(s.dist, 1) + ' ATR away',
     cls: s.dist < 1 ? 'warn' : '',
     near: s.dist < 1.5 || h.heldSessions >= 28,
-    full: s.stopK + ' ' + usd(s.stopP) + ' · ' + f(s.dist, 1) + ' ATR away (ATR ' + usd(h.atr) + ')',
+    full: s.stopK + ' ' + usd(s.stopP) + ' · ' + f(s.dist, 1) + ' ATR away (ATR ' + usd(h.atr as number) + ')',
   };
 }
 
@@ -326,7 +356,7 @@ export interface HoldingRow {
   exD: string;
   exCls: string;
   c: string;
-  band: Band;
+  band: Band | 'none';
   bandL: string;
   segs: { w: number; f: number }[];
   cT: string;
@@ -339,7 +369,7 @@ export interface HoldingRow {
   _w: number;
   _u: number;
   _val: number;
-  _c: number;
+  _c: number | null;
   _g: string;
   _sec: string;
   _near: boolean;
@@ -366,17 +396,18 @@ export function holdingRows(positions: Position[], intents: Intent[], c: Ctx, bo
       : locked ? 'Locked — agent skips' : '—';
     return {
       s: h.symbol, n: h.name, sec: h.sector, locked,
-      sh: String(sh), avg: usd(avg), last: usd(h.last), day: spct(h.dayPct, 2), dayCls: tn(h.dayPct),
+      sh: String(sh), avg: usd(avg), last: usd(h.last), day: h.dayPct == null ? '' : spct(h.dayPct, 2), dayCls: h.dayPct == null ? 'dim' : tn(h.dayPct),
       val: usd(val), w: f(w, 1) + '%', wb: Math.min((w / 20) * 100, 100).toFixed(1),
       u: susd(u), uP: spct(up, 1), uCls: tn(u), rz: '$0.00',
       held: h.heldSessions + ' / 35', heldB: ((h.heldSessions / 35) * 100).toFixed(1), heldCls: h.heldSessions >= 28 ? 'warn' : '',
       exK: ex.k, exP: ex.p, exD: ex.d, exCls: ex.cls,
-      c: String(cv.tot), band: cv.band, bandL: cv.bandL, segs: cv.segs, cT: cv.title,
+      c: cv ? String(cv.tot) : '—', band: cv ? cv.band : 'none', bandL: cv ? cv.bandL : 'Pending', segs: cv ? cv.segs : [],
+      cT: cv ? cv.title : 'Confidence is computed by the insights step (milestone M3) — not available yet',
       g: sv.g, gCls: sv.gCls, stat: sv.short,
       pend: pendL,
       pendS: po.length ? po[0].side + ' @ open' : locked ? 'Locked' : '',
       pCls: po.length ? (po.some((o) => o.source !== 'agent') ? 'warn' : 'info') : locked ? 'warn' : 'muted',
-      _w: w, _u: u, _val: val, _c: cv.tot, _g: sv.g, _sec: h.sector, _near: ex.near,
+      _w: w, _u: u, _val: val, _c: cv ? cv.tot : null, _g: sv.g, _sec: h.sector, _near: ex.near,
     };
   });
 }

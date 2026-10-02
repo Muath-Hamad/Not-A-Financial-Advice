@@ -9,9 +9,14 @@ import { selectFresh } from '@/domain/chrome';
 import { control } from '@/domain/actions';
 import { selectConf, selectDrawer, selectPrice, selectShariaCard } from '@/domain/holdings';
 import { cx } from '@/lib/format';
+import { wdLabel } from '@/lib/dates';
 import { PriceChart } from '@/components/charts/PriceChart';
 import { Icon } from '@/components/icons';
 import { Chip, Fresh, Grade, Lifecycle, MicroBar, Note, RatioGauge, Seg, Sk, Spark } from '@/components/ui';
+import { Gloss, T } from '@/glossary/Term';
+import type { TermKey } from '@/glossary/terms';
+
+const SUB_TERMS: TermKey[] = ['signal', 'riskRoom', 'regimeScore', 'dataScore'];
 
 export function HoldingDrawer({ sym }: { sym: string }) {
   const ctx = useCtx();
@@ -45,6 +50,7 @@ export function HoldingDrawer({ sym }: { sym: string }) {
   const fr = selectFresh(ctx);
   const sh = selectShariaCard(ctx, h);
   const cf = selectConf(ctx, h, rt.data?.trips ?? [], detail.data?.confidenceHistory ?? []);
+  const price = detail.data ? selectPrice(h, detail.data) : null;
   const owner = ctx.role === 'owner';
   const acct = ctx.env !== 'ghost';
 
@@ -59,8 +65,10 @@ export function HoldingDrawer({ sym }: { sym: string }) {
               <div className="row" style={{ gap: 8 }}>
                 <span className="sym" style={{ fontSize: 20 }}>{dr.s}</span>
                 <Grade g={dr.g} gCls={dr.gCls} />
-                <span className={cx('conf', dr.band)}><span className="conf-n">{dr.c}</span><span className="conf-b">{dr.bandL}</span></span>
-                {dr.locked && <Chip cls="warn">Locked</Chip>}
+                {dr.band === 'none'
+                  ? <span className="conf"><span className="conf-n muted">—</span><span className="conf-b muted"><T k="confidence">Pending</T></span></span>
+                  : <span className={cx('conf', dr.band)}><span className="conf-n">{dr.c}</span><span className="conf-b">{dr.bandL}</span></span>}
+                {dr.locked && <Chip cls="warn"><T k="locked">Locked</T></Chip>}
                 {dr.forced && <Chip cls="danger">Exit queued</Chip>}
               </div>
               <span className="xs muted">{dr.n} · {dr.sec} · {dr.ind}</span>
@@ -70,47 +78,49 @@ export function HoldingDrawer({ sym }: { sym: string }) {
           <div className="row wrap" style={{ gap: 12, alignItems: 'flex-end' }}>
             <div className="col gap4">
               <span className={cx('bigpnl', dr.uCls)}>{dr.u}</span>
-              <span className="sm"><span className={dr.uCls}>{dr.uP}</span><span className="dim"> unrealized · {dr.val} · {dr.w} of equity</span></span>
+              <span className="sm"><span className={dr.uCls}>{dr.uP}</span><span className="dim"> <T k="unrealized">unrealized</T> · {dr.val} · {dr.w} of <T k="equity">equity</T></span></span>
             </div>
             <span className="sp" />
-            <Seg label="Book" value={dr.isA ? 'account' : 'model'} onChange={(b) => (b === 'account' && !acct ? showToast('No broker account in Ghost — it starts Mon 2 Nov') : setBook(b))} items={[{ k: 'model', l: 'Model' }, { k: 'account', l: 'Account' }]} />
+            <Seg label="Book" value={dr.isA ? 'account' : 'model'} onChange={(b) => (b === 'account' && !acct ? showToast('No broker account in Ghost — it starts ' + wdLabel(ctx.facts.paperStart)) : setBook(b))} items={[{ k: 'model', l: 'Model' }, { k: 'account', l: 'Account' }]} />
           </div>
           {owner && (
             <div className="row wrap" style={{ gap: 8 }}>
               <button type="button" className="btn sm" onClick={() => dispatch(control(dr.locked ? 'unlock' : 'lock', h.symbol))}><Icon name="lock" className="s14" />{dr.locked ? 'Unlock' : 'Lock'}</button>
               <button type="button" className="btn sm" onClick={() => dispatch(control('trim', h.symbol))} disabled={dr.forced}>Trim…</button>
               <button type="button" className="btn sm danger-o" onClick={() => dispatch(control('force_exit', h.symbol))} disabled={dr.forced}>Force exit…</button>
-              <span className="eff">Effective: tonight’s 19:15 ET submit</span>
+              <span className="eff">Effective: tonight’s 19:15 ET <T k="submit">submit</T></span>
             </div>
           )}
         </div>
 
         <div className="db">
           <section className="dsec">
-            <div className="row"><h4>Price · 70 sessions</h4><span className="sp" /><Fresh cls={fr.model.cls} l={fr.model.s} /></div>
-            <div className="legend xs">
-              <span><i className="sw model" />close</span>
-              <span><i className="sw" style={{ background: 'var(--info)' }} />SMA50</span>
-              <span><i className="sw" style={{ background: 'var(--acct)' }} />SMA200</span>
-              <span><span className="mk buy" style={{ position: 'static', transform: 'none' }}>B</span>fill</span>
-            </div>
-            {detail.data ? <PriceChart v={selectPrice(h, detail.data)} /> : <Sk h={210} />}
+            <div className="row"><h4>Price · 70 <T k="session">sessions</T></h4><span className="sp" /><Fresh cls={fr.model.cls} l={fr.model.s} /></div>
+            {price && (
+              <div className="legend xs">
+                <span><i className="sw model" />close</span>
+                <span><i className="sw" style={{ background: 'var(--info)' }} /><T k="sma">SMA50</T></span>
+                <span><i className="sw" style={{ background: 'var(--acct)' }} /><T k="sma">SMA200</T></span>
+                <span><span className="mk buy" style={{ position: 'static', transform: 'none' }}>B</span>fill</span>
+              </div>
+            )}
+            {!detail.data ? <Sk h={210} /> : price ? <PriceChart v={price} /> : <Note>{detail.data.pricesNote ?? 'No price history for this holding yet.'}</Note>}
           </section>
 
           <section className="dsec">
             <h4>Position</h4>
             <dl className="kv" style={{ margin: 0 }}>
-              <dt>Shares · avg cost</dt><dd>{dr.sh} @ {dr.avg}</dd>
-              <dt>Last</dt><dd>{dr.last} <span className={dr.dayCls}>{dr.day}</span></dd>
-              <dt>Value · weight</dt><dd>{dr.val} · {dr.w}</dd>
-              <dt>Cap headroom</dt><dd>{dr.cap}</dd>
+              <dt><T k="shares">Shares</T> · <T k="avgCost">avg cost</T></dt><dd>{dr.sh} @ {dr.avg}</dd>
+              <dt><T k="last">Last</T></dt><dd>{dr.last} <span className={dr.dayCls}>{dr.day}</span></dd>
+              <dt><T k="value">Value</T> · <T k="weight">weight</T></dt><dd>{dr.val} · {dr.w}</dd>
+              <dt><T k="posCap">Cap headroom</T></dt><dd>{dr.cap}</dd>
               <dt>Entry</dt><dd>{dr.ed}</dd>
-              <dt>Entry reason</dt><dd className="dim" style={{ whiteSpace: 'normal' }}>“{dr.why}”</dd>
-              <dt>Time stop</dt><dd>{dr.ts}</dd>
-              <dt>Nearest exit</dt><dd className={dr.exCls}>{dr.ex}</dd>
-              <dt>Realized on this name</dt><dd>$0.00</dd>
+              <dt>Entry reason</dt><dd className="dim" style={{ whiteSpace: 'normal' }}>“<Gloss text={dr.why} />”</dd>
+              <dt><T k="timeStop">Time stop</T></dt><dd>{dr.ts}</dd>
+              <dt><T k="nearestExit">Nearest exit</T></dt><dd className={dr.exCls} style={{ whiteSpace: 'normal' }}><Gloss text={dr.ex} /></dd>
+              <dt><T k="realized">Realized on this name</T></dt><dd>$0.00</dd>
             </dl>
-            <div className="col gap4"><span className="up">Lots · FIFO</span>
+            <div className="col gap4"><span className="up"><T k="fifo">Lots · FIFO</T></span>
               <div className="dt dense" style={{ minWidth: 0 }}>
                 <div className="dt-r dt-h" style={{ gridTemplateColumns: '1fr 64px 84px 96px 96px' }}><span>Opened</span><span className="r">Shares</span><span className="r">Cost</span><span className="r">Value</span><span className="r">Unrealized</span></div>
                 {dr.lots.map((l) => (
@@ -121,41 +131,50 @@ export function HoldingDrawer({ sym }: { sym: string }) {
           </section>
 
           <section className="dsec">
-            <div className="row"><h4>Confidence</h4><span className="sp" /><span className="xs it">Model conviction, not a forecast.</span></div>
-            <div className="row" style={{ gap: 14, alignItems: 'center' }}>
-              <span className="num" style={{ fontSize: 34, fontWeight: 750, lineHeight: 1 }}>{cf.tot}</span>
-              <div className="col gap4" style={{ minWidth: 0 }}>
-                <Chip cls={cf.chip} style={{ alignSelf: 'flex-start' }}>{cf.bandL} band</Chip>
-                <span className="xs muted">at entry {cf.c0} · 40% Signal · 30% Risk room · 20% Regime · 10% Data</span>
-              </div>
-              <span className="sp" />
-              <div className="col gap4 wide-only" style={{ width: 120, flex: 'none' }}>
-                <Spark d={cf.spark} box="0 0 100 30" style={{ width: 120, height: 32, overflow: 'visible' }} />
-                <span className="xs muted">over {cf.n} sessions</span>
-              </div>
-            </div>
-            <MicroBar segs={cf.segs} className={cx('lg', cf.band)} />
-            <div className="col" style={{ gap: 11 }}>
-              {cf.subs.map((s) => (
-                <div key={s.n} className="col gap4">
-                  <div className="row">
-                    <span className="b sm" style={{ width: 78, flex: 'none' }}>{s.n}</span>
-                    <span className="xs muted" style={{ width: 30, flex: 'none' }}>{s.w}</span>
-                    <span className="bar sp" style={{ height: 5 }}><i className={cx('bar-f', s.cls)} style={{ width: s.v + '%' }} /></span>
-                    <span className="num b" style={{ width: 28, textAlign: 'right', flex: 'none' }}>{s.v}</span>
+            <div className="row"><h4><T k="confidence">Confidence</T></h4><span className="sp" /><span className="xs it">Model conviction, not a forecast.</span></div>
+            {cf ? (
+              <>
+                <div className="row" style={{ gap: 14, alignItems: 'center' }}>
+                  <span className="num" style={{ fontSize: 34, fontWeight: 750, lineHeight: 1 }}>{cf.tot}</span>
+                  <div className="col gap4" style={{ minWidth: 0 }}>
+                    <Chip cls={cf.chip} style={{ alignSelf: 'flex-start' }}>{cf.bandL} band</Chip>
+                    <span className="xs muted">at entry {cf.c0} · 40% Signal · 30% Risk room · 20% Regime · 10% Data</span>
                   </div>
-                  <span className="xs dim">{s.why}</span>
+                  <span className="sp" />
+                  <div className="col gap4 wide-only" style={{ width: 120, flex: 'none' }}>
+                    <Spark d={cf.spark} box="0 0 100 30" style={{ width: 120, height: 32, overflow: 'visible' }} />
+                    <span className="xs muted">over {cf.n} sessions</span>
+                  </div>
                 </div>
-              ))}
-            </div>
-            <Note>{cf.cal}</Note>
+                <MicroBar segs={cf.segs} className={cx('lg', cf.band)} />
+                <div className="col" style={{ gap: 11 }}>
+                  {cf.subs.map((s, i) => (
+                    <div key={s.n} className="col gap4">
+                      <div className="row">
+                        <span className="b sm" style={{ width: 78, flex: 'none' }}><T k={SUB_TERMS[i]}>{s.n}</T></span>
+                        <span className="xs muted" style={{ width: 30, flex: 'none' }}>{s.w}</span>
+                        <span className="bar sp" style={{ height: 5 }}><i className={cx('bar-f', s.cls)} style={{ width: s.v + '%' }} /></span>
+                        <span className="num b" style={{ width: 28, textAlign: 'right', flex: 'none' }}>{s.v}</span>
+                      </div>
+                      <span className="xs dim"><Gloss text={s.why} /></span>
+                    </div>
+                  ))}
+                </div>
+                <Note>{cf.cal}</Note>
+              </>
+            ) : (
+              <Note>
+                Not available yet. Confidence ratings — <T k="signal">Signal</T>, <T k="riskRoom">Risk room</T>, <T k="regimeScore">Regime</T> and <T k="dataScore">Data</T> — and the stop levels are written by
+                the insights step that runs after Cycle A (milestone M3). Nothing is estimated in the meantime.
+              </Note>
+            )}
           </section>
 
           <section className="dsec">
-            <div className="row"><h4>Sharia</h4><span className="sp" /><Chip cls="warn">Unlicensed proxy · yfinance</Chip></div>
+            <div className="row"><h4><T k="shariaGrade">Sharia</T></h4><span className="sp" /><Chip cls="warn"><T k="unlicensed">Unlicensed proxy · yfinance</T></Chip></div>
             <div className="row" style={{ gap: 14 }}>
               <Grade g={sh.g} gCls={sh.gCls} xl />
-              <div className="col gap4"><Chip cls={sh.stCls} style={{ alignSelf: 'flex-start' }}>{sh.status}</Chip><span className="xs muted">{sh.why}</span></div>
+              <div className="col gap4"><Chip cls={sh.stCls} style={{ alignSelf: 'flex-start' }}>{sh.status}</Chip><span className="xs muted"><Gloss text={sh.why} /></span></div>
             </div>
             <RatioGauge label="Debt / market cap" r={sh.debt} />
             <RatioGauge label="Cash / market cap" r={sh.cash} />
@@ -168,14 +187,14 @@ export function HoldingDrawer({ sym }: { sym: string }) {
               <div key={i} className="col" style={{ gap: 8, padding: '10px 12px', border: '1px solid var(--line-1)', borderRadius: 8, background: 'var(--bg-2)' }}>
                 <div className="row"><span className={cx('side', o.sideCls)}>{o.side}</span><span className="num sm b">{o.q}</span><span className="xs muted">{o.when}</span><span className="sp" /><span className="num sm">{o.px}</span></div>
                 <Lifecycle steps={o.lc} minWidth={74} />
-                <span className="xs dim">{o.why}</span>
+                <span className="xs dim"><Gloss text={o.why} /></span>
               </div>
             ))}
             {!dr.ords.length && <span className="sm muted">No orders on this name since the twin started.</span>}
           </section>
 
           <section className="dsec">
-            <h4>Model vs account</h4>
+            <h4><T k="model">Model</T> vs <T k="account">account</T></h4>
             {dr.acctOk ? (
               <>
                 <div className="dt dense" style={{ minWidth: 0 }}>
@@ -184,10 +203,10 @@ export function HoldingDrawer({ sym }: { sym: string }) {
                     <div key={r.k} className="dt-r" style={{ gridTemplateColumns: '1fr 100px 100px 90px' }}><span className="dim">{r.k}</span><span className="r num">{r.m}</span><span className="r num">{r.a}</span><span className={cx('r num', r.cls)}>{r.d}</span></div>
                   ))}
                 </div>
-                <Note tone={dr.driftCls === 'warn' ? 'warn' : 'ok'}>{dr.drift}</Note>
+                <Note tone={dr.driftCls === 'warn' ? 'warn' : 'ok'}><Gloss text={dr.drift} /></Note>
               </>
             ) : (
-              <p className="sm muted">No broker account in Ghost — the account book starts in cash on Mon 2 Nov.</p>
+              <p className="sm muted">No broker account in <T k="ghost">Ghost</T> — the account book starts in cash on {wdLabel(ctx.facts.paperStart)}.</p>
             )}
           </section>
         </div>
@@ -199,13 +218,13 @@ export function HoldingDrawer({ sym }: { sym: string }) {
 export function ShariaKv({ sh }: { sh: ReturnType<typeof selectShariaCard> }) {
   return (
     <dl className="kv" style={{ margin: 0 }}>
-      <dt>Impermissible income</dt><dd className="it">Not available – licensed data pending</dd>
-      <dt>Business activity</dt><dd className={sh.bizCls} style={{ whiteSpace: 'normal' }}>{sh.biz}</dd>
-      <dt>Instrument</dt><dd>Common share <span className="pos">✓</span></dd>
-      <dt>Review flag</dt><dd className={sh.flagCls}>{sh.flag}</dd>
-      <dt>Owner ruling</dt><dd>{sh.ruling}</dd>
-      <dt>Screened</dt><dd>{sh.screened}</dd>
-      <dt>Purification</dt><dd style={{ whiteSpace: 'normal' }}>{sh.purif}</dd>
+      <dt><T k="impermissible">Impermissible income</T></dt><dd className="it">Not available – licensed data pending</dd>
+      <dt><T k="businessActivity">Business activity</T></dt><dd className={sh.bizCls} style={{ whiteSpace: 'normal' }}>{sh.biz}</dd>
+      <dt>Instrument</dt><dd><T k="commonShare">Common share</T> <span className="pos">✓</span></dd>
+      <dt><T k="reviewFlag">Review flag</T></dt><dd className={sh.flagCls}>{sh.flag}</dd>
+      <dt><T k="ruling">Owner ruling</T></dt><dd>{sh.ruling}</dd>
+      <dt><T k="rescreen">Screened</T></dt><dd>{sh.screened}</dd>
+      <dt><T k="purification">Purification</T></dt><dd style={{ whiteSpace: 'normal' }}>{sh.purif}</dd>
     </dl>
   );
 }

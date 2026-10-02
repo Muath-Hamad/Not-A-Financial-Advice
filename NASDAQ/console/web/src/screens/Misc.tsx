@@ -44,7 +44,8 @@ export function Settings() {
           <div className="ph"><h3>Display</h3></div>
           <div className="pb col" style={{ gap: 0 }}>
             <div className="limit"><span>Theme</span><Seg label="Theme" value={theme} onChange={setTheme} items={[{ k: 'light', l: 'Light' }, { k: 'dark', l: 'Dark' }]} /></div>
-            <div className="limit"><span>Time zone</span><span className="xs dim">Market times always in ET</span></div>
+            <div className="limit"><span>Time zone</span><span className="xs dim">Market times always in ET (New York)</span></div>
+            <div className="limit"><span>Explanations</span><span className="xs dim">Hover any dotted-underlined term · full list in Glossary</span></div>
           </div>
         </section>
       </div>
@@ -59,7 +60,7 @@ export function More() {
   const items: [Screen, string, string][] = [
     ['performance', 'Performance', 'Equity · returns · attribution'], ['compliance', 'Compliance', 'Sharia cards · re-screens'], ['agent', 'Agent', 'Parameters · journal'],
     ['health', 'Health', 'Cycles · data gate · broker'], ['alerts', 'Alerts', open.length + ' open'], ['audit', 'Audit log', 'Every control change'],
-    ['roadmap', 'Roadmap', 'Phases · D1–D8 · tasks'], ['settings', 'Settings', 'Users · 2FA · display'],
+    ['roadmap', 'Roadmap', 'Phases · D1–D8 · tasks'], ['glossary', 'Glossary', 'Every term in plain words'], ['settings', 'Settings', 'Users · 2FA · display'],
   ];
   return (
     <div className="page">

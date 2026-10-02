@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { defaultScenario, snapshot, type Scenario } from '@/mocks/scenario';
 import { ctxFrom } from './ctx';
-import { confOf, exitOf, pendingRows, pill, sharia, sortAlerts, tonight } from './core';
+import { confOf, exitOf, gradeOf, pendingRows, pill, sharia, sortAlerts, tonight } from './core';
 import { selectBanners, selectFresh, selectNav, selectTop } from './chrome';
 import { attention, selectCompStrip, selectEquity, selectOverview } from './overview';
 import { filterRows, NO_FILTERS, selectDrawer, selectHoldings, selectSide } from './holdings';
@@ -19,18 +19,39 @@ function setup(patch: Partial<Scenario> = {}) {
   return { sc, s, c, pos, pos1 };
 }
 
+describe('not-yet-available data', () => {
+  it('says pending instead of inventing confidence and stops', () => {
+    const { c, s, pos } = setup();
+    const bare = pos.map((h) => ({ ...h, confidence: null, initialStop: null, trailingStop: null, atr: null, rank: null, dayPct: null }));
+    expect(confOf(bare[0], c)).toBeNull();
+    expect(exitOf(bare[0])).toMatchObject({ p: '—', d: 'awaiting insights (M3)' });
+    const v = selectHoldings(c, bare, s.pending.intents, 'model', NO_FILTERS, { realized: true, held: true, pending: true }, { cls: '', l: '' });
+    expect(v.rows[0]).toMatchObject({ c: '—', band: 'none', day: '' });
+    expect(v.tC).toBe('—');
+  });
+
+  it('grades by headroom: B within 10 pp of a limit, C within 3 pp', () => {
+    expect(gradeOf(5, 5, false, false)).toBe('A');
+    expect(gradeOf(22, 5, false, false)).toBe('B');
+    expect(gradeOf(28, 5, false, false)).toBe('C');
+    expect(gradeOf(null, 5, false, false)).toBe('C');
+    expect(gradeOf(5, 5, true, false)).toBe('C');
+    expect(gradeOf(5, 5, false, true)).toBe('F');
+  });
+});
+
 describe('confidence (docs/08 §6)', () => {
   it('weights Signal 40 · Risk room 30 · Regime 20 · Data 10 and bands at 70/40', () => {
     const { c, pos1 } = setup();
     expect(confOf(pos1('TXG'), c)).toMatchObject({ tot: 82, band: 'high', bandL: 'High' });
     expect(confOf(pos1('ORKA'), c)).toMatchObject({ tot: 37, band: 'low', bandL: 'Low' });
-    expect(confOf(pos1('ROKU'), c).tot).toBe(61);
+    expect(confOf(pos1('ROKU'), c)!.tot).toBe(61);
   });
 
   it('marks the Data sub-score stale when Cycle A is failing', () => {
     const { c, pos1 } = setup({ health: 'stale' });
-    expect(confOf(pos1('TXG'), c).c[3]).toBe(15);
-    expect(confOf(pos1('TXG'), c).title).toContain('model conviction, not a forecast');
+    expect(confOf(pos1('TXG'), c)!.c[3]).toBe(15);
+    expect(confOf(pos1('TXG'), c)!.title).toContain('model conviction, not a forecast');
   });
 });
 
@@ -264,10 +285,10 @@ describe('orders', () => {
     expect(selectHistory(c, s.history, 'SELL').rows.every((r) => r.side === 'SELL')).toBe(true);
   });
 
-  it('fills at the official open in Ghost', () => {
+  it('shows the twin’s modelled fill in Ghost (open + 5 bps)', () => {
     const { c, s } = setup({ env: 'ghost' });
     const v = selectHistory(c, s.history, 'all');
-    expect(v.rows[0]).toMatchObject({ q: '7', fp: '$621.81', slip: '0.0', hasAdj: false });
+    expect(v.rows[0]).toMatchObject({ q: '7', op: '$621.81', fp: '$622.12', slip: '+5.0', hasAdj: false });
   });
 
   it('summarises round trips', () => {
@@ -287,7 +308,7 @@ describe('compliance', () => {
     const { c, s, pos } = setup();
     const v = selectUniverse(c, pos, s.compliance, 'watch');
     expect(v.rows.map((r) => r.s)).toEqual(['LKQ', 'MRNA', 'ENPH', 'REGN', 'QRVO', 'SWKS']);
-    expect(v.foot).toBe('Showing 6 of 319 · watchlist 6 · review-flagged 22 · excluded after 1 Oct: 25');
+    expect(v.foot).toBe('Showing 6 of 319 · watchlist 6 · review-flagged 22 · excluded: 25');
   });
 });
 

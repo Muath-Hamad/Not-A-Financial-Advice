@@ -19,6 +19,7 @@ import type {
   ControlsState,
   DataHealth,
   Env,
+  Facts,
   HealthPayload,
   HistoryPayload,
   HoldingsPayload,
@@ -111,6 +112,7 @@ function position(h: RawHolding, sc: Scenario): Position {
     crossSource: h.cs as Position['crossSource'],
     debtPct: h.debt,
     cashPct: h.cash,
+    screenedOn: '2026-10-01',
     review: h.review ? REVIEW[h.s] ?? { keyword: 'review', category: 'business screen' } : null,
     entryReason: h.why,
     rankExit: !!h.rankExit,
@@ -126,6 +128,32 @@ function clock(sc: Scenario): SystemStatus['clock'] {
   return { d: 'Fri 25 Sep', t: '18:03 ET' };
 }
 
+function facts(sc: Scenario): Facts {
+  const stale = sc.health === 'stale';
+  const err = sc.health === 'error';
+  const ghost = sc.env === 'ghost';
+  return {
+    today: stale ? '2026-10-01' : sc.trading === 'halted' ? '2026-09-28' : '2026-09-25',
+    model: { asof: '2026-09-25', builtAt: '17:05 ET', ageMin: stale ? 6 * 1440 + 58 : 58, sessionsBehind: stale ? 4 : 0 },
+    lastCycleA: stale
+      ? { session: '2026-10-01', ok: false, finishedAt: '17:05 ET', durationS: 38 }
+      : { session: '2026-09-25', ok: true, finishedAt: '17:05 ET', durationS: 41 },
+    failing: stale ? { count: 4, from: '2026-09-28', to: '2026-10-01', reason: 'Data gate tripped: coverage at asof 0.6% < 95%', checks: 'fetch ok 96.9% · cross-source 1 compared, 39 unavailable' } : null,
+    nextOpen: stale ? '2026-10-02' : '2026-09-28',
+    submitInMin: sc.released || sc.trading === 'halted' ? null : 72,
+    openInMin: sc.released ? 839 : 3807,
+    ledger: { commit: '7f3c2a1', syncedMinAgo: err && ghost ? 14 : 2, down: err && ghost, downMin: err && ghost ? 14 : null },
+    broker: ghost ? null : { reachable: !err, lastOk: err ? '17:41 ET' : '18:01 ET', latencyMs: err ? null : 142 },
+    accountAt: ghost ? null : err ? '17:41 ET' : '18:01 ET',
+    halt: sc.trading === 'halted' && !sc.haltCleared ? { symbol: 'ROKU', expected: 75, actual: 74, at: '2026-09-28' } : null,
+    screen: { last: '2026-10-01', next: '2027-01-01' },
+    d1Due: '2026-10-30',
+    paperStart: '2026-11-02',
+    twinStart: '2026-08-18',
+    regime: 'NASDAQ Composite 6.2% above SMA200 and 1.1% above SMA50 · breadth 54% · mood trending',
+  };
+}
+
 export function system(sc: Scenario): SystemStatus {
   return {
     env: sc.env,
@@ -136,6 +164,7 @@ export function system(sc: Scenario): SystemStatus {
     stopAt: sc.trading === 'stopped' ? '18:04 ET' : null,
     flatten: false,
     clock: clock(sc),
+    facts: facts(sc),
   };
 }
 
@@ -210,11 +239,12 @@ export function history(sc: Scenario): HistoryPayload {
       symbol: o.s,
       side: o.side as 'BUY' | 'SELL',
       shares: o.q,
-      accountShares: raw.qa ?? null,
+      accountShares: sc.env === 'ghost' ? null : raw.qa ?? null,
       decisionClose: o.dc,
       officialOpen: o.op,
-      fillPrice: o.fp,
-      fees: o.fee,
+      // Ghost: the twin's own fill, the open plus 5 bps modelled slippage.
+      fillPrice: sc.env === 'ghost' ? +(o.op * (o.side === 'BUY' ? 1.0005 : 0.9995)).toFixed(3) : o.fp,
+      fees: sc.env === 'ghost' ? 0 : o.fee,
       realized: o.rp,
       heldDays: o.days,
       reason: o.why,
@@ -237,6 +267,7 @@ export function roundTrips(sc: Scenario): RoundTripsPayload {
       pnl: r.pnl,
       exitReason: r.r as RoundTripsPayload['trips'][number]['exitReason'],
       confAtEntry: r.c,
+      reason: { stop: 'initial stop', trail: 'trailing stop', rank: 'rank decay' }[r.r] ?? r.r,
     })),
   };
 }
@@ -424,7 +455,7 @@ export function holdingDetail(sc: Scenario, symbol: string): HoldingDetailPayloa
   if (!h) return null;
   const N = 260;
   const r = rng(seed(h.symbol));
-  const vol = (h.atr / h.last) * 0.6;
+  const vol = ((h.atr ?? h.last * 0.04) / h.last) * 0.6;
   const p = [100];
   for (let i = 1; i < N; i++) p.push(p[i - 1] * (1 + (r() - 0.46) * vol * 1.8));
   const ei = N - h.heldSessions;
@@ -432,7 +463,7 @@ export function holdingDetail(sc: Scenario, symbol: string): HoldingDetailPayloa
   const b = Math.log(h.last / p[N - 1]);
   const closes = p.map((v, i) => v * Math.exp(i <= ei ? a : a + ((b - a) * (i - ei)) / (N - 1 - ei)));
   const dates = sessionsEndingAt(sample.asof, N, HOLIDAYS);
-  const k = h.confidence;
+  const k = h.confidence!;
   const tot = Math.round(k.signal * 0.4 + k.riskRoom * 0.3 + k.regime * 0.2 + (sc.health === 'stale' ? 15 : k.data) * 0.1);
   const n = Math.max(h.heldSessions, 3);
   const rc = rng(seed(h.symbol + 'c'));
@@ -445,6 +476,7 @@ export function holdingDetail(sc: Scenario, symbol: string): HoldingDetailPayloa
     symbol,
     prices: dates.map((date, i) => ({ date, close: +closes[i].toFixed(2) })),
     confidenceHistory: hist.map((v) => +v.toFixed(1)),
+    pricesNote: null,
     lots: [{ opened: h.entryDate, shares: h.shares, cost: h.avgCost }],
   };
 }

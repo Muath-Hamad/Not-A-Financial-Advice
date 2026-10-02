@@ -1,0 +1,49 @@
+name: Console tests
+
+# NAFA Operations Console (NASDAQ/console): web UI selectors, app smoke tests
+# and the production build; the API's payload builders and HTTP surface.
+# No network beyond package installs, no keys, no ledger writes.
+
+on:
+  push:
+    paths:
+      - "NASDAQ/console/**"
+      - "NASDAQ/tests/console/**"
+      - ".github/workflows/console-tests.yml"
+  pull_request:
+    paths:
+      - "NASDAQ/console/**"
+      - "NASDAQ/tests/console/**"
+      - ".github/workflows/console-tests.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: NASDAQ/console/web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: NASDAQ/console/web/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
+
+  api:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet -r NASDAQ/console/api/requirements-dev.txt
+      - run: python -m pytest NASDAQ/tests/console -q

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- Unraid Docker template for the NAFA Operations Console (docs/08 §3.3).
+     Copy to /boot/config/plugins/dockerMan/templates-user/ and add the
+     container from Docker → Add Container → Template: nafa-console.
+     Build the image on the box first: docker build -t nafa-console NASDAQ/console -->
+<Container version="2">
+  <Name>nafa-console</Name>
+  <Repository>nafa-console:latest</Repository>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Overview>NAFA Operations Console: read-only dashboard over the live trading ledger (holdings, orders, P&amp;L, Sharia compliance, health). LAN or Tailscale only — never forward this port to the internet.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <Config Name="Web UI port" Target="8080" Default="8080" Mode="tcp" Description="Bind it to the LAN or tailscale0 address only." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/nafa-console" Mode="rw" Description="Read model (console.db) and the ledger clone (repo/)." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nafa-console</Config>
+  <Config Name="Ledger repository" Target="CONSOLE_REPO_URL" Default="" Mode="" Description="HTTPS URL of your ledger repository. Cloned into /data/repo on first start, then pulled every minute." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Ledger branch" Target="CONSOLE_REPO_BRANCH" Default="main" Mode="" Description="The branch the live workflows commit to." Type="Variable" Display="always" Required="true" Mask="false">main</Config>
+  <Config Name="Pull interval (s)" Target="CONSOLE_INDEX_EVERY_S" Default="60" Mode="" Description="How often the indexer pulls the ledger." Type="Variable" Display="advanced" Required="false" Mask="false">60</Config>
+  <Config Name="Role" Target="CONSOLE_ROLE" Default="owner" Mode="" Description="owner or viewer. Login and 2FA arrive with milestone M1." Type="Variable" Display="advanced" Required="false" Mask="false">owner</Config>
+</Container>

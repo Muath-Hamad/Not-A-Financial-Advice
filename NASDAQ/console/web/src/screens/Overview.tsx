@@ -5,9 +5,11 @@ import { selectFresh } from '@/domain/chrome';
 import { RANGES, selectCompStrip, selectEquity, selectOverview, selectPhase, type Range } from '@/domain/overview';
 import type { HoldingRow } from '@/domain/core';
 import { cx } from '@/lib/format';
+import { wdLabel } from '@/lib/dates';
 import { EquityChart } from '@/components/charts/EquityChart';
 import { Icon, ToneIcon } from '@/components/icons';
 import { BookTag, Chip, Conf, Fresh, Grade, PageHeader, Panel, Seg, Shar, Spark, StackBar } from '@/components/ui';
+import { Gloss, T } from '@/glossary/Term';
 
 export function Overview() {
   const ctx = useCtx();
@@ -20,6 +22,7 @@ export function Overview() {
   const eq = useMemo(() => selectEquity(ctx, overview!, range), [ctx, overview, range]);
   const ph = selectPhase(overview!);
   const cs = selectCompStrip(ctx, positions, cq.data?.universe ?? []);
+  const since = wdLabel(overview!.twinStart);
 
   return (
     <div className="page">
@@ -30,47 +33,47 @@ export function Overview() {
 
       <div className="kpis">
         <div className="kpi">
-          <div className="kpi-l">Equity<BookTag>MODEL</BookTag></div>
+          <div className="kpi-l"><T k="equity">Equity</T><BookTag>MODEL</BookTag></div>
           <div className="kpi-v">{ov.eq}</div>
-          <div className="kpi-d"><span className={ov.eqCls}>{ov.eqSince}</span><span className="muted"> since start · IXIC </span><span className={ov.ixCls}>{ov.ixic}</span></div>
+          <div className="kpi-d"><span className={ov.eqCls}>{ov.eqSince}</span><span className="muted"> <T k="sinceStart">since start</T> · <T k="benchmark">IXIC</T> </span><span className={ov.ixCls}>{ov.ixic}</span></div>
           <div className="kpi-spark"><Spark d={ov.sEq} /></div>
           <div className="kpi-s">{ov.eqAcct}</div>
         </div>
         <div className="kpi">
-          <div className="kpi-l">Today’s P&amp;L<BookTag>MODEL</BookTag></div>
+          <div className="kpi-l"><T k="todayPnl">Today’s P&amp;L</T><BookTag>MODEL</BookTag></div>
           <div className={cx('kpi-v', ov.dayCls)}>{ov.day}</div>
           <div className="kpi-d"><span className={ov.dayCls}>{ov.dayP}</span><span className="muted"> · {ov.dayWhen}</span></div>
           <div className="kpi-spark"><Spark d={ov.sDay} /></div>
           <div className="kpi-s">{ov.dayAcct}</div>
         </div>
         <div className="kpi">
-          <div className="kpi-l">Drawdown from peak</div>
+          <div className="kpi-l"><T k="drawdown">Drawdown from peak</T></div>
           <div className="kpi-v neg">{ov.dd}</div>
-          <div className="kpi-d muted">peak {ov.peak} · max {ov.mdd}</div>
+          <div className="kpi-d muted"><T k="peak">peak</T> {ov.peak} · <T k="maxDrawdown">max</T> {ov.mdd}</div>
           <div className="gauge" style={{ marginTop: 9 }}>
             <div className="gauge-t"><i className="gauge-f" style={{ width: ov.ddW + '%' }} /><i className="gauge-ref" style={{ left: '64.8%' }} /><i className="gauge-th" style={{ left: 'calc(100% - 2px)' }} /></div>
-            <div className="gauge-lbl"><span>0%</span><span>ref −16.2%</span><span className="danger">kill −25%</span></div>
+            <div className="gauge-lbl"><span>0%</span><T k="refDD">ref −16.2%</T><T k="killLine" className="danger">kill −25%</T></div>
           </div>
         </div>
         <div className="kpi">
-          <div className="kpi-l">Exposure<BookTag>MODEL</BookTag></div>
+          <div className="kpi-l"><T k="exposure">Exposure</T><BookTag>MODEL</BookTag></div>
           <div className="kpi-v">{ov.exp}<span className="muted" style={{ fontSize: 12, fontWeight: 500 }}> invested</span></div>
-          <div className="kpi-d muted">cash {ov.cash}</div>
+          <div className="kpi-d muted"><T k="cash">cash</T> {ov.cash}</div>
           <div className="bar" style={{ marginTop: 11, height: 8 }}><i className="bar-f" style={{ width: ov.expW + '%' }} /><i className="capmk" style={{ left: '95%' }} title="EXP_MAX 0.95" /></div>
-          <div className="kpi-s" style={{ marginTop: 7 }}>{ov.expAcct}</div>
+          <div className="kpi-s" style={{ marginTop: 7 }}><Gloss text={ov.expAcct} /></div>
         </div>
         <div className="kpi">
-          <div className="kpi-l">Positions</div>
+          <div className="kpi-l"><T k="maxPositions">Positions</T></div>
           <div className="kpi-v">{ov.pos}<span className="muted" style={{ fontSize: 12, fontWeight: 500 }}> of 15 max</span></div>
           <div className="kpi-d muted">{ov.posFree} slots free · largest {ov.largest}</div>
           <div className="slots" style={{ marginTop: 11 }}>{ov.slots.map((f, i) => <span key={i} className={f ? 'f' : ''} />)}</div>
-          <div className="kpi-s" style={{ marginTop: 7 }}>position cap 18% · {ov.underRev}</div>
+          <div className="kpi-s" style={{ marginTop: 7 }}><T k="posCap">position cap 18%</T> · {ov.underRev}</div>
         </div>
         <div className="kpi">
-          <div className="kpi-l">Orders for next open</div>
+          <div className="kpi-l"><T k="nextOpen">Orders for next open</T></div>
           <div className="kpi-v">{ov.ord}</div>
           <div className="kpi-d dim">{ov.ordSplit}</div>
-          <div className="row wrap gap4" style={{ marginTop: 8 }}><Chip>{ov.ordWhen}</Chip>{ov.ordBlk && <Chip cls="danger">{ov.ordBlkL}</Chip>}</div>
+          <div className="row wrap gap4" style={{ marginTop: 8 }}><Chip>{ov.ordWhen}</Chip>{ov.ordBlk && <Chip cls="danger"><Gloss text={ov.ordBlkL} /></Chip>}</div>
           <div className="kpi-s" style={{ marginTop: 6 }}>{ov.ordNote}</div>
         </div>
       </div>
@@ -78,7 +81,7 @@ export function Overview() {
       <div className="g12">
         <section className="panel c8">
           <div className="ph">
-            <h3>Equity</h3><span className="hint wide-only">rebased to $100k · since Tue 18 Aug</span>
+            <h3>Equity</h3><span className="hint wide-only"><T k="rebased">rebased to $100k</T> · since {since}</span>
             <Seg label="Range" value={range === 'all' ? 'Since start' : range} onChange={(k) => setRange(RANGES.find((r) => r.l === k)!.k)} items={RANGES.map((r) => ({ k: r.l, l: r.l }))} />
             <Fresh cls={fr.model.cls} l={fr.model.s} />
           </div>
@@ -86,7 +89,7 @@ export function Overview() {
             <Legend eq={eq} />
             <EquityChart
               v={eq} mainH={230} ddH={78}
-              ddLabel={<div className="row" style={{ marginTop: 14, gap: 8 }}><span className="up">Drawdown</span><span className="xs muted">vs −16.2% OOS reference and −25% kill line</span></div>}
+              ddLabel={<div className="row" style={{ marginTop: 14, gap: 8 }}><span className="up"><T k="drawdown">Drawdown</T></span><span className="xs muted">vs −16.2% <T k="oos">OOS</T> reference and −25% <T k="killLine">kill line</T></span></div>}
             />
           </div>
         </section>
@@ -97,10 +100,11 @@ export function Overview() {
             {ov.att.map((a) => (
               <div key={a.t} className="att-i">
                 <span className={cx('att-ico', a.tone)}><ToneIcon tone={a.tone} /></span>
-                <div className="att-t">{a.t}<span className="s">{a.s}</span></div>
+                <div className="att-t"><Gloss text={a.t} /><span className="s"><Gloss text={a.s} /></span></div>
                 <button type="button" className="btn sm" onClick={() => dispatch(a.intent)}>{a.btn}</button>
               </div>
             ))}
+            {!ov.att.length && <div className="pb sm muted">Nothing needs your attention.</div>}
           </div>
         </section>
 
@@ -117,20 +121,20 @@ export function Overview() {
         </section>
 
         <div className="col c4" style={{ gap: 16 }}>
-          <Panel title="Phase & gate" fresh={fr.ledger} footer={<><Chip cls="warn">{ph.dec}</Chip><span className="sp" /><button type="button" className="btn sm ghost" onClick={() => go('roadmap')}>Roadmap →</button></>}>
+          <Panel title={<><T k="phase">Phase</T> &amp; <T k="gate">gate</T></>} fresh={fr.ledger} footer={<><Chip cls="warn"><Gloss text={ph.dec} /></Chip><span className="sp" /><button type="button" className="btn sm ghost" onClick={() => go('roadmap')}>Roadmap →</button></>}>
             <div className="pb row" style={{ gap: 16, alignItems: 'center' }}>
               <div style={{ position: 'relative', width: 72, height: 72, flex: 'none' }}>
                 <svg className="ring" viewBox="0 0 80 80"><circle className="rt" cx="40" cy="40" r="32" /><circle className="rf" cx="40" cy="40" r="32" transform="rotate(-90 40 40)" style={{ strokeDasharray: ph.dash }} /></svg>
                 <span className="num" style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', fontWeight: 700, fontSize: 15 }}>{ph.ring}</span>
               </div>
               <div className="col gap4" style={{ minWidth: 0 }}>
-                <span className="b">{ph.title}</span>
-                <span className="sm dim">{ph.gate}</span>
+                <span className="b"><Gloss text={ph.title} /></span>
+                <span className="sm dim"><T k="ghostGate">{ph.gate}</T></span>
                 <span className="xs muted">{ph.dates}</span>
               </div>
             </div>
           </Panel>
-          <Panel title="Compliance" hint="book by Sharia grade" fresh={{ l: cs.fresh }} footer={<button type="button" className="btn sm ghost" onClick={() => go('compliance')}>Compliance →</button>}>
+          <Panel title="Compliance" hint={<>book by <T k="shariaGrade">Sharia grade</T></>} fresh={{ l: cs.fresh }} footer={<button type="button" className="btn sm ghost" onClick={() => go('compliance')}>Compliance →</button>}>
             <div className="pb col" style={{ gap: 10 }}>
               <StackBar segs={cs.stack} />
               <div className="row wrap" style={{ gap: 12 }}>
@@ -139,10 +143,10 @@ export function Overview() {
                 ))}
               </div>
               <dl className="kv left" style={{ margin: '2px 0 0' }}>
-                <dt>Under review</dt><dd>{cs.rev}</dd>
-                <dt>Watchlist</dt><dd>{cs.watch}</dd>
-                <dt>Next re-screen</dt><dd>Fri 1 Jan 2027</dd>
-                <dt>Data source</dt><dd><Chip cls="warn">Unlicensed proxy</Chip></dd>
+                <dt><T k="underReview">Under review</T></dt><dd>{cs.rev}</dd>
+                <dt><T k="watchlist">Watchlist</T></dt><dd>{cs.watch}</dd>
+                <dt><T k="rescreen">Next re-screen</T></dt><dd>{cs.next}</dd>
+                <dt>Data source</dt><dd><Chip cls="warn"><T k="unlicensed">Unlicensed proxy</T></Chip></dd>
               </dl>
             </div>
           </Panel>
@@ -155,11 +159,11 @@ export function Overview() {
 export function Legend({ eq, adaptNote }: { eq: ReturnType<typeof selectEquity>; adaptNote?: boolean }) {
   return (
     <div className="legend">
-      <span><i className="sw model" />Model <b className="num">{eq.lastM}</b></span>
-      <span className={eq.acctLegCls}><i className="sw acct" />{eq.acctLeg}</span>
-      <span><i className="sw bench" />NASDAQ Composite <b className="num">{eq.lastB}</b></span>
+      <span><i className="sw model" /><T k="model">Model</T> <b className="num">{eq.lastM}</b></span>
+      <span className={eq.acctLegCls}><i className="sw acct" /><T k="account">{eq.acctLeg}</T></span>
+      <span><i className="sw bench" /><T k="benchmark">NASDAQ Composite</T> <b className="num">{eq.lastB}</b></span>
       <span className={cx('muted', !adaptNote && 'wide-only')}>
-        <span className="info">◆</span> adaptation{adaptNote ? ' (none yet · next ~2 Feb 2027)' : ''} <span className="warn">⚑</span> override <span className="danger">■</span> halt
+        <span className="info">◆</span> <T k="adapt">adaptation</T>{adaptNote ? ' (none yet)' : ''} <span className="warn">⚑</span> override <span className="danger">■</span> <T k="halt">halt</T>
       </span>
     </div>
   );
@@ -172,7 +176,8 @@ function SnapshotTable({ rows, onOpen }: { rows: HoldingRow[]; onOpen: (s: strin
     <div className="twrap wide-only">
       <div className="dt flush dense">
         <div className="dt-r dt-h" style={{ gridTemplateColumns: SNAP_COLS }}>
-          <span className="stick">Symbol</span><span className="r">Value</span><span>Weight</span><span className="r">Unrealized</span><span>Confidence</span><span>Sharia</span><span>Nearest exit</span>
+          <span className="stick">Symbol</span><span className="r"><T k="value">Value</T></span><span><T k="weight">Weight</T></span><span className="r"><T k="unrealized">Unrealized</T></span>
+          <span><T k="confidence">Confidence</T></span><span><T k="shariaGrade">Sharia</T></span><span><T k="nearestExit">Nearest exit</T></span>
         </div>
         {rows.map((h) => (
           <div key={h.s} className="dt-r" style={{ gridTemplateColumns: SNAP_COLS }}>
@@ -188,11 +193,20 @@ function SnapshotTable({ rows, onOpen }: { rows: HoldingRow[]; onOpen: (s: strin
             <span className={cx('r num', h.uCls)}>{h.uP}</span>
             <span><Conf c={h.c} band={h.band} bandL={h.bandL} segs={h.segs} title={h.cT} /></span>
             <span><Shar g={h.g} gCls={h.gCls} stat={h.stat} /></span>
-            <span className={h.exCls}><span className="b">{h.exK}</span> <span className="num">{h.exP}</span> <span className="xs muted">· {h.exD}</span></span>
+            <ExitCell h={h} inline />
           </div>
         ))}
       </div>
     </div>
+  );
+}
+
+export function ExitCell({ h, inline }: { h: HoldingRow; inline?: boolean }) {
+  return (
+    <span className={h.exCls}>
+      <span className="b"><Gloss text={h.exK} /></span> <span className="num">{h.exP}</span>
+      {inline ? <span className="xs muted"> · {h.exD}</span> : <span className="xs" style={{ display: 'block' }}>{h.exD}</span>}
+    </span>
   );
 }
 

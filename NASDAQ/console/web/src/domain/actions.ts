@@ -4,7 +4,7 @@
 
 export type Screen =
   | 'overview' | 'holdings' | 'orders' | 'performance' | 'compliance' | 'controls'
-  | 'agent' | 'health' | 'alerts' | 'audit' | 'roadmap' | 'settings' | 'more';
+  | 'agent' | 'health' | 'alerts' | 'audit' | 'roadmap' | 'glossary' | 'settings' | 'more';
 
 export type ControlAction =
   | 'stop' | 'flatten' | 'pause' | 'resume_entries' | 'resume' | 'force_exit' | 'lock' | 'unlock'

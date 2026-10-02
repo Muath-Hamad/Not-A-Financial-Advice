@@ -10,6 +10,7 @@ import { Compliance } from '@/screens/Compliance';
 import { Health } from '@/screens/Health';
 import { Roadmap } from '@/screens/Roadmap';
 import { Later, More, Settings } from '@/screens/Misc';
+import { Glossary } from '@/screens/Glossary';
 
 // Mock-mode only, so MSW never ships in the production bundle's main chunk.
 const ProtoPanel = lazy(() => import('./ProtoPanel').then((m) => ({ default: m.ProtoPanel })));
@@ -39,6 +40,7 @@ export function ConsoleApp({ client, height, theme, mock = false }: { client: Qu
             <Route path="compliance/:tab" element={<Compliance />} />
             <Route path="health" element={<Health />} />
             <Route path="roadmap" element={<Roadmap />} />
+            <Route path="glossary" element={<Glossary />} />
             <Route path="settings" element={<Settings />} />
             <Route path="more" element={<More />} />
             <Route path="performance/*" element={<Later screen="performance" />} />
