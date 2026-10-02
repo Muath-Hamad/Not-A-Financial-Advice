@@ -15,6 +15,8 @@ virtual-account trial**.
 | [05 — Live deployment plan](05-live-deployment-plan.md) | The operating plan for the live paper-trading step (venue, cycles, monitoring, controls, rollout) |
 | [06 — Live operations runbook](06-live-operations.md) | The system as built: ghost mode, the sim twin, ledger formats, alerts, controls, Phase 2 switch |
 | [07 — Go-live plan](07-go-live-plan.md) | The dated route ghost → paper → real money: fixes, gates, the Unraid private deployment, owner decisions, task list |
+| [08 — Operations Console: system design](08-console-system-design.md) | The private web dashboard on the Unraid tower: architecture, read model, P&L, Sharia grades, confidence ratings, audited executive controls, security, build plan |
+| [09 — Operations Console: UI spec](09-console-ui-spec.md) | Screen-by-screen UI specification, plus the [Claude Design prompt](09a-claude-design-prompt.md) |
 
 ## The experiment in one diagram
 
