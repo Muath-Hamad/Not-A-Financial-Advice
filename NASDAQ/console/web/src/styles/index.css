@@ -1,0 +1,18 @@
+/* Tailwind utilities on top of the prototype stylesheet (nafa.css), which
+   carries the tokens, the reset and every component class. Preflight is off. */
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { margin: 0; height: 100%; }
+body { background: #0B0D10; }
+
+/* ECharts draws tooltips inside the chart host; keep the prototype's .tip look. */
+.nafa .tip { white-space: nowrap; }
+
+/* nafa.css uses .sel for both <select> inputs and selected table rows; a
+   selected row must not pick up the select's padding, border and height. */
+.nafa .dt-r.sel { height: auto; padding: 0; border: 0; border-bottom: 1px solid var(--line-1); border-radius: 0; font-size: inherit; }
+
+/* Mock-mode scenario launcher: clear of the nav foot and the phone tab bar. */
+.proto-launch { position: absolute; right: 12px; bottom: 12px; z-index: 65; background: var(--bg-1); cursor: pointer; }
+@container app (max-width: 767px) { .proto-launch { bottom: 76px; } }

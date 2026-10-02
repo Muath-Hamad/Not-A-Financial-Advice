@@ -1,0 +1,1924 @@
+{
+  "_note": "NAFA Console prototype fixtures. REAL: positions, shares, avg cost, last price, value (Model book, asof Fri 25 Sep 2026), the RVMD/TVTX/ARWR round trips and the 15 Sep journal entry. ILLUSTRATIVE: account-side shares/avg cost (aSh/aAvg), confidence sub-scores (conf = [signal, riskRoom, regime, data]), ATR/stop levels, debt/cash ratios except HALO debt 18.6%, pending orders, other round trips, alerts, audit, equity path between the real endpoints. Do not seed production with this file.",
+  "asof": "2026-09-25",
+  "equity": 90407.14,
+  "cash": 4696,
+  "accountCash": 6544.2,
+  "startCapital": 100000,
+  "twinStart": "2026-08-18",
+  "equityCurve": [
+    {
+      "date": "2026-08-18",
+      "model": 100000,
+      "account": 100000,
+      "benchmark": 100000
+    },
+    {
+      "date": "2026-08-19",
+      "model": 100420,
+      "account": 100418.38,
+      "benchmark": 100380
+    },
+    {
+      "date": "2026-08-20",
+      "model": 99810,
+      "account": 99798.76,
+      "benchmark": 99920
+    },
+    {
+      "date": "2026-08-21",
+      "model": 100960,
+      "account": 100959.15,
+      "benchmark": 100610
+    },
+    {
+      "date": "2026-08-24",
+      "model": 101340,
+      "account": 101329.53,
+      "benchmark": 101240
+    },
+    {
+      "date": "2026-08-25",
+      "model": 101120,
+      "account": 101119.91,
+      "benchmark": 101050
+    },
+    {
+      "date": "2026-08-26",
+      "model": 101850,
+      "account": 101840.29,
+      "benchmark": 101480
+    },
+    {
+      "date": "2026-08-27",
+      "model": 100990,
+      "account": 100970.67,
+      "benchmark": 101200
+    },
+    {
+      "date": "2026-08-28",
+      "model": 99640,
+      "account": 99631.05,
+      "benchmark": 100620
+    },
+    {
+      "date": "2026-08-31",
+      "model": 99980,
+      "account": 99961.44,
+      "benchmark": 100950
+    },
+    {
+      "date": "2026-09-01",
+      "model": 98710,
+      "account": 98701.82,
+      "benchmark": 100240
+    },
+    {
+      "date": "2026-09-02",
+      "model": 97950,
+      "account": 97932.2,
+      "benchmark": 100810
+    },
+    {
+      "date": "2026-09-03",
+      "model": 98420,
+      "account": 98392.58,
+      "benchmark": 101390
+    },
+    {
+      "date": "2026-09-04",
+      "model": 97380,
+      "account": 97362.96,
+      "benchmark": 101060
+    },
+    {
+      "date": "2026-09-08",
+      "model": 96120,
+      "account": 96093.35,
+      "benchmark": 101720
+    },
+    {
+      "date": "2026-09-09",
+      "model": 95480,
+      "account": 95463.73,
+      "benchmark": 101540
+    },
+    {
+      "date": "2026-09-10",
+      "model": 96030,
+      "account": 96004.11,
+      "benchmark": 102110
+    },
+    {
+      "date": "2026-09-11",
+      "model": 94870,
+      "account": 94834.49,
+      "benchmark": 101830
+    },
+    {
+      "date": "2026-09-14",
+      "model": 93960,
+      "account": 93934.87,
+      "benchmark": 102420
+    },
+    {
+      "date": "2026-09-15",
+      "model": 92410,
+      "account": 92375.26,
+      "benchmark": 102060
+    },
+    {
+      "date": "2026-09-16",
+      "model": 92880,
+      "account": 92855.64,
+      "benchmark": 102580
+    },
+    {
+      "date": "2026-09-17",
+      "model": 91650,
+      "account": 91616.02,
+      "benchmark": 102240
+    },
+    {
+      "date": "2026-09-18",
+      "model": 92240,
+      "account": 92196.4,
+      "benchmark": 102890
+    },
+    {
+      "date": "2026-09-21",
+      "model": 90310,
+      "account": 90276.78,
+      "benchmark": 102510
+    },
+    {
+      "date": "2026-09-22",
+      "model": 89920,
+      "account": 89877.16,
+      "benchmark": 102940
+    },
+    {
+      "date": "2026-09-23",
+      "model": 89180,
+      "account": 89147.55,
+      "benchmark": 102620
+    },
+    {
+      "date": "2026-09-24",
+      "model": 89765,
+      "account": 89722.93,
+      "benchmark": 102780
+    },
+    {
+      "date": "2026-09-25",
+      "model": 90407.14,
+      "account": 90363.45,
+      "benchmark": 103000
+    }
+  ],
+  "holdings": [
+    {
+      "s": "GSAT",
+      "n": "Globalstar Inc.",
+      "sec": "Consumer Discretionary",
+      "ind": "Satellite communications",
+      "sh": 160,
+      "avg": 83.04,
+      "last": 82.88,
+      "day": -0.41,
+      "ed": "Fri 18 Sep",
+      "held": 6,
+      "atr": 2.53,
+      "hi": 84.1,
+      "rank": 3,
+      "off": 0,
+      "stack": "above SMA 50, 100 and 200",
+      "conf": [
+        84,
+        58,
+        62,
+        90
+      ],
+      "cs": "agree",
+      "c0": 70,
+      "debt": 6.8,
+      "cash": 3.1,
+      "why": "rank 3 momentum, 0% off the 52w high, ATR 3.1% → 17% line",
+      "aSh": 160,
+      "aAvg": 83.09,
+      "slip": 6,
+      "init": 75.45,
+      "trailP": 71.45,
+      "stopK": "Initial stop",
+      "stopP": 75.45,
+      "dist": 2.9367588932806297
+    },
+    {
+      "s": "CORT",
+      "n": "Corcept Therapeutics",
+      "sec": "Health Care",
+      "ind": "Pharmaceuticals",
+      "sh": 108,
+      "avg": 113.7,
+      "last": 116.1,
+      "day": 0.87,
+      "ed": "Wed 2 Sep",
+      "held": 17,
+      "atr": 5.2,
+      "hi": 117.3,
+      "rank": 11,
+      "off": 1,
+      "stack": "above SMA 50, 100 and 200",
+      "conf": [
+        74,
+        66,
+        62,
+        92
+      ],
+      "cs": "agree",
+      "c0": 68,
+      "debt": 0,
+      "cash": 4.6,
+      "why": "rank 5 momentum, 1% off the 52w high, ATR 4.6% → 12% line",
+      "aSh": 108,
+      "aAvg": 113.74,
+      "slip": 3.5,
+      "init": 98.1,
+      "trailP": 91.3,
+      "stopK": "Initial stop",
+      "stopP": 98.1,
+      "dist": 3.4615384615384612
+    },
+    {
+      "s": "TXG",
+      "n": "10x Genomics",
+      "sec": "Industrials",
+      "ind": "Life-science instruments",
+      "sh": 135,
+      "avg": 64.04,
+      "last": 85.71,
+      "day": 1.62,
+      "ed": "Wed 26 Aug",
+      "held": 22,
+      "atr": 3.1,
+      "hi": 88.4,
+      "rank": 2,
+      "off": 3,
+      "stack": "above SMA 50, 100 and 200",
+      "conf": [
+        88,
+        84,
+        62,
+        92
+      ],
+      "cs": "agree",
+      "c0": 72,
+      "debt": 1.2,
+      "cash": 4.4,
+      "why": "rank 4 momentum, 2% off the 52w high, ATR 4.8% → 11% line",
+      "aSh": 135,
+      "aAvg": 64.03,
+      "slip": -2,
+      "init": 54.74,
+      "trailP": 72.9,
+      "stopK": "Trailing stop",
+      "stopP": 72.9,
+      "dist": 4.132258064516125
+    },
+    {
+      "s": "ROKU",
+      "n": "Roku Inc.",
+      "sec": "Telecommunications",
+      "ind": "Streaming platform",
+      "sh": 75,
+      "avg": 155.39,
+      "last": 152.68,
+      "day": -1.08,
+      "ed": "Thu 10 Sep",
+      "held": 12,
+      "atr": 5.48,
+      "hi": 158.2,
+      "rank": 19,
+      "off": 4,
+      "stack": "above SMA 50 and 200, below SMA 100",
+      "conf": [
+        58,
+        60,
+        62,
+        70
+      ],
+      "cs": "unavailable",
+      "c0": 71,
+      "debt": 2.1,
+      "cash": 9.4,
+      "why": "rank 12 momentum, 2% off the 52w high, ATR 3.6% → 15% line",
+      "aSh": 75,
+      "aAvg": 155.46,
+      "slip": 4.5,
+      "review": true,
+      "init": 138.95,
+      "trailP": 130.8,
+      "stopK": "Initial stop",
+      "stopP": 138.95,
+      "dist": 2.5054744525547474
+    },
+    {
+      "s": "HALO",
+      "n": "Halozyme Therapeutics",
+      "sec": "Health Care",
+      "ind": "Biotechnology",
+      "sh": 89,
+      "avg": 112.86,
+      "last": 113.9,
+      "day": 0.35,
+      "ed": "Mon 21 Sep",
+      "held": 5,
+      "atr": 4.55,
+      "hi": 114.6,
+      "rank": 14,
+      "off": 1,
+      "stack": "above SMA 50, 100 and 200",
+      "conf": [
+        66,
+        64,
+        62,
+        90
+      ],
+      "cs": "agree",
+      "c0": 69,
+      "debt": 18.6,
+      "cash": 3.9,
+      "why": "rank 8 momentum, 1% off the 52w high, ATR 4.0% → 13% line",
+      "aSh": 89,
+      "aAvg": 112.89,
+      "slip": 2.7,
+      "init": 99.21,
+      "trailP": 91.85,
+      "stopK": "Initial stop",
+      "stopP": 99.21,
+      "dist": 3.2285714285714313
+    },
+    {
+      "s": "TWST",
+      "n": "Twist Bioscience",
+      "sec": "Health Care",
+      "ind": "Synthetic biology",
+      "sh": 36,
+      "avg": 165.91,
+      "last": 182.83,
+      "day": 2.14,
+      "ed": "Tue 22 Sep",
+      "held": 4,
+      "atr": 7.3,
+      "hi": 186.1,
+      "rank": 5,
+      "off": 2,
+      "stack": "above SMA 50, 100 and 200",
+      "conf": [
+        82,
+        78,
+        62,
+        88
+      ],
+      "cs": "agree",
+      "c0": 74,
+      "debt": 0.6,
+      "cash": 2.9,
+      "why": "rank 6 momentum, 1% off the 52w high, ATR 4.4% → 12% line",
+      "aSh": 36,
+      "aAvg": 166.01,
+      "slip": 6,
+      "init": 144.01,
+      "trailP": 149.6,
+      "stopK": "Trailing stop",
+      "stopP": 149.6,
+      "dist": 4.552054794520551
+    },
+    {
+      "s": "MU",
+      "n": "Micron Technology",
+      "sec": "Technology",
+      "ind": "Semiconductors",
+      "sh": 6,
+      "avg": 997.5,
+      "last": 1082.28,
+      "day": 0.94,
+      "ed": "Mon 31 Aug",
+      "held": 19,
+      "atr": 46,
+      "hi": 1104,
+      "rank": 4,
+      "off": 2,
+      "stack": "above SMA 50, 100 and 200",
+      "conf": [
+        86,
+        76,
+        62,
+        94
+      ],
+      "cs": "agree",
+      "c0": 77,
+      "debt": 1.2,
+      "cash": 0.9,
+      "why": "rank 3 momentum, 0% off the 52w high, ATR 4.3% → 12% line",
+      "aSh": 6,
+      "aAvg": 997.65,
+      "slip": 1.5,
+      "div": true,
+      "init": 859.5,
+      "trailP": 874,
+      "stopK": "Trailing stop",
+      "stopP": 874,
+      "dist": 4.527826086956521
+    },
+    {
+      "s": "ORKA",
+      "n": "Oruka Therapeutics",
+      "sec": "Health Care",
+      "ind": "Biotechnology",
+      "sh": 75,
+      "avg": 98.23,
+      "last": 84.46,
+      "day": -2.31,
+      "ed": "Wed 9 Sep",
+      "held": 13,
+      "atr": 5.3,
+      "hi": 99.1,
+      "rank": 28,
+      "off": 21,
+      "stack": "below SMA 50, above SMA 200",
+      "conf": [
+        32,
+        12,
+        62,
+        80
+      ],
+      "cs": "unavailable",
+      "c0": 66,
+      "debt": 0,
+      "cash": 14.8,
+      "why": "rank 7 momentum, 2% off the 52w high, ATR 5.4% → 10% line",
+      "aSh": 75,
+      "aAvg": 98.31,
+      "slip": 8.1,
+      "init": 82.33,
+      "trailP": 72.6,
+      "stopK": "Initial stop",
+      "stopP": 82.33,
+      "dist": 0.4018867924528293
+    },
+    {
+      "s": "AMD",
+      "n": "Advanced Micro Devices",
+      "sec": "Technology",
+      "ind": "Semiconductors",
+      "sh": 7,
+      "avg": 621.81,
+      "last": 630.63,
+      "day": 0.58,
+      "ed": "Wed 23 Sep",
+      "held": 3,
+      "atr": 25.5,
+      "hi": 636.2,
+      "rank": 6,
+      "off": 0,
+      "stack": "above SMA 50, 100 and 200",
+      "conf": [
+        90,
+        70,
+        62,
+        94
+      ],
+      "cs": "agree",
+      "c0": 79,
+      "debt": 0.3,
+      "cash": 0.5,
+      "why": "rank 6 momentum, 0% off the 52w high, ATR 4.1% → 13% line",
+      "aSh": 4,
+      "aAvg": 622.05,
+      "slip": 3.9,
+      "init": 545.31,
+      "trailP": 508.7,
+      "stopK": "Initial stop",
+      "stopP": 545.31,
+      "dist": 3.3458823529411785
+    },
+    {
+      "s": "KNSA",
+      "n": "Kiniksa Pharmaceuticals",
+      "sec": "Health Care",
+      "ind": "Biotechnology",
+      "sh": 39,
+      "avg": 78.33,
+      "last": 75.08,
+      "day": -0.92,
+      "ed": "Tue 15 Sep",
+      "held": 9,
+      "atr": 3.05,
+      "hi": 79.4,
+      "rank": 44,
+      "off": 5,
+      "stack": "below SMA 50, above SMA 200",
+      "conf": [
+        14,
+        40,
+        62,
+        86
+      ],
+      "cs": "agree",
+      "c0": 67,
+      "debt": 0,
+      "cash": 5.6,
+      "why": "rank 10 momentum, 2% off the 52w high, ATR 3.9% → 14% line",
+      "aSh": 39,
+      "aAvg": 78.32,
+      "slip": -1.3,
+      "rankExit": true,
+      "init": 69.18,
+      "trailP": 64.15,
+      "stopK": "Initial stop",
+      "stopP": 69.18,
+      "dist": 1.934426229508194
+    }
+  ],
+  "pendingOrders": [
+    {
+      "id": "p1",
+      "s": "CRDO",
+      "n": "Credo Technology",
+      "side": "BUY",
+      "qty": "24 sh",
+      "qtyS": "24",
+      "amt": "$3,400 → 24 sh",
+      "ref": 142.35,
+      "est": 3416.4,
+      "why": "rank 4 momentum, 2% off the 52w high, ATR 5.2% → 10% line",
+      "src": "agent",
+      "gr": null,
+      "cid": "trend-20260925-CRDO-B1"
+    },
+    {
+      "id": "p2",
+      "s": "ALAB",
+      "n": "Astera Labs",
+      "side": "BUY",
+      "qty": "16 sh",
+      "qtyS": "16",
+      "amt": "$2,950 → 16 sh",
+      "ref": 182.4,
+      "est": 2918.4,
+      "why": "rank 7 momentum, 3% off the 52w high, ATR 6.0% → 9% line",
+      "src": "agent",
+      "gr": null,
+      "cid": "trend-20260925-ALAB-B1"
+    },
+    {
+      "id": "p3",
+      "s": "KNSA",
+      "n": "Kiniksa Pharmaceuticals",
+      "side": "SELL",
+      "qty": "39 sh (all)",
+      "qtyS": "39",
+      "amt": "",
+      "ref": 75.08,
+      "est": 2928.12,
+      "why": "rank decay: rank 44 > exit threshold 30",
+      "src": "agent",
+      "gr": null,
+      "cid": "trend-20260925-KNSA-S1"
+    },
+    {
+      "id": "p4",
+      "s": "CELC",
+      "n": "Celcuity Inc.",
+      "side": "BUY",
+      "qty": "52 sh",
+      "qtyS": "52",
+      "amt": "$3,000 → 52 sh",
+      "ref": 58.1,
+      "est": 3021.2,
+      "why": "rank 9 momentum, 4% off the 52w high, ATR 7.1% → 8% line",
+      "src": "agent",
+      "gr": "adv_cap",
+      "grNote": "order = 6.4% of 20-day ADV > 5%",
+      "cid": "trend-20260925-CELC-B1"
+    }
+  ],
+  "orderHistory": [
+    {
+      "id": "h1",
+      "dd": "Tue 22 Sep",
+      "fd": "Wed 23 Sep",
+      "s": "AMD",
+      "side": "BUY",
+      "q": 7,
+      "qa": 4,
+      "dc": 615.4,
+      "op": 621.81,
+      "fp": 622.05,
+      "fee": 0,
+      "rp": null,
+      "days": null,
+      "why": "rank 6 momentum, 0% off the 52w high, ATR 4.1% → 13% line"
+    },
+    {
+      "id": "h2",
+      "dd": "Tue 22 Sep",
+      "fd": "Wed 23 Sep",
+      "s": "TVTX",
+      "side": "SELL",
+      "q": 56,
+      "dc": 60.28,
+      "op": 60.36,
+      "fp": 60.31,
+      "fee": 0.07,
+      "rp": -383.81,
+      "days": 14,
+      "why": "initial stop: 60.28 through 60.37 (3.0 ATR)"
+    },
+    {
+      "id": "h3",
+      "dd": "Mon 21 Sep",
+      "fd": "Tue 22 Sep",
+      "s": "TWST",
+      "side": "BUY",
+      "q": 36,
+      "dc": 163.4,
+      "op": 165.91,
+      "fp": 166.01,
+      "fee": 0,
+      "rp": null,
+      "days": null,
+      "why": "rank 6 momentum, 1% off the 52w high, ATR 4.4% → 12% line"
+    },
+    {
+      "id": "h4",
+      "dd": "Fri 18 Sep",
+      "fd": "Mon 21 Sep",
+      "s": "RVMD",
+      "side": "SELL",
+      "q": 60,
+      "dc": 193.8,
+      "op": 192.51,
+      "fp": 192.4,
+      "fee": 0.21,
+      "rp": -1586.44,
+      "days": 23,
+      "why": "initial stop: 193.80 through 194.05 (3.0 ATR)"
+    },
+    {
+      "id": "h5",
+      "dd": "Fri 18 Sep",
+      "fd": "Mon 21 Sep",
+      "s": "HALO",
+      "side": "BUY",
+      "q": 89,
+      "dc": 111.95,
+      "op": 112.86,
+      "fp": 112.89,
+      "fee": 0,
+      "rp": null,
+      "days": null,
+      "why": "rank 8 momentum, 1% off the 52w high, ATR 4.0% → 13% line"
+    },
+    {
+      "id": "h6",
+      "dd": "Thu 17 Sep",
+      "fd": "Fri 18 Sep",
+      "s": "GSAT",
+      "side": "BUY",
+      "q": 160,
+      "dc": 81.9,
+      "op": 83.04,
+      "fp": 83.09,
+      "fee": 0,
+      "rp": null,
+      "days": null,
+      "why": "rank 3 momentum, 0% off the 52w high, ATR 3.1% → 17% line"
+    },
+    {
+      "id": "h7",
+      "dd": "Thu 17 Sep",
+      "fd": "Fri 18 Sep",
+      "s": "AXON",
+      "side": "SELL",
+      "q": 8,
+      "dc": 703.1,
+      "op": 701.3,
+      "fp": 700.95,
+      "fee": 0.11,
+      "rp": -405.6,
+      "days": 19,
+      "why": "rank decay: rank 33 > exit threshold 30"
+    },
+    {
+      "id": "h8",
+      "dd": "Wed 16 Sep",
+      "fd": "Thu 17 Sep",
+      "s": "PLTR",
+      "side": "SELL",
+      "q": 60,
+      "dc": 166.2,
+      "op": 165.1,
+      "fp": 165.02,
+      "fee": 0.2,
+      "rp": -1038,
+      "days": 20,
+      "why": "rank decay: rank 31 > exit threshold 30"
+    },
+    {
+      "id": "h9",
+      "dd": "Tue 15 Sep",
+      "fd": "Wed 16 Sep",
+      "s": "CELH",
+      "side": "SELL",
+      "q": 160,
+      "dc": 52.8,
+      "op": 52.3,
+      "fp": 52.26,
+      "fee": 0.17,
+      "rp": -976,
+      "days": 15,
+      "why": "rank decay: rank 38 > exit threshold 30"
+    },
+    {
+      "id": "h10",
+      "dd": "Mon 14 Sep",
+      "fd": "Tue 15 Sep",
+      "s": "ARWR",
+      "side": "SELL",
+      "q": 300,
+      "dc": 40.95,
+      "op": 38.5,
+      "fp": 38.44,
+      "fee": 0.23,
+      "rp": -2640,
+      "days": 19,
+      "why": "initial stop: gap through 41.10 (3.0 ATR)"
+    },
+    {
+      "id": "h11",
+      "dd": "Mon 14 Sep",
+      "fd": "Tue 15 Sep",
+      "s": "KNSA",
+      "side": "BUY",
+      "q": 39,
+      "dc": 77.6,
+      "op": 78.33,
+      "fp": 78.32,
+      "fee": 0,
+      "rp": null,
+      "days": null,
+      "why": "rank 10 momentum, 2% off the 52w high, ATR 3.9% → 14% line"
+    },
+    {
+      "id": "h12",
+      "dd": "Fri 11 Sep",
+      "fd": "Mon 14 Sep",
+      "s": "MRVL",
+      "side": "SELL",
+      "q": 90,
+      "dc": 80.9,
+      "op": 80.2,
+      "fp": 80.14,
+      "fee": 0.15,
+      "rp": -747,
+      "days": 18,
+      "why": "initial stop: 80.90 through 81.05 (3.0 ATR)"
+    },
+    {
+      "id": "h13",
+      "dd": "Thu 10 Sep",
+      "fd": "Fri 11 Sep",
+      "s": "CRWD",
+      "side": "SELL",
+      "q": 22,
+      "dc": 470.6,
+      "op": 468.3,
+      "fp": 468.02,
+      "fee": 0.21,
+      "rp": -961.4,
+      "days": 15,
+      "why": "initial stop: 470.60 through 471.20 (3.0 ATR)"
+    },
+    {
+      "id": "h14",
+      "dd": "Wed 9 Sep",
+      "fd": "Thu 10 Sep",
+      "s": "ROKU",
+      "side": "BUY",
+      "q": 75,
+      "dc": 153.1,
+      "op": 155.39,
+      "fp": 155.46,
+      "fee": 0,
+      "rp": null,
+      "days": null,
+      "why": "rank 12 momentum, 2% off the 52w high, ATR 3.6% → 15% line"
+    },
+    {
+      "id": "h15",
+      "dd": "Wed 9 Sep",
+      "fd": "Thu 10 Sep",
+      "s": "LITE",
+      "side": "SELL",
+      "q": 55,
+      "dc": 132.4,
+      "op": 131.75,
+      "fp": 131.69,
+      "fee": 0.15,
+      "rp": 745.25,
+      "days": 16,
+      "why": "trailing stop: 132.40 through 132.55 (5.0 ATR)"
+    },
+    {
+      "id": "h16",
+      "dd": "Tue 8 Sep",
+      "fd": "Wed 9 Sep",
+      "s": "ORKA",
+      "side": "BUY",
+      "q": 75,
+      "dc": 96.8,
+      "op": 98.23,
+      "fp": 98.31,
+      "fee": 0,
+      "rp": null,
+      "days": null,
+      "why": "rank 7 momentum, 2% off the 52w high, ATR 5.4% → 10% line"
+    }
+  ],
+  "roundTrips": [
+    {
+      "s": "TVTX",
+      "sec": "Health Care",
+      "e": "3 Sep",
+      "x": "23 Sep",
+      "d": 14,
+      "ep": 67.21,
+      "xp": 60.36,
+      "pnl": -383.81,
+      "r": "stop",
+      "c": 66
+    },
+    {
+      "s": "RVMD",
+      "sec": "Health Care",
+      "e": "19 Aug",
+      "x": "21 Sep",
+      "d": 23,
+      "ep": 218.95,
+      "xp": 192.51,
+      "pnl": -1586.44,
+      "r": "stop",
+      "c": 74
+    },
+    {
+      "s": "TEM",
+      "sec": "Health Care",
+      "e": "4 Sep",
+      "x": "22 Sep",
+      "d": 13,
+      "ep": 74.2,
+      "xp": 69.8,
+      "pnl": -308,
+      "r": "rank",
+      "c": 59
+    },
+    {
+      "s": "AXON",
+      "sec": "Industrials",
+      "e": "24 Aug",
+      "x": "18 Sep",
+      "d": 19,
+      "ep": 752,
+      "xp": 701.3,
+      "pnl": -405.6,
+      "r": "rank",
+      "c": 72
+    },
+    {
+      "s": "PLTR",
+      "sec": "Technology",
+      "e": "20 Aug",
+      "x": "17 Sep",
+      "d": 20,
+      "ep": 182.4,
+      "xp": 165.1,
+      "pnl": -1038,
+      "r": "rank",
+      "c": 77
+    },
+    {
+      "s": "CELH",
+      "sec": "Consumer Staples",
+      "e": "27 Aug",
+      "x": "16 Sep",
+      "d": 15,
+      "ep": 58.4,
+      "xp": 52.3,
+      "pnl": -976,
+      "r": "rank",
+      "c": 64
+    },
+    {
+      "s": "ARWR",
+      "sec": "Health Care",
+      "e": "19 Aug",
+      "x": "15 Sep",
+      "d": 19,
+      "ep": 47.3,
+      "xp": 38.5,
+      "pnl": -2640,
+      "r": "stop",
+      "c": 71
+    },
+    {
+      "s": "MRVL",
+      "sec": "Technology",
+      "e": "19 Aug",
+      "x": "14 Sep",
+      "d": 18,
+      "ep": 88.5,
+      "xp": 80.2,
+      "pnl": -747,
+      "r": "stop",
+      "c": 66
+    },
+    {
+      "s": "CRWD",
+      "sec": "Technology",
+      "e": "21 Aug",
+      "x": "11 Sep",
+      "d": 15,
+      "ep": 512,
+      "xp": 468.3,
+      "pnl": -961.4,
+      "r": "stop",
+      "c": 69
+    },
+    {
+      "s": "LITE",
+      "sec": "Technology",
+      "e": "19 Aug",
+      "x": "10 Sep",
+      "d": 16,
+      "ep": 118.2,
+      "xp": 131.75,
+      "pnl": 745.25,
+      "r": "trail",
+      "c": 81
+    },
+    {
+      "s": "IDCC",
+      "sec": "Technology",
+      "e": "20 Aug",
+      "x": "9 Sep",
+      "d": 14,
+      "ep": 315,
+      "xp": 348.4,
+      "pnl": 400.8,
+      "r": "trail",
+      "c": 75
+    },
+    {
+      "s": "ASTS",
+      "sec": "Telecommunications",
+      "e": "25 Aug",
+      "x": "8 Sep",
+      "d": 10,
+      "ep": 62.1,
+      "xp": 54.2,
+      "pnl": -1106,
+      "r": "stop",
+      "c": 61
+    },
+    {
+      "s": "RGTI",
+      "sec": "Technology",
+      "e": "19 Aug",
+      "x": "4 Sep",
+      "d": 13,
+      "ep": 21.4,
+      "xp": 18.02,
+      "pnl": -507,
+      "r": "stop",
+      "c": 58
+    },
+    {
+      "s": "ADMA",
+      "sec": "Health Care",
+      "e": "19 Aug",
+      "x": "4 Sep",
+      "d": 13,
+      "ep": 17.9,
+      "xp": 19.25,
+      "pnl": 405,
+      "r": "rank",
+      "c": 70
+    },
+    {
+      "s": "DDOG",
+      "sec": "Technology",
+      "e": "19 Aug",
+      "x": "1 Sep",
+      "d": 10,
+      "ep": 138.6,
+      "xp": 121.9,
+      "pnl": -751.5,
+      "r": "stop",
+      "c": 68
+    },
+    {
+      "s": "VKTX",
+      "sec": "Health Care",
+      "e": "19 Aug",
+      "x": "28 Aug",
+      "d": 8,
+      "ep": 38.9,
+      "xp": 33.75,
+      "pnl": -927,
+      "r": "stop",
+      "c": 63
+    },
+    {
+      "s": "SMMT",
+      "sec": "Health Care",
+      "e": "19 Aug",
+      "x": "26 Aug",
+      "d": 6,
+      "ep": 25.3,
+      "xp": 18.2,
+      "pnl": -1846,
+      "r": "stop",
+      "c": 52
+    }
+  ],
+  "alerts": [
+    {
+      "id": "A-41",
+      "p": "P1",
+      "t": "Cycle A failed 4 sessions in a row — data gate tripped",
+      "d": "coverage at asof 0.6% < 95% · fetch ok 96.9% · cross-source 1 compared, 39 unavailable",
+      "src": "Cycle A · Thu 1 Oct 17:05",
+      "gh": "#41",
+      "when": "Thu 1 Oct 17:06",
+      "only": "stale"
+    },
+    {
+      "id": "A-42",
+      "p": "P2",
+      "t": "Model book older than 3 sessions",
+      "d": "last good asof Fri 25 Sep; confidence Data sub-scores marked stale",
+      "src": "console check",
+      "gh": null,
+      "when": "Thu 1 Oct 17:10",
+      "only": "stale"
+    },
+    {
+      "id": "A-44",
+      "p": "P1",
+      "t": "Broker gateway unreachable",
+      "d": "timeout after 10 s · 3 retries · last success 17:41 ET",
+      "src": "console check",
+      "gh": "#44",
+      "when": "Fri 25 Sep 17:55",
+      "only": "error"
+    },
+    {
+      "id": "A-45",
+      "p": "P1",
+      "t": "Reconciliation break — submit halted",
+      "d": "ROKU expected 75, account 74 (−1)",
+      "src": "Cycle B · Mon 28 Sep 09:50",
+      "gh": "#45",
+      "when": "Mon 28 Sep 09:51",
+      "only": "halted"
+    },
+    {
+      "id": "A-46",
+      "p": "P1",
+      "t": "Night held — approval mode",
+      "d": "3 orders wait for your release; the window closes at 09:28 ET",
+      "src": "Submit · Fri 25 Sep 19:15",
+      "gh": null,
+      "when": "Fri 25 Sep 19:15",
+      "only": "held"
+    },
+    {
+      "id": "A-40",
+      "p": "P2",
+      "t": "ROKU review-flagged — owner ruling due Fri 30 Oct",
+      "d": "business screen: \"streaming entertainment platform\" (media & entertainment)",
+      "src": "Universe correction · Fri 25 Sep",
+      "gh": null,
+      "when": "Fri 25 Sep 10:00"
+    },
+    {
+      "id": "A-38",
+      "p": "P2",
+      "t": "Account drift: AMD −3 sh exceeds the ±2 sh tolerance",
+      "d": "buy trimmed to cash at submit (F6) · drift 2.1% of equity",
+      "src": "Cycle B · Wed 23 Sep 09:50",
+      "gh": "#38",
+      "when": "Wed 23 Sep 09:51",
+      "ack": true,
+      "acct": true
+    },
+    {
+      "id": "A-33",
+      "p": "P2",
+      "t": "Slippage outlier: ARWR +15.6 bps > 10 bps band",
+      "d": "gap down through the stop at the open",
+      "src": "Cycle B · Tue 15 Sep 09:50",
+      "gh": null,
+      "when": "Tue 15 Sep 09:52",
+      "res": true,
+      "acct": true,
+      "note": "Opening gap; not an execution fault"
+    },
+    {
+      "id": "A-31",
+      "p": "P1",
+      "t": "Reconciliation break (drill) — halt cleared",
+      "d": "injected a 1-share diff on PLTR to test the halt path",
+      "src": "Cycle B · Wed 16 Sep 09:50",
+      "gh": "#31",
+      "when": "Wed 16 Sep 09:51",
+      "res": true,
+      "note": "Drill — cleared with cause at 10:22"
+    },
+    {
+      "id": "A-27",
+      "p": "P2",
+      "t": "Dead-man: submit record 38 min late",
+      "d": "GitHub cron delay; the 19:45 retry slot sent the orders",
+      "src": "Dead-man · Thu 10 Sep 21:30",
+      "gh": "#27",
+      "when": "Thu 10 Sep 21:30",
+      "res": true,
+      "note": "Cron delay; retry slot worked as designed"
+    }
+  ],
+  "audit": [
+    {
+      "t": "Fri 25 Sep 10:00",
+      "actor": "rescreen",
+      "act": "Universe correction",
+      "ba": "327 → 319 names (7 preferred lines + SFD)",
+      "reason": "Instrument screen and curated overrides (F4); universe frozen for the evaluation",
+      "eff": "Frozen for the evaluation",
+      "sha": "2c7e0b4",
+      "res": "Applied"
+    },
+    {
+      "t": "Fri 25 Sep 09:12",
+      "actor": "owner@console",
+      "act": "Acknowledge alert",
+      "ba": "A-38 open → acknowledged",
+      "reason": "Known: AMD buy trimmed to cash at submit (F6); drift explained",
+      "eff": "Immediate",
+      "sha": "7d2a9f1",
+      "res": "Applied"
+    },
+    {
+      "t": "Wed 16 Sep 10:22",
+      "actor": "owner@console",
+      "act": "Clear halt",
+      "ba": "halted: true → false",
+      "reason": "Drill: injected a 1-share diff on PLTR to test the halt path",
+      "eff": "Next submit · Wed 16 Sep 19:15",
+      "sha": "3b81c07",
+      "res": "Applied"
+    },
+    {
+      "t": "Wed 16 Sep 09:51",
+      "actor": "cycle_b",
+      "act": "Reconciliation halt",
+      "ba": "ok → halted (PLTR 60 vs 59)",
+      "reason": "auto: share-for-share mismatch",
+      "eff": "Immediate",
+      "sha": "0e6d5a2",
+      "res": "Applied"
+    },
+    {
+      "t": "Fri 11 Sep 22:03",
+      "actor": "owner@console",
+      "act": "Release held night",
+      "ba": "held → released",
+      "reason": "Approval-mode rehearsal: reviewed orders/2026-09-11.json",
+      "eff": "Now",
+      "sha": "e9b7c22",
+      "res": "Applied"
+    },
+    {
+      "t": "Fri 11 Sep 08:47",
+      "actor": "owner@console",
+      "act": "Resume entries",
+      "ba": "pause_entries: true → false",
+      "reason": "Data verified against the NASDAQ source",
+      "eff": "Next Cycle A · Fri 11 Sep 17:05",
+      "sha": "5aa3d17",
+      "res": "Applied"
+    },
+    {
+      "t": "Thu 10 Sep 18:20",
+      "actor": "owner@console",
+      "act": "Pause entries",
+      "ba": "pause_entries: false → true",
+      "reason": "Data check after a vendor outage; exits still flow",
+      "eff": "Tonight 19:15 submit",
+      "sha": "c41f9e8",
+      "res": "Applied"
+    },
+    {
+      "t": "Wed 9 Sep 20:44",
+      "actor": "owner@console",
+      "act": "Pause entries",
+      "ba": "pause_entries: false → true",
+      "reason": "Testing the console write path",
+      "eff": "Tonight 19:15 submit",
+      "sha": "—",
+      "res": "Not applied"
+    }
+  ],
+  "universeSample": [
+    {
+      "s": "LKQ",
+      "n": "LKQ Corporation",
+      "g": "B",
+      "st": "Compliant",
+      "debt": 28.9,
+      "cash": 1.2,
+      "flag": ""
+    },
+    {
+      "s": "MRNA",
+      "n": "Moderna Inc.",
+      "g": "B",
+      "st": "Compliant",
+      "debt": 4.1,
+      "cash": 28.7,
+      "flag": ""
+    },
+    {
+      "s": "ENPH",
+      "n": "Enphase Energy",
+      "g": "B",
+      "st": "Compliant",
+      "debt": 28.4,
+      "cash": 9.6,
+      "flag": ""
+    },
+    {
+      "s": "REGN",
+      "n": "Regeneron Pharmaceuticals",
+      "g": "B",
+      "st": "Compliant",
+      "debt": 1.9,
+      "cash": 27.9,
+      "flag": ""
+    },
+    {
+      "s": "QRVO",
+      "n": "Qorvo Inc.",
+      "g": "B",
+      "st": "Compliant",
+      "debt": 27.6,
+      "cash": 6.2,
+      "flag": ""
+    },
+    {
+      "s": "SWKS",
+      "n": "Skyworks Solutions",
+      "g": "B",
+      "st": "Compliant",
+      "debt": 27.2,
+      "cash": 5.8,
+      "flag": ""
+    },
+    {
+      "s": "TXRH",
+      "n": "Texas Roadhouse",
+      "g": "C",
+      "st": "Under review",
+      "debt": 3.2,
+      "cash": 1,
+      "flag": "restaurants · alcohol sales — D1 ruling"
+    },
+    {
+      "s": "CASY",
+      "n": "Casey’s General Stores",
+      "g": "C",
+      "st": "Under review",
+      "debt": 7.5,
+      "cash": 1.4,
+      "flag": "convenience retail · alcohol and tobacco — D1 ruling"
+    },
+    {
+      "s": "MSTR",
+      "n": "Strategy Inc.",
+      "g": "C",
+      "st": "Under review",
+      "debt": 9.8,
+      "cash": 0.2,
+      "flag": "bitcoin treasury company — D1 ruling"
+    },
+    {
+      "s": "RPRX",
+      "n": "Royalty Pharma",
+      "g": "C",
+      "st": "Under review",
+      "debt": 26.3,
+      "cash": 4.4,
+      "flag": "royalty financing — D1 ruling"
+    },
+    {
+      "s": "PEP",
+      "n": "PepsiCo",
+      "g": "F",
+      "st": "Excluded",
+      "debt": 31,
+      "cash": 4.1,
+      "flag": "re-screen 1 Oct: debt/mcap 31% ≥ 30%"
+    },
+    {
+      "s": "BKR",
+      "n": "Baker Hughes",
+      "g": "F",
+      "st": "Excluded",
+      "debt": 12,
+      "cash": 31,
+      "flag": "re-screen 1 Oct: cash/mcap 31% ≥ 30%"
+    }
+  ],
+  "params": [
+    {
+      "k": "EXP_MAX",
+      "v": 0.95,
+      "lo": 0.6,
+      "hi": 1,
+      "fz": 0.95,
+      "d": "Maximum gross exposure"
+    },
+    {
+      "k": "RISK_PER_TRADE",
+      "v": 0.016,
+      "lo": 0.005,
+      "hi": 0.025,
+      "fz": 0.016,
+      "d": "Equity risked per entry; sets the weight line"
+    },
+    {
+      "k": "STOP_ATR",
+      "v": 3,
+      "lo": 2,
+      "hi": 4,
+      "fz": 3,
+      "d": "Initial stop distance, in ATR"
+    },
+    {
+      "k": "TRAIL_ATR",
+      "v": 5,
+      "lo": 3,
+      "hi": 7,
+      "fz": 5,
+      "d": "Trailing stop distance from the high, in ATR"
+    },
+    {
+      "k": "TIME_STOP",
+      "v": 35,
+      "lo": 20,
+      "hi": 60,
+      "fz": 35,
+      "d": "Sessions before a time exit"
+    },
+    {
+      "k": "TARGET_VOL",
+      "v": 0.17,
+      "lo": 0.1,
+      "hi": 0.25,
+      "fz": 0.17,
+      "d": "Annualised portfolio volatility target"
+    }
+  ],
+  "journal": [
+    {
+      "dw": "Fri 25 Sep",
+      "m": "trending",
+      "s": 0.36,
+      "t": "KNSA slipped to rank 44, past the exit threshold of 30 — sell at Monday’s open. Two entries queued (CRDO, ALAB); CELC blocked by the ADV cap. Book 94.8% invested."
+    },
+    {
+      "dw": "Wed 23 Sep",
+      "m": "trending",
+      "s": 0.31,
+      "t": "Stopped out of Travere (TVTX) at −10.2% — initial stop. Bought AMD at rank 6, 0% off the 52-week high."
+    },
+    {
+      "dw": "Mon 21 Sep",
+      "m": "trending",
+      "s": 0.35,
+      "t": "Revolution Medicines (RVMD) closed at −12.1% — initial stop. Rotated into Halozyme (HALO)."
+    },
+    {
+      "dw": "Tue 15 Sep",
+      "m": "trending",
+      "s": 0.39,
+      "t": "Closed Arrowhead Pharmaceuticals at −18.6% — initial stop. Book now 80% invested."
+    }
+  ],
+  "sentiment": [
+    {
+      "date": "2026-08-18",
+      "sentiment": 0.22
+    },
+    {
+      "date": "2026-08-19",
+      "sentiment": 0.26
+    },
+    {
+      "date": "2026-08-20",
+      "sentiment": 0.19
+    },
+    {
+      "date": "2026-08-21",
+      "sentiment": 0.28
+    },
+    {
+      "date": "2026-08-24",
+      "sentiment": 0.33
+    },
+    {
+      "date": "2026-08-25",
+      "sentiment": 0.3
+    },
+    {
+      "date": "2026-08-26",
+      "sentiment": 0.36
+    },
+    {
+      "date": "2026-08-27",
+      "sentiment": 0.31
+    },
+    {
+      "date": "2026-08-28",
+      "sentiment": 0.21
+    },
+    {
+      "date": "2026-08-31",
+      "sentiment": 0.24
+    },
+    {
+      "date": "2026-09-01",
+      "sentiment": 0.12
+    },
+    {
+      "date": "2026-09-02",
+      "sentiment": 0.15
+    },
+    {
+      "date": "2026-09-03",
+      "sentiment": 0.23
+    },
+    {
+      "date": "2026-09-04",
+      "sentiment": 0.18
+    },
+    {
+      "date": "2026-09-08",
+      "sentiment": 0.27
+    },
+    {
+      "date": "2026-09-09",
+      "sentiment": 0.29
+    },
+    {
+      "date": "2026-09-10",
+      "sentiment": 0.34
+    },
+    {
+      "date": "2026-09-11",
+      "sentiment": 0.3
+    },
+    {
+      "date": "2026-09-14",
+      "sentiment": 0.36
+    },
+    {
+      "date": "2026-09-15",
+      "sentiment": 0.39
+    },
+    {
+      "date": "2026-09-16",
+      "sentiment": 0.41
+    },
+    {
+      "date": "2026-09-17",
+      "sentiment": 0.37
+    },
+    {
+      "date": "2026-09-18",
+      "sentiment": 0.42
+    },
+    {
+      "date": "2026-09-21",
+      "sentiment": 0.35
+    },
+    {
+      "date": "2026-09-22",
+      "sentiment": 0.38
+    },
+    {
+      "date": "2026-09-23",
+      "sentiment": 0.31
+    },
+    {
+      "date": "2026-09-24",
+      "sentiment": 0.33
+    },
+    {
+      "date": "2026-09-25",
+      "sentiment": 0.36
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D1",
+      "t": "Sharia policy in writing",
+      "r": "AAOIFI SS 21, a ruling on each of the 22 review-flagged names, and the purification method — rule before 30 Oct",
+      "due": "Fri 30 Oct 2026",
+      "days": 35,
+      "st": "Open"
+    },
+    {
+      "id": "D2",
+      "t": "Real-money account type",
+      "r": "Cash account (no margin agreement), with the settlement guard in R4",
+      "due": "Feb 2027",
+      "days": null,
+      "st": "Open"
+    },
+    {
+      "id": "D3",
+      "t": "Real-money broker",
+      "r": "Alpaca live — the same API as paper, so the evaluated path is the traded path",
+      "due": "Jan 2027",
+      "days": null,
+      "st": "Open"
+    },
+    {
+      "id": "D4",
+      "t": "Pilot capital and pain threshold",
+      "r": "$10,000–25,000, below the $60,000 estate-tax line; review at −15% from the pilot high",
+      "due": "Apr 2027",
+      "days": null,
+      "st": "Open"
+    },
+    {
+      "id": "D5",
+      "t": "Cold or warm start at each switch",
+      "r": "Cold: reset LIVE_START so the twin and the account both start in cash",
+      "due": "at each switch",
+      "days": null,
+      "st": "Recommended"
+    },
+    {
+      "id": "D6",
+      "t": "Ledger remote for the Unraid box",
+      "r": "A private GitHub repository (off-site copy, issues for P1s)",
+      "due": "Jan 2027",
+      "days": null,
+      "st": "Open"
+    },
+    {
+      "id": "D7",
+      "t": "When real money starts",
+      "r": "After the verdict (Mon 10 May 2027), or a ≤ $5,000 operations micro-pilot from Tue 2 Mar 2027",
+      "due": "Feb 2027",
+      "days": null,
+      "st": "Open"
+    },
+    {
+      "id": "D8",
+      "t": "factor2 as a second paper account",
+      "r": "Doc 05 recommends it: the evaluation becomes a live election",
+      "due": "Fri 16 Oct 2026",
+      "days": 21,
+      "st": "Open"
+    }
+  ],
+  "tasks": [
+    {
+      "group": "G",
+      "id": "G0",
+      "task": "Fix the paper path, move the workflows to main, correct the universe, add tests",
+      "owner": "Claude",
+      "due": "Fri 25 Sep",
+      "status": "done"
+    },
+    {
+      "group": "G",
+      "id": "G1",
+      "task": "Merge the deploy branch into main",
+      "owner": "you",
+      "due": "Sun 27 Sep",
+      "status": "open"
+    },
+    {
+      "group": "G",
+      "id": "G2",
+      "task": "Check the post-merge push drills are all green",
+      "owner": "you / Claude",
+      "due": "Sun 27 Sep",
+      "status": "open"
+    },
+    {
+      "group": "G",
+      "id": "G3",
+      "task": "If the merge slips past 27 Sep, set LIVE_START to the first session after it",
+      "owner": "you",
+      "due": "at merge",
+      "status": "conditional"
+    },
+    {
+      "group": "G",
+      "id": "G4",
+      "task": "First scheduled nights run on their own (A 17:00 · submit 19:15 · B 09:50 ET)",
+      "owner": "automatic",
+      "due": "Mon 28 Sep",
+      "status": "open"
+    },
+    {
+      "group": "G",
+      "id": "G5",
+      "task": "Read the first quarterly re-screen report",
+      "owner": "you",
+      "due": "Thu 1 Oct",
+      "status": "open"
+    },
+    {
+      "group": "G",
+      "id": "G6",
+      "task": "Ghost gate passes: 10 deterministic sessions in gate.json",
+      "owner": "automatic",
+      "due": "Fri 9 Oct",
+      "status": "open"
+    },
+    {
+      "group": "P",
+      "id": "P1",
+      "task": "Open the Alpaca paper account; add paper keys as repository secrets",
+      "owner": "you",
+      "due": "Fri 23 Oct",
+      "status": "open"
+    },
+    {
+      "group": "P",
+      "id": "P2",
+      "task": "Optional: ALERT_WEBHOOK_URL secret for phone alerts",
+      "owner": "you",
+      "due": "Fri 23 Oct",
+      "status": "open"
+    },
+    {
+      "group": "P",
+      "id": "P3",
+      "task": "Reset the paper account to $100,000 cash and no positions",
+      "owner": "you",
+      "due": "Fri 30 Oct",
+      "status": "open"
+    },
+    {
+      "group": "P",
+      "id": "P4",
+      "task": "Set LIVE_START=2026-11-02, LIVE_MODE=paper, APPROVAL_MODE=true",
+      "owner": "you",
+      "due": "Sat 31 Oct",
+      "status": "open"
+    },
+    {
+      "group": "P",
+      "id": "P5",
+      "task": "Approval week: read each night’s orders, then release the submit by hand",
+      "owner": "you",
+      "due": "2–6 Nov",
+      "status": "open"
+    },
+    {
+      "group": "P",
+      "id": "P6",
+      "task": "Remove APPROVAL_MODE after five clean nights",
+      "owner": "you",
+      "due": "Mon 9 Nov",
+      "status": "open"
+    },
+    {
+      "group": "P",
+      "id": "P7",
+      "task": "Paper gate: 10 clean sessions",
+      "owner": "automatic",
+      "due": "Fri 13 Nov",
+      "status": "open"
+    },
+    {
+      "group": "E",
+      "id": "E1",
+      "task": "Monthly review: tracking error, slippage, missed fills, P1 count, anomalies",
+      "owner": "you + Claude",
+      "due": "monthly",
+      "status": "open"
+    },
+    {
+      "group": "E",
+      "id": "E2",
+      "task": "Check the first live adaptation record",
+      "owner": "you + Claude",
+      "due": "Wed 3 Feb 2027",
+      "status": "open"
+    },
+    {
+      "group": "E",
+      "id": "E3",
+      "task": "Quarterly re-screens: rule on anything flagged",
+      "owner": "you",
+      "due": "1 Jan, 1 Apr 2027",
+      "status": "open"
+    },
+    {
+      "group": "E",
+      "id": "E4",
+      "task": "Verdict against the pre-registered bands; publish it",
+      "owner": "you + Claude",
+      "due": "Fri 7 May 2027",
+      "status": "open"
+    },
+    {
+      "group": "U",
+      "id": "U1",
+      "task": "Decide the ledger remote (D6) and create it",
+      "owner": "you",
+      "due": "Mon 4 Jan 2027",
+      "status": "open"
+    },
+    {
+      "group": "U",
+      "id": "U2",
+      "task": "Container image, crontab (ET) and run-step wrapper",
+      "owner": "Claude",
+      "due": "Fri 15 Jan 2027",
+      "status": "open"
+    },
+    {
+      "group": "U",
+      "id": "U3",
+      "task": "Appdata share, live.env (chmod 600), container autostart",
+      "owner": "you",
+      "due": "Fri 22 Jan 2027",
+      "status": "open"
+    },
+    {
+      "group": "U",
+      "id": "U4",
+      "task": "Heartbeat checks per step with phone alerts",
+      "owner": "you + Claude",
+      "due": "Fri 22 Jan 2027",
+      "status": "open"
+    },
+    {
+      "group": "U",
+      "id": "U5",
+      "task": "UPS + NUT graceful shutdown; NTP; restart policy",
+      "owner": "you",
+      "due": "Fri 22 Jan 2027",
+      "status": "open"
+    },
+    {
+      "group": "U",
+      "id": "U6",
+      "task": "Nightly cross-check of the private twin against the public twin",
+      "owner": "Claude",
+      "due": "Fri 29 Jan 2027",
+      "status": "open"
+    },
+    {
+      "group": "U",
+      "id": "U7",
+      "task": "Box runbook: power, network, disk, key rotation, restore",
+      "owner": "Claude",
+      "due": "Fri 29 Jan 2027",
+      "status": "open"
+    },
+    {
+      "group": "U",
+      "id": "U8",
+      "task": "Burn-in: 20 ghost sessions matching the public twin",
+      "owner": "automatic",
+      "due": "Mon 1 Mar 2027",
+      "status": "open"
+    },
+    {
+      "group": "R",
+      "id": "R1",
+      "task": "Mirror: trade the twin’s targets at the account’s own equity",
+      "owner": "Claude",
+      "due": "Fri 26 Feb 2027",
+      "status": "open"
+    },
+    {
+      "group": "R",
+      "id": "R2",
+      "task": "Live broker class, armed only on the box, with notional caps",
+      "owner": "Claude",
+      "due": "Fri 26 Feb 2027",
+      "status": "open"
+    },
+    {
+      "group": "R",
+      "id": "R3",
+      "task": "Licensed Sharia data, a purification entry per dividend, a zakat statement",
+      "owner": "Claude · you buy",
+      "due": "Fri 26 Feb 2027",
+      "status": "open"
+    },
+    {
+      "group": "R",
+      "id": "R4",
+      "task": "Cash-account settlement guard; withholding and pay dates in the ledger",
+      "owner": "Claude + you",
+      "due": "Fri 26 Feb 2027",
+      "status": "open"
+    },
+    {
+      "group": "R",
+      "id": "R5",
+      "task": "Open the live cash account; W-8BEN; written tax advice",
+      "owner": "you",
+      "due": "Fri 26 Feb 2027",
+      "status": "open"
+    },
+    {
+      "group": "R",
+      "id": "R6",
+      "task": "Optional operations micro-pilot of at most $5,000 on the box",
+      "owner": "you + Claude",
+      "due": "Mar 2027",
+      "status": "option"
+    },
+    {
+      "group": "R",
+      "id": "R7",
+      "task": "Go / no-go; fund the pilot; first 10 sessions in approval mode",
+      "owner": "you",
+      "due": "May 2027",
+      "status": "open"
+    },
+    {
+      "group": "S",
+      "id": "S1",
+      "task": "Written Sharia policy (D1), optionally reviewed by a scholar",
+      "owner": "you",
+      "due": "Fri 30 Oct 2026",
+      "status": "open"
+    },
+    {
+      "group": "S",
+      "id": "S2",
+      "task": "Apply the D1 rulings: overrides before 30 Oct, exclusions after",
+      "owner": "Claude",
+      "due": "Fri 30 Oct 2026",
+      "status": "open"
+    },
+    {
+      "group": "S",
+      "id": "S3",
+      "task": "Quarterly cross-check of the universe against HLAL and SPUS holdings",
+      "owner": "Claude",
+      "due": "Fri 1 Jan 2027",
+      "status": "open"
+    },
+    {
+      "group": "X",
+      "id": "X1",
+      "task": "Broker-grade data and a history lock",
+      "owner": "Claude",
+      "due": "Fri 29 Jan 2027",
+      "status": "open"
+    },
+    {
+      "group": "X",
+      "id": "X2",
+      "task": "Learning-loop oversight: alert when adapt() fires, plus the pause control",
+      "owner": "Claude",
+      "due": "Fri 29 Jan 2027",
+      "status": "open"
+    },
+    {
+      "group": "X",
+      "id": "X3",
+      "task": "If D8 is yes: factor2 on a second paper account",
+      "owner": "Claude + you",
+      "due": "Fri 30 Oct 2026",
+      "status": "conditional"
+    }
+  ]
+}
