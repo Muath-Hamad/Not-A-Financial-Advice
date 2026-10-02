@@ -6,6 +6,11 @@ tomorrow's open, and rebuild the cockpit. Every run leaves a cycle record;
 the workflow commits whatever was written, so the repo stays the audit log
 even for failed cycles.
 
+Cycle A never talks to a venue's order API: Alpaca rejects on-open orders
+sent before 19:00 ET, so cycle_submit.py sends the ledger at 19:15 ET
+(docs/07). In paper mode Cycle A only reads the account, to measure how far
+the account's book has drifted from the twin's.
+
 Exit code 0 means "a record was written" (including gate trips and kill
 switches — those are outcomes, not errors). Only an unexpected crash exits
 non-zero.
@@ -225,7 +230,7 @@ def main() -> int:
     if asof is None:
         asof = twin["asof"]
         record["asof"] = asof
-        if (ledger / "cycles" / f"{asof}-A.json").exists():
+        if not args.smoke and (ledger / "cycles" / f"{asof}-A.json").exists():
             print(f"cycle A for {asof} already recorded; nothing to do")
             return 0
 
@@ -312,36 +317,61 @@ def main() -> int:
         except Exception as exc:  # noqa: BLE001 - a quality metric, never a blocker
             record["open_revision"] = {"error": str(exc)[:200]}
 
+    # ---- Sharia forced exits (docs/07) ------------------------------------
+    # A held name on the exclusion list is sold at the next open even though
+    # the twin, whose universe is frozen for the run, still wants it.
+    excluded = set(controls.get("excluded_symbols") or [])
+    twin_sells = {o["code"] for o in orders if o["side"] == "sell"}
+    forced = [{"code": c, "side": "sell", "all": True, "forced": True,
+               "reason": "sharia/exclusion: forced exit at the next open"}
+              for c in sorted(set(twin["positions"]) & excluded) if c not in twin_sells]
+    record["forced_exits"] = [f["code"] for f in forced]
+    if forced:
+        alert("P2", f"Cycle A {asof}: {len(forced)} forced exit(s) for excluded holdings",
+              ", ".join(record["forced_exits"]))
+
     # ---- ledger: orders, twin state, cycle record ------------------------
+    blocked_by: dict = {}
+    for v in rails["violations"]:
+        if v.get("code"):
+            blocked_by.setdefault((v["code"], v["side"]), []).append(v["rule"])
+    forced_refs = enriched_refs([f["code"] for f in forced], asof)
     order_entries = []
-    for od in orders:
+    for od in orders + forced:
         coid = client_order_id(asof, od)
         held = twin["positions"].get(od["code"], {}).get("shares", 0)
-        close = refs.get(od["code"], {}).get("close")
+        close = (refs.get(od["code"]) or forced_refs.get(od["code"]) or {}).get("close")
         share_od = to_share_order(od, twin["equity_final"], close, held)
-        order_entries.append({**od, "client_order_id": coid,
-                              "share_preview": share_od})
+        # per-order rules block buys only: a sale is bounded by the shares held,
+        # and blocking one would keep a position the model has already exited
+        rules = blocked_by.get((od["code"], "buy"), []) if od["side"] == "buy" else []
+        order_entries.append({**od, "client_order_id": coid, "ref_close": close,
+                              "share_preview": share_od, "blocked": rules})
     write_json(ledger / "orders" / f"{asof}.json", {
         "asof": asof, "mode": record["mode"], "orders": order_entries,
         "generated_utc": record["ts_utc"],
     })
+    record["submission"] = ("the submit step sends these after 19:00 ET"
+                            if record["mode"] == "paper" else
+                            "ghost: the submit step records what it would send")
 
-    # broker submission — a real venue only in paper mode, after the rails
+    # ---- paper mode: how far has the account drifted from the twin? ------
     broker = get_broker()
-    submitted = []
-    if broker.mode == "paper" and not controls.get("kill") \
-            and not record.get("kill_triggered"):
-        blocked = {(v.get("code"), v.get("side")) for v in rails["violations"]}
-        for e in order_entries:
-            if (e["code"], e["side"]) in blocked or e["share_preview"] is None:
-                continue
-            try:
-                submitted.append(broker.submit_moo(
-                    e["share_preview"]["symbol"], e["side"],
-                    e["share_preview"]["qty"], e["client_order_id"]))
-            except Exception as exc:  # noqa: BLE001
-                alert("P1", f"Order rejected: {e['code']} {e['side']}", str(exc)[:500])
-    record["submitted"] = submitted
+    if broker.mode == "paper":
+        try:
+            from execution import broker_holdings, drift_vs_twin
+            held_now = broker_holdings(broker.positions())
+            px = {c: p.get("price") for c, p in twin["positions"].items()}
+            drift = drift_vs_twin(twin["positions"], held_now, px, twin["equity_final"],
+                                  excluded)
+            record["account_drift"] = drift
+            if drift["breaches"]:
+                alert("P1", f"Cycle A {asof}: account book drifted from the twin",
+                      "```json\n" + json.dumps(drift["breaches"], indent=1)[:2500] + "\n```\n"
+                      "Names differ by more than the tolerance in docs/07. "
+                      "Reconcile before the next submit.")
+        except Exception as exc:  # noqa: BLE001 - a monitor, never a blocker
+            record["account_drift"] = {"error": str(exc)[:300]}
 
     twin_dir = ledger / "twin"
     twin_dir.mkdir(parents=True, exist_ok=True)

@@ -202,9 +202,9 @@ neither has ever seen — a live election, which is the cleanest one we can run.
 | **3 — Steady state** | ≥ 2 quarters | Quarterly adapt + re-screen; monthly reports; the pre-registered evaluation runs its course |
 | **4 — Review** | after 2–4 quarters | Formal verdict against the pre-registered bands; decide: extend, promote a challenger (factor2), or return to the lab |
 
-Real-money trading is explicitly **out of scope** for this plan; it would
-carry regulatory, brokerage and sizing questions this document does not
-address.
+Real-money trading is **out of scope** for this plan. Its route, gated on the
+Phase 4 verdict and run from a private server so that real-money keys never
+touch this repository, is in docs/07.
 
 ---
 

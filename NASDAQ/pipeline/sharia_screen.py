@@ -1,6 +1,6 @@
 """AAOIFI Shariah screen over the discovered NASDAQ universe.
 
-Reference: AAOIFI Shari'ah Standard No. 21 (Financial Papers). Two layers:
+Reference: AAOIFI Shari'ah Standard No. 21 (Financial Papers). Four layers:
 
 1. BUSINESS-ACTIVITY SCREEN — the core business must not be prohibited:
    conventional banking / insurance / interest-based finance, alcohol, gambling,
@@ -14,6 +14,16 @@ Reference: AAOIFI Shari'ah Standard No. 21 (Financial Papers). Two layers:
    - interest-bearing debt / market capitalization        < 30%
    - (cash + interest-bearing securities) / market cap    < 30%
    Data via yfinance: totalDebt, totalCash, marketCap.
+
+3. INSTRUMENT SCREEN (added 2026-09-25, docs/07) — common shares only.
+   Preferred shares (fixed or priority returns), perpetuals, warrants, units,
+   rights and notes are rejected by name, whatever the issuer's ratios. The
+   first screen let seven preferred lines through on their issuers' ratios.
+
+4. CURATED OVERRIDES — data/sharia_overrides.json. "exclude" rejects names
+   the keyword screen cannot see (Smithfield Foods, a pork producer labelled
+   "Meat/Poultry/Fish"); "review" flags method-dependent names for the
+   owner's policy decision without excluding them.
 
 HONEST LIMITATIONS (documented, not hidden):
 - The <5% impermissible-income rule is NOT computable from free data; the
@@ -31,6 +41,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -38,6 +49,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 IN = ROOT / os.environ.get("SCREEN_IN", "data/universe_top.json")
 OUT = ROOT / os.environ.get("SCREEN_OUT", "data/universe_screened.json")
+OVERRIDES = ROOT / "data" / "sharia_overrides.json"
 
 DEBT_MAX = 0.30   # AAOIFI: interest-bearing debt < 30% of market cap
 CASH_MAX = 0.30   # AAOIFI: interest-bearing securities < 30% of market cap
@@ -101,6 +113,68 @@ def business_screen(entry) -> list[str]:
     return sorted(set(reasons))
 
 
+# Instrument screen: the listing must be a common share. Matched against the
+# security NAME (the screener spells out "Preferred Stock", "Warrants", ...).
+# American Depositary Shares of common equity stay in: only depositary
+# interests in PREFERRED stock carry the word "Preferred".
+INSTRUMENT_PATTERNS = [
+    (re.compile(r"\bpreferred\b", re.I),
+     "preferred shares: priority or fixed returns (AAOIFI SS 21 accepts common shares only)"),
+    (re.compile(r"\bperpetual\b", re.I), "perpetual fixed-income instrument"),
+    (re.compile(r"\bwarrants?\b", re.I), "warrant, not a share"),
+    (re.compile(r"\bunits?\b", re.I), "unit (bundled instrument), not a share"),
+    (re.compile(r"\brights?\b", re.I), "subscription right, not a share"),
+    (re.compile(r"\bnotes? due\b|\bdebentures?\b", re.I), "debt security"),
+]
+
+# Review flags: method-dependent activities. They do NOT fail the screen;
+# they mark names for the owner's written policy (docs/07, decision D1).
+# Industry labels are shared across unlike businesses (auto dealers file under
+# "Gas Stations", chip makers under "Broadcasting ... Equipment"), so only
+# unambiguous labels flag here; the rest are named in the overrides file.
+REVIEW_PATTERNS = [
+    (re.compile(r"meat/poultry/fish", re.I), "meat processing: confirm no pork"),
+    (re.compile(r"hotels/resorts", re.I), "hotels: bar and entertainment revenue"),
+    (re.compile(r"amusement", re.I), "entertainment venues"),
+    (re.compile(r"broadcasting(?!.*equipment)", re.I), "broadcasting and entertainment content"),
+]
+
+
+def load_overrides() -> dict:
+    if OVERRIDES.exists():
+        return json.loads(OVERRIDES.read_text())
+    return {"exclude": {}, "review": {}}
+
+
+def instrument_screen(entry) -> list[str]:
+    name = entry.get("name", "")
+    return sorted({why for pat, why in INSTRUMENT_PATTERNS if pat.search(name)})
+
+
+def override_screen(entry, overrides: dict) -> list[str]:
+    why = (overrides.get("exclude") or {}).get(entry["code"])
+    return [why] if why else []
+
+
+def review_flags(entry, overrides: dict) -> list[str]:
+    hay = f"{entry.get('sector','')} | {entry.get('industry','')}"
+    flags = {why for pat, why in REVIEW_PATTERNS if pat.search(hay)}
+    why = (overrides.get("review") or {}).get(entry["code"])
+    if why:
+        flags.add(why)
+    return sorted(flags)
+
+
+def apply_rule_layers(record: dict, overrides: dict) -> dict:
+    """Instrument, curated-exclusion and review layers; no network needed."""
+    record["instrument_reasons"] = instrument_screen(record)
+    record["override_reasons"] = override_screen(record, overrides)
+    record["review_flags"] = review_flags(record, overrides)
+    record["pass"] = bool(record.get("business_pass")) and bool(record.get("ratios_pass")) \
+        and not record["instrument_reasons"] and not record["override_reasons"]
+    return record
+
+
 def fetch_fundamentals(sym: str):
     import yfinance as yf
 
@@ -136,6 +210,7 @@ def main() -> int:
     uni = json.loads(IN.read_text())["universe"]
     max_names = int(os.environ.get("SCREEN_MAX", "500"))
     uni = uni[:max_names]
+    overrides = load_overrides()
     passed, rejected = [], []
 
     for i, e in enumerate(uni):
@@ -171,7 +246,7 @@ def main() -> int:
         record["ratio_reasons"] = ratio_reasons
         record["ratios_pass"] = not ratio_reasons
 
-        record["pass"] = record["business_pass"] and record["ratios_pass"]
+        apply_rule_layers(record, overrides)
         (passed if record["pass"] else rejected).append(record)
 
         if (i + 1) % 25 == 0:

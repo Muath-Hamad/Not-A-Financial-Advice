@@ -1,0 +1,44 @@
+{
+ "what": "Regression for the 2026-09-25 universe correction (docs/07 \u00a73): 8 names removed from data/universe_screened.json by the instrument screen and the curated exclusions (BRKRP, SMCIP, MCHPP, STRF, STRC, STRK, SATA preferred/perpetual lines; SFD pork producer). 327 -> 319 names.",
+ "method": "sim/run_sim.py with the frozen sim/strategies/trend.py alone; SIM_ENRICHED_SUBDIR=data/enriched_full; SIM_START=2023-01-03 (the OOS window of the election); commission and slippage at the election defaults (2 bps, 5 bps). 'original' uses data/raw_full/_manifest.json (327 names + IXIC); 'corrected' uses the same manifest filtered to the 319 corrected names + IXIC. The original run reproduces the election's trend OOS figures exactly.",
+ "window": {
+  "start": "2023-01-03",
+  "end": "2026-08-04",
+  "sessions": 899
+ },
+ "original_327": {
+  "final_equity": 307557.66,
+  "total_return": 2.0756,
+  "cagr": 0.3682,
+  "ann_vol": 0.2616,
+  "sharpe": 1.222,
+  "sortino": 1.756,
+  "max_drawdown": -0.1617,
+  "calmar": 2.277,
+  "n_trades": 806,
+  "win_rate": 0.442,
+  "positive_months_pct": 0.705
+ },
+ "corrected_319": {
+  "final_equity": 316750.34,
+  "total_return": 2.1675,
+  "cagr": 0.3795,
+  "ann_vol": 0.2598,
+  "sharpe": 1.261,
+  "sortino": 1.829,
+  "max_drawdown": -0.163,
+  "calmar": 2.327,
+  "n_trades": 808,
+  "win_rate": 0.437,
+  "positive_months_pct": 0.727
+ },
+ "benchmark_ixic": {
+  "total_return": 1.5595,
+  "cagr": 0.2998,
+  "max_drawdown": -0.2432
+ },
+ "trades_in_removed_names_original_run": 0,
+ "first_equity_divergence": "2025-04-25",
+ "reading": "The agent never traded any removed name. The paths diverge from 2025-04-25 because the market-breadth input (share of the universe above its 50-day average) is computed over the whole universe. The corrected figures are within the path noise of a changed input; they are NOT evidence that the correction improves the agent. The election result (+207.6%, Sharpe 1.22) stays the official out-of-sample record; the corrected run is the reference for the deployed configuration.",
+ "date": "2026-09-25"
+}

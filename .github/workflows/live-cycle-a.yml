@@ -6,17 +6,22 @@ name: Live cycle A (decision)
 # if the session is already recorded, so double-firing is harmless.
 # A push to this file runs the full cycle in SMOKE mode (ledger/smoke/, no alerts).
 #
-# NOTE: scheduled workflows only fire once this file exists on the repository's
-# DEFAULT branch. Until then, only the push-triggered smoke run works.
+# Scheduled workflows only fire from the repository's DEFAULT branch (main).
+# A manual run (workflow_dispatch) runs the real cycle: use it to re-run a
+# failed or missed session (docs/06 runbook).
+#
+# Repository variables: LIVE_MODE (ghost|paper), LIVE_START (first session of
+# the live record; reset at each phase switch, docs/07).
 
 on:
   push:
     branches:
-      - claude/tasi-agent-simulation-fcili2
+      - main
     paths:
       - ".github/workflows/live-cycle-a.yml"
   schedule:
     - cron: "0 21,22 * * 1-5"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -33,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: claude/tasi-agent-simulation-fcili2
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
@@ -50,16 +55,17 @@ jobs:
         run: python NASDAQ/live/cycle_a.py --smoke
 
       - name: Run cycle A
-        if: github.event_name == 'schedule'
+        if: github.event_name != 'push'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
           LIVE_MODE: ${{ vars.LIVE_MODE || 'ghost' }}
+          LIVE_START: ${{ vars.LIVE_START }}
           APCA_API_KEY_ID: ${{ secrets.APCA_API_KEY_ID }}
           APCA_API_SECRET_KEY: ${{ secrets.APCA_API_SECRET_KEY }}
         run: python NASDAQ/live/cycle_a.py
 
-      - name: Commit ledger back to branch
+      - name: Commit ledger back to main
         if: always()
         run: |
           git config user.name "github-actions[bot]"
@@ -71,8 +77,7 @@ jobs:
             echo "No ledger changes to commit"
           else
             git commit -m "live: cycle A record ($(date -u +%F))"
-            git pull --rebase origin claude/tasi-agent-simulation-fcili2 || true
-            git push || (sleep 5 && git pull --rebase origin claude/tasi-agent-simulation-fcili2 && git push)
+            git pull --rebase origin main || true
+            git push || (sleep 5 && git pull --rebase origin main && git push)
           fi
 
-# smoke-trigger note: validation drill — nasdaq.com second source + re-runnable smoke (2026-08-18)

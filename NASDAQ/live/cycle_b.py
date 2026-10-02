@@ -3,10 +3,12 @@
 Ghost mode: record today's actual opening prints for every symbol ordered at
 yesterday's Cycle A (the evening replay cross-checks them — the open-revision
 metric), and verify the order ledger is internally consistent with the twin
-state. Paper mode (Phase 2): additionally pull the venue's real fills, match
-them to client-order-ids, measure realized slippage against the model, and
-reconcile broker positions share-for-share — any unexplained break is a P1
-and trading halts.
+state. Paper mode (Phase 2): additionally look up every order last night's
+submit step sent (by our client order id), measure realized slippage against
+the official open, and reconcile the account share for share: positions
+before submission plus filled quantities must equal positions now. Any
+unexplained difference is a P1 and sets ledger/halt.json, which stops the
+submit step until a human clears it (docs/07).
 """
 
 from __future__ import annotations
@@ -43,6 +45,83 @@ def fetch_opens(codes: list[str], day: str) -> dict:
         except Exception:  # noqa: BLE001
             opens[code] = None
     return opens
+
+
+def reconcile_paper(broker, ledger: Path, prev: str, today: str, record: dict) -> None:
+    """Trace last night's submissions and reconcile the account (paper mode)."""
+    from execution import broker_holdings, diff_positions, expected_positions
+
+    s_rec_path = ledger / "cycles" / f"{prev}-S.json"
+    if not s_rec_path.exists():
+        record["reconcile"] = {"status": "no_submission_record"}
+        orders_path = ledger / "orders" / f"{prev}.json"
+        if orders_path.exists() and json.loads(orders_path.read_text()).get("orders"):
+            alert("P1", f"Cycle B {today}: orders were ledgered for {prev} but never submitted",
+                  f"live/ledger/cycles/{prev}-S.json is missing. Check the live-submit "
+                  f"workflow runs; the account traded nothing at today's open.")
+        return
+    s_rec = json.loads(s_rec_path.read_text())
+    record["submit_status"] = s_rec.get("status")
+    if "positions_before" not in s_rec:
+        # the submit step never read the account (broker unreachable, or no
+        # decision to submit): there is no baseline to reconcile against, and
+        # that night's own alert already covers it
+        record["reconcile"] = {"status": "no_baseline", "submit_status": s_rec.get("status")}
+        return
+    before = {k: int(v) for k, v in (s_rec.get("positions_before") or {}).items()}
+    fills = []
+    for sub in s_rec.get("submissions", []):
+        o = broker.order_by_client_id(sub["client_order_id"]) or {}
+        fills.append({"symbol": sub["code"], "side": sub["side"], "qty": sub["qty"],
+                      "client_order_id": sub["client_order_id"],
+                      "broker_id": o.get("id") or sub.get("broker_id"),
+                      "status": o.get("status"),
+                      "filled_qty": int(float(o.get("filled_qty") or 0)),
+                      "filled_avg_price": float(o.get("filled_avg_price") or 0) or None})
+    record["fills"] = fills
+
+    # slippage against the official opening print, signed so positive = cost
+    missing_opens = sorted({f["symbol"] for f in fills} - set(record.get("opens", {})))
+    if missing_opens:
+        record.setdefault("opens", {}).update(fetch_opens(missing_opens, today))
+    slips = []
+    for f in fills:
+        ref = record["opens"].get(f["symbol"])
+        if f["filled_qty"] and f["filled_avg_price"] and ref:
+            sign = 1 if f["side"] == "buy" else -1
+            slips.append({"symbol": f["symbol"], "side": f["side"],
+                          "slippage": round(sign * (f["filled_avg_price"] / ref - 1), 5)})
+    record["slippage"] = slips
+    if slips:
+        avg = sum(s["slippage"] for s in slips) / len(slips)
+        record["slippage_avg"] = round(avg, 5)
+        if avg > config.SLIPPAGE_ALERT:
+            alert("P2", f"Cycle B {today}: average slippage {avg:.2%} per side",
+                  f"Above the {config.SLIPPAGE_ALERT:.2%} band (docs/05 §8).")
+
+    missed = [f for f in fills if f["filled_qty"] < f["qty"]]
+    record["missed"] = [{"symbol": f["symbol"], "side": f["side"], "qty": f["qty"],
+                         "filled": f["filled_qty"], "status": f["status"]} for f in missed]
+    if missed:
+        alert("P2", f"Cycle B {today}: {len(missed)} order(s) not fully filled at the open",
+              json.dumps(record["missed"]))
+
+    # share for share: the account must equal what it held plus what filled
+    actual = broker_holdings(broker.positions())
+    expected = expected_positions(before, fills)
+    diffs = diff_positions(expected, actual)
+    record["reconcile"] = {"status": "ok" if not diffs else "break",
+                           "expected": expected, "actual": actual, "diffs": diffs}
+    if diffs:
+        halt = {"halted": True, "since": today, "reason": "unexplained position break",
+                "diffs": diffs,
+                "clear": "set halted to false in live/ledger/halt.json and commit, "
+                         "after the cause is written into this file"}
+        (ledger / "halt.json").write_text(json.dumps(halt, indent=1))
+        alert("P1", f"Cycle B {today}: reconciliation break, submissions halted",
+              "```json\n" + json.dumps(diffs, indent=1)[:2500] + "\n```\n"
+              "The account does not equal its pre-submission holdings plus today's fills. "
+              "The submit step sends nothing until live/ledger/halt.json is cleared.")
 
 
 def main() -> int:
@@ -84,12 +163,13 @@ def main() -> int:
         return 0
     orders = json.loads(orders_path.read_text())["orders"]
 
-    # internal consistency: the ledgered orders must equal the twin's pending book
+    # internal consistency: the ledgered orders must equal the twin's pending
+    # book (forced Sharia exits are the harness's own additions, not the twin's)
     twin_path = ledger / "twin" / "twin_latest.json"
     if twin_path.exists():
         twin = json.loads(twin_path.read_text())
         twin_keys = sorted(f"{o['code']}|{o['side']}" for o in twin.get("orders_next_open", []))
-        ledg_keys = sorted(f"{o['code']}|{o['side']}" for o in orders)
+        ledg_keys = sorted(f"{o['code']}|{o['side']}" for o in orders if not o.get("forced"))
         record["ledger_matches_twin"] = twin_keys == ledg_keys
         if not record["ledger_matches_twin"]:
             alert("P1", f"Cycle B {today}: order ledger does not match twin pending book",
@@ -103,28 +183,12 @@ def main() -> int:
         alert("P2", f"Cycle B {today}: no opening print for {len(missing)} symbol(s)",
               ", ".join(missing))
 
-    # paper mode: real fills, slippage vs model, share-for-share reconciliation
+    # paper mode: trace every submitted order, slippage vs the official open,
+    # and share-for-share reconciliation against the pre-submission book
     broker = get_broker()
     if broker.mode == "paper":
         try:
-            fills = broker.fills(today)
-            record["fills"] = fills
-            slips = []
-            by_coid = {o["client_order_id"]: o for o in orders}
-            for f in fills or []:
-                coid = f.get("order_id") or f.get("client_order_id", "")
-                o = by_coid.get(coid)
-                ref = record["opens"].get(f.get("symbol", ""))
-                px = float(f.get("price") or 0)
-                if ref and px:
-                    side = (o or {}).get("side") or f.get("side", "")
-                    sign = 1 if side == "buy" else -1
-                    slips.append({"symbol": f.get("symbol"),
-                                  "slippage": round(sign * (px / ref - 1), 5)})
-            record["slippage"] = slips
-            positions = broker.positions()
-            record["broker_positions"] = {p["symbol"]: int(float(p["qty"]))
-                                          for p in positions or []}
+            reconcile_paper(broker, ledger, prev, today, record)
         except Exception as exc:  # noqa: BLE001
             record["broker_error"] = str(exc)[:300]
             alert("P1", f"Cycle B {today}: broker reconciliation failed", str(exc)[:800])

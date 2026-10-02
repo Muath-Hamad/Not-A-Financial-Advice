@@ -6,13 +6,12 @@ name: Live AAOIFI re-screen (quarterly)
 # harness exclusions in controls.json. A push to this file runs the report
 # step only, against the current screen (a no-op drill, no network).
 #
-# NOTE: scheduled workflows only fire once this file exists on the repository's
-# DEFAULT branch.
+# Scheduled workflows only fire from the repository's DEFAULT branch (main).
 
 on:
   push:
     branches:
-      - claude/tasi-agent-simulation-fcili2
+      - main
     paths:
       - ".github/workflows/live-rescreen.yml"
   schedule:
@@ -33,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: claude/tasi-agent-simulation-fcili2
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
@@ -72,7 +71,7 @@ jobs:
           LIVE_SMOKE: "1"
         run: python NASDAQ/live/rescreen_report.py --fresh data/universe_screened.json
 
-      - name: Commit results back to branch
+      - name: Commit results back to main
         if: always()
         run: |
           git config user.name "github-actions[bot]"
@@ -84,6 +83,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "live: quarterly AAOIFI re-screen ($RS_DATE)"
-            git pull --rebase origin claude/tasi-agent-simulation-fcili2 || true
-            git push || (sleep 5 && git pull --rebase origin claude/tasi-agent-simulation-fcili2 && git push)
+            git pull --rebase origin main || true
+            git push || (sleep 5 && git pull --rebase origin main && git push)
           fi

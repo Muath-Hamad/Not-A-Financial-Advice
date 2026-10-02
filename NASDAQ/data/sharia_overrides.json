@@ -1,0 +1,24 @@
+{
+ "note": "Curated layer of the AAOIFI screen (pipeline/sharia_screen.py, docs/07). 'exclude' rejects a name outright with the stated reason. 'review' flags a method-dependent name for the owner's written Sharia policy (decision D1) without excluding it. Every change here is a change-management event: commit it with the reason, then re-run pipeline/apply_screen_rules.py.",
+ "updated": "2026-09-25",
+ "exclude": {
+  "SFD": "pork: Smithfield Foods is a pork producer; its 'Meat/Poultry/Fish' industry label escapes the keyword screen"
+ },
+ "review": {
+  "NFLX": "film and TV entertainment content",
+  "ROKU": "streaming entertainment platform",
+  "NWS": "news and entertainment media",
+  "NWSA": "news and entertainment media",
+  "TTWO": "video games: content varies by title",
+  "MSTR": "bitcoin treasury company: scholars differ on crypto holdings",
+  "RPRX": "royalty financing business",
+  "KTOS": "defense: permitted by AAOIFI, excluded by some index methods",
+  "AVAV": "defense: permitted by AAOIFI, excluded by some index methods",
+  "DRS": "defense: permitted by AAOIFI, excluded by some index methods",
+  "ESLT": "defense: permitted by AAOIFI, excluded by some index methods",
+  "MRCY": "defense: permitted by AAOIFI, excluded by some index methods",
+  "AXON": "weapons (conducted-energy devices): permitted by AAOIFI, excluded by some index methods",
+  "CASY": "convenience stores: alcohol and tobacco revenue",
+  "TXRH": "restaurant chain: alcohol sales"
+ }
+}

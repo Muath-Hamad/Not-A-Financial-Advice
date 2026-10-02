@@ -1,0 +1,94 @@
+name: Live submit (on-open orders)
+
+# Sends the orders Cycle A ledgered to the broker (NASDAQ/docs/07). Alpaca
+# accepts market-on-open (opg) orders only between 19:00 and 09:28 ET, so this
+# is its own step, after Cycle A's 17:00 ET decision. Crons every 30 minutes
+# from 23:15 to 01:45 UTC: in either DST regime several slots land between
+# 19:15 and 21:45 ET. The script skips slots outside the window and sessions
+# already recorded, and records nothing while Cycle A has not finished, so a
+# late Cycle A is picked up by the next slot.
+#
+# Ghost mode records what it WOULD send (a rehearsal against the twin's book).
+# A manual run (workflow_dispatch) releases a batch held in approval mode
+# (repository variable APPROVAL_MODE=true) and re-runs a failed night; it can
+# run until 09:28 ET. A push to this file runs a smoke drill (ledger/smoke/).
+#
+# Scheduled workflows only fire from the repository's DEFAULT branch (main).
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/live-submit.yml"
+  schedule:
+    - cron: "15,45 23 * * 1-5"
+    - cron: "15,45 0,1 * * 2-6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: live-submit
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --quiet pandas numpy pandas_market_calendars
+
+      - name: Submit (smoke — push-triggered)
+        if: github.event_name == 'push'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LIVE_MODE: ghost
+        run: python NASDAQ/live/cycle_submit.py --smoke
+
+      - name: Submit (scheduled)
+        if: github.event_name == 'schedule'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
+          LIVE_MODE: ${{ vars.LIVE_MODE || 'ghost' }}
+          APPROVAL_MODE: ${{ vars.APPROVAL_MODE }}
+          APCA_API_KEY_ID: ${{ secrets.APCA_API_KEY_ID }}
+          APCA_API_SECRET_KEY: ${{ secrets.APCA_API_SECRET_KEY }}
+        run: python NASDAQ/live/cycle_submit.py
+
+      - name: Submit (manual — releases an approval hold)
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
+          LIVE_MODE: ${{ vars.LIVE_MODE || 'ghost' }}
+          APPROVAL_MODE: ${{ vars.APPROVAL_MODE }}
+          APCA_API_KEY_ID: ${{ secrets.APCA_API_KEY_ID }}
+          APCA_API_SECRET_KEY: ${{ secrets.APCA_API_SECRET_KEY }}
+        run: python NASDAQ/live/cycle_submit.py --approved
+
+      - name: Commit ledger back to main
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add NASDAQ/live/ledger
+          if git diff --cached --quiet; then
+            echo "No ledger changes to commit"
+          else
+            git commit -m "live: submit record ($(date -u +%F))"
+            git pull --rebase origin main || true
+            git push || (sleep 5 && git pull --rebase origin main && git push)
+          fi
