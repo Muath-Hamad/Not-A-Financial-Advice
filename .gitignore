@@ -6,3 +6,6 @@ TASI/data/enriched_oos/
 NASDAQ/data/raw_live/
 NASDAQ/data/enriched_live/
 NASDAQ/data/enriched_cut/
+
+# Local-only interactive workflow map (docs/10)
+NASDAQ/docs/10-workflow-map/
