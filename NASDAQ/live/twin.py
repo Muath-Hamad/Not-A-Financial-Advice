@@ -38,6 +38,15 @@ os.environ["SIM_COMMISSION"] = config.TWIN_COMMISSION
 os.environ["SIM_SLIPPAGE"] = config.TWIN_SLIPPAGE
 os.environ["SIM_ADAPT_EVERY"] = config.ADAPT_EVERY
 os.environ["SIM_DECIDE_LAST"] = "1"
+# controls.pause_adapt (docs/08 §7.1): freeze adapt() from a date on. It changes
+# the twin path from that session, which the console warns about.
+import controls_schema  # noqa: E402
+
+_ctl = controls_schema.load(LIVE / "controls.json")
+if _ctl["pause_adapt"]:
+    os.environ["SIM_ADAPT_PAUSE_FROM"] = _ctl["pause_adapt_since"] or os.environ["SIM_START"]
+else:
+    os.environ.pop("SIM_ADAPT_PAUSE_FROM", None)
 
 sys.path.insert(0, str(PKG / "sim"))
 from engine import Engine, Market, START_CASH  # noqa: E402
@@ -130,6 +139,7 @@ def main() -> int:
             "commission": config.TWIN_COMMISSION,
             "slippage": config.TWIN_SLIPPAGE,
             "adapt_every": config.ADAPT_EVERY,
+            "adapt_pause_from": os.environ.get("SIM_ADAPT_PAUSE_FROM") or None,
         },
     }
     Path(args.out).write_text(json.dumps(out))

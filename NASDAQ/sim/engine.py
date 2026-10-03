@@ -40,6 +40,9 @@ SLIPPAGE = float(os.environ.get("SIM_SLIPPAGE", "0.0005"))           # 5 bps
 START_CASH = 100_000.0
 SIM_START = os.environ.get("SIM_START", "2016-01-01")
 ADAPT_EVERY = int(os.environ.get("SIM_ADAPT_EVERY", "63"))  # backprop cadence (sessions)
+# Live twin only: adapt() is suppressed on sessions on or after this ISO date
+# (controls.pause_adapt, docs/08 §7.1). Unset = the original behaviour.
+ADAPT_PAUSE_FROM = os.environ.get("SIM_ADAPT_PAUSE_FROM", "")
 ORDER_TTL = 5                     # sessions an order survives a trading halt
 # Live-twin mode: also run decide()/adapt() on the final session, so the last
 # close's orders (for the NEXT open) can be read from agent.pending. Off by
@@ -311,7 +314,7 @@ class Engine:
                     od["queued"] = iso
                     a.pending.append(od)
             # --- back-propagation: deterministic adapt() every ADAPT_EVERY sessions ---
-            if ADAPT_EVERY > 0 and i > 0 and (i + 1) % ADAPT_EVERY == 0:
+            if ADAPT_EVERY > 0 and i > 0 and (i + 1) % ADAPT_EVERY == 0                     and not (ADAPT_PAUSE_FROM and iso >= ADAPT_PAUSE_FROM):
                 w = ADAPT_EVERY
                 for a in agents:
                     if not hasattr(a.strategy, "adapt"):

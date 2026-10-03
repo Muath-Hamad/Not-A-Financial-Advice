@@ -101,7 +101,7 @@ def run_gate(asof: str, priority_codes: list[str]) -> dict:
         if len(xset) >= config.GATE_XCHECK_MAX:
             break
 
-    disagreements, unavailable, compared = [], [], 0
+    disagreements, unavailable, compared, agreed = [], [], 0, []
     for c in xset:
         ours = _our_close(c, asof)
         if ours is None:
@@ -119,6 +119,8 @@ def run_gate(asof: str, priority_codes: list[str]) -> dict:
             if diff > config.GATE_CROSS_TOL:
                 disagreements.append({"code": c, "ours": ours, "nasdaq": theirs,
                                       "diff": round(diff, 5)})
+            else:
+                agreed.append(c)
         time.sleep(0.25)
 
     checks["cross_source"] = {
@@ -126,6 +128,9 @@ def run_gate(asof: str, priority_codes: list[str]) -> dict:
         "compared": compared,
         "unavailable": len(unavailable),
         "disagreements": disagreements,
+        # per-name outcome, so the insights step can rate each holding's data
+        "agreed": agreed,
+        "unavailable_codes": unavailable,
         "tol": config.GATE_CROSS_TOL,
     }
 

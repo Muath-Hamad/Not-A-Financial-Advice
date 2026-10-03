@@ -157,9 +157,12 @@ def main() -> int:
             return 0
 
     # ---- controls / kill switch ------------------------------------------
-    controls = json.loads((LIVE / "controls.json").read_text())
+    import controls_schema
+    controls = controls_schema.load(LIVE / "controls.json")
     record["controls"] = {k: controls.get(k) for k in
-                          ("kill", "pause_entries", "excluded_symbols", "gross_cap")}
+                          ("kill", "pause_entries", "excluded_symbols", "gross_cap",
+                           "locked_symbols", "pause_adapt", "pause_adapt_since")}
+    record["controls"]["manual_orders"] = [m.get("id") for m in controls["manual_orders"]]
     if controls.get("kill"):
         record["status"] = "killed"
         write_json(ledger / "cycles" / f"{asof or 'unknown'}-A.json", record)
@@ -380,6 +383,14 @@ def main() -> int:
         f.write("date,equity,cash,bench\n")
         for d, e, c, b in zip(twin["dates"], twin["equity"], twin["cash"], twin["bench"]):
             f.write(f"{d},{e},{c},{b}\n")
+
+    # ---- insights (docs/08 §6): confidence, stops, prices — never blocks ---
+    try:
+        import insights
+        ins_path = insights.write(asof, twin, record.get("data_gate"), ledger)
+        record["insights"] = {"path": str(ins_path.relative_to(ledger)), "status": "ok"}
+    except Exception as exc:  # noqa: BLE001 - a read-only view; trading never waits on it
+        record["insights"] = {"status": "error", "error": f"{type(exc).__name__}: {exc}"[:300]}
 
     record["status"] = "ok"
     record["twin"] = {

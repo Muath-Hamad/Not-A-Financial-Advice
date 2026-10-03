@@ -69,6 +69,9 @@ def check_orders(orders: list[dict], twin: dict, refs: dict, universe: set[str],
         if side == "buy" and code in set(controls.get("excluded_symbols") or []):
             violations.append({**entry, "rule": "excluded",
                                "detail": "excluded via controls.json (buys only; sales always allowed)"})
+        if code in set(controls.get("locked_symbols") or []) and                 code not in set(controls.get("excluded_symbols") or []):
+            violations.append({**entry, "rule": "locked",
+                               "detail": "owner lock via controls.json: the agent may not trade this name"})
         if side == "buy" and controls.get("pause_entries"):
             violations.append({**entry, "rule": "pause_entries",
                                "detail": "new entries paused via controls.json"})

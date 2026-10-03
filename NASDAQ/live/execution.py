@@ -43,9 +43,19 @@ def _order_fields(entry: dict) -> dict:
                                       "fraction", "all")}
 
 
+def manual_order_id(asof: str, m: dict) -> str:
+    """Broker client_order_id for a console manual order: stable per order
+    and session, so a re-run never sends it twice."""
+    return f"nafa-{asof}-{m['symbol']}-{m['side']}-man-{str(m['id'])[-12:]}"
+
+
 def plan_submissions(asof: str, entries: list[dict], held: dict[str, int],
                      closes: dict[str, float | None], cash: float, equity: float,
-                     excluded: set[str], slippage: float) -> dict:
+                     excluded: set[str], slippage: float, *,
+                     locked: set[str] | frozenset = frozenset(),
+                     pause_entries: bool = False,
+                     manual: list[dict] | None = None,
+                     allow_manual_buys: bool = False) -> dict:
     """Decide exactly what tonight's submit step sends.
 
     * Blocked entries (guardrail violations) are skipped.
@@ -57,6 +67,12 @@ def plan_submissions(asof: str, entries: list[dict], held: dict[str, int],
     * Buys keep their ledgered size unless the night's buys would spend more
       than the cash the account will have after tonight's sells; then the
       last buys are trimmed or dropped, so no order leans on margin.
+    * Controls v2 (docs/08 §7.2), re-read at submit time: a locked name is
+      left alone by the agent (no buy, no sell); pause_entries blocks the
+      agent's buys even when Cycle A ledgered them earlier; manual orders
+      from the console are added, each tagged with its id — sells capped at
+      the account holding, buys only when allow_manual_buys is on and the
+      name is not excluded.
     """
     sells: list[dict] = []
     buys: list[dict] = []
@@ -66,6 +82,14 @@ def plan_submissions(asof: str, entries: list[dict], held: dict[str, int],
     sell_codes = set()
     for e in entries:
         code, side = e["code"], e["side"]
+        if code in locked and code not in excluded:
+            skipped.append({"code": code, "side": side, "client_order_id": e.get("client_order_id"),
+                            "reason": "locked"})
+            continue
+        if side == "buy" and pause_entries:
+            skipped.append({"code": code, "side": side, "client_order_id": e.get("client_order_id"),
+                            "reason": "pause_entries"})
+            continue
         if e.get("blocked"):
             skipped.append({"code": code, "side": side, "client_order_id": e.get("client_order_id"),
                             "reason": "blocked: " + ", ".join(e["blocked"])})
@@ -108,6 +132,33 @@ def plan_submissions(asof: str, entries: list[dict], held: dict[str, int],
         sells.append({"code": code, "side": "sell", "qty": held[code],
                       "client_order_id": client_order_id(asof, od), "forced": True})
         sell_codes.add(code)
+
+    # manual orders from the console (controls.manual_orders)
+    for m in manual or []:
+        code, side, mid = m["symbol"], m["side"], m["id"]
+        coid = manual_order_id(asof, m)
+        if side == "sell":
+            have = held.get(code, 0)
+            if code in sell_codes:
+                skipped.append({"code": code, "side": side, "client_order_id": coid, "manual_id": mid,
+                                "reason": "a sell for this name is already planned"})
+                continue
+            qty = int(m["qty"]) if m.get("qty") is not None else int(have * float(m.get("fraction") or 0))
+            qty = min(qty, have)
+            if qty < 1:
+                skipped.append({"code": code, "side": side, "client_order_id": coid, "manual_id": mid,
+                                "reason": "not held at the broker" if have <= 0 else "rounds to zero shares"})
+                continue
+            sells.append({"code": code, "side": "sell", "qty": qty, "client_order_id": coid,
+                          "forced": False, "manual_id": mid})
+            sell_codes.add(code)
+        else:
+            if not allow_manual_buys or code in excluded:
+                skipped.append({"code": code, "side": side, "client_order_id": coid, "manual_id": mid,
+                                "reason": "manual buys are off" if not allow_manual_buys else "name excluded"})
+                continue
+            buys.append({"code": code, "side": "buy", "qty": int(m.get("qty") or 0),
+                         "client_order_id": coid, "forced": False, "manual_id": mid})
 
     # cash check: sells fill in the same auction; buys may not exceed the proceeds
     budget = cash - config.CASH_BUFFER * equity

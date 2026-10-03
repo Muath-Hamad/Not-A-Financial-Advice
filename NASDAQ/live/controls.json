@@ -1,4 +1,6 @@
 {
+  "note": "Management controls (docs/05 \u00a77.3, docs/06). Human-edited; every change must be its own commit \u2014 the commit IS the audit event. kill=true blocks every order and freezes cycles. pause_entries=true blocks new buys; exits still flow. excluded_symbols blocks buys of a name and, if it is held, sells it in full at the next open (a forced exit); sales are never blocked. gross_cap (0..1) caps gross exposure: a breach holds the night for a human. Schema v2 (docs/08 \u00a77.2, live/controls_schema.py): locked_symbols \u2014 the agent may neither buy nor sell a name; manual_orders \u2014 the console's manual sells (and buys only when allow_manual_buys=true), each with an id, reason and expiry session; pause_adapt \u2014 freezes adapt() from pause_adapt_since. Missing keys mean off.",
+  "version": 2,
   "kill": false,
   "pause_entries": false,
   "excluded_symbols": [
@@ -29,5 +31,9 @@
     "XENE"
   ],
   "gross_cap": null,
-  "note": "Management controls (docs/05 §7.3, docs/06). Human-edited; every change must be its own commit — the commit IS the audit event. kill=true blocks every order and freezes cycles. pause_entries=true blocks new buys; exits still flow. excluded_symbols blocks buys of a name and, if it is held, sells it in full at the next open (a forced exit); sales are never blocked. gross_cap (0..1) caps gross exposure: a breach holds the night for a human."
+  "locked_symbols": [],
+  "manual_orders": [],
+  "pause_adapt": false,
+  "pause_adapt_since": null,
+  "allow_manual_buys": false
 }

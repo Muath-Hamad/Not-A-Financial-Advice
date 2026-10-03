@@ -1,0 +1,79 @@
+name: Live control (immediate broker command)
+
+# The console's immediate commands (NASDAQ/docs/08 §7.1–§7.2): STOP TRADING
+# cancels every open on-open order now; stop & flatten also queues a
+# market-on-open sell of every position. The console commits the matching
+# controls.json change (kill=true) first, then dispatches this workflow; the
+# broker's answer lands in ledger/commands/<ts>.json, which the console reads
+# back as the confirmation. Ghost mode records a no-op. Only the paper keys
+# are ever available here; live keys never leave the Unraid box.
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "cancel_all or flatten"
+        required: true
+        type: choice
+        options: [cancel_all, flatten]
+      reason:
+        description: "Why (at least 10 characters) — stored in the record"
+        required: true
+      actor:
+        description: "Who asked (the console fills it in)"
+        required: false
+        default: "owner@console"
+      action_id:
+        description: "Console action id (echoed into the record)"
+        required: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: live-control
+  cancel-in-progress: false
+
+jobs:
+  command:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --quiet pandas numpy pandas_market_calendars
+
+      - name: Run the command
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
+          LIVE_MODE: ${{ vars.LIVE_MODE || 'ghost' }}
+          APCA_API_KEY_ID: ${{ secrets.APCA_API_KEY_ID }}
+          APCA_API_SECRET_KEY: ${{ secrets.APCA_API_SECRET_KEY }}
+          ACTION: ${{ inputs.action }}
+          REASON: ${{ inputs.reason }}
+          ACTOR: ${{ inputs.actor }}
+          ACTION_ID: ${{ inputs.action_id }}
+        run: python NASDAQ/live/control_cmd.py --action "$ACTION" --reason "$REASON" --actor "$ACTOR" --id "$ACTION_ID"
+
+      - name: Commit ledger back to main
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add NASDAQ/live/ledger
+          if git diff --cached --quiet; then
+            echo "No ledger changes to commit"
+          else
+            git commit -m "live: control command ${{ inputs.action }} ($(date -u +%FT%TZ))"
+            git pull --rebase origin main || true
+            git push || (sleep 5 && git pull --rebase origin main && git push)
+          fi

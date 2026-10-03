@@ -59,6 +59,12 @@ def main() -> int:
                                for c in newly_noncompliant],
         "newly_eligible": newly_eligible,
         "held_and_flagged": held_flagged,
+        # per-name result with its date (docs/08 §7.2), read by the console's
+        # compliance cards: "screened on", the ratios and the pass flag
+        "screened_on": today,
+        "names": {u["code"]: {"screened_on": today, "pass": bool(u.get("pass", True)),
+                              "debt_ratio": u.get("debt_ratio"), "cash_ratio": u.get("cash_ratio")}
+                  for u in list(fresh["universe"]) + list(fresh.get("rejected_detail", []))},
         "policy": "excluded via controls.json: buys blocked; held names are force-exited "
                   "at the next open (Cycle A ledger, submit step); eligible names enter "
                   "at the next redeploy",

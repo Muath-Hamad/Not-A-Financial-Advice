@@ -41,6 +41,7 @@ PKG = LIVE.parent
 sys.path.insert(0, str(LIVE))
 
 import config  # noqa: E402
+import controls_schema  # noqa: E402
 from alert import alert, step_summary  # noqa: E402
 from broker import BrokerError, get_broker  # noqa: E402
 from execution import (broker_holdings, drift_vs_twin, in_submit_window,  # noqa: E402
@@ -118,8 +119,15 @@ def main() -> int:
         print(f"submit {asof}: Cycle A status {a_rec.get('status')!r}; nothing to send")
         return 0
 
-    controls = json.loads((LIVE / "controls.json").read_text())
-    excluded = set(controls.get("excluded_symbols") or [])
+    # re-read at submit time (docs/08 §7.2): a control committed after Cycle A
+    # (a 17:30 ET pause, a lock, a manual sell) still governs tonight's batch
+    controls = controls_schema.load(LIVE / "controls.json")
+    excluded = set(controls["excluded_symbols"])
+    locked = set(controls["locked_symbols"])
+    manual = controls_schema.active_manual_orders(controls, asof)
+    record["controls"] = {"kill": controls["kill"], "pause_entries": controls["pause_entries"],
+                          "locked_symbols": sorted(locked),
+                          "manual_orders": [m.get("id") for m in manual]}
     halt = load(ledger / "halt.json", {}) or {}
     holds = []
     if controls.get("kill"):
@@ -186,8 +194,12 @@ def main() -> int:
                 f"to the first paper session")
     record["positions_before"] = held
 
+    for m in manual:
+        closes.setdefault(m["symbol"], (twin_pos.get(m["symbol"]) or {}).get("price"))
     plan = plan_submissions(asof, entries, held, closes, cash, equity, excluded,
-                            float(config.TWIN_SLIPPAGE))
+                            float(config.TWIN_SLIPPAGE), locked=locked,
+                            pause_entries=controls["pause_entries"], manual=manual,
+                            allow_manual_buys=controls["allow_manual_buys"])
     record["plan"] = plan
 
     if holds or soft:

@@ -107,6 +107,12 @@ class GhostBroker:
     def cancel_all(self) -> dict:
         return {"status": "ghost-noop"}
 
+    def flatten(self, day: str) -> dict:
+        return {"status": "ghost-noop", "orders": []}
+
+    def open_orders(self) -> list:
+        return []
+
 
 class AlpacaPaperBroker:
     """Alpaca paper venue. Requires APCA_API_KEY_ID / APCA_API_SECRET_KEY."""
@@ -166,7 +172,32 @@ class AlpacaPaperBroker:
         return self._req("GET", f"/v2/account/activities/FILL?date={day}")
 
     def cancel_all(self) -> dict:
-        return self._req("DELETE", "/v2/orders")
+        """Cancel every open order (DELETE /v2/orders): the kill switch's
+        immediate half (docs/08 §7.1)."""
+        res = self._req("DELETE", "/v2/orders")
+        return {"status": "ok", "canceled": res if isinstance(res, list) else []}
+
+    def open_orders(self) -> list:
+        return self._req("GET", "/v2/orders?status=open&limit=500")
+
+    def flatten(self, day: str) -> dict:
+        """Market-on-open sell of every long position (docs/08 §7.1, stop &
+        flatten). Client ids are stable per day and symbol, so a re-run never
+        sends a second sell; Alpaca's 422 for a duplicate id is reported, not
+        retried."""
+        out = []
+        for p in self.positions():
+            qty = int(float(p.get("qty") or 0))
+            sym = p.get("symbol")
+            if qty < 1 or not sym:
+                continue
+            coid = f"nafa-{day}-{sym}-sell-flatten"
+            try:
+                r = self.submit_moo(sym, "sell", qty, coid)
+                out.append({"symbol": sym, "qty": qty, "client_order_id": coid, "status": r.get("status"), "id": r.get("id")})
+            except BrokerError as exc:
+                out.append({"symbol": sym, "qty": qty, "client_order_id": coid, "error": str(exc)[:200]})
+        return {"status": "ok" if all("error" not in o for o in out) else "partial", "orders": out}
 
 
 def get_broker():
