@@ -328,8 +328,8 @@ export function selectPrice(h: Position, d: HoldingDetailPayload): PriceView | n
 const CONF_NAMES = ['Signal', 'Risk room', 'Regime', 'Data'];
 const CONF_W = ['40%', '30%', '20%', '10%'];
 
-/** null until the insights step (M3) ledgers confidence for this holding. */
-export function selectConf(c: Ctx, h: Position, trips: RoundTrip[], history: number[]) {
+/** null until the insights step ledgers confidence for this holding. */
+export function selectConf(c: Ctx, h: Position, trips: RoundTrip[], history: number[], calib: HoldingDetailPayload['calibration'] = []) {
   const cv = confOf(h, c);
   if (!cv || !h.confidence) return null;
   const ex = exitOf(h);
@@ -347,6 +347,7 @@ export function selectConf(c: Ctx, h: Position, trips: RoundTrip[], history: num
   const name = { high: 'High', med: 'Medium', low: 'Low' }[cv.band];
   const live = inBand.length ? 'Live so far: ' + wins + ' of ' + inBand.length + '.' : 'Live: no round trips yet.';
   const hist = history.length ? history : [h.confidence.atEntry, cv.tot];
+  const oos = calib.find((b) => b.band === cv.band);
   return {
     tot: String(cv.tot), band: cv.band, bandL: cv.bandL, chip: cv.band === 'low' ? 'warn' : '',
     c0: String(h.confidence.atEntry),
@@ -354,7 +355,9 @@ export function selectConf(c: Ctx, h: Position, trips: RoundTrip[], history: num
     n: String(h.heldSessions),
     segs: cv.segs,
     subs: cv.c.map((v, i) => ({ n: CONF_NAMES[i], w: CONF_W[i], v: String(v), cls: v < 40 ? 'warn' : '', why: why[i] })),
-    cal: name + ' band historically: NN% of round trips profitable (OOS 2023–26) — computed in M3. ' + live,
+    cal: (oos?.wonRate != null
+      ? name + ' band in the out-of-sample test (2023–26): ' + Math.round(oos.wonRate * 100) + '% of holdings were in trades that ended in profit (' + oos.n.toLocaleString('en-US') + ' position-days). '
+      : name + ' band: out-of-sample calibration not computed yet. ') + live,
   };
 }
 

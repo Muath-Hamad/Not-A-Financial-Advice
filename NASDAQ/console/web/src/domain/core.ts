@@ -197,7 +197,7 @@ export function stopOf(h: Position): { stopK: string; stopP: number | null; dist
   return { stopK: trailing ? 'Trailing stop' : 'Initial stop', stopP, dist: (h.last - stopP) / h.atr };
 }
 
-export const STOPS_PENDING = 'Stop levels come from the insights step (milestone M3)';
+export const STOPS_PENDING = 'Stop levels come from the insights step, which runs in Cycle A';
 
 export function exitOf(h: Position): ExitView {
   const s = stopOf(h);
@@ -205,7 +205,7 @@ export function exitOf(h: Position): ExitView {
     return { ...s, k: 'Rank exit', p: h.rank != null ? 'rank ' + h.rank + ' > 30' : 'out of the top 30', d: 'triggered · sells at the open', cls: 'warn', near: true, full: 'Rank exit — momentum rank is past the exit threshold of 30; sell queued for the open' };
   }
   if (s.stopP == null || s.dist == null) {
-    return { ...s, k: 'Nearest exit', p: '—', d: 'awaiting insights (M3)', cls: 'muted', near: h.heldSessions >= 28, full: STOPS_PENDING + ' · time stop after 35 sessions (' + h.heldSessions + ' held)' };
+    return { ...s, k: 'Nearest exit', p: '—', d: 'awaiting insights', cls: 'muted', near: h.heldSessions >= 28, full: STOPS_PENDING + ' · time stop after 35 sessions (' + h.heldSessions + ' held)' };
   }
   return {
     ...s,
@@ -402,7 +402,7 @@ export function holdingRows(positions: Position[], intents: Intent[], c: Ctx, bo
       held: h.heldSessions + ' / 35', heldB: ((h.heldSessions / 35) * 100).toFixed(1), heldCls: h.heldSessions >= 28 ? 'warn' : '',
       exK: ex.k, exP: ex.p, exD: ex.d, exCls: ex.cls,
       c: cv ? String(cv.tot) : '—', band: cv ? cv.band : 'none', bandL: cv ? cv.bandL : 'Pending', segs: cv ? cv.segs : [],
-      cT: cv ? cv.title : 'Confidence is computed by the insights step (milestone M3) — not available yet',
+      cT: cv ? cv.title : 'Confidence comes from the insights step in Cycle A — not available yet',
       g: sv.g, gCls: sv.gCls, stat: sv.short,
       pend: pendL,
       pendS: po.length ? po[0].side + ' @ open' : locked ? 'Locked' : '',

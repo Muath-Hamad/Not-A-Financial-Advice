@@ -1,6 +1,7 @@
-// The prototype's state catalogue (docs/09c HANDOFF §5, canvas.json) for
-// the M0 screens. Controls, the confirm modal and the resume preflight
-// (M1) and Performance (M2) are added with their milestones.
+// The prototype's state catalogue (docs/09c HANDOFF §5, canvas.json): the M0
+// screens plus Controls, Audit (M1), Performance, Alerts (M2) and Agent (M3).
+// The confirm-modal and preflight frames are opened by clicks in
+// e2e/frames.spec.ts from the Controls stories.
 
 import type { Meta, StoryObj } from '@storybook/react';
 import { resetMockState, type MockState } from '@/mocks/handlers';
@@ -42,3 +43,20 @@ export const PhoneOverview: Story = { ...phone('/'), name: 'Phone · Overview' }
 export const PhoneHoldings: Story = { ...phone('/holdings'), name: 'Phone · Holdings' };
 export const PhoneDetail: Story = { ...phone('/holdings/ORKA'), name: 'Phone · ORKA detail' };
 export const PhoneOrders: Story = { ...phone('/orders/pending'), name: 'Phone · Orders pending' };
+
+export const ControlsRunning: Story = { ...desk('/controls'), name: 'Controls · running' };
+export const ControlsPaused: Story = { ...desk('/controls', { trading: 'paused' }), name: 'Controls · entries paused' };
+export const ControlsHeld: Story = { ...desk('/controls', { trading: 'held' }), name: 'Controls · night held' };
+export const ControlsHalted: Story = { ...desk('/controls', { trading: 'halted' }), name: 'Controls · halted' };
+export const ControlsStopped: Story = { ...desk('/controls', { trading: 'stopped' }), name: 'Controls · stopped' };
+export const ControlsFail: Story = { ...desk('/controls', { failApply: true }), name: 'Controls · next apply fails' };
+export const Audit: Story = { ...desk('/audit'), name: 'Audit log' };
+export const PerformanceEquity: Story = { ...desk('/performance'), name: 'Performance · equity & metrics' };
+export const PerformanceReturns: Story = { ...desk('/performance/returns'), name: 'Performance · monthly returns' };
+export const PerformanceAttribution: Story = { ...desk('/performance/attribution'), name: 'Performance · attribution' };
+export const PerformanceExecution: Story = { ...desk('/performance/execution'), name: 'Performance · execution quality' };
+export const PerformanceGhost: Story = { ...desk('/performance/execution', { env: 'ghost' }), name: 'Performance · execution in Ghost' };
+export const Alerts: Story = { ...desk('/alerts'), name: 'Alerts inbox' };
+export const Agent: Story = { ...desk('/agent'), name: 'Agent · parameters & calibration' };
+export const SignIn: Story = { ...desk('/', { signedOut: true }), name: 'Sign in' };
+export const PhoneControls: Story = { ...phone('/controls'), name: 'Phone · Controls' };

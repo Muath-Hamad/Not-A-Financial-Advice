@@ -156,6 +156,38 @@ export const TERMS = {
   stale: { title: 'Stale', plain: 'The numbers are older than they should be because a scheduled step failed. They are the last good values, not today’s.' },
   freshness: { title: 'Data age', plain: 'How old the panel’s data is. Amber when it is more than 1 trading day behind, red when more than 2.' },
 
+  // ───────── controls and sign-in ─────────
+  totp: { title: 'TOTP — authenticator code', plain: 'The 6-digit code from an authenticator app (Google Authenticator, 1Password, …). It changes every 30 seconds, so a stolen password alone is not enough to sign in.' },
+  stepUp: { title: 'Step-up check', plain: 'Even when signed in, every control action asks for a fresh authenticator code and a typed confirmation word, so nothing changes by accident.' },
+  impact: { title: 'Impact preview', plain: 'Before anything changes, the server works out exactly what the action would do (orders, files, cycles affected). If the state moves while you read it, you are shown the new preview.' },
+  effective: { title: 'Effective', plain: 'When the change actually takes hold: immediately, at the next 19:15 ET submit, or at the next Cycle A.' },
+  manualOrder: { title: 'Manual order', plain: 'An order you placed yourself (a trim or forced exit) rather than the agent. It waits in a queue and expires at 09:28 ET if not sent.' },
+  trim: { title: 'Trim', plain: 'Selling part of a holding (for example half) while keeping the rest.' },
+  forceExit: { title: 'Force exit', plain: 'Selling the whole holding at the next open and blocking the agent from buying it back.' },
+  flatten: { title: 'Flatten', plain: 'Selling every position at the next open, leaving the account all in cash.' },
+  preflight: { title: 'Preflight checklist', plain: 'The checks to tick before resuming trading after a stop: data gate passing, no open P1 alerts, broker reachable, and the cause understood.' },
+  dryRun: { title: 'Dry run', plain: 'The console checks and logs the action but does not write it to the ledger. Used while testing the console.' },
+  audit: { title: 'Audit log', plain: 'The permanent record of every control change: who, when, why and exactly what changed. Kept in git, so it cannot be quietly edited.' },
+  dispatch: { title: 'Workflow dispatch', plain: 'Asking GitHub to run one of the scheduled steps (Cycle A, Submit, Cycle B) right now instead of waiting for its time.' },
+  gateway: { title: 'Broker gateway', plain: 'A small separate service that holds the broker’s keys. The console asks it for the account and to cancel or flatten, but never sees the keys itself.' },
+
+  // ───────── performance and the agent ─────────
+  cagr: { title: 'CAGR — yearly growth rate', plain: 'The steady yearly growth that would turn the starting value into today’s value. It smooths out good and bad years.' },
+  totalReturn: { title: 'Total return', plain: 'How much the portfolio has gained or lost since the start, in percent.' },
+  volatility: { title: 'Volatility', plain: 'How much the value jumps around from day to day, scaled to a year. Higher means a bumpier ride.' },
+  sharpe: { title: 'Sharpe ratio', plain: 'Return earned per unit of bumpiness. Above 1 is good, above 2 is very good. Negative means it lost money.' },
+  sortino: { title: 'Sortino ratio', plain: 'Like Sharpe, but only counts the downward bumps — the ones that actually hurt.' },
+  calmar: { title: 'Calmar ratio', plain: 'Yearly growth divided by the worst drawdown. It asks: how much pain was needed for this gain?' },
+  excess: { title: 'Excess return (vs benchmark)', plain: 'How much better (+) or worse (−) the portfolio did than simply holding the NASDAQ Composite index.' },
+  attribution: { title: 'Attribution', plain: 'Breaking the result down to see where the profit or loss came from: which stocks, and which kind of exit.' },
+  expectancy: { title: 'Expectancy', plain: 'The average result per closed trade, wins and losses together. Positive means the trades make money on average.' },
+  holdingPeriod: { title: 'Holding period', plain: 'How many trading days a position was held from purchase to sale.' },
+  fillRate: { title: 'Fill rate', plain: 'The share of orders sent that actually traded at the open.' },
+  calibration: { title: 'Calibration', plain: 'Checking whether the confidence score means something: do “High” holdings really win more often than “Low” ones?', here: 'Measured on the out-of-sample test and, once there are enough trades, on the live record.' },
+  bounds: { title: 'Parameter bounds', plain: 'The fixed minimum and maximum each setting may take. adapt() can move a setting only inside its bounds.' },
+  journal: { title: 'Agent journal', plain: 'The agent’s daily diary: its market mood, how much it chose to invest, and why.' },
+  reviewPack: { title: 'Monthly review pack', plain: 'A one-page printable summary of the month: returns, trades, execution quality, compliance and control changes.' },
+
   // ───────── roadmap and phases ─────────
   phase: { title: 'Phase', plain: 'Stages from rehearsal to real money: Ghost → Paper → Evaluation → private build → Real money. Each has a gate to pass.' },
   gate: { title: 'Gate', plain: 'The conditions that must be met before moving to the next phase.' },

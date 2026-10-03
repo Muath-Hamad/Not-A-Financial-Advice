@@ -9,7 +9,12 @@ import { Orders } from '@/screens/Orders';
 import { Compliance } from '@/screens/Compliance';
 import { Health } from '@/screens/Health';
 import { Roadmap } from '@/screens/Roadmap';
-import { Later, More, Settings } from '@/screens/Misc';
+import { More, Settings } from '@/screens/Misc';
+import { Performance } from '@/screens/Performance';
+import { Controls } from '@/screens/Controls';
+import { Agent } from '@/screens/Agent';
+import { Alerts } from '@/screens/Alerts';
+import { Audit } from '@/screens/Audit';
 import { Glossary } from '@/screens/Glossary';
 
 // Mock-mode only, so MSW never ships in the production bundle's main chunk.
@@ -43,11 +48,11 @@ export function ConsoleApp({ client, height, theme, mock = false }: { client: Qu
             <Route path="glossary" element={<Glossary />} />
             <Route path="settings" element={<Settings />} />
             <Route path="more" element={<More />} />
-            <Route path="performance/*" element={<Later screen="performance" />} />
-            <Route path="controls" element={<Later screen="controls" />} />
-            <Route path="agent" element={<Later screen="agent" />} />
-            <Route path="alerts" element={<Later screen="alerts" />} />
-            <Route path="audit" element={<Later screen="audit" />} />
+            <Route path="performance/*" element={<Performance />} />
+            <Route path="controls" element={<Controls />} />
+            <Route path="agent" element={<Agent />} />
+            <Route path="alerts" element={<Alerts />} />
+            <Route path="audit" element={<Audit />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>

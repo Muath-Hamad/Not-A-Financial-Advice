@@ -478,5 +478,6 @@ export function holdingDetail(sc: Scenario, symbol: string): HoldingDetailPayloa
     confidenceHistory: hist.map((v) => +v.toFixed(1)),
     pricesNote: null,
     lots: [{ opened: h.entryDate, shares: h.shares, cost: h.avgCost }],
+    calibration: [{ band: 'high', n: 9353, wonRate: 0.6791 }, { band: 'med', n: 622, wonRate: 0.2299 }, { band: 'low', n: 6, wonRate: 0 }],
   };
 }

@@ -201,6 +201,8 @@ export interface AccountLeg {
 export interface HoldingsPayload {
   asof: string;
   positions: Position[];
+  /** Names the account holds that the Model does not (paper/live). */
+  accountOnly?: { symbol: string; shares: number; avgCost: number; last: number }[];
 }
 
 export interface Lot {
@@ -219,6 +221,8 @@ export interface HoldingDetailPayload {
   /** Why `prices` is empty, when it is. */
   pricesNote: string | null;
   lots: Lot[];
+  /** OOS share of trades won per confidence band ([] until live/calibration.py has run). */
+  calibration: { band: 'high' | 'med' | 'low'; n: number; wonRate: number | null }[];
 }
 
 export type IntentSource = 'agent' | 'forced' | 'manual';
@@ -427,4 +431,161 @@ export interface RoadmapPayload {
   phases: RoadmapPhase[];
   decisions: Decision[];
   tasks: Task[];
+}
+
+/* ───────── M1: auth and controls ───────── */
+
+export interface MePayload {
+  user: string;
+  role: Role;
+  csrf: string;
+  /** false when the server runs with CONSOLE_AUTH=off (development). */
+  auth: boolean;
+  totpAgeS: number | null;
+}
+
+export interface ControlsDoc {
+  version: number;
+  kill: boolean;
+  pause_entries: boolean;
+  excluded_symbols: string[];
+  gross_cap: number | null;
+  locked_symbols: string[];
+  manual_orders: { id: string; symbol: string; side: 'buy' | 'sell'; qty: number | null; fraction: number | null; reason: string; expires: string }[];
+  pause_adapt: boolean;
+  pause_adapt_since: string | null;
+  allow_manual_buys: boolean;
+}
+
+export interface ControlsPayload {
+  controls: ControlsDoc;
+  pending: { what: string; eff: string; sha: string; when: string }[];
+  /** git | github | dry */
+  write: string;
+  dispatch: boolean;
+  gateway: boolean;
+  halt: { halted?: boolean; since?: string; reason?: string; diffs?: { symbol: string; expected: number; actual: number }[] } | null;
+  heldNight: boolean;
+  exposure: number;
+  drawdown: number;
+  limits: Record<string, number | null>;
+}
+
+export interface OrderLine {
+  side: 'buy' | 'sell';
+  sideL: string;
+  s: string;
+  q: string;
+  v: string;
+  tag: string;
+}
+
+export interface Preview {
+  action: string;
+  title: string;
+  sub: string;
+  danger: boolean;
+  verb: string;
+  eff: string;
+  effS: string;
+  rows: { k: string; a: string; b: string }[];
+  added: OrderLine[];
+  blocked: OrderLine[];
+  canceled: OrderLine[];
+  proceeds: string;
+  pnl: string;
+  drift: string;
+  fid: string;
+  word: string | null;
+  errors: string[];
+  pending: string;
+  steps: string[];
+  previewHash: string;
+}
+
+export interface ApplyResult {
+  applied: boolean;
+  steps: { l: string; st: 'ok' | 'fail' | 'skip' }[];
+  sha: string | null;
+  actionId: string;
+  title: string;
+  eff: string;
+  pending: string;
+}
+
+export interface PreflightPayload {
+  checks: { id: string; l: string; s: 'pass' | 'fail' | 'man'; d: string; note?: boolean; fix?: boolean; pass: boolean }[];
+  ok: boolean;
+  n: number;
+}
+
+export interface AuditRow {
+  t: string;
+  at: string;
+  actor: string;
+  act: string;
+  ba: string;
+  reason: string;
+  eff: string;
+  sha: string;
+  res: string;
+}
+
+export interface AuditPayload {
+  rows: AuditRow[];
+  logins: { at: string; user: string; event: string; detail: string }[];
+}
+
+/* ───────── M2/M3: performance and agent ───────── */
+
+export interface MetricRow {
+  key: string;
+  label: string;
+  note: string;
+  unit: 'pct' | 'ratio' | 'count';
+  model: number | null;
+  account: number | null;
+  bench: number | null;
+  ref: number | null;
+}
+
+export interface PerformancePayload {
+  since: string;
+  sessions: number;
+  metrics: MetricRow[];
+  monthly: { label: string; live: boolean; months: (number | null)[]; year: number }[];
+  periods: Record<'today' | 'wtd' | 'mtd' | 'all', { pnl: number; pct: number }>;
+  byHolding: { label: string; value: number }[];
+  bySector: { label: string; value: number }[];
+  gap: { label: string; value: number }[] | null;
+  execution: { fills: { date: string; symbol: string; side: string; bps: number }[]; avgBps: number | null; outliers: number; missed: number; trackingError: { month: string; value: number }[] } | null;
+  dividends: { gross: number; withholding: number };
+  reference: { sharpe: number | null; mdd: number | null; cagr: number | null; total: number | null; calmar: number | null; trades: number | null; window: string[] | null };
+}
+
+export interface CalibrationBand {
+  band: 'high' | 'med' | 'low';
+  n: number;
+  hit_rate: number | null;
+  avg_return: number | null;
+  trade_won_rate?: number | null;
+}
+
+export interface AgentPayload {
+  handle: string;
+  freezeCommit: string | null;
+  params: { k: string; v: number | null; lo: number; hi: number; frozen: number | null }[];
+  regime: { score?: number; ixic_vs_sma200?: number; ixic_vs_sma50?: number; breadth?: number; mood?: string };
+  mood: string | null;
+  sentiment: { date: string; s: number }[];
+  journal: { date: string; mood: string; sentiment: number; note: string }[];
+  adaptations: { date: string; changes: Record<string, number>; note: string; live: boolean }[];
+  oosAdaptations: { date: string; changes: Record<string, number>; note: string }[];
+  nextAdapt: string | null;
+  adaptEvery: number;
+  sessions: number;
+  adaptPaused: boolean;
+  adaptPausedSince: string | null;
+  calibration: { window: string[]; horizon_sessions: number; position_days: number; round_trips: number; method: string; bands: CalibrationBand[] } | null;
+  liveBands: { band: 'high' | 'med' | 'low'; n: number; hit: number | null; ret: number | null }[];
 }

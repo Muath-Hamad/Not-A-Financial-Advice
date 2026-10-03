@@ -529,6 +529,15 @@ def _price_series(c: Ctx, sym: str) -> tuple[list[dict], str | None]:
                 "The chart fills once the insights step (M3) ledgers them, or on the Unraid box where Cycle A's data is local.")
 
 
+def calibration_bands(settings) -> list[dict]:
+    """OOS share of trades won per confidence band (live/calibration.py output); [] when not computed."""
+    try:
+        d = json.loads((settings.pkg / "out" / "confidence_calibration.json").read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    return [{"band": b["band"], "n": b["n"], "wonRate": b.get("trade_won_rate")} for b in d.get("bands", [])]
+
+
 def holding_detail(c: Ctx, sym: str) -> dict | None:
     if sym not in c.positions:
         return None
@@ -539,7 +548,8 @@ def holding_detail(c: Ctx, sym: str) -> dict | None:
         prices, note = _price_series(c, sym)
     start, _ = _holding_start(c, sym)
     hist = [v[sym].get("overall") for d, v in c.insight_history() if sym in v and (not start or d >= start) and v[sym].get("overall") is not None]
-    return {"symbol": sym, "prices": prices, "confidenceHistory": hist, "lots": lots(c, sym), "pricesNote": note}
+    return {"symbol": sym, "prices": prices, "confidenceHistory": hist, "lots": lots(c, sym), "pricesNote": note,
+            "calibration": calibration_bands(c.settings)}
 
 
 # ───────── orders ─────────

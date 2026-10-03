@@ -4,6 +4,7 @@ not installed (the harness test job); the console workflow installs it."""
 from __future__ import annotations
 
 import datetime as dt
+import json
 
 import pytest
 
@@ -46,6 +47,14 @@ def test_holding_detail_and_unknown_symbol(client):
     d = client.get("/api/holdings/aaa").json()
     assert d["symbol"] == "AAA" and d["prices"] == [] and "not stored in the ledger" in d["pricesNote"]
     assert client.get("/api/holdings/NOPE").status_code == 404
+
+
+def test_holding_detail_carries_the_oos_calibration(client, settings):
+    assert client.get("/api/holdings/AAA").json()["calibration"] == []
+    out = settings.pkg / "out"
+    out.mkdir(exist_ok=True)
+    (out / "confidence_calibration.json").write_text(json.dumps({"bands": [{"band": "high", "n": 10, "hit_rate": 0.5, "avg_return": 0.01, "trade_won_rate": 0.7}]}))
+    assert client.get("/api/holdings/AAA").json()["calibration"] == [{"band": "high", "n": 10, "wonRate": 0.7}]
 
 
 def test_acknowledging_an_alert_persists(client):

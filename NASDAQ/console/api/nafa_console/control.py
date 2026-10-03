@@ -477,7 +477,7 @@ def apply(c: P.Ctx, writer, dispatcher: Dispatcher, gateway, action: str, p: dic
         try:
             if files:
                 sha = writer.commit(files, _message(d, actor, reason, category, action_id, d.eff), base)
-                steps.append({"l": f"Committed {sha[:7]} to the ledger", "st": "ok"})
+                steps.append({"l": "Commit message and file contents built (dry run)" if writer.kind == "dry" else f"Committed {sha[:7]} to the ledger", "st": "ok"})
                 steps.append({"l": writer.push_label(), "st": "ok"})
             break
         except Conflict:

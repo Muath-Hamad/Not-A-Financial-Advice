@@ -49,7 +49,7 @@ export function HoldingDrawer({ sym }: { sym: string }) {
   }
   const fr = selectFresh(ctx);
   const sh = selectShariaCard(ctx, h);
-  const cf = selectConf(ctx, h, rt.data?.trips ?? [], detail.data?.confidenceHistory ?? []);
+  const cf = selectConf(ctx, h, rt.data?.trips ?? [], detail.data?.confidenceHistory ?? [], detail.data?.calibration ?? []);
   const price = detail.data ? selectPrice(h, detail.data) : null;
   const owner = ctx.role === 'owner';
   const acct = ctx.env !== 'ghost';

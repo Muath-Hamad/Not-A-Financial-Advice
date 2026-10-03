@@ -12,10 +12,12 @@ import { Empty, PageHeader, Sk } from '@/components/ui';
 import { useConsole, useCtx } from './console';
 import { HoldingDrawer } from '@/screens/HoldingDrawer';
 import { Palette } from './Palette';
+import { ConfirmModal, PreflightModal } from './ConfirmModal';
+import { Login } from './Login';
 import { Gloss, T } from '@/glossary/Term';
 
 export function Shell({ height = '100vh', overlay }: { height?: string; overlay?: ReactNode }) {
-  const { ctx, theme, apiDown, toast, palette, setPalette, drawer } = useConsole();
+  const { ctx, theme, apiDown, toast, palette, setPalette, drawer, needLogin, modal, preflightOpen } = useConsole();
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -28,6 +30,7 @@ export function Shell({ height = '100vh', overlay }: { height?: string; overlay?
     return () => window.removeEventListener('keydown', onKey);
   }, [palette, setPalette]);
 
+  if (needLogin) return <Login theme={theme} />;
   return (
     <div className={cx('nafa app', ctx?.env === 'live' && 'is-live')} data-theme={theme} style={{ height, minHeight: height === '100vh' ? 640 : 0 }}>
       {ctx ? <TopBar /> : <BootTopBar />}
@@ -50,6 +53,8 @@ export function Shell({ height = '100vh', overlay }: { height?: string; overlay?
       {ctx && <TabBar />}
       {ctx && drawer && <HoldingDrawer sym={drawer} />}
       {palette && ctx && <Palette />}
+      {modal && ctx && <ConfirmModal key={JSON.stringify(modal)} />}
+      {preflightOpen && ctx && <PreflightModal />}
       {overlay}
       {toast && <div className="toast" role="status"><Icon name="check" /><span>{toast}</span></div>}
     </div>

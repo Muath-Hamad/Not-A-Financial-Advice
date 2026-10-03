@@ -3,15 +3,30 @@
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
-import { useAlerts, useHoldings, useOverview, usePending } from '@/api/client';
-import type { Alert, Intent as OrderIntent, OverviewPayload, Position } from '@/api/types';
+import { ApiError, setCsrf, useAlerts, useHoldings, useMe, useOverview, usePending } from '@/api/client';
+import type { Alert, Intent as OrderIntent, MePayload, OverviewPayload, Position } from '@/api/types';
 import { ctxFrom, type Ctx } from '@/domain/ctx';
 import { sortAlerts } from '@/domain/core';
-import type { Intent, Screen } from '@/domain/actions';
+import type { ControlAction, Intent, Screen } from '@/domain/actions';
 
 export type Theme = 'dark' | 'light';
 
+/** The control confirm modal: one action, its parameters (symbol, pct, cap, cause, preflight ticks). */
+export interface ModalState {
+  action: ControlAction;
+  params: Record<string, unknown>;
+}
+
 interface ConsoleValue {
+  /** The signed-in user; null while unknown or signed out. */
+  me: MePayload | null;
+  /** The server asked for a sign-in (401). */
+  needLogin: boolean;
+  modal: ModalState | null;
+  openModal: (action: ControlAction, params?: Record<string, unknown>) => void;
+  closeModal: () => void;
+  preflightOpen: boolean;
+  setPreflightOpen: (on: boolean) => void;
   /** null until /api/overview has answered once. */
   ctx: Ctx | null;
   overview: OverviewPayload | undefined;
@@ -61,10 +76,16 @@ function readTheme(fallback: Theme): Theme {
 
 /** `initialTheme` forces a theme (stories); without it the viewer's last choice is restored. */
 export function ConsoleProvider({ children, initialTheme }: { children: ReactNode; initialTheme?: Theme }) {
-  const ov = useOverview();
-  const hq = useHoldings();
-  const pq = usePending();
-  const aq = useAlerts();
+  const meq = useMe();
+  const signedIn = !!meq.data;
+  const ov = useOverview(signedIn);
+  const hq = useHoldings(signedIn);
+  const pq = usePending(signedIn);
+  const aq = useAlerts(signedIn);
+  const needLogin = meq.error instanceof ApiError && meq.error.status === 401;
+  useEffect(() => { if (meq.data) setCsrf(meq.data.csrf); }, [meq.data]);
+  const [modal, setModal] = useState<ModalState | null>(null);
+  const [preflightOpen, setPreflightOpen] = useState(false);
   const loc = useLocation();
   const navigate = useNavigate();
   const [search, setSearch] = useSearchParams();
@@ -131,20 +152,31 @@ export function ConsoleProvider({ children, initialTheme }: { children: ReactNod
       case 'drawer': return openDrawer(i.symbol);
       case 'toast': return showToast(i.text);
       case 'control':
+        if (ctx && ctx.role !== 'owner') return showToast('Read-only viewer — controls are owner-only');
+        setPalette(false);
+        return setModal({ action: i.action, params: { ...(i.symbol ? (i.action === 'rerun' ? { step: i.symbol } : { symbol: i.symbol }) : {}), ...(i.params ?? {}) } });
       case 'preflight':
         if (ctx && ctx.role !== 'owner') return showToast('Read-only viewer — controls are owner-only');
-        return showToast('Read-only build (M0) — controls arrive with milestone M1');
+        setPalette(false);
+        return setPreflightOpen(true);
     }
   }, [go, openDrawer, showToast, ctx]);
 
   const value: ConsoleValue = {
+    me: meq.data ?? null,
+    needLogin,
+    modal,
+    openModal: (action, params = {}) => setModal({ action, params }),
+    closeModal: () => setModal(null),
+    preflightOpen,
+    setPreflightOpen,
     ctx,
     overview: ov.data,
     positions: hq.data?.positions ?? [],
     intents: pq.data?.intents ?? [],
     nextOpen: pq.data?.nextOpen ?? ov.data?.asof ?? '',
     alerts,
-    apiDown: ov.isError && !ov.data,
+    apiDown: (ov.isError && !ov.data) || (meq.isError && !needLogin),
     screen,
     theme, setTheme,
     toast, showToast,

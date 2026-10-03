@@ -1,5 +1,6 @@
 import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
-import { render, screen, within } from '@testing-library/react';
+import { render, screen, waitFor, within } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { setupServer } from 'msw/node';
 import { MemoryRouter } from 'react-router-dom';
 import { handlers, resetMockState, type MockState } from '@/mocks/handlers';
@@ -104,5 +105,87 @@ describe('console M0 screens', () => {
   it('says so when the console API is down', async () => {
     mount('/', { apiDown: true });
     expect(await screen.findByText('Console API unreachable.', {}, { timeout: 4000 })).toBeInTheDocument();
+  });
+});
+
+describe('console M1–M3 screens', () => {
+  it('runs STOP through impact → reason → verify → result and reaches the audit log', async () => {
+    const user = userEvent.setup();
+    mount('/controls');
+    await user.click(await screen.findByRole('button', { name: 'STOP TRADING' }));
+    const dlg = await screen.findByRole('dialog', { name: 'STOP TRADING' });
+    expect(await within(dlg).findByText('Orders canceled · 3')).toBeInTheDocument();
+    await user.click(within(dlg).getByRole('button', { name: 'Continue' }));
+    await user.type(within(dlg).getByLabelText(/Reason/), 'Broker anomaly: unexpected open orders');
+    await user.click(within(dlg).getByRole('button', { name: 'Continue' }));
+    const go = within(dlg).getByRole('button', { name: 'STOP TRADING' });
+    expect(go).toBeDisabled();
+    await user.type(within(dlg).getByLabelText(/Authenticator code/), '123456');
+    await user.type(within(dlg).getByLabelText(/Type/), 'STOP');
+    await user.click(go);
+    expect(await within(dlg).findByText('Applied', {}, { timeout: 3000 })).toBeInTheDocument();
+    await user.click(within(dlg).getByRole('button', { name: 'Done' }));
+    expect(await screen.findByText('STOPPED')).toBeInTheDocument();
+  });
+
+  it('says "Not applied" when a step fails', async () => {
+    const user = userEvent.setup();
+    mount('/controls', { failApply: true });
+    await user.click(await screen.findByRole('button', { name: 'Pause entries' }));
+    const dlg = await screen.findByRole('dialog', { name: 'Pause entries' });
+    await user.click(await within(dlg).findByRole('button', { name: 'Continue' }));
+    await user.type(within(dlg).getByLabelText(/Reason/), 'FOMC tomorrow; no new risk');
+    await user.click(within(dlg).getByRole('button', { name: 'Continue' }));
+    await user.type(within(dlg).getByLabelText(/Authenticator code/), '123456');
+    await user.click(within(dlg).getByRole('button', { name: 'Pause entries' }));
+    expect(await within(dlg).findByText('Not applied', {}, { timeout: 3000 })).toBeInTheDocument();
+    expect(within(dlg).getByRole('button', { name: 'Retry' })).toBeInTheDocument();
+  });
+
+  it('gates resume on the preflight checklist', async () => {
+    const user = userEvent.setup();
+    mount('/controls', { trading: 'stopped' });
+    await user.click(await screen.findByRole('button', { name: 'Resume trading…' }));
+    const dlg = await screen.findByRole('dialog', { name: 'Resume preflight checklist' });
+    const next = await within(dlg).findByRole('button', { name: 'Continue to confirm' });
+    expect(next).toBeDisabled();
+    await user.click(await within(dlg).findByRole('button', { name: /^Tick: Acknowledge/ }));
+    await waitFor(() => expect(next).toBeEnabled());
+  });
+
+  it('asks for a sign-in when the session is missing', async () => {
+    mount('/', { signedOut: true });
+    expect(await screen.findByRole('button', { name: 'Sign in' })).toBeDisabled();
+    expect(screen.getByLabelText('Username')).toBeInTheDocument();
+  });
+
+  it('renders Performance metrics against the OOS reference and the execution tab', async () => {
+    mount('/performance');
+    expect(await screen.findByText(fullText('Sharpe'))).toBeInTheDocument();
+    expect(screen.getByText('1.22')).toBeInTheDocument();
+    mount('/performance/execution');
+    expect(await screen.findByText('3.1 bps')).toBeInTheDocument();
+  });
+
+  it('shows Agent calibration from the OOS record', async () => {
+    mount('/agent');
+    expect(await screen.findByText('68%')).toBeInTheDocument();
+    expect(screen.getByText('EXP_MAX')).toBeInTheDocument();
+  });
+
+  it('resolves an alert with a note', async () => {
+    const user = userEvent.setup();
+    mount('/alerts');
+    const first = (await screen.findAllByRole('button', { name: 'Resolve…' }))[0];
+    await user.click(first);
+    await user.type(screen.getByLabelText('Resolution note'), 'Known and fixed');
+    await user.click(screen.getByRole('button', { name: 'Resolve' }));
+    expect(await screen.findByText(/resolved$/)).toBeInTheDocument();
+  });
+
+  it('lists control changes in the audit log', async () => {
+    mount('/audit');
+    expect(await screen.findByText('Universe correction')).toBeInTheDocument();
+    expect(screen.getByText('Sign-ins')).toBeInTheDocument();
   });
 });

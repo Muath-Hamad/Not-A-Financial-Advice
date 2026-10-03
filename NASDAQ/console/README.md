@@ -10,15 +10,17 @@ Design documents:
 
 | Path | What | Status |
 |---|---|---|
-| `web/` | React + TypeScript + Vite UI (Tailwind, TanStack Query/Table, ECharts) | **M0 done**: Overview, Holdings with detail, Orders, Compliance, Health, Roadmap, Glossary |
-| `api/` | FastAPI read API, ledger indexer, SQLite (acknowledgements), serves the UI | **M0 done**: every read endpoint, from the real ledger |
+| `web/` | React + TypeScript + Vite UI (Tailwind, TanStack Query/Table, ECharts) | **M0–M3 done**: Overview, Holdings, Orders, Compliance, Health, Roadmap, Glossary, Controls with the 4-step confirm and resume preflight, Audit, Performance, Alerts, Agent, sign-in |
+| `api/` | FastAPI API, ledger indexer, SQLite (alerts, auth, control events), control service, broker gateway | **M0–M3 done**: reads from the real ledger, sign-in with TOTP, preview/apply, audit, account book, ntfy, analytics |
 | `Dockerfile`, `docker-entrypoint.sh` | The `nafa-console` image: Node build stage, then Python | written, not yet test-built |
 | `unraid/nafa-console.xml` | Unraid Docker template | written |
 
 The console is separate from the executor:
 
-* It never holds broker keys in M0.
-* It only reads the ledger.
+* It never holds broker keys: the separate gateway does.
+* It changes trading only through `live/controls.json` commits (and the
+  gateway's cancel/flatten commands); the harness re-reads controls at every
+  step.
 * If it goes down, trading is unaffected (docs/08 §3, §11).
 
 ## Run it locally
@@ -26,7 +28,7 @@ The console is separate from the executor:
 ```sh
 cd web && npm install && npm run build          # the UI
 cd ../api && python -m venv .venv && .venv/Scripts/pip install -r requirements-dev.txt
-.venv/Scripts/python -m uvicorn nafa_console.app:app --port 8080
+CONSOLE_AUTH=off .venv/Scripts/python -m uvicorn nafa_console.app:app --port 8080   # or add a user first (api/README.md)
 # http://localhost:8080 shows the real ledger of this checkout
 ```
 
@@ -55,14 +57,16 @@ nav lists them all.
 
 ## Milestones (docs/08 §12)
 
-* **M0, read-only:**
-  * UI and API: done.
-  * Unraid image: written; test-build it on the box.
-* **M3, insights:** this step fills confidence ratings, stop levels and live
-  prices (`live/ledger/insights/<asof>.json`, see `api/README.md`). Until
-  then the console shows them as pending.
-* **M1, controls:** the Controls screen, the 4-step confirm modal, the
-  resume preflight, login with TOTP, the Audit log, and the harness changes
-  in docs/08 §7.2.
-* **M2, account:** the paper broker gateway, the Account book, fills and
-  slippage, drift, the Alerts inbox with ntfy, and Performance.
+* **M0, read-only:** done. The Unraid image is written; test-build it on
+  the box.
+* **M1, controls:** done. Controls screen, the 4-step confirm modal
+  (impact → reason → TOTP → result), resume preflight, sign-in with TOTP,
+  Audit log, and the harness changes in docs/08 §7.2 (`controls.json` v2).
+  Control writes default to a dry run; set `CONSOLE_WRITE=git` on the box.
+* **M2, account:** done. Paper broker gateway, Account book, fills and
+  slippage, drift, `live-control.yml`, the Alerts inbox with ntfy, and
+  Performance.
+* **M3, insights:** done. `live/insights.py` runs in Cycle A and writes
+  confidence, stops and regime; `live/calibration.py` writes the OOS
+  calibration; Agent screen; monthly review pack. Confidence shows as
+  pending until the first successful Cycle A after this change.

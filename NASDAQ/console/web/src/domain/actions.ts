@@ -13,11 +13,11 @@ export type ControlAction =
 export type Intent =
   | { kind: 'nav'; screen: Screen; search?: Record<string, string> }
   | { kind: 'drawer'; symbol: string }
-  | { kind: 'control'; action: ControlAction; symbol?: string }
+  | { kind: 'control'; action: ControlAction; symbol?: string; params?: Record<string, unknown> }
   | { kind: 'preflight' }
   | { kind: 'toast'; text: string };
 
 export const nav = (screen: Screen, search?: Record<string, string>): Intent => ({ kind: 'nav', screen, search });
 export const drawer = (symbol: string): Intent => ({ kind: 'drawer', symbol });
-export const control = (action: ControlAction, symbol?: string): Intent => ({ kind: 'control', action, symbol });
+export const control = (action: ControlAction, symbol?: string, params?: Record<string, unknown>): Intent => ({ kind: 'control', action, symbol, params });
 export const toast = (text: string): Intent => ({ kind: 'toast', text });

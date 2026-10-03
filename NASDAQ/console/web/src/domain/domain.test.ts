@@ -24,7 +24,7 @@ describe('not-yet-available data', () => {
     const { c, s, pos } = setup();
     const bare = pos.map((h) => ({ ...h, confidence: null, initialStop: null, trailingStop: null, atr: null, rank: null, dayPct: null }));
     expect(confOf(bare[0], c)).toBeNull();
-    expect(exitOf(bare[0])).toMatchObject({ p: '—', d: 'awaiting insights (M3)' });
+    expect(exitOf(bare[0])).toMatchObject({ p: '—', d: 'awaiting insights' });
     const v = selectHoldings(c, bare, s.pending.intents, 'model', NO_FILTERS, { realized: true, held: true, pending: true }, { cls: '', l: '' });
     expect(v.rows[0]).toMatchObject({ c: '—', band: 'none', day: '' });
     expect(v.tC).toBe('—');

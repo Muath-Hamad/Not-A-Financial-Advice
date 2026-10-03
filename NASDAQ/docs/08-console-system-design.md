@@ -462,6 +462,11 @@ changed in between, the server returns `409` with a fresh preview.
 | **M4 Private box** | Gateway moves into `nafa-live`; ledger repository bind mount; burn-in views (private vs public twin, U6) | Jan 2027 (with U2–U7) |
 | **M5 Real money** | Live-mode hardening: notional caps shown, pilot capital (D4), purification and zakat from licensed data (R3), withholding | Apr 2027 |
 
+**Status, 3 Oct 2026:** M0–M3 are built and tested (`console/`, the harness
+changes in §7.2, `live/insights.py`, `live/calibration.py`). Still to do on
+the box: test-build the image, create the owner user, set
+`CONSOLE_WRITE=git`, and configure the gateway and ntfy before paper start.
+
 ## 13. Open questions for the owner
 
 1. Viewer accounts: anyone besides you (for example a Sharia reviewer with

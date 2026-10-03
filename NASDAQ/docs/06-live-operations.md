@@ -126,6 +126,15 @@ smoke/…                    same layout, written by push-triggered smoke runs
   (harness-level; the twin is never edited). An excluded name cannot be
   bought, and if it is held it is sold in full at the next open (a forced
   exit). Sales are never blocked.
+* **From the console (docs/08 §7):** every change above, plus locks, trims,
+  pausing `adapt()`, releases, re-runs and clearing a halt, can be made from
+  the Operations Console's Controls screen. It writes the same
+  `controls.json` (schema v2, `live/controls_schema.py`: `locked_symbols`,
+  `manual_orders`, `pause_adapt`, `allow_manual_buys`; a missing key means
+  off) with a structured commit message, so hand edits and console edits
+  share one audit trail. The submit step re-reads `controls.json` before
+  sending, and `live-control.yml` runs the immediate commands (cancel all,
+  flatten), which are recorded in `ledger/commands/`.
 * **Release a held night:** approval mode (`APPROVAL_MODE=true`) and
   portfolio-level guardrails hold the night. Read `orders/<date>.json` and
   `cycles/<date>-S.json`, then run the `live-submit` workflow manually

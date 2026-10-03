@@ -98,7 +98,7 @@ export function Conf({ c, band, bandL, segs, title, bar = true, label = true }: 
 }) {
   if (band === 'none') {
     return (
-      <span className="conf" title={title ?? 'Confidence is computed by the insights step (milestone M3)'}>
+      <span className="conf" title={title ?? 'Pending — confidence comes from the insights step, which runs in Cycle A'}>
         <span className="conf-n muted">—</span>
         {label && <span className="conf-b muted">Pending</span>}
       </span>
