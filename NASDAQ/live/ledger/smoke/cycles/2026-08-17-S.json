@@ -1,0 +1,114 @@
+{
+ "cycle": "S",
+ "asof": "2026-08-17",
+ "mode": "ghost",
+ "ts_utc": "2026-10-03T02:46:50+00:00",
+ "smoke": true,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 26874.26,
+  "equity": 115811.32
+ },
+ "positions_before": {
+  "SYRE": 115,
+  "RVMD": 80,
+  "TVTX": 50,
+  "DNTH": 81,
+  "JAZZ": 36,
+  "APGE": 23,
+  "DFTX": 148,
+  "GSAT": 61,
+  "GH": 56,
+  "CRNX": 29,
+  "ROKU": 59,
+  "ORKA": 25
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "APGE",
+    "side": "sell",
+    "qty": 23,
+    "client_order_id": "nafa-2026-08-17-APGE-sell-5343efdc",
+    "forced": true
+   },
+   {
+    "code": "CRNX",
+    "side": "sell",
+    "qty": 29,
+    "client_order_id": "nafa-2026-08-17-CRNX-sell-f2b51a32",
+    "forced": true
+   },
+   {
+    "code": "DFTX",
+    "side": "sell",
+    "qty": 148,
+    "client_order_id": "nafa-2026-08-17-DFTX-sell-6e8a1227",
+    "forced": true
+   },
+   {
+    "code": "DNTH",
+    "side": "sell",
+    "qty": 81,
+    "client_order_id": "nafa-2026-08-17-DNTH-sell-9e832043",
+    "forced": true
+   }
+  ],
+  "skipped": [
+   {
+    "code": "ERAS",
+    "side": "buy",
+    "client_order_id": "nafa-2026-08-17-ERAS-buy-8d55995d",
+    "reason": "no close"
+   }
+  ],
+  "adjusted": [],
+  "cash_left_estimate": 48418.94
+ },
+ "submissions": [
+  {
+   "code": "APGE",
+   "side": "sell",
+   "qty": 23,
+   "client_order_id": "nafa-2026-08-17-APGE-sell-5343efdc",
+   "forced": true,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "CRNX",
+   "side": "sell",
+   "qty": 29,
+   "client_order_id": "nafa-2026-08-17-CRNX-sell-f2b51a32",
+   "forced": true,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "DFTX",
+   "side": "sell",
+   "qty": 148,
+   "client_order_id": "nafa-2026-08-17-DFTX-sell-6e8a1227",
+   "forced": true,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "DNTH",
+   "side": "sell",
+   "qty": 81,
+   "client_order_id": "nafa-2026-08-17-DNTH-sell-9e832043",
+   "forced": true,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
