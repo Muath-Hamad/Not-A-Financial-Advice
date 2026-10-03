@@ -42,8 +42,9 @@ DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 def normalize(raw: dict | None) -> dict:
     """Defaults filled in; unknown keys (such as `note`) kept as they are."""
-    raw = dict(raw or {})
-    out = {**DEFAULTS, **raw}
+    out = dict(raw or {})            # keep the file's own key order (clean diffs)
+    for k, v in DEFAULTS.items():
+        out.setdefault(k, v)
     for k in ("excluded_symbols", "locked_symbols", "manual_orders"):
         out[k] = list(out.get(k) or [])
     return out

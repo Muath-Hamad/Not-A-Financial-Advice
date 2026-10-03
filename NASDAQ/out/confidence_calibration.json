@@ -1,0 +1,39 @@
+{
+ "agent": "trend",
+ "window": [
+  "2023-01-03",
+  "2026-08-04"
+ ],
+ "horizon_sessions": 20,
+ "position_days": 9981,
+ "round_trips": 403,
+ "entry_bands": {
+  "high": 395,
+  "med": 8,
+  "low": 0
+ },
+ "method": "every held position on every out-of-sample session scored with the insights formula (frozen scoring, the parameters in force that day, data = 100); outcome = the position's return over the next 20 sessions (or to its exit), and whether the whole trade ended in profit",
+ "bands": [
+  {
+   "band": "high",
+   "n": 9353,
+   "hit_rate": 0.4974,
+   "avg_return": 0.0307,
+   "trade_won_rate": 0.6791
+  },
+  {
+   "band": "med",
+   "n": 622,
+   "hit_rate": 0.455,
+   "avg_return": 0.0369,
+   "trade_won_rate": 0.2299
+  },
+  {
+   "band": "low",
+   "n": 6,
+   "hit_rate": 0.6667,
+   "avg_return": -0.0002,
+   "trade_won_rate": 0.0
+  }
+ ]
+}

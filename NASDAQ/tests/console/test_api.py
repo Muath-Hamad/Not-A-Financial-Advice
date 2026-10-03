@@ -20,7 +20,7 @@ NOW = dt.datetime(2026, 10, 1, 18, 0, tzinfo=ET)
 
 @pytest.fixture
 def client(settings):
-    app = create_app(settings, start_indexer=False, now=lambda: NOW)
+    app = create_app(settings, start_indexer=False, now=lambda: NOW, auth_enabled=False)
     with TestClient(app) as c:
         yield c
 

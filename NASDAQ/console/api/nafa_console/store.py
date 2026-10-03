@@ -18,6 +18,24 @@ CREATE TABLE IF NOT EXISTS alert_state (
   actor    TEXT NOT NULL,
   at_utc   TEXT NOT NULL
 );
+CREATE TABLE IF NOT EXISTS control_event (
+  id        TEXT PRIMARY KEY,
+  at_utc    TEXT NOT NULL,
+  actor     TEXT NOT NULL,
+  action    TEXT NOT NULL,
+  params    TEXT NOT NULL,
+  reason    TEXT NOT NULL,
+  category  TEXT NOT NULL,
+  effective TEXT NOT NULL,
+  before_after TEXT NOT NULL,
+  applied   INTEGER NOT NULL,
+  sha       TEXT,
+  steps     TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS pushed_alert (
+  alert_id TEXT PRIMARY KEY,
+  at_utc   TEXT NOT NULL
+);
 CREATE TABLE IF NOT EXISTS indexer_run (
   id        INTEGER PRIMARY KEY AUTOINCREMENT,
   at_utc    TEXT NOT NULL,
@@ -42,6 +60,8 @@ class Store:
         self._db.execute("PRAGMA journal_mode=WAL")
         self._db.executescript(SCHEMA)
         self._db.commit()
+        from .auth import Auth
+        self.auth = Auth(self._db, self._lock)
 
     def alert_states(self) -> dict[str, sqlite3.Row]:
         with self._lock:
@@ -56,6 +76,29 @@ class Store:
                 "actor=excluded.actor, at_utc=excluded.at_utc",
                 (alert_id, status, note, actor, utcnow()))
             self._db.commit()
+
+    def record_control(self, ev: dict) -> None:
+        import json as _j
+        with self._lock:
+            self._db.execute(
+                "INSERT OR REPLACE INTO control_event(id, at_utc, actor, action, params, reason, category, effective, before_after, applied, sha, steps) "
+                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+                (ev["id"], ev["at"], ev["actor"], ev["action"], _j.dumps(ev.get("params") or {}), ev["reason"], ev.get("category") or "",
+                 ev.get("effective") or "", ev.get("before_after") or "", int(bool(ev["applied"])), ev.get("sha"), _j.dumps(ev.get("steps") or [])))
+            self._db.commit()
+
+    def control_events(self, limit: int = 200) -> list[dict]:
+        import json as _j
+        with self._lock:
+            rows = self._db.execute("SELECT * FROM control_event ORDER BY at_utc DESC LIMIT ?", (limit,)).fetchall()
+        return [{**dict(r), "params": _j.loads(r["params"]), "steps": _j.loads(r["steps"])} for r in rows]
+
+    def mark_pushed(self, alert_id: str) -> bool:
+        """True the first time an alert is pushed (dedupe for ntfy)."""
+        with self._lock:
+            cur = self._db.execute("INSERT OR IGNORE INTO pushed_alert(alert_id, at_utc) VALUES (?,?)", (alert_id, utcnow()))
+            self._db.commit()
+            return cur.rowcount == 1
 
     def record_index(self, ok: bool, commit: str | None, changed: bool, error: str | None = None) -> None:
         with self._lock:

@@ -76,7 +76,7 @@ def next_quarter_start(iso: str) -> str:
 class Ctx:
     """Derived facts shared by every builder for one snapshot and moment."""
 
-    def __init__(self, snap: Snapshot, settings: Settings, now: dt.datetime, indexer: dict):
+    def __init__(self, snap: Snapshot, settings: Settings, now: dt.datetime, indexer: dict, account=None):
         self.s = snap
         self.settings = settings
         self.now = now.astimezone(ET)
@@ -105,7 +105,15 @@ class Ctx:
         self.fresh_by_code = {u["code"]: u for u in (self.fresh[1].get("universe", []) if self.fresh else [])}
         self.fresh_rejected = {u["code"]: u for u in (self.fresh[1].get("rejected_detail", []) if self.fresh else [])}
         self.review = (snap.overrides or {}).get("review", {})
-        self.insights = self._insights()
+        self.insights_doc = self._insights_doc()
+        self.insights = self.insights_doc.get("positions", {})
+        # the Account book (M2): AccountView from the gateway, None in Ghost / without a gateway
+        self.account = account
+        self.account_positions = (account.positions if account is not None else None) or None
+        self.broker_ok = bool(account is not None and account.reachable)
+        # filled in by the app: open P1 alerts (preflight) and the store (audit records)
+        self.open_p1: list = []
+        self.settings_store = None
 
     # -- derived state --
     def _failing(self) -> dict | None:
@@ -128,12 +136,22 @@ class Ctx:
             return cal.previous_session(self.today)
         return latest
 
-    def _insights(self) -> dict:
+    def _insights_doc(self) -> dict:
         p = self.settings.ledger_dir / "insights" / f"{self.asof}.json"
         try:
-            return json.loads(p.read_text(encoding="utf-8")).get("positions", {})
+            return json.loads(p.read_text(encoding="utf-8"))
         except (FileNotFoundError, json.JSONDecodeError):
             return {}
+
+    def insight_history(self) -> list[tuple[str, dict]]:
+        """(asof, positions) for every insights file, oldest first."""
+        out = []
+        for f in sorted((self.settings.ledger_dir / "insights").glob("*.json")):
+            try:
+                out.append((f.stem, json.loads(f.read_text(encoding="utf-8")).get("positions", {})))
+            except (OSError, json.JSONDecodeError):
+                continue
+        return out
 
     @property
     def health(self) -> str:
@@ -141,6 +159,8 @@ class Ctx:
             return "empty"
         ix = self.indexer.get("last")
         if ix and not ix.get("ok"):
+            return "error"
+        if self.env != "ghost" and self.account is not None and not self.account.reachable:
             return "error"
         if self.failing and self.sessions_behind >= 1:
             return "stale"
@@ -213,7 +233,11 @@ def facts(c: Ctx) -> dict:
     last_screen = max(screen_dates) if screen_dates else c.asof
     journal = (c.twin.get("journal") or [])
     regime = None
-    if journal:
+    rg = c.insights_doc.get("regime") or {}
+    if rg.get("ixic_vs_sma200") is not None:
+        regime = (f"NASDAQ Composite {rg['ixic_vs_sma200'] * 100:+.1f}% vs its 200-day and {rg.get('ixic_vs_sma50', 0) * 100:+.1f}% vs its 50-day average"
+                  f" · breadth {rg.get('breadth', 0) * 100:.0f}% · regime dial {rg.get('score')} · mood {rg.get('mood') or '—'}")
+    elif journal:
         j = journal[-1]
         regime = f"{j.get('mood', '?')} · sentiment {j.get('sentiment', 0):+.2f} ({wd_label(j['date'])}) — {j.get('note', '')}".strip()
     return {
@@ -238,8 +262,8 @@ def facts(c: Ctx) -> dict:
             "down": down,
             "downMin": int((dt.datetime.now(dt.timezone.utc) - last_ok).total_seconds() // 60) if down and last_ok else None,
         },
-        "broker": None,
-        "accountAt": None,
+        "broker": None if c.account is None else {"reachable": c.account.reachable, "lastOk": c.account.at_label, "latencyMs": c.account.latency_ms},
+        "accountAt": c.account.at_label if c.account is not None else None,
         "halt": halt,
         "screen": {"last": last_screen, "next": next_quarter_start(last_screen)},
         "d1Due": ROADMAP.get("d1Due", "2026-10-30"),
@@ -332,8 +356,9 @@ def overview(c: Ctx) -> dict:
         "startCapital": float(eq[0]) if eq else float(c.s.config.get("START_CASH") or 100000),
         "equity": float(t.get("equity_final") or (eq[-1] if eq else 0)),
         "cash": float(t.get("cash_final") or 0),
-        "accountCash": None,
-        "equityCurve": [{"date": d, "model": float(e), "account": None, "benchmark": float(b)} for d, e, b in zip(dates, eq, bench)],
+        "accountCash": c.account.cash if c.account is not None else None,
+        "equityCurve": [{"date": d, "model": float(e), "account": (c.account.history.get(d) if c.account is not None else None), "benchmark": float(b)}
+                        for d, e, b in zip(dates, eq, bench)],
         "markers": _markers(c),
         "phase": _phase(c),
     }
@@ -438,12 +463,56 @@ def position(c: Ctx, sym: str) -> dict:
         "entryReason": why.replace("->", "→"),
         "rankExit": rank_exit,
         "nextDividend": None,
-        "account": None,
+        "account": account_leg(c, sym, start, int(p.get("shares") or 0), float(p.get("avg_cost") or 0)),
     }
 
 
+def account_leg(c: Ctx, sym: str, start: str | None, model_shares: int, model_avg: float) -> dict | None:
+    if c.account is None:
+        return None
+    from .account import ledger_fills
+    ap = (c.account.positions or {}).get(sym) or {}
+    fills = ledger_fills(c.s.cycles)
+    entry = fills.get((start, sym, "buy")) if start else None
+    shares = int(ap.get("shares") or 0)
+    drift = None
+    if shares != model_shares:
+        why = _drift_reason(c, sym)
+        drift = {"row": why or f"Account holds {shares}, the Model {model_shares}", "short": (why or "shares differ").split(":")[0].lower()[:40],
+                 "detail": f"The account holds {shares} of {model_shares}." + (f" {why}." if why else " No ledger record explains it yet — check the Cycle B reconciliation.")}
+    return {"shares": shares, "avgCost": float(ap.get("avg_cost") or model_avg), "slippageBps": (entry or {}).get("slippage_bps") or 0.0, "drift": drift}
+
+
+def _drift_reason(c: Ctx, sym: str) -> str | None:
+    """The ledger's own explanation of a share difference, newest first."""
+    for key in sorted(c.s.cycles, reverse=True)[:12]:
+        rec = c.s.cycles[key]
+        plan = rec.get("plan") or {}
+        for a in plan.get("adjusted") or []:
+            if a.get("code") == sym:
+                return f"Buy trimmed to available cash at submit: {a.get('from')} → {a.get('to')} ({key[:10]})"
+        for sk in plan.get("skipped") or []:
+            if sk.get("code") == sym and sk.get("reason") in ("locked", "pause_entries"):
+                return f"Order skipped at submit: {sk['reason']} ({key[:10]})"
+        for m in rec.get("missed") or []:
+            if m.get("symbol") == sym:
+                return f"Not fully filled at the open: {m.get('filled')} of {m.get('qty')} ({key[:10]})"
+        for d in (rec.get("reconcile") or {}).get("diffs") or []:
+            if d.get("symbol") == sym:
+                return f"Reconciliation break: expected {d.get('expected')}, actual {d.get('actual')} ({key[:10]})"
+    if sym in c.excluded:
+        return "Excluded symbol: forced exit"
+    if sym in (c.controls.get("locked_symbols") or []):
+        return "Locked by the owner: the agent's orders are skipped"
+    return None
+
+
 def holdings(c: Ctx) -> dict:
-    return {"asof": c.asof, "positions": [position(c, s) for s in sorted(c.positions, key=lambda s: -float(c.positions[s].get("value") or 0))]}
+    out = {"asof": c.asof, "positions": [position(c, s) for s in sorted(c.positions, key=lambda s: -float(c.positions[s].get("value") or 0))]}
+    if c.account is not None:
+        out["accountOnly"] = [{"symbol": s, "shares": v["shares"], "avgCost": v["avg_cost"], "last": v["price"]}
+                              for s, v in sorted((c.account.positions or {}).items()) if s not in c.positions]
+    return out
 
 
 def _price_series(c: Ctx, sym: str) -> tuple[list[dict], str | None]:
@@ -463,8 +532,14 @@ def _price_series(c: Ctx, sym: str) -> tuple[list[dict], str | None]:
 def holding_detail(c: Ctx, sym: str) -> dict | None:
     if sym not in c.positions:
         return None
-    prices, note = _price_series(c, sym)
-    return {"symbol": sym, "prices": prices, "confidenceHistory": [], "lots": lots(c, sym), "pricesNote": note}
+    ins_prices = (c.insights_doc.get("prices") or {}).get(sym)
+    if ins_prices:
+        prices, note = [{"date": d, "close": float(x)} for d, x in ins_prices], None
+    else:
+        prices, note = _price_series(c, sym)
+    start, _ = _holding_start(c, sym)
+    hist = [v[sym].get("overall") for d, v in c.insight_history() if sym in v and (not start or d >= start) and v[sym].get("overall") is not None]
+    return {"symbol": sym, "prices": prices, "confidenceHistory": hist, "lots": lots(c, sym), "pricesNote": note}
 
 
 # ───────── orders ─────────
@@ -498,6 +573,18 @@ def pending(c: Ctx) -> dict:
     return {"asof": c.asof, "nextOpen": facts_next_open(c) if expired else nxt, "intents": intents}
 
 
+def _decision_close(c: Ctx, tr: dict) -> float | None:
+    """ref_close the order was ledgered at (orders/<decision day>.json), when it exists."""
+    try:
+        dec = cal.previous_session(tr["date"])
+    except Exception:  # noqa: BLE001
+        return None
+    for o in (c.s.orders.get(dec) or {}).get("orders") or []:
+        if o.get("code") == tr.get("code") and o.get("side") == tr.get("side") and o.get("ref_close"):
+            return float(o["ref_close"])
+    return None
+
+
 def official_open(c: Ctx, tr: dict) -> float:
     px = float(tr.get("price") or 0)
     return px / (1 + c.slippage) if tr.get("side") == "buy" else px / (1 - c.slippage)
@@ -505,8 +592,13 @@ def official_open(c: Ctx, tr: dict) -> float:
 
 def history(c: Ctx) -> dict:
     out = []
+    acct_fills = {}
+    if c.account is not None:
+        from .account import ledger_fills
+        acct_fills = ledger_fills(c.s.cycles)
     for i, tr in enumerate(c.trades):
         side = "BUY" if tr.get("side") == "buy" else "SELL"
+        af = acct_fills.get((tr["date"], tr.get("code"), tr.get("side")))
         out.append({
             "id": f"t{i}",
             "decisionDate": cal.previous_session(tr["date"]),
@@ -514,10 +606,10 @@ def history(c: Ctx) -> dict:
             "symbol": tr.get("code"),
             "side": side,
             "shares": int(tr.get("shares") or 0),
-            "accountShares": None,
-            "decisionClose": None,
-            "officialOpen": round(official_open(c, tr), 4),
-            "fillPrice": float(tr.get("price") or 0),
+            "accountShares": (af["qty"] if af and af["qty"] != int(tr.get("shares") or 0) else None),
+            "decisionClose": _decision_close(c, tr),
+            "officialOpen": round(af["open"], 4) if af and af.get("open") else round(official_open(c, tr), 4),
+            "fillPrice": float(af["price"]) if af and af.get("price") else float(tr.get("price") or 0),
             "fees": float(tr.get("fee") or 0),
             "realized": tr.get("realized_pnl"),
             "heldDays": sessions_count(c, tr.get("held_since"), tr["date"]) if side == "SELL" else None,
@@ -536,8 +628,16 @@ def exit_reason(reason: str) -> str:
     return next((k for pat, k in EXIT_RULES if pat in r), "other")
 
 
+def _conf_at_entry(hist: list[tuple[str, dict]], sym: str, since: str | None) -> int | None:
+    for d, v in hist:
+        if sym in v and (since is None or d >= since) and v[sym].get("at_entry") is not None:
+            return int(v[sym]["at_entry"])
+    return None
+
+
 def round_trips(c: Ctx) -> dict:
     trips = []
+    hist = c.insight_history()
     for tr in c.trades:
         if tr.get("side") != "sell" or tr.get("realized_pnl") is None:
             continue
@@ -548,7 +648,7 @@ def round_trips(c: Ctx) -> dict:
         trips.append({
             "symbol": tr["code"], "sector": sec, "entryDate": tr.get("held_since") or tr["date"], "exitDate": tr["date"],
             "days": sessions_count(c, tr.get("held_since"), tr["date"]), "entryPrice": round(entry, 4), "exitPrice": px,
-            "pnl": float(tr["realized_pnl"]), "exitReason": exit_reason(tr.get("reason") or ""), "confAtEntry": None,
+            "pnl": float(tr["realized_pnl"]), "exitReason": exit_reason(tr.get("reason") or ""), "confAtEntry": _conf_at_entry(hist, tr["code"], tr.get("held_since")),
             "reason": tr.get("reason") or "",
         })
     trips.reverse()
@@ -680,6 +780,24 @@ def alerts(c: Ctx, states: dict) -> dict:
     det = last.get("determinism") or {}
     if det and det.get("match") is False:
         add(f"determinism-{last.get('asof')}", "P1", "Determinism broken — replays disagree", "the twin replayed twice gave different hashes", f"Cycle A · {last.get('asof')}", last.get("asof", ""))
+    if c.env != "ghost" and c.account is not None and not c.account.reachable:
+        add(f"broker-down-{c.today}", "P1", "Broker gateway unreachable", (c.account.error or "")[:200] + (f" · last success {c.account.at_label}" if c.account.at_label else ""),
+            "console check", wd_label(c.today))
+    a_last = c.s.latest_cycle("A") or {}
+    for b in (a_last.get("account_drift") or {}).get("breaches") or []:
+        add(f"drift-{a_last.get('asof')}-{b['symbol']}", "P1", f"Account drift: {b['symbol']} {b['diff']:+d} sh beyond tolerance",
+            f"twin {b['twin']} · account {b['account']}", f"Cycle A · {a_last.get('asof')}", wd_label(a_last.get("asof") or c.today))
+    b_last = c.s.latest_cycle("B") or {}
+    if (b_last.get("slippage_avg") or 0) > float(c.s.config.get("SLIPPAGE_ALERT") or 0.001):
+        add(f"slip-{b_last.get('asof')}", "P2", f"Average slippage {b_last['slippage_avg'] * 1e4:.1f} bps per side",
+            "above the 10 bps band (docs/05 §8)", f"Cycle B · {b_last.get('asof')}", wd_label(b_last.get("asof") or c.today))
+    for m in b_last.get("missed") or []:
+        add(f"missed-{b_last.get('asof')}-{m.get('symbol')}", "P2", f"{m.get('symbol')} not fully filled at the open",
+            f"{m.get('filled')} of {m.get('qty')} ({m.get('status')})", f"Cycle B · {b_last.get('asof')}", wd_label(b_last.get("asof") or c.today))
+    ins_status = (a_last.get("insights") or {})
+    if ins_status.get("status") == "error":
+        add(f"insights-{a_last.get('asof')}", "P2", "Insights step failed — confidence not refreshed", ins_status.get("error", ""), f"Cycle A · {a_last.get('asof')}",
+            wd_label(a_last.get("asof") or c.today))
     if c.controls.get("kill"):
         add("kill", "P2", "Kill switch active — trading stopped", "No orders are ledgered or sent until resumed", "controls.json", wd_label(c.today))
     return {"alerts": out}
@@ -777,10 +895,21 @@ def health(c: Ctx) -> dict:
     last_ok = parse_utc((ix.get("last_ok") or {}).get("at_utc"))
     down = bool(ix.get("last") and not ix["last"].get("ok"))
     mins = int((dt.datetime.now(dt.timezone.utc) - last_ok).total_seconds() // 60) if last_ok else None
-    broker = ([{"k": "Mode", "v": "Ghost — no broker; nightly rehearsal against the twin’s book", "cls": ""},
-               {"k": "Paper account", "v": "opens before the paper phase (task P1)", "cls": "dim"},
-               {"k": "Live keys", "v": "never on GitHub — Unraid box only", "cls": "dim"}]
-              if c.env == "ghost" else [{"k": "Broker gateway", "v": "arrives with milestone M2", "cls": "dim"}])
+    if c.env == "ghost":
+        broker = [{"k": "Mode", "v": "Ghost — no broker; nightly rehearsal against the twin’s book", "cls": ""},
+                  {"k": "Paper account", "v": "opens before the paper phase (task P1)", "cls": "dim"},
+                  {"k": "Live keys", "v": "never on GitHub — Unraid box only", "cls": "dim"}]
+    elif c.account is None:
+        broker = [{"k": "Broker gateway", "v": "not configured (CONSOLE_GATEWAY_URL)", "cls": "warn"}]
+    else:
+        a = c.account
+        broker = [{"k": "Endpoint", "v": "Alpaca " + c.env + " via the gateway", "cls": ""},
+                  {"k": "Reachable", "v": (f"✓ {a.latency_ms} ms" if a.reachable else "✕ " + (a.error or "unreachable"))[:80], "cls": "pos" if a.reachable else "danger"},
+                  {"k": "Account status", "v": (a.status or "—") + " · cash account expected (margin off)", "cls": ""},
+                  {"k": "Cash", "v": f"${a.cash:,.2f}" if a.cash is not None else "—", "cls": ""},
+                  {"k": "Open orders", "v": str(len(a.open_orders)) if a.reachable else "unknown", "cls": "" if a.reachable else "warn"},
+                  {"k": "Last snapshot", "v": a.at_label or "—", "cls": ""},
+                  {"k": "Key permissions", "v": "trading only · no transfers · paper keys only in this container", "cls": "dim"}]
     summary = (f"Cycle A failing since {wd_label(f['from'])} · {f['reason'].split(':')[0].lower()} · model book stuck at {wd_label(c.asof)}" if f
                else f"All scheduled steps healthy · last Cycle A {wd_label(latest.get('asof', c.asof))} {et_hm(parse_utc(latest.get('ts_utc'))) or ''}".strip())
     return {
