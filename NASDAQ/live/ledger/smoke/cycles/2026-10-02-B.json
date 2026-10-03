@@ -1,0 +1,8 @@
+{
+ "cycle": "B",
+ "asof": "2026-10-02",
+ "orders_from": "2026-10-01",
+ "ts_utc": "2026-10-03T02:46:58+00:00",
+ "smoke": true,
+ "status": "no_orders_ledgered"
+}
