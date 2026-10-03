@@ -1,0 +1,3011 @@
+{
+ "date": "2026-10-03",
+ "fresh_screen": "data/universe_screened.json",
+ "newly_noncompliant": [],
+ "newly_eligible": [],
+ "held_and_flagged": [],
+ "screened_on": "2026-10-03",
+ "names": {
+  "NVDA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0023,
+   "cash_ratio": 0.0096
+  },
+  "AAPL": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0191,
+   "cash_ratio": 0.0141
+  },
+  "GOOGL": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0287,
+   "cash_ratio": 0.0576
+  },
+  "GOOG": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0289,
+   "cash_ratio": 0.0581
+  },
+  "MSFT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0358,
+   "cash_ratio": 0.0213
+  },
+  "AMZN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0894,
+   "cash_ratio": 0.0437
+  },
+  "SPCX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0201,
+   "cash_ratio": 0.0507
+  },
+  "AVGO": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0343,
+   "cash_ratio": 0.0104
+  },
+  "META": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0769,
+   "cash_ratio": 0.0618
+  },
+  "TSLA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0119,
+   "cash_ratio": 0.0322
+  },
+  "MU": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0055,
+   "cash_ratio": 0.0224
+  },
+  "WMT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.083,
+   "cash_ratio": 0.0118
+  },
+  "AMD": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0051,
+   "cash_ratio": 0.0156
+  },
+  "ASML": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0027,
+   "cash_ratio": 0.0105
+  },
+  "INTC": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0912,
+   "cash_ratio": 0.0536
+  },
+  "CSCO": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0669,
+   "cash_ratio": 0.0361
+  },
+  "LRCX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0096,
+   "cash_ratio": 0.013
+  },
+  "AMAT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0154,
+   "cash_ratio": 0.0218
+  },
+  "COST": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0243,
+   "cash_ratio": 0.0264
+  },
+  "PLTR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0005,
+   "cash_ratio": 0.0223
+  },
+  "NFLX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0522,
+   "cash_ratio": 0.0286
+  },
+  "PANW": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0069,
+   "cash_ratio": 0.0101
+  },
+  "ARM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0016,
+   "cash_ratio": 0.0129
+  },
+  "KLAC": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0227,
+   "cash_ratio": 0.0181
+  },
+  "SNDK": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0,
+   "cash_ratio": 0.0182
+  },
+  "TXN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.054,
+   "cash_ratio": 0.0269
+  },
+  "STX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0173,
+   "cash_ratio": 0.0076
+  },
+  "AMGN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2541,
+   "cash_ratio": 0.062
+  },
+  "CRWD": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0037,
+   "cash_ratio": 0.0207
+  },
+  "LIN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1282,
+   "cash_ratio": 0.0224
+  },
+  "MRVL": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0246,
+   "cash_ratio": 0.018
+  },
+  "SHOP": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0009,
+   "cash_ratio": 0.0256
+  },
+  "ADI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0454,
+   "cash_ratio": 0.0179
+  },
+  "PEP": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2822,
+   "cash_ratio": 0.0568
+  },
+  "WDC": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0064,
+   "cash_ratio": 0.0085
+  },
+  "QCOM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.089,
+   "cash_ratio": 0.0484
+  },
+  "GILD": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1528,
+   "cash_ratio": 0.0284
+  },
+  "BKNG": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1293,
+   "cash_ratio": 0.1064
+  },
+  "ISRG": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0,
+   "cash_ratio": 0.0373
+  },
+  "MNST": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.001,
+   "cash_ratio": 0.0383
+  },
+  "VRTX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0152,
+   "cash_ratio": 0.0603
+  },
+  "SBUX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1833,
+   "cash_ratio": 0.0295
+  },
+  "FTNT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0049,
+   "cash_ratio": 0.0352
+  },
+  "ABNB": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.023,
+   "cash_ratio": 0.1113
+  },
+  "SNY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2221,
+   "cash_ratio": 0.0598
+  },
+  "ADP": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0521,
+   "cash_ratio": 0.04
+  },
+  "APP": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0336,
+   "cash_ratio": 0.0292
+  },
+  "ADBE": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0705,
+   "cash_ratio": 0.056
+  },
+  "CEG": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2528,
+   "cash_ratio": 0.0071
+  },
+  "CSX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2067,
+   "cash_ratio": 0.0148
+  },
+  "DASH": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0351,
+   "cash_ratio": 0.0567
+  },
+  "MAR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1912,
+   "cash_ratio": 0.005
+  },
+  "INTU": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0753,
+   "cash_ratio": 0.0739
+  },
+  "MELI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1456,
+   "cash_ratio": 0.0633
+  },
+  "CDNS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0294,
+   "cash_ratio": 0.017
+  },
+  "DDOG": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0142,
+   "cash_ratio": 0.0554
+  },
+  "REGN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0325,
+   "cash_ratio": 0.0959
+  },
+  "SNPS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1352,
+   "cash_ratio": 0.031
+  },
+  "MDLZ": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2753,
+   "cash_ratio": 0.0214
+  },
+  "CTAS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0343,
+   "cash_ratio": 0.0037
+  },
+  "LITE": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0191,
+   "cash_ratio": 0.0313
+  },
+  "ROST": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.062,
+   "cash_ratio": 0.0542
+  },
+  "NBIS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1445,
+   "cash_ratio": 0.114
+  },
+  "ORLY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1318,
+   "cash_ratio": 0.0036
+  },
+  "MPWR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0003,
+   "cash_ratio": 0.02
+  },
+  "PCAR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2154,
+   "cash_ratio": 0.126
+  },
+  "TER": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0015,
+   "cash_ratio": 0.0052
+  },
+  "BKR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2547,
+   "cash_ratio": 0.2668
+  },
+  "ARGX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0008,
+   "cash_ratio": 0.0837
+  },
+  "NXPI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1839,
+   "cash_ratio": 0.054
+  },
+  "CBRS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0247,
+   "cash_ratio": 0.1316
+  },
+  "FAST": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0075,
+   "cash_ratio": 0.0035
+  },
+  "ALAB": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0008,
+   "cash_ratio": 0.0217
+  },
+  "FANG": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2214,
+   "cash_ratio": 0.0081
+  },
+  "CRDO": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0005,
+   "cash_ratio": 0.0274
+  },
+  "ADSK": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0528,
+   "cash_ratio": 0.0566
+  },
+  "AXON": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0371,
+   "cash_ratio": 0.0139
+  },
+  "RKLB": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0025,
+   "cash_ratio": 0.043
+  },
+  "CCEP": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2603,
+   "cash_ratio": 0.0426
+  },
+  "FLEX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1231,
+   "cash_ratio": 0.059
+  },
+  "WDAY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0806,
+   "cash_ratio": 0.0923
+  },
+  "MDLN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2679,
+   "cash_ratio": 0.0572
+  },
+  "FER": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2316,
+   "cash_ratio": 0.084
+  },
+  "TTWO": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0644,
+   "cash_ratio": 0.04
+  },
+  "NTRA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0052,
+   "cash_ratio": 0.0239
+  },
+  "EBAY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1566,
+   "cash_ratio": 0.0726
+  },
+  "RVMD": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0263,
+   "cash_ratio": 0.0871
+  },
+  "ODFL": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0005,
+   "cash_ratio": 0.0065
+  },
+  "MCHP": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1227,
+   "cash_ratio": 0.0062
+  },
+  "TRI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.074,
+   "cash_ratio": 0.016
+  },
+  "IDXX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0256,
+   "cash_ratio": 0.0046
+  },
+  "PAYX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1096,
+   "cash_ratio": 0.0271
+  },
+  "ONC": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0504,
+   "cash_ratio": 0.1253
+  },
+  "NTAP": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0678,
+   "cash_ratio": 0.0889
+  },
+  "TEAM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0307,
+   "cash_ratio": 0.0309
+  },
+  "ROP": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2922,
+   "cash_ratio": 0.0094
+  },
+  "EXPE": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1455,
+   "cash_ratio": 0.1823
+  },
+  "MSTR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1754,
+   "cash_ratio": 0.0634
+  },
+  "STLD": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1192,
+   "cash_ratio": 0.0154
+  },
+  "ESLT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0231,
+   "cash_ratio": 0.0261
+  },
+  "KMB": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1832,
+   "cash_ratio": 0.0268
+  },
+  "MDB": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0016,
+   "cash_ratio": 0.0681
+  },
+  "RPRX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2627,
+   "cash_ratio": 0.0245
+  },
+  "DXCM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0418,
+   "cash_ratio": 0.0583
+  },
+  "ON": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1417,
+   "cash_ratio": 0.1163
+  },
+  "CASY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0911,
+   "cash_ratio": 0.0164
+  },
+  "TSEM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0046,
+   "cash_ratio": 0.0477
+  },
+  "BIIB": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.27,
+   "cash_ratio": 0.0415
+  },
+  "ZM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.002,
+   "cash_ratio": 0.2503
+  },
+  "GFS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0555,
+   "cash_ratio": 0.0779
+  },
+  "RYAAY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.006,
+   "cash_ratio": 0.0932
+  },
+  "ZS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0622,
+   "cash_ratio": 0.1179
+  },
+  "ALNY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0994,
+   "cash_ratio": 0.11
+  },
+  "CPRT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.003,
+   "cash_ratio": 0.1374
+  },
+  "ILMN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0867,
+   "cash_ratio": 0.0401
+  },
+  "FOXA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2613,
+   "cash_ratio": 0.1452
+  },
+  "ASTS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1061,
+   "cash_ratio": 0.0811
+  },
+  "INSM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0267,
+   "cash_ratio": 0.0419
+  },
+  "JBHT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0523,
+   "cash_ratio": 0.0002
+  },
+  "ROIV": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0041,
+   "cash_ratio": 0.1467
+  },
+  "SYM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.001,
+   "cash_ratio": 0.067
+  },
+  "FOX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2937,
+   "cash_ratio": 0.1632
+  },
+  "CTSH": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0775,
+   "cash_ratio": 0.0389
+  },
+  "MRNA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0498,
+   "cash_ratio": 0.1988
+  },
+  "FWONK": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2029,
+   "cash_ratio": 0.0507
+  },
+  "BSP": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2052,
+   "cash_ratio": 0.0343
+  },
+  "ENTG": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.141,
+   "cash_ratio": 0.014
+  },
+  "OKTA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0162,
+   "cash_ratio": 0.1021
+  },
+  "MTSI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0165,
+   "cash_ratio": 0.0264
+  },
+  "VRSN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0944,
+   "cash_ratio": 0.0417
+  },
+  "INCY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0016,
+   "cash_ratio": 0.1839
+  },
+  "ARXS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0738,
+   "cash_ratio": 0.0204
+  },
+  "FSLR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0081,
+   "cash_ratio": 0.0719
+  },
+  "FTAI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1476,
+   "cash_ratio": 0.0142
+  },
+  "ROKU": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0202,
+   "cash_ratio": 0.1091
+  },
+  "FWONA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2215,
+   "cash_ratio": 0.0554
+  },
+  "VRSK": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1997,
+   "cash_ratio": 0.0239
+  },
+  "SITM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0588,
+   "cash_ratio": 0.0852
+  },
+  "FFIV": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0113,
+   "cash_ratio": 0.0716
+  },
+  "MKSI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1911,
+   "cash_ratio": 0.0279
+  },
+  "WWD": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0633,
+   "cash_ratio": 0.0217
+  },
+  "UTHR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0,
+   "cash_ratio": 0.1225
+  },
+  "RIVN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2471,
+   "cash_ratio": 0.2451
+  },
+  "GH": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0788,
+   "cash_ratio": 0.0489
+  },
+  "EXE": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1679,
+   "cash_ratio": 0.0299
+  },
+  "ULTA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1077,
+   "cash_ratio": 0.0104
+  },
+  "INIO": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1392,
+   "cash_ratio": 0.0491
+  },
+  "RGLD": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0198,
+   "cash_ratio": 0.0091
+  },
+  "LSCC": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.002,
+   "cash_ratio": 0.0089
+  },
+  "STRL": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0185,
+   "cash_ratio": 0.0255
+  },
+  "ZBRA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1653,
+   "cash_ratio": 0.0088
+  },
+  "NWS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1653,
+   "cash_ratio": 0.1192
+  },
+  "NTNX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0868,
+   "cash_ratio": 0.1143
+  },
+  "NDSN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1139,
+   "cash_ratio": 0.006
+  },
+  "CHRW": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1151,
+   "cash_ratio": 0.009
+  },
+  "QNT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0019,
+   "cash_ratio": 0.1209
+  },
+  "MEDP": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0088,
+   "cash_ratio": 0.0308
+  },
+  "JAZZ": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2751,
+   "cash_ratio": 0.1372
+  },
+  "PTC": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1011,
+   "cash_ratio": 0.0221
+  },
+  "NBIX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0295,
+   "cash_ratio": 0.0249
+  },
+  "BBIO": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2165,
+   "cash_ratio": 0.0462
+  },
+  "NWSA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1883,
+   "cash_ratio": 0.1357
+  },
+  "LECO": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0775,
+   "cash_ratio": 0.0156
+  },
+  "AMKR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1755,
+   "cash_ratio": 0.1649
+  },
+  "ASND": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0275,
+   "cash_ratio": 0.0496
+  },
+  "IESC": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.005,
+   "cash_ratio": 0.0253
+  },
+  "VNOM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0753,
+   "cash_ratio": 0.0035
+  },
+  "NXT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0025,
+   "cash_ratio": 0.0792
+  },
+  "TTMI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0748,
+   "cash_ratio": 0.0345
+  },
+  "COO": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1854,
+   "cash_ratio": 0.0094
+  },
+  "LOGI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0058,
+   "cash_ratio": 0.1201
+  },
+  "SMTC": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0361,
+   "cash_ratio": 0.0114
+  },
+  "APA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2718,
+   "cash_ratio": 0.0311
+  },
+  "AUR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0059,
+   "cash_ratio": 0.0872
+  },
+  "AEIS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0997,
+   "cash_ratio": 0.1012
+  },
+  "NVMI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0589,
+   "cash_ratio": 0.0748
+  },
+  "HAS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2891,
+   "cash_ratio": 0.1027
+  },
+  "TXRH": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0809,
+   "cash_ratio": 0.0151
+  },
+  "FIVE": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1505,
+   "cash_ratio": 0.0838
+  },
+  "AAOI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0227,
+   "cash_ratio": 0.0378
+  },
+  "CHKP": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1502,
+   "cash_ratio": 0.1734
+  },
+  "TRMB": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1111,
+   "cash_ratio": 0.0163
+  },
+  "EXEL": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0128,
+   "cash_ratio": 0.0648
+  },
+  "ICLR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2721,
+   "cash_ratio": 0.0716
+  },
+  "CSGP": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.091,
+   "cash_ratio": 0.0997
+  },
+  "LULU": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.162,
+   "cash_ratio": 0.1149
+  },
+  "CORT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0007,
+   "cash_ratio": 0.0244
+  },
+  "ARWR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1113,
+   "cash_ratio": 0.1289
+  },
+  "ALGN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0098,
+   "cash_ratio": 0.0893
+  },
+  "COKE": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0907,
+   "cash_ratio": 0.0042
+  },
+  "DRS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0219,
+   "cash_ratio": 0.0222
+  },
+  "BTSG": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1991,
+   "cash_ratio": 0.0459
+  },
+  "MDGL": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0291,
+   "cash_ratio": 0.0703
+  },
+  "LFUS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0593,
+   "cash_ratio": 0.0527
+  },
+  "FROG": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0013,
+   "cash_ratio": 0.0709
+  },
+  "KTOS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0161,
+   "cash_ratio": 0.1198
+  },
+  "HALO": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1864,
+   "cash_ratio": 0.0198
+  },
+  "SANM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2112,
+   "cash_ratio": 0.1609
+  },
+  "DOCU": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0159,
+   "cash_ratio": 0.0708
+  },
+  "VICR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0007,
+   "cash_ratio": 0.0393
+  },
+  "VIAV": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0618,
+   "cash_ratio": 0.0575
+  },
+  "TECH": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0256,
+   "cash_ratio": 0.0235
+  },
+  "MANH": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0048,
+   "cash_ratio": 0.0164
+  },
+  "CART": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.003,
+   "cash_ratio": 0.0752
+  },
+  "CGNX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0065,
+   "cash_ratio": 0.0361
+  },
+  "AXSM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.02,
+   "cash_ratio": 0.0285
+  },
+  "RMBS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.002,
+   "cash_ratio": 0.0742
+  },
+  "FORM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0028,
+   "cash_ratio": 0.032
+  },
+  "PRAX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0001,
+   "cash_ratio": 0.0703
+  },
+  "SAIL": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0018,
+   "cash_ratio": 0.0363
+  },
+  "JKHY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0128,
+   "cash_ratio": 0.0019
+  },
+  "GSAT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0391,
+   "cash_ratio": 0.0382
+  },
+  "BSY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1199,
+   "cash_ratio": 0.0139
+  },
+  "SWKS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0647,
+   "cash_ratio": 0.0759
+  },
+  "ENSG": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.214,
+   "cash_ratio": 0.0305
+  },
+  "ABVX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0032,
+   "cash_ratio": 0.0458
+  },
+  "CYTK": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1368,
+   "cash_ratio": 0.1119
+  },
+  "SAIA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0262,
+   "cash_ratio": 0.0082
+  },
+  "APGE": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0007,
+   "cash_ratio": 0.0954
+  },
+  "SMMT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.002,
+   "cash_ratio": 0.0671
+  },
+  "PTGX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0009,
+   "cash_ratio": 0.077
+  },
+  "KYMR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0078,
+   "cash_ratio": 0.0687
+  },
+  "KRYS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0009,
+   "cash_ratio": 0.0854
+  },
+  "SOLS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2452,
+   "cash_ratio": 0.0758
+  },
+  "LLYVK": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2155,
+   "cash_ratio": 0.053
+  },
+  "PODD": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0972,
+   "cash_ratio": 0.0548
+  },
+  "IONS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.226,
+   "cash_ratio": 0.217
+  },
+  "LLYVA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2233,
+   "cash_ratio": 0.055
+  },
+  "RGEN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0735,
+   "cash_ratio": 0.0862
+  },
+  "TEM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1543,
+   "cash_ratio": 0.0872
+  },
+  "AVAV": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0888,
+   "cash_ratio": 0.0672
+  },
+  "SIMO": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0079,
+   "cash_ratio": 0.0081
+  },
+  "TTEK": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1111,
+   "cash_ratio": 0.025
+  },
+  "SYRE": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0,
+   "cash_ratio": 0.1265
+  },
+  "CRNX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0053,
+   "cash_ratio": 0.1342
+  },
+  "IDCC": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0448,
+   "cash_ratio": 0.1241
+  },
+  "IMVT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0,
+   "cash_ratio": 0.0892
+  },
+  "PCVX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0129,
+   "cash_ratio": 0.1663
+  },
+  "BRKR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2107,
+   "cash_ratio": 0.021
+  },
+  "QRVO": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1783,
+   "cash_ratio": 0.153
+  },
+  "ALGM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0352,
+   "cash_ratio": 0.0188
+  },
+  "HQY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1145,
+   "cash_ratio": 0.0309
+  },
+  "TTAN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.006,
+   "cash_ratio": 0.0496
+  },
+  "XE": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0045,
+   "cash_ratio": 0.2724
+  },
+  "ALKS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1881,
+   "cash_ratio": 0.0785
+  },
+  "IBRX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1467,
+   "cash_ratio": 0.0427
+  },
+  "CAMT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0591,
+   "cash_ratio": 0.0811
+  },
+  "TWST": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0142,
+   "cash_ratio": 0.0218
+  },
+  "RYTM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0137,
+   "cash_ratio": 0.0414
+  },
+  "MXL": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0188,
+   "cash_ratio": 0.0082
+  },
+  "POWL": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0003,
+   "cash_ratio": 0.0807
+  },
+  "MBLY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0,
+   "cash_ratio": 0.183
+  },
+  "QBTS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0061,
+   "cash_ratio": 0.0689
+  },
+  "ZG": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0722,
+   "cash_ratio": 0.0903
+  },
+  "PCTY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0172,
+   "cash_ratio": 0.0353
+  },
+  "Z": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0731,
+   "cash_ratio": 0.0914
+  },
+  "CELH": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0888,
+   "cash_ratio": 0.083
+  },
+  "TGTX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0996,
+   "cash_ratio": 0.0729
+  },
+  "SFM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2796,
+   "cash_ratio": 0.0297
+  },
+  "CHRD": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1987,
+   "cash_ratio": 0.0809
+  },
+  "ORKA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0003,
+   "cash_ratio": 0.1172
+  },
+  "TXG": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0105,
+   "cash_ratio": 0.0738
+  },
+  "NAVN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0233,
+   "cash_ratio": 0.0918
+  },
+  "LGN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0895,
+   "cash_ratio": 0.0221
+  },
+  "SLAB": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0,
+   "cash_ratio": 0.0543
+  },
+  "PLXS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0421,
+   "cash_ratio": 0.0431
+  },
+  "AAON": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0631,
+   "cash_ratio": 0.0
+  },
+  "GTLB": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0,
+   "cash_ratio": 0.1943
+  },
+  "APPF": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0052,
+   "cash_ratio": 0.0321
+  },
+  "LQDA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0265,
+   "cash_ratio": 0.0411
+  },
+  "GLBE": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0037,
+   "cash_ratio": 0.0768
+  },
+  "ROAD": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2769,
+   "cash_ratio": 0.0138
+  },
+  "POOL": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2479,
+   "cash_ratio": 0.0051
+  },
+  "CGON": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0013,
+   "cash_ratio": 0.1508
+  },
+  "VSEC": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.15,
+   "cash_ratio": 0.011
+  },
+  "SSRM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0003,
+   "cash_ratio": 0.2672
+  },
+  "WFRD": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2422,
+   "cash_ratio": 0.1642
+  },
+  "MRCY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0967,
+   "cash_ratio": 0.0489
+  },
+  "BLTE": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0,
+   "cash_ratio": null
+  },
+  "AUGO": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0692,
+   "cash_ratio": 0.0375
+  },
+  "LYFT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1961,
+   "cash_ratio": 0.2724
+  },
+  "LNTH": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.095,
+   "cash_ratio": 0.0902
+  },
+  "COGT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0374,
+   "cash_ratio": 0.1214
+  },
+  "URBN": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1833,
+   "cash_ratio": 0.0629
+  },
+  "LSTR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0213,
+   "cash_ratio": 0.0532
+  },
+  "MIRM": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1238,
+   "cash_ratio": 0.0711
+  },
+  "ERAS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0069,
+   "cash_ratio": 0.0413
+  },
+  "RUSHA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.155,
+   "cash_ratio": 0.0269
+  },
+  "DNTH": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0002,
+   "cash_ratio": 0.1412
+  },
+  "SRRK": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0318,
+   "cash_ratio": 0.0769
+  },
+  "DSGX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0013,
+   "cash_ratio": 0.0591
+  },
+  "TTD": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0683,
+   "cash_ratio": 0.2338
+  },
+  "MWH": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0132,
+   "cash_ratio": 0.0574
+  },
+  "QLYS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0083,
+   "cash_ratio": 0.0664
+  },
+  "RUSHB": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1579,
+   "cash_ratio": 0.0274
+  },
+  "NOVT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0455,
+   "cash_ratio": 0.1145
+  },
+  "RGTI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0012,
+   "cash_ratio": 0.0626
+  },
+  "CAI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0733,
+   "cash_ratio": 0.1285
+  },
+  "DOX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1786,
+   "cash_ratio": 0.0339
+  },
+  "CROX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2744,
+   "cash_ratio": 0.0277
+  },
+  "AXTI": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0166,
+   "cash_ratio": 0.0684
+  },
+  "FSV": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2551,
+   "cash_ratio": 0.0284
+  },
+  "NTSK": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1211,
+   "cash_ratio": 0.1789
+  },
+  "KNSA": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0015,
+   "cash_ratio": 0.0871
+  },
+  "CRUS": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0214,
+   "cash_ratio": 0.1465
+  },
+  "DUOL": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0143,
+   "cash_ratio": 0.2174
+  },
+  "XENE": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0011,
+   "cash_ratio": 0.1538
+  },
+  "DFTX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.006,
+   "cash_ratio": 0.1794
+  },
+  "TVTX": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.105,
+   "cash_ratio": 0.0833
+  },
+  "LGND": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1914,
+   "cash_ratio": 0.2297
+  },
+  "CVLT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.1555,
+   "cash_ratio": 0.1575
+  },
+  "NICE": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0152,
+   "cash_ratio": 0.0611
+  },
+  "ACMR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.06,
+   "cash_ratio": 0.2473
+  },
+  "FTDR": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2038,
+   "cash_ratio": 0.1079
+  },
+  "CWST": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2544,
+   "cash_ratio": 0.0049
+  },
+  "MMYT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.2527,
+   "cash_ratio": 0.1366
+  },
+  "BCPC": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0294,
+   "cash_ratio": 0.0112
+  },
+  "PSMT": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0603,
+   "cash_ratio": 0.0582
+  },
+  "RELY": {
+   "screened_on": "2026-10-03",
+   "pass": true,
+   "debt_ratio": 0.0069,
+   "cash_ratio": 0.1223
+  },
+  "BRKRP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0288,
+   "cash_ratio": 0.0029
+  },
+  "SMCIP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2372,
+   "cash_ratio": 0.1916
+  },
+  "MCHPP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1436,
+   "cash_ratio": 0.0072
+  },
+  "STRF": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.183,
+   "cash_ratio": 0.0662
+  },
+  "STRC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.186,
+   "cash_ratio": 0.0673
+  },
+  "STRK": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2562,
+   "cash_ratio": 0.0926
+  },
+  "SFD": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2684,
+   "cash_ratio": 0.1512
+  },
+  "SATA": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0004,
+   "cash_ratio": 0.0222
+  },
+  "SKHY": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 14.885,
+   "cash_ratio": 70.4429
+  },
+  "GOOGM": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": null,
+   "cash_ratio": null
+  },
+  "GOOGN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": null,
+   "cash_ratio": null
+  },
+  "TMUS": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.6233,
+   "cash_ratio": 0.0146
+  },
+  "PDD": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0421,
+   "cash_ratio": 3.5848
+  },
+  "EQIX": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2149,
+   "cash_ratio": 0.009
+  },
+  "CME": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0399,
+   "cash_ratio": 0.0235
+  },
+  "CMCSA": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.9943,
+   "cash_ratio": 0.0843
+  },
+  "HOOD": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2642,
+   "cash_ratio": 0.2755
+  },
+  "NTES": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1375,
+   "cash_ratio": 2.1442
+  },
+  "HON": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4797,
+   "cash_ratio": 0.1262
+  },
+  "WBD": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4599,
+   "cash_ratio": 0.049
+  },
+  "AEP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.7837,
+   "cash_ratio": 0.0088
+  },
+  "CRWV": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.8707,
+   "cash_ratio": 0.0934
+  },
+  "NDAQ": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1716,
+   "cash_ratio": 0.0102
+  },
+  "HONA": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3099,
+   "cash_ratio": 0.0203
+  },
+  "PYPL": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2731,
+   "cash_ratio": 0.2162
+  },
+  "HBANL": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4455,
+   "cash_ratio": 0.3272
+  },
+  "XEL": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.8474,
+   "cash_ratio": 0.0411
+  },
+  "EXC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 1.1269,
+   "cash_ratio": 0.0388
+  },
+  "IBKR": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2895,
+   "cash_ratio": 0.8274
+  },
+  "HBANM": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.5446,
+   "cash_ratio": 0.4
+  },
+  "KDP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.8153,
+   "cash_ratio": 0.0371
+  },
+  "UAL": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.8349,
+   "cash_ratio": 0.4125
+  },
+  "COIN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1669,
+   "cash_ratio": 0.2199
+  },
+  "HBANZ": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.5752,
+   "cash_ratio": 0.4225
+  },
+  "VOD": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 1.4575,
+   "cash_ratio": 0.3904
+  },
+  "JD": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 2.7404,
+   "cash_ratio": 5.7682
+  },
+  "HBAN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.6229,
+   "cash_ratio": 0.4575
+  },
+  "NTRS": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4624,
+   "cash_ratio": 0.283
+  },
+  "BIDU": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 2.6982,
+   "cash_ratio": 3.3504
+  },
+  "ERIC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": null,
+   "cash_ratio": null
+  },
+  "ACGL": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1275,
+   "cash_ratio": 0.1328
+  },
+  "GEHC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3202,
+   "cash_ratio": 0.0632
+  },
+  "HBANP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.6938,
+   "cash_ratio": 0.5096
+  },
+  "AGNCN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 2.9294,
+   "cash_ratio": 0.6237
+  },
+  "WTW": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2325,
+   "cash_ratio": 0.0544
+  },
+  "AGNCO": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 2.9522,
+   "cash_ratio": 0.6286
+  },
+  "AGNCZ": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 2.9765,
+   "cash_ratio": 0.6337
+  },
+  "AGNCP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 2.9942,
+   "cash_ratio": 0.6375
+  },
+  "AGNCM": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 3.0108,
+   "cash_ratio": 0.641
+  },
+  "AGNCL": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 3.0325,
+   "cash_ratio": 0.6456
+  },
+  "KHC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.6456,
+   "cash_ratio": 0.0911
+  },
+  "LPLA": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.266,
+   "cash_ratio": 0.0971
+  },
+  "TCOM": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 1.1108,
+   "cash_ratio": 2.8686
+  },
+  "FISV": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": null,
+   "cash_ratio": null
+  },
+  "ECHO": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.6403,
+   "cash_ratio": 0.0181
+  },
+  "CINF": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0332,
+   "cash_ratio": 0.0717
+  },
+  "STRD": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 8.3408,
+   "cash_ratio": 3.0156
+  },
+  "FCNCA": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 1.3419,
+   "cash_ratio": 0.9348
+  },
+  "AFRM": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3612,
+   "cash_ratio": 0.0703
+  },
+  "DLTR": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3068,
+   "cash_ratio": 0.0407
+  },
+  "TW": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0065,
+   "cash_ratio": 0.0892
+  },
+  "PFG": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1857,
+   "cash_ratio": 0.2599
+  },
+  "SOFI": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1441,
+   "cash_ratio": 0.1421
+  },
+  "TROW": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0192,
+   "cash_ratio": 0.1376
+  },
+  "SMCI": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3743,
+   "cash_ratio": 0.3024
+  },
+  "BNTX": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0138,
+   "cash_ratio": 0.5859
+  },
+  "TPG": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1527,
+   "cash_ratio": 0.0469
+  },
+  "SBAC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.7816,
+   "cash_ratio": 0.0168
+  },
+  "EVRG": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.8552,
+   "cash_ratio": 0.0011
+  },
+  "BPYPM": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": null,
+   "cash_ratio": null
+  },
+  "BPYPP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 2.8599,
+   "cash_ratio": 0.1097
+  },
+  "SSNC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4119,
+   "cash_ratio": 0.023
+  },
+  "EWBC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2385,
+   "cash_ratio": 0.2999
+  },
+  "KSPI": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": null,
+   "cash_ratio": null
+  },
+  "VTRS": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.7344,
+   "cash_ratio": 0.0814
+  },
+  "TSCO": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3588,
+   "cash_ratio": 0.0127
+  },
+  "LNT": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.6671,
+   "cash_ratio": 0.0014
+  },
+  "BPYPO": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 3.0258,
+   "cash_ratio": 0.1161
+  },
+  "AKAM": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.5265,
+   "cash_ratio": 0.1892
+  },
+  "CHTR": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 4.904,
+   "cash_ratio": 0.0258
+  },
+  "CG": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.8278,
+   "cash_ratio": 0.1185
+  },
+  "TLN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.5555,
+   "cash_ratio": 0.0135
+  },
+  "CDW": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3812,
+   "cash_ratio": 0.0215
+  },
+  "PAA": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.5158,
+   "cash_ratio": 0.0633
+  },
+  "GEN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4973,
+   "cash_ratio": 0.0324
+  },
+  "BPYPN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 3.321,
+   "cash_ratio": 0.1274
+  },
+  "IREN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2416,
+   "cash_ratio": 0.1349
+  },
+  "WSE": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0377,
+   "cash_ratio": 0.4196
+  },
+  "TIGO": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.7717,
+   "cash_ratio": 0.0549
+  },
+  "HST": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3591,
+   "cash_ratio": 0.1242
+  },
+  "LAMR": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3231,
+   "cash_ratio": 0.0044
+  },
+  "FUTU": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 1.4679,
+   "cash_ratio": 8.596
+  },
+  "GRAB": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1373,
+   "cash_ratio": 0.441
+  },
+  "VLYPN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2619,
+   "cash_ratio": 0.0887
+  },
+  "ARCC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 1.1207,
+   "cash_ratio": 0.0281
+  },
+  "HTHT": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 2.5317,
+   "cash_ratio": 1.1094
+  },
+  "SLMBP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4168,
+   "cash_ratio": 0.3312
+  },
+  "REG": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.362,
+   "cash_ratio": 0.0136
+  },
+  "VLYPP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2679,
+   "cash_ratio": 0.0907
+  },
+  "VLYPO": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2706,
+   "cash_ratio": 0.0916
+  },
+  "WMG": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3655,
+   "cash_ratio": 0.0459
+  },
+  "LI": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 1.4574,
+   "cash_ratio": 7.6497
+  },
+  "AGNC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 6.9037,
+   "cash_ratio": 1.4699
+  },
+  "BMRN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.324,
+   "cash_ratio": 0.0674
+  },
+  "SEIC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0053,
+   "cash_ratio": 0.0331
+  },
+  "DKNG": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1514,
+   "cash_ratio": 0.0777
+  },
+  "GLPI": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.6694,
+   "cash_ratio": 0.0255
+  },
+  "CHYM": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0152,
+   "cash_ratio": 0.0975
+  },
+  "ERIE": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0048,
+   "cash_ratio": 0.0232
+  },
+  "ENLT": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.5474,
+   "cash_ratio": 0.0995
+  },
+  "UMBF": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3203,
+   "cash_ratio": 0.1822
+  },
+  "BPOP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1417,
+   "cash_ratio": 0.4375
+  },
+  "PSKY": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 1.4398,
+   "cash_ratio": 0.1446
+  },
+  "DPZ": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4566,
+   "cash_ratio": 0.0147
+  },
+  "VSAT": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.607,
+   "cash_ratio": 0.1521
+  },
+  "WTFC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4137,
+   "cash_ratio": 0.3941
+  },
+  "ZION": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3519,
+   "cash_ratio": 0.3553
+  },
+  "HUT": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.7234,
+   "cash_ratio": 0.022
+  },
+  "WYNN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 1.1829,
+   "cash_ratio": 0.2013
+  },
+  "ONB": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.8583,
+   "cash_ratio": 0.1847
+  },
+  "PAYP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 75.04,
+   "cash_ratio": 7.337
+  },
+  "HSIC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.373,
+   "cash_ratio": 0.0154
+  },
+  "SIRI": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.9944,
+   "cash_ratio": 0.0179
+  },
+  "AAL": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 3.7095,
+   "cash_ratio": 0.8681
+  },
+  "ONBPO": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.9309,
+   "cash_ratio": 0.2003
+  },
+  "ONBPP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.9352,
+   "cash_ratio": 0.2012
+  },
+  "FRHC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2933,
+   "cash_ratio": 0.4551
+  },
+  "FCFS": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2881,
+   "cash_ratio": 0.0184
+  },
+  "LINE": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.8301,
+   "cash_ratio": 0.0057
+  },
+  "COLB": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.5502,
+   "cash_ratio": 0.1997
+  },
+  "APLD": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.5686,
+   "cash_ratio": 0.1775
+  },
+  "BOKF": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.5977,
+   "cash_ratio": 0.7668
+  },
+  "WULF": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.5977,
+   "cash_ratio": 0.2989
+  },
+  "CAE": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3701,
+   "cash_ratio": 0.0655
+  },
+  "CBSH": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2869,
+   "cash_ratio": 0.483
+  },
+  "MTCH": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4277,
+   "cash_ratio": 0.0681
+  },
+  "GLXY": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3881,
+   "cash_ratio": 0.1187
+  },
+  "TPGXL": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": null,
+   "cash_ratio": null
+  },
+  "VLY": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4486,
+   "cash_ratio": 0.1519
+  },
+  "SNEX": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 2.8552,
+   "cash_ratio": 4.6848
+  },
+  "XP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 20.7322,
+   "cash_ratio": 35.913
+  },
+  "AVT": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4416,
+   "cash_ratio": 0.0197
+  },
+  "CBC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1168,
+   "cash_ratio": 0.0984
+  },
+  "MORN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2463,
+   "cash_ratio": 0.0677
+  },
+  "DBX": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.5427,
+   "cash_ratio": 0.1521
+  },
+  "CIFR": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.7322,
+   "cash_ratio": 0.109
+  },
+  "FIGR": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1883,
+   "cash_ratio": 0.1836
+  },
+  "VFS": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": null,
+   "cash_ratio": null
+  },
+  "RIOT": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1191,
+   "cash_ratio": 0.0639
+  },
+  "VCTR": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1387,
+   "cash_ratio": 0.0096
+  },
+  "MAAS": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0041,
+   "cash_ratio": 0.0049
+  },
+  "BZ": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0178,
+   "cash_ratio": 2.9573
+  },
+  "BILI": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 1.3309,
+   "cash_ratio": 3.366
+  },
+  "GDS": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 6.6604,
+   "cash_ratio": 2.0985
+  },
+  "GGAL": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 911.5287,
+   "cash_ratio": 969.1541
+  },
+  "CPB": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 1.0768,
+   "cash_ratio": 0.059
+  },
+  "ACT": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1089,
+   "cash_ratio": 0.0727
+  },
+  "PPC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4578,
+   "cash_ratio": 0.0572
+  },
+  "UBSI": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1194,
+   "cash_ratio": 0.3111
+  },
+  "ACGLO": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.6495,
+   "cash_ratio": 0.6764
+  },
+  "RRR": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.5684,
+   "cash_ratio": 0.0213
+  },
+  "LKQ": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.8284,
+   "cash_ratio": 0.0469
+  },
+  "CORZ": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.6861,
+   "cash_ratio": 0.2755
+  },
+  "CORZZ": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.6913,
+   "cash_ratio": 0.2776
+  },
+  "HWC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3116,
+   "cash_ratio": 0.1789
+  },
+  "AMRX": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.4421,
+   "cash_ratio": 0.0208
+  },
+  "CHDN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.7895,
+   "cash_ratio": 0.0319
+  },
+  "PTCT": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.499,
+   "cash_ratio": 0.3685
+  },
+  "CZR": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 4.2891,
+   "cash_ratio": 0.1597
+  },
+  "RDNT": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3632,
+   "cash_ratio": 0.1208
+  },
+  "OTEX": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 1.0324,
+   "cash_ratio": 0.1661
+  },
+  "CACC": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 1.0428,
+   "cash_ratio": 0.0002
+  },
+  "STEP": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.2499,
+   "cash_ratio": 0.112
+  },
+  "CGABL": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": null,
+   "cash_ratio": null
+  },
+  "OZK": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1201,
+   "cash_ratio": 0.2793
+  },
+  "MKTX": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0313,
+   "cash_ratio": 0.0605
+  },
+  "HLNE": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.0529,
+   "cash_ratio": 0.0489
+  },
+  "NXST": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 2.154,
+   "cash_ratio": 0.0389
+  },
+  "SIGI": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.1628,
+   "cash_ratio": 0.0686
+  },
+  "ACGLN": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.7749,
+   "cash_ratio": 0.807
+  },
+  "CAKE": {
+   "screened_on": "2026-10-03",
+   "pass": false,
+   "debt_ratio": 0.3781,
+   "cash_ratio": 0.0355
+  }
+ },
+ "policy": "excluded via controls.json: buys blocked; held names are force-exited at the next open (Cycle A ledger, submit step); eligible names enter at the next redeploy"
+}
