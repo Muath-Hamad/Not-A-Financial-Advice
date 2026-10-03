@@ -1,0 +1,95 @@
+{
+ "cycle": "A",
+ "ts_utc": "2026-10-03T00:11:00+00:00",
+ "mode": "ghost",
+ "smoke": false,
+ "code_version": "ba29241242a3e5a99bf673d473fc3bb8e69b0bbd",
+ "asof": "2026-10-02",
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "excluded_symbols": [
+   "APGE",
+   "AXTI",
+   "BKR",
+   "CRNX",
+   "CWST",
+   "DFTX",
+   "DNTH",
+   "ERAS",
+   "FOX",
+   "FTDR",
+   "HAS",
+   "LQDA",
+   "LYFT",
+   "MMYT",
+   "MRCY",
+   "MWH",
+   "PEP",
+   "RELY",
+   "ROAD",
+   "ROP",
+   "SATA",
+   "SFD",
+   "SFM",
+   "VSEC",
+   "XENE"
+  ],
+  "gross_cap": null
+ },
+ "data_gate": {
+  "status": "trip",
+  "asof": "2026-10-02",
+  "checks": {
+   "ixic_at_asof": {
+    "pass": true,
+    "last": "2026-10-02"
+   },
+   "fetch_ok": {
+    "pass": true,
+    "value": 0.9695,
+    "min": 0.9
+   },
+   "coverage_at_asof": {
+    "pass": false,
+    "value": 0.0063,
+    "min": 0.95,
+    "missing": [
+     "AAOI",
+     "AAON",
+     "AAPL",
+     "ABNB",
+     "ABVX",
+     "ACMR",
+     "ADBE",
+     "ADI",
+     "ADP",
+     "ADSK",
+     "AEIS",
+     "ALAB",
+     "ALGM",
+     "ALGN",
+     "ALKS",
+     "ALNY",
+     "AMAT",
+     "AMD",
+     "AMGN",
+     "AMKR",
+     "AMZN",
+     "APA",
+     "APP",
+     "APPF",
+     "ARGX"
+    ]
+   },
+   "cross_source": {
+    "pass": true,
+    "compared": 1,
+    "unavailable": 39,
+    "disagreements": [],
+    "tol": 0.005
+   }
+  }
+ },
+ "status": "data_gate_tripped"
+}
