@@ -1,0 +1,39 @@
+{
+ "asof": "2026-10-02",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "STX",
+   "side": "sell",
+   "all": true,
+   "reason": "momentum decay: out of the top 30; +3.2%",
+   "ttl": 5,
+   "queued": "2026-10-02",
+   "client_order_id": "nafa-2026-10-02-STX-sell-b13895ae",
+   "ref_close": 848.98999,
+   "share_preview": {
+    "symbol": "STX",
+    "side": "sell",
+    "qty": 11
+   },
+   "blocked": []
+  },
+  {
+   "code": "GH",
+   "side": "buy",
+   "sar": 12623.61,
+   "reason": "rank 11 momentum, 3% off the 52w high, ATR 4.2% -> 13% line",
+   "ttl": 5,
+   "queued": "2026-10-02",
+   "client_order_id": "nafa-2026-10-02-GH-buy-a0fca145",
+   "ref_close": 177.800003,
+   "share_preview": {
+    "symbol": "GH",
+    "side": "buy",
+    "qty": 70
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-03T02:46:52+00:00"
+}
