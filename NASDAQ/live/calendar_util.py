@@ -43,6 +43,15 @@ def latest_completed_session(now: dt.datetime | None = None) -> str:
     return str(done.index[-1].date())
 
 
+def decision_session(now: dt.datetime | None = None) -> str:
+    """The session a Cycle A run at `now` decides: the latest one closed at
+    least 45 minutes ago, so closing prints have settled. A run just after
+    the close resolves to the previous session; one after midnight ET (a
+    late cron, a re-run) still resolves to the evening's session."""
+    now = now or now_et()
+    return latest_completed_session(now - dt.timedelta(minutes=45))
+
+
 def previous_session(day: str) -> str:
     d = dt.date.fromisoformat(day)
     sched = _schedule(d - dt.timedelta(days=14), d - dt.timedelta(days=1))

@@ -6,7 +6,11 @@ name: Live submit (on-open orders)
 # from 23:15 to 01:45 UTC: in either DST regime several slots land between
 # 19:15 and 21:45 ET. The script skips slots outside the window and sessions
 # already recorded, and records nothing while Cycle A has not finished, so a
-# late Cycle A is picked up by the next slot.
+# late Cycle A is picked up by the next slot. GitHub fires these crons hours
+# late and drops most slots, so every completed scheduled or manual Cycle A
+# also starts this workflow (workflow_run): a Cycle A that finishes inside the
+# 19:00-09:28 ET window is submitted at once. One that finishes before 19:00
+# still waits for a slot (in paper mode the dead-man flags a night with none).
 #
 # Ghost mode records what it WOULD send (a rehearsal against the twin's book).
 # A manual run (workflow_dispatch) releases a batch held in approval mode
@@ -24,18 +28,24 @@ on:
   schedule:
     - cron: "15,45 23 * * 1-5"
     - cron: "15,45 0,1 * * 2-6"
+  workflow_run:
+    workflows: ["Live cycle A (decision)"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
   contents: write
   issues: write
 
-concurrency:
-  group: live-submit
-  cancel-in-progress: false
-
 jobs:
   submit:
+    # a push-triggered Cycle A is a smoke drill; there is nothing real to send.
+    # The concurrency group sits on the job, so a skipped run never takes its
+    # slot (or displaces a pending submit).
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.event != 'push'
+    concurrency:
+      group: live-submit
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -57,8 +67,8 @@ jobs:
           LIVE_MODE: ghost
         run: python NASDAQ/live/cycle_submit.py --smoke
 
-      - name: Submit (scheduled)
-        if: github.event_name == 'schedule'
+      - name: Submit (scheduled, or after Cycle A)
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_run'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}

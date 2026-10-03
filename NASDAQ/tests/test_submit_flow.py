@@ -229,6 +229,7 @@ def test_orders_never_submitted_is_a_p1(morning, ledger, alerts):
 def deadman_env(monkeypatch, ledger, alerts):
     monkeypatch.setattr(config, "LEDGER", ledger)
     monkeypatch.setattr(deadman, "alert", alerts)
+    monkeypatch.setattr(deadman, "run_in_flight", lambda workflow: None)
     monkeypatch.setenv("LIVE_MODE", "paper")
     return ledger
 
@@ -249,6 +250,53 @@ def test_deadman_not_applicable_in_ghost_mode(deadman_env, alerts, monkeypatch):
     monkeypatch.setenv("LIVE_MODE", "ghost")
     deadman.check_submit(ASOF, 23)
     assert alerts == []
+
+
+def test_deadman_quiet_while_a_submit_run_is_in_flight(deadman_env, alerts, monkeypatch):
+    monkeypatch.setattr(deadman, "run_in_flight",
+                        lambda workflow: "https://run/7" if workflow == "live-submit.yml" else None)
+    deadman.check_submit(ASOF, 21)
+    assert alerts == []
+
+
+# ---- the Cycle A dead-man: a late cycle is not a dead one --------------------------
+
+def cycle_a_deadman(monkeypatch, in_flight):
+    monkeypatch.setattr(deadman, "now_et", lambda: dt.datetime(2026, 9, 28, 21, 15, tzinfo=ET))
+    monkeypatch.setattr(deadman, "is_session", lambda day: True)
+    monkeypatch.setattr(deadman, "run_in_flight",
+                        lambda workflow: in_flight if workflow == "live-cycle-a.yml" else None)
+    monkeypatch.setattr(sys, "argv", ["deadman.py"])
+    assert deadman.main() == 0
+
+
+def test_cycle_a_deadman_fires_when_no_record_and_no_run(deadman_env, alerts, monkeypatch):
+    (deadman_env / "cycles" / f"{ASOF}-A.json").unlink()
+    cycle_a_deadman(monkeypatch, in_flight=None)
+    assert alerts.levels() == ["P1"]
+
+
+def test_cycle_a_deadman_quiet_while_the_cycle_is_still_running(deadman_env, alerts,
+                                                                monkeypatch):
+    (deadman_env / "cycles" / f"{ASOF}-A.json").unlink()
+    cycle_a_deadman(monkeypatch, in_flight="https://run/8")
+    assert alerts == []
+
+
+def test_run_in_flight_counts_scheduled_and_manual_runs_only(monkeypatch):
+    runs = [{"status": "completed", "event": "schedule", "html_url": "done"},
+            {"status": "in_progress", "event": "push", "html_url": "smoke"}]
+    monkeypatch.setattr(deadman, "_repo", lambda: "o/r")
+    monkeypatch.setattr(deadman, "_token", lambda: "t")
+    monkeypatch.setattr(deadman, "_api", lambda method, path: {"workflow_runs": runs})
+    assert deadman.run_in_flight("live-cycle-a.yml") is None
+    runs.append({"status": "queued", "event": "schedule", "html_url": "late"})
+    assert deadman.run_in_flight("live-cycle-a.yml") == "late"
+
+    def down(method, path):
+        raise OSError("api down")
+    monkeypatch.setattr(deadman, "_api", down)
+    assert deadman.run_in_flight("live-cycle-a.yml") is None   # degrade to alerting
 
 
 def test_a_portfolio_guardrail_holds_until_a_manual_release(night, ledger, alerts):

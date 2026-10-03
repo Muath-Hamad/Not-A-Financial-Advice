@@ -2,9 +2,18 @@ name: Live cycle A (decision)
 
 # Post-close decision cycle for the live ghost/paper deployment (NASDAQ/docs/05 §3).
 # Crons fire at 21:00 and 22:00 UTC so exactly one lands at 17:00 ET in either
-# DST regime; the script itself skips any slot before 16:45 ET and exits early
-# if the session is already recorded, so double-firing is harmless.
+# DST regime; a slot before 16:45 ET resolves to the previous, already
+# recorded session and exits early, so double-firing is harmless.
 # A push to this file runs the full cycle in SMOKE mode (ledger/smoke/, no alerts).
+#
+# GitHub starts these crons about three hours late (one slot a day fires),
+# which lands the run just after 20:00 ET, when Yahoo briefly drops the day's
+# bar for every name that trades after hours. The fetch then re-polls the
+# lagging names for up to config.FETCH_WAIT_MAX_MIN minutes before the data
+# gate judges them, hence the long timeout. The submit workflow follows this
+# one's completion (workflow_run), and so does the dead-man's record check when
+# a run fails, times out or is cancelled — a run that never pushes its ledger
+# still raises a P1.
 #
 # Scheduled workflows only fire from the repository's DEFAULT branch (main).
 # A manual run (workflow_dispatch) runs the real cycle: use it to re-run a
@@ -34,7 +43,7 @@ concurrency:
 jobs:
   cycle:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 240
     steps:
       - uses: actions/checkout@v4
         with:

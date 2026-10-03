@@ -40,6 +40,16 @@ ADAPT_EVERY = "63"           # same quarterly back-propagation cadence as the si
 RAW_SUBDIR = "data/raw_live"          # refetched in full every Cycle A
 ENRICHED_SUBDIR = "data/enriched_live"
 FETCH_START = "2015-01-01"            # 200-day indicator warm-up depth
+# Yahoo drops the newest daily bar of names that trade after hours for a while
+# once the post-market closes at 20:00 ET (seen 20:04-20:50 ET; back by 22:07
+# ET). GitHub runs the 17:00 ET cron about three hours late, inside that gap,
+# so the fetch re-polls the lagging names this long before the data gate
+# judges them. The cycle-a workflow's timeout leaves room for the full wait.
+FETCH_WAIT_MAX_MIN = 180
+FETCH_WAIT_POLL_S = 600
+# A cycle (fetch ~6 min, twin, gate, commit) must start this long before
+# Alpaca's on-open cutoff (SUBMIT_CUTOFF_ET) for its orders to go out.
+CYCLE_A_RUNTIME_MARGIN_MIN = 30
 
 # --- data gate (docs/05 §3, Cycle A step 2) -------------------------------
 GATE_CROSS_TOL = 0.005       # any cross-source close disagreeing > 0.5% trips

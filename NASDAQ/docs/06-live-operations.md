@@ -60,6 +60,11 @@ reset, no orders. `live/ledger/gate.json` tracks the streak (target 10).
   book has drifted from the twin's. The full-history re-fetch
   is deliberate: Yahoo restates adjusted series on every dividend, so each
   day's replay must be internally consistent rather than appended.
+  In practice GitHub starts this cron about three hours late, just after
+  20:00 ET, when Yahoo briefly withholds the day's bar for every name that
+  trades after hours (the benchmark keeps its own). The fetch therefore
+  re-polls the lagging names, up to `FETCH_WAIT_MAX_MIN` (3 h), before the
+  data gate judges coverage; each round is in the record's `fetch_wait`.
 * **~19:15 — submit** (`live-submit.yml`, retry slots every 30 minutes
   through the evening): sends what Cycle A ledgered as market-on-open
   orders. Sells are sized from the account's own holdings, excluded holdings
@@ -67,7 +72,8 @@ reset, no orders. `live/ledger/gate.json` tracks the streak (target 10).
   Hard holds (kill switch, drawdown kill, reconciliation halt, blocked
   account, an account that is not the twin's book) stop the night with a P1;
   soft holds (approval mode, a portfolio-level guardrail) wait for a manual
-  run. Record: `cycles/<date>-S.json`.
+  run. Record: `cycles/<date>-S.json`. GitHub drops most of these slots, so
+  the workflow also starts whenever a scheduled or manual Cycle A completes.
 * **~09:50 — Cycle B** (`live-cycle-b.yml`): record the actual opening prints
   for every ordered symbol; verify the order ledger matches the twin's pending
   book. The evening's Cycle A compares those 09:50 prints against the opens
@@ -79,7 +85,12 @@ reset, no orders. `live/ledger/gate.json` tracks the streak (target 10).
   A break writes `ledger/halt.json` and files a P1.
 * **~18:15 — dead-man** (`live-deadman.yml`): no Cycle A record on a session
   day ⇒ P1 issue. **~21:30** (paper): orders ledgered but no submit record ⇒
-  P1.
+  P1. Each firing runs both checks (GitHub fires one slot a day, late), and
+  neither alerts while the workflow it watches has a run queued or in
+  progress (a run older than its job's timeout counts as stuck, not late).
+  It also runs after every Cycle A run that ends without success: no record
+  on main for the session ⇒ P1 (a timeout, a lost runner, a ledger push that
+  never landed).
 * **Quarterly** (`live-rescreen.yml`, 1st of Jan/Apr/Jul/Oct): fresh
   discovery + AAOIFI screen into `data/rescreen/<date>-*.json`, drift report
   to `live/ledger/compliance/`, newly non-compliant names appended to
@@ -145,9 +156,11 @@ smoke/…                    same layout, written by push-triggered smoke runs
   `live/ledger/halt.json`, set `"halted": false`, commit. The next submit
   slot trades again.
 * **Retry a failed cycle:** run the workflow manually (Actions → Run
-  workflow) any time after 16:45 ET for Cycle A, 19:00–09:28 ET for the
-  submit step — `latest_completed_session()` still resolves the right day
-  and idempotence makes double-runs harmless.
+  workflow): for Cycle A from 45 minutes after the close until 08:58 ET the
+  next session morning (`decision_session()` resolves the right day, also
+  after midnight; a cycle needs its 30 minutes before Alpaca's 09:28 cutoff,
+  and its data wait is cut short to fit), 19:00–09:28 ET for the submit step.
+  Idempotence makes double-runs harmless.
 * **Change the universe:** only at a phase switch (docs/07 §3): edit
   `data/sharia_overrides.json`, run `pipeline/apply_screen_rules.py`, run the
   2023–26 regression, record it under `out/`.

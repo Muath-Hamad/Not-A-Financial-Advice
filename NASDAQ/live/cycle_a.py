@@ -124,23 +124,31 @@ def main() -> int:
     if args.local:
         asof = None  # resolved from the twin output below
     else:
-        from calendar_util import latest_completed_session, next_session, now_et
+        from calendar_util import decision_session, next_session, now_et
         # The crons fire at 21:00 and 22:00 UTC so one of them is 17:00 ET in
-        # either DST regime; skip any slot that lands before 16:45 ET (closing
-        # prints settle in the first minutes after the bell). No upper bound —
-        # a late manual re-run is always allowed.
-        if not args.smoke:
-            now = now_et()
-            if now.hour * 60 + now.minute < 16 * 60 + 45:
-                print(f"{now:%H:%M} ET is before the 16:45 ET window; "
-                      f"the later cron slot will run this cycle")
-                return 0
-        asof = latest_completed_session()
+        # either DST regime. A session is decided from 45 minutes after its
+        # close (closing prints settle in the first minutes after the bell)
+        # until a cycle's runtime before Alpaca's last on-open acceptance: a
+        # slot before that window resolves to the previous, recorded session,
+        # and a late or re-run cycle after midnight still decides the night's.
+        now = now_et()
+        asof = decision_session(now)
         record["asof"] = asof
         # idempotence guard for real cycles; smoke drills are re-runnable
         if not args.smoke and (ledger / "cycles" / f"{asof}-A.json").exists():
             print(f"cycle A for {asof} already recorded; nothing to do")
             return 0
+        start_by = dt.datetime.combine(
+            dt.date.fromisoformat(next_session(asof)), dt.time(*config.SUBMIT_CUTOFF_ET),
+            tzinfo=now.tzinfo) - dt.timedelta(minutes=config.CYCLE_A_RUNTIME_MARGIN_MIN)
+        if not args.smoke and now >= start_by:
+            print(f"too late to decide {asof}: a cycle must start by "
+                  f"{start_by:%Y-%m-%d %H:%M} ET to submit before Alpaca's cutoff; "
+                  f"the next cycle runs after today's close")
+            return 0
+        # the wait for Yahoo's evening gap never runs past that start-by time
+        wait_min = 0 if args.smoke else max(0, min(
+            config.FETCH_WAIT_MAX_MIN, int((start_by - now).total_seconds() // 60)))
         if args.smoke:
             # exercise the full machinery on a trailing window regardless of
             # where LIVE_START sits relative to today
@@ -172,11 +180,23 @@ def main() -> int:
 
     # ---- fetch + enrich ---------------------------------------------------
     if not args.local:
+        # a real cycle waits out Yahoo's evening gap (config.FETCH_WAIT_MAX_MIN);
+        # a smoke drill does not, so a push never holds the cycle's queue.
+        # FETCH_END stops at asof: a morning re-run must not read the next
+        # session's partial bar.
         rc = run_pipeline("fetch_data.py", {
             "FETCH_START": config.FETCH_START,
+            "FETCH_END": str(dt.date.fromisoformat(asof) + dt.timedelta(days=1)),
             "FETCH_RAW_SUBDIR": config.RAW_SUBDIR,
             "FETCH_MIN_OK": "0.90",
+            "FETCH_EXPECT_LAST": asof,
+            "FETCH_EXPECT_MIN": str(config.GATE_COVERAGE_MIN),
+            "FETCH_WAIT_MAX_MIN": str(wait_min),
+            "FETCH_WAIT_POLL_S": str(config.FETCH_WAIT_POLL_S),
         })
+        wait_path = config.PKG / config.RAW_SUBDIR / "_fetch_wait.json"
+        if wait_path.exists():
+            record["fetch_wait"] = json.loads(wait_path.read_text())
         if rc != 0:
             record["status"] = "fetch_failed"
             write_json(ledger / "cycles" / f"{asof}-A.json", record)
@@ -441,5 +461,6 @@ if __name__ == "__main__":
     except SystemExit:
         raise
     except Exception as exc:  # noqa: BLE001 - last-resort record + alert, then fail loud
-        alert("P1", "Cycle A crashed", f"{type(exc).__name__}: {exc}"[:800])
+        # dated, so an issue left open from an earlier night does not swallow it
+        alert("P1", f"Cycle A crashed ({utcnow()[:10]} UTC)", f"{type(exc).__name__}: {exc}"[:800])
         raise
