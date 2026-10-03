@@ -1,9 +1,9 @@
 {
  "cycle": "A",
- "ts_utc": "2026-10-03T02:46:52+00:00",
+ "ts_utc": "2026-10-03T22:14:03+00:00",
  "mode": "ghost",
  "smoke": true,
- "code_version": "0f263a530d7e25e3197e435d0581b2749946d4bd",
+ "code_version": "4bde438f95cb03945d6c2eb6ccf14fdb1b7fd04b",
  "asof": "2026-10-02",
  "controls": {
   "kill": false,
@@ -41,6 +41,16 @@
   "pause_adapt_since": null,
   "manual_orders": []
  },
+ "fetch_wait": {
+  "expect": "2026-10-02",
+  "min_coverage": 0.95,
+  "coverage_before": 1.0,
+  "lagging_before": 0,
+  "rounds": [],
+  "coverage_after": 1.0,
+  "lagging_after": 0,
+  "waited_min": 0.0
+ },
  "data_gate": {
   "status": "pass",
   "asof": "2026-10-02",
@@ -62,22 +72,23 @@
    },
    "cross_source": {
     "pass": true,
-    "compared": 39,
-    "unavailable": 1,
+    "compared": 40,
+    "unavailable": 0,
     "disagreements": [],
     "agreed": [
      "IXIC",
-     "SYRE",
      "RVMD",
-     "TVTX",
-     "DNTH",
-     "JAZZ",
-     "DFTX",
-     "GSAT",
-     "GH",
      "ROKU",
-     "ORKA",
-     "ERAS",
+     "CORT",
+     "KNSA",
+     "TXG",
+     "TWST",
+     "AMD",
+     "MU",
+     "NTRA",
+     "MRNA",
+     "STX",
+     "GH",
      "NVDA",
      "AAPL",
      "GOOGL",
@@ -87,11 +98,10 @@
      "AVGO",
      "META",
      "TSLA",
-     "MU",
      "WMT",
-     "AMD",
      "ASML",
      "INTC",
+     "CSCO",
      "LRCX",
      "AMAT",
      "COST",
@@ -102,20 +112,19 @@
      "KLAC",
      "SNDK",
      "TXN",
-     "STX",
      "AMGN",
-     "CRWD"
+     "CRWD",
+     "LIN",
+     "MRVL"
     ],
-    "unavailable_codes": [
-     "CSCO"
-    ],
+    "unavailable_codes": [],
     "tol": 0.005
    }
   }
  },
  "determinism": {
   "match": true,
-  "sha256": "2cce2e31de310ddd"
+  "sha256": "126e92f0308426a8"
  },
  "drawdown_from_peak": -0.0482,
  "guardrails": {
@@ -137,6 +146,10 @@
   "turnover": 0.2236,
   "violations": []
  },
+ "open_revision": {
+  "n": 0,
+  "worst": 0.0
+ },
  "forced_exits": [],
  "submission": "ghost: the submit step records what it would send",
  "insights": {
@@ -154,7 +167,7 @@
   "n_adaptations": 0,
   "decide_errors": 0,
   "inputs": {
-   "manifest_sha": "16b3c837f52904353313daac9ade3bb5a49085a1e67d30740f5b5a113ea48b18",
+   "manifest_sha": "8c030a22e11572ccf0352aa021348a2da4057c0141ae77d4fb8087bd42d0e8b0",
    "universe_sha": "d8ec6d0eb3d094ef018abe9b39256eaa68d9ad141be1f4a2aea7e9ad7fd9f01d",
    "strategy_sha": "a251225eb9a8fc066947ce698844ce718d25167dd07f7c3e23152f555ea31ccd",
    "engine_sha": "8e94f8d693eee3841c60861e8b4c78d57e8e1da802cbaa7d188abda4fcdf2793",
@@ -164,5 +177,5 @@
    "adapt_pause_from": null
   }
  },
- "duration_s": 439.6
+ "duration_s": 389.9
 }
