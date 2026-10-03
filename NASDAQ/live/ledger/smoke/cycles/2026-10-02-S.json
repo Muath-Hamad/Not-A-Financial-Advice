@@ -1,0 +1,74 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-02",
+ "mode": "ghost",
+ "ts_utc": "2026-10-03T22:14:03+00:00",
+ "smoke": true,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 12375.23,
+  "equity": 98236.96
+ },
+ "positions_before": {
+  "RVMD": 70,
+  "ROKU": 17,
+  "CORT": 115,
+  "KNSA": 56,
+  "TXG": 125,
+  "TWST": 31,
+  "AMD": 20,
+  "MU": 2,
+  "NTRA": 6,
+  "MRNA": 37,
+  "STX": 11
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "STX",
+    "side": "sell",
+    "qty": 11,
+    "client_order_id": "nafa-2026-10-02-STX-sell-b13895ae",
+    "forced": false
+   },
+   {
+    "code": "GH",
+    "side": "buy",
+    "qty": 70,
+    "client_order_id": "nafa-2026-10-02-GH-buy-a0fca145",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 9257.23
+ },
+ "submissions": [
+  {
+   "code": "STX",
+   "side": "sell",
+   "qty": 11,
+   "client_order_id": "nafa-2026-10-02-STX-sell-b13895ae",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "GH",
+   "side": "buy",
+   "qty": 70,
+   "client_order_id": "nafa-2026-10-02-GH-buy-a0fca145",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
