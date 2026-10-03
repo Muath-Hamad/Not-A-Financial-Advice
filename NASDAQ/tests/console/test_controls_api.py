@@ -10,11 +10,11 @@ import json
 import subprocess
 from pathlib import Path
 
-import pyotp
 import pytest
 
 pytest.importorskip("fastapi")
 pytest.importorskip("httpx")
+pyotp = pytest.importorskip("pyotp")
 
 from fastapi.testclient import TestClient  # noqa: E402
 
