@@ -1,0 +1,23 @@
+{
+ "asof": "2026-10-05",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "ILMN",
+   "side": "buy",
+   "sar": 3001.32,
+   "reason": "rank 11 momentum, 0% off the 52w high, ATR 4.1% -> 13% line",
+   "ttl": 5,
+   "queued": "2026-10-05",
+   "client_order_id": "nafa-2026-10-05-ILMN-buy-dd334463",
+   "ref_close": 293.690002,
+   "share_preview": {
+    "symbol": "ILMN",
+    "side": "buy",
+    "qty": 10
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-06T01:40:41+00:00"
+}
