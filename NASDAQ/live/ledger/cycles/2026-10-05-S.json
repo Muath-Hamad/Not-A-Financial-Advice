@@ -1,0 +1,56 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-05",
+ "mode": "ghost",
+ "ts_utc": "2026-10-06T01:49:36+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 8171.2,
+  "equity": 103397.61
+ },
+ "positions_before": {
+  "RVMD": 66,
+  "TXG": 105,
+  "MU": 10,
+  "GSAT": 161,
+  "NTRA": 32,
+  "MRNA": 44,
+  "AMD": 21,
+  "GH": 31,
+  "TWST": 27
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "ILMN",
+    "side": "buy",
+    "qty": 10,
+    "client_order_id": "nafa-2026-10-05-ILMN-buy-dd334463",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 5232.83
+ },
+ "submissions": [
+  {
+   "code": "ILMN",
+   "side": "buy",
+   "qty": 10,
+   "client_order_id": "nafa-2026-10-05-ILMN-buy-dd334463",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
