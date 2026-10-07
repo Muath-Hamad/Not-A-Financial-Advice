@@ -1,0 +1,39 @@
+{
+ "asof": "2026-10-06",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "GH",
+   "side": "sell",
+   "all": true,
+   "reason": "momentum decay: out of the top 30; -4.0%",
+   "ttl": 5,
+   "queued": "2026-10-06",
+   "client_order_id": "nafa-2026-10-06-GH-sell-dc31aaa0",
+   "ref_close": 170.690002,
+   "share_preview": {
+    "symbol": "GH",
+    "side": "sell",
+    "qty": 30
+   },
+   "blocked": []
+  },
+  {
+   "code": "MRVL",
+   "side": "buy",
+   "sar": 5445.15,
+   "reason": "rank 5 momentum, 9% off the 52w high, ATR 5.0% -> 11% line",
+   "ttl": 5,
+   "queued": "2026-10-06",
+   "client_order_id": "nafa-2026-10-06-MRVL-buy-86081a86",
+   "ref_close": 287.01001,
+   "share_preview": {
+    "symbol": "MRVL",
+    "side": "buy",
+    "qty": 18
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-07T00:23:09+00:00"
+}
