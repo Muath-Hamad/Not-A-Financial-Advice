@@ -1,0 +1,73 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-06",
+ "mode": "ghost",
+ "ts_utc": "2026-10-07T01:46:48+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 5223.56,
+  "equity": 97982.03
+ },
+ "positions_before": {
+  "RVMD": 66,
+  "TXG": 105,
+  "MU": 10,
+  "GSAT": 161,
+  "NTRA": 32,
+  "MRNA": 44,
+  "AMD": 21,
+  "GH": 30,
+  "TWST": 26,
+  "ILMN": 11
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "GH",
+    "side": "sell",
+    "qty": 30,
+    "client_order_id": "nafa-2026-10-06-GH-sell-dc31aaa0",
+    "forced": false
+   },
+   {
+    "code": "MRVL",
+    "side": "buy",
+    "qty": 18,
+    "client_order_id": "nafa-2026-10-06-MRVL-buy-86081a86",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 5172.94
+ },
+ "submissions": [
+  {
+   "code": "GH",
+   "side": "sell",
+   "qty": 30,
+   "client_order_id": "nafa-2026-10-06-GH-sell-dc31aaa0",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "MRVL",
+   "side": "buy",
+   "qty": 18,
+   "client_order_id": "nafa-2026-10-06-MRVL-buy-86081a86",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
