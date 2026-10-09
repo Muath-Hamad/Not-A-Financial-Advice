@@ -1,0 +1,23 @@
+{
+ "asof": "2026-10-08",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "TWST",
+   "side": "sell",
+   "all": true,
+   "reason": "hard stop -21.4%",
+   "ttl": 5,
+   "queued": "2026-10-08",
+   "client_order_id": "nafa-2026-10-08-TWST-sell-7a0cbb5f",
+   "ref_close": 152.050003,
+   "share_preview": {
+    "symbol": "TWST",
+    "side": "sell",
+    "qty": 26
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-09T01:00:14+00:00"
+}
