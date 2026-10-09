@@ -1,0 +1,57 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-08",
+ "mode": "ghost",
+ "ts_utc": "2026-10-09T01:32:35+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 4868.69,
+  "equity": 95445.5
+ },
+ "positions_before": {
+  "RVMD": 66,
+  "TXG": 105,
+  "MU": 10,
+  "GSAT": 161,
+  "NTRA": 32,
+  "MRNA": 44,
+  "AMD": 21,
+  "TWST": 26,
+  "ILMN": 11,
+  "MRVL": 19
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "TWST",
+    "side": "sell",
+    "qty": 26,
+    "client_order_id": "nafa-2026-10-08-TWST-sell-7a0cbb5f",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 8820.01
+ },
+ "submissions": [
+  {
+   "code": "TWST",
+   "side": "sell",
+   "qty": 26,
+   "client_order_id": "nafa-2026-10-08-TWST-sell-7a0cbb5f",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
