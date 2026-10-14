@@ -1,0 +1,72 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-13",
+ "mode": "ghost",
+ "ts_utc": "2026-10-14T01:43:10+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 8837.78,
+  "equity": 94637.09
+ },
+ "positions_before": {
+  "RVMD": 66,
+  "TXG": 105,
+  "MU": 10,
+  "GSAT": 161,
+  "NTRA": 32,
+  "MRNA": 44,
+  "AMD": 21,
+  "ILMN": 11,
+  "MRVL": 19
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "TXG",
+    "side": "sell",
+    "qty": 105,
+    "client_order_id": "nafa-2026-10-13-TXG-sell-e4083112",
+    "forced": false
+   },
+   {
+    "code": "NTAP",
+    "side": "buy",
+    "qty": 13,
+    "client_order_id": "nafa-2026-10-13-NTAP-buy-b3be4259",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 13263.28
+ },
+ "submissions": [
+  {
+   "code": "TXG",
+   "side": "sell",
+   "qty": 105,
+   "client_order_id": "nafa-2026-10-13-TXG-sell-e4083112",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "NTAP",
+   "side": "buy",
+   "qty": 13,
+   "client_order_id": "nafa-2026-10-13-NTAP-buy-b3be4259",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
