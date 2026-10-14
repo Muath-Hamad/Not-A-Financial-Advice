@@ -1,0 +1,39 @@
+{
+ "asof": "2026-10-14",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "MRVL",
+   "side": "sell",
+   "all": true,
+   "reason": "de-risk to 71% target gross",
+   "ttl": 5,
+   "queued": "2026-10-14",
+   "client_order_id": "nafa-2026-10-14-MRVL-sell-26a4eb47",
+   "ref_close": 245.279999,
+   "share_preview": {
+    "symbol": "MRVL",
+    "side": "sell",
+    "qty": 19
+   },
+   "blocked": []
+  },
+  {
+   "code": "GSAT",
+   "side": "sell",
+   "fraction": 0.668,
+   "reason": "trim 67% to 71% target gross",
+   "ttl": 5,
+   "queued": "2026-10-14",
+   "client_order_id": "nafa-2026-10-14-GSAT-sell-c00b48b4",
+   "ref_close": 82.400002,
+   "share_preview": {
+    "symbol": "GSAT",
+    "side": "sell",
+    "qty": 107
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-14T23:43:29+00:00"
+}
