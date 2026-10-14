@@ -1,0 +1,14 @@
+{
+ "cycle": "B",
+ "asof": "2026-10-14",
+ "orders_from": "2026-10-13",
+ "ts_utc": "2026-10-14T18:11:49+00:00",
+ "smoke": false,
+ "ledger_matches_twin": true,
+ "opens": {
+  "NTAP": 231.72,
+  "TXG": 68.47,
+  "IXIC": 27031.6406
+ },
+ "status": "ok"
+}
