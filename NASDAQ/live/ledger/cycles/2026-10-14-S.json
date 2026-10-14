@@ -1,0 +1,72 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-14",
+ "mode": "ghost",
+ "ts_utc": "2026-10-14T23:52:16+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 13473.34,
+  "equity": 93323.66
+ },
+ "positions_before": {
+  "RVMD": 66,
+  "MU": 10,
+  "GSAT": 161,
+  "NTRA": 32,
+  "MRNA": 44,
+  "AMD": 21,
+  "ILMN": 11,
+  "MRVL": 19,
+  "NTAP": 11
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "MRVL",
+    "side": "sell",
+    "qty": 19,
+    "client_order_id": "nafa-2026-10-14-MRVL-sell-26a4eb47",
+    "forced": false
+   },
+   {
+    "code": "GSAT",
+    "side": "sell",
+    "qty": 107,
+    "client_order_id": "nafa-2026-10-14-GSAT-sell-c00b48b4",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 26943.72
+ },
+ "submissions": [
+  {
+   "code": "MRVL",
+   "side": "sell",
+   "qty": 19,
+   "client_order_id": "nafa-2026-10-14-MRVL-sell-26a4eb47",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "GSAT",
+   "side": "sell",
+   "qty": 107,
+   "client_order_id": "nafa-2026-10-14-GSAT-sell-c00b48b4",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
