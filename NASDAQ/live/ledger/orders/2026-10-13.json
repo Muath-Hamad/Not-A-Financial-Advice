@@ -1,0 +1,39 @@
+{
+ "asof": "2026-10-13",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "TXG",
+   "side": "sell",
+   "all": true,
+   "reason": "initial stop: 71.79 through 73.43 (3.0 ATR)",
+   "ttl": 5,
+   "queued": "2026-10-13",
+   "client_order_id": "nafa-2026-10-13-TXG-sell-e4083112",
+   "ref_close": 71.790001,
+   "share_preview": {
+    "symbol": "TXG",
+    "side": "sell",
+    "qty": 105
+   },
+   "blocked": []
+  },
+  {
+   "code": "NTAP",
+   "side": "buy",
+   "sar": 3160.88,
+   "reason": "rank 1 momentum, 0% off the 52w high, ATR 3.4% -> 13% line",
+   "ttl": 5,
+   "queued": "2026-10-13",
+   "client_order_id": "nafa-2026-10-13-NTAP-buy-b3be4259",
+   "ref_close": 239.009995,
+   "share_preview": {
+    "symbol": "NTAP",
+    "side": "buy",
+    "qty": 13
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-14T00:09:59+00:00"
+}
