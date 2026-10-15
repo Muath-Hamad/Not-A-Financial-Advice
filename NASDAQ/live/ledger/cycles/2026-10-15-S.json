@@ -1,0 +1,55 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-15",
+ "mode": "ghost",
+ "ts_utc": "2026-10-15T23:41:09+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 26658.55,
+  "equity": 93500.5
+ },
+ "positions_before": {
+  "RVMD": 66,
+  "MU": 10,
+  "GSAT": 55,
+  "NTRA": 32,
+  "MRNA": 44,
+  "AMD": 21,
+  "ILMN": 11,
+  "NTAP": 11
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "KNSA",
+    "side": "buy",
+    "qty": 115,
+    "client_order_id": "nafa-2026-10-15-KNSA-buy-46de8a78",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 17460.85
+ },
+ "submissions": [
+  {
+   "code": "KNSA",
+   "side": "buy",
+   "qty": 115,
+   "client_order_id": "nafa-2026-10-15-KNSA-buy-46de8a78",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
