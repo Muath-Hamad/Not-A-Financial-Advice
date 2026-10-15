@@ -1,0 +1,23 @@
+{
+ "asof": "2026-10-15",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "KNSA",
+   "side": "buy",
+   "sar": 9240.42,
+   "reason": "rank 1 momentum, 1% off the 52w high, ATR 3.3% -> 13% line",
+   "ttl": 5,
+   "queued": "2026-10-15",
+   "client_order_id": "nafa-2026-10-15-KNSA-buy-46de8a78",
+   "ref_close": 79.940002,
+   "share_preview": {
+    "symbol": "KNSA",
+    "side": "buy",
+    "qty": 115
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-15T23:33:14+00:00"
+}

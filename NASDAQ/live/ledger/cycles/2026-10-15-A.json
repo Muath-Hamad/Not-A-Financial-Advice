@@ -1,0 +1,182 @@
+{
+ "cycle": "A",
+ "ts_utc": "2026-10-15T23:33:14+00:00",
+ "mode": "ghost",
+ "smoke": false,
+ "code_version": "f11e0fd939699e8b031830d93e483c9780e5a90f",
+ "asof": "2026-10-15",
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "excluded_symbols": [
+   "APGE",
+   "AXTI",
+   "BKR",
+   "CRNX",
+   "CWST",
+   "DFTX",
+   "DNTH",
+   "ERAS",
+   "FOX",
+   "FTDR",
+   "HAS",
+   "LQDA",
+   "LYFT",
+   "MMYT",
+   "MRCY",
+   "MWH",
+   "PEP",
+   "RELY",
+   "ROAD",
+   "ROP",
+   "SATA",
+   "SFD",
+   "SFM",
+   "VSEC",
+   "XENE"
+  ],
+  "gross_cap": null,
+  "locked_symbols": [],
+  "pause_adapt": false,
+  "pause_adapt_since": null,
+  "manual_orders": []
+ },
+ "fetch_wait": {
+  "expect": "2026-10-15",
+  "min_coverage": 0.95,
+  "coverage_before": 1.0,
+  "lagging_before": 0,
+  "rounds": [],
+  "coverage_after": 1.0,
+  "lagging_after": 0,
+  "waited_min": 0.0
+ },
+ "data_gate": {
+  "status": "pass",
+  "asof": "2026-10-15",
+  "checks": {
+   "ixic_at_asof": {
+    "pass": true,
+    "last": "2026-10-15"
+   },
+   "fetch_ok": {
+    "pass": true,
+    "value": 0.975,
+    "min": 0.9
+   },
+   "coverage_at_asof": {
+    "pass": true,
+    "value": 1.0,
+    "min": 0.95,
+    "missing": []
+   },
+   "cross_source": {
+    "pass": true,
+    "compared": 1,
+    "unavailable": 39,
+    "disagreements": [],
+    "agreed": [
+     "IXIC"
+    ],
+    "unavailable_codes": [
+     "RVMD",
+     "MU",
+     "GSAT",
+     "NTRA",
+     "MRNA",
+     "AMD",
+     "ILMN",
+     "MRVL",
+     "NTAP",
+     "NVDA",
+     "AAPL",
+     "GOOGL",
+     "GOOG",
+     "MSFT",
+     "AMZN",
+     "AVGO",
+     "META",
+     "TSLA",
+     "WMT",
+     "ASML",
+     "INTC",
+     "CSCO",
+     "LRCX",
+     "AMAT",
+     "COST",
+     "PLTR",
+     "NFLX",
+     "PANW",
+     "ARM",
+     "KLAC",
+     "SNDK",
+     "TXN",
+     "STX",
+     "AMGN",
+     "CRWD",
+     "LIN",
+     "SHOP",
+     "ADI",
+     "PEP"
+    ],
+    "tol": 0.005
+   }
+  }
+ },
+ "determinism": {
+  "match": true,
+  "sha256": "f3bcc85a218b9a74"
+ },
+ "ghost_gate": {
+  "streak": 10,
+  "target": 10,
+  "passed": true
+ },
+ "drawdown_from_peak": -0.0955,
+ "guardrails": {
+  "n_orders": 1,
+  "checked": [
+   {
+    "code": "KNSA",
+    "side": "buy",
+    "est_value": 9240.42
+   }
+  ],
+  "buy_total": 9240.42,
+  "sell_total": 0.0,
+  "turnover": 0.0988,
+  "violations": []
+ },
+ "open_revision": {
+  "n": 2,
+  "worst": 0.0
+ },
+ "forced_exits": [],
+ "submission": "ghost: the submit step records what it would send",
+ "insights": {
+  "path": "insights/2026-10-15.json",
+  "status": "ok"
+ },
+ "status": "ok",
+ "twin": {
+  "sessions": 14,
+  "equity_final": 93500.5,
+  "ret_total": -0.065,
+  "n_positions": 8,
+  "n_orders_next_open": 1,
+  "n_trades": 17,
+  "n_adaptations": 0,
+  "decide_errors": 0,
+  "inputs": {
+   "manifest_sha": "38f0f1b1f8ccd84e3fd0c1c4b963d66949e6ec3be463ca4447eac690b530d6e1",
+   "universe_sha": "d8ec6d0eb3d094ef018abe9b39256eaa68d9ad141be1f4a2aea7e9ad7fd9f01d",
+   "strategy_sha": "a251225eb9a8fc066947ce698844ce718d25167dd07f7c3e23152f555ea31ccd",
+   "engine_sha": "8e94f8d693eee3841c60861e8b4c78d57e8e1da802cbaa7d188abda4fcdf2793",
+   "commission": "0.0",
+   "slippage": "0.0005",
+   "adapt_every": "63",
+   "adapt_pause_from": null
+  }
+ },
+ "duration_s": 441.9
+}
