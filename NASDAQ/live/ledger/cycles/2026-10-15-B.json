@@ -1,0 +1,14 @@
+{
+ "cycle": "B",
+ "asof": "2026-10-15",
+ "orders_from": "2026-10-14",
+ "ts_utc": "2026-10-15T17:55:17+00:00",
+ "smoke": false,
+ "ledger_matches_twin": true,
+ "opens": {
+  "GSAT": 81.83,
+  "MRVL": 231.835,
+  "IXIC": 26380.7734
+ },
+ "status": "ok"
+}
