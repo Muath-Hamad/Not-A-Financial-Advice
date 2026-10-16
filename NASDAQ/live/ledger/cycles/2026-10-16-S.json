@@ -1,0 +1,120 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-16",
+ "mode": "ghost",
+ "ts_utc": "2026-10-16T23:24:29+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 17445.0,
+  "equity": 89963.52
+ },
+ "positions_before": {
+  "RVMD": 66,
+  "MU": 10,
+  "GSAT": 55,
+  "NTRA": 32,
+  "MRNA": 44,
+  "AMD": 21,
+  "ILMN": 11,
+  "NTAP": 11,
+  "KNSA": 115
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "RVMD",
+    "side": "sell",
+    "qty": 66,
+    "client_order_id": "nafa-2026-10-16-RVMD-sell-d80096af",
+    "forced": false
+   },
+   {
+    "code": "MU",
+    "side": "sell",
+    "qty": 10,
+    "client_order_id": "nafa-2026-10-16-MU-sell-db91d49c",
+    "forced": false
+   },
+   {
+    "code": "AMD",
+    "side": "sell",
+    "qty": 21,
+    "client_order_id": "nafa-2026-10-16-AMD-sell-b20d176f",
+    "forced": false
+   },
+   {
+    "code": "NTAP",
+    "side": "sell",
+    "qty": 11,
+    "client_order_id": "nafa-2026-10-16-NTAP-sell-b05d7fef",
+    "forced": false
+   },
+   {
+    "code": "TEAM",
+    "side": "buy",
+    "qty": 32,
+    "client_order_id": "nafa-2026-10-16-TEAM-buy-0375ebba",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 44653.81
+ },
+ "submissions": [
+  {
+   "code": "RVMD",
+   "side": "sell",
+   "qty": 66,
+   "client_order_id": "nafa-2026-10-16-RVMD-sell-d80096af",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "MU",
+   "side": "sell",
+   "qty": 10,
+   "client_order_id": "nafa-2026-10-16-MU-sell-db91d49c",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "AMD",
+   "side": "sell",
+   "qty": 21,
+   "client_order_id": "nafa-2026-10-16-AMD-sell-b20d176f",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "NTAP",
+   "side": "sell",
+   "qty": 11,
+   "client_order_id": "nafa-2026-10-16-NTAP-sell-b05d7fef",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "TEAM",
+   "side": "buy",
+   "qty": 32,
+   "client_order_id": "nafa-2026-10-16-TEAM-buy-0375ebba",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
