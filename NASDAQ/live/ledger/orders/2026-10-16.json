@@ -1,0 +1,87 @@
+{
+ "asof": "2026-10-16",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "RVMD",
+   "side": "sell",
+   "all": true,
+   "reason": "initial stop: 177.96 through 178.30 (3.0 ATR)",
+   "ttl": 5,
+   "queued": "2026-10-16",
+   "client_order_id": "nafa-2026-10-16-RVMD-sell-d80096af",
+   "ref_close": 177.960007,
+   "share_preview": {
+    "symbol": "RVMD",
+    "side": "sell",
+    "qty": 66
+   },
+   "blocked": []
+  },
+  {
+   "code": "MU",
+   "side": "sell",
+   "all": true,
+   "reason": "initial stop: 878.84 through 908.85 (3.0 ATR)",
+   "ttl": 5,
+   "queued": "2026-10-16",
+   "client_order_id": "nafa-2026-10-16-MU-sell-db91d49c",
+   "ref_close": 878.840027,
+   "share_preview": {
+    "symbol": "MU",
+    "side": "sell",
+    "qty": 10
+   },
+   "blocked": []
+  },
+  {
+   "code": "AMD",
+   "side": "sell",
+   "all": true,
+   "reason": "initial stop: 528.75 through 532.72 (3.0 ATR)",
+   "ttl": 5,
+   "queued": "2026-10-16",
+   "client_order_id": "nafa-2026-10-16-AMD-sell-b20d176f",
+   "ref_close": 528.75,
+   "share_preview": {
+    "symbol": "AMD",
+    "side": "sell",
+    "qty": 21
+   },
+   "blocked": []
+  },
+  {
+   "code": "NTAP",
+   "side": "sell",
+   "all": true,
+   "reason": "initial stop: 203.80 through 214.56 (3.0 ATR)",
+   "ttl": 5,
+   "queued": "2026-10-16",
+   "client_order_id": "nafa-2026-10-16-NTAP-sell-b05d7fef",
+   "ref_close": 203.800003,
+   "share_preview": {
+    "symbol": "NTAP",
+    "side": "sell",
+    "qty": 11
+   },
+   "blocked": []
+  },
+  {
+   "code": "TEAM",
+   "side": "buy",
+   "sar": 6812.98,
+   "reason": "rank 2 momentum, 4% off the 52w high, ATR 4.6% -> 12% line",
+   "ttl": 5,
+   "queued": "2026-10-16",
+   "client_order_id": "nafa-2026-10-16-TEAM-buy-0375ebba",
+   "ref_close": 207.820007,
+   "share_preview": {
+    "symbol": "TEAM",
+    "side": "buy",
+    "qty": 32
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-16T23:16:22+00:00"
+}
