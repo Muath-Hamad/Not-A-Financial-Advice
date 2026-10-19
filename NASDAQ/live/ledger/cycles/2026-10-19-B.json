@@ -1,0 +1,17 @@
+{
+ "cycle": "B",
+ "asof": "2026-10-19",
+ "orders_from": "2026-10-16",
+ "ts_utc": "2026-10-19T19:31:10+00:00",
+ "smoke": false,
+ "ledger_matches_twin": true,
+ "opens": {
+  "AMD": 551.97,
+  "MU": 913.01,
+  "NTAP": 206.96,
+  "RVMD": 179.84,
+  "TEAM": 208.11,
+  "IXIC": 26395.2871
+ },
+ "status": "ok"
+}
