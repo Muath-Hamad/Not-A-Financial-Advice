@@ -1,0 +1,53 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-19",
+ "mode": "ghost",
+ "ts_utc": "2026-10-20T01:51:37+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 45642.83,
+  "equity": 91888.19
+ },
+ "positions_before": {
+  "GSAT": 55,
+  "NTRA": 32,
+  "MRNA": 44,
+  "ILMN": 11,
+  "KNSA": 115,
+  "TEAM": 32
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "HALO",
+    "side": "buy",
+    "qty": 99,
+    "client_order_id": "nafa-2026-10-19-HALO-buy-74f32526",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 33509.27
+ },
+ "submissions": [
+  {
+   "code": "HALO",
+   "side": "buy",
+   "qty": 99,
+   "client_order_id": "nafa-2026-10-19-HALO-buy-74f32526",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
