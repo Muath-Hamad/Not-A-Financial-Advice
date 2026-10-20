@@ -1,0 +1,70 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-20",
+ "mode": "ghost",
+ "ts_utc": "2026-10-20T23:46:24+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 33512.21,
+  "equity": 93515.73
+ },
+ "positions_before": {
+  "GSAT": 55,
+  "NTRA": 32,
+  "MRNA": 44,
+  "ILMN": 11,
+  "KNSA": 115,
+  "TEAM": 32,
+  "HALO": 98
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "ROKU",
+    "side": "buy",
+    "qty": 79,
+    "client_order_id": "nafa-2026-10-20-ROKU-buy-d62b436a",
+    "forced": false
+   },
+   {
+    "code": "APA",
+    "side": "buy",
+    "qty": 95,
+    "client_order_id": "nafa-2026-10-20-APA-buy-6a79b672",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 16315.56
+ },
+ "submissions": [
+  {
+   "code": "ROKU",
+   "side": "buy",
+   "qty": 79,
+   "client_order_id": "nafa-2026-10-20-ROKU-buy-d62b436a",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "APA",
+   "side": "buy",
+   "qty": 95,
+   "client_order_id": "nafa-2026-10-20-APA-buy-6a79b672",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
