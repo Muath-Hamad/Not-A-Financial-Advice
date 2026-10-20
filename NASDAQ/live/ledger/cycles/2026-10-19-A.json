@@ -1,0 +1,236 @@
+{
+ "cycle": "A",
+ "ts_utc": "2026-10-20T00:07:18+00:00",
+ "mode": "ghost",
+ "smoke": false,
+ "code_version": "ceefdc50f7949041409bf90edf637bad9a8b8282",
+ "asof": "2026-10-19",
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "excluded_symbols": [
+   "APGE",
+   "AXTI",
+   "BKR",
+   "CRNX",
+   "CWST",
+   "DFTX",
+   "DNTH",
+   "ERAS",
+   "FOX",
+   "FTDR",
+   "HAS",
+   "LQDA",
+   "LYFT",
+   "MMYT",
+   "MRCY",
+   "MWH",
+   "PEP",
+   "RELY",
+   "ROAD",
+   "ROP",
+   "SATA",
+   "SFD",
+   "SFM",
+   "VSEC",
+   "XENE"
+  ],
+  "gross_cap": null,
+  "locked_symbols": [],
+  "pause_adapt": false,
+  "pause_adapt_since": null,
+  "manual_orders": []
+ },
+ "fetch_wait": {
+  "expect": "2026-10-19",
+  "min_coverage": 0.95,
+  "coverage_before": 0.0,
+  "lagging_before": 311,
+  "rounds": [
+   {
+    "minute": 10.1,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.0
+   },
+   {
+    "minute": 20.1,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.0
+   },
+   {
+    "minute": 30.2,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.0
+   },
+   {
+    "minute": 40.3,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.0
+   },
+   {
+    "minute": 50.3,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.0
+   },
+   {
+    "minute": 60.4,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.0
+   },
+   {
+    "minute": 70.5,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.0
+   },
+   {
+    "minute": 80.6,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.0
+   },
+   {
+    "minute": 94.5,
+    "polled": 311,
+    "caught_up": 311,
+    "coverage": 1.0
+   }
+  ],
+  "coverage_after": 1.0,
+  "lagging_after": 0,
+  "waited_min": 94.5
+ },
+ "data_gate": {
+  "status": "pass",
+  "asof": "2026-10-19",
+  "checks": {
+   "ixic_at_asof": {
+    "pass": true,
+    "last": "2026-10-19"
+   },
+   "fetch_ok": {
+    "pass": true,
+    "value": 0.975,
+    "min": 0.9
+   },
+   "coverage_at_asof": {
+    "pass": true,
+    "value": 1.0,
+    "min": 0.95,
+    "missing": []
+   },
+   "cross_source": {
+    "pass": true,
+    "compared": 40,
+    "unavailable": 0,
+    "disagreements": [],
+    "agreed": [
+     "IXIC",
+     "RVMD",
+     "MU",
+     "GSAT",
+     "NTRA",
+     "MRNA",
+     "AMD",
+     "ILMN",
+     "NTAP",
+     "KNSA",
+     "TEAM",
+     "NVDA",
+     "AAPL",
+     "GOOGL",
+     "GOOG",
+     "MSFT",
+     "AMZN",
+     "AVGO",
+     "META",
+     "TSLA",
+     "WMT",
+     "ASML",
+     "INTC",
+     "CSCO",
+     "LRCX",
+     "AMAT",
+     "COST",
+     "PLTR",
+     "NFLX",
+     "PANW",
+     "ARM",
+     "KLAC",
+     "SNDK",
+     "TXN",
+     "STX",
+     "AMGN",
+     "CRWD",
+     "LIN",
+     "MRVL",
+     "SHOP"
+    ],
+    "unavailable_codes": [],
+    "tol": 0.005
+   }
+  }
+ },
+ "determinism": {
+  "match": true,
+  "sha256": "45fabd9a3ede80b6"
+ },
+ "ghost_gate": {
+  "streak": 12,
+  "target": 10,
+  "passed": true
+ },
+ "drawdown_from_peak": -0.1111,
+ "guardrails": {
+  "n_orders": 1,
+  "checked": [
+   {
+    "code": "HALO",
+    "side": "buy",
+    "est_value": 12251.76
+   }
+  ],
+  "buy_total": 12251.76,
+  "sell_total": 0.0,
+  "turnover": 0.1333,
+  "violations": []
+ },
+ "open_revision": {
+  "n": 5,
+  "worst": 0.00078
+ },
+ "forced_exits": [],
+ "submission": "ghost: the submit step records what it would send",
+ "insights": {
+  "path": "insights/2026-10-19.json",
+  "status": "ok"
+ },
+ "status": "ok",
+ "twin": {
+  "sessions": 16,
+  "equity_final": 91888.19,
+  "ret_total": -0.0811,
+  "n_positions": 6,
+  "n_orders_next_open": 1,
+  "n_trades": 23,
+  "n_adaptations": 0,
+  "decide_errors": 0,
+  "inputs": {
+   "manifest_sha": "837ed8d99075948fef37919abb91bfea0b0c22817b121c2c3ba82f67ae1973b8",
+   "universe_sha": "d8ec6d0eb3d094ef018abe9b39256eaa68d9ad141be1f4a2aea7e9ad7fd9f01d",
+   "strategy_sha": "a251225eb9a8fc066947ce698844ce718d25167dd07f7c3e23152f555ea31ccd",
+   "engine_sha": "8e94f8d693eee3841c60861e8b4c78d57e8e1da802cbaa7d188abda4fcdf2793",
+   "commission": "0.0",
+   "slippage": "0.0005",
+   "adapt_every": "63",
+   "adapt_pause_from": null
+  }
+ },
+ "duration_s": 6230.8
+}

@@ -1,0 +1,23 @@
+{
+ "asof": "2026-10-19",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "HALO",
+   "side": "buy",
+   "sar": 12251.76,
+   "reason": "rank 7 momentum, 0% off the 52w high, ATR 2.9% -> 13% line",
+   "ttl": 5,
+   "queued": "2026-10-19",
+   "client_order_id": "nafa-2026-10-19-HALO-buy-74f32526",
+   "ref_close": 122.5,
+   "share_preview": {
+    "symbol": "HALO",
+    "side": "buy",
+    "qty": 99
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-20T00:07:18+00:00"
+}
