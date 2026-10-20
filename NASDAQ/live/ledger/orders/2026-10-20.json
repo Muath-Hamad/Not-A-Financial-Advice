@@ -1,0 +1,39 @@
+{
+ "asof": "2026-10-20",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "ROKU",
+   "side": "buy",
+   "sar": 12468.76,
+   "reason": "rank 7 momentum, 1% off the 52w high, ATR 1.2% -> 13% line",
+   "ttl": 5,
+   "queued": "2026-10-20",
+   "client_order_id": "nafa-2026-10-20-ROKU-buy-d62b436a",
+   "ref_close": 157.570007,
+   "share_preview": {
+    "symbol": "ROKU",
+    "side": "buy",
+    "qty": 79
+   },
+   "blocked": []
+  },
+  {
+   "code": "APA",
+   "side": "buy",
+   "sar": 4760.3,
+   "reason": "rank 8 momentum, 0% off the 52w high, ATR 3.1% -> 13% line",
+   "ttl": 5,
+   "queued": "2026-10-20",
+   "client_order_id": "nafa-2026-10-20-APA-buy-6a79b672",
+   "ref_close": 49.895,
+   "share_preview": {
+    "symbol": "APA",
+    "side": "buy",
+    "qty": 95
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-20T23:38:38+00:00"
+}
