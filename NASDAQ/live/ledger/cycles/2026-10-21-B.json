@@ -1,0 +1,14 @@
+{
+ "cycle": "B",
+ "asof": "2026-10-21",
+ "orders_from": "2026-10-20",
+ "ts_utc": "2026-10-21T18:17:14+00:00",
+ "smoke": false,
+ "ledger_matches_twin": true,
+ "opens": {
+  "APA": 49.89,
+  "ROKU": 157.5,
+  "IXIC": 26601.7324
+ },
+ "status": "ok"
+}
