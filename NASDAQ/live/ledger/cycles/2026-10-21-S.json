@@ -1,0 +1,56 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-21",
+ "mode": "ghost",
+ "ts_utc": "2026-10-22T01:33:58+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 16315.44,
+  "equity": 93878.84
+ },
+ "positions_before": {
+  "GSAT": 55,
+  "NTRA": 32,
+  "MRNA": 44,
+  "ILMN": 11,
+  "KNSA": 115,
+  "TEAM": 32,
+  "HALO": 99,
+  "ROKU": 79,
+  "APA": 93
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "EXEL",
+    "side": "buy",
+    "qty": 116,
+    "client_order_id": "nafa-2026-10-21-EXEL-buy-cbdb856a",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 8820.41
+ },
+ "submissions": [
+  {
+   "code": "EXEL",
+   "side": "buy",
+   "qty": 116,
+   "client_order_id": "nafa-2026-10-21-EXEL-buy-cbdb856a",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
