@@ -1,0 +1,23 @@
+{
+ "asof": "2026-10-21",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "EXEL",
+   "side": "buy",
+   "sar": 7541.37,
+   "reason": "rank 6 momentum, 0% off the 52w high, ATR 2.5% -> 13% line",
+   "ttl": 5,
+   "queued": "2026-10-21",
+   "client_order_id": "nafa-2026-10-21-EXEL-buy-cbdb856a",
+   "ref_close": 64.580002,
+   "share_preview": {
+    "symbol": "EXEL",
+    "side": "buy",
+    "qty": 116
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-21T23:54:52+00:00"
+}
