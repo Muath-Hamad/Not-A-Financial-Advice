@@ -1,0 +1,71 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-23",
+ "mode": "ghost",
+ "ts_utc": "2026-10-23T23:55:15+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 16263.85,
+  "equity": 91379.49
+ },
+ "positions_before": {
+  "NTRA": 32,
+  "MRNA": 44,
+  "KNSA": 115,
+  "TEAM": 32,
+  "HALO": 99,
+  "ROKU": 79,
+  "APA": 93,
+  "EXEL": 116
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "KNSA",
+    "side": "sell",
+    "qty": 115,
+    "client_order_id": "nafa-2026-10-23-KNSA-sell-b39c1d85",
+    "forced": false
+   },
+   {
+    "code": "ROKU",
+    "side": "sell",
+    "qty": 79,
+    "client_order_id": "nafa-2026-10-23-ROKU-sell-b7fcd0d5",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 37604.94
+ },
+ "submissions": [
+  {
+   "code": "KNSA",
+   "side": "sell",
+   "qty": 115,
+   "client_order_id": "nafa-2026-10-23-KNSA-sell-b39c1d85",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "ROKU",
+   "side": "sell",
+   "qty": 79,
+   "client_order_id": "nafa-2026-10-23-ROKU-sell-b7fcd0d5",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
