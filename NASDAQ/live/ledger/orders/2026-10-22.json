@@ -1,0 +1,39 @@
+{
+ "asof": "2026-10-22",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "GSAT",
+   "side": "sell",
+   "all": true,
+   "reason": "de-risk to 63% target gross",
+   "ttl": 5,
+   "queued": "2026-10-22",
+   "client_order_id": "nafa-2026-10-22-GSAT-sell-d8c39c94",
+   "ref_close": 82.379997,
+   "share_preview": {
+    "symbol": "GSAT",
+    "side": "sell",
+    "qty": 55
+   },
+   "blocked": []
+  },
+  {
+   "code": "ILMN",
+   "side": "sell",
+   "all": true,
+   "reason": "de-risk to 63% target gross",
+   "ttl": 5,
+   "queued": "2026-10-22",
+   "client_order_id": "nafa-2026-10-22-ILMN-sell-8c68d27c",
+   "ref_close": 269.399994,
+   "share_preview": {
+    "symbol": "ILMN",
+    "side": "sell",
+    "qty": 11
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-22T23:53:40+00:00"
+}
