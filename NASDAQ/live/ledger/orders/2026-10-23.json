@@ -1,0 +1,39 @@
+{
+ "asof": "2026-10-23",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "KNSA",
+   "side": "sell",
+   "all": true,
+   "reason": "de-risk to 59% target gross",
+   "ttl": 5,
+   "queued": "2026-10-23",
+   "client_order_id": "nafa-2026-10-23-KNSA-sell-b39c1d85",
+   "ref_close": 76.730003,
+   "share_preview": {
+    "symbol": "KNSA",
+    "side": "sell",
+    "qty": 115
+   },
+   "blocked": []
+  },
+  {
+   "code": "ROKU",
+   "side": "sell",
+   "all": true,
+   "reason": "de-risk to 59% target gross",
+   "ttl": 5,
+   "queued": "2026-10-23",
+   "client_order_id": "nafa-2026-10-23-ROKU-sell-b7fcd0d5",
+   "ref_close": 158.580002,
+   "share_preview": {
+    "symbol": "ROKU",
+    "side": "sell",
+    "qty": 79
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-23T23:45:48+00:00"
+}
