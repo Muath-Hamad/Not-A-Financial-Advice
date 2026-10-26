@@ -1,0 +1,14 @@
+{
+ "cycle": "B",
+ "asof": "2026-10-26",
+ "orders_from": "2026-10-23",
+ "ts_utc": "2026-10-26T19:36:22+00:00",
+ "smoke": false,
+ "ledger_matches_twin": true,
+ "opens": {
+  "KNSA": 75.995,
+  "ROKU": 158.81,
+  "IXIC": 26026.8652
+ },
+ "status": "ok"
+}
