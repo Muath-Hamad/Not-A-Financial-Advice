@@ -1,0 +1,53 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-26",
+ "mode": "ghost",
+ "ts_utc": "2026-10-27T01:39:53+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 37547.38,
+  "equity": 91432.99
+ },
+ "positions_before": {
+  "NTRA": 32,
+  "MRNA": 44,
+  "TEAM": 32,
+  "HALO": 99,
+  "APA": 93,
+  "EXEL": 116
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "OKTA",
+    "side": "buy",
+    "qty": 36,
+    "client_order_id": "nafa-2026-10-26-OKTA-buy-7ec0fcac",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 29623.06
+ },
+ "submissions": [
+  {
+   "code": "OKTA",
+   "side": "buy",
+   "qty": 36,
+   "client_order_id": "nafa-2026-10-26-OKTA-buy-7ec0fcac",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
