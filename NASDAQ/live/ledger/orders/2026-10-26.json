@@ -1,0 +1,23 @@
+{
+ "asof": "2026-10-26",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "OKTA",
+   "side": "buy",
+   "sar": 8088.02,
+   "reason": "rank 7 momentum, 5% off the 52w high, ATR 5.3% -> 10% line",
+   "ttl": 5,
+   "queued": "2026-10-26",
+   "client_order_id": "nafa-2026-10-26-OKTA-buy-7ec0fcac",
+   "ref_close": 220.009995,
+   "share_preview": {
+    "symbol": "OKTA",
+    "side": "buy",
+    "qty": 36
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-27T00:15:09+00:00"
+}
