@@ -1,0 +1,54 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-27",
+ "mode": "ghost",
+ "ts_utc": "2026-10-28T01:40:52+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 30089.83,
+  "equity": 92119.82
+ },
+ "positions_before": {
+  "NTRA": 32,
+  "MRNA": 44,
+  "TEAM": 32,
+  "HALO": 99,
+  "APA": 93,
+  "EXEL": 116,
+  "OKTA": 34
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "QLYS",
+    "side": "buy",
+    "qty": 33,
+    "client_order_id": "nafa-2026-10-27-QLYS-buy-a9bd6f1b",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 22565.37
+ },
+ "submissions": [
+  {
+   "code": "QLYS",
+   "side": "buy",
+   "qty": 33,
+   "client_order_id": "nafa-2026-10-27-QLYS-buy-a9bd6f1b",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
