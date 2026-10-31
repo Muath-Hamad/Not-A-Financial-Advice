@@ -1,0 +1,71 @@
+{
+ "cycle": "S",
+ "asof": "2026-10-30",
+ "mode": "ghost",
+ "ts_utc": "2026-10-31T01:29:30+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 23119.1,
+  "equity": 92216.89
+ },
+ "positions_before": {
+  "NTRA": 32,
+  "MRNA": 44,
+  "TEAM": 32,
+  "HALO": 99,
+  "APA": 93,
+  "EXEL": 116,
+  "OKTA": 34,
+  "QLYS": 31
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "TEAM",
+    "side": "sell",
+    "qty": 32,
+    "client_order_id": "nafa-2026-10-30-TEAM-sell-5a0fe979",
+    "forced": false
+   },
+   {
+    "code": "OKTA",
+    "side": "sell",
+    "qty": 34,
+    "client_order_id": "nafa-2026-10-30-OKTA-sell-c0631e1c",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 36327.69
+ },
+ "submissions": [
+  {
+   "code": "TEAM",
+   "side": "sell",
+   "qty": 32,
+   "client_order_id": "nafa-2026-10-30-TEAM-sell-5a0fe979",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "OKTA",
+   "side": "sell",
+   "qty": 34,
+   "client_order_id": "nafa-2026-10-30-OKTA-sell-c0631e1c",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
