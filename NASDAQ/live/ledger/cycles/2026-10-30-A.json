@@ -1,0 +1,217 @@
+{
+ "cycle": "A",
+ "ts_utc": "2026-10-31T00:26:19+00:00",
+ "mode": "ghost",
+ "smoke": false,
+ "code_version": "a535e9fea292d92f6df316e0a1b4ae9e795901da",
+ "asof": "2026-10-30",
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "excluded_symbols": [
+   "APGE",
+   "AXTI",
+   "BKR",
+   "CRNX",
+   "CWST",
+   "DFTX",
+   "DNTH",
+   "ERAS",
+   "FOX",
+   "FTDR",
+   "HAS",
+   "LQDA",
+   "LYFT",
+   "MMYT",
+   "MRCY",
+   "MWH",
+   "PEP",
+   "RELY",
+   "ROAD",
+   "ROP",
+   "SATA",
+   "SFD",
+   "SFM",
+   "VSEC",
+   "XENE"
+  ],
+  "gross_cap": null,
+  "locked_symbols": [],
+  "pause_adapt": false,
+  "pause_adapt_since": null,
+  "manual_orders": []
+ },
+ "fetch_wait": {
+  "expect": "2026-10-30",
+  "min_coverage": 0.95,
+  "coverage_before": 0.0,
+  "lagging_before": 311,
+  "rounds": [
+   {
+    "minute": 10.1,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.0
+   },
+   {
+    "minute": 20.1,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.0
+   },
+   {
+    "minute": 30.2,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.0
+   },
+   {
+    "minute": 40.3,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.0
+   },
+   {
+    "minute": 54.1,
+    "polled": 311,
+    "caught_up": 311,
+    "coverage": 1.0
+   }
+  ],
+  "coverage_after": 1.0,
+  "lagging_after": 0,
+  "waited_min": 54.1
+ },
+ "data_gate": {
+  "status": "pass",
+  "asof": "2026-10-30",
+  "checks": {
+   "ixic_at_asof": {
+    "pass": true,
+    "last": "2026-10-30"
+   },
+   "fetch_ok": {
+    "pass": true,
+    "value": 0.975,
+    "min": 0.9
+   },
+   "coverage_at_asof": {
+    "pass": true,
+    "value": 1.0,
+    "min": 0.95,
+    "missing": []
+   },
+   "cross_source": {
+    "pass": true,
+    "compared": 40,
+    "unavailable": 0,
+    "disagreements": [],
+    "agreed": [
+     "IXIC",
+     "NTRA",
+     "MRNA",
+     "TEAM",
+     "HALO",
+     "APA",
+     "EXEL",
+     "OKTA",
+     "QLYS",
+     "NVDA",
+     "AAPL",
+     "GOOGL",
+     "GOOG",
+     "MSFT",
+     "AMZN",
+     "AVGO",
+     "META",
+     "TSLA",
+     "MU",
+     "WMT",
+     "AMD",
+     "ASML",
+     "INTC",
+     "CSCO",
+     "LRCX",
+     "AMAT",
+     "COST",
+     "PLTR",
+     "NFLX",
+     "PANW",
+     "ARM",
+     "KLAC",
+     "SNDK",
+     "TXN",
+     "STX",
+     "AMGN",
+     "CRWD",
+     "LIN",
+     "MRVL",
+     "SHOP"
+    ],
+    "unavailable_codes": [],
+    "tol": 0.005
+   }
+  }
+ },
+ "determinism": {
+  "match": true,
+  "sha256": "b12a0df262821ea1"
+ },
+ "ghost_gate": {
+  "streak": 21,
+  "target": 10,
+  "passed": true
+ },
+ "drawdown_from_peak": -0.108,
+ "guardrails": {
+  "n_orders": 2,
+  "checked": [
+   {
+    "code": "TEAM",
+    "side": "sell",
+    "est_value": 6135.04
+   },
+   {
+    "code": "OKTA",
+    "side": "sell",
+    "est_value": 7080.16
+   }
+  ],
+  "buy_total": 0.0,
+  "sell_total": 13215.2,
+  "turnover": 0.1433,
+  "violations": []
+ },
+ "open_revision": {
+  "n": 0,
+  "worst": 0.0
+ },
+ "forced_exits": [],
+ "submission": "ghost: the submit step records what it would send",
+ "insights": {
+  "path": "insights/2026-10-30.json",
+  "status": "ok"
+ },
+ "status": "ok",
+ "twin": {
+  "sessions": 25,
+  "equity_final": 92216.89,
+  "ret_total": -0.0778,
+  "n_positions": 8,
+  "n_orders_next_open": 2,
+  "n_trades": 33,
+  "n_adaptations": 0,
+  "decide_errors": 0,
+  "inputs": {
+   "manifest_sha": "c372695b2f600f66952080c96b97be6b27a386ff7de23864de403ab2fa75d7d1",
+   "universe_sha": "d8ec6d0eb3d094ef018abe9b39256eaa68d9ad141be1f4a2aea7e9ad7fd9f01d",
+   "strategy_sha": "a251225eb9a8fc066947ce698844ce718d25167dd07f7c3e23152f555ea31ccd",
+   "engine_sha": "8e94f8d693eee3841c60861e8b4c78d57e8e1da802cbaa7d188abda4fcdf2793",
+   "commission": "0.0",
+   "slippage": "0.0005",
+   "adapt_every": "63",
+   "adapt_pause_from": null
+  }
+ },
+ "duration_s": 3760.5
+}

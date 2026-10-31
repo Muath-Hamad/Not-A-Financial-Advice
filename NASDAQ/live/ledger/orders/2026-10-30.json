@@ -1,0 +1,39 @@
+{
+ "asof": "2026-10-30",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "TEAM",
+   "side": "sell",
+   "all": true,
+   "reason": "de-risk to 41% target gross",
+   "ttl": 5,
+   "queued": "2026-10-30",
+   "client_order_id": "nafa-2026-10-30-TEAM-sell-5a0fe979",
+   "ref_close": 191.720001,
+   "share_preview": {
+    "symbol": "TEAM",
+    "side": "sell",
+    "qty": 32
+   },
+   "blocked": []
+  },
+  {
+   "code": "OKTA",
+   "side": "sell",
+   "all": true,
+   "reason": "de-risk to 41% target gross",
+   "ttl": 5,
+   "queued": "2026-10-30",
+   "client_order_id": "nafa-2026-10-30-OKTA-sell-c0631e1c",
+   "ref_close": 208.240005,
+   "share_preview": {
+    "symbol": "OKTA",
+    "side": "sell",
+    "qty": 34
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-10-31T00:26:19+00:00"
+}
