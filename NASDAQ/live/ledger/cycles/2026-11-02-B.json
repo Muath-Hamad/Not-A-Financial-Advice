@@ -1,0 +1,14 @@
+{
+ "cycle": "B",
+ "asof": "2026-11-02",
+ "orders_from": "2026-10-30",
+ "ts_utc": "2026-11-02T22:29:24+00:00",
+ "smoke": false,
+ "ledger_matches_twin": true,
+ "opens": {
+  "OKTA": 204.05,
+  "TEAM": 190.1779,
+  "IXIC": 25600.1738
+ },
+ "status": "ok"
+}
