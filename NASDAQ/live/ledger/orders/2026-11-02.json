@@ -1,0 +1,39 @@
+{
+ "asof": "2026-11-02",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "QLYS",
+   "side": "sell",
+   "all": true,
+   "reason": "de-risk to 38% target gross",
+   "ttl": 5,
+   "queued": "2026-11-02",
+   "client_order_id": "nafa-2026-11-02-QLYS-sell-34585184",
+   "ref_close": 207.600006,
+   "share_preview": {
+    "symbol": "QLYS",
+    "side": "sell",
+    "qty": 31
+   },
+   "blocked": []
+  },
+  {
+   "code": "NTRA",
+   "side": "sell",
+   "all": true,
+   "reason": "de-risk to 38% target gross",
+   "ttl": 5,
+   "queued": "2026-11-02",
+   "client_order_id": "nafa-2026-11-02-NTRA-sell-f93d234b",
+   "ref_close": 378.920013,
+   "share_preview": {
+    "symbol": "NTRA",
+    "side": "sell",
+    "qty": 32
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-11-03T02:47:02+00:00"
+}
