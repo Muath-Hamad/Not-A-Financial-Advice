@@ -1,0 +1,23 @@
+{
+ "asof": "2026-11-03",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "RPRX",
+   "side": "buy",
+   "sar": 5416.08,
+   "reason": "rank 4 momentum, 1% off the 52w high, ATR 2.1% -> 13% line",
+   "ttl": 5,
+   "queued": "2026-11-03",
+   "client_order_id": "nafa-2026-11-03-RPRX-buy-3433cf31",
+   "ref_close": 66.400002,
+   "share_preview": {
+    "symbol": "RPRX",
+    "side": "buy",
+    "qty": 81
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-11-04T01:04:05+00:00"
+}
