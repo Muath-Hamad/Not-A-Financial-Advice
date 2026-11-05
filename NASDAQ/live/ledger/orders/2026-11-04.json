@@ -1,0 +1,39 @@
+{
+ "asof": "2026-11-04",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "APA",
+   "side": "sell",
+   "all": true,
+   "reason": "initial stop: 44.49 through 45.04 (3.0 ATR)",
+   "ttl": 5,
+   "queued": "2026-11-04",
+   "client_order_id": "nafa-2026-11-04-APA-sell-2a3b1c1d",
+   "ref_close": 44.490002,
+   "share_preview": {
+    "symbol": "APA",
+    "side": "sell",
+    "qty": 93
+   },
+   "blocked": []
+  },
+  {
+   "code": "MANH",
+   "side": "buy",
+   "sar": 12261.42,
+   "reason": "rank 6 momentum, 0% off the 52w high, ATR 3.4% -> 13% line",
+   "ttl": 5,
+   "queued": "2026-11-04",
+   "client_order_id": "nafa-2026-11-04-MANH-buy-0a4d02bb",
+   "ref_close": 260.410004,
+   "share_preview": {
+    "symbol": "MANH",
+    "side": "buy",
+    "qty": 47
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-11-05T01:19:21+00:00"
+}
