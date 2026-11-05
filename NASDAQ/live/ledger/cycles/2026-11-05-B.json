@@ -1,0 +1,14 @@
+{
+ "cycle": "B",
+ "asof": "2026-11-05",
+ "orders_from": "2026-11-04",
+ "ts_utc": "2026-11-05T20:50:41+00:00",
+ "smoke": false,
+ "ledger_matches_twin": true,
+ "opens": {
+  "APA": 45.31,
+  "MANH": 260.81,
+  "IXIC": 25558.1094
+ },
+ "status": "ok"
+}
