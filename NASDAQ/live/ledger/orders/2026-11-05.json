@@ -1,0 +1,39 @@
+{
+ "asof": "2026-11-05",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "MANH",
+   "side": "sell",
+   "all": true,
+   "reason": "de-risk to 13% target gross",
+   "ttl": 5,
+   "queued": "2026-11-05",
+   "client_order_id": "nafa-2026-11-05-MANH-sell-6b70a20c",
+   "ref_close": 255.169998,
+   "share_preview": {
+    "symbol": "MANH",
+    "side": "sell",
+    "qty": 46
+   },
+   "blocked": []
+  },
+  {
+   "code": "EXEL",
+   "side": "sell",
+   "all": true,
+   "reason": "de-risk to 13% target gross",
+   "ttl": 5,
+   "queued": "2026-11-05",
+   "client_order_id": "nafa-2026-11-05-EXEL-sell-6f7d57e4",
+   "ref_close": 68.709999,
+   "share_preview": {
+    "symbol": "EXEL",
+    "side": "sell",
+    "qty": 116
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-11-06T01:23:40+00:00"
+}
