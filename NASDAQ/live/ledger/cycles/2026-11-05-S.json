@@ -1,0 +1,68 @@
+{
+ "cycle": "S",
+ "asof": "2026-11-05",
+ "mode": "ghost",
+ "ts_utc": "2026-11-06T02:35:22+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 42185.63,
+  "equity": 89826.41
+ },
+ "positions_before": {
+  "MRNA": 44,
+  "HALO": 99,
+  "EXEL": 116,
+  "RPRX": 76,
+  "MANH": 46
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "MANH",
+    "side": "sell",
+    "qty": 46,
+    "client_order_id": "nafa-2026-11-05-MANH-sell-6b70a20c",
+    "forced": false
+   },
+   {
+    "code": "EXEL",
+    "side": "sell",
+    "qty": 116,
+    "client_order_id": "nafa-2026-11-05-EXEL-sell-6f7d57e4",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 61883.96
+ },
+ "submissions": [
+  {
+   "code": "MANH",
+   "side": "sell",
+   "qty": 46,
+   "client_order_id": "nafa-2026-11-05-MANH-sell-6b70a20c",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  },
+  {
+   "code": "EXEL",
+   "side": "sell",
+   "qty": 116,
+   "client_order_id": "nafa-2026-11-05-EXEL-sell-6f7d57e4",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
