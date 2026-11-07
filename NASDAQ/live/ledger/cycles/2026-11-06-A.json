@@ -1,0 +1,182 @@
+{
+ "cycle": "A",
+ "ts_utc": "2026-11-07T00:38:56+00:00",
+ "mode": "ghost",
+ "smoke": false,
+ "code_version": "ac5719fa79425de8413239db5d8a78be475e6a0b",
+ "asof": "2026-11-06",
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "excluded_symbols": [
+   "APGE",
+   "AXTI",
+   "BKR",
+   "CRNX",
+   "CWST",
+   "DFTX",
+   "DNTH",
+   "ERAS",
+   "FOX",
+   "FTDR",
+   "HAS",
+   "LQDA",
+   "LYFT",
+   "MMYT",
+   "MRCY",
+   "MWH",
+   "PEP",
+   "RELY",
+   "ROAD",
+   "ROP",
+   "SATA",
+   "SFD",
+   "SFM",
+   "VSEC",
+   "XENE"
+  ],
+  "gross_cap": null,
+  "locked_symbols": [],
+  "pause_adapt": false,
+  "pause_adapt_since": null,
+  "manual_orders": []
+ },
+ "fetch_wait": {
+  "expect": "2026-11-06",
+  "min_coverage": 0.95,
+  "coverage_before": 1.0,
+  "lagging_before": 0,
+  "rounds": [],
+  "coverage_after": 1.0,
+  "lagging_after": 0,
+  "waited_min": 0.0
+ },
+ "data_gate": {
+  "status": "pass",
+  "asof": "2026-11-06",
+  "checks": {
+   "ixic_at_asof": {
+    "pass": true,
+    "last": "2026-11-06"
+   },
+   "fetch_ok": {
+    "pass": true,
+    "value": 0.9781,
+    "min": 0.9
+   },
+   "coverage_at_asof": {
+    "pass": true,
+    "value": 1.0,
+    "min": 0.95,
+    "missing": []
+   },
+   "cross_source": {
+    "pass": true,
+    "compared": 1,
+    "unavailable": 39,
+    "disagreements": [],
+    "agreed": [
+     "IXIC"
+    ],
+    "unavailable_codes": [
+     "MRNA",
+     "HALO",
+     "EXEL",
+     "RPRX",
+     "MANH",
+     "NVDA",
+     "AAPL",
+     "GOOGL",
+     "GOOG",
+     "MSFT",
+     "AMZN",
+     "AVGO",
+     "META",
+     "TSLA",
+     "MU",
+     "WMT",
+     "AMD",
+     "ASML",
+     "INTC",
+     "CSCO",
+     "LRCX",
+     "AMAT",
+     "COST",
+     "PLTR",
+     "NFLX",
+     "PANW",
+     "ARM",
+     "KLAC",
+     "SNDK",
+     "TXN",
+     "STX",
+     "AMGN",
+     "CRWD",
+     "LIN",
+     "MRVL",
+     "SHOP",
+     "ADI",
+     "PEP",
+     "WDC"
+    ],
+    "tol": 0.005
+   }
+  }
+ },
+ "determinism": {
+  "match": true,
+  "sha256": "737d76fe8cd43da2"
+ },
+ "ghost_gate": {
+  "streak": 26,
+  "target": 10,
+  "passed": true
+ },
+ "drawdown_from_peak": -0.1468,
+ "guardrails": {
+  "n_orders": 1,
+  "checked": [
+   {
+    "code": "HALO",
+    "side": "sell",
+    "est_value": 10259.37
+   }
+  ],
+  "buy_total": 0.0,
+  "sell_total": 10259.37,
+  "turnover": 0.1163,
+  "violations": []
+ },
+ "open_revision": {
+  "n": 2,
+  "worst": 0.00219
+ },
+ "forced_exits": [],
+ "submission": "ghost: the submit step records what it would send",
+ "insights": {
+  "path": "insights/2026-11-06.json",
+  "status": "ok"
+ },
+ "status": "ok",
+ "twin": {
+  "sessions": 30,
+  "equity_final": 88203.51,
+  "ret_total": -0.118,
+  "n_positions": 3,
+  "n_orders_next_open": 1,
+  "n_trades": 42,
+  "n_adaptations": 0,
+  "decide_errors": 0,
+  "inputs": {
+   "manifest_sha": "05234eb78d29656cecce5c1a5486f4995e5f2fc2a28490a03a22fe9148ef836c",
+   "universe_sha": "d8ec6d0eb3d094ef018abe9b39256eaa68d9ad141be1f4a2aea7e9ad7fd9f01d",
+   "strategy_sha": "a251225eb9a8fc066947ce698844ce718d25167dd07f7c3e23152f555ea31ccd",
+   "engine_sha": "8e94f8d693eee3841c60861e8b4c78d57e8e1da802cbaa7d188abda4fcdf2793",
+   "commission": "0.0",
+   "slippage": "0.0005",
+   "adapt_every": "63",
+   "adapt_pause_from": null
+  }
+ },
+ "duration_s": 434.4
+}
