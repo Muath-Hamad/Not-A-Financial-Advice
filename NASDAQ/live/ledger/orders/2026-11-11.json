@@ -1,0 +1,23 @@
+{
+ "asof": "2026-11-11",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "MANH",
+   "side": "buy",
+   "sar": 9326.74,
+   "reason": "rank 2 momentum, 1% off the 52w high, ATR 3.2% -> 13% line",
+   "ttl": 5,
+   "queued": "2026-11-11",
+   "client_order_id": "nafa-2026-11-11-MANH-buy-8567bf04",
+   "ref_close": 258.859985,
+   "share_preview": {
+    "symbol": "MANH",
+    "side": "buy",
+    "qty": 36
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-11-12T02:08:12+00:00"
+}
