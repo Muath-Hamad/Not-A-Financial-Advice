@@ -1,0 +1,49 @@
+{
+ "cycle": "S",
+ "asof": "2026-11-11",
+ "mode": "ghost",
+ "ts_utc": "2026-11-12T02:40:53+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 68473.93,
+  "equity": 84743.38
+ },
+ "positions_before": {
+  "MRNA": 17,
+  "RPRX": 172
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "MANH",
+    "side": "buy",
+    "qty": 36,
+    "client_order_id": "nafa-2026-11-11-MANH-buy-8567bf04",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 59150.31
+ },
+ "submissions": [
+  {
+   "code": "MANH",
+   "side": "buy",
+   "qty": 36,
+   "client_order_id": "nafa-2026-11-11-MANH-buy-8567bf04",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
