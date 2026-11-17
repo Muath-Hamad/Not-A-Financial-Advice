@@ -1,0 +1,23 @@
+{
+ "asof": "2026-11-16",
+ "mode": "ghost",
+ "orders": [
+  {
+   "code": "RPRX",
+   "side": "sell",
+   "all": true,
+   "reason": "de-risk to 15% target gross",
+   "ttl": 5,
+   "queued": "2026-11-16",
+   "client_order_id": "nafa-2026-11-16-RPRX-sell-5edad053",
+   "ref_close": 68.525002,
+   "share_preview": {
+    "symbol": "RPRX",
+    "side": "sell",
+    "qty": 172
+   },
+   "blocked": []
+  }
+ ],
+ "generated_utc": "2026-11-17T03:26:09+00:00"
+}
