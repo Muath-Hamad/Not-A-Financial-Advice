@@ -1,0 +1,29 @@
+{
+ "cycle": "S",
+ "asof": "2026-11-17",
+ "mode": "ghost",
+ "ts_utc": "2026-11-18T02:52:25+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 72031.62,
+  "equity": 86179.07
+ },
+ "positions_before": {
+  "MRNA": 14,
+  "MANH": 45
+ },
+ "plan": {
+  "submit": [],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 72031.62
+ },
+ "status": "nothing_to_send"
+}
