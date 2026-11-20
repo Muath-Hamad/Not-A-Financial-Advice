@@ -1,0 +1,257 @@
+{
+ "cycle": "A",
+ "ts_utc": "2026-11-20T02:02:00+00:00",
+ "mode": "ghost",
+ "smoke": false,
+ "code_version": "8c224c963cc14624d2eb88992275cd92e4da1a2a",
+ "asof": "2026-11-19",
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "excluded_symbols": [
+   "APGE",
+   "AXTI",
+   "BKR",
+   "CRNX",
+   "CWST",
+   "DFTX",
+   "DNTH",
+   "ERAS",
+   "FOX",
+   "FTDR",
+   "HAS",
+   "LQDA",
+   "LYFT",
+   "MMYT",
+   "MRCY",
+   "MWH",
+   "PEP",
+   "RELY",
+   "ROAD",
+   "ROP",
+   "SATA",
+   "SFD",
+   "SFM",
+   "VSEC",
+   "XENE"
+  ],
+  "gross_cap": null,
+  "locked_symbols": [],
+  "pause_adapt": false,
+  "pause_adapt_since": null,
+  "manual_orders": []
+ },
+ "fetch_wait": {
+  "expect": "2026-11-19",
+  "min_coverage": 0.95,
+  "coverage_before": 0.0,
+  "lagging_before": 310,
+  "rounds": [
+   {
+    "minute": 10.1,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.0
+   },
+   {
+    "minute": 23.8,
+    "polled": 310,
+    "caught_up": 185,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 33.8,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 43.9,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 54.0,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 64.0,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 74.1,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 84.1,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 94.2,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 104.3,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 114.3,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 124.4,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 134.4,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 144.5,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 154.5,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 164.6,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   },
+   {
+    "minute": 174.7,
+    "polled": 5,
+    "caught_up": 0,
+    "coverage": 0.5968
+   }
+  ],
+  "gave_up": true,
+  "coverage_after": 0.5968,
+  "lagging_after": 125,
+  "waited_min": 174.7
+ },
+ "data_gate": {
+  "status": "trip",
+  "asof": "2026-11-19",
+  "checks": {
+   "ixic_at_asof": {
+    "pass": true,
+    "last": "2026-11-19"
+   },
+   "fetch_ok": {
+    "pass": true,
+    "value": 0.9719,
+    "min": 0.9
+   },
+   "coverage_at_asof": {
+    "pass": false,
+    "value": 0.5968,
+    "min": 0.95,
+    "missing": [
+     "AAOI",
+     "ABNB",
+     "ABVX",
+     "ACMR",
+     "ALAB",
+     "ALGM",
+     "APP",
+     "APPF",
+     "ARGX",
+     "ARM",
+     "ARXS",
+     "ASND",
+     "ASTS",
+     "AUGO",
+     "AUR",
+     "AXSM",
+     "BBIO",
+     "BLTE",
+     "BSY",
+     "BTSG",
+     "CAI",
+     "CART",
+     "CBRS",
+     "CEG",
+     "CGON"
+    ]
+   },
+   "cross_source": {
+    "pass": true,
+    "compared": 32,
+    "unavailable": 8,
+    "disagreements": [],
+    "agreed": [
+     "IXIC",
+     "MANH",
+     "NVDA",
+     "AAPL",
+     "GOOGL",
+     "MSFT",
+     "AMZN",
+     "AVGO",
+     "TSLA",
+     "MU",
+     "WMT",
+     "AMD",
+     "ASML",
+     "INTC",
+     "CSCO",
+     "LRCX",
+     "AMAT",
+     "COST",
+     "NFLX",
+     "KLAC",
+     "TXN",
+     "STX",
+     "AMGN",
+     "LIN",
+     "MRVL",
+     "ADI",
+     "PEP",
+     "WDC",
+     "QCOM",
+     "GILD",
+     "BKNG",
+     "ISRG"
+    ],
+    "unavailable_codes": [
+     "MRNA",
+     "GOOG",
+     "META",
+     "PLTR",
+     "PANW",
+     "ARM",
+     "CRWD",
+     "SHOP"
+    ],
+    "tol": 0.005
+   }
+  }
+ },
+ "status": "data_gate_tripped"
+}
