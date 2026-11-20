@@ -1,0 +1,9 @@
+{
+ "cycle": "S",
+ "asof": "2026-11-19",
+ "mode": "ghost",
+ "ts_utc": "2026-11-20T05:04:00+00:00",
+ "smoke": false,
+ "status": "held_by_cycle_a",
+ "cycle_a_status": "data_gate_tripped"
+}
