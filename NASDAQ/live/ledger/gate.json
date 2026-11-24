@@ -1,13 +1,8 @@
 {
- "streak": 35,
+ "streak": 36,
  "target": 10,
  "passed": true,
  "history": [
-  {
-   "asof": "2026-10-09",
-   "hash8": "8b0c40e6",
-   "match": true
-  },
   {
    "asof": "2026-10-12",
    "hash8": "663199b5",
@@ -152,7 +147,12 @@
    "asof": "2026-11-20",
    "hash8": "b95887ec",
    "match": true
+  },
+  {
+   "asof": "2026-11-23",
+   "hash8": "bc29ecd7",
+   "match": true
   }
  ],
- "updated": "2026-11-20"
+ "updated": "2026-11-23"
 }
