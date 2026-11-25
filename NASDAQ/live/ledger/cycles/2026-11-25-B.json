@@ -1,0 +1,12 @@
+{
+ "cycle": "B",
+ "asof": "2026-11-25",
+ "orders_from": "2026-11-24",
+ "ts_utc": "2026-11-25T22:49:52+00:00",
+ "smoke": false,
+ "ledger_matches_twin": true,
+ "opens": {
+  "IXIC": 22948.4824
+ },
+ "status": "ok"
+}
