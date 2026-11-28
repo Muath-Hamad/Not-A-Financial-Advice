@@ -1,0 +1,48 @@
+{
+ "cycle": "S",
+ "asof": "2026-11-27",
+ "mode": "ghost",
+ "ts_utc": "2026-11-28T03:14:21+00:00",
+ "smoke": false,
+ "controls": {
+  "kill": false,
+  "pause_entries": false,
+  "locked_symbols": [],
+  "manual_orders": []
+ },
+ "account": {
+  "source": "twin (ghost rehearsal)",
+  "cash": 80472.75,
+  "equity": 83445.07
+ },
+ "positions_before": {
+  "MRNA": 13
+ },
+ "plan": {
+  "submit": [
+   {
+    "code": "RPRX",
+    "side": "buy",
+    "qty": 72,
+    "client_order_id": "nafa-2026-11-27-RPRX-buy-3211567d",
+    "forced": false
+   }
+  ],
+  "skipped": [],
+  "adjusted": [],
+  "cash_left_estimate": 75368.28
+ },
+ "submissions": [
+  {
+   "code": "RPRX",
+   "side": "buy",
+   "qty": 72,
+   "client_order_id": "nafa-2026-11-27-RPRX-buy-3211567d",
+   "forced": false,
+   "broker_id": null,
+   "broker_status": "ghost-logged"
+  }
+ ],
+ "failures": [],
+ "status": "ghost_recorded"
+}
